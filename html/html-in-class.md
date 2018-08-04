@@ -2,15 +2,14 @@
 
 The goal of this assignment is to:
 
-- create a github repo to manage your assignment
-- create a basic web page structure and content
-- practice a feature branch and merge it into master
+- Create a repo to keep code under version control.
+- Create a basic web page structure and content.
 
 While this will be assignment will be worked on in class, you should have _already_ completed the Codecademy assignments for HTML.
 
 ## Resources
 
-You the the internet at your disposal for sources. Here are some you might find userful.
+You have the internet at your disposal for sources. Here are some you might find userful.
 
 - You can review steps in the [Codecademy Learn HTML](https://www.codecademy.com/learn/learn-html) course.
 - You can look up specific resources in the [W3 Schools HTML](https://www.w3schools.com/html/default.asp) documentation.
