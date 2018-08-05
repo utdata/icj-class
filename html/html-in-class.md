@@ -28,7 +28,7 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 
 - Create and save a new HTML document called recipe.html
 - Insert the basic elements required for an HTML 5 document: `<doctype>`, `<html>`, `<head>` and `<body>` tags. Include the `<meta charset="UTF-8">` to ensure the proper character encoding. [W3 School](https://www.w3schools.com/html/html5_intro.asp) has a bare bones template.
-- Now to save time, we'll get the unstyled text for our document. Go to the [html-in-class-text.txt file](https://bitbucket.org/utdata/intro-coding-class/src/master/html/html-in-class-text.txt) in this Bitbucket repo and copy/paste the contents in between the `<body>` tag of your document.
+- Now to save time, we'll get the unstyled text for our document. Go to the [html-in-class-text.txt file](html-in-class-text.txt) in this Bitbucket repo and copy/paste the contents in between the `<body>` tag of your document.
 - Copy the first line of text "Grilled Chicken Salad with Romesco Sauce" into a `<title>` tag in the head of the document.
 - Put the open and close `<h1>` tags around that same line in the body.
 - Below the `<h1>` tag, add an image tag with the src using the url below. Note that you can use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out parts of the tags.
