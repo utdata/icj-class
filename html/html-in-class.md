@@ -26,23 +26,14 @@ You have the internet at your disposal for help. Here are some resources you mig
 We're going to build the HTML structure for a recipe.
 
 1. Create a new HTML document called recipe.html
-
 2. Insert the basic elements required for an HTML 5 document: `<doctype>`, `<html>`, `<head>` and `<body>` tags. Include the `<meta charset="UTF-8">` to ensure the proper character encoding. [W3 School](https://www.w3schools.com/html/html5_intro.asp) has a bare bones template.
-
 3. Now to save time, we'll get the unstyled text for our document. Got to the [html-in-class-text](https://bitbucket.org/utdata/intro-coding-class/src/master/html/html-in-class-text.txt) file in the Bitbucket repo and copy/paste the contents inbetween the `<body>` tag of your document.
-
 4. Copy the first line of text "Grilled Chicken Salad with Romesco Sauce" into a `<title>` tag in the head of the document.
-
 5. Put the open and close `<h1>` tags around that line in the body.
-
 6. Below the `<h1>` tag, add an image tag with the src using this url:
-
-> https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-12072018.jpg
-
+>https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-12072018.jpg
 7. Put a `<p>` tag around the text that starts with "Source".
-
 8. Add an `<a href>` tag around the word Epicurious.com and add this url:
-
 > https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce
 
 9. Add add a `target` attribute to open the link into a new window.
