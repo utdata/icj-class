@@ -33,12 +33,12 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 - Put the open and close `<h1>` tags around that same line in the body.
 - Below the `<h1>` tag, add an image tag with the src using the url below. Note that you can use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out parts of the tags.
 
->`https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-120720-jpg`
+`https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-120720-jpg`
 
 - Put a `<p>` tag around the text that starts with "Source".
 - Add an `<a href>` tag around the word Epicurious.com and add this url:
 
-> `https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce`
+`https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce`
 
 - Add a `target` attribute to open the link into a new window.
 - Put `<p>` tags around the introductory paragraph that starts with "Purée".
@@ -56,7 +56,7 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 - Use the same method to wrap the heading "For the chicken:" with an `<h3>` tag.
 - Now let's really rock some Emmet for the unordered list. Highlight the next five lines from "skinless chicken" to "vegtable oil". Do your **Command-shift-p** for the Command Palette and this time we want a little different command: **Emmet: Wrap Individual Lines with Abbreviation**. Now, type in the text below then hit return:
 
-> ul>li*
+`ul>li*`
 
 - All the lines of code should've been wraped in a `<ul>` and `<li>` tags. Wasn't that bad ass? Here is an [Emmet Cheat Sheet](https://docs.emmet.io/cheat-sheet/) for other commands. We'll use a few more before we're done.
 - Now repeat the process for the `<h3>`'s and unordered lists for the rest of the ingredients section.
@@ -64,7 +64,7 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 - Wrap each internal headline there in an `<h3>` tag.
 - For each set of steps, turn them into ordered lists. Use the **Emmet: Wrap Individual Lines with Abbreviations** again, but change the list style to this:
 
-> ol>li*
+`ol>li*`
 
 * Code up the nutrition section in the same with, in a `<div>` with an `id` of "nutrition", and as unordered lists.
 
