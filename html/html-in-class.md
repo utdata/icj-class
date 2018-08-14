@@ -44,9 +44,11 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 - Put `<p>` tags around the introductory paragraph that starts with "Purée".
 - For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
 - Create a [description list](https://www.w3schools.com/html/html_lists.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
-> Yield: 4 servings \
-> Active Time: 45 minutes \
-> Total Time: 1 hour
+
+Yield: 4 servings \
+Active Time: 45 minutes \
+Total Time: 1 hour
+
 - Create a new `<div>` with and `id` attribute of "ingredients".
 - Before we build the `<h2>` tag around the "Ingredients" headline, let's learn a cool trick in VS Code to help us with that, called [Emmet](https://docs.emmet.io/). Emmet is a shorthand syntax and tool for programmers to help write code blocks, and it is [baked into VS Code](https://code.visualstudio.com/docs/editor/emmet). You won't be wowed at this example, but the next one will bring both shock and awe.
 - Highlight the introductory pragraph. Do **command-shift-p** to bring up the Command Palette. (Control-shift-p for Windows.) Begin typing in the text "Emmet: Wrap" and you'll see the list of commands filter down. Use your arrow keys to select **Emmet: Wrap with Abbreviation** and hit return. That list will go away but the box will remain so you cantype in the next command. Type in the text `h2` and hit return. This wil wrap your text in both the beginning and ending `<h2>` tags.
