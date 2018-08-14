@@ -45,9 +45,11 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 - For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
 - Create a [description list](https://www.w3schools.com/html/html_lists.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
 
-Yield: 4 servings \
-Active Time: 45 minutes \
+``` text
+Yield: 4 servings
+Active Time: 45 minutes
 Total Time: 1 hour
+```
 
 - Create a new `<div>` with and `id` attribute of "ingredients".
 - Before we build the `<h2>` tag around the "Ingredients" headline, let's learn a cool trick in VS Code to help us with that, called [Emmet](https://docs.emmet.io/). Emmet is a shorthand syntax and tool for programmers to help write code blocks, and it is [baked into VS Code](https://code.visualstudio.com/docs/editor/emmet). You won't be wowed at this example, but the next one will bring both shock and awe.
