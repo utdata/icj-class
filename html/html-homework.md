@@ -3,7 +3,7 @@
 For this homework assignment you are coding a story in HTML as indicated below. Save and publish this file in the same repo you did the in-class assignment. Points will be taken off for improper sytax and indentation. Make clean code.
 
 - Name the file `homework-story.html`. Make sure it has all the proper HTML5 tags like doctype, title, head, body, etc.
-- Use [this text file](html-homework-test.txt) for the starting text.
+- Use [this text file](html-homework-text.txt) for the starting text.
 - Code the overline as an `<h4>`.
 - Code the headline, chatter and the one subhead "Under the radar" with the proper hierarcy of header tags.
 - Properly link the byline to the included Twitter handle.
