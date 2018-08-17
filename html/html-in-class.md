@@ -16,11 +16,13 @@ You have the internet at your disposal for help. Here are some resources you mig
 - You can look up specific resources in the [W3 Schools HTML](https://www.w3schools.com/html/default.asp) documentation. [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML) also has good docs.
 - Google it.
 
-## Create a repo in Bitbucket
+## Create a repo in Github
 
 - There are a couple of ways to approach this and it does not matter which path you choose.
-  - You can create the repo in Bitbucket with a README file and then clone it to your own `/code/` folder. This is probably the easiest if you are starting new project.
-  - Or, you can create the folder on your computer and initilize the git repo, then create the the repo in Bitbucket and connect it with the `git remote add origin {link}` command.
+  - You can create the repo in Github with a README file and then clone it to your own `/code/` folder. This is probably the easiest if you are starting new project.
+  - Or, you can create the folder on your computer and initilize the git repo, then create the the repo in Github and connect it with the `git remote add origin {link}` command.
+
+Name the repo `firstname-html-css`, but use you real first namne ;-).
 
 ## Build a recipe web page
 
@@ -28,7 +30,7 @@ We're going to build the HTML structure for a recipe. You might open [the recipe
 
 - Create and save a new HTML document called recipe.html
 - Insert the basic elements required for an HTML 5 document: `<doctype>`, `<html>`, `<head>` and `<body>` tags. Include the `<meta charset="UTF-8">` to ensure the proper character encoding. [W3 School](https://www.w3schools.com/html/html5_intro.asp) has a bare bones template.
-- Now to save time, we'll get the unstyled text for our document. Go to the [html-in-class-text.txt file](html-in-class-text.txt) in this Bitbucket repo and copy/paste the contents in between the `<body>` tag of your document.
+- Now to save time, we'll get the unstyled text for our document. Go to the [html-in-class-text.txt file](html-in-class-text.txt) in this Github repo and copy/paste the contents in between the `<body>` tag of your document.
 - Copy the first line of text "Grilled Chicken Salad with Romesco Sauce" into a `<title>` tag in the head of the document.
 - Put the open and close `<h1>` tags around that same line in the body.
 - Below the `<h1>` tag, add an image tag with the src using the url below. Note that you can use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out parts of the tags.
@@ -84,13 +86,13 @@ If you do a `git status` on your folder now, you might see files that you didn't
 
 ### The git cycle
 
-Save, commit and the push your code to your repo in Bitbucket. To review, the steps are:
+Save, commit and the push your code to your repo in Github. To review, the steps are:
 
 - Use `git status` to check the status of your files. You probably have two untracked files.
 - Use `git add .` to add all the untracked files files. (If you didn't want all of them, would would specify them: `git add {file/path} {file/path}`.)
 - Use `git commit -m "your message here"` to commit your changes.
-- Use `git push origin master` to push them to Bitbucket.
+- Use `git push origin master` to push them to Github.
 
 ### Turn in your work
 
-If your repo is private, be sure to add the user `christianmcdonald` to your repo. Turn in a link to your repo in the assignment in canvas.
+If your repo is private, be sure to add the user `critmcdonald` to your repo. Turn in a link to your repo in the assignment in canvas.
