@@ -14,3 +14,4 @@ The Canvas course is your official courseware, but some assignments and files ma
 ### CSS
 
 - [CSS in-class](css/css-in-class.md)
+- [CSS homework]
