@@ -20,7 +20,7 @@ To make a news story, something like this:
 - Set all your headlines to use Ubuntu and set headline sizes that make visual sense, but follow convention. (i.e., make sure h1 is the biggest and is used for the article headline.) Make sure you include the label above the headline.
 - In the HTML, set the width of the photo to 620px.
 - Set the byline and photo credit lines to use the font Arial with an appropriate backup. Adjust sizes so they are appealing visually.
-- Make the photo credit text right-aligned and nudge up the margin so it sits close but not upon the photo so readers know that's what it goes with.
+- Make the photo credit text right-aligned and nudge up the margin so it sits close but not upon the photo so readers know that is what it goes with.
 - For the ordered list style, the numbers should line up with the text in the article. My recommendation in working this out is to first set different background-colors for the `<ol>` and `<li>` tags so you can see the boundaries. Then you might use a combination of list-style-position and negative margin to line them up.
-- Once you are done with everything, create a pull request and then merge it to your master branch.
+- Once you are done with everything, create a pull request. If there is time, have another student review it. Then merge it to your master branch.
 - Turn in the link to your repo.
