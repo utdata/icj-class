@@ -52,3 +52,20 @@ A couple of thoughts here.
 
 ## Cards and bootstrap
 
+One thing Ben doesn't explain here is how this project understands the Bootstrap css at all. If you go back to the `src/_layouts/base.nunjucks` template, you notice this line:
+
+`<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">`
+
+This give us access to all the styles in Bootstrap. In some rigs, folks load Bootstrap through npm and they become integrated into the project and allow more customization. We may see this later in other example projects.
+
+We spend some time in later weeks talking and practicing more with Bootstrap.
+
+## Charts
+
+We'll mostly just go through the steps, but let's take a couple of pauses:
+
+- After we add the scripts block to the index, let's look at the source of our published index file to see how the javascript array is added to the file.
+- When we are working on margins for the charts, you might wonder "How do we know what to use?". There is a [plotly.js reference here](https://plot.ly/javascript/reference/).
+
+## Maps
+
