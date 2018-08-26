@@ -16,15 +16,15 @@ A thought: Talk about enough of how the internet works to get into servers, so w
 
 ## Node.js and npm
 
-Many online newsroom projects are built from a combination of HTML, CSS, Javascript and content, and often that content is data. Think about it ... when you save a post in WordPress, each box you fill in ... the title, text, featured image, etc ... are data. They are a **records in the database**, and when that page is rendered on the internet, some server out there has to assemble all those pieces together and deliver them to your browser.
+Many online newsroom projects are built from a combination of HTML, CSS, Javascript and content, and often that content is data. Think about it ... when you save a post in WordPress, each box you fill in -- the title, text, featured image, etc -- are data. They are a **records in the database**, and when that page is rendered on the internet, some server out there has to assemble all those pieces together and deliver them to your browser.
 
-The downside of that is those servers are **expensive to build** and to run. That might be OK when it is your CMS, but when it is just an interactive graphic built from a data source, like a map of restaurants, that's a lot of server overkill.
+The downside of that is those databases and servers are **expensive to build and to run**. That might be OK when it is your CMS, but when it is just an interactive graphic built from a data source, like a map of restaurants, that's a lot of server overkill.
 
-One way around this is for newsroom developers to **use their own computers as the server**, and then to create each fully-built page already done. Now the publishing of that content is a lot easier as there no database calls or computations to be done. There are other ways to tackle these challenges, but this is the easiest for us.
+One way around this is for newsroom developers to **use their own computers as the server**, and then to create each fully-built page already done. Now the publishing of that content is a lot easier as there are no database calls or computations to be done. There are other ways to tackle these challenges, but this is the easiest for us.
 
 We are using [NodeJS](https://nodejs.org/en/) as a server on our computer. As Ben says, this allows developers to write their back-end code in JavaScript.
 
-There is also a huge ecosystem of tools already built to help solve common programming challenges, as you'll see. Many of these are managed through [npm](https://www.npmjs.com/), which stands for Node Package Manager. Think of it like the electronic public library and of JavaScript programs.
+There is also a huge ecosystem of tools already built to help solve common programming challenges, as you'll see. Many of these are managed through [npm](https://www.npmjs.com/), which stands for Node Package Manager. Think of it like the electronic public library of JavaScript programs.
 
 ## The framework
 
@@ -38,6 +38,19 @@ After we run the `yo` command, let's actually look through the folders created a
 - The `tmp/` folder is a temporary folder that holds all the generated files when you are running the development web server.
 - The `build/` or `docs/` folder we create later will have our actual, finished website with everything needed to display on the web.
 - Of the other files there, the one that matters most is `package.json`, which is a record of all the npm JavaScript libraries needed to run this project. By having this file, other developers can run `$ npm install` and have everything they need.
+
+### Post-generator life of a project
+
+The generator builds the scaffold and the initial set of tools. But once that is done, you don't have to "build" it, but you do need to install the ecosystem.
+
+So, if you pull down a fellow students repo after the project has been started, these are the commands to get it going:
+
+```bash
+npm install
+gulp serve
+```
+
+If you are coming back to your own project after you have scaffolded, you shouldn't have to run anything but `gulp serve`. If it fails, perhaps you didn't use the `-s` flag when  you installed new npm packages, and they need to be added to your `package.json` file.
 
 ## Templates
 
@@ -74,10 +87,13 @@ Ben explains why he's doing stuff here, but here are some tutorials and document
 - [Leaflet tutorial](https://leafletjs.com/examples.html)
 - [Leaflet docs](https://leafletjs.com/reference-1.3.4.html)
 
-There are many, many other tutorials out there, but be sure to check the date as the library is actively developed.
+There are many, many other Leaflet tutorials out there, but be sure to check the date as the library is actively developed.
+
+
+Other tips:
 
 - When adding the tooltip, note the semicolon after `.addTo(map)` is removed. Even though these two commands are on separate lines, the tooltip is really extending the `addTo(map)` method.
-- When we add the [MiniMap](https://github.com/Norkart/Leaflet-MiniMap) CSS and JS to our `main.x` files, they should to come before our own `_map.x` files. This way our overrides will come later (I NEED TO CHECK IF THIS IS TRUE FOR JS.)
+- When we add the [MiniMap](https://github.com/Norkart/Leaflet-MiniMap) CSS and JS to our `main.x` files, they should to come before our own `_map.x` files. This way our overrides will come later, which is most important for the css calls  .
 
 ## Intro
 
@@ -88,7 +104,6 @@ There are many, many other tutorials out there, but be sure to check the date as
 An update to publishing to pages to the `/docs/` folder:
 
 - Go to your repo
-- Go to Settings
-- go to Options
+- Go to Settings, **then to Options on the left**.
 - Scroll down to Pages
 - Then make the changes to `master branch/docs folder`.
