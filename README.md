@@ -15,3 +15,11 @@ The Canvas course is your official courseware, but some assignments and files ma
 
 - [CSS in-class](css/css-in-class.md)
 - [CSS homework](css/css-homework.md)
+
+### JS
+
+TK.
+
+### First Graphics App
+
+- [FGA notes](fga/fga.md)

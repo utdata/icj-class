@@ -69,3 +69,26 @@ We'll mostly just go through the steps, but let's take a couple of pauses:
 
 ## Maps
 
+Ben explains why he's doing stuff here, but here are some tutorials and documentation to help figure out stuff.
+
+- [Leaflet tutorial](https://leafletjs.com/examples.html)
+- [Leaflet docs](https://leafletjs.com/reference-1.3.4.html)
+
+There are many, many other tutorials out there, but be sure to check the date as the library is actively developed.
+
+- When adding the tooltip, note the semicolon after `.addTo(map)` is removed. Even though these two commands are on separate lines, the tooltip is really extending the `addTo(map)` method.
+- When we add the [MiniMap](https://github.com/Norkart/Leaflet-MiniMap) CSS and JS to our `main.x` files, they should to come before our own `_map.x` files. This way our overrides will come later (I NEED TO CHECK IF THIS IS TRUE FOR JS.)
+
+## Intro
+
+- Once we add the intro section, let's investigate how the drop cap happened using the inspector, and try to find out where the css is.
+
+## Publishing
+
+An update to publishing to pages to the `/docs/` folder:
+
+- Go to your repo
+- Go to Settings
+- go to Options
+- Scroll down to Pages
+- Then make the changes to `master branch/docs folder`.
