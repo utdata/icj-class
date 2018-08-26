@@ -33,7 +33,7 @@ All of the steps below will be uploaded as a fresh Github repository.
 
 7. That's it! You should have an interactive table. Commit the file to your Github repository.
 
-### #2: "Scroll Vertial"
+### #2: "Scroll Vertical"
 
 1. Create a copy of the HTML file you created above and call it _scrolling.html_. 
 2. Go to the "Scroll Vertical" example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in the new HTML file you just created (_scrolling.html_) with the JavaScript on the "Scroll Vertical" example page.

@@ -9,16 +9,17 @@ The Canvas course is your official courseware, but some assignments and files ma
 ### HTML
 
 - [HTML in-class](html/html-in-class.md)
-- [HTML homework](html/html-homework.md)
+- [HTML practice](html/html-homework.md)
 
 ### CSS
 
 - [CSS in-class](css/css-in-class.md)
-- [CSS homework](css/css-homework.md)
+- [CSS practice](css/css-homework.md)
 
 ### JS
 
-TK.
+- [JS in-class](js/js-in-class.md)
+- [JS practice](js/js-homework.md)
 
 ### First Graphics App
 
