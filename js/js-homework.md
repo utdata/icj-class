@@ -2,12 +2,20 @@
 
 For this assignment, you're going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point. You need to:
 
+jQuery is a library that makes using JavaScript easier. It allows programmers to easily tie JS events to HTML elements. There are also a lot of tools built on top of jQuery, and DataTables is one of those.
+
+The purpose of this exercise is to show that you can use many of the tools quickly with just a little JavaScript knowledge.
+
+## Goals
+
 1. Add the required DataTables files to the page (there's a CSS file and a JavaScript file, which we'll handle in the first problem below)
 2. Call DataTables on your table using the example JavaScript provided on the DataTables website
 
+## The steps
+
 The steps below will take you through step-by-step how to use DataTables. If at any point you get an error in your console, stop before moving on to the next step. Each step is dependent on the step before.
 
-All of the steps below will be uploaded as a fresh Github repository.
+Start with a new Github repository with a new HTML file with a basic HTML5 boilerplate. (If you haven't already, you might check out the [HTML Boilerplate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate) extension in VS Code. Learn more about [VS Code extensions here](https://github.com/utdata/setting-up/blob/master/vscode-goodies.md).)
 
 ### #1: "Zero configuration"
 
