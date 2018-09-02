@@ -207,5 +207,59 @@ With any luck, http://localhost:3000 will load up in the browser and your backgr
 
 In class, we should take a quick tour of the `docs/` folder to see all the files created and moved by gulp so we can better understand those tasks.
 
+Lastly, let's delete the contents of `src/styles.scss` now we know our gulp setup works.
+
 ## Bootstrap (finally!)
+
+### The grid
+
+The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.0/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Boostrap for now.)
+
+We are going to start with a `.container` div. A container centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
+
+Add this to the body of `index.html`:
+
+```html
+      <div class="container">
+        test
+      </div>
+```
+
+> Note: You may have to adjust the indents of some rows as you copy 'n' paste or type in new code. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what.
+
+As you view your page, you'll notice the word "test" is a bit in the middle of the page and not on the left edge.
+
+#### Rows and columns
+
+Let's add these rows and columns _inside_ our container so we can talk about how they work:
+
+```html
+        <div class="row">
+          <div class="col bg-danger">
+            One of three columns
+          </div>
+          <div class="col bg-warning">
+            One of three columns
+          </div>
+          <div class="col bg-success">
+            One of three columns
+          </div>
+        </div>
+```
+
+Take a look at your page and you'll see a Rasta party of boxes in red, yellow and green.
+
+Each of the colored sections are "column" divs, hence the class name of `col`. They are surrounded by a `row` div. Columns always have to be a child of a row div, or the Bootstrap grid won't work right.
+
+`bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.0/utilities/colors/) I'm using as a convenience here to show the three different boxes.
+
+These three columns are evenly distributed and space across the container space. Adjust your browser width smaller and wider and you'll see they stay that way at every width.
+
+Typically, we would want content like that to stack on top of each other at small window widths like a phone. We can adjust our code to do this.
+
+- Change all the `col` classes to instead be `col-sm`.
+
+Now adjust your screen width and see what happens at the extra small width.
+
+#### The sizes
 
