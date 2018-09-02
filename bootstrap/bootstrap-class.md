@@ -114,22 +114,22 @@ Create a new file inside the `/src` folder called `index.html`, and insert this 
 ```html
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-      <title>Bootstrap 4 Layout</title>
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/css/bootstrap.css">
-      <link rel="stylesheet" href="/css/styles.css">
-    </head>
+  <head>
+    <title>Bootstrap 4 Layout</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
 
-    <body>
-      <!-- Content starts here -->
+  <body>
+    <!-- Content starts here -->
 
-      <!-- Closing scripts here -->
-      <script src="/js/jquery.min.js"></script>
-      <script src="/js/popper.min.js"></script>
-      <script src="/js/bootstrap.min.js"></script>
-    </body>
+    <!-- Closing scripts here -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
 </html>
 ```
 
@@ -207,6 +207,8 @@ With any luck, http://localhost:3000 will load up in the browser and your backgr
 
 In class, we should take a quick tour of the `docs/` folder to see all the files created and moved by gulp so we can better understand those tasks.
 
+I can tell you, I did not write all this JavaScript from scratch! There are examples in the [gulp](https://www.npmjs.com/package/gulp), [gulp-sass](https://www.npmjs.com/package/gulp-sass) and [browser-sync](https://www.npmjs.com/package/browser-sync) docs, but what I did was find and example on the web that was close to what I needed, and because I understood what it more or less was doing, I adjusted it to my liking.
+
 Lastly, let's delete the contents of `src/styles.scss` now we know our gulp setup works.
 
 ## Bootstrap (finally!)
@@ -215,9 +217,9 @@ Lastly, let's delete the contents of `src/styles.scss` now we know our gulp setu
 
 The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.0/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Boostrap for now.)
 
-We are going to start with a `.container` div. A container centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
+We are going to start with a `container` div. A container centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
 
-Add this to the body of `index.html`:
+Add this to `index.html` just under the `<body>` tag:
 
 ```html
       <div class="container">
@@ -225,9 +227,9 @@ Add this to the body of `index.html`:
       </div>
 ```
 
-> Note: You may have to adjust the indents of some rows as you copy 'n' paste or type in new code. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what.
+> Note: In your index.html file, you may have to adjust the indents of some rows as you copy 'n' paste or type in new code. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what.
 
-As you view your page, you'll notice the word "test" is a bit in the middle of the page and not on the left edge.
+As you view your page, you'll notice the word "test" is a bit in the middle of the page and not on the left edge. That's the container div working.
 
 #### Rows and columns
 
@@ -239,19 +241,19 @@ Let's add these rows and columns _inside_ our container so we can talk about how
             One of three columns
           </div>
           <div class="col bg-warning">
-            One of three columns
+            Two of three columns
           </div>
           <div class="col bg-success">
-            One of three columns
+            Three of three columns
           </div>
         </div>
 ```
 
-Take a look at your page and you'll see a Rasta party of boxes in red, yellow and green.
+Take a look at localhost page and you'll see a Rasta party of boxes in red, yellow and green.
 
-Each of the colored sections are "column" divs, hence the class name of `col`. They are surrounded by a `row` div. Columns always have to be a child of a row div, or the Bootstrap grid won't work right.
+Each of the colored sections are "column" divs, hence the class name of `col`. They are all surrounded by a `row` div. Columns always have to be a child of a row, or the Bootstrap grid won't work right.
 
-`bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.0/utilities/colors/) I'm using as a convenience here to show the three different boxes.
+The `bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.0/utilities/colors/) that I'm using as a convenience here to show the three different boxes.
 
 These three columns are evenly distributed and space across the container space. Adjust your browser width smaller and wider and you'll see they stay that way at every width.
 
@@ -259,7 +261,94 @@ Typically, we would want content like that to stack on top of each other at smal
 
 - Change all the `col` classes to instead be `col-sm`.
 
-Now adjust your screen width and see what happens at the extra small width.
+Now adjust your screen width and see what when you change it to the extra small width.
 
 #### The sizes
+
+There are five "breakpoints" for Bootstrap, meaning changes can happen at 5 different widths: default (extra small), sm, md, lg, xl. They _kinda_ work out like this:
+
+- default is for a vertical phone
+- sm is for a horizontal phone to a vertical tablet
+- md is for a horizontal tablet to laptop
+- lg is for a laptop to desktop screen
+- xl is for a large desktop screen
+
+Every phone and computer screen is different, so that list above is really approximate. (There are actual pixel widths deep within the Bootstrap and they are adjustable, but we aren't going there.)
+
+Bootstrap works from smallest to largest, so once you set a grid width for `col-sm`, they will stay that way for wider widths unless you set another one. You can set the same div to a different number of columns at different widths. **However, within a row, the columns need to add up to increments of 12 for each breakpoint**.
+
+- Adjust the columns to be `col-sm-2`, `col-sm-6` and `col-sm-3`.
+
+This makes the middle column wider when viewed at the "small" breakpoint or wider, but they still show over all 12 columns when at the smallest default breakpoint. **Note that those column numbers add up to increments of 12**. Make one larger now, and it breaks.
+
+Now we will make these column all the same for the medium breakpoint, without changing the small one.
+
+- After the col-sm designations in the class, add a space and this same designation for the medium breakpoint: `col-md-4`.
+
+Now adjust your browser width and see them change between the three breakpoints. Again, note that the **column numbers add to 12 for each breakpoint**.
+
+Now that we've learned a little about columns, let's comment out that whole row of code, but keep the container div. (Normally, I would not want to keep it around, but I want this for grading purposes.).
+
+- Highlight all the lines from the `<div class="row">` to the matching closing div.
+- Do command-/ on your keyboard to put that section in comments.
+- Make some extra lines under it so we can add more stuff.
+
+### The card component
+
+In the First Graphics app, we used the [Bootstrap cards](https://getbootstrap.com/docs/4.0/components/card/) component.
+
+Let's add this card html into the `container` div.
+
+```html
+<section>
+  <div class="row">
+    <div class="col-sm-12 col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title</p>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title</p>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title</p>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+BEFORE you look at your browser and test it, look through the code tell me what you _think_ will happen?
+
+
+
+### Margins by class on elements
+
+You may notice that at the smaller breakpoints that the boxes stack on top of each other with now space. we can use Bootstrap [spacing utility classes](https://getbootstrap.com/docs/4.1/utilities/spacing/) to adjust for this.
+
+It works like this:
+
+- You use `m` margin or `p` for padding
+- Following _m_ or _p_ you add either: `t` (top), `b` (bottom), `l` (left), `r` (right), `x` (left and right), `y` (top and bottom), or nothing for all 4 sides.
+- After a hyphen, you specify sizes `0` through `5` (5 being the largest amount of spacing).
+
+So, in our example, it looks like we need to use margin and bottom to push away the cards beneath it.
+
+- Add `mb-4` to the `card` class of the first item and check out the results.
+- Go ahead and add `mb-4` to the other cards.
 
