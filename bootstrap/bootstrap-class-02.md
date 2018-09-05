@@ -145,6 +145,10 @@ At a wide width, we should be looking at something like this:
 
 ![bs-cards](../images/bs-cards.png)
 
+And at the small width, it should look like this:
+
+![bs-cards-small](../images/bs-cards-small.png)
+
 ## Navigation
 
 Now that we understand the basic grid structure of Bootstrap and some of the ways to control columns, margins and padding, let's hit another component common to almost every website: Navigation.
