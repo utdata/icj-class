@@ -352,3 +352,12 @@ So, in our example, it looks like we need to use margin and bottom to push away 
 - Add `mb-4` to the `card` class of the first item and check out the results.
 - Go ahead and add `mb-4` to the other cards.
 
+### Navigation
+
+Now that we understand the basic grid structure of Bootstrap and some of the ways to control columns, margins and padding, let's hit another component common to almost every website: Navigation.
+
+Navigation is separated into two parts in Bootstrap [Navs](https://getbootstrap.com/docs/4.1/components/navs/) and [Navbars](https://getbootstrap.com/docs/4.1/components/navbar/). Navs are the links, and navbars are the containers that hold them.
+
+I'll be honest ... I usually just find an example of what I need in Bootstrap documentation and then copy the code, use it and play with it until I get what I want. Usually when you are working for a journalism organization, this is already all decided for you and it is part of the template you are starting with.
+
+Let's add a basic nav
