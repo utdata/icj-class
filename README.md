@@ -24,3 +24,10 @@ The Canvas course is your official courseware, but some assignments and files ma
 ### First Graphics App
 
 - [FGA notes](fga/fga.md)
+
+### Bootstrap
+
+- [Part 1](bootstrap/bootstrap-class-01.md)
+- [Part 2](bootstrap/bootstrap-class-02.md)
+- [Part 3](bootstrap/bootstrap-class-03.md)
+- [Part 4](bootstrap/bootstrap-class-04.md)
