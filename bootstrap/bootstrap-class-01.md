@@ -30,7 +30,7 @@ Throughout this lesson, we will refer to:
 
 This is the same cycle we've use in other lessons to create a new repo.
 
-- Go to Github.com and create a new repo. Call it `bootstrap-class`. Include the README.md.
+- Go to Github.com and create a new repo. Call it `bootstrap-yourname`. Include the README.md and keep the repo public.
 - Copy the clone URL
 - In a Terminal, cd into your code folder: `cd ~/Documents/code/`
 - do `git clone [yoururl]`
