@@ -54,11 +54,11 @@ Now the result looks like this:
 
 ![bg-color](../images/bs-bg-color.png)
 
-Hmm, now, our jumbletron (hero) section looks ugly, as it was also gray.  
+Hmm, now, our jumbotron (hero) section looks ugly, as it was also gray.  
 
 We can make custom adjustments to specific elements by using the inspector in chrome or firefox, finding the associated classes of the elements we want to change, and changing those in our styles.scss file.
 
-In this case, the class responsible for the jumbotron is .jumbotron. Let's change the background color and add a slight border to the top of it, to simulate a dropshadow from the navbar. In this case we are using plain CSS declarations to make these style changes, because Sass understands those as well.
+In this case, the class responsible for the jumbotron is .jumbotron. Let's change the background color and add a slight border to the top of it, to simulate a drop shadow from the navbar. In this case we are using plain CSS declarations to make these style changes, because Sass understands those as well.
 
 - Add this under the bg-color declaration:
 

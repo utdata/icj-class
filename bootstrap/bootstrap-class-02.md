@@ -4,7 +4,7 @@ This is a continuation from [part 1](bootstrap-class-01.md)
 
 ## The grid
 
-The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.0/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Boostrap for now.)
+The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.0/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Bootstrap for now.)
 
 We are going to start with a `container` div. A container centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
 
@@ -16,7 +16,7 @@ Add this to `index.html` just under the `<body>` tag:
 </div>
 ```
 
-> Note: In your index.html file, you may have to adjust the indents of some rows as you copy 'n' paste or type in new code. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what.
+> Note: In your index.html file, you may have to adjust the indents of some rows as you copy 'n' paste or type in new code. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what. That, **and it is part of your grade**, because I want to build good habits.
 
 As you view your page, you'll notice the word "test" is a bit in the middle of the page and not on the left edge. That's the container div working.
 
@@ -64,13 +64,13 @@ There are five "breakpoints" for Bootstrap, meaning changes can happen at 5 diff
 
 Every phone and computer screen is different, so that list above is really approximate. (There are actual pixel widths deep within the Bootstrap and they are adjustable, but we aren't going there.)
 
-Bootstrap works from smallest to largest, so once you set a grid width for `col-sm`, they will stay that way for wider widths unless you set another one. You can set the same div to a different number of columns at different widths. **However, within a row, the columns need to add up to increments of 12 for each breakpoint**.
+Bootstrap works from smallest to largest, so once you set a grid width for `col-sm`, they will stay that way for wider widths unless you set another one. You can set the same div to a different number of columns at different widths. **However, within a row, the columns need to add up to increments of 12 for each breakpoint** if you want them to work properly.
 
-- Adjust the columns to be `col-sm-2`, `col-sm-6` and `col-sm-3`.
+- Adjust the three columns to be `col-sm-2`, `col-sm-6` and `col-sm-3`, respectively.
 
-This makes the middle column wider when viewed at the "small" breakpoint or wider, but they still show over all 12 columns when at the smallest default breakpoint. **Note that those column numbers add up to increments of 12**. Make one larger now, and it breaks.
+This makes the middle column wider when viewed at the "small" breakpoint or wider, but they each still show over all 12 columns when at the smallest default breakpoint. **Note that those column numbers add up to 12**. Make one larger now, and it breaks.
 
-Now we will make these column all the same for the medium breakpoint, without changing the small one.
+Now we will make these columns all the same for the medium breakpoint, without changing the small one.
 
 - After the col-sm designations in the class, add a space and this same designation for the medium breakpoint: `col-md-4`.
 
@@ -84,11 +84,9 @@ Now that we've learned a little about columns, let's comment out that whole row 
 
 ## The card component
 
-In the First Graphics app, we used the [Bootstrap cards](https://getbootstrap.com/docs/4.0/components/card/) component.
+I want to introduce our first "component", called  [Bootstrap cards](https://getbootstrap.com/docs/4.1/components/card/). A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
 
-Let's add this card html into the `container` div.
-
-BEFORE you look at your browser and test it, look through the code and tell me what you _think_ will happen?
+BEFORE we add this code below inside your `container` div, look at the column classes and tell me what you _think_ will happen?
 
 ```html
 <section>
@@ -124,7 +122,7 @@ BEFORE you look at your browser and test it, look through the code and tell me w
 </section>
 ```
 
-Did you have the logic figured out correctly?
+Go ahead and add the code inside the `container` div. Did you have the logic figured out correctly?
 
 ## Margins and padding by class on elements
 
@@ -134,9 +132,9 @@ It works like this:
 
 - You use `m` margin or `p` for padding.
 - Following _m_ or _p_ you add either: `t` (top), `b` (bottom), `l` (left), `r` (right), `x` (left and right), `y` (top and bottom), or nothing for all 4 sides.
-- After a hyphen, you specify sizes `0` through `5` (5 being the largest amount of spacing).
+- Then, you specify sizes with a hyphen and a value of `0` through `5` (5 being the largest amount of spacing).
 
-So, in our example, it looks like we need to use margin and bottom to push away the cards beneath it.
+So, `mb-4` would add a margin-bottom value of 4.
 
 - Add `mb-4` to the `card` class of the first item and check out the results.
 - Go ahead and add `mb-4` to the other cards.
@@ -155,7 +153,7 @@ Now that we understand the basic grid structure of Bootstrap and some of the way
 
 Navigation is separated into two parts in Bootstrap [Navs](https://getbootstrap.com/docs/4.1/components/navs/) and [Navbars](https://getbootstrap.com/docs/4.1/components/navbar/). Navs are the links, and navbars are the containers that hold them.
 
-I'll be honest ... I usually just find an example of what I need in Bootstrap documentation and then copy the code, use it and play with it until I get what I want. Usually when you are working for a journalism organization, this is already all decided for you and it is part of the template you starting with.
+I'll be honest ... I usually just find an example of what I need in Bootstrap documentation and then copy the code, and then play with it until I get what I want. When you are working for a journalism organization, this is usually already decided for you and is part of the template you starting with.
 
 But let's add a basic nav so we can talk about it.
 
