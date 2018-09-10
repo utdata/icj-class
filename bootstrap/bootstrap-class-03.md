@@ -79,4 +79,4 @@ Make sure to use your git cycle to save your code and push it to your master bra
 
 ---
 
-**Next**: We'll [download and run](bootstrap-class-04.md) one of your college's repo.
+**Next**: We'll [publish to the web](bootstrap-class-04.md) one of your college's repo.
