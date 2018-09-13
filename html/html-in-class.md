@@ -19,8 +19,8 @@ You have the internet at your disposal for help. Here are some resources you mig
 ## Create a repo in Github
 
 - There are a couple of ways to approach this and it does not matter which path you choose.
-  - You can create the repo in Github with a README file and then clone it to your own `/code/` folder. This is probably the easiest if you are starting new project.
-  - Or, you can create the folder on your computer and initilize the git repo, then create the the repo in Github and connect it with the `git remote add origin {link}` command.
+  - You can create the repo in Github with a README file and then clone it to your own `/icj/` folder. This is probably the easiest if you are starting new project.
+  - Or, you can create the folder on your computer and initialize the git repo, then create the the repo in Github and connect it with the `git remote add origin {link}` command.
 
 Name the repo `firstname-html-css`, but use you real first namne ;-).
 
@@ -95,4 +95,5 @@ Save, commit and the push your code to your repo in Github. To review, the steps
 
 ### Turn in your work
 
-If your repo is private, be sure to add the user `critmcdonald` to your repo. Turn in a link to your repo in the assignment in canvas.
+Turn in a link to your repo in the assignment in canvas. If your repo is private, be sure to add the user `critmcdonald` as a contributor, but it is easier just to keep it public.
+
