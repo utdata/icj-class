@@ -19,10 +19,10 @@ You have the internet at your disposal for help. Here are some resources you mig
 ## Create a repo in Github
 
 - There are a couple of ways to approach this and it does not matter which path you choose.
-  - You can create the repo in Github with a README file and then clone it to your own `/icj/` folder. This is probably the easiest if you are starting new project.
+  - The easiest way (and what I recommend) is that you create the repo in Github with a README file and then clone it to your own `/icj/` folder. This is probably the easiest if you are starting new project. **Don't forget to `cd` into the new folder before launching VS Code.
   - Or, you can create the folder on your computer and initialize the git repo, then create the the repo in Github and connect it with the `git remote add origin {link}` command.
 
-Name the repo `firstname-html-css`, but use you real first namne ;-).
+Name the repo `firstname-html-css`, but use you real first name ;-).
 
 ## Build a recipe web page
 
