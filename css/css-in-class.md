@@ -4,7 +4,6 @@ CSS is the skin and DNA attributes that make one HTML skeletons look different f
 
 ## Goals 
 
-- To make a new git branch, do our work and then merge to master.
 - To understand default browser styling and how to handle it.
 - To use CSS styles to give visual appeal to page, applying the principles we learned in the Codecademy lessons.
 
@@ -14,27 +13,12 @@ This will be our finished product:
 
 ## Resources
 
-You have the internet at your disposal for help. Here are some resources you might find userful.
+You have the internet at your disposal for help. Here are some resources you might find useful.
 
 - You can review steps in the [Codecademy Learn 
 CSS](https://www.codecademy.com/learn/learn-css) course.
 - You can look up specific resources in the [W3 Schools HTML](https://www.w3schools.com/css/default.asp) documentation. [Shay Howe](https://learn.shayhowe.com/html-css/) has a pretty good tutorial. [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/CSS) also has good CSS docs.
 - Google it.
-
-## Make a new branch
-
-Hopefully when you finished and turned in your HTML lesson code, you had what we could call bug-free code. It works. It is our "production" branch, known as `master`.
-
-Well now you are going to make it a whole lot worse before you make it better, and that is the essence of a feature. So we are going to create a feature branch so you can work without fear that you will irrevocably f'd up your code.
-
-- In VS Code, open the folder for your HTML in-class project. We'll be building off that one.
-- Open the Integrated Terminal and create a new branch called `csswork`:
-
-```bash
-git checkout -b csswork
-```
-
-You've checked out a new branch and named it `csswork` at the same time. If you do `git status` you should see that, and if you have git-bash-prompt install, your command prompt will show it.
 
 ## CSS Reset
 
@@ -42,28 +26,28 @@ Go into your repo from the previous HTML lesson and open in your browser the `re
 
 ![3-browser-reset-ex](../images/3-browser-reset-ex.png)
 
-There is way to deal with this called CSS reset. The concept is the first styles you set is to zero out all margins, paddings and text sizes so you have a zero base to work from in a relative since. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/.
+There is way to deal with this called CSS reset. The concept is to zero out all margins, paddings and text sizes so you have a zero base to work from before applying new styles. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/.
 
 So, let's do it:
 
-- In your repo, create a new blank file called `reset.css` and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
+- In your repo, create a new blank file called `reset.css` and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file. (You might use the `touch` command to do this, or File > New File in VS Code.)
 - We need to add a link in our stylesheet to the reset stylesheet. Put this before the closing `</head>` tag.
 
 ```html
   <link rel="stylesheet" type="text/css" href="reset.css">
 ```
 
-The attributes of the are common sense. I'll be honest ... I never remember how to write it ... I just look it up when I need it.
+The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects to files together. I'll be honest ... I never remember how to write it ... I just look it up when I need it.
 
 Refresh your page and watch your something-kinda-special turn in to muck.
 
 ## Relative font sizing
 
-If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of thins in pixels, or `px`. When you do that, a user can't increase the size of text in their browse, something a lot of old folks do, present company included.
+If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that, a user can't increase the size of text in their browse, something a lot of old folks do, present company included.
 
-So there is a way to handle that by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://www.njimedia.com/how-i-met-the-old-fashioned-way-of-setting-font-sizes/), but know our next move is to set the base font at 62.5%, which is takes the normally-default 16px font and makes the base 10px. This allows us to then use a relative measure called a `rem` where `2.4rem` is based 24px for a normally-sized browser.
+So there is a way to handle that by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://www.njimedia.com/how-i-met-the-old-fashioned-way-of-setting-font-sizes/), but know our next move is to set the base font at 62.5%, which will make the normally-default 16px font and makes the base 10px. This allows us to then use a relative measure called a `rem` where `2.4rem` is based 24px for a normally-sized browser.
 
-## Create site style file, set body defaults
+## Create a site style file, set body defaults
 
 - Create a new file and call it `recipe.css`.
 - Now, in your `recipe.html` file, add a `<link>` tag to that that css file after the `reset.css` link.
@@ -92,7 +76,7 @@ Let's set some boundaries for the article. If you look at the finished example a
 
 - Now, in `recipe.css`, add the following styles:
 
-(I encourage you to type as much of this in as you can, and just copy/paste when you are behind. This way you can understand how the code editor can help you type in the styles.)
+> I encourage you to type as much of the code as you can so you understand how the code editor can help you write in the styles. When you get behind, then copy 'n' paste.
 
 ```css
 article {
@@ -119,6 +103,8 @@ p, ul, ol, dl {
 ```
 
 What this has done is set all the text elements at basically `12px`, but we've use the `rem` measurement to set it relative to the base size, which was essentially 10px.
+
+In the case above, it's important that we have commas between each text element. If we don't have those, the browser will think we need all of them together (and) instead of any of them (or).
 
 ## Set headline sizes
 
@@ -151,7 +137,7 @@ The other rule set sizes and margins for various sizes of headlines. You'll noti
 
 ## Set the credit
 
-Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it with CSS. We'll use a class because credits are not unique, and this way we could set them for all the credits on our site.
+Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it with CSS. We'll use a "class" because credits are not unique, and this way we could set them for all the credits on our site.
 
 - In the html page, add the `class="credit"` attribute to the `<p>` tag so it looks like this:
 
@@ -159,7 +145,7 @@ Our next challenge is to set the credit. Because the credit is in a `<p>` tag, w
 <p class="credit">
 ```
 
-- Now add the following styles to your style sheet:
+- Now that we've defined it, we can add the following styles to your style sheet to target the credit:
 
 ```css
 .credit {
@@ -186,7 +172,7 @@ Once you figure what you like, then write the rule in the css file.
 
 ## Set description style
 
-We want the recipe description to be a bit bigger than the other type. First we need to give it a class, then give the class a style
+We want the recipe description to be a bit bigger than the other type. First we need to give it an "id", then give the id a style.
 
 - In the html file, add an `<id>` attribute called "description" to the `<p>` tag. We use `<id>` because there is always only one per recipe.
 - In the CSS file, add the following style:
@@ -197,6 +183,14 @@ We want the recipe description to be a bit bigger than the other type. First we 
     margin-bottom: 20px;
 }
 ```
+
+### Styling elements vs ids vs classes
+
+At this point, you might be confused why sometimes we have a period before a style `.credit` and sometimes a hash `#description` and sometimes nothing `p, ul, li`. Let's define the difference and hopefully it will become clear.
+
+- HTML **elements** are the most generic thing you can style. A `<p>` tag or `<h1>`, etc. If you write a style for one, it affects ALL of those elements on your site.
+- But sometimes you have common elements that you re-use often, like byline. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="whatever"`. Now that it is classified, we can write one style that will affect all the bylines. What you call the class is up to you, but it make sense to call it what it is. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.whatever {font-family: Arial;}`.
+- There are also cases on a page where an element is used only one way. In this case we might "identify" that element with an **id** attribute: `id="new-whatever"`. An example might be the main headline of a story; there is always only one. When we use an `id` we are indicating to the browser (and our fellow coders, and even Google) that this element only appears once on this page. When we write a style for an id, we precede the name with a hash to indicate the style is for an id: `#new-whatever {font-family: Times;}`.
 
 ## Set the Yield box style
 
@@ -216,7 +210,7 @@ Save and refresh the lines. She used a [shorthand for the border property](https
 
 ## Set the yield text
 
-Another story about tricks of the trade. When I was preparing this lecture, I had trouble getting the `<dt>` and `<dd>` values to show on the same line. So, what do you think I did? I googled it, of course, using the phrase "make css dd dt on same line". I got my answer [here](https://krijnhoetmer.nl/stuff/css/inline-dl/). It wasn't the first answer ... I had to poke around on different Stack Overflow answers until I found one that worked for me.
+Another story about tricks of the trade. When I was preparing this lecture, I had trouble getting the `<dt>` and `<dd>` values to show on the same line. So, what do you think I did? I googled it, of course, using the phrase "make css dd dt on same line". I got my answer [here](https://krijnhoetmer.nl/stuff/css/inline-dl/). It wasn't the first answer of my Google search ... I had to poke around on different Stack Overflow answers until I found one that worked for me.
 
 - Add the following styles to your style sheet.
 
@@ -273,7 +267,7 @@ This is our last challenging piece and we get to learn some more advance CSS foo
 
 ![nutrition-list-example](../images/nutrition-list-example.png)
 
-But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if there were generated from an application or CMS of some kind, that would be annoying. We can do it with a special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp).
+But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if they were generated from an application or CMS of some kind, that would be difficult. We can do it with a special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp).
 
 Let's do this in pieces so you can see the magic happen.
 
@@ -381,7 +375,7 @@ You may have noticed that this nutrition div is smack dab at the bottom of the p
 
 ```html
   <footer>
-    <p>A class project by Christian McDonald</p>
+    <p>A class project by Your Name</p>
   </footer>
 ```
 
@@ -406,12 +400,6 @@ We used `clear: both` to make sure there are no floats affecting the footer. Sti
 
 Tricks of the trade lesson #32: If it works, especially if you check all the browsers, then maybe it is good enough.
 
-## Commit, make a pull request and merge
+## Save and push to Github
 
-If we haven't done so already, use the git cycle to push all your code to github. Remember you'll have to push to the `csswork` branch.
-
-Create a Pull Request and see if you have any conflicts vs master.
-
-If we have time, we'll have a partner pull down your repo and test it and comment on the PR.
-
-When all is good, merge your PR to master and turn in your github repo link. If it is private, make sure you share to `critmcdonald`.
+If we haven't done so already, use the git cycle to push all your code to Github.
