@@ -99,10 +99,13 @@ Let's fix up the text sizes. We're going to set a base size for all basic text e
 p, ul, ol, dl {
   font-size: 1.2rem;
   line-height: 1.7rem;
+  margin-bottom: 12px;
 }
 ```
 
 What this has done is set all the text elements at basically `12px`, but we've use the `rem` measurement to set it relative to the base size, which was essentially 10px.
+
+We've also given all of those elements a bottom margin so they don't sit on top of each other.
 
 In the case above, it's important that we have commas between each text element. If we don't have those, the browser will think we need all of them together (and) instead of any of them (or).
 

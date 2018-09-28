@@ -14,7 +14,8 @@ To make a news story, something like this:
 
 - Make sure you update your `homework-story.html` file with any of the feedback provided by your instructor.
 - Use a css reset file. You can use the same one we used with the in-class assignment.
-- Now that you have a reset file, set the base font as "Times New Roman" with acceptable backups. Set the font-size for the body to 62.5%, which is the equivalent of 10px, like we did with the in-class recipe.
+- Now that you have a reset css file, you'll need to create a new css file for all your other styles specific to this story.
+- Set the base font as "Times New Roman" with acceptable backups. Set the font-size for the body to 62.5%, which is the equivalent of 10px, like we did with the in-class recipe.
 - Now set a standard font size for text elements like `<p>` and `<ul>` tags. You'll also want to set a bottom margin on those elements so they don't run up against each other.
 - Add an `<article>` tag if you need to, then make the max-width of the article 620px and center it.
 - In the HTML, set the width of the photo to 620px using a "width" attribute.
