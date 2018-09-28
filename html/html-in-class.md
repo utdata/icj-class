@@ -68,15 +68,13 @@ Total Time: 1 hour
 - Now repeat the process for the `<h3>`'s and unordered lists for the rest of the ingredients section.
 - For the Preparation section, you'll want to wrap the entire section in a `<div>` with an `id` attribute called "preparation".
 - Wrap each internal headline there in an `<h3>` tag.
-- For each set of steps, turn them into ordered lists. Use the **Emmet: Wrap Individual Lines with Abbreviations** again, but change the list style to this:
+- For each set of steps in the different preparation sections, turn them into ordered lists. Use the **Emmet: Wrap Individual Lines with Abbreviations** again, but change the list style to this:
 
 `ol>li*`
 
-* Code up the nutrition section in the same with, in a `<div>` with an `id` of "nutrition", and as unordered lists.
+* Code up the Nutrition section in a similar way by creating  a `<div>` with an `id` of "nutrition", and set the items as an unordered list.
 
-## Commit and push your code
-
-### Using gitignore
+## Using gitignore
 
 If you do a `git status` on your folder now, you might see files that you didn't remember creating. On a Mac you might see a file called `.DS_Store`, which is a hidden file the Mac finder creates when you view a folder. On Windows, you might see `Thumbs.db`, which is a record of images saved in a folder. Different applications save hidden files and other stuff that you don't need to commit to your repo, so we use another hidden [.gitignore](https://help.github.com/articles/ignoring-files/) file to tell git what to ignore. An easy way to create one is to use the website [gitignore.io](https://www.gitignore.io/).
 
@@ -84,16 +82,16 @@ If you do a `git status` on your folder now, you might see files that you didn't
 - Go to [gitignore.io](https://www.gitignore.io/) in a browser. Type in "macOS" and add it, then "Windows" and add it to the list. (If you were using other programs like MicrosoftOffice or languages like Python, you would add those as well.) Click the **Create** button.
 - Copy all the code there and put it into your `.gitignore` file and save it. 
 
-### The git cycle
+## Commit and push your code
 
-Save, commit and the push your code to your repo in Github. To review, the steps are:
+Save, add, commit and the push your code to your repo in Github. To review, the steps are:
 
 - Use `git status` to check the status of your files. You probably have two untracked files.
 - Use `git add .` to add all the untracked files files. (If you didn't want all of them, would would specify them: `git add {file/path} {file/path}`.)
 - Use `git commit -m "your message here"` to commit your changes.
 - Use `git push origin master` to push them to Github.
 
-### Turn in your work
+## Turn in your work
 
 Turn in a link to your repo in the assignment in canvas. If your repo is private, be sure to add the user `critmcdonald` as a contributor, but it is easier just to keep it public.
 
