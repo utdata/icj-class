@@ -3,7 +3,7 @@
 
 Functions allow you to reuse code and be more efficient in your programming.
 
-If you know you'll be doing the same math over and over, you can build that into a function, and the pass in the numbers that you want calculated and return the result.
+If you know you'll be doing the same math over and over, you can build that into a function, and then pass in the numbers that you want calculated and return the result.
 
 Let's look at an example:
 
@@ -30,11 +30,12 @@ console.log(difference);
 console.log(yourFunction(5, 3));
 ```
 
+
 ## Let's do it
 
-You can use the same repo and files that we used for our first JavaScript lessons. We'll just keep writing in the same script tag.
+You can use the same repo and files for this lesson that that we used for our first JavaScript lesson. We'll just keep writing in the same script tag.
 
-Let's write a function that takes a single argument - a number - and squares it, then uses `return` to return the squared number.
+Let's write a function that takes a single argument - a number - and squares it, then uses `return` to give us back the squared number.
 
 - Add a console.log with the text "Using functions:".
 - Add a comment with the intent of your function `// function to make square numbers`. You should always comment a function with its purpose so others and your future self will know what it does.
@@ -61,7 +62,7 @@ So, inside your function:
 
 ```js
 function makeSquare(theNumb) {
-  squared = theNumb * theNumb;
+  var squared = theNumb * theNumb;
   return squared;
 }
 ```
@@ -77,9 +78,13 @@ function makeSquare(theNumb) {
 
 BONUS: Update your function to use [JavaScript's Math Object](https://www.w3schools.com/Js/js_math.asp) to perform the squaring.
 
+### OK, so a wee bit on scope
+
+One thing of note ... the variable that was declared inside the function, `squared`, cannot be referenced outside the scope of the function. If we try to add `console.log(squared)` outside the function, we would get an error. Again, [read more about variables and scope here](https://wesbos.com/javascript-scoping/).
+
 ### Functions on your own
 
-- Write another function that takes three arguments -- `firstName`, `middleName` and `lastName` -- and uses the `+` operator to combine the three arguments to form a full name.
+- Write another function that takes three arguments -- `first`, `middle` and `last` -- and uses the `+` operator to combine the three arguments to form a full name.
 - In your code, call the function with three different sets of names to make sure it works and log the returned value to the console each time.
 - For one of those names, I want you to use Robert "Beto" O'Rourke, including the double-quotes around "Beto".
 - Commit your changes using the Github app.
