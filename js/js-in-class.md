@@ -27,7 +27,7 @@ but it can be on more then one line
 
 You'll test all the functions by opening this page with a browser window and then looking at the Inspector's Console window. The Console is one way we can interact with JavaScript in a browser, and vise versa.
 
-Let's get something log some text to the Console so you can see it work. `console` is our
+Let's get log some text to the Console so you can see it work.
 
 - Between the script tags, on a line by itself:
 
@@ -37,12 +37,12 @@ console.log("Let's do math:");
 
 - Save your `js-practice.html` files.
 - Open that page in your browser. It's probably blank.
-- Open your Inspector. Easiest way in Chome is to Control-click on the blank page and choose Inspector in the contextual menu.
+- Open your Inspector. Easiest way in Chrome is to Control-click on the blank page and choose Inspector in the contextual menu.
 - Click on the Console tab. It should look like this:
 
 ![console](../images/js-show-console.png)
 
-Note we use double-quotes to signify our string. Just so you know, we could use single quotes if we are consistent, but then we would've needed to escape the single quote in the text as `Let\'s`.
+Note we used double-quotes to signify our string. Just so you know, we could use single quotes if we are consistent, but then we would've needed to escape the single quote in the text as `Let\'s`.
 
 ## Writing to the console
 
@@ -55,13 +55,21 @@ console.log(x);
 
 - Save your html page, then refresh your browser and you should see your console update to include the "5" in the log.
 
-### var vs let vs const
+The browser will act on all our code written in JavaScript, in the order that we write it. You don't actually see it happen, unless there is some result for you to see. We are using `console.log` to see that result.
 
-Remember how the Codecademy lesson showed you two ways to declare variables in JavaScript: `let` and `const`? Well, those are actually relatively new ways of declaring variables, introduced in ES6, a version of JavaScript introduced in 2015, but not yet fully implemented in browsers. Before ES6, we used `var` to declare variables. `var` still works and you will see it in just about any JavaScript code written today. , but here are very simplified differences:
+We could actually type those commands into the browser Console, but anything we do would not be saved when the browser is refreshed.
+
+### var vs. let vs. const
+
+Variables are the placeholders ... containers that hold information. Their purpose is to label and store data that can then be used in your program. By providing a variable with a descriptive name, our programs can be understood more clearly by others and our future selves.
+
+Remember how the Codecademy lesson showed you two ways to declare variables in JavaScript: `let` and `const`? Well, those are relatively new ways of declaring variables, introduced in in 2015 with ES6, a version of Javascript mostly-but-not-yet-fully implemented in browsers. Before ES6, we used `var` to declare variables, and the method is still part of ES6, but it wasn't fully explained in Codecademy.
+
+Here are the very simplified differences between these three ways of declaring a variable:
 
 - If you declare a variable with `var`, you can re-declare it later and doing so will change its value.
-- If you declare a variable with `let`, you can change it's value later, but you can't re-declare it. If you try, you will get an error. This is usually good, because it tells you it was already in use.
-- If you declare a variable with `const`, you can't change its value later.
+- If you declare a variable with `let`, you can change it's value later, but you can't re-declare it. If you try, you will get an error. This is usually good, because it tells you the variable was already in use.
+- If you declare a variable with `const`, you can't change its value later or re-declare later.
 
 There is lots more to it, mainly dealing with "scope". You can [read more about the differences](https://wesbos.com/javascript-scoping/), but I don't want to get bogged down with it here.
 
