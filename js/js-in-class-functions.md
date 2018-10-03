@@ -12,7 +12,7 @@ Let's look at an example:
 If you had a function that took two arguments and returned their difference ...
 */
 function yourFunction(argument1, argument2) {
-  var newValue = argument1 - argument2;
+  let newValue = argument1 - argument2;
   return newValue;
 }
 
@@ -21,7 +21,7 @@ You would call it in your code by passing it the required arguments.
 If you used "return" in your function, then the "difference"
  variable below should be set to the value you "return"ed in your function
 */
-var difference = yourFunction(5, 3);
+let difference = yourFunction(5, 3);
 
 /* You can the log the function's value by logging the variable ... */
 console.log(difference);
@@ -62,7 +62,7 @@ So, inside your function:
 
 ```js
 function makeSquare(theNumb) {
-  var squared = theNumb * theNumb;
+  let squared = theNumb * theNumb;
   return squared;
 }
 ```
@@ -70,7 +70,7 @@ function makeSquare(theNumb) {
 - In your code, call your function to make sure its works, logging the returned value to the console. For example:
 
 ```js
-  var try01 = makeSquare(3);
+  let try01 = makeSquare(3);
   console.log(try01);
 ```
 

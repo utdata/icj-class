@@ -15,7 +15,7 @@ We will be typing all our code between a `<script>` tag inside the body of that 
 <script>
 
 // This is a comment
-var somecode = 'this code';
+let somecode = 'this code';
 
 /*
 FYI that this is a comment, too
@@ -59,32 +59,30 @@ The browser will act on all our code written in JavaScript, in the order that we
 
 We could actually type those commands into the browser Console, but anything we do would not be saved when the browser is refreshed.
 
-### var vs. let vs. const
+### let vs. let vs. const
 
 Variables are the placeholders ... containers that hold information. Their purpose is to label and store data that can then be used in your program. By providing a variable with a descriptive name, our programs can be understood more clearly by others and our future selves.
 
-Remember how the Codecademy lesson showed you two ways to declare variables in JavaScript: `let` and `const`? Well, those are relatively new ways of declaring variables, introduced in in 2015 with ES6, a version of Javascript mostly-but-not-yet-fully implemented in browsers. Before ES6, we used `var` to declare variables, and the method is still part of ES6, but it wasn't fully explained in Codecademy.
+Until recently, the way to create (or instantiate) a variable in JavaScript was to use `var variableName`. In 2015 with the update to ES6, `let` and `const` were introduced as better ways of declaring variables. While not all features of ES6 are fully supported in all browsers, we should use these new terms.
 
 Here are the very simplified differences between these three ways of declaring a variable:
 
-- If you declare a variable with `var`, you can re-declare it later and doing so will change its value.
-- If you declare a variable with `let`, you can change it's value later, but you can't re-declare it. If you try, you will get an error. This is usually good, because it tells you the variable was already in use.
+- If you declare a variable with `var`, you can re-declare it later and in doing so you will change its value.
+- If you declare a variable with `let`, you can change its value later, but you can't re-declare it. If you try, you will get an error. This is usually good, because it tells you the variable was already in use.
 - If you declare a variable with `const`, you can't change its value later or re-declare later.
 
-You can also declare a variable without using any of those, but by just assigning a value to term. `x = 5`. DON'T DO IT. It is not good practice, as you can overwrite global variables already in play, no matter where it is called. This is "scope" and there is a lot more to it. You can [read more about calling variables in scope](https://wesbos.com/javascript-scoping/), but I don't want to get bogged down with it here.
+Note that you can also declare a variable without using any of those, but by just assigning a value to term. `x = 5`. DON'T DO IT. It is not good practice, as you can overwrite global variables already in play, no matter where it is called. You can [read more about calling variables in scope](https://wesbos.com/javascript-scoping/), but I don't want to get bogged down with it here.
 
 In our example above, we used `let` to declare a variable that we called "x", and then we assigned that variable to the value "5".
 
 When we used `console.log` to print log our variable "x" to the screen, it returned our value: 5.
 
-We're going to use `var` to declare variables for the rest of this lesson.
-
 ## Let's do some math in JavaScript
 
-- Use `var` to create a new variable `y` and set it to `3`. Log `y`'s value to the console.
+- Use `let` to create a new variable `y` and set it to `3`. Log `y`'s value to the console.
 
 ```js
-var y = 3;
+let y = 3;
 console.log(y);
 ```
 
@@ -93,7 +91,7 @@ console.log(y);
 - Create a new variable `z` and set it to `x` multiplied `y`, using the `x` and `y` variables (don't just use the numbers 3 and 5). Log `z`'s value to the Console. The character `*` is our your multiplication tool.
 
 ```js
-var z = x * y;
+let z = x * y;
 console.log(z);
 ```
 
@@ -114,15 +112,15 @@ console.log(z);
 ```js
 console.log("Working with strings:");
 
-var firstName = 'Christian';
-var middleName = 'Clay';
-var lastName = 'McDonald';
+let firstName = 'Christian';
+let middleName = 'Clay';
+let lastName = 'McDonald';
 ```
 
 - Use string concatenation (`+`) to join the variables you just created into a new variable called `name`. Make sure to include spaces between each name part. Log it to the console.
 
 ```js
-var name = firstName + " " + middleName + " " + lastName;
+let name = firstName + " " + middleName + " " + lastName;
 console.log(name)
 ```
 
