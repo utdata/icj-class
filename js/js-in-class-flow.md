@@ -51,7 +51,7 @@ console.log(makeBetterName("Donald", "F", "Trump"));
 
 ### Return if true
 
-Now let's update our true statement to build the name we want. We need to do several things:
+Now let's update our true statement to build the name we want. Let's outline the logic of what we need to do:
 
 1. Add a period to the end of our `middleName` variable.
 2. Create a fullName that is the combination of the other names.
