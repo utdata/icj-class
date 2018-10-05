@@ -23,13 +23,13 @@ Now we'll explain them in detail.
 
 - Inside the same repo we have been working, create a new file called `form.html` and open it in VS Code.
 - Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`.
-- In the body of the document, add the following HTML code. I'll explain afterward:
+- Into the body of the document, add the following HTML code. I'll explain afterward:
 
 ```html
   <form id="nameForm">
-    <p>First name: <input type="text" name="fname"></p>
-    <p>Middle name: <input type="text" name="mname"></p>
-    <p>Last name: <input type="text" name="lname"></p>
+    <p>First name: <input type="text" name="first" value="Aragorn"></p>
+    <p>Middle name: <input type="text" name="middle" value="Elessar"></p>
+    <p>Last name: <input type="text" name="last" value="Telcontar"></p>
     <input type="button" value="Make name">
   </form> 
 
@@ -40,29 +40,40 @@ Now we'll explain them in detail.
 
 We've introduced several new HTML elements here that we haven't used before.
 
-- [Forms](https://www.w3schools.com/html/html_form_elements.asp) provide a what for HTML pages to collect collect user input. We named our form `nameForm` so we can target it later.
-- [Input type](https://www.w3schools.com/html/html_form_elements.asp) defines how we can provide the input. The default is a text box, and we have three of those we have named so we can find them later. We also have a `button`, which we will fire our JavaScript function later. (If you click on the button now, it doesn't do anything. Yet.)
+- [Forms](https://www.w3schools.com/html/html_form_elements.asp) provide a way for HTML pages to collect collect user input. We've given our form and id of `nameForm` so we can target it later.
+- [Input](https://www.w3schools.com/html/html_form_input_types.asp) defines how we can provide the input. We have three inputs with `type="text"`, which gives us a text box. We have given each a `name` so we can find it with JavaScript later, and a default `value` to display text until we type something else in.
+- We also have an input `type="button"`, which we will use to fire our JavaScript function. (If you click on the button now, it doesn't do anything. Yet.)
 
 ## Copy our function
 
-- Create a new script tag under our HTML but before the close of the `</body>` tag.
-- Go to your previous lesson file and find your `makeBetterName` function and copy it into `form.html` inside the script tag.
+- Create a new script tag under our HTML but before the closing `</body>` tag.
+- Let's add a copy of our `makeBetterName` function into `form.html` inside the script tag.
 
-```js
+It script should look like this:
+
+```html
+<script>
 function makeBetterName (fName, mName, lName) {
   if (mName.length === 1) {
-    let fullName = fName + ' ' + mName + '. ' + lName;
+    let fullName = fName + " " + mName + ". " + lName;
     return fullName;
   } else {
-    let fullName = fName + ' ' + mName + ' ' + lName;
+    let fullName = fName + " " + mName + " " + lName;
     return fullName;
   }
 }
+</script>
 ```
 
-## Modify our function
+## Modify your function
 
 There are couple of logic changes we need to make to our function to work with our form.
 
 - Instead of us sending name values into the function with console.log, we need the function to grab the values from our text inputs in the form.
-- Instead of printing to return value to the console.log, we want to replace the text in our `<h3>` tag so we can see it on the page.
+- Instead of returning our fullName value to the console.log, we want to replace the text in our `<h3>` tag so we can see it happen on the page.
+
+### getElementById
+
+Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elements.asp), we can find any named element on our HTML page. Once we "have" that object, we can find it's various properties, like how long it is, or the contents of the tag, etc.
+
+The easiest way to do this is with `document.getElementByID()`.
