@@ -88,3 +88,7 @@ One thing of note ... the variable that was declared inside the function, `squar
 - In your code, call the function with three different sets of names to make sure it works and log the returned value to the console each time.
 - For one of those names, I want you to use Robert "Beto" O'Rourke, including the double-quotes around "Beto".
 - Commit your changes using the Github app.
+
+## Instance, property, method, library
+
+Let's enhance our change name function to output as uppercase (using `.toUpperCase()`), so we can talk about properties vs methods.

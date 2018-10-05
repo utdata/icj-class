@@ -6,7 +6,7 @@ We now have us a pretty nice website, and we could imagine this being the entry 
 
 Fortunately, Bootstrap 4 has a robust system that enables customizing common elements quite easy.
 
-- Open up the `/src/scss/styles.scss` filw and paste the following:
+- Open up the `/src/scss/styles.scss` file and paste the following:
 
 ```scss
 // Variable Overrides
