@@ -18,9 +18,10 @@ The Canvas course is your official courseware, but some assignments and files ma
 
 ### JavaScript
 
-- [JS in-class](js/js-in-class.md)
-- [JS functions](js/js-in-class-functions.md)
-- [JS flow control](js/js-in-class-flow.md)
+- [JS basics](js/js-in-class-01.md)
+- [JS functions](js/js-in-class-02.md)
+- [JS flow control](js/js-in-class-03.md)
+- [JS with html](js/js-in-class-04.md)
 - [JS homework](js/js-homework.md)
 
 ### First Graphics App

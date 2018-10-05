@@ -122,8 +122,5 @@ function makeBetterName(firstName, middleName, lastName) {
 
 1. Write a function that takes two scores - `home` and `away` - and logs a message to the console saying either **"The home team won"** or **"The away team won"**
 2. In your code, call it twice to make sure it's working - once for a time when when the home wins and once for when it loses
-3. What if it's a tie? use `else if` to handle ties and call it again to make sure it works.
+3. What if it's a tie? Refactor you code to use `else if` to handle ties and call it again to make sure it works.
 
-## Flow control functions bonus
-
-Can you refactor the make name function to ignore the middleName if it is blank, while still retaining the test if it is a single letter?
