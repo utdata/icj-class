@@ -22,7 +22,7 @@ The Canvas course is your official courseware, but some assignments and files ma
 - [JS functions](js/js-in-class-02.md)
 - [JS flow control](js/js-in-class-03.md)
 - [JS with html](js/js-in-class-04.md)
-- [JS homework](js/js-homework.md)
+- [JS jQuery/Datatables](js/js-in-class-05.md)
 
 ### First Graphics App
 
