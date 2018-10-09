@@ -10,14 +10,14 @@ The DOM allows us to connect our JavaScript functions to HTML or CSS on the page
 
 ## Our goals
 
-We are making a form that allows a use to enter their first, middle and last name, and when they press a button it will display that name on the page. And overview of steps:
+We are making a form that allows a use to enter their first, middle and last name, and when they press a button it will display the full name on the page. And overview of steps:
 
 1. Create a new html page
 2. Add some basic form elements and a button.
 3. Copy our `makeBetterName` function from our previous exercise
 4. Modify that function and connect it to our forms elements and buttons.
 
-Now we'll explain them in detail.
+Now let's get down to the detail.
 
 ## Create our page
 
@@ -46,7 +46,7 @@ We've introduced several new HTML elements here that we haven't used before.
 
 ## Copy our function
 
-- Create a new script tag under our HTML but before the closing `</body>` tag.
+- Create a new script tag under the HTML we added, but just before the closing `</body>` tag.
 - Let's add a copy of our `makeBetterName` function into `form.html` inside the script tag.
 
 It script should look like this:
@@ -78,7 +78,7 @@ Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elemen
 
 The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we have "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
 
-(Side Note: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementByID().`)
+(If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementByID().`)
 
 - In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
 - Add the following three lines before the IF in your `makeBetterName` function:

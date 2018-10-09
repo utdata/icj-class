@@ -314,4 +314,4 @@ Use the git cycle to save and push your efforts to Github.
 
 ---
 
-**Next**: [Customizing Bootstrap](boostrap-class-03.md)
+**Next**: [Customizing Bootstrap](bootstrap-class-03.md)
