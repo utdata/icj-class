@@ -111,7 +111,7 @@ We can not only pluck the value of a filed with `getElementByID`, but we can als
 document.getElementById("name").innerHTML = fullName;
 ```
 
-- Save your file and refresh yor page, and now the <h3> tag (which had `id="name"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
+- Save your file and refresh yor page, and now the `<h3>` tag (which had `id="name"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
 
 We used the same DOM property `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property by assigning to it the contents of our `fullName` variable.
 
