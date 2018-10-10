@@ -24,6 +24,7 @@ Throughout this lesson, we will refer to:
 
 - [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 - The [Learn Bootstrap screencasts](https://scrimba.com/g/gbootstrap4) you had as prework.
+- W3 Schools' [Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/).
 
 ## Create your Github repo and clone
 

@@ -1,10 +1,10 @@
 # SASS and SCSS
 
-SASS is system that helps make writing CSS easier. SCSS (Sassy CSS) is the syntax we use, and it to be "compiled" into regular CSS before the browser can understand it. That process is usually handled in the background with some task service. We are using Gulp.
+SASS is system that helps make writing CSS easier. SCSS (Sassy CSS) is the syntax we use, and it has to be "compiled" into regular CSS before the browser can understand it. That process is usually handled in the background with some task service. We are using Node.js and Gulp, and introducing that ecosystem is a learning experience in itself. I'll get to that, but let's talk about Sass first.
 
 Some of the benefits/features of Sass/SCSS are:
 
-- Nesting and shorthand styles allows you to write more understandable add efficient code that is easier to maintain.
+- Nesting and shorthand styles allows you to write more understandable and efficient code that is easier to maintain.
 - Variables allow you to reuse styles and make a single change to affect values all through your code.
 - Partials and importing allow you to organize your style files into smaller, more manageable chunks.
 - Sass allows you to do standard math operations within your SCSS.
@@ -14,5 +14,8 @@ The Bootstrap framework that we will use in this class takes advantage of all of
 
 ## Learning Sass
 
-- Take a look at the [Sass guide](https://sass-lang.com/guide).
+We'll walk through the [Sass guide](https://sass-lang.com/guide) and talk about the features in class. If you are doing this on your own, resist the urge to install Sass, because we'll handle that later.
 
+----
+
+Next: [Intro to Node and our environment](sass-02.md)
