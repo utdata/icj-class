@@ -28,9 +28,9 @@ The Canvas course is your official courseware, but some assignments and files ma
 
 Better CSS with Sass
 
-- [Setting up the project](sass/sass-01.md)
-- [Intro to Node](sass/sass-02.md)
-- [Using Sass](sass/sass-03.md)
+- [Setting up, Intro to Node](sass/sass-01.md)
+- [Introducing Sass](sass/sass-02.md)
+- [Refactoring with Sass](sass/sass-03.md)
 
 ### Bootstrap
 
