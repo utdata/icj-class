@@ -24,9 +24,13 @@ The Canvas course is your official courseware, but some assignments and files ma
 - [JS with html](js/js-in-class-04.md)
 - [JS jQuery/Datatables](js/js-in-class-05.md)
 
-### First Graphics App
+### Sass
 
-- [FGA notes](fga/fga.md)
+Better CSS with Sass
+
+- [Setting up the project](sass/sass-01.md)
+- [Intro to Node](sass/sass-02.md)
+- [Using Sass](sass/sass-03.md)
 
 ### Bootstrap
 
@@ -35,3 +39,7 @@ The Canvas course is your official courseware, but some assignments and files ma
 - [Part 3: Modifying Bootstrap](bootstrap/bootstrap-class-03.md)
 - [Part 4: Publishing to the web](bootstrap/bootstrap-class-04.md)
 - [Part 5: Running an npm project](bootstrap/bootstrap-class-05.md)
+
+### First Graphics App
+
+- [FGA notes](fga/fga.md)
