@@ -162,3 +162,6 @@ You'll want to set these styles in the `_nav.scss` file.
 
 Once everything checks out, push your changes to Github.
 
+------
+
+Next: [Publishing to the Internet](sass-04.md)

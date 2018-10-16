@@ -31,6 +31,7 @@ Better CSS with Sass
 - [Setting up, Intro to Node](sass/sass-01.md)
 - [Introducing Sass](sass/sass-02.md)
 - [Refactoring with Sass](sass/sass-03.md)
+- [Publishing to the web](sass/sass-04.md)
 
 ### Bootstrap
 

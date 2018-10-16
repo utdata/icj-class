@@ -4,7 +4,7 @@ We will be learning about Sass through refactoring existing CSS into Sassy CSS. 
 
 **Node.js** is an open-source programming framework built using JavaScript. Many programmers like it because it allows them to write JavaScript not just in for “front-end” browser tasks, but also for server-based or “back-end” tasks.
 
-For our purposes, Node is development environment and ecosystem to use a bunch of mini-programs. Developers will create these mini-programs -- known as packages -- and share them through Node Package Manager, or **npm** for short. Think of npm as an App Store for these mini-programs. When someone creates a package to do something -- say a photo slide-show for the web -- we don't have to reinvent that wheel. The task to convert Sass SCSS to CSS is one of these server-based tasks we'll need from Node.
+For our purposes, Node is a development environment and ecosystem to use a bunch of mini-programs. Developers will create these mini-programs — known as packages — and share them through Node Package Manager, or **npm** for short. Think of npm as an App Store for these mini-programs. When someone creates a package to do something — say a photo slide-show for the web — we don't have to reinvent that wheel. The task to convert Sass SCSS to CSS is one of these server-based tasks we'll need from Node.
 
 ## Downloading, running our project
 
