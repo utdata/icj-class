@@ -51,9 +51,9 @@ If you don't see a change, then make sure that your `gulp` task is running so yo
 
 HTML code often has a clearly nested hierarchy. A `nav` element is often a parent to child `li` elements that make up the links.
 
-CSS doesn't have the same hierarchy be default, but it would be useful. With Sass, we can use a similar visual hierarchy. We do need to be careful not to nest too much, or our CSS will end up over-qualified and bloated.
+CSS doesn't have the same hierarchy be default, but it would be useful in some cases. With Sass, we can use a similar visual hierarchy. We do need to be careful not to nest too much, or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html heirarchy because then small changes in the HTML might break our styles.
 
-Here is an example
+Here is an example:
 
 ```scss
 nav {
@@ -89,21 +89,15 @@ Written in our first Sassy way, we can immediately understand that the `ul` and 
 
 In our band website and the structure of our HTML, we can see there is `<div class="container">` that is the parent to all of what is contained in the body. There are two other div elements, `<div class="nav">` and `<div class="main">` that are nested inside the container.
 
-Looking at the CSS file, we have class elements for each of those, as well.
+Looking at the CSS file, we have class elements for each of those, as well. Let's refactor our SCSS to reflect this nesting so it is more understandable.
 
-Let's refactor our SCSS to reflect this nesting so it is more understandable.
-
-- In the `/src/scss/new-styles.scss` file, nest the `.nav` and `.main` CSS declarations inside of the `.container` declaration.
-
-Make sure your page is still displaying correctly. We haven't changed what the page _looks like_, but we do want to make sure we haven't broken anything.
-
-- Next, trickle down the DOM tree and focus solely on the .nav selector. What elements are direct children of this element? In `new-styles.scss`, nest the selectors and their properties appropriately.
+- Look through the the DOM tree and focus solely on the .nav selector. What elements are direct children of this element? In `new-styles.scss`, nest the selectors and their properties appropriately.
 - Don't forget you'll no longer need the `.nav` part `.nav h4` if that selector is nested.
 
-Again, make sure everything is still working.
+Look at your page in the browser to make sure everything is still working.
 
 - Let's move down to the .main element. What elements are first descendants of .main? In `new-styles.scss`, nest these selectors accordingly.
-- Do any of first descendents of .nav or .main have descendents with properties? In `new-style.scss`, nest li and its properties inside of ul.
+- Do any of first descendants of .nav or .main have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
 
 Again, make sure nothing is broken on the page display.
 

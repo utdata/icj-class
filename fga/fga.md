@@ -1,6 +1,6 @@
 # First Graphics App notes
 
-The [First Graphics App](http://www.firstgraphicsapp.org/) lesson taught at NICAR over the past couple of years is a great introduction into how modern newsroom construct online projects.
+The [First Graphics App](http://www.firstgraphicsapp.org/) lesson taught at NICAR over the past couple of years is a great introduction into how modern newsrooms construct online projects.
 
 Our aim is to go through this lesson together in class, following along with the script, but also filling in some context as we go along. It will still go pretty fast, as we'll spend weeks following going into further detail on some of the technologies used.
 
