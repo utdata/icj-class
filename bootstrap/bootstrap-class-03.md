@@ -17,13 +17,13 @@ Fortunately, Bootstrap 4 has a robust system that enables customizing common ele
 
 According to the [Theming section](https://getbootstrap.com/docs/4.1/getting-started/theming/), you can choose to either include **all** of the Bootstrap 4 sass files, or you could include individual items based on your needs. To keep things simple, we'll just import everything as we have above. (The advantage to picking and choosing which Sass files is you have smaller published CSS and JavaScript files when you are done.)
 
-> **Note**: One that may happen as we are editing our `styles.scss` file during these exercises: If you incorrectly type one of the styles, it may stop your _gulp_ command with an error. If this happens, read the error to discover where the problem is, try to fix it and run `gulp` in your terminal again. It may help to run `gulp` in your Integrated Terminal so you can see when this happens.
+> **Note**: One thing that may happen as we are editing our `styles.scss` file during these exercises: If you incorrectly type one of the styles, it may stop your _gulp_ command with an error. If this happens, read the error to discover where the problem is, try to fix it and run `gulp` in your terminal again. It may help to run `gulp` in your Integrated Terminal so you can see when this happens.
 
 ## Theme colors
 
-Perhaps the most common theming need is to change the colors.
+Perhaps the most common theme need is to change the colors.
 
-If you open up the `node_modules/bootstrap/scss/_variables`.scss file, you will notice at the top it mentions Color system. In this section, you will see all of the variables that you're able to overwrite that to pertain to colors.
+If you open up the `node_modules/bootstrap/scss/_variables.scss` file, you will notice at the top it mentions Color system. In this section, you will see all of the variables that you're able to overwrite that to pertain to colors.
 
 Let's change just the primary color:
 
@@ -79,4 +79,4 @@ Make sure to use your git cycle to save your code and push it to your master bra
 
 ---
 
-**Next**: We'll [publish to the web](bootstrap-class-04.md) one of your college's repo.
+**Next**: We'll [publish to the web](bootstrap-class-04.md).

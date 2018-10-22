@@ -4,7 +4,7 @@
 
 - Download a fellow student's repo to our local machine, treating it as a new project template.
 - Run `npm install` to install all the software needed to work on the project.
-- Run `gulp` to set up our develpment environment.
+- Run `gulp` to set up our development environment.
 
 ## A little background
 

@@ -167,10 +167,10 @@ Next, we're going to create our styles overrides files and insert some code that
 - Open it and paste the following test code inside the file:
 
 ```scss
-$bg-color: red; 
+$bg-color: red;
 
 body {
-    background: $bg-color;
+  background: $bg-color;
 }
 ```
 
