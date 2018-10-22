@@ -30,7 +30,7 @@ Throughout this lesson, we will refer to:
 
 This is the same cycle we've use in other lessons to create a new repo.
 
-- Go to Github.com and create a new repo. Call it `bootstrap-yourname`. Include the README.md and keep the repo public.
+- Go to Github.com and create a new repo. Call it `yourname-bootstrap`. Include the README.md and keep the repo public.
 - Copy the clone URL
 - In a Terminal, cd into your code folder: `cd ~/Documents/icj/`
 - do `git clone [yoururl]`
@@ -62,7 +62,7 @@ Then we'll move on to learning Bootstrap.
 ### Initialize our project
 
 - Launch VS Code (or start a new window), and use the **Go to folder** link to open your project in `Documents/icj/boostrap-yourname`.
-- Open your Integrated Terminal in VS Code, and make sure (use `pwd`, that you are inside your project folder.
+- Open your Integrated Terminal in VS Code, and make sure (use `pwd`) that you are inside your project folder.
 - Use this command to initialize your npm project:
 
 ```bash
@@ -128,10 +128,10 @@ mkdir docs docs/css docs/js src src/scss
 
 ### Create our index file
 
-Use `touch` to create a new file inside the `/src` folder:
+Use `touch` to create a new file inside the `/docs` folder:
 
 ```bash
-touch src/index.html
+touch docs/index.html
 ```
 Then open the file in VS Code and add this into it:
 
@@ -157,7 +157,7 @@ Then open the file in VS Code and add this into it:
 </html>
 ```
 
-There are several things going on here with this file beyond the base HTML. In the `<head>`wWe are pulling in css files that don't exist yet, and at the bottom we are pulling in JavaScript files that don't exist yet. And we don't have any content. Yet. It's coming. Promise.
+There are several things going on here with this file beyond the base HTML. In the `<head>` we are pulling in css files that don't exist yet, and at the bottom we are pulling in JavaScript files that don't exist yet. And we don't have any content. Yet. It's coming. Promise.
 
 ### Create our styles overrides file
 
@@ -188,7 +188,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 
-// Compile sass into CSS & auto-inject into browsers
+// Compile sass into CSS and put into docs/css folder
 gulp.task('sass', function() {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
         .pipe(sass())
@@ -196,7 +196,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-// Move the javascript files into our /src/js folder
+// Move the javascript files into our docs/js folder
 gulp.task('js', function() {
     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
         .pipe(gulp.dest("docs/js"))

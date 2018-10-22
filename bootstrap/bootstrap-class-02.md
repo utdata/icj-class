@@ -66,7 +66,7 @@ Every phone and computer screen is different, so that list above is really appro
 
 Bootstrap works from smallest to largest, so once you set a grid width for `col-sm`, they will stay that way for wider widths unless you set another one. You can set the same div to a different number of columns at different widths. **However, within a row, the columns need to add up to increments of 12 for each breakpoint** if you want them to work properly.
 
-- Adjust the three columns to be `col-sm-2`, `col-sm-6` and `col-sm-3`, respectively.
+- Adjust the three columns to be `col-sm-3`, `col-sm-6` and `col-sm-3`, respectively.
 
 This makes the middle column wider when viewed at the "small" breakpoint or wider, but they each still show over all 12 columns when at the smallest default breakpoint. **Note that those column numbers add up to 12**. Make one larger now, and it breaks.
 
