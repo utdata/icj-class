@@ -147,6 +147,8 @@ Now to write some new Sassy SCSS to fix a couple of things.
 
 Add styles that would make the navigation links be the primary color and behave like those in the body, where the underline only shows on hover.
 
+![sass-hover](../images/sass-hover.gif)
+
 Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) at all separate properties and each one needs to be specified with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property.
 
 ```scss
@@ -164,7 +166,9 @@ You'll want to set these styles in the `_nav.scss` file.
 
 The list of shows on the `shows.html` is hard to read. Make some changes to make it look better:
 
-- Make the list of shows a bulleted list.
+![sass-bullet-list.png](../images/sass-bullet-list.png)
+
+- Make the list of shows a bulleted list. (Style of your choice.)
 - Make sure the bullets line up vertically with the video on the page
 
 ## Publish to Github
