@@ -137,7 +137,15 @@ Make sure these imports come _AFTER_ your variables, because this CSS still casc
 
 ## Make new styles
 
-Now to write some new Sassy SCSS to fix a couple of things. Add styles that would make the navigation links be the primary color and behave like those in the body, where the underline only shows on hover.
+Now to write some new Sassy SCSS to fix a couple of things.
+
+### Text sizes
+
+- Increase the size of all text, including anchor links, to be `1rem`.
+
+### Nav link colors
+
+Add styles that would make the navigation links be the primary color and behave like those in the body, where the underline only shows on hover.
 
 Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) at all separate properties and each one needs to be specified with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property.
 
@@ -147,14 +155,21 @@ a:hover {
 }
 ```
 
-- In the `_base.scss` file, change the font-size value for the `p` and `a` elements to be `1rem`.
-
 You'll want to set these styles in the `_nav.scss` file.
 
-- Set  both the link and visited values to have the primary color, and the text-decoration to none.
+- Set both the link and visited values to have the primary color, and the text-decoration to none.
 - Set hover color to the primary color, and text-decoration to underline.
 
-Once everything checks out, push your changes to Github.
+### Set bullet style for shows
+
+The list of shows on the `shows.html` is hard to read. Make some changes to make it look better:
+
+- Make the list of shows a bulleted list.
+- Make sure the bullets line up vertically with the video on the page
+
+## Publish to Github
+
+Once everything checks out, push your changes to Github. Send the link in the assignment.
 
 ------
 
