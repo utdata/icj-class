@@ -37,6 +37,13 @@ This is the same cycle we've use in other lessons to create a new repo.
 - cd into the folder
 - open in VS code with: `code ./`
 
+## Set up .gitignore
+
+When we later install packages using npm, it will create a folder called a `node_modules` that has the javascript code for MANY apps. We don't want those files saved to Github, so we will create a `.gitignore` file to exlude them (and other things we don't want saved to Github).
+
+- In your Integrated Terminal, create a new file with `touch .gitignore` and then open it in the code editor.
+- Go to [Gitignore.io](https://www.gitignore.io) and type in "Node", "macOS", "Windows" and "VisualStudioCode" and hit OK to get to the code, which you'll then copy 'n' paste into the `.gitignore` file.
+
 ## Set up our project environment
 
 ### A quick note about Node.js and npm
@@ -89,12 +96,6 @@ npm install bootstrap jquery popper.js --save
 
 In class, we may take a minute to tour the `package.json` and `package-lock.json` files.
 
-You'll notice after you are done with all the installs that a `node_modules` folder has been created. It includes all the code that we installed into our project. It's a boatload of files that we don't need to save in github, so we need to create a `.gitignore` files.
-
-- In your Integrated Terminal, create a new file with `touch .gitignore` and then open it in the code editor.
-- Go to [Gitignore.io](https://www.gitignore.io) and type in "Node", "macOS" and "Windows" and hit OK to get to the code, which you'll then copy 'n' paste into the `.gitignore` file.
-
-Those gitignore directions tell git to ignore the `node_modules` folders along with other files our OS creates that we don't need to save in our repo.
 
 ### The git cycle
 
