@@ -83,7 +83,7 @@ The `-y` flag allows us skip some answers and accept some defaults. This process
 Next, we'll install some "development dependencies" packages with the `--save-dev` flag. That flag tells npm (and other developers) that we only need these tools when we are in development, and they do not need to be included in any final products. I'll explain the individual packages later when we use them.
 
 ```bash
-npm install gulp gulp-sass browser-sync --save-dev
+npm install gulp gulp-sass gulp-util browser-sync --save-dev
 ```
 
 You might see some "vulnerability" warnings after the install. We'll ignore these for now. `¯\_(ツ)_/¯`
@@ -188,11 +188,14 @@ OK, this is the most technical part of this whole setup, and we are getting into
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
+var gutil       = require('gulp-util');
 
-// Compile sass into CSS and put into docs/css folder
+// Compile Sass into CSS and put into docs/css folder
+// gutil logs errors on console instead of quitting gulp
 gulp.task('sass', function() {
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
         .pipe(sass())
+        .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))
         .pipe(browserSync.stream());
 });
