@@ -193,7 +193,7 @@ var gutil       = require('gulp-util');
 // Compile Sass into CSS and put into docs/css folder
 // gutil logs errors on console instead of quitting gulp
 gulp.task('sass', function() {
-    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'])
+    return gulp.src(['src/scss/*.scss'])
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))
@@ -214,7 +214,7 @@ gulp.task('serve', ['sass'], function() {
         server: "./docs"  
     });
 
-    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
+    gulp.watch(['src/scss/*.scss'], ['sass']);
     gulp.watch("docs/*.html").on('change', browserSync.reload);
 });
 
@@ -242,7 +242,23 @@ In class, we should take a quick tour of the `docs/` folder to see all the files
 
 I can tell you, I did not write all this JavaScript from scratch! There are examples in the [gulp](https://www.npmjs.com/package/gulp), [gulp-sass](https://www.npmjs.com/package/gulp-sass) and [browser-sync](https://www.npmjs.com/package/browser-sync) docs, but what I did was find an example on the web that was close to what I needed, and because I understood what it was doing (more or less), I adjusted it to my liking.
 
-Lastly, let's delete the contents of `src/styles.scss` now we know our gulp setup works.
+### Set up Bootstrap Sass
+
+Now we are going to use the Sass import structure to pull in all the Bootstrap styles. The [Theming](https://getbootstrap.com/docs/4.1/getting-started/theming/) documentation outlines this in more detail.
+
+- Open your `src/styles.scss` and delete the contents.
+- Replace it with this and save the file:
+
+
+```css
+// Variable Overrides
+
+// Bootstrap Sass Imports
+@import "../../node_modules/bootstrap/scss/bootstrap";
+```
+
+- Go into `docs/css/` and delete the `bootstrap.css` file. Those are now added to our main styles file.
+- Go into `index.html` and delete the line in the head that calls the `css/bootstrap.css` spreadsheet.
 
 Congrats! You are now ready to get down to business and build a website.
 
