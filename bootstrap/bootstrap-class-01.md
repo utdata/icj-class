@@ -193,7 +193,7 @@ var gutil       = require('gulp-util');
 // Compile Sass into CSS and put into docs/css folder
 // gutil logs errors on console instead of quitting gulp
 gulp.task('sass', function() {
-    return gulp.src(['src/scss/*.scss'])
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))
@@ -214,7 +214,7 @@ gulp.task('serve', ['sass'], function() {
         server: "./docs"  
     });
 
-    gulp.watch(['src/scss/*.scss'], ['sass']);
+    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
     gulp.watch("docs/*.html").on('change', browserSync.reload);
 });
 
@@ -256,9 +256,6 @@ Now we are going to use the Sass import structure to pull in all the Bootstrap s
 // Bootstrap Sass Imports
 @import "../../node_modules/bootstrap/scss/bootstrap";
 ```
-
-- Go into `docs/css/` and delete the `bootstrap.css` file. Those are now added to our main styles file.
-- Go into `index.html` and delete the line in the head that calls the `css/bootstrap.css` spreadsheet.
 
 Congrats! You are now ready to get down to business and build a website.
 

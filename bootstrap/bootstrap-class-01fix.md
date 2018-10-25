@@ -25,7 +25,7 @@ var gutil       = require('gulp-util');
 
 ```js
 gulp.task('sass', function() {
-    return gulp.src(['src/scss/*.scss'])
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))
@@ -47,3 +47,10 @@ Instead of pointing to the whole Bootstrap css, we need to instead include it in
 @import "../../node_modules/bootstrap/scss/bootstrap";
 ```
 
+- Go into `docs/css/` and delete the `bootstrap.css` file. Those are now added to our main styles file.
+- Go into `index.html` and delete the line in the head that calls the `css/bootstrap.css` spreadsheet.
+- Run `gulp` and it should recreate your `docs/css/styles.css` file with the bootstrap stuff inside it. It should also NOT create a `bootstrap.css` file.
+
+-----
+
+OK, now we can move on to [part 2](bootstrap-class-02.md)
