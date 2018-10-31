@@ -193,7 +193,7 @@ var gutil       = require('gulp-util');
 // Compile Sass into CSS and put into docs/css folder
 // gutil logs errors on console instead of quitting gulp
 gulp.task('sass', function() {
-    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
+    return gulp.src(['src/scss/*.scss'])
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))

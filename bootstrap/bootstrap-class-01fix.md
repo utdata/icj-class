@@ -25,7 +25,7 @@ var gutil       = require('gulp-util');
 
 ```js
 gulp.task('sass', function() {
-    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
+    return gulp.src(['src/scss/*.scss'])
         .pipe(sass())
         .on('error', gutil.log)
         .pipe(gulp.dest("docs/css"))
@@ -40,7 +40,7 @@ Instead of pointing to the whole Bootstrap css, we need to instead include it in
 - Open your `src/scss/styles.scss` file.
 - Add this line to the top of the file.
 
-```css
+```scss
 // Variable Overrides
 
 // Bootstrap Sass Imports
