@@ -93,7 +93,7 @@ If you look at your page now, the Jumbotron should be showing. We'll need to cre
 
 Now you have to add the partial to `main.scss`.
 
-- Open `src/scss/main.scss` and at the imports at the bottom of the page, add one from "jumbotron" like the existing ones for "article" and "nav". Remember from our Sass lessons that on imports for partials, we don't need the underscore or extension. Sass assumes them.
+- Open `src/scss/main.scss` and at the imports at the bottom of the page, add one for the "jumbotron" file like the existing one for "nav". Remember from our Sass lessons that on imports for partials, we don't need the underscore or extension. Sass assumes them.
 
 ```scss
 @import "jumbotron";
