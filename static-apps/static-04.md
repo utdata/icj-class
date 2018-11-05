@@ -12,7 +12,7 @@ If we look at the content within the first `<row>` of our index -- the part of t
 
 - Go ahead and delete the entire row that has the Headline, author, etc.
 
-Now, look into the next rwo for the list that on the site now shows a list of books:
+Now, look inside the next row for the list that displays a list of books:
 
 ```html
 <ul> 
@@ -24,9 +24,9 @@ Now, look into the next rwo for the list that on the site now shows a list of bo
 </ul>
 ```
 
-A "for loop" in programming will repeat a series of code for as long as the condition is true. In our case Nunjucks will repeat the code for each new "book" in a "books" collection. This is a prime example of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) programming, or DON'T REPEAT YOURSELF.
+A "for loop" in programming will repeat a series of code for as long as the condition is true. In our case Nunjucks will repeat the code for each new "book" in the "books" collection. This is a prime example of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) programming, or DON'T REPEAT YOURSELF.
 
-If there are no "books", then our _else_ condition displays, which is text noting the collection is empty. (Else conditions help keep your page from breaking).
+If there are no "books", then our _else_ condition is used, which is text noting the collection is empty. (Else conditions are not always necessary depending on your logic needs).
 
 Where is this "books" collection coming from? This project-template is set up so you can store data collections in a special file `src/njk/data/data.json`. Open that up and you'll see this:
 
@@ -93,11 +93,15 @@ On our index, we want to print out a list of all our blog entries. Let's add dat
 
 We changed what the loop was looking for: `for entry in entries`. The "entries" part of that is important, because that is the name of our data collection in `data.json`. The "entry" term is what we call a single instance in the loop. We can use whatever term we want there as long as we are consistent, but it is good practice to use variable names that make sense.
 
-Now, in our `<li>` code we are accessing the values in the data during each pass through variables: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in entries). And "title" comes from the data, because that is "key" to the "value" we want from that row of the data.
+Now, in our `<li>` code we are accessing the values in the data through their keys: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in entries). And "title" is the "key" that matches the "value" we want from that row of the data.
 
-This might seem like overkill for three lines of data, but you can imagine how powerful this can be with lots of data, or how we can add new rows to data without editing our pages.
+This might seem like overkill for just three lines of data, but you can imagine how powerful this can be with lots of data, or how we can add new rows to data without editing our pages.
 
-### Rewrite our loop code to be more awesome
+### Tools to make JSON data
+
+If you have a spreadsheet of data that you need in JSON format, [CSVJSON](https://www.csvjson.com/) is a tool that can help with that. With [CSV to JSON]() you can copy/paste from a spreadsheet and then get JSON in return.
+
+## Rewrite our loop code to be more awesome
 
 Now that we know how to access the data in our templates, we can change up our HTML/Bootstrap markup to make them look a little nicer.
 
@@ -111,11 +115,14 @@ Instead of a list, let's use headlines and such:
 {% endfor %}
 ```
 
-## Clean-up and publish
+## Make it pretty and publish
 
 - Replace our Pirate ipsum text with something creative you write that introduces this blog about a ship's travel.
-- When viewed on a desktop, the index display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though.
-- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three entries.
+- When viewed on a desktop, the display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though.
+- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three Ship's Log entries.
+- Add styles for the detail pages in a new `_article.scss` partial:
+  - a style rule to get the rule between the two columns on the detail page.
+  - Add styles for the byline/publication on the detail page.
 - Publish this using Github Pages using the `docs` directory.
 
 ---

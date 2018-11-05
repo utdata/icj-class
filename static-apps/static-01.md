@@ -22,7 +22,7 @@ Using a "body" as our metaphor, we first made an "individual" with HTML, CSS and
 
 Now it's time to make an army. `<deep_voice>`Woo haaa haaa`</deep_voice>`.
 
-When you built your bootstrap project, you had to copy/paste or rewrite code for each page. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
+When you built your Bootstrap project, you had to copy/paste or rewrite code for each page. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
 Static-gen sites mostly mean the end-result pages can be served just on a web server without need for a database or other complicated hardware.
 
@@ -32,9 +32,7 @@ For our class, I have provided a project framework in a repo that uses Node and 
 
 ### Nunjucks
 
-[Nunjucks](https://mozilla.github.io/nunjucks/templating.html) is a JavaScript-based template language that allow us to so this magic. ~~It's not the only solution for this type of work, but it is based on Python-based [Jinja](http://jinja.pocoo.org/docs/2.10/), so it ports across languages, in a way.~~
-
-For this lesson, we'll introduce Nunjucks and a couple of other tools. We'll take the bootstrap project that you built previously, and "extrapolate" it so you can build similar projects with more pages much faster in the future.
+For this lesson, we'll introduce the JavaScript templating language [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) and a couple of other tools. We'll take the Bootstrap project that you built previously, and "extrapolate" it so you can build similar projects with more pages much faster.
 
 ## Set up development
 
@@ -60,7 +58,7 @@ For this lesson, we'll introduce Nunjucks and a couple of other tools. We'll tak
 git init
 git add .
 git commit -m "first commit"
-git remote add origin git@github.com:critmcdonald/christian-staticgen-inclass.git
+git remote add origin git@github.com:yourrepo/yourname-staticgen-inclass.git
 git push origin master
 ```
 
@@ -75,11 +73,11 @@ git push origin master
 
 ### Understand the project structure
 
-The easiest way is to [read the README online](https://github.com/utdata/icj-project-template). We'll go over this in class.
+The easiest way to understand how this template works is to [read the README online](https://github.com/utdata/icj-project-template). DON'T SKIP THIS PART. We will also go over it in class.
 
 ### Install the Nunjucks Template extension
 
-While this isn't required, it is super helpful to install a Nunjucks syntax extension to when you look at templates you variable and such will have correct color, called "Syntax highlighting". You should only have to do this once ever on your machine.
+While this isn't required, it is super helpful to install a Nunjucks syntax extension so when you look at templates your variables and code are in color, called "Syntax highlighting". You should only have to do this once.
 
 - In VS Code, on the far left there are five icons. The bottom one looks like a funky square. Click on that.
 - In the search box, type in `Nunjucks template`. Click on the return for Nunjucks Template.

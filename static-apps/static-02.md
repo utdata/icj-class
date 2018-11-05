@@ -1,12 +1,12 @@
-# Learn by doing
+# Templates and blocks
 
 We're going to rebuild the framework of our Pirate Cove site in a way that we have a index and then a new page for each entry in the Ship's Log.
 
 ## Review the base file
 
-When we reviewed the template, we should've talked about the code inside the `src/njk/_layouts/base.html` file, and how every page on our site is going to use this file.
+When we reviewed the template, we should've talked about the code inside the `src/njk/_layouts/base.html` file, and how every page on our site uses this file.
 
-We'll make a minor change here so you can see that it does affect our index. page.
+We'll make a minor change here so you can see that it does affect our index page.
 
 - Take a look at the `<title>` tag here:
 
@@ -26,13 +26,13 @@ We want our site name to be on every page of our site, but then we want to overr
 <title>Pirate Cove | {% block page_title %}Default title{% endblock %}</title>
 ```
 
-Do that save and then look at your index in your browser, and it will start with "Pirate Cove | " now.
+Save and then look at your index in your browser, and it will start with "Pirate Cove | " now.
 
 The next block in the `base.njk` file is the `{% block description %}` tag, which is fine. We'll leave that as-is.
 
 ## Update _partial/nav.njk
 
-We finally get to our body tag and find our first _include_ file. These are bits of code that we write separately in different files just to keep our code organized. In this case is is our navigation code.
+We finally get to our body tag and find our first _include_ file. These are bits of code that we write separately in different files just to keep our code organized. In this case it is our navigation code.
 
 Let's update the Brand and the links to point to three Ship's Log entries we will add later.
 
@@ -103,4 +103,4 @@ You should have a working nav and Jumbotron header for your site now. Next, we'l
 
 ----
 
-Next: [Detail pages](static-02.md)
+Next: [Detail pages](static-03.md)

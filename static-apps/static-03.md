@@ -4,7 +4,7 @@ For this website, we are going to have a number of detail pages that are all the
 
 ## Review the detail layout and pages
 
-- Open up the `src/njk/_layouts/detail.njk` file and look at it. These are the entire contents:
+- Open up the `src/njk/_layouts/detail.njk` file and look at it. This is the content:
 
 ```html
 {% extends '_layouts/base.njk' %}
@@ -17,14 +17,13 @@ For this website, we are going to have a number of detail pages that are all the
     </div>
     <div class="col-sm-8">
       {% block story %}{% endblock %}
-
     </div>
   </div>
 </article>
 {% endblock %}
 ```
 
-Let's explain them:
+Let's explain these:
 
 - The first line _extends_ the base layout so that all the HTML framework for the entire site is included. We don't have to rewrite or copy that.
 - Next we have the _block content_. This is the guts of the page, and it is being inserted into the rest of the framework.
@@ -45,11 +44,11 @@ This means when we create a file for each story, we only need to include the con
 {% endblock %}
 ```
 
-- At the top, we _extend_ the detail layout (which in turn extends the base layout. It's Inception).
+- At the top, we _extend_ the detail layout (which in turn extends the base layout. It's [Inception](https://giphy.com/gifs/cheezburger-mindwarp-inception-3GuP496Wrkos8)).
 - Next, we have the _block info_ with some example content.
 - Then the _block story_ with example content.
 
-The only thing we have to add to build a new story is the left and right content. Heck, for that matter, all we need is the _block story_ content, since we have the same author on all our entries. Let's do that!
+The only thing we have to add to build a new story is the left and right content. Heck, for that matter, all we need is the _block story_ content, since we have the same author on all our entries. Let's fix it up that way!
 
 ## Edit the detail layout
 
@@ -57,11 +56,11 @@ The only thing we have to add to build a new story is the left and right content
 - Replace the line with `{% block info %}{% endblock %}` with this:
 
 ```html
-      {% block info %}
-        <img src="assets/img/pirate.jpg" alt="pirate character" class="img-fluid">
-        <p class="byline">By Crit McGillicutty<br>
-        <span>Island Breeze Tribune</span></p>
-      {% endblock %}
+{% block info %}
+  <img src="assets/img/pirate.jpg" alt="pirate character" class="img-fluid">
+  <p class="byline">By Crit McGillicutty<br>
+  <span>Island Breeze Tribune</span></p>
+{% endblock %}
 ```
 
 This will put the "Crit McGillicutty" byline and photo on every detail page, but also allow us to override the block if we needed to.
@@ -98,17 +97,3 @@ Congrats ... you are set up to add new detail pages. Next up is to create our in
 ---
 
 NEXT: [Data and loops](static-04.md)
-
-
-
-```html
-  <img src="assets/img/pirate.jpg" alt="pirate character" class="img-fluid">
-  <p class="byline">By Crit McGillicutty<br>
-  <span>Island Breeze Tribune</span></p>
-```
-
-```html
-  <h2>It was a dark and stormy night</h2>
-  <h5>Captain's log, Oct. 18, 2018</h5>
-  <p>Interloper crimp spanker Barbary Coast splice the main brace bilged on her anchor black spot chandler trysail salmagundi. Brigantine fire ship scallywag log squiffy bowsprit lateen sail American Main cog smartly. Dance the hempen jig bilge log galleon pirate yard list Barbary Coast Corsair run a rig.</p>
-  ```
