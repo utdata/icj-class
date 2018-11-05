@@ -8,9 +8,11 @@ Open up the `src/njk/index.html` and take a look at it.
 - The next bit is _block page\_title_, which allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log".
 - Next, we have the _block content_, which is the guts of our page.
 
-If we look at the part of the page with the authors, you'll see a series of _for_ loops, _ifs_ and use of _variables_. This is a more complicated set up that is here as an example, but **we'll skip it** and go to the more simple version further down the page. Just know that the data for this part is stored in `project.config.json`, one of two places we can pull data from.
+If we look at the content within the first `<row>` of our index -- the part of the page with the authors -- you'll see a series of _for_ loops, _ifs_ and use of _variables_. This is an example of the kind of complex templateting logic we can get into, but **we'll skip it** and go to the more simple version further down the page. Just know that the data for this part is stored in `project.config.json`, one of two places we can pull data from.
 
-Instead, let's look at the list further below that shows a series of books:
+- Go ahead and delete the entire row that has the Headline, author, etc.
+
+Now, look into the next rwo for the list that on the site now shows a list of books:
 
 ```html
 <ul> 
@@ -26,7 +28,7 @@ A "for loop" in programming will repeat a series of code for as long as the cond
 
 If there are no "books", then our _else_ condition displays, which is text noting the collection is empty. (Else conditions help keep your page from breaking).
 
-Where is this "books" collection? This project-template is set up so the user can store data collections in a special file `src/njk/data/data.json`. Open that up and you'll see this:
+Where is this "books" collection coming from? This project-template is set up so you can store data collections in a special file `src/njk/data/data.json`. Open that up and you'll see this:
 
 ```json
 {
@@ -47,17 +49,17 @@ Where is this "books" collection? This project-template is set up so the user ca
 }
 ```
 
-This is a typical example of JSON data, the format preferred by JavaScript. Here we define the "books" collection first, then set it to an "array" of key-value pairs ... "title" and "author". Think of each of those sets as a row of data in a spreadsheet.
+This is a typical example of JSON, the data format for JavaScript. Here we define the "books" collection first, then set it to an **array** of key-value pairs ... "title" and "author". Think of each of those sets as a row of data in a spreadsheet.
 
-Nunjucks can access the data from the current row through the key: `{{ book.title }}` gets the value "The Clown" on it's first pass.
+Nunjucks can access the data from the current row through the key: `{{ book.title }}` gets the value "The Clown" on it's first pass through the data.
 
-When we started Gulp, this "books" data collection was loaded into the Nunjucks "context", meaning it was made available to it. This was all set up in the Gulp tasks by the developer (me). All you have to do to add new data for the templates to use define is in the `data.json` file and restart Gulp.
+When we started Gulp, this "books" data collection was loaded into the Nunjucks "context", meaning it was made available to it. This was all set up in the Gulp tasks by the developer (me). To add new data for the templates, define it in `data.json` and restart Gulp.
 
 ## Add a list of our blog entries
 
-If we wanted to add a new collection to this file, we could do so by adding a comma after the last square bracket `]` and then defining our new array. Let's add data about our blog entries so we can create links to them on our index.
+On our index, we want to print out a list of all our blog entries. Let's add data about our entries into `data.json` so we can loop through it.
 
-- Add a comma after the last `]`.
+- In the `src/njk/data/data.json` file, add a comma after the last `]`.
 - Add the following code:
 
 ```json
@@ -80,26 +82,42 @@ If we wanted to add a new collection to this file, we could do so by adding a co
 ]
 ```
 
-- Kill your BrowserSync server and restart it with `gulp dev`. The data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data.
+- Kill your BrowserSync server and restart it with `gulp dev`. Data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data.
 - Now replace the entire for loop structure with this:
 
 ```html
 {% for entry in entries %}
-  <li>{{ entry.title }}, {{ entry.date }}</li>
+  <li>{{ entry.title }}, {{ entry.date }}, {{ entry.url}}</li>
 {% endfor %}
 ```
 
-We changed what the loop was looking for: `for entry in entries`. The 
-"entries" part of that is important, because that is the name of the collection in our data. The "entry" term is what we call a single instance in the loop. We can use whatever term we want (as long as we are consistent), but it is best to use variable names that make sense.
+We changed what the loop was looking for: `for entry in entries`. The "entries" part of that is important, because that is the name of our data collection in `data.json`. The "entry" term is what we call a single instance in the loop. We can use whatever term we want there as long as we are consistent, but it is good practice to use variable names that make sense.
 
-Now, in our `<li>` code we are accessing the values of each pass as variables: `{{ entry.title }}`. The first part of that we are using "entry" because that is what we defined in the loop. And "title" comes from the data, because that is the value we want from that row of the data.
+Now, in our `<li>` code we are accessing the values in the data during each pass through variables: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in entries). And "title" comes from the data, because that is "key" to the "value" we want from that row of the data.
 
 This might seem like overkill for three lines of data, but you can imagine how powerful this can be with lots of data, or how we can add new rows to data without editing our pages.
 
 ### Rewrite our loop code to be more awesome
 
+Now that we know how to access the data in our templates, we can change up our HTML/Bootstrap markup to make them look a little nicer.
 
+Instead of a list, let's use headlines and such:
 
-## Notes
+```html
+{% for entry in entries %}
+  <h3 class="entry-headline"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+  <p class="entry-date">{{ entry.date }}</p>
+  <hr>
+{% endfor %}
+```
 
-- Have them add page_title blocks.
+## Clean-up and publish
+
+- Replace our Pirate ipsum text with something creative you write that introduces this blog about a ship's travel.
+- When viewed on a desktop, the index display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though.
+- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three entries.
+- Publish this using Github Pages using the `docs` directory.
+
+---
+
+You're done!

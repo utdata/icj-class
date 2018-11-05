@@ -41,6 +41,13 @@ Better CSS with Sass
 - [Part 4: Publishing to the web](bootstrap/bootstrap-class-04.md)
 - [Part 5: Running an npm project](bootstrap/bootstrap-class-05.md)
 
+### Static apps
+
+- [Part 1: Framework and setup](static-apps/static-01.md)
+- [Part 2: Using templates](static-apps/static-02.md)
+- [Part 3: Extending templates](static-apps/static-03.md)
+- [Part 4: Using data](static-apps/static-014.md)
+
 ### First Graphics App
 
 - [FGA notes](fga/fga.md)
