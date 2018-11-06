@@ -283,7 +283,7 @@ This will result in the text contained within the div to be centered until viewe
 
 We'll add one more element before we get to the business of customization. In our right column that we just added, let's add a Vertical Navigation:
 
-- Replace our placeholder text witht he following:
+- Replace our placeholder text with he following:
 
 ```html
 <h3 class="mb-4">More pirates</h3>
