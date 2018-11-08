@@ -26,7 +26,7 @@ Now, look inside the next row for the list that displays a list of books:
 
 A "for loop" in programming will repeat a series of code for as long as the condition is true. In our case Nunjucks will repeat the code for each new "book" in the "books" collection. This is a prime example of [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) programming, or DON'T REPEAT YOURSELF.
 
-If there are no "books", then our _else_ condition is used, which is text noting the collection is empty. (Else conditions are not always necessary depending on your logic needs).
+If there are no "books", then our _else_ condition is used, which is text noting the collection is empty. (Else conditions are optional depending on your logic needs).
 
 Where is this "books" collection coming from? This project-template is set up so you can store data collections in a special file `src/njk/data/data.json`. Open that up and you'll see this:
 
@@ -55,7 +55,7 @@ Nunjucks can access the data from the current row through the key: `{{ book.titl
 
 When we started Gulp, this "books" data collection was loaded into the Nunjucks "context", meaning it was made available to it. This was all set up in the Gulp tasks by the developer (me). To add new data for the templates, define it in `data.json` and restart Gulp.
 
-## Add a list of our blog entries
+## Add our blog entries to the data
 
 On our index, we want to print out a list of all our blog entries. Let's add data about our entries into `data.json` so we can loop through it.
 
@@ -99,7 +99,7 @@ This might seem like overkill for just three lines of data, but you can imagine 
 
 ### Tools to make JSON data
 
-If you have a spreadsheet of data that you need in JSON format, [CSVJSON](https://www.csvjson.com/) is a tool that can help with that. With [CSV to JSON]() you can copy/paste from a spreadsheet and then get JSON in return.
+If you have a spreadsheet of data that you need in JSON format, [CSVJSON](https://www.csvjson.com/) is a tool that can help with that. With [CSV to JSON](https://www.csvjson.com/csv2json) you can copy/paste from a spreadsheet and then get JSON in return.
 
 ## Rewrite our loop code to be more awesome
 
@@ -119,10 +119,7 @@ Instead of a list, let's use headlines and such:
 
 - Replace our Pirate ipsum text with something creative you write that introduces this blog about a ship's travel.
 - When viewed on a desktop, the display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though.
-- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three Ship's Log entries.
-- Add styles for the detail pages in a new `_article.scss` partial:
-  - a style rule to get the rule between the two columns on the detail page.
-  - Add styles for the byline/publication on the detail page.
+- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three Ship's Log entries. Like resusing the headline.
 - Publish this using Github Pages using the `docs` directory.
 
 ---
