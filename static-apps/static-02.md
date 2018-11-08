@@ -37,8 +37,9 @@ We finally get to our body tag and find our first _include_ file. These are bits
 Let's update the Brand and the links to point to three Ship's Log entries we will add later.
 
 - Open `src/njk/_partial/nav.njk`.
-- Find the name (it says "Navbar" right now) and update it to "Pirate Cove".
-- Change the name of the dropdown to "Ship's Log"
+- Find the `navbar-brand` segment and update the text "Navbar" to "Pirate Cove".
+- Set the href there to `index.html`.
+- Find the dropdown part of the nav and change the name of the dropdown to "Ship's Log"
 - Update the three links there to these urls, which we will add later:
 
 ```html
@@ -51,9 +52,9 @@ Now, if you look at your index in your browser, you'll see that these links have
 
 ## The jumbotron
 
-### Add the Nunjucks partial
+### Add a Nunjucks partial
 
-In our original Pirate Cove site, we had the cool header with photo background. Let's add that to this site as a partial, similar to the nav.
+In our original Pirate Cove site, we had the cool header with photo background. Let's add that to this site as a partial, similar to the nav. We do this as a partial as a way to organize our code, making it easier to find and update later.
 
 - Create a new file `src/njk/_partials/jumbotron.njk`.
 - Insert into it the following code
@@ -61,7 +62,7 @@ In our original Pirate Cove site, we had the cool header with photo background. 
 ```html
 <div class="jumbotron banner text-center">
   <h1>The Ship's Log</h1>
-  <p>A diary by Capt. Crit ‘Red Beard‘ McGillicutty</p> 
+  <p>A diary by Capt. Crit McGillicutty</p> 
 </div>
 ```
 
@@ -71,7 +72,7 @@ Now that we have the partial built, we can add it to the `base.njk` file right a
   {% include "_partials/jumbotron.njk" %}
 ```
 
-### Add the Sass partials
+### Add a Sass partial
 
 If you look at your page now, the Jumbotron should be showing. We'll need to create some styles to give our jumbotron the background image we want..
 
