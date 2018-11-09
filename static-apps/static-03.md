@@ -88,7 +88,7 @@ Think about this for a second: You added a new page to your website with just th
 
 ## Make two more pages
 
-- Create two more new pages: `2010-18-19.html` and `2010-18-20.html`.
+- Create two more new pages: `2018-10-19.html` and `2018-10-20.html`.
 - Fill them with the same code block as above, but change the headlines and dates.
 - Go to the front-end of your site and make sure that all of the links work by using the nav.
 
