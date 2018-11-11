@@ -48,6 +48,10 @@ Better CSS with Sass
 - [Part 3: Extending templates](static-apps/static-03.md)
 - [Part 4: Using data](static-apps/static-014.md)
 
+### Final project
+
+- [Requirements, instructions and files](final/final.md)
+
 ### First Graphics App
 
 - [FGA notes](fga/fga.md)
