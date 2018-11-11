@@ -11,8 +11,8 @@ I am supplying you with the idea (a band website for Queen) and assets (images a
 The the index should have:
 
 - A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly.
-- A listing of all their studio albums from the data/images provided. Use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release. You should use a Nunjucks "for" loop from the data provided, similar to the lesson we used in class.
 - A list of the original members with links to their detail pages. Again, use a Nunjucks loop using the data provided. Use the Bootstrap [Cards]() object with their image, name and url.
+- A listing of all their studio albums from the data/images provided. Use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release. You should use a Nunjucks "for" loop from the data provided, similar to the lesson we used in class.
 
 ### Detail pages
 
@@ -55,15 +55,35 @@ To save you time, I've collected a series of images and JSON data about the band
 
 Available for you to use:
 
-- A [data.json](data.json) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data`.
+- A [data.json](data.json) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/data.json`.
 - A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put this folder inside `src/assets/`.
 - You can harvest (and credit) other information from Wikipedia or other public domain sources.
+
+### Members
+
+The data in the members collection includes:
+
+- slug: If you name your band member pages the same as this slug, you can use it in URLs.
+- name: Full printable name of the member
+- instruments: A list of what they play.
+- tenure: When they were in the band
+- birthplace
+- birthdate
+- image: the filename of a color image of the band member.
+- imagebw: the filename of a black and white image of the band member.
+- text: This is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ members.text | safe}}`.
+
+### discography
+
+- title: The title of the album
+- year: The year it was released
+- image: The filename of an image of the album
 
 To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON.
 
 ## Important notes about using data
 
-There are two "collections" of data in the `data.json` file provided: "members" and "discography". On you index, you should use a Nunjucks `{% for member in members %}` loop like the books example to create your list of members and studio albums.
+On your index, you should use a Nunjucks `{% for member in members %}` loop like the books example to create your list of members and studio albums.
 
 You can (and should) also use the "members" collection for your band member detail pages and save a lot of extra coding. It works like this:
 
@@ -73,7 +93,7 @@ On your `detail.njk` layout you can build your template to use properties from t
 <h1>{{ members.name }}</h1>
 ```
 
-Then on the page for a specific band member, you can extend the `detail.njk` template then use the Nunjucks [set](https://mozilla.github.io/nunjucks/templating.html#set) tag to filter the data to just a single "row" based on its order in the data. Here is the weird thing, it counts starting at zero. so if you want to use Freddie Mercury's data, and he appears first in the data, you access it using `members[0]`.
+Then on the page for a specific band member, you can extend the `detail.njk` layout and then use the Nunjucks [set](https://mozilla.github.io/nunjucks/templating.html#set) tag to filter the data to just a single "row" based on its order in the data. Here is the weird thing, the order count starts at zero. So, if you want to use Freddie Mercury's data, and he appears first in the data, you access it using `members[0]`.
 
 Filename `freddie-mercury.html` would have the following content:
 
@@ -82,9 +102,9 @@ Filename `freddie-mercury.html` would have the following content:
 {% set members = members[0] %}
 ```
 
-Given the above, now the `{{ members.name }}` placeholder carried over from `detail.njk` will display "Freddie Mercury" on his page.
+Given the above, now the `{{ members.name }}` placeholder carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
 
-Brian May appears second in the data, but we count from zero so he is position `1`. Create a page `brian-may.html`, extend the `detail.njk` layout, set members to `members[1]` and you'll get "Brian May" for the `{{ members.name }}` placeholder.
+Brian May appears second in the data, but since we count from zero he is position `1`. Create a page `brian-may.html`, extend the `detail.njk` layout, set members to `members[1]` and you'll get "Brian May" for the `{{ members.name }}` placeholder.
 
 ## Deadlines
 
