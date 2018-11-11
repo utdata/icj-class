@@ -61,7 +61,7 @@ Available for you to use:
 
 ### Members
 
-The data in the members collection includes:
+The data in the "members" collection includes:
 
 - slug: If you name your band member pages the same as this slug, you can use it in URLs.
 - name: Full printable name of the member
@@ -73,17 +73,23 @@ The data in the members collection includes:
 - imagebw: the filename of a black and white image of the band member.
 - text: This is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ members.text | safe}}`.
 
-### discography
+### Discography
+
+The data in "discography" includes;
 
 - title: The title of the album
 - year: The year it was released
 - image: The filename of an image of the album
 
-To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON.
+As a side note: To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON.
 
 ## Important notes about using data
 
-On your index, you should use a Nunjucks `{% for member in members %}` loop like the books example to create your list of members and studio albums.
+### Loops
+
+On your index, you should use a Nunjucks `{% for member in members %}` loop like the books example to create your display of members. You should use a similar loop for the discography.
+
+### Filter for member pages
 
 You can (and should) also use the "members" collection for your band member detail pages and save a lot of extra coding. It works like this:
 
@@ -93,7 +99,9 @@ On your `detail.njk` layout you can build your template to use properties from t
 <h1>{{ members.name }}</h1>
 ```
 
-Then on the page for a specific band member, you can extend the `detail.njk` layout and then use the Nunjucks [set](https://mozilla.github.io/nunjucks/templating.html#set) tag to filter the data to just a single "row" based on its order in the data. Here is the weird thing, the order count starts at zero. So, if you want to use Freddie Mercury's data, and he appears first in the data, you access it using `members[0]`.
+`members` is the collection. `.name` is the key value you are using from the array.
+
+Then on the page for a specific band member, you can extend the `detail.njk` layout and then use the Nunjucks [set](https://mozilla.github.io/nunjucks/templating.html#set) tag to filter the data to a single "row" based on its order in the data. Here is the weird thing, the order count starts at zero. So, if you want to use Freddie Mercury's data, and he appears first in the data, you access it using `members[0]`.
 
 Filename `freddie-mercury.html` would have the following content:
 
@@ -102,16 +110,16 @@ Filename `freddie-mercury.html` would have the following content:
 {% set members = members[0] %}
 ```
 
-Given the above, now the `{{ members.name }}` placeholder carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
+Given the above, now the `{{ members.name }}` value carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
 
-Brian May appears second in the data, but since we count from zero he is position `1`. Create a page `brian-may.html`, extend the `detail.njk` layout, set members to `members[1]` and you'll get "Brian May" for the `{{ members.name }}` placeholder.
+Brian May appears second in the data, but since we count from zero he is position `1`. Create a page `brian-may.html`, extend the `detail.njk` layout, set members to `members[1]` and you'll get "Brian May" for the `{{ members.name }}` value.
 
 ## Deadlines
 
 Canvas is the final word on deadlines, but in general they are in this order:
 
-- A sketch of your index and detail layouts
-- Working HTML templates with data
-- CSS check-in
-- In-class presentation of progress on last day
-- Final deadline
+- A sketch of your index and detail layouts.
+- A check-in on your HTML templates and data. It's best to get all your logic working before you start styling it.
+- A check-in on your CSS. You don't have to be finished, but this allows me to offer some feedback.
+- On our last class day, you'll show your progress to everyone. You should be published to Github Pages.
+- Final deadline for the project when I pull your repo for grading.
