@@ -1,4 +1,4 @@
-# JavaScript in-class
+# JavaScript class assignment
 
 JavaScript is the programming language of the browser. We're going to practice using JavaScript by manipulating numbers, strings and making functions and seeing the result in our browser Console.
 
@@ -131,3 +131,7 @@ OK, we now have created a variable that has your entire name, built from other v
 - Add a JavaScript comment with the text "Strings on my own".
 - Join `name` together with the string `'My name is'` into a new variable, `greeting`, so its new value is *my name is YOUR NAME*. Log that new value to the console.
 - Commit your changes to Github.
+
+---
+
+[Part 2](js-class-02.md)

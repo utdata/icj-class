@@ -132,3 +132,7 @@ Our function is working like we want, but it's being called each time we refresh
 - Click the "Make name" button and it should update the `<h3>` tag.
 - Put your own names into the text boxes and hit the button and it should change the headline.
 - Now that the form is working, you might remove the default values for King Aragorn in the names.
+
+---
+
+[Part 5](js-class-05.md)

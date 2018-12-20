@@ -124,3 +124,6 @@ function makeBetterName(firstName, middleName, lastName) {
 2. In your code, call it twice to make sure it's working - once for a time when when the home wins and once for when it loses
 3. What if it's a tie? Refactor you code to use `else if` to handle ties and call it again to make sure it works.
 
+---
+
+[Part 4](js-class-04.md)

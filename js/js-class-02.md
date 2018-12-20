@@ -92,3 +92,7 @@ One thing of note ... the variable that was declared inside the function, `squar
 ## Instance, property, method, library
 
 Let's enhance our change name function to output as uppercase (using `.toUpperCase()`), so we can talk about properties vs methods.
+
+---
+
+[Part 3](js-class-03.md)

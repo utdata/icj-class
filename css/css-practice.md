@@ -1,6 +1,6 @@
-# CSS Homeowork: Build a sports story
+# CSS Practice: Build a sports story
 
-For this homework assignment, you will be picking up from the last HTML homework assignment and enhancing it with your own CSS, with the directions provided below.
+For this practice assignment, you will be picking up from the last HTML practice assignment and enhancing it with your own CSS, with the directions provided below.
 
 We did many of these things with our in-class assignment. You'll also have to figure out some new things, but that is part of coding.
 
@@ -12,7 +12,7 @@ To make a news story, something like this:
 
 ## Requirements
 
-- Make sure you update your `homework-story.html` file with any of the feedback provided by your instructor.
+- Make sure you update your `practice-story.html` file with any of the feedback provided by your instructor.
 - Use a css reset file. You can use the same one we used with the in-class assignment.
 - Now that you have a reset css file, you'll need to create a new css file for all your other styles specific to this story.
 - Set the base font as "Times New Roman" with acceptable backups. Set the font-size for the body to 62.5%, which is the equivalent of 10px, like we did with the in-class recipe.

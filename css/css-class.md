@@ -1,4 +1,4 @@
-# CSS in-class exercise
+# CSS class exercise
 
 CSS is the skin and DNA attributes that make one HTML skeletons look different from each other. We use CSS to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson, and make it pretty.
 

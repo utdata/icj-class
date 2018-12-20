@@ -1,28 +1,28 @@
-# intro-coding-for-journalists
+# Intro Coding for Journalists
 
-This repo is for class assignments and resources for UT-Austin School of Journalism course Intro to Coding for Journalists.
+This repo is for class assignments and resources for UT-Austin School of Journalism course "Intro Coding for Journalists".
 
-The Canvas course is your official courseware, but some assignments and files may be in this repository.
+The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are in this repository.
 
 ## Lessons
 
 ### HTML
 
-- [HTML in-class](html/html-in-class.md)
-- [HTML homework](html/html-homework.md)
+- [HTML class](html/html-class.md)
+- [HTML practice](html/html-practice.md)
 
 ### CSS
 
-- [CSS in-class](css/css-in-class.md)
-- [CSS homework](css/css-homework.md)
+- [CSS class](css/css-class.md)
+- [CSS practice](css/css-practice.md)
 
 ### JavaScript
 
-- [JS basics](js/js-in-class-01.md)
-- [JS functions](js/js-in-class-02.md)
-- [JS flow control](js/js-in-class-03.md)
-- [JS with html](js/js-in-class-04.md)
-- [JS jQuery/Datatables](js/js-in-class-05.md)
+- [JS basics](js/js-class-01.md)
+- [JS functions](js/js-class-02.md)
+- [JS flow control](js/js-class-03.md)
+- [JS with html](js/js-class-04.md)
+- [JS jQuery/Datatables](js/js-class-05.md)
 
 ### Sass
 
