@@ -26,46 +26,61 @@ For this lesson, we'll introduce the JavaScript template language [Nunjucks](htt
 
 ## Set up development
 
-### Download the repo
+The best way to start set up your project template is to use [degit](https://www.npmjs.com/package/degit) to download the template from the `icj-project-template` repo.
 
-- Go to https://github.com/utdata/icj-project-template and DOWNLOAD the repo.
-- Unzip the file.
-- Rename the folder to `yourname-staticgen-inclass`
-- Move the entire folder into your `Documents/icj` folder.
-
-### Create your Github repo
-
-- Go to Github and create a new repo of the same name: `yourname-staticgen-inclass`. DO NOT INCLUDE THE README.
-- The result should give you a series of instructions to perform in your own repo locally. We'll change them slightly, so use the commands below instead (with noted updates).
-
-### Connect the repos
-
-- Go back into VS Code and open your new local project.
-- Go through the following Git cycle, but note **you need to copy the URL OF YOUR REPO** in the `git remote add origin` line.
-
-```bash
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@github.com:yourrepo/yourname-staticgen-inclass.git
-git push origin master
-```
-
-> AGAIN: Make sure you use your git@ url instead of mine!!
-
-- Go to your Github repo and refresh it to make sure your code got pushed online.
+- Create your project folder, called `yourname-final`.
+- Open VS Code into that folder and open the Terminal.
+- Run `degit utdata/icj-project-template`.
+- Create your Github repo and connect them.
 
 ### npm install and gulp dev
 
 - run `npm install` to install all the Node software
 - run `gulp dev` to process all the files and start the server.
 
-### Understand the project structure
+## Understand the project structure
 
 The easiest way to understand how this template works is to [read the README online](https://github.com/utdata/icj-project-template). DON'T SKIP THIS PART. We will also go over it in class.
 
-------
+## Configure VS Code to deal with Nunjucks
 
-NEXT: [Editing templates](static-02.md)
+Visual Studio Code is not set up by default to deal with the Nunjucks template language. There are two things we can do to make our future development easier. You only need to do these once and they will be set for future projects.
 
-OPTIONAL: [Configure VS Code for Nunjucks](static-01p2.md)
+> Note you _might_ have done these steps when you set up your computer at the beginning of the semester.
+
+### Install the Nunjucks Template extension
+
+While this isn't required, it is super helpful to install a Nunjucks syntax extension so when you look at templates your variables and code are in color, called "Syntax highlighting". You should only have to do this once.
+
+- In VS Code, on the far left there are five icons. The bottom one looks like a funky square. Click on that.
+- In the search box, type in `Nunjucks template`. Click on the return for Nunjucks Template.
+- Click the Install button.
+- After it is done, click on the "Reload to activate" button.
+
+Now, when you look at files with the `.njk` extension, the code will be colored properly.
+
+### Fix Emmet for Nunjucks
+
+Because we are using `.njk` extensions on our Nunjucks files, Emmet doesn't work because it doesn't know we are still using HTML. We can update our User Prefences to do this:
+
+- Go to the Code > Preferences > Settings.
+- On the space with the sames "User settings" and "Workspace settings", there is a  `{}` to the right. Click on that and choose `open settings.json`.
+
+You'll get two windows. On the left are all the default settings. You can search for different settings, and then copy them into the JavaScript array on the right and then override them.
+
+- Add the following inside the curly braces. If you already have items there, make sure this new one is set off with a comma.
+
+```javascript
+{
+  "emmet.includeLanguages": {
+      "nunjucks": "html",
+      "njk": "html"
+  }
+}
+```
+
+I have a series of other settings you might find useful: Setting indents to two spaces, removing the minimap by default, wrapping text by default. [You can find them here](https://github.com/utdata/setting-up/blob/master/vscode-goodies.md).
+
+----
+
+Next: [Editing templates](static-02.md)
