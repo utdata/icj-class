@@ -6,8 +6,8 @@ I'll be using Chrome in class, so it might be helpful to do so yourself. Safari,
 
 ## Get set up
 
-- Set up a new, Github repository (with a README.md file) called "yourname-javascript" for today's assignment. Clone it to your local machine inside your `/icj/` folder.
-- You'll need to create a new HTML file (call it js-practice.html) with the HTML5 boilerplate, and the [W3's](https://www.w3schools.com/html/html5_intro.asp) file will suffice.
+- Create a new project folder called `yourname-javascript`. Create and connect with a Github project of the same name.
+- You'll need to create a new HTML file (call it `js-practice.html`) with the HTML5 boilerplate.
 
 We will be typing all our code between a `<script>` tag inside the body of that page. Mark the answers for each question using JavaScript's comment syntax:
 
