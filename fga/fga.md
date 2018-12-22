@@ -2,7 +2,7 @@
 
 The [First Graphics App](http://www.firstgraphicsapp.org/) lesson taught at NICAR over the past couple of years is a great introduction into how modern newsrooms construct online projects.
 
-Our aim is to go through this lesson together in class, following along with the script, but also filling in some context as we go along. It will still go pretty fast, as we'll spend weeks following going into further detail on some of the technologies used.
+It's possible we'll go through this lesson together in class, following along with the script, but also filling in some context as we go along. If it doesn't make it into class, it is worth doing on your own. It's easy enough to follow along.
 
 What follows are some notes and thoughts about this project to go over as we move along the script.
 
@@ -12,7 +12,7 @@ A thought: Talk about enough of how the internet works to get into servers, so w
 
 ## Prerequisites
 
-- If you have followed the directions in [setting-up](https://github.com/utdata/setting-up), you should already have everything you need and we'll end up skipping a lot.
+- If you have followed the directions in [setting-up](https://github.com/utdata/setting-up), you should have a lot of the npm stuff already, but you'll need to install `yo` and `generator-yeogurt` globally.
 
 ## Node.js and npm
 
