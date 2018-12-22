@@ -8,7 +8,7 @@ We did many of these things with our in-class assignment. You'll also have to fi
 
 To make a news story, something like this:
 
-![css-homework-examples](../images/css-homework-examples.gif)
+![css-practice-examples](../images/css-practice-examples.gif)
 
 ## Requirements
 

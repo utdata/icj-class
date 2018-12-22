@@ -19,75 +19,19 @@ You have the internet at your disposal for help. Here are some resources you mig
 
 ## Project setup
 
-This is something we'll do time and again. Don't just follow the steps blindly ... learn and understand what you are doing so you can do this without thinking much about it.
+This is the same project set up did in our [git/Github intro](https://github.com/utdata/icj-cli-tools#using-git-and-github) and you can follow the more detailed instructions there. This is something you should learn to do without having to look it up.
 
-### Folders and files
+Here is the rough outline:
 
-- Inside your `icj` folder, you'll need to create a new project folder, called `yourname-html-css-class`. Always use all lower-case letters.
-- Start a new window in VS Code, and open the new folder.
-- Create a `README.md` file using proper [Markdown] with a title, your name, the assignment name and the due date. How you create this file is up to you, but I would recommend using the integrated Terminal in VS Code and doing `touch README.md`, or you can use the file explorer in VS Code.
-- Before we initialize our git repo, let's talk about `.gitignore` ...
-
-### Using gitignore
-
-If you had initialized your git repo and did `git status` now, you _might_ see files that you didn't remember creating. By default, git will save both hidden and viewable files. On a Mac you might see a file called `.DS_Store`, which is a hidden file the Mac finder creates when you view a folder. On Windows, you might see `.Thumbs.db`, which is a record of images saved in a folder. Different applications save hidden files and other stuff that you don't need to commit to your repo, so we use another hidden filed called a [.gitignore](https://help.github.com/articles/ignoring-files/) to tell git to ignore those files and not save them. An easy way to create one is to use the website [gitignore.io](https://www.gitignore.io/). Creating hidden files through the Finder/Windows can be tricky, so it is best to do it from a terminal.
-
-- Open your the Integrated Terminal in VS Code (Control ~ on a Mac) -- make sure you are in the project folder -- and then type the command `touch .gitignore`. There is NO file extension for this file, so no `.txt` or anything ... it should be just `.gitignore`. Once created, it should show up in your list of files in VS Code on the left-hand screen. Go ahead and open it in VS Code by double-clicking on in the explorer.
-- Go to [gitignore.io](https://www.gitignore.io/) in a browser. Type in "macOS" and add it, then "Windows" and add it to the list. (If you were using other programs like MicrosoftOffice or languages like Python, you would add those as well.) Click the **Create** button.
-- Copy all the code there and put it into your `.gitignore` file and save it.
-
- (NOTE: If you open your project folder on your computer, you won't see that `.gitignore` file. What makes it hidden, you ask? Starting the filename -- or a folder -- with a period.)
-
-### Initializing your local repo
-
-The next steps are to initialize your local git record, stage files and commit them.
-
-- Do `git init` to initialize.
-- Do `git status` and you'll get a return like this:
-
-```bash
-$ git status
-On branch master
-
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-        .gitignore
-        README.md
-
-nothing added to commit but untracked files present (use "git add" to track)
-```
-
-This is telling you are on the master branch (we'll talk later about branches), that there are no commits yet (which are saves) and that there are two untracked files, and it lists them. Then it tells you what to do next.
-
-So, next we will add our files to "stage", which is a status that means we want to track them. You sometimes don't want to track your files, so you can add each one using their file name. We want to track all of them, so we'll use a shortcut:
-
-```bash
-git add .
-```
-
-This will add all the files to stage. Next we want to "commit" them (which means save them) and include a message to say why we made changes to these files. ALWAYS include the `-m` flag when you commit, with a message.
-
-```bash
-git commit -m "my first commit"
-```
-
-Congratulations ... you have now saved a snapshot in time of all these files. Now it's time to save them to the Internet in Github.
-
-### Creating your public Github repo
-
-- Go to [github.com](https://github.com) and find the + sign at the top right.
-- Click on that and choose "New repository".
-  - Name the repo the same as your local one: `yourname-html-css`.
-  - Give it a description so you know what it is later,
-  - Keep it Public
-  - Do NOT include a README or gitignore or license.
-- In the resulting directions, copy the line that starts with `git remote add`
-- Go back to you VS Code Terminal and use that command to connect your local repo to the Github repo.
-- Do `git push origin master` push your local code to Github.
-- Go back to Github and refresh to make sure your files made it.
+- Create your project folder inside `/icj`.
+- Make your `README.md` file.
+- Make your `.gitignore` file.
+- Initialize your repo with `git init`.
+- Add all your file with `git add <filename>`.
+- Commit your files with `git commit -m "your message here"`.
+- Create your Github repo. Call it `yourname-html-css-class`.
+- Connect your local repo to the Github repo with `git remote add origin <your_path_here>`.
+- Push your changes.
 
 ## Build a recipe web page
 
