@@ -8,17 +8,20 @@ For our purposes, Node is a development environment and ecosystem to use a bunch
 
 ## Downloading, running our project
 
-For this project, we are starting from a "template repo", which means you will NOT CLONE it, but instead download a folder of code and then use it to create your own repo.
+For this project, we are starting from a template saved in a repo. We'll use a special npm package called [degit](https://www.npmjs.com/package/degit) to start our project. You should already have installed it globally when we did our Node setup.
 
-- Go to the [icj-sass-refactor-template](https://github.com/utdata/icj-sass-refactor-template) repo.
-- Follow the installation instructions in the README there, then return here for further instruction.
+- Create a new project folder called `yourname-sass` inside your `icj` folder.
+- Open that folder in VS Code and open your terminal.
+- Run `degit utdata/icj-sass-template`. This should download all the files into your folder.
+- Run `npm install` to install all the dependencies.
+- Run `gulp dev`.
 
-When you run `$ gulp` from your Terminal, two things happen:
+When you run `$ gulp dev` from your Terminal, two things happen:
 
 - A task compiles all the SCSS files into CSS files your browser can read.
 - A program called Browsersync launches and displays your web page in a browser window. It also watches your HTML and SCSS for any future changes and then reruns the Sass task and refreshes your browser so you can see your changes.
 
-(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run `$ gulp`.)
+(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run `$ gulp dev`.)
 
 ## The structure of the project
 

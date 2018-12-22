@@ -1,6 +1,6 @@
 # Refactoring our Sass
 
-If you don't already have your code open in VS Code, go ahead and open it. Run `$ gulp` in your terminal to start the Sass task and Browsersync.
+If you don't already have your code open in VS Code, go ahead and open it. Run `$ gulp dev` in your terminal to start the Sass task and Browsersync.
 
 ## CSS is SCSS
 
@@ -45,7 +45,7 @@ There are two colors defined in our styles for our  Harvey Dale and the Cements 
 - Save and check your page. There should be no difference.
 - Change your `$primary-color` variable value to a new color, like "red", and see if what happens.
 
-If you don't see a change, then make sure that your `gulp` task is running so your Sass is getting compiled. If that is working but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `.css` file.
+If you don't see a change, then make sure that your `gulp dev` task is running so your Sass is getting compiled. If that is working but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `.css` file.
 
 ## Nesting
 
