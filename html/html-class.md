@@ -27,10 +27,10 @@ Here is the rough outline:
 - Make your `README.md` file.
 - Make your `.gitignore` file.
 - Initialize your repo with `git init`.
-- Add all your file with `git add <filename>`.
+- Add all your file with `git add <filename>`. (Or `git add .` for everything.)
 - Commit your files with `git commit -m "your message here"`.
-- Create your Github repo. Call it `yourname-html-css-class`.
-- Connect your local repo to the Github repo with `git remote add origin <your_path_here>`.
+- Create your Github repo. Call it `yourname-html-css`.
+- Connect your local repo to the Github repo with `git remote add origin <your_gitpath_here>`.
 - Push your changes.
 
 ## Build a recipe web page
