@@ -48,7 +48,7 @@ If all that fails and we can't figure it out, you can go to [W3 School](https://
 
 Now to save time, we'll get the unstyled text for our document.
 
-- Go to the [html-class-text.txt file](html-class-text.txt) in this Github repo and copy/paste the contents in between the `<body>` tag of your document.
+- Go to the [html-class-text.txt file](https://raw.githubusercontent.com/utdata/icj-class/master/html/html-class-text.txt) in this Github repo and copy/paste the contents in between the `<body>` tag of your document.
 - Copy the first line of text "Grilled Chicken Salad with Romesco Sauce" into a `<title>` tag in the head of the document.
 - Put the open and close `<h1>` tags around that same line in the body.
 - Below the `<h1>` tag, add an image tag with the src using the url below. Note that you can use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out parts of the tags.
