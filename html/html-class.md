@@ -25,9 +25,9 @@ Here is the rough outline:
 
 - Create your project folder inside `/icj`.
 - Make your `README.md` file.
-- Make your `.gitignore` file.
+- Make your `.gitignore` file. Include "macOS", "Windows", "VisualStudioCode".
 - Initialize your repo with `git init`.
-- Add all your file with `git add <filename>`. (Or `git add .` for everything.)
+- Add all your files with `git add <filename>`. (Or `git add .` for everything.)
 - Commit your files with `git commit -m "your message here"`.
 - Create your Github repo. Call it `yourname-html-css`.
 - Connect your local repo to the Github repo with `git remote add origin <your_gitpath_here>`.
