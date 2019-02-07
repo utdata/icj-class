@@ -23,7 +23,7 @@ There are cases in this assignment where we have NOT covered a specific HTML tag
 - Code the subhead that is in the story "Under the radar" with the proper hierarchy of header tags. 
 - Properly link the byline to the included Twitter handle.
 - Put the date in a `<span>` tag.
-- After the byline, add an image tag. Download this image in your folder and then use it as the src in your image tag.
+- After the byline, add an image tag. Download [this image](https://github.com/utdata/icj-class/blob/master/html/spurs.jpg) in your folder and then use it as the src in your image tag.
 - Create a credit line with the text "Soobum Im / USA TODAY Sports" in a `<p>` tag with a class of "credit" under the image.
 - Style all the text in `<p>` tags.
 - There is a quoted text paragraph that starts with "Granted, not every starting ...". Put that in a `blockquote` tag. Don't know that one? Look it up.
