@@ -59,7 +59,7 @@ The browser will act on all our code written in JavaScript, in the order that we
 
 We could actually type those commands into the browser Console, but anything we do would not be saved when the browser is refreshed.
 
-### let vs. let vs. const
+### var vs. let vs. const
 
 Variables are the placeholders ... containers that hold information. Their purpose is to label and store data that can then be used in your program. By providing a variable with a descriptive name, our programs can be understood more clearly by others and our future selves.
 

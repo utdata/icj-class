@@ -26,7 +26,7 @@ Go into your repo from the previous HTML lesson and open in your browser the `re
 
 ![3-browser-reset-ex](../images/3-browser-reset-ex.png)
 
-There is way to deal with this called CSS reset. The concept is to zero out all margins, paddings and text sizes so you have a zero base to work from before applying new styles. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/.
+There is way to deal with this called CSS reset. The concept is to zero out all margins, paddings and text sizes so you have a zero base to work from before applying new styles. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/).
 
 So, let's do it:
 
