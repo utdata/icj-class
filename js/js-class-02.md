@@ -105,7 +105,8 @@ JavaScript "methods" are actions that can be performed on JavaScript objects. To
 If we want to see our `fullName` in uppercase, we can call a method on it.
 
 ```js
-console.log(fullName.toUpperCase())
+let fullNameReturn = makeFullName("Christian", "Clay", "McDonald");
+console.log(fullNameReturn.toUpperCase())
 ```
 
 ## Save it
