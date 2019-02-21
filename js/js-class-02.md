@@ -82,16 +82,35 @@ BONUS: Update your function to use [JavaScript's Math Object](https://www.w3scho
 
 One thing of note ... the variable that was declared inside the function, `squared`, cannot be referenced outside the scope of the function. If we try to add `console.log(squared)` outside the function, we would get an error. Again, [read more about variables and scope here](https://wesbos.com/javascript-scoping/).
 
-### Functions on your own
+## Functions on your own
 
 - Write another function that takes three arguments -- `first`, `middle` and `last` -- and uses the `+` operator to combine the three arguments to form a full name.
 - In your code, call the function with three different sets of names to make sure it works and log the returned value to the console each time.
 - For one of those names, I want you to use Robert "Beto" O'Rourke, including the double-quotes around "Beto".
-- Commit your changes using the Github app.
 
-## Instance, property, method, library
+## Property vs method
 
-Let's enhance our change name function to output as uppercase (using `.toUpperCase()`), so we can talk about properties vs methods.
+Because they look similar and can get confusing, let's discuss the difference between properies and methods.
+
+A JavaScript "property" is something about an object. Like its datatype (string vs integer) or its length ("Bye" is three characters long). To call it, add a period after the variable name.
+
+```js
+console.log(fullName.length)
+```
+
+Would return a number to your console that equals the number of characters (including spaces) in `fullName`.
+
+JavaScript "methods" are actions that can be performed on JavaScript objects. To call a method, we also follow the object with a period and the name of the method, but also `()` at the end, since we are performing an action.
+
+If we want to see our `fullName` in uppercase, we can call a method on it.
+
+```js
+console.log(fullName.toUpperCase())
+```
+
+## Save it
+
+- Commit your changes to Github.
 
 ---
 
