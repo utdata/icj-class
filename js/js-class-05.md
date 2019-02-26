@@ -23,31 +23,40 @@ Tables are great for displaying tabular data (hence the word table). But often t
 
 The steps below will walk you through using the DataTables plug-in to make an interactive table. If at any point you get an error in your Console, stop before moving on to the next step. Each step is dependent on the step before.
 
-Start with a new Github repository called _yourname-datatable_.
+Start with a new project folder on your machine and a new Github repository to connect them. Call them _yourname-datatable_.
 
 ### #1: "Zero configuration"
 
-1. Create a new file in your repository called `datatable.html` and add the basic HTML5 boilerplate.
+- Create a new file in your repository called `datatable.html` and add the basic HTML5 boilerplate.
+- Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
+- On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
+- On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:
+    + Start with the **HTML** box. Take the contents of that box and put it in your HTML page between the `<body>` tags. Go ahead and look at your page so you will see how it changes later.
+    + Go back to the **JavaScript** box. The contents of that box should go inside a `<script></script>` tag at the bottom of your HTML page before the close of the `</body>` tag.
+    + The links that are displayed below the JavaScript box are src URLs that should go in `<script src=""></script>` tags in the `<head>` of your page. Make them both.
+    + On the CSS box, that is the src link that should go in a `<link rel="stylesheet" href="">` tag, also in the `<head>` tag of your page.
 
-2. Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
-
-3. On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
-
-4. On the page for the example (https://www.datatables.net/examples/basic_init/zero_configuration.html) you'll see tabs below the table for "JavaScript", "HTML" and "CSS". Add the DataTables JavaScript file listed under "JavaScript library files" to your page using a `<script>` tag:
+To recap, there will be three new lines in your `<head>` tag, something like this:
 
 ```html
-<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 ```
 
-5. On the "CSS" tab copy the link to the DataTables CSS file and add it to your page in a `<link>` tag in the `<head>`:
+Then you'll have all the table code inside your `<body>` tag.
 
-  ```html
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
-  ```
+Then you'll have a script tag at the bottom to call Datatables:
 
-6. Finally, copy the JavaScript from the "JavaScript" tab into a `<script>` tag on your page anywhere below the other `<script>` tags added in earlier steps.
+```html
+  <script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+  </script>
+```
 
-7. That's it! You should be able to open that page in your browser and see an interactive table. Commit the file to your Github repository.
+That's it! You should be able to open that page in your browser and see an interactive table. Commit the file to your Github repository.
 
 ### #2: "Scroll Vertical"
 

@@ -10,9 +10,9 @@ The DOM allows us to connect our JavaScript functions to HTML or CSS on the page
 
 ## Our goals
 
-We are making a form that allows a use to enter their first, middle and last name, and when they press a button it will display the full name on the page. And overview of steps:
+We are making a form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name on the page. And overview of steps:
 
-1. Create a new html page
+1. Create a new html page.
 2. Add some basic form elements and a button.
 3. Copy our `makeBetterName` function from our previous exercise
 4. Modify that function and connect it to our forms elements and buttons.
