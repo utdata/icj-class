@@ -8,7 +8,7 @@
 
 ## Goals
 
-- We'll set up a new Node/npm/gulp project environment.
+- We'll set up a new Node/npm/gulp project environment from scratch.
 - Discuss the benefits of using a mobile-first framework.
 - Use Bootstrap's grid-system to create a responsive website.
 - Add pre-built components like navigation, jumbotron displays, etc.
@@ -30,16 +30,17 @@ Throughout this lesson, we will refer to:
 
 This is the same cycle we've use in other lessons to create a new repo.
 
-- Go to Github.com and create a new repo. Call it `yourname-bootstrap`. Include the README.md and keep the repo public.
-- Copy the clone URL
-- In a Terminal, cd into your code folder: `cd ~/Documents/icj/`
-- do `git clone [yoururl]`
-- cd into the folder
-- open in VS code with: `code ./`
+- Create a folder on your machine in the `icj` folder called `yourname-bootstrap`.
+- Open that folder in VS Code.
+- Create a "README.md" file.
+- Use `git init` to start tracking the repo.
+- Use `git add .` and `git commit -m "first commit"` to save your work.
+- Set up a project on Github of the same name and keep the repo public.
+- Use the `git add` line from the repo creation to connect your local repo to your Github repo.
 
 ## Set up .gitignore
 
-When we later install packages using npm, it will create a folder called a `node_modules` that has the javascript code for MANY apps. We don't want those files saved to Github, so we will create a `.gitignore` file to exlude them (and other things we don't want saved to Github).
+When we later install packages using npm, it will create a folder called a `node_modules` that has the javascript code for MANY apps. We don't want those files saved to Github, so we will create a `.gitignore` file to exclude them (and other things we don't want saved to Github).
 
 - In your Integrated Terminal, create a new file with `touch .gitignore` and then open it in the code editor.
 - Go to [Gitignore.io](https://www.gitignore.io) and type in "Node", "macOS", "Windows" and "VisualStudioCode" and hit OK to get to the code, which you'll then copy 'n' paste into the `.gitignore` file.
@@ -68,9 +69,8 @@ Then we'll move on to learning Bootstrap.
 
 ### Initialize our project
 
-- Launch VS Code (or start a new window), and use the **Go to folder** link to open your project in `Documents/icj/boostrap-yourname`.
-- Open your Integrated Terminal in VS Code, and make sure (use `pwd`) that you are inside your project folder.
-- Use this command to initialize your npm project:
+
+- Using the Integrated Terminal in VS Code (hopefully already in your project folder) use this command to initialize your npm project:
 
 ```bash
 npm init -y
@@ -94,7 +94,7 @@ Next, we'll install more tools that we _will_ need to be included in our final p
 npm install bootstrap jquery popper.js --save
 ```
 
-In class, we may take a minute to tour the `package.json` and `package-lock.json` files.
+In class, we may take a minute to tour the `package.json` and `package-lock.json` files. These were created when we did the npm install steps.
 
 
 ### The git cycle
@@ -119,7 +119,7 @@ Next, we need to create a series of folders that look like this. Let me explain 
   /scss
 ```
 
-Everything inside of our `docs` folder will be our published product. Everything in our `src` folder will only be used for development.
+Simlar to our Sass lesson, everything inside of our `docs` folder will be our published product. Everything in our `src` folder will only be used for development.
 
 You could use the VS Code Explorer to create each of those folders, but I've found that to be error-prone. We can quickly create them all in one command using the Integrated Terminal:
 
@@ -134,6 +134,7 @@ Use `touch` to create a new file inside the `/docs` folder:
 ```bash
 touch docs/index.html
 ```
+
 Then open the file in VS Code and add this into it:
 
 ```html
@@ -228,7 +229,7 @@ Now for the explanations:
 - [gulp-sass](https://www.npmjs.com/package/gulp-sass) helps us with some CSS files.
 - [browser-sync](https://browsersync.io/) is a web server that let's us see our work as we are building it.
 - The next three sections are JavaScript functions (remember those!) with names ('sass', 'js' and 'serve'), and each of those does things ... mostly copying files around, which you will see. We can run each of those individually in the terminal like this: `gulp sass`, and that will fire off that task.
-- The last line the default gulp task (when we just run `gulp` by itself) and it happens to just invoke the other tasks we've already defined.
+- The last line is the "default" gulp task (what happens when we just run `gulp` by itself) and it happens to just invoke the other tasks we've already defined.
 
 Let's run it and see if it works. In your VS Code Terminal, do this:
 
