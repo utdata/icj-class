@@ -1,51 +1,52 @@
 # Using Bootstrap 4: Setup
 
-[Bootstrap 4](https://getbootstrap.com/docs/4.1/getting-started/introduction/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable. It is far from the only framework, but it is very popular. It is a "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop.
-
-**NOTE**: Before doing this lesson in class, you should have watched all the lessons in the [Learn Bootstrap 4 screencasts](https://scrimba.com/g/gbootstrap4) to get an idea of how Bootstrap 4 works.
-
-**ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/setting-up) and have tested that it works.
-
 ## Goals
 
-- We'll set up a new Node/npm/gulp project environment from scratch.
+We will:
+
+- Download and discuss using a Node development environment.
 - Discuss the benefits of using a mobile-first framework.
 - Use Bootstrap's grid-system to create a responsive website.
 - Add pre-built components like navigation, jumbotron displays, etc.
 - Introduce Sass/SCSS for customization.
 
+**NOTE**: Before doing this lesson in class, you should have watched all the lessons in the [Learn Bootstrap 4 screencasts](https://scrimba.com/g/gbootstrap4) to get an idea of how Bootstrap 4 works.
+
+**ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/setting-up) and have tested that it works.
+
 This lesson is cribbed from:
 
-- [Learn Bootstrap 4 Final in 2018 by Gary Simon](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course).
+- [Learn Bootstrap 4 Final in 2018 by Gary Simon](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course), which is already out of date.
 
-## Resources
+## About Bootstrap
+
+[Bootstrap 4](https://getbootstrap.com/docs/4.1/getting-started/introduction/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable. It is far from the only framework, but it is very popular. It is a "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop.
 
 Throughout this lesson, we will refer to:
 
 - [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
-- The [Learn Bootstrap screencasts](https://scrimba.com/g/gbootstrap4) you had as prework.
 - W3 Schools' [Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/).
+- The [Learn Bootstrap screencasts](https://scrimba.com/g/gbootstrap4) you had as prework.
 
-## Create your Github repo and clone
+## Create your project and Github repo
 
-This is the same cycle we've use in other lessons to create a new repo.
+We'll create our project and get all our files, then get into the lesson.
 
-- Create a folder on your machine in the `icj` folder called `yourname-bootstrap`.
-- Open that folder in VS Code.
-- Create a "README.md" file.
-- Use `git init` to start tracking the repo.
-- Use `git add .` and `git commit -m "first commit"` to save your work.
-- Set up a project on Github of the same name and keep the repo public.
-- Use the `git add` line from the repo creation to connect your local repo to your Github repo.
+- Create a new folder in your `icj/` folder called `yourname-bootstrap`.
+- In VS Code, open a new window and open your new folder.
+- Open the Integrated Terminal.
+- Run `$ degit utdata/icj-bootstrap-template` to download the files.
+- Run `$ npm install` to install the node packages.
+- Run `$ git init` to intilize git.
+- Run `$ git add .` to add the files.
+- Run `$ git commit -m "first commit"` to commit the files.
+- Go to Github and create a repository of the same name.
+- Use the `git add` command provided there to sync the repos.
+- Run `$ git push origin master` to push the code to Github.
 
-## Set up .gitignore
+The project already has README.md and .gitignore files. Edit the README file by adding a new section at the top with your name and the date you started the project.
 
-When we later install packages using npm, it will create a folder called a `node_modules` that has the javascript code for MANY apps. We don't want those files saved to Github, so we will create a `.gitignore` file to exclude them (and other things we don't want saved to Github).
-
-- In your Integrated Terminal, create a new file with `touch .gitignore` and then open it in the code editor.
-- Go to [Gitignore.io](https://www.gitignore.io) and type in "Node", "macOS", "Windows" and "VisualStudioCode" and hit OK to get to the code, which you'll then copy 'n' paste into the `.gitignore` file.
-
-## Set up our project environment
+> When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. These will not affect our work on this project.
 
 ### A quick note about Node.js and npm
 
@@ -53,210 +54,82 @@ When we later install packages using npm, it will create a folder called a `node
 
 For our purposes, Node is really an ecosystem to use a bunch of mini-programs built in JavaScript. Developers will create these mini-programs -- known as packages -- in that ecosystem and then share them with the world through **npm**. Node Package Manager, or npm for short, is like the iTunes Store for these packages. When someone creates a package to do something -- say a photo slide-show for the web -- and then shares it on npm, then we don't have to reinvent that wheel.
 
-Bootstrap is included in npm, and we will do this lesson as a Node-based project because that is how it is commonly in newsrooms. While this method is a bit more complicated than just including the Bootstrap CSS and Javascript links in an HTML page, it is also infinitely more powerful, as you will see in future lessons.
+Bootstrap is available through npm, and the project template we are using has been configured to utilize it. While this method is a bit more complicated than just including the Bootstrap CSS and Javascript links in an HTML page, it is also infinitely more powerful, as you will see in future lessons.
 
-### The parts of the Node project
+## Let's review the project files
 
-Just to outline what we will be doing next, with details to follow:
+### The docs folder
 
-- Initialize our npm project
-- Download the software we will need using npm
-- Create the folders we need
-- Create the files we need
-- Test our little ecosystem to make sure it works.
+The `docs/` folder is where all our finished site files go. It is the folder that will be read by the web server.
 
-Then we'll move on to learning Bootstrap.
+> WE DON'T EDIT FILES HERE!!
 
-### Initialize our project
+Most web apps like this will use a different folder name, like `dist/` or `public/`, but we are using `docs/` to take advantage of some free web serving services offered by Github.
 
+Inside our docs folder, you will eventually see the following:
 
-- Using the Integrated Terminal in VS Code (hopefully already in your project folder) use this command to initialize your npm project:
+- A `css/` folder with all our compiled css. We won't edit these files, because we will be using Sass and editing from the `src/scss/` folder.
+- A `js/` folder. There are some Node.js server tasks that will copy files here for us.
+- An `index.html` file. This is the HTML page we will be building, but we will will be editing it from the `src/` folder.
 
-```bash
-npm init -y
-```
+### The src folder
 
-The `-y` flag allows us skip some answers and accept some defaults. This process creates a file called `package.json` that keeps track of all our npm software needs.
+This is where we edit our files. Any change we make here gets compiled or copied into the `docs/` folder by our Node.js server.
 
-### Download our software using npm
+- The `html` folder has `index.html` file that we will be adding all our HTML code.
+- The `scss` folder has `styles.scss` file were we will add all our Sassy css.
 
-Next, we'll install some "development dependencies" packages with the `--save-dev` flag. That flag tells npm (and other developers) that we only need these tools when we are in development, and they do not need to be included in any final products. I'll explain the individual packages later when we use them.
+As you'll soon see, when our server is running, each time we save a file in either of these folders, the scss will be compiled and our HTML copied into the `docs/` folder.
 
-```bash
-npm install gulp gulp-sass gulp-util browser-sync --save-dev
-```
+#### Inspect the html file
 
-You might see some "vulnerability" warnings after the install. We'll ignore these for now. `¯\_(ツ)_/¯`
+While we are in our src folder, let's look at our HTML.
 
-Next, we'll install more tools that we _will_ need to be included in our final product. Bootstrap is our framework, and it requires the two javascript libraries, JQuery and Popper.js, so we include those, too. The `--save` flag says to save them in our package.json file.
+- Open `src/html/index.html` and take a look at it.
 
-```bash
-npm install bootstrap jquery popper.js --save
-```
+There are several things going on here with this file beyond the base HTML. In the `<head>` we are pulling in css files that will be generated through Sass, including for the Bootstrap framework. At the bottom we are pulling in the JavaScript files that we need for Bootstrap, which will also be copied there by our server.
 
-In class, we may take a minute to tour the `package.json` and `package-lock.json` files. These were created when we did the npm install steps.
+#### Inspect the scss file
 
+If we open the `src/scss/styles.scss` file, we'll see the `@import` that pulls in all the Bootstrap css from our `node_modules` folder that we downloaded when we ran `npm install`. You don't see the result yet on our index page, but you will soon.
 
-### The git cycle
+### Inspect the configuration files
 
-This would be a good time to save and push our code to Github. You can use the [VS Code Explorer](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support) or your Integrated Terminal with the regular cycle:
+The remaining files in the root level of the project are configuration files that help make this development ecosystem run.
 
-```bash
-git add .
-git commit -m "framework installed"
-git push origin master
-```
+- The `.gitignore` file. It's configured for a Node.js based web app.
+- The `README.md` file explains how to get started with this template.
+- The `gulpfile.js` is our magic controller file. More on that below.
+- The `package.json` and `package-lock.json` files keep track of all the npm packages we are using. When you run `$ npm install`, it downloads all the software into the `node_modules` folder, which is _NOT_ saved into Github because it contains thousands of files.
 
-### Build our folder structure
+#### More about the gulpfile
 
-Next, we need to create a series of folders that look like this. Let me explain them, then we will create them:
+[Gulp](https://www.npmjs.com/package/gulp) is our task runner that creates our server, compiles our CSS and copies files where we need them. This `gulpfile.js` defines all those tasks. You won't need to edit this file, but let's review what it is doing.
 
-```
-/docs
-  /css
-  /js
-/src
-  /scss
-```
-
-Simlar to our Sass lesson, everything inside of our `docs` folder will be our published product. Everything in our `src` folder will only be used for development.
-
-You could use the VS Code Explorer to create each of those folders, but I've found that to be error-prone. We can quickly create them all in one command using the Integrated Terminal:
-
-```bash
-mkdir docs docs/css docs/js src src/scss
-```
-
-### Create our index file
-
-Use `touch` to create a new file inside the `/docs` folder:
-
-```bash
-touch docs/index.html
-```
-
-Then open the file in VS Code and add this into it:
-
-```html
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-  <head>
-    <title>Bootstrap 4 Layout</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-
-  <body>
-    <!-- Content starts here -->
-
-    <!-- Closing scripts here -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
-```
-
-There are several things going on here with this file beyond the base HTML. In the `<head>` we are pulling in css files that don't exist yet, and at the bottom we are pulling in JavaScript files that don't exist yet. And we don't have any content. Yet. It's coming. Promise.
-
-### Create our styles overrides file
-
-Next, we're going to create our styles overrides files and insert some code that will later tell us everything is hooked up properly.
-
-- Inside the `src/scss` folder, create a new file called `styles.scss`. Note that "scss" extension, as it is important. You could use `touch src/scss/styles.scss`.
-- Open it and paste the following test code inside the file:
-
-```scss
-$bg-color: red;
-
-body {
-  background: $bg-color;
-}
-```
-
-Any guesses what that might do?
-
-### Set up our gulp tasks
-
-OK, this is the most technical part of this whole setup, and we are getting into _JavaScript_. Once we set it up, I'll explain the pieces.
-
-- In the root of your project folder, create a new file called `gulpfile.js`.
-- Paste this inside:
-
-```js
-var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass        = require('gulp-sass');
-var gutil       = require('gulp-util');
-
-// Compile Sass into CSS and put into docs/css folder
-// gutil logs errors on console instead of quitting gulp
-gulp.task('sass', function() {
-    return gulp.src(['src/scss/*.scss'])
-        .pipe(sass())
-        .on('error', gutil.log)
-        .pipe(gulp.dest("docs/css"))
-        .pipe(browserSync.stream());
-});
-
-// Move the javascript files into our docs/js folder
-gulp.task('js', function() {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
-        .pipe(gulp.dest("docs/js"))
-        .pipe(browserSync.stream());
-});
-
-// Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
-
-    browserSync.init({
-        server: "./docs"  
-    });
-
-    gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
-    gulp.watch("docs/*.html").on('change', browserSync.reload);
-});
-
-gulp.task('default', ['js','serve']);
-```
+> This Gulp setup is a little outdated. It works, but we have to be careful not to update any npm packages or it will break.
 
 Now for the explanations:
 
-- The first three lines that start with `var` are variables to designate the three programs we are using in this file: gulp, gulp-sass and browser-sync. Remember, these are the three "--save-dev" files we installed.
-- [Gulp](https://www.npmjs.com/package/gulp) is a task runner that we assign to do stuff for us.
-- [gulp-sass](https://www.npmjs.com/package/gulp-sass) helps us with some CSS files.
-- [browser-sync](https://browsersync.io/) is a web server that let's us see our work as we are building it.
-- The next three sections are JavaScript functions (remember those!) with names ('sass', 'js' and 'serve'), and each of those does things ... mostly copying files around, which you will see. We can run each of those individually in the terminal like this: `gulp sass`, and that will fire off that task.
-- The last line is the "default" gulp task (what happens when we just run `gulp` by itself) and it happens to just invoke the other tasks we've already defined.
+- The first three lines that start with `var` are variables to designate the three programs we are using in this file: gulp, gulp-sass and browser-sync.
+  - [Gulp](https://www.npmjs.com/package/gulp) is a task runner that we assign to do stuff for us.
+  - [gulp-sass](https://www.npmjs.com/package/gulp-sass) compiles our CSS from Sass.
+  - [browser-sync](https://browsersync.io/) is a web server that let's us see our work as we are building it.
+- The next four sections are JavaScript functions (remember those!) with names ('sass', 'js', 'html' and 'serve'), and each of those does things ... mostly copying files around, which you will see. We can run each of those individually in the terminal like this: `gulp sass`, and that will fire off that task.
+- The last two lines help us run the tasks in certain order:
+  - `gulp` will compile our CSS and copy all our files into the `docs/` folder.
+  - `gulp dev` will do all of the above, plus start our web server so we can see our page.
+
+I can tell you, I did not write all this JavaScript from scratch! There are examples in the [gulp](https://www.npmjs.com/package/gulp), [gulp-sass](https://www.npmjs.com/package/gulp-sass) and [browser-sync](https://www.npmjs.com/package/browser-sync) docs, but what I did was find an example on the web that was close to what I needed, and because I understood what it was doing (more or less), I adjusted it to my liking.
+
+## Launch
 
 Let's run it and see if it works. In your VS Code Terminal, do this:
 
 ```bash
-gulp
+gulp dev
 ```
 
-With any luck, http://localhost:3000 will load up in the browser and your background will be bright stinking red! This means everything should be good to go.
-
-In class, we should take a quick tour of the `docs/` folder to see all the files created and moved around by gulp so we can better understand those tasks.
-
-I can tell you, I did not write all this JavaScript from scratch! There are examples in the [gulp](https://www.npmjs.com/package/gulp), [gulp-sass](https://www.npmjs.com/package/gulp-sass) and [browser-sync](https://www.npmjs.com/package/browser-sync) docs, but what I did was find an example on the web that was close to what I needed, and because I understood what it was doing (more or less), I adjusted it to my liking.
-
-### Set up Bootstrap Sass
-
-Now we are going to use the Sass import structure to pull in all the Bootstrap styles. The [Theming](https://getbootstrap.com/docs/4.1/getting-started/theming/) documentation outlines this in more detail.
-
-- Open your `src/styles.scss` and delete the contents.
-- Replace it with this and save the file:
-
-
-```css
-// Variable Overrides
-
-// Bootstrap Sass Imports
-@import "../../node_modules/bootstrap/scss/bootstrap";
-```
+With any luck, http://localhost:3000 will load up in the browser and you'll see some testing text on your screen. This means everything should be good to go.
 
 Congrats! You are now ready to get down to business and build a website.
 
