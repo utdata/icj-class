@@ -8,21 +8,21 @@ The first thing that Bootstrap brings us is a [12-column grid setup](https://get
 
 We are going to start with a `container` div. A container div in Bootstrap centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
 
-Add this to `index.html` just under the `<body>` tag:
+In our `src/html/index.html` file, replace the paragraph of testing text with this:
 
 ```html
 <div class="container">
-  test
+  <p>Our new testing text</p>
 </div>
 ```
 
 > Note: In your index.html file, you may have to adjust the indents of some rows as you copy 'n' paste or type in new code. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what. That, **and it is part of your grade**, because I want to build good habits.
 
-As you view your page, you'll notice the word "test" is a bit in the middle of the page and not on the left edge. That's the container div working.
+As you view your page, you'll notice our text has moved from the far left edge to a bit toward the middle of the page. That's the container div working.
 
 ### Rows and columns
 
-Let's add these rows and columns _inside_ our container so we can talk about how they work:
+Replace the `<p>Testing</p>` text with this (You should still have the container divs and this should be inside it.):
 
 ```html
 <div class="row">
@@ -49,8 +49,9 @@ These three columns are evenly distributed and space across the container space.
 Typically, we would want content like that to stack on top of each other at small window widths like a phone. We can adjust our code to do this.
 
 - Change all the `col` classes to instead be `col-sm`.
+- Now adjust your browser width and see what when you change it to the extra small width.
 
-Now adjust your screen width and see what when you change it to the extra small width.
+Now that you've added a "small" breakpoint, the divs stack on top of each other at the "extra-small", as they are supposed to.
 
 ### The sizes
 
@@ -68,23 +69,23 @@ Bootstrap works from smallest to largest, so once you set a grid width for `col-
 
 - Adjust the three columns to be `col-sm-3`, `col-sm-6` and `col-sm-3`, respectively.
 
-This makes the middle column wider when viewed at the "small" breakpoint or wider, but they each still show over all 12 columns when at the smallest default breakpoint. **Note that those column numbers add up to 12**. Make one larger now, and it breaks.
+This makes the middle column wider when viewed at the "small" breakpoint or wider, but they each still show over all 12 columns when at the extra-small default breakpoint. **Note that those column numbers add up to 12**. If the total is greater than 12, it breaks into a new column.
 
 Now we will make these columns all the same for the medium breakpoint, without changing the small one.
 
-- After the col-sm designations in the class, add a space and this same designation for the medium breakpoint: `col-md-4`.
+- After the col-sm designations in the class, add a space and then this designation for the medium breakpoint: `col-md-4`.
 
-Now adjust your browser width and see them change between the three breakpoints. Again, note that the **column numbers add to 12 for each breakpoint**.
+Now adjust your browser width and see them change between the three breakpoints. Again, note that the **column numbers for each size add to a factor of 12 for each breakpoint**.
 
 Now that we've learned a little about columns, let's comment out that whole row of code, but keep the container div. (Normally, I would not want to keep it around, but I want this for grading purposes.).
 
 - Highlight all the lines from the `<div class="row">` to the matching closing div.
-- Do command-/ on your keyboard to put that section in comments.
-- Make some extra lines under it so we can add more stuff.
+- Do *Cmd-/* on your keyboard to put that section in comments.
+- Make some blank lines under it so we can add more stuff.
 
 ## The card component
 
-I want to introduce our first "component", called  [Bootstrap cards](https://getbootstrap.com/docs/4.1/components/card/). A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+I want to introduce our first Bootstrap "component", called  [Bootstrap cards](https://getbootstrap.com/docs/4.1/components/card/). A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
 
 BEFORE we add this code below inside your `container` div, look at the column classes and tell me what you _think_ will happen?
 
@@ -124,7 +125,9 @@ BEFORE we add this code below inside your `container` div, look at the column cl
 
 Go ahead and add the code inside the `container` div. Did you have the logic figured out correctly?
 
-## Margins and padding by class on elements
+Note that for the "sm" breakpoint, we have one `sm-col-12`, but the other two are `sm-col-6`, which adds to 12 and keeps them even. The "md" breakpoint as three `md-col-4`, which adds up to 12.
+
+## Adding margins and padding on elements though a class
 
 You may notice that on smaller breakpoints the boxes stack up on top of each other with no space. We can use Bootstrap [spacing utility classes](https://getbootstrap.com/docs/4.1/utilities/spacing/) to adjust for this.
 
