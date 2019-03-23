@@ -28,7 +28,7 @@ For this lesson, we'll introduce the JavaScript template language [Nunjucks](htt
 
 The best way to start set up your project template is to use [degit](https://www.npmjs.com/package/degit) to download the template from the `icj-project-template` repo.
 
-- Create your project folder, called `yourname-final`.
+- Create your project folder, called `yourname-staticapp`.
 - Open VS Code into that folder and open the Terminal.
 - Run `degit utdata/icj-project-template`.
 - Create your Github repo and connect them.
