@@ -40,6 +40,7 @@ Better CSS with Sass
 - [Part 3: Modifying Bootstrap](bootstrap/bootstrap-class-03.md)
 - [Part 4: Publishing to the web](bootstrap/bootstrap-class-04.md)
 - [Part 5: Running an npm project](bootstrap/bootstrap-class-05.md)
+- [Homework](bootstrap/bootstrap-assignment.md)
 
 ### Static apps
 

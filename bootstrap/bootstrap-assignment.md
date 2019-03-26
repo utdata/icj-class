@@ -12,7 +12,7 @@ Your project should include the following:
   - The nav link for the active page (i.e., the one you are viewing) should be bold. There is a special class for this that you'll have to find in the Bootstrap documentation.
 - A jumbotron section for the site header.
   - The jumbotron should have a background image that works at all sizes. The [background shorthand property](https://www.w3schools.com/css/css_background.asp) will help here, as will another style "background-size: cover;". See the note below about how to reference a photo from your `src/scss` directory=.
-- There should be two "story" type pages (the index and one new page). How do you create the second one? Finish the first one, then duplicate it as a new file with a new name. Then make you changes.
+- There should be two "story" type pages (the index and one new page). How do you create the second one? Finish the first one, then duplicate it as a new file with a new name. Then make your changes.
 - Each page should have two columns at the "sm" size and larger, with the one on the left having a byline and responsive-sized photo, and the one on the right should have the "story". They should stack when viewed on a phone.
 - The Byline name and source should be different in style or font.
 - One of the pages needs to have a [carousel](https://getbootstrap.com/docs/4.1/components/carousel/) of three photos. The sizing of the photos should be responsive, which is a special class you can look up in the documentation.
