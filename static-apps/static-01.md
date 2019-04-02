@@ -26,7 +26,7 @@ For this lesson, we'll introduce the JavaScript template language [Nunjucks](htt
 
 ## Set up development
 
-The best way to start set up your project template is to use [degit](https://www.npmjs.com/package/degit) to download the template from the `icj-project-template` repo.
+The best way to set up your project template is to use [degit](https://www.npmjs.com/package/degit) to download the template from the `icj-project-template` repo.
 
 - Create your project folder, called `yourname-staticapp`.
 - Open VS Code into that folder and open the Terminal.
@@ -50,7 +50,7 @@ Visual Studio Code is not set up by default to deal with the Nunjucks template l
 
 ### Install the Nunjucks Template extension
 
-While this isn't required, it is super helpful to install a Nunjucks syntax extension so when you look at templates your variables and code are in color, called "Syntax highlighting". You should only have to do this once.
+While this isn't required, it is super helpful to install a Nunjucks syntax extension so your code is the proper "color" in your editor, called "Syntax highlighting". You should only have to do this once.
 
 - In VS Code, on the far left there are five icons. The bottom one looks like a funky square. Click on that.
 - In the search box, type in `Nunjucks template`. Click on the return for Nunjucks Template.
