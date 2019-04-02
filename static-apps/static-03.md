@@ -71,7 +71,7 @@ We'll leave the _block info_ tag the way it is.
 
 Now, let's create a new page for our first detail entry.
 
-- Inside the `src/njk` folder, create a new file: `2018-10-18.html`. (If you'll recall, this is the same file name we used in our navigation.)
+- Inside the `src/njk` folder, create a new file: `2018-10-18.njk`. (If you'll recall, this is similar to the file name we used in our navigation except for the extension. Each `filename.njk` file added inside `src/njk/` will become a new HTML page of the same name at `docs/filename.html`.)
 - Inside this file, add the following code:
 
 ```html
@@ -88,7 +88,7 @@ Think about this for a second: You added a new page to your website with just th
 
 ## Make two more pages
 
-- Create two more new pages: `2018-10-19.html` and `2018-10-20.html`.
+- Create two more new pages: `2018-10-19.njk` and `2018-10-20.njk`.
 - Fill them with the same code block as above, but change the headlines and dates.
 - Go to the front-end of your site and make sure that all of the links work by using the nav.
 

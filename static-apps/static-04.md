@@ -1,8 +1,8 @@
 # Data and loops
 
-We're going to update our `index.html` file to look more like blog landing page, and we'll use a loop of data to create links to our Ship's Log entries.
+We're going to update our index page to look more like blog landing page, and we'll use a loop of data to create links to our Ship's Log entries.
 
-Open up the `src/njk/index.html` and take a look at it.
+Open up the `src/njk/index.njk` and take a look at it.
 
 - The first line _extends_ the "base" layout. This is fine, since this is the only page we'll have like this.
 - The next bit is _block page\_title_, which allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log".
@@ -28,7 +28,7 @@ A "for loop" in programming will repeat a series of code for as long as the cond
 
 If there are no "books", then our _else_ condition is used, which is text noting the collection is empty. (Else conditions are optional depending on your logic needs).
 
-Where is this "books" collection coming from? This project-template is set up so you can store data collections in a special file `src/njk/data/data.json`. Open that up and you'll see this:
+Where is this "books" collection coming from? This project-template is set up so you can store data collections as JSON files in the `src/njk/_data/` folder. Look there and you'll find a file called `data.json`. Open that up and you'll see this:
 
 ```json
 {
