@@ -86,14 +86,14 @@ On our index, we want to print out a list of all our blog entries. Let's add dat
 - Now replace the entire for loop structure with this:
 
 ```html
-{% for entry in entries %}
+{% for entry in data.entries %}
   <li>{{ entry.title }}, {{ entry.date }}, {{ entry.url}}</li>
 {% endfor %}
 ```
 
-We changed what the loop was looking for: `for entry in entries`. The "entries" part of that is important, because that is the name of our data collection in `data.json`. The "entry" term is what we call a single instance in the loop. We can use whatever term we want there as long as we are consistent, but it is good practice to use variable names that make sense.
+We changed what the loop was looking for: `for entry in data.entries`. The "data.entries" part of that is important, because that is the name file first ( the "data" in `data.json`), then the name of our array in that file ("entries").  The "entry" term is what we call a single instance of the data within the loop. We can use whatever term we want there as long as we are consistent, but it is good practice to use variable names that make sense.
 
-Now, in our `<li>` code we are accessing the values in the data through their keys: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in entries). And "title" is the "key" that matches the "value" we want from that row of the data.
+Now, in our `<li>` code we are accessing the values in the data through their keys: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in data.entries). And "title" is the "key" that matches the "value" we want from that row of the data.
 
 This might seem like overkill for just three lines of data, but you can imagine how powerful this can be with lots of data, or how we can add new rows to data without editing our pages.
 
@@ -117,9 +117,22 @@ Instead of a list, let's use headlines and such:
 
 ## Make it pretty and publish
 
-- Replace our Pirate ipsum text with something creative you write that introduces this blog about a ship's travel.
-- When viewed on a desktop, the display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though.
-- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three Ship's Log entries. Like resusing the headline.
+### Index updates
+
+- On the index, add an H1 headline and replace our ipsum text with something creative you write that introduces this blog about a ship's travel.
+- When viewed on a desktop, the display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though, which you can do by applying an [offset](https://getbootstrap.com/docs/4.1/layout/grid/#offsetting-columns) to move the column over to the right.
+
+### Detail layout updates
+
+- Since the author information is the same for each detail page, update the `detail.njk` page to include the `pirate.jpg` photo and a byline and credit. That will add it to all three detail pages.
+
+### Detail page updates
+
+- Add some content to all three detail pages so you can easily tell them apart when you view those pages. Like new headlines. The text can just be different lorem ipsum text. Add a different Kraken photo to each page, with an img-fluid class.
+- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three detail pages, perhaps using your blog entry headline.
+
+### Publish and check
+
 - Publish this using Github Pages using the `docs` directory.
 
 ---
