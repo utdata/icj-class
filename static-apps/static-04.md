@@ -129,7 +129,7 @@ Instead of a list, let's use headlines and such:
 ### Detail page updates
 
 - Add some content to all three detail pages so you can easily tell them apart when you view those pages. Like new headlines. The text can just be different lorem ipsum text. Add a different Kraken photo to each page, with an img-fluid class.
-- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". Override the default page_title with one appropriate for each of your three detail pages, perhaps using your blog entry headline.
+- Now that you know a little about Nunjucks blocks, note that the `base.njk` template has a block for "page_title". On your detail pages, override the default page_title with one appropriate for each page, perhaps using your blog entry headline.
 
 ### Publish and check
 
