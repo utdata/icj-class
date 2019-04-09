@@ -87,7 +87,7 @@ As a side note: To create the `data.json` file, I organized the information in a
 
 ### Loops
 
-On your index, you should use a Nunjucks `{% for member in members %}` loop like the books example to create your display of members. You should use a similar loop for the discography.
+On your index, you should use a Nunjucks `{% for member in data.members %}` loop like the books example to create your display of members. You should use a similar loop for the discography.
 
 ### Filter for member pages
 
@@ -107,7 +107,7 @@ Filename `freddie-mercury.html` would have the following content:
 
 ```html
 {% extends '_layouts/detail.njk' %}
-{% set members = members[0] %}
+{% set members = data.members[0] %}
 ```
 
 Given the above, now the `{{ members.name }}` value carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
@@ -121,5 +121,5 @@ Canvas is the final word on deadlines, but in general they are in this order:
 - A sketch of your index and detail layouts.
 - A check-in on your HTML templates and data. It's best to get all your logic working before you start styling it.
 - A check-in on your CSS. You don't have to be finished, but this allows me to offer some feedback.
-- On our last class day, you'll show your progress to everyone. You should be published to Github Pages.
+- On our last class day, you'll show your progress to everyone. You should be published to Github Pages with what you have so far.
 - Final deadline for the project when I pull your repo for grading.
