@@ -56,7 +56,7 @@ To save you time, I've collected a series of images and JSON data about the band
 Available for you to use:
 
 - A [data.json](data.json) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/data.json`.
-- A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put this folder inside `src/assets/`.
+- A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder.
 - You can harvest (and credit) other information from Wikipedia or other public domain sources.
 
 ### Members
