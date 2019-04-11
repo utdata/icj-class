@@ -12,7 +12,7 @@ The the index should have:
 
 - A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly.
 - A list of the original members with links to their detail pages. Again, use a Nunjucks loop using the data provided. Use the Bootstrap [Cards]() object with their image, name and url.
-- A listing of all their studio albums from the data/images provided. Use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release. You should use a Nunjucks "for" loop from the data provided, similar to the lesson we used in class.
+- A listing of all their studio albums build from the the data/images provided. One option might be to use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release, but you can come up with your own solution as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
 
 ### Detail pages
 

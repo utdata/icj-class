@@ -16,7 +16,7 @@ Now, look inside the next row for the list that displays a list of books:
 
 ```html
 <ul> 
-  {% for book in books %}
+  {% for book in data.books %}
     <li>{{ book.title }}, {{ book.author }}</li>
   {% else %}
     <li>This would display if the 'books' collection were empty</li>
@@ -108,7 +108,7 @@ Now that we know how to access the data in our templates, we can change up our H
 Instead of a list, let's use headlines and such:
 
 ```html
-{% for entry in entries %}
+{% for entry in data.entries %}
   <h3 class="entry-headline"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
   <p class="entry-date">{{ entry.date }}</p>
   <hr>
