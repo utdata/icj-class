@@ -81,7 +81,7 @@ If you look at your page now, the Jumbotron should be showing. We'll need to cre
 
 ```scss
 .jumbotron.banner {
-  background: url(../assets/img/pirate-ship.jpg) no-repeat center;
+  background: url(../img/pirate-ship.jpg) no-repeat center;
   background-size: cover;
   color: white;
   padding-top: 12rem

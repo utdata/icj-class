@@ -57,7 +57,7 @@ The only thing we have to add to build a new story is the left and right content
 
 ```html
 {% block info %}
-  <img src="assets/img/pirate.jpg" alt="pirate character" class="img-fluid">
+  <img src="img/pirate.jpg" alt="pirate character" class="img-fluid">
   <p class="byline">By Crit McGillicutty<br>
   <span>Island Breeze Tribune</span></p>
 {% endblock %}
