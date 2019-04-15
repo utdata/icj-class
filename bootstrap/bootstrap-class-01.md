@@ -99,27 +99,20 @@ The remaining files in the root level of the project are configuration files tha
 
 - The `.gitignore` file. It's configured for a Node.js based web app.
 - The `README.md` file explains how to get started with this template.
-- The `gulpfile.js` is our magic controller file. More on that below.
+- The `gulpfile.js` is our magic task runner. More on that below.
 - The `package.json` and `package-lock.json` files keep track of all the npm packages we are using. When you run `$ npm install`, it downloads all the software into the `node_modules` folder, which is _NOT_ saved into Github because it contains thousands of files.
 
 #### More about the gulpfile
 
-[Gulp](https://www.npmjs.com/package/gulp) is our task runner that creates our server, compiles our CSS and copies files where we need them. This `gulpfile.js` defines all those tasks. You won't need to edit this file, but let's review what it is doing.
+[Gulp](https://www.npmjs.com/package/gulp) is our task runner that creates our server, compiles our CSS and copies files where we need them. The `gulpfile.js` is the main controller file works works with a series of files in the `tasks` folder.
 
-> This Gulp setup is a little outdated. It works, but we have to be careful not to update any npm packages or it will break.
+Each task file does a single thing, like clean out folders, copy files to different directories, or run the Sass CSS compiler. Each task uses one or more node packages to do its work, and the names of the file indicates more or less what that is. We might review some of these in class and you are free to poke around there, but I'd be careful in editing these files at this point.
 
-Now for the explanations:
+This setup gives us the two commands that we will use the most:
+- `gulp` will compile our CSS and copy all our files into the `docs/` folder.
+- `gulp dev` will do all of the above, plus start our web server so we can see our page.
 
-- The first three lines that start with `var` are variables to designate the three programs we are using in this file: gulp, gulp-sass and browser-sync.
-  - [Gulp](https://www.npmjs.com/package/gulp) is a task runner that we assign to do stuff for us.
-  - [gulp-sass](https://www.npmjs.com/package/gulp-sass) compiles our CSS from Sass.
-  - [browser-sync](https://browsersync.io/) is a web server that let's us see our work as we are building it.
-- The next four sections are JavaScript functions (remember those!) with names ('sass', 'js', 'html' and 'serve'), and each of those does things ... mostly copying files around, which you will see. We can run each of those individually in the terminal like this: `gulp sass`, and that will fire off that task.
-- The last two lines help us run the tasks in certain order:
-  - `gulp` will compile our CSS and copy all our files into the `docs/` folder.
-  - `gulp dev` will do all of the above, plus start our web server so we can see our page.
-
-I can tell you, I did not write all this JavaScript from scratch! There are examples in the [gulp](https://www.npmjs.com/package/gulp), [gulp-sass](https://www.npmjs.com/package/gulp-sass) and [browser-sync](https://www.npmjs.com/package/browser-sync) docs, but what I did was find an example on the web that was close to what I needed, and because I understood what it was doing (more or less), I adjusted it to my liking.
+I can tell you, I did not write all this JavaScript from scratch. I found examples on the web that were close to what I needed and I used those, along with documentation, to configure them for my needs.
 
 ## Launch
 
