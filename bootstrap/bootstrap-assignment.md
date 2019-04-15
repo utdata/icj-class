@@ -19,8 +19,8 @@ Your project should include the following:
 - You must introduce at least one Google Font to both the pages. Like a headline font.
 - There should be a footer that goes across the bottom of the page that has the text "A class project by Your Name."
 - Publish your site using Github pages using the "master branch /docs folder" method.
-- Use these images: [pirate-photos.zip](pirate-photos.zip). To make these files work for you, create a `/docs/media/` folder and put them inside there. Then on pages you can reference them at `<img src="media/filename.jpg">`.
-  - For the background image for the jumbotron, you'll have to reference it from the scss file, so it will be `url(/media/filename.jpg)`. Note the beginning `/` on that file is different than above.
+- Use these images: [pirate-photos.zip](pirate-photos.zip). To make these files work for you, create a `/src/img/` folder and put them inside there. Then on pages you can reference them at `<img src="img/filename.jpg">`.
+  - For the background image for the jumbotron, you'll have to reference it from the scss file, so it will be `url(../img/filename.jpg)`. Note the beginning `../` on that path is different than when you call images from the `index.html` page.
 - FOR EXTRA CREDIT: Pick one other Bootstrap component to add to the site somewhere that makes sense. This is your chance to explore Bootstrap and be creative. When you turn this in, tell me your component-of-choice so I don't have to guess.
 
 Here is generally what the page should look like:
