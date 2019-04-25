@@ -11,7 +11,7 @@ I am supplying you with the idea (a band website for Queen) and assets (images a
 The the index should have:
 
 - A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly.
-- A list of the original members with links to their detail pages. Again, use a Nunjucks loop using the data provided. Use the Bootstrap [Cards]() object with their image, name and url.
+- A list of the original members with links to their detail pages. Again, use a Nunjucks loop using the data provided. Use the Bootstrap [Cards](https://getbootstrap.com/docs/4.1/components/card/) object with their image, name and url.
 - A listing of all their studio albums build from the the data/images provided. One option might be to use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release, but you can come up with your own solution as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
 
 ### Detail pages
