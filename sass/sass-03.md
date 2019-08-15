@@ -1,21 +1,21 @@
 # Refactoring our Sass
 
-If you don't already have your code open in VS Code, go ahead and open it. Run `$ gulp dev` in your terminal to start the Sass task and Browsersync.
+If you don't already have your code open in VS Code, go ahead and open it. Run `$ gulp dev` in your terminal to start the development environment.
+
+
 
 ## CSS is SCSS
 
 Any valid CSS is also valid SCSS. As such, we prep our project to use our new SCSS setup by using what we already have.
 
-- Before we get started, take a look at the file `docs/css/new-styles/css`. You'll notice that this file is blank.
-- Copy the contents of `docs/css/old-styles.css` and paste it into `src/scss/new-styles.scss`. NOTE THAT IS IN THE SRC FOLDER! Once you do, you might see your terminal kick off the sass task to compile the file.
-  - If you look at `docs/css/new-styles.css` file, it should no longer be blank. This is because our Sass task took our styles from the `src` folder and compiled them into the `docs` folder.
-- Now change the css references in our `docs/index.html` and `docs/shows.html` files to point to `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now.
+- Copy the contents of `src/scss/old-styles.css` and paste it into `src/scss/new-styles.scss`. Once you do, you might see your terminal kick off the sass task to compile the file.
+- Now change the css references in our `src/html/index.html` and `src/html/shows.html` files to point to `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now.
 
 ## Variables
 
-One of the most useful features of Sass is to define variables for certain CSS values. Once you use the variable names in your code, you can then change the definition of the variable in one place, affecting your whole site. This makes it easy to change or support themes.
+One of the most useful features of Sass is to define variables for certain CSS values. Once you use the variable names in your code, you can then change the definition of the variable in one place, affecting your whole site. This makes it easy to change or support themes throughout your website.
 
-Create variable names with a dollar sign and then define its value like a CSS rule. When you want to use that variable's value, use that variable name as the rule. We set all the variables at the top of the file so they can be found easily.
+You create variable names with a dollar sign and then define its value like a CSS rule. When you want to use that variable's value, use that variable name as the rule. We set all the variables at the top of the file so they can be found easily.
 
 ```scss
 // set the variable
@@ -38,7 +38,7 @@ Now, if we wanted to change our dark borders from 3px black lines to 5px grey li
 
 ### Variables exercise
 
-There are two colors defined in our styles for our  Harvey Dale and the Cements band website. Let's Sassify them.
+There are two colors defined in our styles for our Harvey Dale and the Cements band website. Let's Sassify them.
 
 - Create two new variables at the top of your `src/scss/new-styles.scss` file called `$primary-color` and `$secondary-color` and define their values from what is in the CSS.
 - Replace the values where those colors were used with the new variable names.
@@ -62,14 +62,13 @@ nav {
     padding: 0;
     list-style: none;
   }
-
   li {
     display: inline-block;
   }
 }
 ```
 
-With this code above, we have specified the styles we are applying to the `ul` and `li` tags will only come into play if they are inside a `nav` element. When they get compiled, it will look like this:
+With this code above, we have specified the styles we are applying to the `ul` and `li` tags will only be applied if they are inside a `nav` element. When they get compiled, it will look like this:
 
 ```css
 nav ul {
@@ -149,7 +148,7 @@ Add styles that would make the navigation links be the primary color and behave 
 
 ![sass-hover](../images/sass-hover.gif)
 
-Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) at all separate properties and each one needs to be specified with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property.
+Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) are all separate properties and each one needs to be specified individually with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property.
 
 ```scss
 a:hover {
@@ -173,7 +172,7 @@ The list of shows on the `shows.html` is hard to read. Make some changes to make
 
 ## Publish to Github
 
-Once everything checks out, push your changes to Github. Send the link in the assignment.
+Once everything checks out, push your changes to Github.
 
 ------
 
