@@ -10,9 +10,9 @@ I am supplying you with the idea (a band website for Queen) and assets (images a
 
 The the index should have:
 
-- A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly.
-- A list of the original members with links to their detail pages. Again, use a Nunjucks loop using the data provided. Use the Bootstrap [Cards](https://getbootstrap.com/docs/4.1/components/card/) object with their image, name and url.
-- A listing of all their studio albums build from the the data/images provided. One option might be to use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release, but you can come up with your own solution as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
+- A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
+- A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.1/components/card/) object with their image, name and url.
+- A listing of all of Queen's studio albums built from the the data/images provided. One option might be to use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release, but you can come up with your own solution as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
 
 ### Detail pages
 
@@ -36,18 +36,17 @@ You can design or organize the above however you wish.
 The project structure should include:
 
 - A base layout that is extended throughout the project.
-- A detail layout that is then extended to additional detail pages.
+- A detail layout that is then extended to detail pages.
 - At least one Nunjucks partial that is included into another layout template. (A good coder would use several.)
 - The project must use the following Bootstrap components and concepts:
   - [Responsive images](https://getbootstrap.com/docs/4.1/content/images/)
   - A [Jumbotron](https://getbootstrap.com/docs/4.1/components/jumbotron/) for a header
   - A [Navbar/Navs](https://getbootstrap.com/docs/4.1/components/navbar/) that links to each member
-  - The [Media list object](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) for the discography.
 - You must use at least one scss partial with your Sass code. (A good coder would have several.)
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere.
 - This should all be in its own repo, published through Github Pages.
 
-Everything should look beautiful and be functional. Content can be pulled from Wikipedia, but source it properly (i.e. give credit and link back).
+Everything should look beautiful and be functional. Content can be pulled from Wikipedia, but source it properly.
 
 ## Assets available
 
@@ -57,19 +56,19 @@ Available for you to use:
 
 - A [data.json](data.json) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/data.json`.
 - A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder.
-- You can harvest (and credit) other information from Wikipedia or other public domain sources.
+- You can harvest (and credit) other information from Wikipedia or other public domain sources as long as you source it properly.
 
 ### Members
 
 The data in the "members" collection includes:
 
 - slug: If you name your band member pages the same as this slug, you can use it in URLs.
-- name: Full printable name of the member
+- name: Full printable name of the member.
 - instruments: A list of what they play.
-- tenure: When they were in the band
+- tenure: When they were in the band.
 - birthplace
 - birthdate
-- image: the filename of a color image of the band member.
+- image: The filename of a color image of the band member.
 - imagebw: the filename of a black and white image of the band member.
 - text: This is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ members.text | safe}}`.
 
@@ -81,7 +80,7 @@ The data in "discography" includes;
 - year: The year it was released
 - image: The filename of an image of the album
 
-As a side note: To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON.
+> As a side note: To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON.
 
 ## Important notes about using data
 
@@ -118,8 +117,8 @@ Brian May appears second in the data, but since we count from zero he is positio
 
 Canvas is the final word on deadlines, but in general they are in this order:
 
-- A sketch of your index and detail layouts.
+- A sketch of your index and detail layouts, including mobile, tablet and desktop views.
 - A check-in on your HTML templates and data. It's best to get all your logic working before you start styling it.
 - A check-in on your CSS. You don't have to be finished, but this allows me to offer some feedback.
 - On our last class day, you'll show your progress to everyone. You should be published to Github Pages with what you have so far.
-- Final deadline for the project when I pull your repo for grading.
+- Final deadline for the project when I pull a copy of your repo for grading.

@@ -1,18 +1,18 @@
 # First Graphics App notes
 
+> This may be used as an extra credit assignment.
+> This guide may need some editing based on recent changes in the lesson.
+
 The [First Graphics App](http://www.firstgraphicsapp.org/) lesson taught at NICAR over the past couple of years is a great introduction into how modern newsrooms construct online projects.
 
-It's possible we'll go through this lesson together in class, following along with the script, but also filling in some context as we go along. If it doesn't make it into class, it is worth doing on your own. It's easy enough to follow along.
-
-What follows are some notes and thoughts about this project to go over as we move along the script.
-
-## How the internet works?
-
-A thought: Talk about enough of how the internet works to get into servers, so we can understand why static apps rock?
+What follows are some notes and thoughts about this project to go over as you move along the script.
 
 ## Prerequisites
 
-- If you have followed the directions in [setting-up](https://github.com/utdata/setting-up), you should have a lot of the npm stuff already, but you'll need to install `yo` and `generator-yeogurt` globally.
+- You already have a Text Editor, Node.js, npm and git. Skip those.
+- When you are creating a folder, we want to create our is in our `/icj/` folder.
+- You also know how to create a README.md file. Just do it like you know instead of following the directions.
+- When you get to **Hello Framework** start following the directions WITH ONE EXCEPTION. DO NOT DO THE STEP TO INSTALL GULP. You already have a newer version and backing down will break your other projects. (We may have to adjust this.)
 
 ## Node.js and npm
 
