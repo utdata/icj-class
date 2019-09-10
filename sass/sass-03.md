@@ -86,7 +86,7 @@ Written in our first Sassy way, we can immediately understand that the `ul` and 
 
 ### Nesting exercise
 
-In our band website and the structure of our HTML, we can see there is `<div class="container">` that is the parent to all of what is contained in the body. There are two other div elements, `<div class="nav">` and `<div class="main">` that are nested inside the container.
+In our band website and the structure of our HTML, we can see there is `<div class="container">` that is the parent to all of what is contained in the body. There are two other div elements, `<div class="nav">` and `<div class="content">` that are nested inside the container.
 
 Looking at the CSS file, we have class elements for each of those, as well. Let's refactor our SCSS to reflect this nesting so it is more understandable.
 
@@ -95,16 +95,16 @@ Looking at the CSS file, we have class elements for each of those, as well. Let'
 
 Look at your page in the browser to make sure everything is still working.
 
-- Let's move down to the .main element. What elements are first descendants of .main? In `new-styles.scss`, nest these selectors accordingly.
-- Do any of first descendants of .nav or .main have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
+- Let's move down to the .content element. What elements are first descendants of .content? In `new-styles.scss`, nest these selectors accordingly.
+- Do any of first descendants of .nav or .content have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
 
 Again, make sure nothing is broken on the page display.
 
-Let's pause and recollect. Do you notice any value that repeats itself over and over again inside of .main? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of .main.
+Let's pause and recollect. Do you notice any value that repeats itself over and over again inside of .content? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of .content.
 
-There's a shorthand CSS selector for applying a property to all direct children, `> * {rule};`. Using this, we can set the padding rule to all the children of .main.
+There's a shorthand CSS selector for applying a property to all direct children, `> * {rule};`. Using this, we can set the padding rule to all the children of .content.
 
-- Add the `> *` selector inside of `.main` and define the padding-left rule.
+- Add the `> *` selector inside of `.content` and define the padding-left rule.
 - Now that you've done this you can remove `padding-left: 30px;` everywhere else.
 - In some cases, you no longer even need the style rule because the padding was the only rule.
 
@@ -119,11 +119,11 @@ Sass partials filenames should start with an underscore, like `_nav.scss`, so Sa
 - Inside the `/src/scss` folder, create a three new files:
   - `_base.scss`
   - `_nav.scss`
-  - `_main.scss`
+  - `_content_.scss`
 - We'll leave our variables in `new-styles.scss`, so the can continue to apply to all the other code that follows.
-- Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.main`. Add those lines to `_base.scss`.
+- Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
 - Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls. Note that these are inside a `.container` call, so you'll need to add that to `_nav.scss`, and the paste these .nav calls inside htat.
-- Do the same for all the `.main` calls into the `_main.scss` file.
+- Do the same for all the `.content` calls into the `_content.scss` file.
 - Lastly, add @import calls into `new-styles.scss` for our partials. Each should be formulated like this:
 
 ```scss
