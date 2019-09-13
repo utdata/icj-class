@@ -2,7 +2,7 @@
 
 A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
 
-Starting a new project with `degit` is at the bottom.
+Starting a new project with `degit`, which we use later in the semester, is at the bottom.
 
 ## Overview of the steps
 
