@@ -1,46 +1,54 @@
 # How to start a project
 
-A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects. (Later on in the semester, we'll modify this for specific projects.)
+A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
+
+Starting a new project with `degit` is at the bottom.
 
 ## Overview of the steps
 
 These are the overall steps in case you just need reminders of the order. A more detailed breakdown is below.
 
 - Create a new folder for your project inside your `icj` folder. (You can use your regular computer operating system to do this.)
-- Launch VS Code. Use **Open folder** to then find and choose your new folder.
+- Launch VS Code.
+- Use **File > New Window** to open a fresh window.
+- Use **Open folder** to then find and choose your new folder.
 - Create a `README.md` file.
   - Using Markdown, add a headline with the project name. Add text with your name and the due date of the project.
 - Create a `.gitignore` file.
-  - Use [gitignore.io](https://www.gitignore.io/) to create the contents of your gitignore file. Use the values "VisualStudioCode", "macOS" and "Windows". Copy the contents into the file you created.
+  - Use [gitignore.io](https://www.gitignore.io/) to create the contents of your gitignore file. Use the values "macOS", "Windows" and "VisualStudioCode" and Create. Copy the contents into the file you created.
 - Commit your local files. In your Terminal do the following:
   - `git init` to initialize git.
   - `git add .` to add all the files to stage.
   - `git commit -m "initial commit"` to commit the files.
-- Go to Github.com and add **New Repository**.
+- Go to Github.com and add a **New Repository**.
   - Name it the same as your local folder.
   - DO NOT include the README or .gitignore files.
 - Once created, review the lines of code Github suggests:
   - Find the line that starts `git remote add origin` and copy that line.
 - Back in VS Code:
-  - Enter that copied line in your Terminal and use it.
+  - Enter that copied line in your Terminal and run it.
 - Do `git push origin master` to push you local code to Github.
 
 You are now ready to complete the rest of the assignment. You can use the git cycle to commit any further changes.
 
 ## The git cycle
 
+As you work through the project, use the git cycle to save your code to your local machine, then push those changs to Github.
+
 - `git status` tells you where you are in the it cycle.
 - `git add .` adds all changed files into your stage
-- `git commit -m "Your message"` commits your changes locally.
+- `git commit -m "Your message"` commits your changes to your computer.
 - `git push origin master` pushes your local changes to Github.
 
-## Details on starting a new project
+## A very detailed version of starting a new project
+
+This is the same as above, but with more detail, description and visuals.
 
 ### Create your project folder
 
 I find it easiest to create the folder using your computer's operating system: [macOS](https://support.apple.com/guide/mac-help/organize-files-using-folders-mh26885/mac) | [Windows](https://www.laptopmag.com/articles/create-new-folder-windows-10).
 
-Create this folder inside you `Documents/icj` so you always know where your code is.
+Create this folder inside you `Documents/icj` so you always know where your code is for this class.
 
 - The assignment will guide you on how to name the folder.
 - Always start the folder name with your own name.
@@ -96,7 +104,7 @@ The `.gitigore` tells git to ignore certain files your computer will create but 
 ![gitignore values](images/00-gitignore-values.png)
 
 - Hit **Create**
-- Copy all the text in the resulting window.
+- Copy all the text from the resulting window.
 - Paste it into your `.gitignore` file in VS Code. Save the file.
 
 ### Commit your local files
@@ -117,7 +125,7 @@ Now we create the repo in Github so we can connect to it.
 - At the top right of the page is a big **+** sign. Click on that and choose **New repository**.
 - For the repository name, I recommend you use the same name as you used for your local folder. Like `christian-project-name`.
 - The **Description** is optional.
-- Keep in **Public**
+- Keep it **Public**.
 - DO NOT use the README or gitignore options.
 - Click the **Create repository** button.
 
@@ -145,8 +153,8 @@ Some projects we do in the class begin with a set of template files that already
 - `git init` will initialize the repo
 - `git add .` to add the files
 - `git commit -m "first commit` to save the files.
-- Create your repo in Github.com
-- Copy the `git remote add origin` line and run it
+- Create your repo in Github.com.
+- Copy the `git remote add origin` line and run it.
 - `git push origin master` to push the code to Github.
 
 You should be ready to continue with the assignment.
