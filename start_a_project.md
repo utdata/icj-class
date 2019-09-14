@@ -85,8 +85,7 @@ This will create the file and you'll see it in the Document tray.
 
 For this class, I want to to at least include this information in your README, adjusted based on the project, of course.
 
-```md
-<a name="markdown"></a>
+<a name="markdown">```md</a>
 
 # The project name
 
