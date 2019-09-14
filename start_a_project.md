@@ -14,8 +14,10 @@ These are the overall steps in case you just need reminders of the order. A more
 - Use **Open folder** to then find and choose your new folder.
 - Create a `README.md` file.
   - Using [Markdown](#markdown), add a headline with the project name. Add text with your name and the due date of the project.
+  - Save the file.
 - Create a `.gitignore` file.
   - Use [gitignore.io](https://www.gitignore.io/) to create the contents of your gitignore file. Use the values "macOS", "Windows" and "VisualStudioCode" and Create. Copy the contents into the file you created.
+  - Save the file.
 - Commit your local files. In your Terminal do the following:
   - `git init` to initialize git.
   - `git add .` to add all the files to stage.
