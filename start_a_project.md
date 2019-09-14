@@ -72,6 +72,8 @@ Opening the folder in VS Code will make sure that your computer knows where all 
 
 ![Folder name](images/00-folder-open.png)
 
+<a name="markdown"></a>
+
 ### Create your README
 
 Here is a reminder of [why we make a README file](https://www.makeareadme.com/).
@@ -84,8 +86,6 @@ I find the easiest way to create a new file is to use the Terminal. There are ma
 This will create the file and you'll see it in the Document tray.
 
 For this class, I want to to at least include this information in your README, adjusted based on the project, of course.
-
-<a name="markdown"></a>
 
 ```md
 
