@@ -2,11 +2,11 @@
 
 A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
 
-Starting a new project with `degit`, which we use later in the semester, is at the bottom.
+Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#degit).
 
 ## Overview of the steps
 
-These are the overall steps in case you just need reminders of the order. A more detailed breakdown is below.
+These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#detail).
 
 - Create a new folder for your project inside your `icj` folder. (You can use your regular computer operating system to do this.)
 - Launch VS Code.
@@ -41,6 +41,8 @@ As you work through the project, use the git cycle to save your code to your loc
 - `git add .` adds all changed files into your stage
 - `git commit -m "Your message"` commits your changes to your computer.
 - `git push origin master` pushes your local changes to Github.
+
+<a name="detail"></a>
 
 ## A very detailed version of starting a new project
 
@@ -147,6 +149,8 @@ Once you create the repo, you'll get a page back with a lot of code.
 If you want to make sure it worked, go back to your browser and refresh the page and you should see your files there.
 
 You should now be ready to continue with the assignment.
+
+<a name="degit"></a>
 
 ## Using degit
 
