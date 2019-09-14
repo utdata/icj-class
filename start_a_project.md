@@ -13,7 +13,7 @@ These are the overall steps in case you just need reminders of the order. A more
 - Use **File > New Window** to open a fresh window.
 - Use **Open folder** to then find and choose your new folder.
 - Create a `README.md` file.
-  - Using Markdown, add a headline with the project name. Add text with your name and the due date of the project.
+  - Using [Markdown](#markdown), add a headline with the project name. Add text with your name and the due date of the project.
 - Create a `.gitignore` file.
   - Use [gitignore.io](https://www.gitignore.io/) to create the contents of your gitignore file. Use the values "macOS", "Windows" and "VisualStudioCode" and Create. Copy the contents into the file you created.
 - Commit your local files. In your Terminal do the following:
@@ -86,6 +86,8 @@ This will create the file and you'll see it in the Document tray.
 For this class, I want to to at least include this information in your README, adjusted based on the project, of course.
 
 ```md
+<a name="markdown"></a>
+
 # The project name
 
 By Christian McDonald
