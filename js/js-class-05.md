@@ -1,8 +1,8 @@
 # Using DataTables
 
-For this lesson, you're going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point. You need to:
+For this lesson, you're going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point.
 
-jQuery is a framework to help make writing in javascript easier. It's particularly useful for simply traversing the DOM in an HTML page. Because of this, there are a number of tools and plug-ins written in jQuery.
+jQuery is a framework that makes it easier to use JavaScript. It's particularly useful for simply traversing the DOM in an HTML page. Because of this, there are a number of tools and plug-ins written in jQuery.
 
 The purpose of this exercise is to show that you can use many of the tools quickly with just a little JavaScript knowledge.
 
@@ -23,11 +23,9 @@ Tables are great for displaying tabular data (hence the word table). But often t
 
 The steps below will walk you through using the DataTables plug-in to make an interactive table. If at any point you get an error in your Console, stop before moving on to the next step. Each step is dependent on the step before.
 
-Start with a new project folder on your machine and a new Github repository to connect them. Call them _yourname-datatable_.
-
 ### #1: "Zero configuration"
 
-- Create a new file in your repository called `datatable.html` and add the basic HTML5 boilerplate.
+- Create a new file in your javascript folder called `datatable.html` and add the basic HTML5 boilerplate.
 - Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
 - On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
 - On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:

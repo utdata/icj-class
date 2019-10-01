@@ -40,7 +40,7 @@ Now let's get down to the detail.
 
 We've introduced several new HTML elements here that we haven't used before.
 
-- [Forms](https://www.w3schools.com/html/html_form_elements.asp) provide a way for HTML pages to collect collect user input. We've given our form and id of `nameForm` so we can target it later.
+- [Forms](https://www.w3schools.com/html/html_form_elements.asp) provide a way for HTML pages to collect user input. We've given our form and id of `nameForm` so we can target it with JavaScript later.
 - [Input](https://www.w3schools.com/html/html_form_input_types.asp) it defines how we can provide the input. We have three inputs with `type="text"`, which gives us a text box. We have given each a `name` attribute, which we can access as a "property" of the form element with JavaScript. We also defined a default `value` to display text until we type something else in.
 - Lastly, we have a `type="button"` input, which we will use to fire our JavaScript function. (If you click on the button now, it doesn't do anything. Yet.)
 
@@ -53,7 +53,7 @@ It script should look like this:
 
 ```html
 <script>
-function makeBetterName (fName, mName, lName) {
+function makeBetterName(fName, mName, lName) {
   if (mName.length === 1) {
     let fullName = fName + " " + mName + ". " + lName;
     return fullName;
@@ -78,7 +78,7 @@ Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elemen
 
 The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we have "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
 
-(If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementByID().`)
+(If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`).
 
 - In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
 - Add the following three lines before the IF in your `makeBetterName` function:
