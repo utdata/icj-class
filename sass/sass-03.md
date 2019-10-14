@@ -120,7 +120,7 @@ Sass partials filenames should start with an underscore, like `_nav.scss`, so Sa
 - Inside the `/src/scss` folder, create a three new files:
   - `_base.scss`
   - `_nav.scss`
-  - `_content_.scss`
+  - `_content.scss`
 - We'll leave our variables in `new-styles.scss`, so the can continue to apply to all the other code that follows.
 - Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
 - Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls. Note that these are inside a `.container` call, so you'll need to add that to `_nav.scss`, and the paste these .nav calls inside htat.
