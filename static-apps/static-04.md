@@ -8,11 +8,11 @@ Open up the `src/njk/index.njk` and take a look at it.
 - The next bit is _block page\_title_, which allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log".
 - Next, we have the _block content_, which is the guts of our page.
 
-If we look at the content within the first `<row>` of our index -- the part of the page with the authors -- you'll see a series of _for_ loops, _ifs_ and use of _variables_. This is an example of the kind of complex templateting logic we can get into Nunjucks, but **we'll skip it** and go to the more simple ex further down the page. Just know that the data for this part is stored in `project.config.json`, one of two places we can pull data from.
+If we look at the content within the first `<row>` of our index -- the part of the page with the authors -- you'll see a series of _for_ loops, _ifs_ and use of _variables_. This is an example of the kind of complex templating logic we can get into Nunjucks, but **we'll skip it** and go to the more simple example further down the page. Just know that the data for this part is stored in `project.config.json`, one of two places we can pull data from.
 
-- Go ahead and delete the entire row that has the Headline, author, etc.
+- Go ahead and delete the entire row that has the Headline, author, etc. (Probably lines 8 through 16, but be sure.)
 
-Now, look inside the next row for the list that displays a list of books:
+Now, look inside the next row for column that has the list of books:
 
 ```html
 <ul> 

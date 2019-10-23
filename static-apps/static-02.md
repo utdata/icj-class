@@ -18,7 +18,8 @@ Inside here is an example of the Nunjucks _block_ tag, and this one is called "p
 
 - Nunjucks block tags start with `{% block tag_name %}` and end with `{% endblock %}`.
 - The content inside the tag will display UNLESS you override it later with a new block tag of the same name.
-- You can also call the tag and append to it using [super](https://mozilla.github.io/nunjucks/templating.html#super), but we aren't doing that here.
+
+> You can also call the tag and append to it using [super](https://mozilla.github.io/nunjucks/templating.html#super), but we aren't doing that here.
 
 We want our site name to be on every page of our site, but then we want to override the title of each page with it's own title, so let's update our title to do this:
 
@@ -26,7 +27,7 @@ We want our site name to be on every page of our site, but then we want to overr
 <title>Pirate Cove | {% block page_title %}Default title{% endblock %}</title>
 ```
 
-Save and then look at your index in your browser, and it will start with "Pirate Cove | " now.
+Save and then look at your index in your browser, and the browser title will start with "Pirate Cove | " now.
 
 The next block in the `base.njk` file is the `{% block description %}` tag, which is fine. We'll leave that as-is.
 

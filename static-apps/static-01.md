@@ -64,11 +64,9 @@ Now, when you look at files with the `.njk` extension, the code will be colored 
 Because we are using `.njk` extensions on our Nunjucks files, Emmet doesn't work because it doesn't know we are still using HTML. We can update our User Prefences to do this:
 
 - Go to the Code > Preferences > Settings.
-- On the space with the sames "User settings" and "Workspace settings", there is a  `{}` to the right. Click on that and choose `open settings.json`.
-
-You'll get two windows. On the left are all the default settings. You can search for different settings, and then copy them into the JavaScript array on the right and then override them.
-
-- Add the following inside the curly braces. If you already have items there, make sure this new one is set off with a comma.
+- On the Settings page at the top right, there is an icon that looks like a document with an arrow pointing to it. Click on it.
+- That will open a file called `settings.json`.
+- Look first to see if you already have the code below. If now, add the following inside the curly braces, but make sure the item above it has a comma at the end.
 
 ```javascript
 {

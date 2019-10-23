@@ -44,7 +44,7 @@ This means when we create a file for each story, we only need to include the con
 {% endblock %}
 ```
 
-- At the top, we _extend_ the detail layout (which in turn extends the base layout. It's [Inception](https://giphy.com/gifs/cheezburger-mindwarp-inception-3GuP496Wrkos8)).
+- At the top, we _extend_ the detail layout (which in turn extends the base layout. (It's [Inception](https://media.giphy.com/media/3GuP496Wrkos8/source.gif)).
 - Next, we have the _block info_ with some example content.
 - Then the _block story_ with example content.
 
