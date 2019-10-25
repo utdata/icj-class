@@ -4,7 +4,7 @@ We're going to rebuild the framework of our Pirate Cove site in a way that we ha
 
 ## Review the base file
 
-When we reviewed the template, we should've talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
+When we reviewed the template in class, we likely talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
 
 We'll make a minor change here so you can see that it does affect our index page.
 
