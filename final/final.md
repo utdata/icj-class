@@ -122,3 +122,13 @@ Canvas is the final word on deadlines, but in general they are in this order:
 - A check-in on your CSS. You don't have to be finished, but this allows me to offer some feedback.
 - On our last class day, you'll show your progress to everyone. You should be published to Github Pages with what you have so far.
 - Final deadline for the project when I pull a copy of your repo for grading.
+
+## Extra credit
+
+For extra credit, you can add a bar chart of Queen's Billboard Hits to your project through [Datawrapper](https://www.datawrapper.de/).
+
+- Click "Start Creating".
+- Copy and paste the data found in `src/njk/_data/queen_chart.csv/` into Datawrapper.
+- Double check that the chart matches the csv data.
+- Make a bar chart and customize it. Make sure the chart has a title.
+- When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
