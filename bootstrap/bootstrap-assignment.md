@@ -6,7 +6,7 @@ You are going to build a two-page Bootstrap project from scratch, based on Boots
 
 You'll want to use the Bootstrap documentation for your code and styles.
 
-- Go to [Bootstrap site)(https://getbootstrap.com/) and click on the **Documentation** link. Most of what you need is under **Components** on the left-hand navigation. **Utilities** has some useful information as well.
+- Go to [Bootstrap site](https://getbootstrap.com/) and click on the **Documentation** link. Most of what you need is under **Components** on the left-hand navigation. **Utilities** has some useful information as well.
 - You may also find W3 Schools' [Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/) useful.
 - You can also review the [Learn Bootstrap screencasts](https://scrimba.com/g/gbootstrap4) you had as prework.
 
@@ -17,6 +17,8 @@ Start with  the [utdata/icj-bootstrap-template](https://github.com/utdata/icj-bo
 - Build the framework of a single page first. Get the main components in and figure out your content columns before you worry about any styling.
 - Then move onto styles and other details.
 - Don't create the second page until you've finished the first. (That way you limit the number of adjustments on two pages.)
+
+See the examples at the bottom to get an idea of what you are building.
 
 ## The components
 
@@ -53,8 +55,8 @@ Once you have the structure in place, you can work on styling and details.
 - The story content should have two columns at the "sm" size and larger.  The columns should stack when viewed on a phone.
 - The column on the left should have the pirate mugshot photo (search for "responsive images" in the Bootstrap docs to see how to make it fit the width of the column).
 - The Byline name and source should be different in style or font.
-- The right column should have a headline and "story" text (which can be [pirate ipsum](https://pirateipsum.me/)).
-- You must introduce at least one Google Font to the content. Like a headline font.
+- The right column should have a headline and "story" text (which can be [pirate ipsum](https://pirateipsum.me/) or similar).
+- You must introduce at least one Google Font to the content. Like a headline font. It can be the same font that is in the jumbotron.
 
 ### The footer
 
@@ -64,7 +66,7 @@ Once you have the structure in place, you can work on styling and details.
 
 ## Second page
 
-- Your second page needs to have an additional Bootstrap Carousel of three photos. (Examples in Bootstrap docs.) The sizing of the photos should be responsive, which is a special class you can look up in the documentation.
+- Your second page needs to have an additional Bootstrap Carousel of three photos. (Examples in Bootstrap docs in Components.) The sizing of the photos should be responsive, which is a special class you can look up in the documentation.
 
 ## Extra credit
 
