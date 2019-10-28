@@ -136,7 +136,7 @@ Canvas is the final word on deadlines, but in general they are in this order:
 For extra credit, you can add a bar chart of Queen's Billboard Hits to your project through [Datawrapper](https://www.datawrapper.de/).
 
 - Click "Start Creating".
-- Copy and paste the data found in `src/njk/_data/queen_billboard-weeks.csv?raw=true` into Datawrapper.
+- Copy and paste this [csv data](src/njk/_data/queen_billboard-weeks.csv?raw=true) into Datawrapper.
 - Double check that the chart matches the csv data.
 - Make a bar chart and customize it. Make sure the chart has a title.
 - When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
