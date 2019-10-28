@@ -8,8 +8,10 @@ I am supplying you with the idea (a band website for Queen) and assets (images a
 
 - Physically draw out what you want your pages to look like. Think first how it will look on a phone, then a tablet, then a desktop screen.
 - Work on the structure of the site first. Basically get all the template structure and HTML/Bootstrap elements on the page.
-- Then work on the logic for loops, and the structure of of detail pages.
+- Then work on the logic for loops on the index, and the logic and structure of of detail pages.
 - Then you can make it all look pretty.
+
+Read all the directions before you start.
 
 ## Requirements
 
@@ -46,14 +48,14 @@ The project structure should include:
 - A detail layout that is then extended to detail pages.
 - At least one Nunjucks partial that is included into another layout template. (A good project will have several.)
 - The project must use the following Bootstrap components and concepts:
-  - [Responsive images](https://getbootstrap.com/docs/4.1/content/images/)
-  - A [Jumbotron](https://getbootstrap.com/docs/4.1/components/jumbotron/) for a header
-  - A [Navbar/Navs](https://getbootstrap.com/docs/4.1/components/navbar/) that links to each member
+  - [Responsive images](https://getbootstrap.com/docs/4.1/content/images/) throughout.
+  - A [Jumbotron](https://getbootstrap.com/docs/4.1/components/jumbotron/) for a header.
+  - A [Navbar/Navs](https://getbootstrap.com/docs/4.1/components/navbar/) that links to each member.
 - You must use at least one scss partial with your Sass code. (A good project would have several.)
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere.
 - This should all be in its own repo, published through Github Pages.
 
-Everything should look beautiful and be functional. Content can be pulled from Wikipedia, but include text that explains the source.
+Everything should look beautiful and be functional. Any additional content beyond that provided in the data can be pulled from Wikipedia, but include text that explains the source.
 
 ## Assets available
 
@@ -62,10 +64,9 @@ To save you time, I've collected a series of images and JSON data about the band
 Available for you to use:
 
 - A [data.json](data.json) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/data.json`.
-- A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder.
-- You can harvest (and credit) other information from Wikipedia or other public domain sources as long as you source it properly.
+- A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
 
-### Members
+### Members data
 
 The data in the "members" collection includes:
 
@@ -87,7 +88,7 @@ The data in "discography" includes;
 - year: The year it was released
 - image: The filename of an image of the album
 
-> As a side note: To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON.
+> As a side note: To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON. This is already done for you ... I'm just telling you how I did it.
 
 ## Important notes about using data
 
@@ -97,7 +98,7 @@ On your index, you should use a Nunjucks `{% for member in data.members %}` loop
 
 ### Filter for member pages
 
-You can (and should) also use the "members" collection for your band member detail pages and save a lot of extra coding. It works like this:
+You can (and should) also use the "members" collection for your band member detail pages to save a lot of extra coding. It works like this:
 
 On your `detail.njk` layout you can build your template to use properties from the "members" collection. You can code the whole page in the layout, and use placeholders for the data like this example:
 
@@ -135,7 +136,7 @@ Canvas is the final word on deadlines, but in general they are in this order:
 For extra credit, you can add a bar chart of Queen's Billboard Hits to your project through [Datawrapper](https://www.datawrapper.de/).
 
 - Click "Start Creating".
-- Copy and paste the data found in `src/njk/_data/queen_chart.csv/` into Datawrapper.
+- Copy and paste the data found in `src/njk/_data/queen_billboard-weeks.csv?raw=true` into Datawrapper.
 - Double check that the chart matches the csv data.
 - Make a bar chart and customize it. Make sure the chart has a title.
 - When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
