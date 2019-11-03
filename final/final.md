@@ -129,6 +129,6 @@ For extra credit, you can add a bar chart of Queen's Billboard Hits to your proj
 
 - Click "Start Creating".
 - Copy and paste the data found in `src/njk/_data/queen_chart.csv/` into Datawrapper.
-- Double check that the chart matches the csv data.
+- Double check that the table matches the csv data.
 - Make a bar chart and customize it. Make sure the chart has a title.
 - When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
