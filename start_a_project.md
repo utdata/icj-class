@@ -2,7 +2,7 @@
 
 A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
 
-Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#degit).
+Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#using-degit).
 
 ## Overview of the steps
 
@@ -13,7 +13,7 @@ These are the overall steps in case you just need reminders of the order. A more
 - Use **File > New Window** to open a fresh window.
 - Use **Open folder** to then find and choose your new folder.
 - Create a `README.md` file.
-  - Using [Markdown](#markdown), add a headline with the project name. Add text with your name and the due date of the project.
+  - Using [Markdown](#create-your-README), add a headline with the project name. Add text with your name and the due date of the project.
   - Save the file.
 - Create a `.gitignore` file.
   - Use [gitignore.io](https://www.gitignore.io/) to create the contents of your gitignore file. Use the values "macOS", "Windows" and "VisualStudioCode" and Create. Copy the contents into the file you created.
@@ -73,8 +73,6 @@ Opening the folder in VS Code will make sure that your computer knows where all 
 - Once the folder opens, the document tray should show the folder name.
 
 ![Folder name](images/00-folder-open.png)
-
-<a name="markdown"></a>
 
 ### Create your README
 
@@ -147,8 +145,6 @@ Once you create the repo, you'll get a page back with a lot of code.
 If you want to make sure it worked, go back to your browser and refresh the page and you should see your files there.
 
 You should now be ready to continue with the assignment.
-
-<a name="degit"></a>
 
 ## Using degit
 
