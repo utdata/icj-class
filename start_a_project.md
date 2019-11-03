@@ -6,7 +6,7 @@ Starting a new project with `degit`, which we use later in the semester, is at t
 
 ## Overview of the steps
 
-These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#detail).
+These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#a-very-detailed-version-of-starting-a-new-project).
 
 - Create a new folder for your project inside your `icj` folder. (You can use your regular computer operating system to do this.)
 - Launch VS Code.
@@ -41,8 +41,6 @@ As you work through the project, use the git cycle to save your code to your loc
 - `git add .` adds all changed files into your stage
 - `git commit -m "Your message"` commits your changes to your computer.
 - `git push origin master` pushes your local changes to Github.
-
-<a name="detail"></a>
 
 ## A very detailed version of starting a new project
 
