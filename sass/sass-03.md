@@ -51,7 +51,7 @@ If you don't see a change, then make sure that your `gulp dev` task is running s
 
 HTML code often has a clearly nested hierarchy. A `nav` element is often a parent to child `li` elements that make up the links.
 
-CSS doesn't have the same hierarchy be default, but it would be useful in some cases. With Sass, we can use a similar visual hierarchy. We do need to be careful not to nest too much, or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html heirarchy because then small changes in the HTML might break our styles.
+CSS doesn't have the same hierarchy by default, but it would be useful in some cases. With Sass, we can use a similar visual hierarchy. We do need to be careful not to nest too much, or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html heirarchy because then small changes in the HTML might break our styles.
 
 Here is an example:
 
@@ -90,12 +90,13 @@ In our band website and the structure of our HTML, we can see there is `<div cla
 
 Looking at the CSS file, we have class elements for each of those, as well. Let's refactor our SCSS to reflect this nesting so it is more understandable.
 
-- Look through the the DOM tree and focus solely on the .nav selector. What elements are direct children of this element? In `new-styles.scss`, nest the selectors and their properties appropriately.
-- Don't forget you'll no longer need the `.nav` part `.nav h4` if that selector is nested.
+If you look through your CSS, you'll see there are two rules dealing with `.nav` class. It is written this way so that the rule applied to the `<h4>` tag would only happen if it is also inside a div classed as `class="nav"`. This is a opportunity to nest the `h4` rule inside the `.nav` rule in your css so it is clear they work together.
+
+- In `new-styles.scss`, nest the selectors and their properties appropriately. Don't forget you'll no longer need the `.nav` part `.nav h4` if that selector is nested.
 
 Look at your page in the browser to make sure everything is still working.
 
-- Let's move down to the .content element. What elements are first descendants of .content? In `new-styles.scss`, nest these selectors accordingly.
+- Back in your HTML file, consider `<div class="content">`. What elements are first descendants of .content? In `new-styles.scss`, nest these selectors accordingly.
 - Do any of first descendants of .nav or .content have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
 
 Again, make sure nothing is broken on the page display.
@@ -119,7 +120,7 @@ Sass partials filenames should start with an underscore, like `_nav.scss`, so Sa
 - Inside the `/src/scss` folder, create a three new files:
   - `_base.scss`
   - `_nav.scss`
-  - `_content_.scss`
+  - `_content.scss`
 - We'll leave our variables in `new-styles.scss`, so the can continue to apply to all the other code that follows.
 - Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
 - Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls. Note that these are inside a `.container` call, so you'll need to add that to `_nav.scss`, and the paste these .nav calls inside htat.

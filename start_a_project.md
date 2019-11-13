@@ -2,20 +2,22 @@
 
 A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
 
-Starting a new project with `degit`, which we use later in the semester, is at the bottom.
+Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#using-degit).
 
 ## Overview of the steps
 
-These are the overall steps in case you just need reminders of the order. A more detailed breakdown is below.
+These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#a-very-detailed-version-of-starting-a-new-project).
 
 - Create a new folder for your project inside your `icj` folder. (You can use your regular computer operating system to do this.)
 - Launch VS Code.
 - Use **File > New Window** to open a fresh window.
 - Use **Open folder** to then find and choose your new folder.
 - Create a `README.md` file.
-  - Using Markdown, add a headline with the project name. Add text with your name and the due date of the project.
+  - Using [Markdown](#create-your-README), add a headline with the project name. Add text with your name and the due date of the project.
+  - Save the file.
 - Create a `.gitignore` file.
   - Use [gitignore.io](https://www.gitignore.io/) to create the contents of your gitignore file. Use the values "macOS", "Windows" and "VisualStudioCode" and Create. Copy the contents into the file you created.
+  - Save the file.
 - Commit your local files. In your Terminal do the following:
   - `git init` to initialize git.
   - `git add .` to add all the files to stage.
@@ -86,6 +88,7 @@ This will create the file and you'll see it in the Document tray.
 For this class, I want to to at least include this information in your README, adjusted based on the project, of course.
 
 ```md
+
 # The project name
 
 By Christian McDonald

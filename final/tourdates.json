@@ -1,0 +1,169 @@
+{
+"tourdates": [
+  {
+    "date": "January 18",
+    "city": "Seoul, South Korea",
+    "venue": "Gocheok Skydome"
+  },
+  {
+    "date": "January 19",
+    "city": "Seoul, South Korea",
+    "venue": "Gocheok Skydome"
+  },
+  {
+    "date": "January 25",
+    "city": "Tokyo, Japan",
+    "venue": "Saitama Super Arena"
+  },
+  {
+    "date": "January 26",
+    "city": "Tokyo, Japan",
+    "venue": "Saitama Super Arena"
+  },
+  {
+    "date": "January 28",
+    "city": "Osaka, Japan",
+    "venue": "Kyosera Dome"
+  },
+  {
+    "date": "January 30",
+    "city": "Nagoya, Japan",
+    "venue": "Nagoya Dome"
+  },
+  {
+    "date": "February 5",
+    "city": "Wellington, New Zealand",
+    "venue": "Westpac Stadium"
+  },
+  {
+    "date": "February 7",
+    "city": "Auckland, New Zealand",
+    "venue": "Mt Smart Stadium"
+  },
+  {
+    "date": "February 10",
+    "city": "Dunedin, New Zealand",
+    "venue": "Forsyth Barr Stadium"
+  },
+  {
+    "date": "February 13",
+    "city": "Brisbane, Australia",
+    "venue": "Suncorp Stadium"
+  },
+  {
+    "date": "February 15",
+    "city": "Sydney, Australia",
+    "venue": "ANZ Stadium"
+  },
+  {
+    "date": "February 19",
+    "city": "Melbourne, Australia",
+    "venue": "AAMI Park"
+  },
+  {
+    "date": "February 20",
+    "city": "Melbourne, Australia",
+    "venue": "AAMI Park"
+  },
+  {
+    "date": "February 23",
+    "city": "Perth, Australia",
+    "venue": "Optus Stadium"
+  },
+  {
+    "date": "February 26",
+    "city": "Adelaide, Australia",
+    "venue": "Adelaide Oval"
+  },
+  {
+    "date": "February 29",
+    "city": "Gold Coast, Australia",
+    "venue": "Metricon Stadium"
+  },
+  {
+    "date": "May 24",
+    "city": "Bologna, Italy",
+    "venue": "Unipol Arena"
+  },
+  {
+    "date": "May 26",
+    "city": "Paris, France",
+    "venue": "AccorHotels Arena"
+  },
+  {
+    "date": "May 27",
+    "city": "Antwerp Belgium",
+    "venue": "Sportspalais"
+  },
+  {
+    "date": "May 29",
+    "city": "Amsterdam, Netherlands",
+    "venue": "Ziggo Dome"
+  },
+  {
+    "date": "May 30",
+    "city": "Amsterdam, Netherlands",
+    "venue": "Ziggo Dome"
+  },
+  {
+    "date": "June 2",
+    "city": "London, UK",
+    "venue": "O2"
+  },
+  {
+    "date": "June 3",
+    "city": "London, UK",
+    "venue": "O2"
+  },
+  {
+    "date": "June 5",
+    "city": "London, UK",
+    "venue": "O2"
+  },
+  {
+    "date": "June 6",
+    "city": "London, UK",
+    "venue": "O2"
+  },
+  {
+    "date": "June 9",
+    "city": "London, UK",
+    "venue": "O2"
+  },
+  {
+    "date": "June 11",
+    "city": "Manchester, UK",
+    "venue": "Manchester Arena"
+  },
+  {
+    "date": "June 12",
+    "city": "Manchester, UK",
+    "venue": "Manchester Arena"
+  },
+  {
+    "date": "June 24",
+    "city": "Berlin, Germany",
+    "venue": "Mercedes-Benz Arena"
+  },
+  {
+    "date": "June 26",
+    "city": "Cologne, Germany",
+    "venue": "Lanxess Arena"
+  },
+  {
+    "date": "June 28",
+    "city": "Zurich, Switzerland",
+    "venue": "Hallenstadion"
+  },
+  {
+    "date": "June 29",
+    "city": "Munich, Germany",
+    "venue": "Olympiahalle"
+  },
+  {
+    "date": "July 1",
+    "city": "Copenhagen, Denmark",
+    "venue": "Royal Arena"
+  }
+]
+}

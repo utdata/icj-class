@@ -8,11 +8,7 @@ Open up the `src/njk/index.njk` and take a look at it.
 - The next bit is _block page\_title_, which allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log".
 - Next, we have the _block content_, which is the guts of our page.
 
-If we look at the content within the first `<row>` of our index -- the part of the page with the authors -- you'll see a series of _for_ loops, _ifs_ and use of _variables_. This is an example of the kind of complex templateting logic we can get into Nunjucks, but **we'll skip it** and go to the more simple ex further down the page. Just know that the data for this part is stored in `project.config.json`, one of two places we can pull data from.
-
-- Go ahead and delete the entire row that has the Headline, author, etc.
-
-Now, look inside the next row for the list that displays a list of books:
+Now, look in the code for the bit about `data.books`, which prints out a series of books from a data file:
 
 ```html
 <ul> 
@@ -28,7 +24,7 @@ A "for loop" in programming will repeat a series of code for as long as the cond
 
 If there are no "books", then our _else_ condition is used, which is text noting the collection is empty. (Else conditions are optional depending on your logic needs).
 
-Where is this "books" collection coming from? This project-template is set up so you can store data collections as JSON files in the `src/njk/_data/` folder. Look there and you'll find a file called `data.json`. Open that up and you'll see this:
+Where is this "books" collection coming from? This project-template is set up so you can store data collections as JSON files in the `src/njk/_data/` folder. Look there and you'll find a file called `data.json`. Open that up and you'll see something similar to this:
 
 ```json
 {
@@ -83,17 +79,17 @@ On our index, we want to print out a list of all our blog entries. Let's add dat
 ```
 
 - Kill your BrowserSync server and restart it with `gulp dev`. Data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data.
-- Now replace the entire for loop structure with this:
+- Now replace the entire for loop structure (including the `ul` tags) with this:
 
 ```html
 {% for entry in data.entries %}
-  <li>{{ entry.title }}, {{ entry.date }}, {{ entry.url}}</li>
+  <p>{{ entry.title }}, {{ entry.date }}, {{ entry.url}}</p>
 {% endfor %}
 ```
 
 We changed what the loop was looking for: `for entry in data.entries`. The "data.entries" part of that is important, because that is the name file first ( the "data" in `data.json`), then the name of our array in that file ("entries").  The "entry" term is what we call a single instance of the data within the loop. We can use whatever term we want there as long as we are consistent, but it is good practice to use variable names that make sense.
 
-Now, in our `<li>` code we are accessing the values in the data through their keys: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in data.entries). And "title" is the "key" that matches the "value" we want from that row of the data.
+Now, in our `<p>` tag we are accessing the values in the data through their keys: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in data.entries). And "title" is the "key" that matches the "value" we want from that row of the data.
 
 This might seem like overkill for just three lines of data, but you can imagine how powerful this can be with lots of data, or how we can add new rows to data without editing our pages.
 
@@ -120,7 +116,7 @@ Instead of a list, let's use headlines and such:
 ### Index updates
 
 - On the index, add an H1 headline and replace our ipsum text with something creative you write that introduces this blog about a ship's travel.
-- When viewed on a desktop, the display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.1/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm`, `md` and higher breakpoints. The content should be centered on the page, though, which you can do by applying an [offset](https://getbootstrap.com/docs/4.1/layout/grid/#offsetting-columns) to move the column over to the right.
+- When viewed on a desktop, the display of the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.3/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `sm` and higher breakpoints. The content should be centered on the page, though, which you can do by applying an [offset](https://getbootstrap.com/docs/4.3/layout/grid/#offsetting-columns) to move the column over to the right.
 
 ### Detail page updates
 

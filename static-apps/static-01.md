@@ -14,7 +14,7 @@ Through this semester we've been building your coding skills, adding a new langu
 
 When you built your Bootstrap project, you had to copy/paste or rewrite code for each page. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
-Static-gen sites mostly mean the end-result pages can be served just on a web server without need for a database or other complicated hardware.
+Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer but pre-builds the site into static files for deployment.
 
 There are [lots of ways](https://www.staticgen.com/) to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.
 
@@ -40,7 +40,7 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 
 ## Understand the project structure
 
-The easiest way to understand how this template works is to [read the README online](https://github.com/utdata/icj-project-template). DON'T SKIP THIS PART. We will also go over it in class.
+The easiest way to understand how this template works is to [read the README online](https://github.com/utdata/icj-project-template). DON'T SKIP THIS PART. We will also go over it in class. If you are doing this on your own, READ THE README!
 
 ## Configure VS Code to deal with Nunjucks
 
@@ -64,11 +64,9 @@ Now, when you look at files with the `.njk` extension, the code will be colored 
 Because we are using `.njk` extensions on our Nunjucks files, Emmet doesn't work because it doesn't know we are still using HTML. We can update our User Prefences to do this:
 
 - Go to the Code > Preferences > Settings.
-- On the space with the sames "User settings" and "Workspace settings", there is a  `{}` to the right. Click on that and choose `open settings.json`.
-
-You'll get two windows. On the left are all the default settings. You can search for different settings, and then copy them into the JavaScript array on the right and then override them.
-
-- Add the following inside the curly braces. If you already have items there, make sure this new one is set off with a comma.
+- On the Settings page at the top right, there is an icon that looks like a document with an arrow pointing to it. Click on it.
+- That will open a file called `settings.json`.
+- Look first to see if you already have the code below. If now, add the following inside the curly braces, but make sure the item above it has a comma at the end.
 
 ```javascript
 {
