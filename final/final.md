@@ -141,7 +141,7 @@ For extra credit, you can add a bar chart of Queen's Billboard Hits to your proj
 - Make a bar chart and customize it. Make sure the chart has a title.
 - When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
 
-Another option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a data table of Queen's 2020 tour dates.
+Another option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of Queen's 2020 tour dates.
 
 - Create a new file under `src/njk/data` called `tourdates.json`.
 - Take the information in the [tourdates.json](tourdates.json) and put it into your new file.
