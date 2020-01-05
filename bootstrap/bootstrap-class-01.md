@@ -109,6 +109,7 @@ The remaining files in the root level of the project are configuration files tha
 Each task file does a single thing, like clean out folders, copy files to different directories, or run the Sass CSS compiler. Each task uses one or more node packages to do its work, and the names of the file indicates more or less what that is. We might review some of these in class and you are free to poke around there, but I'd be careful in editing these files at this point.
 
 This setup gives us the two commands that we will use the most:
+
 - `gulp` will compile our CSS and copy all our files into the `docs/` folder.
 - `gulp dev` will do all of the above, plus start our web server so we can see our page.
 

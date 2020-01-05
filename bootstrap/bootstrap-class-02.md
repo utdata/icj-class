@@ -95,18 +95,18 @@ BEFORE we add this code below inside your `container` div, look at the column cl
     <div class="col-sm-12 col-lg-4">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Blackbeard</h5>
-          <p class="card-text">Edward Teach was an English pirate who operated around the West Indies.</p>
-          <a href="https://en.wikipedia.org/wiki/Blackbeard" class="card-link">Teach tidbits</a>
+          <h5 class="card-title">"Calico Jack" Rackham</h5>
+          <p class="card-text">An English pirate captain operating in the Bahamas and Cuba towards the end of the "Golden Age of Piracy".</p>
+          <a href="https://en.wikipedia.org/wiki/Calico_Jack" class="card-link">Rackham rewards</a>
         </div>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4">
       <div class="card">
         <div class="card-body text-center">
-          <h5 class="card-title">Henry Morgan</h5>
-          <p class="card-text">A Welsh privateer, landowner and Lieutenant Governor of Jamaica.</p>
-          <a href="https://en.wikipedia.org/wiki/Henry_Morgan" class="card-link">S'more Sir Henry</a>
+          <h5 class="card-title">Blackbeard</h5>
+          <p class="card-text">Edward Teach was an English pirate who operated around the West Indies.</p>
+          <a href="https://en.wikipedia.org/wiki/Blackbeard" class="card-link">Teach tidbits</a>
         </div>
       </div>
     </div>
@@ -205,9 +205,9 @@ Let's adjust our dropdown a little to adjust the third list item to drop down to
     Ships
   </a>
   <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Ranger</a>
     <a class="dropdown-item" href="#">Queen Anne's Revenge</a>
-    <a class="dropdown-item" href="#">Oxford</a>
-    <a class="dropdown-item" href="#">Revenge</a>
+    <a class="dropdown-item" href="#">William</a>
   </div>
 </li>
 ```
@@ -293,7 +293,7 @@ We'll add one more element before we get to the business of customization. In ou
 
 <ul class="nav flex-column nav-pills">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Calico Jack</a>
+    <a class="nav-link active" href="#">Charles Vane</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">William Kidd</a>
@@ -307,7 +307,7 @@ We'll add one more element before we get to the business of customization. In ou
 </ul>
 ```
 
-The result in your browser should look like this:
+The result in your browser should look something like this:
 
 ![bs-vertnav](../images/bs-vertnav.png)
 
