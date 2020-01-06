@@ -1,6 +1,6 @@
 # CSS class exercise
 
-CSS is the skin and DNA attributes that make one HTML skeletons look different from each other. We use CSS to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson, and make it pretty.
+CSS is the skin and DNA attributes that make one HTML skeleton look different from another. We use CSS to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson, and make it pretty.
 
 ## Goals 
 
@@ -39,7 +39,7 @@ So, let's do it:
 
 The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects to files together. I'll be honest ... I never remember how to write it ... I just look it up when I need it.
 
-Refresh your page and watch your something-kinda-special turn in to muck.
+Refresh your page and watch your something-kinda-special turn into muck.
 
 ## Relative font sizing
 
@@ -70,7 +70,7 @@ Let's set some boundaries for the article. If you look at the finished example a
 
 - In `recipe.html`, add a beginning `<article>` on a new line after the beginning `<body>` tag.
 - Add the closing `</article>` tag before the closing `</body>` tag near the bottom.
-- Save the html file.
+- Save your html file.
 
 ### Add the article styles
 
@@ -165,6 +165,7 @@ We set the credit as a new font, and then set the top and bottom margins.
 Sometimes I have trouble knowing if my CSS property is affecting the thing I want, so sometimes I'll set some crazy rule like `color-background: red;` to make sure I'm targeting what I want.
 
 The other thing I might do is use the browser **Inspector** to play with the style I might like before I write them. It's easier to show this can write it out, but you:
+
 - Use control-click on the element to get the menu for Inspector.
 - Make sure you are on the correct element.
 - Add rules to the element in the CSS tab and play with them.
@@ -266,7 +267,7 @@ It works the same way the unordered list did.
 
 ## Set the nutrition styles
 
-This is our last challenging piece and we get to learn some more advance CSS foo. This is our goal:
+This is our last challenging piece and we get to learn some more advanced CSS foo. This is our goal:
 
 ![nutrition-list-example](../images/nutrition-list-example.png)
 
@@ -286,7 +287,7 @@ Let's do this in pieces so you can see the magic happen.
 
 We are adding the background color so you can see the whole outline of each li. We'll take it out later.
 
-Since we only want to change the list items that are within the nutrition div, we have to use both of those selectors. We set removed the list style and then added the grey dotted line. Save and refresh to see your lines.
+Since we only want to change the list items that are within the nutrition div, we have to use both of those selectors. We removed the list style and then added the grey dotted line. Save and refresh to see your lines.
 
 - Next, in the same rule, let's float all of the list items the left, so add this to the above rule:
 
@@ -313,9 +314,9 @@ Save and refresh. Bamm ... we have two on each line. Now we need some space betw
 
 OK, we are looking pretty good, but this would look tons better if we could make the grams value flush right in every line. We can do this by putting the two parts of the list items into spans. This is kind of our alternative to the description list that we used for yield.
 
-So, to do this we have to rewrite all the list items to have spans, and then to class those spans so we can target them with css. In order to save time, I'll allow you to copy/paste them.
+So, to do this we have to rewrite all the list items to have spans, and then to class those spans so we can target them with css. In order to save time, just copy/paste to replace them.
 
-- In the html file, replace all the li's with this:
+- In the html file, replace all the nutrition li's with this:
 
 ```html
         <li>

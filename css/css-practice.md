@@ -8,7 +8,7 @@ We did many of these things with our in-class assignment. You'll also have to fi
 
 To make a news story, something like this:
 
-![css-practice-examples](../images/css-practice-examples.gif)
+![css-practice-examples](../images/css-practice-example.gif)
 
 ## Requirements
 
@@ -22,8 +22,10 @@ To make a news story, something like this:
 - Use [Google Fonts](https://fonts.google.com/) to find and use a font called "Ubuntu" and add that to your page. You'll need to figure out how to do that, but it isn't difficult.
 - Set all your headlines to use that Ubuntu font (with backups) and set headline sizes that make visual sense, but follow convention. (i.e., make sure h1 is the biggest and is used for the article headline.) Make sure you also include the `<h4>` label above the headline.
 - Set the byline and photo credit lines to use the font Arial with an appropriate backup. Adjust sizes so they are visually appealing.
+- Use a `<span>` tag around the date in the byline, and set it to font-style of italic.
 - Make the photo credit text right-aligned and nudge up the margin so it sits close but not upon the photo so readers know that is what it goes with.
 - For the blockquote, set a solid left border that is grey and 4px thick. Add some padding (20px) between this border and the text.
 - For the ordered list style, the numbers should line up with the text in the article. `list-style-position` should help you with this.
+- For the "comment-notes" section, set a background-color of #CCC and give the content padding of 12px on all sides.
 - Once you are done with everything, push it to Github.
 - Turn in the link to your repo.

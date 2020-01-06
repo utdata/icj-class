@@ -29,4 +29,4 @@ There are cases in this assignment where we have NOT covered a specific HTML tag
 - There is a quoted text paragraph that starts with "Granted, not every starting ...". Put that in a `blockquote` tag. Don't know that one? Look it up.
 - Add a hypertext link to the text "ranking the starting five line-ups" to [this url](https://bleacherreport.com/articles/2789035-ranking-every-nba-teams-projected-starting-5-after-free-agency#slide7), opening in a new window.
 - Use an ORDERED list for the ranking list of teams in the middle of the story, but it should start with the Philadelphia 76ers as number 5. Don't know how to do that? Figure it out.
-- Make sure the last two paragraphs are in a `<div>` with an attribute "comment-notes".
+- The last two paragraphs are the opening for the comments section of the article. Wrap both paragraphs with a `<div>` with an `id="comment-notes"` attribute.
