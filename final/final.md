@@ -4,43 +4,23 @@ Your goal with this final project is to create a multi-page website using the [i
 
 I am supplying you with the idea (a band website for Queen) and assets (images and data). You may add additional content and images, as long as they are public domain material (like from Wikipedia).
 
+Your site should be clean and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
+
 ## Some strategies on how to tackle a project
 
-- Physically draw out what you want your pages to look like. Think first how it will look on a phone, then a tablet, then a desktop screen.
-- Work on the structure of the site first. Basically get all the template structure and HTML/Bootstrap elements on the page.
-- Then work on the logic for loops on the index, and the logic and structure of of detail pages.
-- Then you can make it all look pretty.
+Read all the directions before you start coding anything.
 
-Read all the directions before you start.
+- Physically draw out what you want your pages to look like so you have a goal in mind. (This is why the first assignment is sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen.
+- Work on the structure of the site first. Basically get all the template structure and HTML/Bootstrap elements on the page. Build the structure for mobile first, then consider wider page widths.
+- Then work on the loop logic for the member list and discography. Get the loops working first, then make adjustments to make them look the way you want.
+- Then work on the logic for the detail layout and pages. Again, get the structure working first so you know you are calling the data correctly, then make it look the way you want.
+- Lastly, you can make it all look pretty with CSS adjustments.
+
+Remember: Think mobile first, then adjust for larger screen widths.
 
 ## Requirements
 
-### Index page
-
-The the index should have:
-
-- A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
-- A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.1/components/card/) object with their image, name and url.
-- A listing of all of Queen's studio albums built from the the data/images provided. One option might be to use the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) object to display the album cover, title and year of release, but you can come up with your own solution as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
-
-### Detail pages
-
-Each band member page should extend a detail layout.
-
-Be sure to read the **very important note below** about how to filter data to use just one row of an array.
-
-The layout should have:
-
-- Create two columns, set so they stack on mobile but become two columns at `sm` and wider.
-- In those two columns, you should have (all from data provided):
-  - Photo of the band member
-  - Headline of their name
-  - Bio information (birthdate, etc.)
-  - Narrative about the member
-
-You can design or organize the above however you wish.
-
-## Project structure and helper notes
+### Project structure and helper notes
 
 The project structure should include:
 
@@ -57,14 +37,40 @@ The project structure should include:
 
 Everything should look beautiful and be functional. Any additional content beyond that provided in the data can be pulled from Wikipedia, but include text that explains the source.
 
+### Index page
+
+The the index should have:
+
+- A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
+- A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.1/components/card/) object with their image, name and url.
+- A listing of all of Queen's studio albums built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
+
+### Detail pages
+
+Each band member page should extend a detail layout.
+
+Be sure to read the **very important note below** about how to filter data to use just one row of an array.
+
+The layout should have:
+
+- Two columns that stack on mobile but become two columns at `sm` and wider.
+- In those two columns, you should have (all from data provided):
+  - Photo of the band member
+  - Headline of their name
+  - Bio information (birthdate, etc.)
+  - Narrative about the member
+
+You can design or organize the above however you wish.
+
 ## Assets available
 
 To save you time, I've collected a series of images and JSON data about the band members and discography. I've supplied more images than necessary so you can choose ones you like.
 
 Available for you to use:
 
-- A [data.json](data.json) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/data.json`.
 - A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
+- A [queen.json](queen.json?raw=true) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/queen.json`.
+- A [tourdates.json](tourdates.json?raw=true) file for the extra credit option explained below.
 
 ### Members data
 
@@ -80,6 +86,8 @@ The data in the "members" collection includes:
 - imagebw: the filename of a black and white image of the band member.
 - text: This is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ members.text | safe}}`.
 
+Use all of these on the member detail pages.
+
 ### Discography
 
 The data in "discography" includes;
@@ -88,13 +96,15 @@ The data in "discography" includes;
 - year: The year it was released
 - image: The filename of an image of the album
 
-> As a side note: To create the `data.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON. This is already done for you ... I'm just telling you how I did it.
+> Side note: To create the `queen.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON. This is already done for you ... I'm just telling you how I did it.
+
+You can put the discography on the index or it's own page. You DO NOT need individual pages for each album.
 
 ## Important notes about using data
 
 ### Loops
 
-On your index, you should use a Nunjucks `{% for member in data.members %}` loop like the books example to create your display of members. You should use a similar loop for the discography.
+On your index, you should use a Nunjucks `{% for member in queen.members %}` loop like the books example to create your display of members. You should use a similar loop for the discography.
 
 ### Filter for member pages
 
@@ -114,7 +124,7 @@ Filename `freddie-mercury.html` would have the following content:
 
 ```html
 {% extends '_layouts/detail.njk' %}
-{% set members = data.members[0] %}
+{% set members = queen.members[0] %}
 ```
 
 Given the above, now the `{{ members.name }}` value carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
@@ -133,6 +143,8 @@ Canvas is the final word on deadlines, but in general they are in this order:
 
 ## Extra credit
 
+### Billboard hits chart
+
 For extra credit, you can add a bar chart of Queen's Billboard Hits to your project through [Datawrapper](https://www.datawrapper.de/).
 
 - Click "Start Creating".
@@ -141,8 +153,9 @@ For extra credit, you can add a bar chart of Queen's Billboard Hits to your proj
 - Make a bar chart and customize it. Make sure the chart has a title.
 - When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
 
+### Tour dates table
+
 Another option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of Queen's 2020 tour dates.
 
-- Create a new file under `src/njk/data` called `tourdates.json`.
-- Take the information in the [tourdates.json](tourdates.json) and put it into your new file.
+- Save the file [tourdates.json](tourdates.json?raw=true) into your `src/njk/data/` folder and restart gulp so the data is available.
 - Use this data to make a table with Queen's 2020 tour dates, cities and venues. Refer to [loops](#loops) for help.
