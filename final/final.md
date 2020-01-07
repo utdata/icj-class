@@ -69,8 +69,8 @@ To save you time, I've collected a series of images and JSON data about the band
 Available for you to use:
 
 - A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
-- A [queen.json](queen.json?raw=true) file with: A "members" array about band members and A "discography" array for the list of albums. Put this in `src/njk/data/queen.json`.
-- A [tourdates.json](tourdates.json?raw=true) file for the extra credit option explained below.
+- A [queen.json](queen.json?raw=true) file with: A "members" array about band members and a "discography" array for the list of albums. Save this as `src/njk/data/queen.json`.
+- A [tour.json](tour.json?raw=true) file for the extra credit option explained below.
 
 ### Members data
 
@@ -157,5 +157,5 @@ For extra credit, you can add a bar chart of Queen's Billboard Hits to your proj
 
 Another option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of Queen's 2020 tour dates.
 
-- Save the file [tourdates.json](tourdates.json?raw=true) into your `src/njk/data/` folder and restart gulp so the data is available.
+- Save the file [tour.json](tour.json?raw=true) into your `src/njk/data/` folder and restart gulp so the data is available.
 - Use this data to make a table with Queen's 2020 tour dates, cities and venues. Refer to [loops](#loops) for help.
