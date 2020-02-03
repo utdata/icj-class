@@ -21,6 +21,8 @@ You have the internet at your disposal for help. Here are some resources you mig
 
 This is the same project set up did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/master/start_a_project.md) if you need a refresher. This is something you should learn to do without having to look it up.
 
+Not every step is explained in detail because you should be using knowledge gained from the codecademy tutorial. In class, I'll show you each step, then you can follow along after it is demonstrated. Along the way, I'll show you some tips and tricks of working in Visual Studio Code.
+
 ## Build a recipe web page
 
 We're going to build the HTML structure for a recipe. You might open [the recipe](https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce) in another window for reference.
@@ -38,8 +40,9 @@ If all that fails and we can't figure it out, you can go to [W3 School](https://
 Now to save time, we'll get the unstyled text for our document.
 
 - Go to the [html-class-text.txt file](https://raw.githubusercontent.com/utdata/icj-class/master/html/html-class-text.txt) in this Github repo and copy/paste the contents in between the `<body>` tag of your document.
-- **Copy** the first line of text "Grilled Chicken Salad with Romesco Sauce" into a `<title>` tag in the head of the document. The `<title>` tag are the words that show on the tab of your browser.
-- Go back to the body of the tet and put open and close `<h1>` tags around that same line to make a main headline.
+- The first line of text is the headline of the article, and that next needs to be in two places:
+  - **Copy** the text "Grilled Chicken Salad with Romesco Sauce" and paste it into a `<title>` tag in the head of the document. The `<title>` tag are the words that show on the tab of your browser.
+  - Go back to the body of the text and add the open and close `<h1>` tags around that line to make a main headline.
 - Below the `<h1>` tag, add an `<img>` tag with the `src=""` going to the url below. Note that you can just type `img` in your editor and then use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out the required elements of the tag.
 
 `https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-120720-jpg`
@@ -49,7 +52,7 @@ Now to save time, we'll get the unstyled text for our document.
 
 `https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce`
 
-- Add a `target` attribute to open the link into a new window.
+- Add a [target attribute](https://www.w3schools.com/tags/att_a_target.asp) to open the link into a new window. This can come directly after the href url attribute.
 - Put `<p>` tags around the introductory paragraph that starts with "Purée".
 - For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
 - Create a [description list](https://www.w3schools.com/html/html_lists.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
@@ -60,7 +63,7 @@ Active Time: 45 minutes
 Total Time: 1 hour
 ```
 
-- Create a new `<div>` with and `id` attribute of "ingredients".
+- Create a new `<div>` with an `id` attribute of "ingredients" that includes all of the text for "Ingredients" (which is ends right before "Preparation").
 - Before we build the `<h2>` tag around the "Ingredients" headline, let's learn more about [Emmet](https://docs.emmet.io/) and how it can help us. Emmet is a shorthand syntax and tool for programmers to help write code blocks, and it is [baked into VS Code](https://code.visualstudio.com/docs/editor/emmet). You won't be wowed at this example, but the next one will bring both shock and awe.
 - Highlight the introductory paragraph. Do **command-shift-p** to bring up the Command Palette. (Control-shift-p for Windows.) Begin typing in the text "Emmet: Wrap" and you'll see the list of commands filter down. Use your arrow keys to select **Emmet: Wrap with Abbreviation** and hit return. That list will go away but the box will remain so you cantype in the next command. Type in the text `h2` and hit return. This wil wrap your text in both the beginning and ending `<h2>` tags.
 
