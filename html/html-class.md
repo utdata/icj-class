@@ -97,3 +97,7 @@ Save, add, commit and the push your code to your repo in Github. To review, the 
 ## Turn in your work
 
 Turn in a link to your repo in the assignment in canvas.
+
+## Finished page
+
+![HTML gif](html-done.gif)
