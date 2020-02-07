@@ -87,7 +87,7 @@ article {
 }
 ```
 
-This `margin-right: auto;` style was discussed in the Learn CSS lesson in Codecademy.
+This `margin-<direction>: auto;` style was discussed in the Learn CSS lesson in Codecademy.
 
 If you've done this right, you should be able to refresh your browser and see everything centered.
 
@@ -164,13 +164,15 @@ We set the credit as a new font, and then set the top and bottom margins.
 
 Sometimes I have trouble knowing if my CSS property is affecting the thing I want, so sometimes I'll set some crazy rule like `color-background: red;` to make sure I'm targeting what I want.
 
-The other thing I might do is use the browser **Inspector** to play with the style I might like before I write them. It's easier to show this can write it out, but you:
+The other thing I might do is use the browser **Inspector** to test styles right on the screen. Once I figure out my style, I can then add it to my styles file.
+
+It's easier to show this in person than to write it out, but you:
 
 - Use control-click on the element to get the menu for Inspector.
-- Make sure you are on the correct element.
-- Add rules to the element in the CSS tab and play with them.
+- Make sure you are on the correct element in the Element tab on the left pane of the Inspector.
+- Add/modify rules rules in the Styles tab on the right pane of the Inspector.
 
-Once you figure what you like, then write the rule in the css file.
+Here is an example in a screencast:
 
 ![using-inspector](../images/using-inspector.gif)
 
@@ -193,14 +195,14 @@ We want the recipe description to be a bit bigger than the other type. First we 
 At this point, you might be confused why sometimes we have a period before a style `.credit` and sometimes a hash `#description` and sometimes nothing `p, ul, li`. Let's define the difference and hopefully it will become clear.
 
 - HTML **elements** are the most generic thing you can style. A `<p>` tag or `<h1>`, etc. If you write a style for one, it affects ALL of those elements on your site.
-- But sometimes you have common elements that you re-use often, like byline. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="whatever"`. Now that it is classified, we can write one style that will affect all the bylines. What you call the class is up to you, but it make sense to call it what it is. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.whatever {font-family: Arial;}`.
-- There are also cases on a page where an element is used only one way. In this case we might "identify" that element with an **id** attribute: `id="new-whatever"`. An example might be the main headline of a story; there is always only one. When we use an `id` we are indicating to the browser (and our fellow coders, and even Google) that this element only appears once on this page. When we write a style for an id, we precede the name with a hash to indicate the style is for an id: `#new-whatever {font-family: Times;}`.
+- But sometimes you have common elements that you re-use often, like byline. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="whatever"`. Now that it is classified, we can write one style that will affect all the bylines. What you call the class is up to you, but best practice is to choose a name that describes it is. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.whatever {font-family: Arial;}`.
+- There are also cases on a page where an element is used only one way. In this case we might "identify" that element with an **id** attribute: `id="unique-whatever"`. An example might be the main headline of a story; there is always only one. When we use an `id` we are indicating to the browser (and our fellow coders, and even Google) that this element only appears once on this page. When we write a style for an id, we precede the name with a hash to indicate the style is for an id: `#unique-whatever {font-family: Times;}`.
 
 ## Set the Yield box style
 
 Let's set up the fancy lines above and below the yield values first.
 
-- In your html file, make sure you have a `<div>` surrounding the whole `<dl>` section, and give that div an id of "yield".
+- In your html file, you should have a `<div>` surrounding the whole `<dl>` section, with an `id="yield"`.
 - In the css file, add the following:
 
 ```css
@@ -210,7 +212,7 @@ Let's set up the fancy lines above and below the yield values first.
 }
 ```
 
-Save and refresh the lines. She used a [shorthand for the border property](https://www.w3schools.com/cssref/pr_border.asp) that allows us to set the size, color and style.
+Save and refresh to see the lines. We used a [shorthand for the border property](https://www.w3schools.com/cssref/pr_border.asp) that allows us to set the size, color and style in one rule.
 
 ## Set the yield text
 
@@ -234,13 +236,13 @@ dt {
 
 The first `<dl>` rule sets the font and size of the text. The next `<dt>` rule floats that part of the description to the left, sets a margin and makes it bold.
 
-- To finish out, go into the html file and add the colon after the `<dt>` values.
+- To finish out, go into the html file and add the colon after text inside the `<dt>` tags.
 
 Could we have done this with paragraphs or divs? Absolutely. But then you wouldn't have learned about description lists ;-).
 
 ## Unordered list margins
 
-The default unordered list looks crappy. Let's line up the bullets to they start with the other words in the article. We do this with [list-position](https://www.w3schools.com/cssref/pr_list-style-position.asp).
+The default unordered list looks crappy. Let's move the bullets so they line up with the other text in the article. We do this with [list-position](https://www.w3schools.com/cssref/pr_list-style-position.asp).
 
 - Add to your css file:
 
@@ -271,9 +273,11 @@ This is our last challenging piece and we get to learn some more advanced CSS fo
 
 ![nutrition-list-example](../images/nutrition-list-example.png)
 
-But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if they were generated from an application or CMS of some kind, that would be difficult. We can do it with a special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp).
+But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if they were generated from an application or CMS of some kind, we might not know when to start the new section.
 
-Let's do this in pieces so you can see the magic happen.
+What we'll do instead is use special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) to adjust every other list item.
+
+Let's do this in small steps so you can see the magic happen.
 
 - Set the dotted border on the li tags with this:
 
@@ -285,17 +289,18 @@ Let's do this in pieces so you can see the magic happen.
 }
 ```
 
-We are adding the background color so you can see the whole outline of each li. We'll take it out later.
 
-Since we only want to change the list items that are within the nutrition div, we have to use both of those selectors. We removed the list style and then added the grey dotted line. Save and refresh to see your lines.
+Since we only want to change the list items that are within the nutrition div, we used both the `#nutrution` and the `li` element selectors.
 
-- Next, in the same rule, let's float all of the list items the left, so add this to the above rule:
+For the first rule we choose a "none" list style to remove the bullets, then on the next style we added the grey dotted line. Save and refresh to see your lines. Lastly, we added a red background color so you can see the outline of each `li` tag on the page. We'll take this rule out later.
+
+- Next, in the same rule, let's float all of the list items the left, so add this as a new line in that style:
 
 ```css
   float: left;
 ```
 
-Save and refresh, and then you'll see all of the list items try to fit on the same space. Well, what we really want is for them to take up half of the space, or 50%.
+Save and refresh, and then you'll see all of the list items try to fit on the same space. Well, what we really want is for each line to take up half of the space.
 
 - Add another value to the same rule. We're using a little less than 50% to give us some wiggle room with margins later:
 
@@ -303,7 +308,7 @@ Save and refresh, and then you'll see all of the list items try to fit on the sa
   width: 48%
 ```
 
-Save and refresh. Bamm ... we have two on each line. Now we need some space between them. If we add a margin-right call to all the li's, then it would put a margin far to the right as well. This is where the [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) comes in. We can add a rule to every ODD numbered item:
+Save and refresh. Bamm ... we have two on each line. Now we need some space between them. If we add a margin-right call to all the li's, then it would put a margin far to the right as well. This is where the [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) comes in. We can add a rule to every ODD numbered list item:
 
 ```css
 #nutrition li:nth-child(odd) {
