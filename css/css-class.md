@@ -30,7 +30,7 @@ There is way to deal with this called CSS reset. The concept is to zero out all 
 
 So, let's do it:
 
-- In your repo, create a new blank file called `reset.css` and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file. (You might use the `touch` command to do this, or File > New File in VS Code.)
+- In your repo, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
 - We need to add a link in our stylesheet to the reset stylesheet. Put this before the closing `</head>` tag.
 
 ```html
@@ -43,15 +43,15 @@ Refresh your page and watch your something-kinda-special turn into muck.
 
 ## Relative font sizing
 
-If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that, a user can't increase the size of text in their browse, something a lot of old folks do, present company included.
+If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that, a user can't increase the size of text in their browse, something a lot of old folks do. You'll see me do it in class all the time.
 
 So there is a way to handle that by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://www.njimedia.com/how-i-met-the-old-fashioned-way-of-setting-font-sizes/), but know our next move is to set the base font at 62.5%, which will make the normally-default 16px font and makes the base 10px. This allows us to then use a relative measure called a `rem` where `2.4rem` is based 24px for a normally-sized browser.
 
 ## Create a site style file, set body defaults
 
-- Create a new file and call it `recipe.css`.
+- Create a new file and call it `styles.css`.
 - Now, in your `recipe.html` file, add a `<link>` tag to that that css file after the `reset.css` link.
-- Now we'll add some defaults for the `<body>` tag in the `recipe.css` file. Add this to the top, then save both the css and html files.
+- Now we'll add some defaults for the `<body>` tag in the `styles.css` file. Add this to the top, then save both the css and html files.
 
 ```css
 body {
@@ -74,7 +74,7 @@ Let's set some boundaries for the article. If you look at the finished example a
 
 ### Add the article styles
 
-- Now, in `recipe.css`, add the following styles:
+- Now, in `styles.css`, add the following styles:
 
 > I encourage you to type as much of the code as you can so you understand how the code editor can help you write in the styles. When you get behind, then copy 'n' paste.
 
