@@ -12,14 +12,14 @@ To make a news story, something like this:
 
 ## Requirements
 
-- Make sure you update your `practice-story.html` file with any of the feedback provided by your instructor.
+- Make sure you update your `practice-story.html` file with any of the feedback I gave you when I graded.
 - Use a css reset file. You can use the same one we used with the in-class assignment.
-- Now that you have a reset css file, you'll need to create a new css file for all your other styles specific to this story.
+- Now that you have a reset css file, you'll need to create a new css file for all your other styles and link it to your html file.
 - Set the base font as "Times New Roman" with acceptable backups. Reset the font-size for easier relative sizing by setting the body font size to 62.5%, which is the equivalent of 10px, like we did with the in-class recipe.
 - Now set a standard font size for text elements like `<p>` and `<ul>` tags. (Make the base font larger.) You'll also want to set a bottom margin on those elements so they don't run up against each other.
 - Add an `<article>` tag if you need to, then make the max-width of the article 620px and center it.
 - In the HTML, set the width of the photo to 620px using a "width" attribute.
-- Use [Google Fonts](https://fonts.google.com/) to find and use a font called "Ubuntu" and add that to your page. You'll need to figure out how to do that, but it isn't difficult.
+- Use [Google Fonts](https://fonts.google.com/) to find and use a font called "Ubuntu" and add that to your page. You'll need to figure out how to do that, but you can figure it out if you read the directions.
 - Set all your headlines to use that Ubuntu font (with backups) and set headline sizes that make visual sense, but follow convention. (i.e., make sure h1 is the biggest and is used for the article headline.) Make sure you also include the `<h4>` label above the headline.
 - Set the byline and photo credit lines to use the font Arial with an appropriate backup. Adjust sizes so they are visually appealing.
 - Use a `<span>` tag around the date in the byline, and set it to font-style of italic.
