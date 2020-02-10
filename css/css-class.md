@@ -22,7 +22,7 @@ CSS](https://www.codecademy.com/learn/learn-css) course.
 
 ## CSS Reset
 
-Go into your repo from the previous HTML lesson and open in your browser the `recipe.html` file. Your browser will display it just fine, with some default sizing. The problem is, different browsers display defaults just a little bit differently. Here is this page in Chrome, Safari and Firefox. Notice the spacing and bullet sizes are a wee bit different between the versions.
+Go into your repo (yourname-html-css) from the previous HTML class lesson and open in your browser the `recipe.html` file. Your browser will display it just fine, with some default sizing. The problem is, different browsers display defaults just a little bit differently. Here is this page in Chrome, Safari and Firefox. Notice the spacing and bullet sizes are a wee bit different between the versions.
 
 ![3-browser-reset-ex](../images/3-browser-reset-ex.png)
 
@@ -30,27 +30,27 @@ There is way to deal with this called CSS reset. The concept is to zero out all 
 
 So, let's do it:
 
-- In your repo, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
-- We need to add a link in our stylesheet to the reset stylesheet. Put this before the closing `</head>` tag.
+- In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
+- We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing `</head>` tag.
 
 ```html
   <link rel="stylesheet" type="text/css" href="reset.css">
 ```
 
-The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects to files together. I'll be honest ... I never remember how to write it ... I just look it up when I need it.
+The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects these files together. I'll be honest ... I never remember how to write it ... I just look it up when I need it.
 
-Refresh your page and watch your something-kinda-special turn into muck.
+Refresh your recipe.html browser page and watch your something-kinda-special turn into muck.
 
 ## Relative font sizing
 
-If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that, a user can't increase the size of text in their browse, something a lot of old folks do. You'll see me do it in class all the time.
+If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that, a user can't increase the size of text in their browser, something a lot of old folks do. You'll see me do it in class all the time.
 
 So there is a way to handle that by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://www.njimedia.com/how-i-met-the-old-fashioned-way-of-setting-font-sizes/), but know our next move is to set the base font at 62.5%, which will make the normally-default 16px font and makes the base 10px. This allows us to then use a relative measure called a `rem` where `2.4rem` is based 24px for a normally-sized browser.
 
 ## Create a site style file, set body defaults
 
 - Create a new file and call it `styles.css`.
-- Now, in your `recipe.html` file, add a `<link>` tag to that that css file after the `reset.css` link.
+- Now, in your `recipe.html` file, add a different `<link>` tag referring to that css file after the `reset.css` link.
 - Now we'll add some defaults for the `<body>` tag in the `styles.css` file. Add this to the top, then save both the css and html files.
 
 ```css
@@ -111,7 +111,7 @@ In the case above, it's important that we have commas between each text element.
 
 ## Set headline sizes
 
-Now we'll set headlines font and sizes. Add this to your css file, save and refresh your browser:
+Now we'll set headlines font and sizes. Add this to your `styles.css` file, save and refresh your browser:
 
 ```css
 h1, h2, h3, h4, h5, h6 {
@@ -140,15 +140,15 @@ The other rule set sizes and margins for various sizes of headlines. You'll noti
 
 ## Set the credit
 
-Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it with CSS. We'll use a "class" because credits are not unique, and this way we could set them for all the credits on our site.
+Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it specifically with CSS. We'll use a "class" because credits are not unique, and this way we could set them for all the credits on our site.
 
-- In the html page, add the `class="credit"` attribute to the `<p>` tag so it looks like this:
+- In the html page, add the `class="credit"` attribute to the `<p>` tag around the credit "Source: Epicurious.com" so it looks like this:
 
 ```html
 <p class="credit">
 ```
 
-- Now that we've defined it, we can add the following styles to your style sheet to target the credit:
+- Now that we've defined it, we can add the following styles to your style sheet to target that specific `<p>` tag:
 
 ```css
 .credit {
@@ -180,7 +180,7 @@ Here is an example in a screencast:
 
 We want the recipe description to be a bit bigger than the other type. First we need to give it an "id", then give the id a style.
 
-- In the html file, add an `<id>` attribute called "description" to the `<p>` tag. We use `<id>` because there is always only one per recipe.
+- In the html file, add an `<id>` attribute called "description" to the `<p>` tag around the "Purée grilled bell peppers" paragraph. We use `<id>` because there is always only one per recipe (it will not repeat), and we need to target it specifically.
 - In the CSS file, add the following style:
 
 ```css
@@ -290,11 +290,11 @@ Let's do this in small steps so you can see the magic happen.
 ```
 
 
-Since we only want to change the list items that are within the nutrition div, we used both the `#nutrution` and the `li` element selectors.
+Since we only want to change the list items that are within the nutrition div, we used both the `#nutrition` and the `li` element selectors.
 
 For the first rule we choose a "none" list style to remove the bullets, then on the next style we added the grey dotted line. Save and refresh to see your lines. Lastly, we added a red background color so you can see the outline of each `li` tag on the page. We'll take this rule out later.
 
-- Next, in the same rule, let's float all of the list items the left, so add this as a new line in that style:
+- Next, in the same rule, let's float all of the list items the left, so add this as a new line in that #nutrition li rule:
 
 ```css
   float: left;
@@ -321,7 +321,7 @@ OK, we are looking pretty good, but this would look tons better if we could make
 
 So, to do this we have to rewrite all the list items to have spans, and then to class those spans so we can target them with css. In order to save time, just copy/paste to replace them.
 
-- In the html file, replace all the nutrition li's with this:
+- In the html file, replace all the li's under "Nutrition Information" with this (make sure to nest it inside the ul tag, which should still be there):
 
 ```html
         <li>
