@@ -9,6 +9,12 @@ The goal of this assignment is to:
 
 While this assignment will be worked on in class, you should have _already_ completed the Codecademy assignments for HTML.
 
+## Our Goal
+
+To meet these objectives, you'll be "coding up" this recipe page with HTML. When this portion is done, it will look like this in your browser:
+
+![HTML gif](html-done.gif)
+
 ## Resources
 
 You have the internet at your disposal for help. Here are some resources you might find useful.
@@ -19,9 +25,9 @@ You have the internet at your disposal for help. Here are some resources you mig
 
 ## Project setup
 
-This is the same project set up did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/master/start_a_project.md) if you need a refresher. This is something you should learn to do without having to look it up.
+This is the same project set up we did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/master/start_a_project.md) if you need a refresher. This is something you should eventually learn to do without having to look it up.
 
-Not every step is explained in detail because you should be using knowledge gained from the codecademy tutorial. In class, I'll show you each step, then you can follow along after it is demonstrated. Along the way, I'll show you some tips and tricks of working in Visual Studio Code.
+Not every step of this project is explained in detail because you should be using knowledge gained from the Codecademy tutorial. In class, I'll show you each step, then you can follow along after it is demonstrated. Along the way, I'll show you some tips and tricks of working in Visual Studio Code.
 
 ## Build a recipe web page
 
@@ -97,7 +103,3 @@ Save, add, commit and the push your code to your repo in Github. To review, the 
 ## Turn in your work
 
 Turn in a link to your repo in the assignment in canvas.
-
-## Finished page
-
-![HTML gif](html-done.gif)
