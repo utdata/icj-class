@@ -8,16 +8,37 @@ The Canvas course is your official word on assignment due dates and such, but mo
 
 ### HTML
 
+- [Codecademy HTML tutorial](https://www.codecademy.com/learn/learn-html)
+  - Section 1
+    - Introduction to HTML
+    - Documentation Standards
 - [HTML class](html/html-class.md)
 - [HTML practice](html/html-practice.md)
 
 ### CSS
 
+- [Codecademy CSS tutorial](https://www.codecademy.com/learn/learn-css)
+  - Selectors and visual rules
+    - CSS Setup and Selectors
+    - CSS Visual Rules
+  - The Box Model
+    - The Box Model
+    - Changing the Box Model
+  - Display and Positioning
+    - CSS Display and Positioning
 - [CSS class](css/css-class.md)
 - [CSS practice](css/css-practice.md)
 
 ### JavaScript
 
+- [Codecademy JS Tutorial](https://www.codecademy.com/learn/introduction-to-javascript)
+  - Module 1: Introduction
+    - Introduction to Javascript
+    - Interactive lesson
+  - Module 2: Conditionals
+    - Conditional statements
+  - Module 3: Functions
+    - Functions: Interactive lesson
 - [JS basics](js/js-class-01.md)
 - [JS functions](js/js-class-02.md)
 - [JS flow control](js/js-class-03.md)
@@ -35,6 +56,8 @@ Better CSS with Sass
 
 ### Bootstrap
 
+- [Bootstrap Tutorial on Scrimba](https://scrimba.com/g/gbootstrap4)
+  - Do all 11 sessions
 - [Part 1: Setup](bootstrap/bootstrap-class-01.md)
 - [Part 2: Using Bootstrap](bootstrap/bootstrap-class-02.md)
 - [Part 3: Modifying Bootstrap](bootstrap/bootstrap-class-03.md)
