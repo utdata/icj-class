@@ -51,7 +51,7 @@ console.log(makeBetterName("Donald", "F", "Trump"));
 
 ### Return if true
 
-Now let's update our true statement to build the name we want. Let's outline the logic of what we need to do:
+Now let's update our true statement to build the name we want. Here is what we need to do:
 
 1. Add a period to the end of our `middleName` variable.
 2. Create a fullName that is the combination of the other names.
@@ -120,7 +120,7 @@ function makeBetterName(firstName, middleName, lastName) {
 
 ## Flow control functions on your own
 
-1. Write a function that takes two scores - `home` and `away` - and logs a message to the console saying either **"The home team won"** or **"The away team won"**
+1. Write a function (name it anything you want) that takes two scores - `home` and `away` - and logs a message to the console saying either **"The home team won"** or **"The away team won"**
 2. In your code, call it twice to make sure it's working - once for a time when when the home wins and once for when it loses
 3. What if it's a tie? Refactor you code to use `else if` to handle ties and call it again to make sure it works.
 
