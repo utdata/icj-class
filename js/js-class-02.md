@@ -85,7 +85,7 @@ One thing of note ... the variable that was declared inside the function, `squar
 ## Functions on your own
 
 - Add a comment with the intent of your function `// Functions on my own`. 
-- Write another function (and name it anything you want, but I named mine `makeName`) that takes three arguments -- `firstName`, `middleName` and `lastName` -- and uses the `+` operator to combine the three arguments to form a full name. Make sure you add spaces (' ') in between the arguments so the returned value doesn't look like ChristianRobertMcDonald, or whatever. 
+- Write another function (and name it anything you want, but I named mine `makeName`) that takes three arguments -- `firstName`, `middleName` and `lastName` -- and uses the `+` operator to combine the three arguments to form a full name. Make sure you add spaces (' ') in between the arguments so the returned value doesn't look like ChristianClayMcDonald, or whatever. 
 - In your code, call the function with three different sets of names to make sure it works and log the returned value to the console each time.
 - For one of those names, I want you to use Robert "Beto" O'Rourke. Note that you will have to figure out a way to include the apostrophe in his last name and the double-quotes around "Beto". 
 
