@@ -6,10 +6,10 @@ I'll be using Chrome in class, so it might be helpful to do so yourself. Safari,
 
 ## Get set up
 
-- Create a new project folder called `yourname-javascript`. Create and connect with a Github project of the same name.
+- Create a new project folder called `yourname-javascript`. Create and connect with a new Github repo of the same name.
 - You'll need to create a new HTML file (call it `js-practice.html`) with the HTML5 boilerplate.
 
-We will be typing all our code between a `<script>` tag inside the body of that page. Mark the answers for each question using JavaScript's comment syntax:
+We will be typing all our code between a `<script>` tag inside the body of that page. Mark the answers for each question using JavaScript's comment syntax. As you see below, there are two ways to do so:
 
 ```html
 <script>
@@ -42,11 +42,11 @@ console.log("Let's do math:");
 
 ![console](../images/js-show-console.png)
 
-Note we used double-quotes to signify our string. Just so you know, we could use single quotes if we are consistent, but then we would've needed to escape the single quote in the text as `Let\'s`.
+Note we used double-quotes to signify our string. Just so you know, we could use single quotation marks if we are consistent, but then we would've needed to escape the single quote in the text as `Let\'s`.
 
 ## Writing to the console
 
-- Use `let` to create a new variable `x` and set it to `5`. Log `x`'s value to the console.
+- Under your first console.log, use `let` to create a new variable `x` and set it to `5`. Log `x`'s value to the console.
 
 ```js
 let x = 5;
@@ -98,7 +98,7 @@ console.log(z);
 ### Math on your own
 
 - Add a JavaScript comment called "Math on my own".
-- Repeat that last steps, but use addition (`+`), subtraction (`-`) and division (`/`) using **new** variable names (not `z`) and values. These are three different new things, each logged to the Console.
+- Repeat those last steps, but demonstrate addition (`+`), subtraction (`-`) and division (`/`) using **new** variable names (not `z`) and values. These are three different new things, each logged to the Console.
 - Make sure they worked in your browser.
 - Commit your changes to Github.
 
@@ -117,19 +117,19 @@ let middleName = 'Clay';
 let lastName = 'McDonald';
 ```
 
-- Use string concatenation (`+`) to join the variables you just created into a new variable called `name`. Make sure to include spaces between each name part. Log it to the console.
+- Use string concatenation (`+`) to join the variables you just created into a new variable called `name`. Make sure to include spaces in quotation marks between each name part. Log it to the console.
 
 ```js
 let name = firstName + " " + middleName + " " + lastName;
 console.log(name)
 ```
 
-OK, we now have created a variable that has your entire name, built from other variables.
+OK, we now have created a variable that has your entire name, built from other variables. Holler if you see that it doesn't work in your browser.
 
 ### Strings on your own
 
 - Add a JavaScript comment with the text "Strings on my own".
-- Join `name` together with the string `'My name is'` into a new variable, `greeting`, so its new value is *my name is YOUR NAME*. Log that new value to the console.
+- Create a new variable, `greeting`, and in it, join the string `'My name is'` together with `name` so its new value is *my name is YOUR NAME*. Log that new value to the console.
 - Commit your changes to Github.
 
 ---
