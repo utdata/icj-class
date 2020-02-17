@@ -4,12 +4,19 @@ JavaScript is the programming language of the browser. We're going to practice u
 
 I'll be using Chrome in class, so it might be helpful to do so yourself. Safari, Firefox and Edge do work and have all the tools necessary, but it might be easier to follow along if you use Chrome.
 
-## Get set up
+## Learning objectives
+
+- Practice basic programming concepts: data types, variables and functions.
+- Use the browser console to interact with Javascript.
+- Apply learned Javascript as a working example in a browser.
+- Use pre-written Javascript to build more advanced functionality.
+
+## Set up your project
 
 - Create a new project folder called `yourname-javascript`. Create and connect with a new Github repo of the same name.
 - You'll need to create a new HTML file (call it `js-practice.html`) with the HTML5 boilerplate.
 
-We will be typing all our code between a `<script>` tag inside the body of that page. Mark the answers for each question using JavaScript's comment syntax. As you see below, there are two ways to do so:
+Like CSS, you can write Javascript either in an HTML page, or in a separate file and link to it. We will be typing all our code between a `<script>` tag inside the body of our HTML page. Mark the answers for each question using JavaScript's comment syntax. As you see below, there are two ways to do so:
 
 ```html
 <script>
@@ -46,7 +53,7 @@ Note we used double-quotes to signify our string. Just so you know, we could use
 
 ## Writing to the console
 
-- Under your first console.log, use `let` to create a new variable `x` and set it to `5`. Log `x`'s value to the console.
+- Under your first console.log, use `let` to create a new variable `x` and set it to `5`. Log `x`'s value to the console. (We'll talk about `let` and what a variable is below.)
 
 ```js
 let x = 5;
