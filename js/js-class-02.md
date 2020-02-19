@@ -91,7 +91,7 @@ One thing of note ... the variable that was declared inside the function, `squar
 
 ## Property vs method
 
-Because they look similar and can get confusing, let's discuss the difference between properies and methods.
+Because they look similar and can get confusing, let's discuss the difference between properties and methods.
 
 A JavaScript "property" is something about an object. Like its datatype (string vs integer) or its length ("Bye" is three characters long). To call it, add a period after the variable name.
 

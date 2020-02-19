@@ -44,7 +44,7 @@ OK, now that we have a test, we need to test it. And we need test for both true 
 
 ```js
 console.log(makeBetterName("Joan", "Marie", "Larkin"));
-console.log(makeBetterName("Donald", "F", "Trump"));
+console.log(makeBetterName("John", "F", "Kennedy"));
 ```
 
 - Save your files and test in your browser to make sure you are getting `true` and `false` in the right order for your tests.
@@ -74,6 +74,8 @@ function makeBetterName(firstName, middleName, lastName) {
   }
 }
 ```
+
+Save and run your code again and look at the last two entries in your console log. Question for class: Why does one log return a letter and one "false"?
 
 OK, now let's build the `fullName` field. This is just like we did with our `makeName` function. We don't have a variable called `fullName` available yet, so we'll instantiate it using `let`.
 
@@ -122,7 +124,7 @@ function makeBetterName(firstName, middleName, lastName) {
 
 1. Write a function (name it anything you want) that takes two scores - `home` and `away` - and logs a message to the console saying either **"The home team won"** or **"The away team won"**
 2. In your code, call it twice to make sure it's working - once for a time when when the home wins and once for when it loses
-3. What if it's a tie? Refactor you code to use `else if` to handle ties and call it again to make sure it works.
+3. What if it's a tie? Refactor your code to use `else if` to handle ties and call it again to make sure it works.
 
 ---
 

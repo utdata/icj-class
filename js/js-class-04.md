@@ -4,17 +4,17 @@ As we have worked on JavaScript in class, it has been a bit academic ... there h
 
 ## The Document Object Model
 
-JavaScript is aware of all the HTML on your web page, and they all become JavaScript **objects**. This process, called the Document Object Model -- or DOM, for short -- is a standard for how to get, change, add, or delete HTML elements using JavaScript.
+JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript **object**. This process, called the Document Object Model -- or DOM, for short -- is a standard for how to get, change, add, or delete HTML elements using JavaScript.
 
 The DOM allows us to connect our JavaScript functions to HTML or CSS on the page.
 
-## Our goals
+## Our goal
 
-We are making a form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name on the page. And overview of steps:
+We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. And overview of steps:
 
 1. Create a new html page.
 2. Add some basic form elements and a button.
-3. Copy our `makeBetterName` function from our previous exercise
+3. Copy our `makeBetterName` function from our previous exercise.
 4. Modify that function and connect it to our forms elements and buttons.
 
 Now let's get down to the detail.
@@ -41,15 +41,15 @@ Now let's get down to the detail.
 We've introduced several new HTML elements here that we haven't used before.
 
 - [Forms](https://www.w3schools.com/html/html_form_elements.asp) provide a way for HTML pages to collect user input. We've given our form and id of `nameForm` so we can target it with JavaScript later.
-- [Input](https://www.w3schools.com/html/html_form_input_types.asp) it defines how we can provide the input. We have three inputs with `type="text"`, which gives us a text box. We have given each a `name` attribute, which we can access as a "property" of the form element with JavaScript. We also defined a default `value` to display text until we type something else in.
+- [Input](https://www.w3schools.com/html/html_form_input_types.asp) elements define how we can provide the input. We have three inputs with `type="text"`, which gives us a text box. We have given each a `name` attribute, which we can access as a "property" of the form element with JavaScript. We also defined a default `value` to display text until we type something else in.
 - Lastly, we have a `type="button"` input, which we will use to fire our JavaScript function. (If you click on the button now, it doesn't do anything. Yet.)
 
 ## Copy our function
 
 - Create a new script tag under the HTML we added, but just before the closing `</body>` tag.
-- Let's add a copy of our `makeBetterName` function into `form.html` inside the script tag.
+- Let's add a copy of our `makeBetterName` function into `form.html` page in a script tag.
 
-It script should look like this:
+Here is the code:
 
 ```html
 <script>
