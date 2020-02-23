@@ -21,9 +21,9 @@ Now let's get down to the detail.
 
 ## Create our page
 
-- Inside the same repo we have been working, create a new file called `form.html` and open it in VS Code.
-- Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`.
-- Into the body of the document, add the following HTML code. I'll explain afterward:
+- Inside the same `yourname-javascript` repo we have been working in, create a new file called `form.html` and open it in VS Code.
+- Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`. Don't capitalize `html`. 
+- In between the <body> tags of the document, add the following HTML code. I'll explain afterward:
 
 ```html
 <form id="nameForm">
@@ -36,7 +36,7 @@ Now let's get down to the detail.
 <h3 id="name">Name will go here</h3>
 ```
 
-- Save your file and open your page in a browser.
+- Save your file and open that page in a browser.
 
 We've introduced several new HTML elements here that we haven't used before.
 
@@ -46,8 +46,8 @@ We've introduced several new HTML elements here that we haven't used before.
 
 ## Copy our function
 
-- Create a new script tag under the HTML we added, but just before the closing `</body>` tag.
-- Let's add a copy of our `makeBetterName` function into `form.html` page in a script tag.
+- Create a new <script> tag under the HTML we added, but just before the closing `</body>` tag.
+- Let's add a copy of our `makeBetterName` function into `form.html` page in the script tag.
 
 Here is the code:
 
@@ -74,7 +74,7 @@ There are couple of logic changes we need to make to our function to work with o
 
 ### getElementById
 
-Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elements.asp), we can find any named element on our HTML page. Once we "have" that object, we can find it's various properties, like how long it is, or the contents of the tag, etc.
+Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elements.asp), we can find any named element on our HTML page. Once we "have" that object, we can find its various properties, like how long it is, or the contents of the tag, etc.
 
 The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we have "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
 
@@ -131,7 +131,7 @@ Our function is working like we want, but it's being called each time we refresh
 - Save your file and refresh the page.
 - Click the "Make name" button and it should update the `<h3>` tag.
 - Put your own names into the text boxes and hit the button and it should change the headline.
-- Now that the form is working, you might remove the default values for King Aragorn in the names.
+- Now that the form is working, you can remove the default values for King Aragorn in the names.
 
 ---
 

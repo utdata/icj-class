@@ -25,13 +25,13 @@ The steps below will walk you through using the DataTables plug-in to make an in
 
 ### #1: "Zero configuration"
 
-- Create a new file in your javascript folder called `datatable.html` and add the basic HTML5 boilerplate.
+- Create a new file in your javascript folder called `datatable.html` and add the basic HTML5 boilerplate using Emmet.
 - Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
 - On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
 - On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:
-    + Start with the **HTML** box. Take the contents of that box and put it in your HTML page between the `<body>` tags. Go ahead and look at your page so you will see how it changes later.
-    + Go back to the **JavaScript** box. The contents of that box should go inside a `<script></script>` tag at the bottom of your HTML page before the close of the `</body>` tag.
-    + The links that are displayed below the JavaScript box are src URLs that should go in `<script src=""></script>` tags in the `<head>` of your page. Make them both.
+    + Start with the **HTML** tab and copy the code in the box. Take the contents of that box and put it in your `datatable.html` HTML page between the `<body>` tags. Go ahead and look at your page, so you will see how it changes later.
+    + Go back to the **JavaScript** tab. The contents of that box should go inside a `<script></script>` tag at the bottom of your `datatable.html` HTML page before the close of the `</body>` tag.
+    + The links that are displayed below the JavaScript box are src URLs that should go in two separate `<script src=""></script>` tags in the `<head>` of your `datatable.html` page. Make them both.
     + On the CSS box, that is the src link that should go in a `<link rel="stylesheet" href="">` tag, also in the `<head>` tag of your page.
 
 To recap, there will be three new lines in your `<head>` tag, something like this:
