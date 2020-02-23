@@ -29,12 +29,12 @@ The steps below will walk you through using the DataTables plug-in to make an in
 - Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
 - On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
 - On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:
-    + Start with the **HTML** tab and copy the code in the box. Take the contents of that box and put it in your `datatable.html` HTML page between the `<body>` tags. Go ahead and look at your page, so you will see how it changes later.
+    + Start with the **HTML** tab and copy the code in the box. Take the contents of that box and put it in your `datatable.html` HTML page between the `<body>` tags. Go ahead and look at your page in a browser, so you will see how it changes later.
     + Go back to the **JavaScript** tab. The contents of that box should go inside a `<script></script>` tag at the bottom of your `datatable.html` HTML page before the close of the `</body>` tag.
     + The links that are displayed below the JavaScript box are src URLs that should go in two separate `<script src=""></script>` tags in the `<head>` of your `datatable.html` page. Make them both.
-    + On the CSS box, that is the src link that should go in a `<link rel="stylesheet" href="">` tag, also in the `<head>` tag of your page.
+    + On the **CSS** tab, that is the src link that should go in a `<link rel="stylesheet" href="">` tag in the `<head>` tag of your page.
 
-To recap, there will be three new lines in your `<head>` tag, something like this:
+To recap, you should have put three new lines in your `<head>` tag, and it should look something like this:
 
 ```html
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -42,9 +42,9 @@ To recap, there will be three new lines in your `<head>` tag, something like thi
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 ```
 
-Then you'll have all the table code inside your `<body>` tag.
+Then you should have all the table code inside your `<body>` tag.
 
-Then you'll have a script tag at the bottom to call Datatables:
+Then you should have a script tag at the bottom to call Datatables:
 
 ```html
   <script>
@@ -59,7 +59,7 @@ That's it! You should be able to open that page in your browser and see an inter
 ### #2: "Scroll Vertical"
 
 1. Create a copy of the HTML file you created above and call it `scrolling.html`. 
-2. Go to the "Scroll Vertical" example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in the new HTML file you just created (_scrolling.html_) with the JavaScript on the "Scroll Vertical" example page.
+2. Go to the "Scroll Vertical" example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in your <script></script> tags in the new HTML file you just created (_scrolling.html_) with the JavaScript on the "Scroll Vertical" example page.
 3. You should now have a table that isn't paginated and instead can be scrolled through, just like the example on the DataTables website.
 3. That's it! Commit the new file to your repository and publish the repository on Github.
 
