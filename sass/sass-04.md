@@ -1,6 +1,6 @@
 # Publish the /doc folder to the web
 
-Because we put our web site files inside a `docs` folder, we can take advantage of a special feature in Github called [Github Pages](https://pages.github.com/). It will allow us to publish our site to the internet.
+Because we put our web site files inside a `docs` folder, we can take advantage of a special feature in Github called [Github Pages](https://pages.github.com/). It will allow us to publish our site to the Internet.
 
 - Go into your Github repo for this project.
 - Click on the Settings link.
