@@ -9,7 +9,7 @@ If you don't already have your code open in VS Code, go ahead and open it. Run `
 Any valid CSS is also valid SCSS. As such, we prep our project to use our new SCSS setup by using what we already have.
 
 - Copy the contents of `src/scss/old-styles.css` and paste it into `src/scss/new-styles.scss`. Once you do, you might see your terminal kick off the sass task to compile the file.
-- Now change the css references in our `src/html/index.html` and `src/html/shows.html` files to point to `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now.
+- Now change the css `<link>` tag hrefs in our `src/html/index.html` and `src/html/shows.html` files to point to `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now.
 
 ## Variables
 
@@ -45,11 +45,13 @@ There are two colors defined in our styles for our Harvey Dale and the Cements b
 - Save and check your page. There should be no difference.
 - Change your `$primary-color` variable value to a new color, like "red", and see if what happens.
 
-If you don't see a change, then make sure that your `gulp dev` task is running so your Sass is getting compiled. If that is working but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `.css` file.
+You should see your background color change on _both_ the "home" page and the "shows" page.
+
+If you don't see a change, then make sure that your `gulp dev` task is running in your Terminal so your Sass is getting compiled. If that is working but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `new-styles.css` file.
 
 ## Nesting
 
-HTML code often has a clearly nested hierarchy. A `nav` element is often a parent to child `li` elements that make up the links.
+HTML code often has a clearly nested hierarchy. A `nav` element is often a parent to child `li` elements that make up the navigation links on a website.
 
 CSS doesn't have the same hierarchy by default, but it would be useful in some cases. With Sass, we can use a similar visual hierarchy. We do need to be careful not to nest too much, or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html heirarchy because then small changes in the HTML might break our styles.
 
@@ -96,8 +98,8 @@ If you look through your CSS, you'll see there are two rules dealing with `.nav`
 
 Look at your page in the browser to make sure everything is still working.
 
-- Back in your HTML file, consider `<div class="content">`. What elements are first descendants of .content? In `new-styles.scss`, nest these selectors accordingly.
-- Do any of first descendants of .nav or .content have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
+- Back in your HTML file, consider `<div class="content">`. What elements are first descendants of `.content` in the css? In `new-styles.scss`, nest these selectors accordingly.
+- Do any of first descendants of `.nav` or `.content` style rules have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
 
 Again, make sure nothing is broken on the page display.
 
@@ -123,7 +125,7 @@ Sass partials filenames should start with an underscore, like `_nav.scss`, so Sa
   - `_content.scss`
 - We'll leave our variables in `new-styles.scss`, so the can continue to apply to all the other code that follows.
 - Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
-- Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls. Note that these are inside a `.container` call, so you'll need to add that to `_nav.scss`, and the paste these .nav calls inside htat.
+- Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls. Note that these are inside a `.container` call, so you'll need to add that to `_nav.scss`, and the paste these .nav calls inside that.
 - Do the same for all the `.content` calls into the `_content.scss` file.
 - Lastly, add @import calls into `new-styles.scss` for our partials. Each should be formulated like this:
 
