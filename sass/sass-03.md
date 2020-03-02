@@ -105,7 +105,7 @@ Again, make sure nothing is broken on the page display.
 
 Let's pause and recollect. Do you notice any value that repeats itself over and over again inside of .content? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of .content.
 
-There's a shorthand CSS selector for applying a property to all direct children, `> * {rule};`. Using this, we can set the padding rule to all the children of .content.
+There's a shorthand CSS selector for applying a property to all direct children, `> * {rule;}`. Using this, we can set the padding rule to all the children of .content.
 
 - Add the `> *` selector inside of `.content` and define the padding-left rule.
 - Now that you've done this you can remove `padding-left: 30px;` everywhere else.
@@ -127,13 +127,13 @@ Sass partials filenames should start with an underscore, like `_nav.scss`, so Sa
 - Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
 - Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls. Note that these are inside a `.container` call, so you'll need to add that to `_nav.scss`, and the paste these .nav calls inside that.
 - Do the same for all the `.content` calls into the `_content.scss` file.
-- Lastly, add @import calls into `new-styles.scss` for our partials. Each should be formulated like this:
+- Lastly, add @import calls into `new-styles.scss` for our partials. These @import calls will connect your partial scss folders with your `new-styles.scss`. Each should be formulated like this:
 
 ```scss
 @import 'base';
 ```
 
-Note that you don't need the underscore or the `.scss` with these import designations, as Sass assumes it already.
+Note that you don't need add the underscore or the `.scss` with these import designations, as Sass assumes it already.
 
 Make sure these imports come _AFTER_ your variables, because this CSS still cascades, and the variables are used by the imports.
 
