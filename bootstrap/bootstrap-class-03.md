@@ -21,7 +21,7 @@ Let's change just the primary color:
 - Modify the `src/styles.scss` to the following:
 
 ```scss
-// Variable Overrides
+// Custom variable overrides go here Overrides
 $theme-colors: (
   "primary": #d95700
 );
@@ -35,7 +35,7 @@ If you are wondering how I knew what color to use for Longhorn Burnt Orange, [I 
 
 Now let's change the background color.
 
-- Add this as to your `styles.scss` file under the them color declaration:
+- Add this as to your `styles.scss` file under the theme color declaration:
 
 ```scss
 $body-bg: #ededed;
@@ -47,9 +47,9 @@ Now the result looks like this:
 
 Hmm, now, our jumbotron (hero) section looks ugly, as it was also gray.  
 
-We can make custom adjustments to specific elements by using the inspector in chrome or firefox, finding the associated classes of the elements we want to change, and changing those in our styles.scss file.
+We can test some custom adjustments to specific elements by using the inspector in Chrome or Firefox, finding the associated classes of the elements we want to change, and changing those in our styles.scss file.
 
-In this case, the class responsible for the jumbotron is .jumbotron. Let's change the background color and add a slight border to the top of it, to simulate a drop shadow from the navbar. In this case we are using plain CSS declarations to make these style changes, because Sass understands those as well.
+In this case, the class responsible for the jumbotron is `.jumbotron`. Let's change the background color and add a slight border to the top of it, to simulate a drop shadow from the navbar. In this case we are using plain CSS declarations to make these style changes, because Sass understands those as well.
 
 - Add this under the bg-color declaration:
 
