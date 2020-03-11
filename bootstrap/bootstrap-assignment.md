@@ -28,10 +28,11 @@ You project should have the following structural components:
 - A jumbotron with a project name and readout (see example).
 - A two-column layout for the content, inside a container. The columns should stack on mobile, but be side-by-side at the sm size and larger.
 - A footer with your name in the text.
-- I have images for you to use, but you have to set them a specific way for them to work in the development environment:
-  - Download these images: [pirate-photos.zip](pirate-photos.zip).
-  - In your `src` directory, create a folder called `img`. (The name is important.) Put your photos inside that folder.
-  - Quit your `gulp dev` process and restart it so the photos will be copied into `docs`.
+- ~~I have images for you to use, but you have to set them a specific way for them to work in the development environment~~:
+  - ~~Download these images: [pirate-photos.zip](pirate-photos.zip)~~.
+  - ~~In your `src` directory, create a folder called `img`. (The name is important.) Put your photos inside that folder~~.
+  - ~~Quit your `gulp dev` process and restart it so the photos will be copied into `docs`.~~
+- **You should already have pirate related images in your `src/img` folder to use for this lesson.**
 - You will also need to pick and use a Google font in your project. More on that below.
 
 ## Details and styling
