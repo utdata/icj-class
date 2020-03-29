@@ -41,7 +41,7 @@ We'll create our project and get all our files, then get into the lesson.
 - Run `$ git add .` to add the files.
 - Run `$ git commit -m "first commit"` to commit the files.
 - Go to Github and create a repository of the same name.
-- Use the `git add` command provided there to sync the repos.
+- Use the `git remote add` command provided there to sync the repos.
 - Run `$ git push origin master` to push the code to Github.
 
 The project already has README.md and .gitignore files. Edit the README file by adding a new section at the top with your name and the date you started the project.
