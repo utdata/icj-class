@@ -22,7 +22,7 @@ As you view your page, you'll notice our text has moved from the far left edge t
 
 ### Rows and columns
 
-Replace the `<p>Testing</p>` text with this (You should still have the container divs and this should be inside it.):
+In the same `src/html/index.html` file, replace the `<p>Testing</p>` text with this (You should still have the container divs and this should be inside it.):
 
 ```html
 <div class="row">
@@ -46,7 +46,7 @@ The `bg-danger` and the other bg-classes are [Bootstrap color classes](https://g
 
 These three columns are evenly distributed and space across the container space. Adjust your browser width smaller and wider and you'll see they stay that way at every width.
 
-Typically, we would want content like that to stack on top of each other at small window widths like a phone. We can adjust our code to do this.
+Typically, we would want content like that to stack on top of each other at small window widths, like on a phone. We can adjust our code to do this.
 
 - Change all the `col` classes to instead be `col-sm`.
 - Now adjust your browser width and see what when you change it to the extra small width.

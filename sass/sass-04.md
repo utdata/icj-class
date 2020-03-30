@@ -4,8 +4,13 @@ Because we put our web site files inside a `docs` folder, we can take advantage 
 
 - Go into your Github repo for this project.
 - Click on the Settings link.
+
+![sass-ghpages-settings](../images/sass-ghpages-settings.png)
+
 - Go down to the Github Pages section, and in the **Source** dropdown, choose **Master branch /docs folder**.
 - Click **Save**.
+
+![sass-ghpages-docs](../images/sass-ghpages-docs.png)
 
 Once the page refreshes, it will give you a link to where you can find your site. It works like this:
 
