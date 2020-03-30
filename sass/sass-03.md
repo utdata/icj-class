@@ -135,7 +135,7 @@ Sass partials filenames should start with an underscore, like `_nav.scss`, so Sa
 
 Note that you don't need add the underscore or the `.scss` with these import designations, as Sass assumes it already.
 
-Make sure these imports come _AFTER_ your variables, because this CSS still cascades, and the variables are used by the imports.
+Make sure these @imports come _AFTER_ your variables, because this CSS still cascades, and the variables are used by the imports.
 
 ## Make new styles
 
