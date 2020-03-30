@@ -4,7 +4,7 @@ This is a continuation from [part 1](bootstrap-class-01.md)
 
 ## The grid
 
-The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.0/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Bootstrap for now.)
+The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.1/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Bootstrap for now.)
 
 We are going to start with a `container` div. A container div in Bootstrap centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
 
@@ -42,7 +42,7 @@ Take a look at localhost page and you'll see a Rasta party of boxes in red, yell
 
 Each of the colored sections are "column" divs, hence the class name of `col`. They are all surrounded by a `row` div. Columns always have to be a child of a row, or the Bootstrap grid won't work right.
 
-The `bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.0/utilities/colors/) that I'm using as a convenience here to show the three different boxes.
+The `bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.1/utilities/colors/) that I'm using as a convenience here to show the three different boxes.
 
 These three columns are evenly distributed and space across the container space. Adjust your browser width smaller and wider and you'll see they stay that way at every width.
 
@@ -218,7 +218,7 @@ Now you should have dropdown navigation links, like this:
 
 ### Responsive button
 
-The last bit we need here is to add a button to show our hidden navigation when we are on a mobile device.
+You'll notice when you view this at smaller sizes that some of the navigation items disappear. This is on purpose as they can't fit. We need to add a button to show our hidden navigation when we are on a mobile device.
 
 - Add this bit after the line with the `navbar-brand` class.
 
@@ -248,7 +248,7 @@ Also note the spacing is better between the Jumbotron and our cards. Use your in
 
 ## Working with typography
 
-Let's add another columned section after our cards section. Inside this, let's take eight columns for text, and then use the remaining four for a vertical navigation item.
+Let's add another "section" after our cards section.
 
 ```html
 <section>
@@ -267,6 +267,8 @@ Let's add another columned section after our cards section. Inside this, let's t
   </div>
 </section>
 ```
+
+This section uses eight columns for text, and then the remaining four for a vertical navigation item we'll add next.
 
 Bootstrap 4 has a [Typography section](https://getbootstrap.com/docs/4.1/content/typography/) that will provide you with all of the type-based helper classes. It's fairly straightforward. We're using `.lead` to place emphasis on a subheading underneath our `<h3>` element.
 

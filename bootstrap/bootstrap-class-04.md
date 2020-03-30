@@ -16,6 +16,10 @@ After a few minutes, your website will be available on the web at a url based on
 
 `https://{githubusername}.github.io/{project-name}/`
 
+Please take that URL and add it to your Github repo like this:
+
+![bs-save-url.gif](../images/bs-save-url.gif)
+
 ## More Github pages
 
 There are other ways to publish [Github Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/), depending on your needs.
