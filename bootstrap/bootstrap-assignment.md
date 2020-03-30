@@ -28,15 +28,15 @@ I'll try to allow some time in class to do this so we can troubleshoot any probl
 - Use the `git remote add` command provided there to sync the repos.
 - Run `$ git push origin master` to push the code to Github.
 
-Start with  the [utdata/icj-bootstrap-template](https://github.com/utdata/icj-bootstrap-template) repo just like we did in class. Create your folder, then use `degit utdata/icj-bootstrap-template` to get the files.
+(Basically, the steps listed above are similar to  the [utdata/icj-bootstrap-template](https://github.com/utdata/icj-bootstrap-template) repo just like we did in class. You are creating your folder, then using `degit utdata/icj-bootstrap-template` to get the files.)
 
 ## Adding the images
 
 I have images for you to use for this assignment, but you have to set them a specific way for them to work in the development environment:
 
-- Download these images: [pirate-photos.zip](pirate-photos.zip) and unzip the folder.
+- Download these images by clicking this link and pressing "Download": [pirate-photos.zip](pirate-photos.zip) and unzip the folder.
 - In your `src` directory, create a folder called `img`. (The name is important.) Put your photos directly inside that folder.
-- Quit your `gulp dev` process and restart it so the photos will be copied into `docs`.
+- Quit your `gulp dev` process by hitting CTRL + C and restart it again so the photos will be copied into `docs`.
 
 ## Strategy
 
@@ -50,7 +50,7 @@ See the examples at the bottom to get an idea of what you are building.
 
 You project should have the following structural components:
 
-- A navbar with a brand (Pirate Cove) and two links: the index and one story page.
+- A navbar with a brand (Pirate Cove) and two nav-links: the index and one story page.
 - A jumbotron with a project name and readout (see example). This jumbotron has a special background image you'll have to apply using SCSS.
 - A two-column layout for the content, inside a container. The columns should stack on mobile, but be side-by-side at the sm size and larger.
 - A footer with your name in the text.
@@ -79,7 +79,7 @@ Once you have the structure in place, you can work on styling and details.
 - The column on the left should have the pirate mugshot photo (see the example for [responsive images](https://getbootstrap.com/docs/4.4/content/images/#responsive-images) in the Bootstrap docs to see how to make the photo fit the width of the column at different sizes).
 - The Byline name and source should be different in style or font.
 - The right column should have a headline and "story" text (which can be [pirate ipsum](https://pirateipsum.me/) or similar).
-- You must introduce at least one Google Font to the content. Like a headline font. It can be the same font that is in the jumbotron.
+- You must introduce at least one [Google Font](https://fonts.google.com/) to the content. Like a headline font. It can be the same font that is in the jumbotron. You'll need to figure out how to do that, but you can figure it out if you read the directions.
 
 ### The footer
 
