@@ -10,9 +10,9 @@ We will:
 
 ## Building up to the static-generator app
 
-Through this semester we've been building your coding skills, adding a new language or tool at each step. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the language with tools or systems to make them easier to use.
+Through this semester we've been building your coding skills, adding a new language or tool at each step. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the language with tools or systems to make them more efficient to use.
 
-When you built your Bootstrap project, you had to copy/paste or rewrite code for each page. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
+When you built your Bootstrap project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you need to change something in the Jumbotron, you had to change it on two pages. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
 Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer but pre-builds the site into static files for deployment.
 

@@ -68,7 +68,7 @@ Once you have the structure in place, you can work on styling and details.
 
 ### Jumbotron styles
 
-- The jumbotron should have a background image that works at all sizes. This is configured in SCSS, and the [background shorthand property](https://www.w3schools.com/css/css_background.asp) will help here, as will another style ["background-size: cover;"](https://www.w3schools.com/cssref/css3_pr_background-size.asp).
+- The jumbotron should have a background image that works reasonably well at all sizes. This is configured in SCSS, and the [background shorthand property](https://www.w3schools.com/css/css_background_shorthand.asp) will help here. You will need to set the image (the url), repeat (no-repeat) and position (center). You'll need one more style ["background-size: cover;"](https://www.w3schools.com/cssref/css3_pr_background-size.asp) to make it work right.
 - For the background image for the jumbotron, you'll have to reference it from the scss file. The path for this has to be relative from the compiled css file to the image, so it will be `url(../img/filename.jpg)`. Note the beginning `../` on that path is different than when you call images directly into the `index.html` page. (In contrast, all your other images referenced in HTML will be `src="img/filename.jpg"`.)
 - Set the main text in the jumbotron to use a Google font style of your choice.
 
