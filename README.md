@@ -67,10 +67,11 @@ Better CSS with Sass
 
 ### Static apps
 
-- [Part 1: Framework and setup](static-apps/static-01.md)
-- [Part 2: Templates and blocks](static-apps/static-02.md)
-- [Part 3: Extending templates](static-apps/static-03.md)
-- [Part 4: Using data](static-apps/static-04.md)
+- [Part 1: Framework and setup](static-apps/static-01-framework.md)
+- [Part 2: Templates and blocks](static-apps/static-02-templates.md)
+- [Part 3: Data and loops](static-apps/static-03-loops.md)
+- [Part 4: Detail pages](static-apps/static-04-detail.md)
+- [Part 5: Cleanup and publishing](static-apps/static-05-publish.md)
 
 ### Final project
 

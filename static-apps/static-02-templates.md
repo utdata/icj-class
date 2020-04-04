@@ -2,9 +2,11 @@
 
 We're going to rebuild the framework of our Pirate Cove site in a way that we have a index and then a new page for each entry in the Ship's Log.
 
+The images needs for this project are already there, saved in `src/img/`.
+
 ## Review the base file
 
-When we reviewed the template in class, we likely talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
+When we reviewed the templates in class, we likely talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
 
 We'll make a minor change here so you can see that it does affect our index page.
 
@@ -19,7 +21,7 @@ Inside here is an example of the Nunjucks _block_ tag, and this one is called "p
 - Nunjucks block tags start with `{% block tag_name %}` and end with `{% endblock %}`.
 - The content inside the tag will display UNLESS you override it later with a new block tag of the same name.
 
-> You can also call the tag and append to it using [super](https://mozilla.github.io/nunjucks/templating.html#super), but we aren't doing that here.
+> You can also call the tag and append code to it using [super](https://mozilla.github.io/nunjucks/templating.html#super), but we aren't doing that here.
 
 We want our site name to be on every page of our site, but then we want to override the title of each page with it's own title, so let's update our title to do this:
 
@@ -27,9 +29,9 @@ We want our site name to be on every page of our site, but then we want to overr
 <title>Pirate Cove | {% block page_title %}Default title{% endblock %}</title>
 ```
 
-Save and then look at your index in your browser, and the browser title will start with "Pirate Cove | " now.
+Save and then look at your index in your browser, and the browser title will start with "Pirate Cove | Default title" now.
 
-The next block in the `base.njk` file is the `{% block description %}` tag, which is fine. We'll leave that as-is.
+The next block in the `base.njk` file is the `{% block description %}` tag, which is fine. We'll utilize that block later on individual pages.
 
 ## Update _partial/nav.njk
 
@@ -39,14 +41,13 @@ Let's update the Brand and the links to point to three Ship's Log entries we wil
 
 - Open `src/njk/_partial/nav.njk`.
 - Find the `navbar-brand` segment and update the text "Navbar" to "Pirate Cove".
-- Set the href there to `index.html`.
 - Find the dropdown part of the nav and change the name of the dropdown to "Ship's Log"
-- Update the three links there to these urls, which we will add later:
+- Update the three links there to these urls, which are for pages we will add later:
 
 ```html
-<a class="dropdown-item" href="2018-10-18.html">Oct. 18</a>
-<a class="dropdown-item" href="2018-10-19.html">Oct. 19</a>
-<a class="dropdown-item" href="2018-10-20.html">Oct. 20</a>
+  <a class="dropdown-item" href="2018-10-18.html">Oct. 18</a>
+  <a class="dropdown-item" href="2018-10-19.html">Oct. 19</a>
+  <a class="dropdown-item" href="2018-10-20.html">Oct. 20</a>
 ```
 
 Now, if you look at your index in your browser, you'll see that these links have been updated. Again, we'll create the new pages later.
@@ -101,8 +102,8 @@ Now you have to add the partial to `main.scss`.
 @import "jumbotron";
 ```
 
-You should have a working nav and Jumbotron header for your site now. Next, we'll work on the detail pages before we come back to the index.
+You should have a working nav and Jumbotron header for your site now. Next, we'll see how we can use data and loop over it with Nunjucks.
 
 ----
 
-Next: [Detail pages](static-03.md)
+Next: [Data and loops](static-03-loops.md)

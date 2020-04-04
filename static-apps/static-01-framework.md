@@ -4,19 +4,19 @@
 
 We will:
 
-- Learn about the structure of a static-generator site.
+- Learn about static site generators and the template we will use.
 - We'll rebuild our Ship's Log site with two types of pages: an index, and then multiple entry pages.
 - We'll introduce a "data" element to repeat code in a loop.
 
 ## Building up to the static-generator app
 
-Through this semester we've been building your coding skills, adding a new language or tool at each step. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the language with tools or systems to make them more efficient to use.
+Through this semester we've been building your coding skills, adding a new language or tool at each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.
 
-When you built your Bootstrap project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you need to change something in the Jumbotron, you had to change it on two pages. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
+When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on two pages. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
-Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer but pre-builds the site into static files for deployment.
+Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compiles the pages into a single directory that can be used published with a simple web server, without the need of a live database.
 
-There are [lots of ways](https://www.staticgen.com/) to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.
+There are [many tools](https://www.staticgen.com/) to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.
 
 For our class, I have provided you a project framework in a repo that uses Node.js and Nunjucks create a template environment.
 
@@ -32,21 +32,18 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 - Open VS Code into that folder and open the Terminal.
 - Run `degit utdata/icj-project-template`.
 - Create your Github repo and connect them.
-
-### npm install and gulp dev
-
 - run `npm install` to install all the Node software
 - run `gulp dev` to process all the files and start the server.
 
 ## Understand the project structure
 
-The easiest way to understand how this template works is to [read the README online](https://github.com/utdata/icj-project-template). DON'T SKIP THIS PART. We will also go over it in class. If you are doing this on your own, READ THE README!
+The easiest way to understand how this template works is to go study the README.md in the project template. **DON'T SKIP THIS PART**. While the README file is in your project, you might find it easier [to read the README online](https://github.com/utdata/icj-project-template). We will also go over it in class. If you are doing this on your own, READ THE README!
 
 ## Configure VS Code to deal with Nunjucks
 
 Visual Studio Code is not set up by default to deal with the Nunjucks template language. There are two things we can do to make our future development easier. You only need to do these once and they will be set for future projects.
 
-> Note you _might_ have done these steps when you set up your computer at the beginning of the semester.
+> Note you _might_ have done these steps when you set up your computer earlier in the semester.
 
 ### Install the Nunjucks Template extension
 
@@ -55,9 +52,9 @@ While this isn't required, it is super helpful to install a Nunjucks syntax exte
 - In VS Code, on the far left there are five icons. The bottom one looks like a funky square. Click on that.
 - In the search box, type in `Nunjucks template`. Click on the return for Nunjucks Template.
 - Click the Install button.
-- After it is done, click on the "Reload to activate" button.
+- After it is done, you might need to click on the "Reload to activate" button.
 
-Now, when you look at files with the `.njk` extension, the code will be colored properly.
+Now, when you look at files with the `.njk` extension, the code will be have the proper syntax highlighting.
 
 ### Fix Emmet for Nunjucks
 
@@ -66,7 +63,7 @@ Because we are using `.njk` extensions on our Nunjucks files, Emmet doesn't work
 - Go to the Code > Preferences > Settings.
 - On the Settings page at the top right, there is an icon that looks like a document with an arrow pointing to it. Click on it.
 - That will open a file called `settings.json`.
-- Look first to see if you already have the code below. If now, add the following inside the curly braces, but make sure the item above it has a comma at the end.
+- Look first to see if you already have the code below. If not, add the following inside the curly braces, but make sure the item above it has a comma at the end.
 
 ```javascript
 {
@@ -81,4 +78,4 @@ I have a series of other settings you might find useful: Setting indents to two 
 
 ----
 
-Next: [Editing templates](static-02.md)
+Next: [Editing templates](static-02-templates.md)
