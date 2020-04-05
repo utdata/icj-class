@@ -2,11 +2,11 @@
 
 For our Pirate Cove blog we are going to have a number of detail pages that are all the same except for the story content.
 
-Before we look at the code that makes the detail page, let's look at the example in the browser. There is screenshot below or you can click on the link called "link to a book page example" from our index.
+Before we look at the code that makes the detail page, let's look at the example in the browser. There is screenshot below or you can click on the link called "link to a blog entry example" from our index.
 
 ![static page example](../images/static-detail-page-example.png)
 
-This was a detail page made from one of our detail layouts. There are two `.njk` files that make this happen: The "layout" called `src/njk/_layouts/detail-entry.njk` and the "page" called `detail-entry-example.njk`.
+This is a detail page made from one of our detail layouts. There are two `.njk` files that make this happen: The "layout" called `src/njk/_layouts/detail-entry.njk` and the "page" called `detail-entry-example.njk`.
 
 ## Review the detail layout and pages
 
@@ -42,12 +42,6 @@ Let's explain these:
 - Next we have the _block content_. This is the guts of the page, and it is being inserted into the rest of the framework. Everything between the `{% block content %}` and the last `{% endblock %}` tag is being inserted _into_ the base page at the content block.
 - Within our content block we have the basic HTML for a two-column layout. And, inside of each column we have new _blocks_ for "info" and "story".
 
-If you remember on our Pirate Cove "blog" pages, we have the same content in the left rail all the time.
-
-![static blog example](../images/static-blog-example.png)
-
-The photo and byline on the left will always be the same. It is only the content of the entry on the right that we'll need to update for each new page.
-
 ## Create our first entry page
 
 Let's create one of our blog pages so we can see our changes.
@@ -56,15 +50,16 @@ Let's create one of our blog pages so we can see our changes.
 
 
 ```html
-{% extends '_layouts/detail.njk' %}
+{% extends '_layouts/detail-entry.njk' %}
 
 {% block page_title %}Blog entry title{% endblock %}
 
 {% block description %}Blog entry description.{% endblock %}
 
 {% block story %}
-  <h2>Undead: Right column content</h2>
-  <p>Zombie ipsum brains reversus ab cerebellum viral inferno, thalamus nam rick mend grimes malum cerveau cerebro.</p>
+  <h1>Blog headline entry</h1>
+  <h5>Captain's log: Oct. XX, 2018</h5>
+  <p>Interloper crimp spanker Barbary Coast splice the main brace bilged on her anchor black spot chandler trysail salmagundi. Brigantine fire ship scallywag log squiffy bowsprit lateen sail American Main cog smartly. Dance the hempen jig bilge log galleon pirate yard list Barbary Coast Corsair run a rig.</p>
 {% endblock %}
 ```
 
@@ -78,14 +73,25 @@ What you don't see here is _block info_ because that will be the same for every 
 
 - Save your page and go look at it in your browser. You should be able to use your navigation link we updated earlier to go to the first page for for Oct. 18th.
 
+## Create your other detail pages
+
+Now, let's create a pages for our other blog entries.
+
+- Inside the `src/njk` folder, create a new files for: `2018-10-19.njk` and =`2018-10-20.njk`. (If you'll recall, this is similar to the file name we used in our navigation except for the extension. Each `filename.njk` file added inside `src/njk/` will become a new HTML page of the same name at `docs/filename.html`.)
+- Inside these files, add the same entry code as you did for the first page.
+
+Think about this for a second: You added a new pages to your website with just those few lines of code, compared to when you did this with the Bootstrap Homework assignment, when you had to copy the whole page, likely getting them out of sync. Now you can change the framework of the site without edting individual pages.
+
 ## Edit the detail layout
 
-> Should I do this after the create the other pages?
+If you remember on our Pirate Cove "blog" pages, we have the same content in the left rail all the time.
 
-As cute as the kitten is, what we need on this page is the picture of Capt. McGillicutty and his byline, etc.
+![static blog example](../images/static-blog-example.png)
 
-- Open the detail layout `src/njk/_layouts/detail.njk`.
-- Replace the line example `{% block info %}{% endblock %}` with this:
+As cute as the kitten is, what we need on all the entry pages is the picture of Capt. McGillicutty and his byline, etc. The photo and byline on the left will always be the same. Because of this, we can update the detail-entry layout to use the correct picture and it will update on all three entry pages.
+
+- Open the detail layout `src/njk/_layouts/detail-entry.njk`.
+- Replace the code between `{% block info %}` and `{% endblock %}` with this:
 
 ```html
 {% block info %}
@@ -95,30 +101,32 @@ As cute as the kitten is, what we need on this page is the picture of Capt. McGi
 {% endblock %}
 ```
 
-This will put the "Crit McGillicutty" byline and photo on every detail entry page, but also allow us to override the block if we needed to. Once we make this change in our detail layout, we have to go into our blog entry page `2018-10-18.njk` and update the three lines for the _block story_ content.
+This will put the "Crit McGillicutty" byline and photo on every detail entry page, but also allow us to override or add to the block if we needed to.
 
-## Create your detail pages
+## Using entries data in the detail page
 
-Now, let's create a pages for our other blog entries.
+As you may recall, our `data.json` file has three key values for each entry: date, url and title. We can use that data in this detail page, but we need to tell the page _which_ of the three entries in our data to use. The template can grab the data by its order, but it's weird that it starts counting at `0` instead of at the number 1.
 
-- Inside the `src/njk` folder, create a new files for: `2018-10-19.njk` and =`2018-10-20.njk`. (If you'll recall, this is similar to the file name we used in our navigation except for the extension. Each `filename.njk` file added inside `src/njk/` will become a new HTML page of the same name at `docs/filename.html`.)
-- Inside this file, add the following code:
+- Open your page `src/njk/2018-10-18.njk`.
+- After the _extends_ line, add this:
 
 ```html
-{% extends '_layouts/detail.njk' %}
-
-{% block page_title %}Blog entry title{% endblock %}
-
-{% block description %}Blog entry description.{% endblock %}
-
-{% block story %}
-  <h1>It was a dark and stormy night</h1>
-  <h5>Captain's log, Oct. XX, 2018</h5>
-  <p>Interloper crimp spanker Barbary Coast splice the main brace bilged on her anchor black spot chandler trysail salmagundi. Brigantine fire ship scallywag log squiffy bowsprit lateen sail American Main cog smartly. Dance the hempen jig bilge log galleon pirate yard list Barbary Coast Corsair run a rig.</p>
-{% endblock %}
+{% set entry = data.entries[0] %}
 ```
 
-Think about this for a second: You added a new pages to your website with just those few lines of code, compared to when you did this with the Bootstrap Homework assignment, when you had to copy the whole page, likely getting them out of sync.
+- Now, in your `<h1>` tag, replace the text there with this: `{{ entry.title }}`
+- On the next line for the data, replace the text "Oct. XX, 2018" with this: `{{ entry.title }}`
+- Save your page and go look at it.
+
+Now your text should look like this:
+
+![blog entry 0](../images/static-blog-entry-0.png)
+
+Update your other two entries in a similar way:
+
+- Add the `set entry` code after the extends line, but change the number to `1` for the 19th and `2` for the 20th.
+- Update the _page\_title_ block use use `{{ entry.title}}`.
+- Update the _page\_description_ block to say, essentially: "Blog entry for _date_, _title_" but use the proper data tags.
 
 ## Check your pages
 
