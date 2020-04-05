@@ -4,14 +4,14 @@ If you look at the content on our example index page, you'll notice the main hea
 
 ![index content block](../images/static-index-content.png)
 
-We're going to update our index page to look more like blog landing page, and we'll use a Nunjucks loop of data to create links to our Ship's Log entries.
+We're going to update our index page to look more like a blog index page, and we'll use a Nunjucks loop and data to create a series of links to our Ship's Log entries.
 
 Open up the `src/njk/index.njk` and take a look at it.
 
-- The first line _extends_ the "base" layout. This is fine, since this is the only page we'll have like this.
-- The next bit is _block page\_title_, which allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log".
-- Next we have _block description_, which is the search description for the site, which allows us to set up a search description unique to this page. Update that with "A daily blog from Capt. Crit McGillicutty."
-- Next, we have the _block content_, which is the guts of our page. It sets up a container div to give margins for all our content. Inside that is headline and a row and column for content, etc. This is standard Bootstrap rows and columns.
+- The first line `{% extends '_layouts/base.njk' %}` _extends_ the "base" layout. This gives us all the header, footer, etc for the page, but allows us to insert content into the reserved _blocks_.
+- The next bit `{% block page_title %}` is _block_ that allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log". When this page is built, the text "The Ship's Log" will replace the text "Default title" in the base template.
+- Next we have `{% block page_description %}` which is a _block_ for a unique search description for this page. Update that with "A daily blog from Capt. Crit McGillicutty." This updates the meta description on the base template.
+- Next, we have `{% block content %}`, which is the guts of our page. It sets up a container div to give margins for all our content. Inside that is headline and a row and column for content, etc. This is standard Bootstrap rows and columns.
 
 As you get further into the code there is a bit about `data.books`, which prints out a series of books from a data file:
 
@@ -58,9 +58,9 @@ When we started Gulp with `gulp dev`, this "books" data collection was loaded in
 
 ## Add our blog entries to the data
 
-On our index, we want to print out a list of all our blog entries. To add new data for our templates, we can add it to our `data.json` and restart Gulp.
+On our index, we want to print out a list of all our blog entries. To add new data for our templates, we can add either add it in a new file or build a new array in our our `data.json` and restart Gulp.
 
-Let's add data about our entries into `data.json` so we can loop through it.
+We'll just add our array to `data.json` so we can loop through it.
 
 - In the `src/njk/data/data.json` file, add a comma after the last `]`.
 - Add the following code:

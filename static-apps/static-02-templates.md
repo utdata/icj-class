@@ -2,7 +2,7 @@
 
 We're going to rebuild the framework of our Pirate Cove site in a way that we have a index and then a new page for each entry in the Ship's Log.
 
-The images needs for this project are already there, saved in `src/img/`.
+The images needed for this project are already in the `src/img/` folder.
 
 ## Review the base file
 
@@ -50,7 +50,7 @@ Let's update the Brand and the links to point to three Ship's Log entries we wil
   <a class="dropdown-item" href="2018-10-20.html">Oct. 20</a>
 ```
 
-Now, if you look at your index in your browser, you'll see that these links have been updated. Again, we'll create the new pages later.
+Now, if you look at your index in your browser, you'll see that these navigation links have been updated. Again, we'll create the new pages later.
 
 ## The jumbotron
 
