@@ -4,6 +4,11 @@ We're going to rebuild the framework of our Pirate Cove site in a way that we ha
 
 The images needed for this project are already in the `src/img/` folder.
 
+Here are some screencasts of the finished product you are working toward. I'm showing only the index and one entry page, but you will make three entry pages.
+
+- [Index page](https://drive.google.com/open?id=1VVL4bHhFsalq-mj2Yy14C1U62lUqOFgi)
+- [Entry page example](https://drive.google.com/open?id=1gOk9bUFAmtR82MmAobNK8jovrVnIW_z_)
+
 ## Review the base file
 
 When we reviewed the templates in class, we likely talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
