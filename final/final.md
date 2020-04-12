@@ -8,9 +8,10 @@ Your site should be clean and well-designed. Your code should also be clean, wit
 
 ## Some strategies on how to tackle a project
 
-Read all the directions before you start coding anything.
+> Read all the directions before you start coding anything.
 
-- Physically draw out what you want your pages to look like so you have a goal in mind. (This is why the first assignment is sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen.
+- Look through the photo and data assests so you know what you have to work with.
+- Physically draw out what you want your pages to look like so you have a goal in mind. (There is a first assignment to provide sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen. Draw each version out.
 - Work on the structure of the site first. Basically get all the template structure and HTML/Bootstrap elements on the page. Build the structure for mobile first, then consider wider page widths.
 - Then work on the loop logic for the member list and discography. Get the loops working first, then make adjustments to make them look the way you want.
 - Then work on the logic for the detail layout and pages. Again, get the structure working first so you know you are calling the data correctly, then make it look the way you want.
@@ -25,25 +26,25 @@ Remember: Think mobile first, then adjust for larger screen widths.
 The project structure should include:
 
 - A base layout that is extended throughout the project.
-- A detail layout that is then extended to detail pages.
+- A detail layout that is then extended to detail pages for the band members.
 - At least one Nunjucks partial that is included into another layout template. (A good project will have several.)
 - The project must use the following Bootstrap components and concepts:
-  - [Responsive images](https://getbootstrap.com/docs/4.1/content/images/) throughout.
-  - A [Jumbotron](https://getbootstrap.com/docs/4.1/components/jumbotron/) for a header.
-  - A [Navbar/Navs](https://getbootstrap.com/docs/4.1/components/navbar/) that links to each member.
+  - [Responsive images](https://getbootstrap.com/docs/4.4/content/images/) throughout.
+  - A [Jumbotron](https://getbootstrap.com/docs/4.4/components/jumbotron/) for a header.
+  - A [Navbar/Navs](https://getbootstrap.com/docs/4.4/components/navbar/) that links to each member.
 - You must use at least one scss partial with your Sass code. (A good project would have several.)
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere.
 - This should all be in its own repo, published through Github Pages.
 
-Everything should look beautiful and be functional. Any additional content beyond that provided in the data can be pulled from Wikipedia, but include text that explains the source.
+Everything should look beautiful and be functional. Any additional content beyond that provided in the data can be pulled from Wikipedia, but include a link to the source of the material.
 
 ### Index page
 
 The the index should have:
 
 - A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
-- A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.1/components/card/) object with their image, name and url.
-- A listing of all of Queen's studio albums built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.1/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
+- A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.4/components/card/) object with their image, name and url.
+- A listing of all of Queen's studio albums built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.4/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
 
 ### Detail pages
 
@@ -53,12 +54,12 @@ Be sure to read the **very important note below** about how to filter data to us
 
 The layout should have:
 
-- Two columns that stack on mobile but become two columns at `sm` and wider.
+- Two columns that stack on mobile but become two columns at `sm` and wider. You can adjust widths as the pages gets wider.
 - In those two columns, you should have (all from data provided):
   - Photo of the band member
   - Headline of their name
-  - Bio information (birthdate, etc.)
-  - Narrative about the member
+  - All the bio information (birthdate, etc.)
+  - Narrative about the member. (See note in Members data below.)
 
 You can design or organize the above however you wish.
 
@@ -68,7 +69,7 @@ To save you time, I've collected a series of images and JSON data about the band
 
 Available for you to use:
 
-- A [collection photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
+- A [collection of photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
 - A [queen.json](queen.json?raw=true) file with: A "members" array about band members and a "discography" array for the list of albums. Save this as `src/njk/data/queen.json`.
 - A [tour.json](tour.json?raw=true) file for the extra credit option explained below.
 
@@ -76,9 +77,9 @@ Available for you to use:
 
 The data in the "members" collection includes:
 
-- slug: If you name your band member pages the same as this slug, you can use it in URLs.
+- slug: If you name your band member pages the same as this slug, you can use in loops for the href URLs.
 - name: Full printable name of the member.
-- instruments: A list of what they play.
+- instruments: A list of what instruments/positions they play.
 - tenure: When they were in the band.
 - birthplace
 - birthdate
@@ -136,9 +137,9 @@ Brian May appears second in the data, but since we count from zero he is positio
 Canvas is the final word on deadlines, but in general they are in this order:
 
 - A sketch of your index and detail layouts, including mobile, tablet and desktop views.
-- A check-in on your HTML templates and data. It's best to get all your logic working before you start styling it.
+- A check-in on your HTML templates and data. It's best to get all your logic working before you start styling it. I'll also be checking for responsive design (i.e., different column widths for different screen widths.)
 - A check-in on your CSS. You don't have to be finished, but this allows me to offer some feedback.
-- On our last class day, you'll show your progress to everyone. You should be published to Github Pages with what you have so far.
+- On our last class day, you'll show your progress to everyone. You should publish what you have so far to Github Pages so we can review it in class.
 - Final deadline for the project when I pull a copy of your repo for grading.
 
 ## Extra credit
