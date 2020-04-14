@@ -115,7 +115,7 @@ As you may recall, our `data.json` file has three key values for each entry: dat
 ```
 
 - Now, in your `<h1>` tag, replace the text there with this: `{{ entry.title }}`
-- On the next line for the data, replace the text "Oct. XX, 2018" with this: `{{ entry.title }}`
+- On the next line for the data, replace the text "Oct. XX, 2018" with this: `{{ entry.date }}`
 - Save your page and go look at it.
 
 Now your text should look like this:
