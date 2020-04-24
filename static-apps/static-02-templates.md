@@ -1,15 +1,19 @@
 # Templates and blocks
 
-We're going to rebuild the framework of our Pirate Cove site in a way that we have a index and then a new page for each entry in the Ship's Log.
+We're going to rebuild the framework of the Pirate Cove site you built in the Bootstrap assignment using this new structure to improve code efficiency and site maintainability. We'll build the index and three blog entries.
 
 Here are some screen casts of the finished product you are working toward. I'm showing only the index and one entry page, but you will make three entry pages.
 
 - [Index page](https://drive.google.com/open?id=1VVL4bHhFsalq-mj2Yy14C1U62lUqOFgi)
 - [Entry page example](https://drive.google.com/open?id=1gOk9bUFAmtR82MmAobNK8jovrVnIW_z_)
 
-## Install the photos
+## Install the assets
 
-> This is where I stopped. pirate-photos.zip added, but directions needed.
+We need to add the image files in [pirate-photos.zip](pirate-photos.zip) to our `src/img` folder in the app.
+
+- Download [pirate-photos.zip](pirate-photos.zip) file.
+- Expand the folder and take the images inside and put them inside your `src/img/` folder.
+- Restart `gulp dev` after installing the photos.
 
 ## Review the base file
 
@@ -63,7 +67,7 @@ Now, if you look at your index in your browser, you'll see that these navigation
 
 ### Add a Nunjucks partial
 
-In our original Pirate Cove site, we had the cool header with photo background. Let's add that to this site as a partial, similar to the nav. We do this as a partial as a way to organize our code, making it easier to find and update later.
+In our original Pirate Cove site, we had the cool header with a photo background. Let's add that to this site as a partial, similar to the nav. We do this as a partial as a way to organize our code, making it easier to find and update later.
 
 - Create a new file `src/njk/_partials/jumbotron.njk`.
 - Insert into it the following code

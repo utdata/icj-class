@@ -13,11 +13,11 @@ Open up the `src/njk/index.njk` and take a look at it.
 - Next we have `{% block page_description %}` which is a _block_ for a unique search description for this page. Update that with "A daily blog from Capt. Crit McGillicutty." This updates the meta description on the base template.
 - Next, we have `{% block content %}`, which is the guts of our page. It sets up a container div to give margins for all our content. Inside that is headline and a row and column for content, etc. This is standard Bootstrap rows and columns.
 
-As you get further into the code there is a bit about `data.books`, which prints out a series of books from a data file:
+As you get further into the code there is a bit about `library.books`, which prints out a series of books from a data file:
 
 ```html
 <ul>
-  {% for book in data.books %}
+  {% for book in library.books %}
     <li>{{ book.title }}, {{ book.author }}</li>
   {% endfor %}
 </ul>
@@ -29,7 +29,7 @@ Our "for loop" repeats the `<li>` line of code as long as the condition is true.
 
 The `endfor` tells Nunjucks to end the looping code.
 
-But where is this collection of "books" collection coming from? The icj-project-template is set up so you can store data collections as JSON files in the `src/njk/_data/` folder. Look there and you'll find a file called `data.json`. Open that up and you'll see something similar to this:
+But where is this collection of "books" collection coming from? The icj-project-template is set up so you can store data collections as JSON files in the `src/njk/_data/` folder. Look there and you'll find a file called `library.json`. Open that up and you'll see a more extensive version similar to this:
 
 ```json
 {
@@ -56,75 +56,72 @@ Nunjucks can access the data from the current row through the key: `{{ book.titl
 
 When we started Gulp with `gulp dev`, this "books" data collection was loaded into the Nunjucks "context", meaning it was made available to it. This was all set up in the Gulp tasks by the developer (me).
 
-## Add our blog entries to the data
+## Review the Bookstores list
 
-On our index, we want to print out a list of all our blog entries. To add new data for our templates, we can add either add it in a new file or build a new array in our our `data.json` and restart Gulp.
+If you go further down the index page you'll see a new Bootstrap and row and column and then a new loop that prints out a list of bookstores. Before we modify it, study the loop and look at the data that drives it so you can see how it works.
 
-We'll just add our array to `data.json` so we can loop through it.
+Your next task will be to add new data for our blog entries and modify that loop to pull from it.
 
-- In the `src/njk/data/data.json` file, add a comma after the last `]`.
-- Add the following code:
+## Get the data from our blog entries
+
+We want to print out a list of all our blog entries, but first we need the data. We will create a new .json file and restart `gulp dev`.
+
+- Create a new file at `src/njk/_data/shiplog.json` file.
+- Add then add following code:
 
 ```json
 "entries": [
   {
     "date": "October 18, 2018",
     "url": "2018-10-18.html",
-    "title": "It was a dark and stormy night"
+    "title": "It was a dark and stormy night",
+    "photo": "kraken01.jpg"
   },
   {
     "date": "October 19, 2018",
     "url": "2018-10-19.html",
-    "title": "Fear the Kraken"
+    "title": "Fear the Kraken",
+    "photo": "kraken02.jpg"
   },
   {
     "date": "October 20, 2018",
     "url": "2018-10-20.html",
-    "title": "Call me Ishmael"
+    "title": "Call me Ishmael",
+    "photo": "kraken03.jpg"
   }
 ]
 ```
 
-- Kill your BrowserSync server (Control-c in your Terminal) and restart it with `gulp dev`. Data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data. Make sure that `gulp dev` worked without errors. A missed comma in the `.json` file will make it fail.
-- Replace the loop on our page with this loop instead:
+- Kill your BrowserSync server (Control-c in your Terminal) and restart it with `gulp dev`. Data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data.
 
-```html
-{% for entry in data.entries %}
-  <li>{{ entry.title }}, {{ entry.date }}, {{ entry.url}}</li>
-{% endfor %}
-```
+## Modify your loops to use new data
 
-We changed what the loop was looking for: `for entry in data.entries`. The "data.entries" part of that is important, because that is first the name of the file (the "data" in `data.json`), then the name of our array that we want from that file ("entries"). The "entry" term is what we are calling a single pass through the data within the loop. While we could use whatever term we want there as long as we are consistent, it is good practice to use a variable name that makes sense ... a singlar term for whatever your collection is.
+- Remove the books loop and the `<ul>` tags around them. We won't use that anymore.
+- Go down to the bookstores part of the page.
+- In the bookstores loop, you'll replace the references to the bookstores data with references to your blog entry data.
+  - in the "for loop" call, replace `store` with `entry`
+  - Also in "for loop", replace `bookstores.stores` with `shipslog.entires`
+  - replace `store.url` with `entry.url`
+  - replace `store.name` with `entry.title`
+  - replace `store.address` with `entry.date`
 
-Now, in our `<li>` tag we are accessing the values in the data through their keys: `{{ entry.title }}`. The "entry" part of that term comes from what we defined it in the loop (for _entry_ in data.entries). And "title" is the "key" that matches the "value" we want from that row of the data.
+Save your file and check your page to see if everything worked and make it so before moving on.
 
-This might seem like overkill for just three lines of data, but you can imagine how powerful this can be with lots of data, or how we can add new rows to data without editing our pages.
+We changed what the loop was looking for: `for entry in shiplog.entries`. The "shiplog.entries" comes from the name fo the file the "shiplog" in `shiplog.json`) and the name of the array inside the file ("entries"). The "entry" term is what we are calling a single pass through the data within the loop. While we could use whatever term we want there as long as we are consistent, it is good practice to use a variable name that is a singlar term for whatever your collection is.
+
+Now, in our `<h3>` tag we are accessing the values in the data through their keys: `{{ entry.title }}`. The **entry** part of that term comes from what we defined it in the loop (for _entry_ in shiplog.entries). And **title** part is the "key" that matches the value we want from that row of the data.
+
+This might seem like overkill for just three lines of data, but you'll see as we progress that we can turn our data into a content management system of sorts.
 
 ### Tools to make JSON data
 
-If you have a spreadsheet of data that you need in JSON format, [CSVJSON](https://www.csvjson.com/) is a tool that can help with that. It's what I use to create such files.
-
-## Rewrite our loop code to be more awesome
-
-Now that we know how to access the data in our templates, we can change up our HTML/Bootstrap markup to make them look a little nicer.
-
-Instead of a bullet list, let's use headlines and such.
-
-- Replace the entire "for loop" structure (**including the `<ul>` tag just before and the `</ul>` after the loop**) with this:
-
-```html
-{% for entry in data.entries %}
-  <h3 class="entry-headline"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-  <p class="entry-date">{{ entry.date }}</p>
-  <hr>
-{% endfor %}
-```
+If you have a spreadsheet of data that you need in JSON format, [CSVJSON](https://www.csvjson.com/) is a tool that can help with that. You'll learn an even better way using Google Drive when we get to the final project.
 
 It should look something like this:
 
-![healdine stack](../images/static-headline-stack.png)
+![headline stack](../images/static-headline-stack.png)
 
-> Note: Your hrefs won't actually work yet because we haven't created those pages yet.
+> Note: Your hrefs won't actually work yet because we haven't created those pages yet. That is next!
 
 ---
 

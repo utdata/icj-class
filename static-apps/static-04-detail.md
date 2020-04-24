@@ -1,34 +1,45 @@
 # Detail pages
 
-For our Pirate Cove blog we are going to have a number of detail pages that are all the same except for the story content.
+For our Pirate Cove blog we will have a number of entries that are all the same except for the story content.
 
-Before we look at the code that makes the detail page, let's look at the example in the browser. There is screenshot below or you can click on the link called "link to a blog entry example" from our index.
+Before we look at the code that makes the detail page, let's look at the example in the browser. There is screenshot below or you can click on "link to a book page example" from our index.
 
 ![static page example](../images/static-detail-page-example.png)
 
-This is a detail page made from one of our detail layouts. There are two `.njk` files that make this happen: The "layout" called `src/njk/_layouts/detail-entry.njk` and the "page" called `detail-entry-example.njk`.
+This is a detail page made from our detail layouts at `src/njk/_layouts/detail.njk`.
 
 ## Review the detail layout and pages
 
-The reason we use a "detail layout" is because the structure of every entry in on our blog will be the same, so we don't have to rewrite it. We'll just replace the blocks of content that are unique to each entry.
+The reason we use a "detail layout" is because we'll have multiple "detail" pages that are all the same except the content. Our "Shipping News" page example would be just one book among a whole library of pages.
 
-- Open up the `src/njk/_layouts/detail-entry.njk` file and look at it. This is the content:
+
+>>>> THIS IS WHERE I STOPPED
+
+
+
+
+- Open up the `src/njk/_layouts/detail.njk` file and look at it. This is the content:
 
 ```html
 {% extends '_layouts/base.njk' %}
 
+{% block page_title %}{{ book.title }}{% endblock %}
+
+{% block page_description %}{{ book.title }} by {{ book.author }}{% endblock %}
+
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       {% block info %}
-        <img src="https://placekitten.com/420/320" alt="" class="img-fluid">
+        <img src="img/{{ book.img }}" alt="" class="img-fluid">
+        <p>{{ book.author }}</p>
       {% endblock %}
     </div>
-    <div class="col-sm-8">
-      {% block story %}
-        <h1>Entry headline goes here</h1>
-        <p>Entry text goes here</p>
+    <div class="col-sm-9">
+      {% block blurb %}
+        <h1>{{ book.title }}</h1>
+        <p>{{ book.blurb | safe}}</p>
       {% endblock %}
     </div>
   </div>
@@ -39,28 +50,51 @@ The reason we use a "detail layout" is because the structure of every entry in o
 Let's explain these:
 
 - The first line _extends_ the base layout so that all the HTML framework for the entire site is included. We don't have to rewrite or copy that.
-- Next we have the _block content_. This is the guts of the page, and it is being inserted into the rest of the framework. Everything between the `{% block content %}` and the last `{% endblock %}` tag is being inserted _into_ the base page at the content block.
-- Within our content block we have the basic HTML for a two-column layout. And, inside of each column we have new _blocks_ for "info" and "story".
+- Next we have two _blocks_ for the _page_title_ and _page_description_. Everything between the blocks will be rendered to its reserved space in the base template.
+- Next we have the _block content_. This is the guts of out layout, and it is being inserted into the middle of the base template.
+- Within our content block we have bootstrap HTML for a two-column layout. And, inside of each column we have new _blocks_ for "info" and "blurb".
+
+But what is all this `{{ book.title }}` and `{{ book.img}}` and stuff?
+
+This layout was built assuming there is data to feed into it. In this case it is looking one instance (or `book`) in the `library.books` array. This is the same data that is in `src/njk/_data/library.json`, but we will tell the page later which row of data we want.
+
+Open the page `src/njk/detail-shipping-news.njk` and you'll see an example of the detail page where it extends the template, then  one other line to set which row of the data we want. In this case the second row, or `library.books[1]` because the counting starts at zero. That's the number in the square brackets ... which row of the data, counting from zero.
+
+## Create an entry layout
+
+- Create a new file in `src/njk/_layouts` with the name `entry.njk`.
+- Add this template to the page:
+
+```html
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}Detail page title{% endblock %}
+
+{% block page_description %}Meta description for detail page.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    <!-- left column -->
+    </div>
+    <div class="col-sm-9">
+    <!-- right column -->
+    </div>
+  </div>
+</article>
+{% endblock %}
+
+```
 
 ## Create our first entry page
 
-Let's create one of our blog pages so we can see our changes.
-
 - Create a new file as `src/njk/2018-10-18.njk` and place the following inside it:
-
 
 ```html
 {% extends '_layouts/detail-entry.njk' %}
+{% set entry = library.books[1] %}
 
-{% block page_title %}Blog entry title{% endblock %}
-
-{% block description %}Blog entry description.{% endblock %}
-
-{% block story %}
-  <h1>Blog headline entry</h1>
-  <h5>Captain's log: Oct. XX, 2018</h5>
-  <p>Interloper crimp spanker Barbary Coast splice the main brace bilged on her anchor black spot chandler trysail salmagundi. Brigantine fire ship scallywag log squiffy bowsprit lateen sail American Main cog smartly. Dance the hempen jig bilge log galleon pirate yard list Barbary Coast Corsair run a rig.</p>
-{% endblock %}
 ```
 
 Let's chat a bit about this:
@@ -73,6 +107,9 @@ What you don't see here is _block info_ because that will be the same for every 
 
 - Save your page and go look at it in your browser. You should be able to use your navigation link we updated earlier to go to the first page for for Oct. 18th.
 
+
+
+
 ## Create your other detail pages
 
 Now, let's create a pages for our other blog entries.
@@ -80,7 +117,7 @@ Now, let's create a pages for our other blog entries.
 - Inside the `src/njk` folder, create a new files for: `2018-10-19.njk` and =`2018-10-20.njk`. (If you'll recall, this is similar to the file name we used in our navigation except for the extension. Each `filename.njk` file added inside `src/njk/` will become a new HTML page of the same name at `docs/filename.html`.)
 - Inside these files, add the same entry code as you did for the first page.
 
-Think about this for a second: You added a new pages to your website with just those few lines of code, compared to when you did this with the Bootstrap Homework assignment, when you had to copy the whole page, likely getting them out of sync. Now you can change the framework of the site without edting individual pages.
+Think about this for a second: You added a new pages to your website with just those few lines of code, compared to when you did this with the Bootstrap Homework assignment, when you had to copy the whole page, likely getting them out of sync. Now you can change the framework of the site without editing individual pages.
 
 ## Edit the detail layout
 
