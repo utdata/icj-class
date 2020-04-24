@@ -2,12 +2,14 @@
 
 We're going to rebuild the framework of our Pirate Cove site in a way that we have a index and then a new page for each entry in the Ship's Log.
 
-The images needed for this project are already in the `src/img/` folder.
-
-Here are some screencasts of the finished product you are working toward. I'm showing only the index and one entry page, but you will make three entry pages.
+Here are some screen casts of the finished product you are working toward. I'm showing only the index and one entry page, but you will make three entry pages.
 
 - [Index page](https://drive.google.com/open?id=1VVL4bHhFsalq-mj2Yy14C1U62lUqOFgi)
 - [Entry page example](https://drive.google.com/open?id=1gOk9bUFAmtR82MmAobNK8jovrVnIW_z_)
+
+## Install the photos
+
+> This is where I stopped. pirate-photos.zip added, but directions needed.
 
 ## Review the base file
 

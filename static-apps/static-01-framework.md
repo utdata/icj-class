@@ -14,7 +14,7 @@ Through this semester we've been building your coding skills, adding a new langu
 
 When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on two pages. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
-Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compiles the pages into a single directory that can be used published with a simple web server, without the need of a live database.
+Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be used published with a web server without the need of a live database.
 
 There are [many tools](https://www.staticgen.com/) to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.
 
@@ -38,43 +38,6 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 ## Understand the project structure
 
 The easiest way to understand how this template works is to go study the README.md in the project template. **DON'T SKIP THIS PART**. While the README file is in your project, you might find it easier [to read the README online](https://github.com/utdata/icj-project-template). We will also go over it in class. If you are doing this on your own, READ THE README!
-
-## Configure VS Code to deal with Nunjucks
-
-Visual Studio Code is not set up by default to deal with the Nunjucks template language. There are two things we can do to make our future development easier. You only need to do these once and they will be set for future projects.
-
-> Note you _might_ have done these steps when you set up your computer earlier in the semester.
-
-### Install the Nunjucks Template extension
-
-While this isn't required, it is super helpful to install a Nunjucks syntax extension so your code is the proper "color" in your editor, called "Syntax highlighting". You should only have to do this once.
-
-- In VS Code, on the far left there are five icons. The bottom one looks like a funky square. Click on that.
-- In the search box, type in `Nunjucks template`. Click on the return for Nunjucks Template.
-- Click the Install button.
-- After it is done, you might need to click on the "Reload to activate" button.
-
-Now, when you look at files with the `.njk` extension, the code will be have the proper syntax highlighting.
-
-### Fix Emmet for Nunjucks
-
-Because we are using `.njk` extensions on our Nunjucks files, Emmet doesn't work because it doesn't know we are still using HTML. We can update our User Prefences to do this:
-
-- Go to the Code > Preferences > Settings.
-- On the Settings page at the top right, there is an icon that looks like a document with an arrow pointing to it. Click on it.
-- That will open a file called `settings.json`.
-- Look first to see if you already have the code below. If not, add the following inside the curly braces, but make sure the item above it has a comma at the end.
-
-```javascript
-{
-  "emmet.includeLanguages": {
-      "nunjucks": "html",
-      "njk": "html"
-  }
-}
-```
-
-I have a series of other settings you might find useful: Setting indents to two spaces, removing the minimap by default, wrapping text by default. [You can find them here](https://github.com/utdata/setting-up/blob/master/vscode-goodies.md).
 
 ----
 
