@@ -69,7 +69,7 @@ To save you time, I've collected a series of images and JSON data about the band
 
 Available for you to use:
 
-- A [collection of photos](img.zip) divided into three parts. Band photos, band members, and album covers. Put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
+- A [collection of photos](img.zip) divided into three parts. Band photos, band members, and album covers. Expand the folder, take the images and put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
 - A [queen.json](queen.json?raw=true) file with: A "members" array about band members and a "discography" array for the list of albums. Save this as `src/njk/data/queen.json`.
 - A [tour.json](tour.json?raw=true) file for the extra credit option explained below.
 
@@ -77,14 +77,14 @@ Available for you to use:
 
 The data in the "members" collection includes:
 
-- slug: If you name your band member pages the same as this slug, you can use in loops for the href URLs.
+- slug: If you name your band member pages the same as this slug, you can use them in loops for the href URLs. For example, `href="{{ members.slug }}.html"` would link to `freddie-mercury.html` and so on.
 - name: Full printable name of the member.
 - instruments: A list of what instruments/positions they play.
 - tenure: When they were in the band.
 - birthplace
 - birthdate
 - image: The filename of a color image of the band member.
-- imagebw: the filename of a black and white image of the band member.
+- imagebw: the filename of a different, black and white image of the band member.
 - text: This is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ members.text | safe}}`.
 
 Use all of these on the member detail pages.
@@ -121,7 +121,7 @@ On your `detail.njk` layout you can build your template to use properties from t
 
 Then on the page for a specific band member, you can extend the `detail.njk` layout and then use the Nunjucks [set](https://mozilla.github.io/nunjucks/templating.html#set) tag to filter the data to a single "row" based on its order in the data. Here is the weird thing, the order count starts at zero. So, if you want to use Freddie Mercury's data, and he appears first in the data, you access it using `members[0]`.
 
-Filename `freddie-mercury.html` would have the following content:
+Filename `freddie-mercury.njk` would have the following content:
 
 ```html
 {% extends '_layouts/detail.njk' %}
@@ -130,7 +130,7 @@ Filename `freddie-mercury.html` would have the following content:
 
 Given the above, now the `{{ members.name }}` value carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
 
-Brian May appears second in the data, but since we count from zero he is position `1`. Create a page `brian-may.html`, extend the `detail.njk` layout, set members to `members[1]` and you'll get "Brian May" for the `{{ members.name }}` value.
+Brian May appears second in the data, but since we count from zero he is position `1`. Create a page `brian-may.njk`, extend the `detail.njk` layout, set members to `queen.members[1]` and you'll get "Brian May" for the `{{ members.name }}` value.
 
 ## Deadlines
 
