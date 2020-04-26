@@ -3,7 +3,7 @@
     {
       "slug": "university-of-texas",
       "name": "The University of Texas",
-      "established": "September 15, 1883",
+      "established": "Established September 15, 1883",
       "location": "110 Inner Campus Dr, Austin, TX 78712",
       "activities": "Sightseeing, bowling, exploring museums, attending concerts",
       "url": "http://www.utexas.edu",
@@ -14,7 +14,7 @@
     {
       "slug": "texas-state-capitol",
       "name": "The Texas State Capitol",
-      "established": "1853",
+      "established": "Established 1853",
       "location": "1100 Congress Ave, Austin, TX 78701",
       "activities": "Free 30-minute tours, good food, biking and sightseeing",
       "url": "http://https://tspb.texas.gov/prop/tc/tc/capitol.html",
@@ -25,7 +25,7 @@
     {
       "slug": "lady-bird-lake",
       "name": "Lady Bird Lake",
-      "established": "1960",
+      "established": "Established 1960",
       "location": "1200 W Cesar Chavez St, Austin, TX 78703",
       "activities": "Hiking, biking, running, kayaking and paddleboarding",
       "url": "https://austintexas.gov/page/lady-bird-lake",
@@ -36,7 +36,7 @@
     {
       "slug": "mount-bonnell",
       "name": "Mount Bonnell",
-      "established": "June 2, 1939",
+      "established": "Established June 2, 1939",
       "location": "3800 Mount Bonnell Dr., Austin, TX 78731",
       "activities": "Hiking, sightseeing",
       "url": "https://www.austintexas.org/listings/covert-park-at-mt-bonnell/2925/",
@@ -47,82 +47,76 @@
   ],
   "restaurants": [
     {
-      "restaurant-name": "Franklin Barbecue",
+      "title": "Franklin Barbecue",
       "address": "900 E 11th St, Austin, TX 78702",
       "category": "Barbecue",
       "image": "franklin-bbq.jpg"
     },
     {
-      "restaurant-name": "Home Slice Pizza",
+      "title": "Home Slice Pizza",
       "address": "1415 S Congress Ave, Austin, TX 78704",
       "category": "Pizza",
       "image": "homeslice-pizza.jpg"
     },
     {
-      "restaurant-name": "Juan in a Million",
+      "title": "Juan in a Million",
       "address": "2300 E Cesar Chavez St, Austin, TX 78702",
       "category": "Tex-Mex",
       "image": "juan-in-a-million.jpg"
     },
     {
-      "restaurant-name": "Launderette",
+      "title": "Launderette",
       "address": "2115 Holly St, Austin, TX 78702",
       "category": "American",
-      "image": "launderette.png"
+      "image": "launderette.jpg"
     },
     {
-      "restaurant-name": "Oseyo",
+      "title": "Oseyo",
       "address": "1628 E Cesar Chavez St, Austin, TX 78702",
       "category": "Korean",
       "image": "oseyo.jpg"
     },
     {
-      "restaurant-name": "Tyson's Tacos",
+      "title": "Tyson's Tacos",
       "address": "4905 Airport Blvd, Austin, TX 78751",
       "category": "Tacos",
       "image": "tysons-tacos.jpg"
     },
     {
-      "restaurant-name": "The Peached Tortilla",
+      "title": "The Peached Tortilla",
       "address": "5520 Burnet Rd #100, Austin, TX 78756",
       "category": "Asian fusion",
       "image": "peached-tortilla.jpg"
     },
     {
-      "restaurant-name": "Patrizi's",
+      "title": "Patrizi's",
       "address": "2307 Manor Rd, Austin, TX 78722",
       "category": "Italian",
       "image": "patrizis.jpg"
     },
     {
-      "restaurant-name": "Saigon Le Vendeur",
-      "address": "2404 E 7th St, Austin, TX 78702",
-      "category": "Vietnamese",
-      "image": "saigon-le-vendeur.jpg"
-    },
-    {
-      "restaurant-name": "Bufalina",
+      "title": "Bufalina",
       "address": "1519 E Cesar Chavez St #200, Austin, TX 78702",
       "category": "Pizza",
-      "image": "bufalina.png"
+      "image": "bufalina.jpg"
     },
     {
-      "restaurant-name": "Via313",
+      "title": "Via313",
       "address": "61 Rainey St, Austin, TX 78701",
       "category": "Pizza",
       "image": "via313.jpg"
     },
     {
-      "restaurant-name": "Uchi",
+      "title": "Uchi",
       "address": "801 S Lamar Blvd, Austin, TX 78704",
       "category": "Japanese",
-      "image": "uchi.png"
+      "image": "uchi.jpg"
     },
     {
-      "restaurant-name": "888 Pan Asian Restaurant",
+      "title": "888 Pan Asian Restaurant",
       "address": "2400 E Oltorf St #1A, Austin, TX 78741",
       "category": "Pan-Asian",
-      "image": "888.png"
+      "image": "888.jpg"
     }
   ]
 }

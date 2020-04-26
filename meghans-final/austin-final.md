@@ -94,7 +94,7 @@ Use all of these on the landmark detail pages.
 
 The data in "restaurants" includes;
 
-- restaurant-name: The name of the restaurant
+- title: The name of the restaurant
 - address: The address of the restaurant
 - category: The food category of the restaurant
 - image: The filename of an image of the restaurant
