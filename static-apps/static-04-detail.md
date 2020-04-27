@@ -13,7 +13,8 @@ This is a detail page made from our detail layouts at `src/njk/_layouts/detail.n
 The reason we use a "detail layout" is because we'll have multiple "detail" pages that are all the same except the content. Our "Shipping News" page example would be just one book among a whole library of pages.
 
 
->>>> THIS IS WHERE I STOPPED
+>>>> THIS IS WHERE I STOPPED, though there is lots of editing below, too. I need to decide if I'm adding ArchieML to this or waiting for the final.
+
 
 
 

@@ -70,26 +70,28 @@ We want to print out a list of all our blog entries, but first we need the data.
 - Add then add following code:
 
 ```json
-"entries": [
-  {
-    "date": "October 18, 2018",
-    "url": "2018-10-18.html",
-    "title": "It was a dark and stormy night",
-    "photo": "kraken01.jpg"
-  },
-  {
-    "date": "October 19, 2018",
-    "url": "2018-10-19.html",
-    "title": "Fear the Kraken",
-    "photo": "kraken02.jpg"
-  },
-  {
-    "date": "October 20, 2018",
-    "url": "2018-10-20.html",
-    "title": "Call me Ishmael",
-    "photo": "kraken03.jpg"
-  }
-]
+{
+  "entries": [
+    {
+      "date": "October 18, 2018",
+      "url": "2018-10-18.html",
+      "title": "It was a dark and stormy night",
+      "photo": "kraken01.jpg"
+    },
+    {
+      "date": "October 19, 2018",
+      "url": "2018-10-19.html",
+      "title": "Fear the Kraken",
+      "photo": "kraken02.jpg"
+    },
+    {
+      "date": "October 20, 2018",
+      "url": "2018-10-20.html",
+      "title": "Call me Ishmael",
+      "photo": "kraken03.jpg"
+    }
+  ]
+}
 ```
 
 - Kill your BrowserSync server (Control-c in your Terminal) and restart it with `gulp dev`. Data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data.
