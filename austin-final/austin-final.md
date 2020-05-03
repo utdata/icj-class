@@ -144,15 +144,13 @@ Canvas is the final word on deadlines, but in general they are in this order:
 
 ## Extra credit
 
-### Billboard hits chart
+### Austin murals map
 
-For extra credit, you can add a bar chart of Queen's Billboard Hits to your project through [Datawrapper](https://www.datawrapper.de/).
+For extra credit, you can add a map of notable murals in Austin to your project through [BatchGeo](https://batchgeo.com/).
 
-- Click "Start Creating".
-- Copy and paste this [csv data](queen-billboard-weeks.csv?raw=true) into Datawrapper.
-- Double check that the chart matches the csv data.
-- Make a bar chart and customize it. Make sure the chart has a title.
-- When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
+- Download this [csv data](AustinMurals.csv?raw=true), go back to BatchGeo and drag the CSV file into the box.
+- Press "Map Now" and set a title for your map. Enter your email address into the box, and select "Unlisted". 
+- Once you click "Save Map", BatchGeo will send you an email with an embed code. Copy that HTML code and paste it wherever you want it to appear on your webpage– you may want it to show up at the bottom of your index page (so paste it in `index.njk`), or you could create a new detail page and put it there. 
 
 ### Tour dates table
 
