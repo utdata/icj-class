@@ -1,0 +1,44 @@
+{
+  "activities": [
+  {
+    "date": "Sundays 10:00am – 2:00pm",
+    "location": "4209 Airport Blvd. Austin, Texas 78722",
+    "text": "Texas Farmer's Market at <a href=\"https://texasfarmersmarket.org/mueller/\" target=\"_blank\" rel=\"noreferrer nofollow\">Mueller</a>"
+  },
+  {
+    "date": "Wednesdays 4:00pm – 8:00pm",
+    "location": "1830 Simond Ave., Austin, TX 78723",
+    "text": "Community Night at the <a href=\"https://thinkeryaustin.org/visit-us/#hours\" target=\"_blank\" rel=\"noreferrer nofollow\">Thinkery</a>"
+  },
+  {
+    "date": "Year-round",
+    "location": "2201 Barton Springs Rd, Austin, TX 78704",
+    "text": "<a href=\"https://www.austintexas.org/listings/barton-springs-pool/4687/\" target=\"_blank\" rel=\"noreferrer nofollow\">Barton Springs Pool</a>"
+  },
+  {
+    "date": "Year-round",
+    "location": "2418 Stratford Dr., Austin, TX 78746",
+    "text": "Kayaking Lady Bird Lake at the <a href=\"https://www.austintexas.org/listings/rowing-dock/9470/\" target=\"_blank\" rel=\"noreferrer nofollow\">Rowing Dock</a>"
+  },
+  {
+    "date": "Summer evenings",
+    "location": "100 Congress Ave, Austin, TX 78701-4072",
+    "text": "See bats at the <a href=\"http://www.batcon.org/index.php/our-work/regions/usa-canada/protect-mega-populations/cab-intro\" target=\"_blank\" rel=\"noreferrer nofollow\">Congress Avenue Bridge</a>"
+  },
+  {
+    "date": "Every spring and fall",
+    "location": "501 Old Pecan St, Austin, TX 78701",
+    "text": "<a href=\"https://www.austintexas.org/listings/barton-springs-pool/4687/\" target=\"_blank\" rel=\"noreferrer nofollow\">The Pecan Street Festival</a>"
+  },
+  {
+    "date": "Once a month throughout the summer",
+    "location": "2100 Barton Springs Rd., Zilker Park, Austin, TX 78746",
+    "text": "See free concerts at <a href=\"https://www.austintexas.org/listings/blues-on-the-green/2673/\" target=\"_blank\" rel=\"noreferrer nofollow\">The Blues on the Green</a>"
+  },
+  {
+    "date": "Annually in the spring",
+    "location": "Multiple locations in Austin, TX",
+    "text": "Attend the <a href=\"https://www.austintexas.org/listings/barton-springs-pool/4687/\" target=\"_blank\" rel=\"noreferrer nofollow\">South by Southwest Conference</a>"
+  }
+]
+}
