@@ -13,7 +13,7 @@ Your site should be clean and well-designed. Your code should also be clean, wit
 - Look through the photo and data assets so you know what you have to work with.
 - Physically draw out what you want your pages to look like so you have a goal in mind. (There is a first assignment to provide sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen. Draw each version out.
 - Work on the structure of the site first. Basically get all the template structure and HTML/Bootstrap elements on the page. Build the structure for mobile first, then consider wider page widths.
-- Then work on the loop logic for the member list and discography. Get the loops working first, then make adjustments to make them look the way you want.
+- Then work on the loop logic for the landmarks list and restaurants. Get the loops working first, then make adjustments to make them look the way you want.
 - Then work on the logic for the detail layout and pages. Again, get the structure working first so you know you are calling the data correctly, then make it look the way you want.
 - Lastly, you can make it all look pretty with CSS adjustments.
 
@@ -26,7 +26,7 @@ Remember: Think mobile first, then adjust for larger screen widths.
 The project structure should include:
 
 - A base layout that is extended throughout the project.
-- A detail layout that is then extended to detail pages for the band members.
+- A detail layout that is then extended to detail pages for the landmarks.
 - At least one Nunjucks partial that is included into another layout template. (A good project will have several.)
 - The project must use the following Bootstrap components and concepts:
   - [Responsive images](https://getbootstrap.com/docs/4.4/content/images/) throughout.
@@ -44,7 +44,7 @@ The the index should have:
 
 - A short description of the City of Austin. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
 - A list of major landmarks with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.4/components/card/) object with their image, name and url.
-- A listing of noteworthy Austin restaurants built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.4/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
+- A listing of noteworthy Austin restaurants built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
 
 ### Detail pages
 
@@ -72,21 +72,23 @@ To save you time, I've collected a series of images and JSON data about the land
 Available for you to use:
 
 - A [collection of photos](austin-img.zip) divided into three parts. Photos of Austin, landmark photos and restaurant photos. Expand the folder, take the images and put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
-- A [austin.json](austin.json?raw=true) file with: A "landmarks" array about landmarks and a "restaurants" array for the list of noteworthy restaurants. Save this as `src/njk/data/austin.json`.
-- A [tour.json](tour.json?raw=true) file for the extra credit option explained below.
+- A [austin.json](austin.json?raw=true) file with: A "landmarks" array about landmarks and a "restaurants" array for the list of noteworthy restaurants. Save this under `src/njk/data/`. Now, the path to it should look like `src/njk/data/austin.json`. 
+- A [austinactivities.json](austinactivities.json?raw=true) file for the extra credit option explained below.
+- A [AustinMurals.csv](AustinMurals.csv?raw=true) file for another extra credit option explained below.
+
 
 ### Landmarks data
 
 The data in the "landmarks" collection includes:
 
-- slug: If you name your detail pages the same as this slug, you can use it in loops for the href URLs. For example, `href="{{ landmarks.slug }}.html"` would link to `university-of-texas.html` and so on.
+- slug: If you name your detail pages the same as this slug, you can use it in loops for the href URLs. For example, `href="{{ landmark.slug }}.html"` would link to `university-of-texas.html` and so on.
 - name: Full printable name of the landmark.
 - established: A date (doesn't always include month and day) on which the landmark was established.
 - location: Where the landmark is located.
 - activities: Things people can do at the landmark.
 - image: The filename of a color image of the landmark.
-- imagebw: the filename of a different, black and white image of the landmark.
-- text: This is a several paragraph description of the landmark, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ landmarks.text | safe}}`.
+- imagebw: The filename of a different, black and white image of the landmark.
+- text: This is a several paragraph description of the landmark, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use to activate the HTML, like this: `{{ landmark.text | safe}}`.
 
 Use all of these on the landmark detail pages.
 
@@ -154,7 +156,7 @@ For extra credit, you can add a map of notable murals in Austin to your project 
 
 ### Tour dates table
 
-Another option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of Queen's 2020 tour dates.
+Another extra credit option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of fun things to do in the city.
 
-- Save the file [tour.json](tour.json?raw=true) into your `src/njk/data/` folder and restart gulp so the data is available.
-- Use this data to make a table with Queen's 2020 tour dates, cities and venues. Refer to [loops](#loops) for help.
+- Save the file [austinactivities.json](austinactivities.json?raw=true) into your `src/njk/data/` folder and restart gulp so the data is available.
+- Use this data to make a table with names, dates and addresses of activities to do in Austin. Refer to [loops](#loops) for help. You probably need need to add a "safe" filter (`{{ activity.text | safe }}`) in one of your loops to convert the HTML and make your hyperlinks in the text work.
