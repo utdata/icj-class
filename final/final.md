@@ -44,7 +44,7 @@ The the index should have:
 
 - A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
 - A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.4/components/card/) object with their image, name and url.
-- A listing of all of Queen's studio albums built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.4/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
+- A listing of all of Queen's studio albums built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
 
 ### Detail pages
 

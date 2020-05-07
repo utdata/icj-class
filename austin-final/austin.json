@@ -1,0 +1,122 @@
+{
+  "landmarks": [
+    {
+      "slug": "university-of-texas",
+      "name": "The University of Texas",
+      "established": "Established September 15, 1883",
+      "location": "110 Inner Campus Dr, Austin, TX 78712",
+      "activities": "Sightseeing, bowling, exploring museums, attending concerts",
+      "url": "http://www.utexas.edu",
+      "image": "univ-of-tx.jpg",
+      "imagebw": "univ-of-tx-bw.jpg",
+      "text": "<p>The University of Texas at Austin (UT Austin) is a public research university in Austin, Texas. It was founded in 1883 and is the flagship institution of the University of Texas System. The institution has the nation's eighth-largest single-campus enrollment, with over 50,000 undergraduate and graduate students and over 24,000 faculty and staff.</p>\n<p>A Public Ivy, it is a major center for academic research, with research expenditures exceeding $615 million for the 2016–2017 school year. The university houses seven museums and seventeen libraries, including the Lyndon Baines Johnson Library and Museum and the Blanton Museum of Art, and operates various auxiliary research facilities, such as the J. J. Pickle Research Campus and the McDonald Observatory.</p>\n<p>- Source: <a href=\"https://en.wikipedia.org/wiki/University_of_Texas_at_Austin\">Wikipedia</a></p>"
+    },
+    {
+      "slug": "texas-state-capitol",
+      "name": "The Texas State Capitol",
+      "established": "Established 1853",
+      "location": "1100 Congress Ave, Austin, TX 78701",
+      "activities": "Free 30-minute tours, good food, biking and sightseeing",
+      "url": "http://https://tspb.texas.gov/prop/tc/tc/capitol.html",
+      "image": "texas-state-capitol.jpg",
+      "imagebw": "texas-state-capitol-bw.jpg",
+      "text": "<p>The Texas State Capitol is the capitol building and seat of government of the American state of Texas. Located in downtown Austin, Texas, the structure houses the offices and chambers of the Texas Legislature and of the Governor of Texas.The building was added to the National Register of Historic Places in 1970 and recognized as a National Historic Landmark in 1986.</p>\n<p>The Texas State Capitol and grounds are located on a hilltop overlooking downtown Austin, with the main entrance facing onto the Congress Avenue Historic District to the south, for which it forms a terminating vista. The northern edge of the capitol grounds lies four blocks south of the University of Texas at Austin.The central rotunda is hung with portraits of all the past presidents of the Republic of Texas and governors of the State of Texas; the rotunda is also a whispering gallery. The south foyer features a large portrait of David Crockett, a painting depicting the surrender of General Santa Anna at the Battle of San Jacinto, and sculptures of Sam Houston and Stephen F. Austin made by Elisabet Ney. The Texas Confederate Museum was held in a room on the first floor from its opening in 1903 until 1920, when it was moved into the General Land Office Building (today the Capitol Visitors Center).</p>\n<p>- Source: <a href=\"https://en.wikipedia.org/wiki/Texas_State_Capitol\">Wikipedia</a></p>"
+    },
+    {
+      "slug": "lady-bird-lake",
+      "name": "Lady Bird Lake",
+      "established": "Established 1960",
+      "location": "1200 W Cesar Chavez St, Austin, TX 78703",
+      "activities": "Hiking, biking, running, kayaking and paddleboarding",
+      "url": "https://austintexas.gov/page/lady-bird-lake",
+      "image": "lady-bird-lake.jpg",
+      "imagebw": "lady-bird-lake-bw.jpg",
+      "text": "<p>Lady Bird Lake (formerly, and still colloquially referred to as Town Lake) is a river-like reservoir on the Colorado River in Austin, Texas, United States. The City of Austin created the reservoir in 1960 as a cooling pond for a new city power plant. The lake, which has a surface area of 416 acres (168 ha), is now used primarily for recreation and flood control. The reservoir is named in honor of former First Lady of the United States Lady Bird Johnson.</p>\n<p>Lady Bird Lake is a major recreation area for the City of Austin. The lake's banks are bounded by the Ann and Roy Butler Hike-and-Bike Trail, and businesses offer recreational watercraft services along the lakefront portion of the trail. Austin's largest downtown park, Zilker Park, is adjacent to the lake, and Barton Springs, a major attraction for swimmers, flows into the lake.</p>\n<p>- Source: <a href=\"https://en.wikipedia.org/wiki/Lady_Bird_Lake\">Wikipedia</a></p>"
+    },
+    {
+      "slug": "mount-bonnell",
+      "name": "Mount Bonnell",
+      "established": "Established June 2, 1939",
+      "location": "3800 Mount Bonnell Dr., Austin, TX 78731",
+      "activities": "Hiking, sightseeing",
+      "url": "https://www.austintexas.org/listings/covert-park-at-mt-bonnell/2925/",
+      "image": "mount-bonnell.jpg",
+      "imagebw": "mount-bonnell-bw.jpg",
+      "text": "<p>Mount Bonnell, also known as Covert Park, is a prominent point alongside the Lake Austin portion of the Colorado River in Austin, Texas. It has been a popular tourist destination since the 1850s. The mount provides a vista for viewing the city of Austin, Lake Austin, and the surrounding hills. It was designated a Recorded Texas Historic Landmark in 1969</p>\n<p>Mt. Bonnell has served as a popular attraction since the 1830s. Considered a more rural part of Austin then, picnics and outings were popular at the site, as well as entertainment, such as when Hazel Keyes, trailed by her monkey, slid down a cable stretched from the top of Mt. Bonnell to the south bank of the lake below in 1898. Today thousands of visitors ascend the 106 stone stairs to the summit to take in sweeping panoramic views of the lake, downtown, and the western hills of Austin.</p>\n<p>- Source: <a href=\"https://en.wikipedia.org/wiki/Mount_Bonnell\">Wikipedia</a></p>"
+    }
+  ],
+  "restaurants": [
+    {
+      "title": "Franklin Barbecue",
+      "address": "900 E 11th St, Austin, TX 78702",
+      "category": "Barbecue",
+      "image": "franklin-bbq.jpg"
+    },
+    {
+      "title": "Home Slice Pizza",
+      "address": "1415 S Congress Ave, Austin, TX 78704",
+      "category": "Pizza",
+      "image": "homeslice-pizza.jpg"
+    },
+    {
+      "title": "Juan in a Million",
+      "address": "2300 E Cesar Chavez St, Austin, TX 78702",
+      "category": "Tex-Mex",
+      "image": "juan-in-a-million.jpg"
+    },
+    {
+      "title": "Launderette",
+      "address": "2115 Holly St, Austin, TX 78702",
+      "category": "American",
+      "image": "launderette.jpg"
+    },
+    {
+      "title": "Oseyo",
+      "address": "1628 E Cesar Chavez St, Austin, TX 78702",
+      "category": "Korean",
+      "image": "oseyo.jpg"
+    },
+    {
+      "title": "Tyson's Tacos",
+      "address": "4905 Airport Blvd, Austin, TX 78751",
+      "category": "Tacos",
+      "image": "tysons-tacos.jpg"
+    },
+    {
+      "title": "The Peached Tortilla",
+      "address": "5520 Burnet Rd #100, Austin, TX 78756",
+      "category": "Asian fusion",
+      "image": "peached-tortilla.jpg"
+    },
+    {
+      "title": "Patrizi's",
+      "address": "2307 Manor Rd, Austin, TX 78722",
+      "category": "Italian",
+      "image": "patrizis.jpg"
+    },
+    {
+      "title": "Bufalina",
+      "address": "1519 E Cesar Chavez St #200, Austin, TX 78702",
+      "category": "Pizza",
+      "image": "bufalina.jpg"
+    },
+    {
+      "title": "Via313",
+      "address": "61 Rainey St, Austin, TX 78701",
+      "category": "Pizza",
+      "image": "via313.jpg"
+    },
+    {
+      "title": "Uchi",
+      "address": "801 S Lamar Blvd, Austin, TX 78704",
+      "category": "Japanese",
+      "image": "uchi.jpg"
+    },
+    {
+      "title": "888 Pan Asian Restaurant",
+      "address": "2400 E Oltorf St #1A, Austin, TX 78741",
+      "category": "Pan-Asian",
+      "image": "888.jpg"
+    }
+  ]
+}
