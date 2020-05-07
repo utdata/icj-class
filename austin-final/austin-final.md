@@ -150,7 +150,7 @@ Canvas is the final word on deadlines, but in general they are in this order:
 
 For extra credit, you can add a map of notable murals in Austin to your project through [BatchGeo](https://batchgeo.com/).
 
-- Download this [csv data](AustinMurals.csv?raw=true), go back to BatchGeo and drag the CSV file into the box.
+- Download this [csv data](AustinMurals.csv?raw=true) by saving the page as a csv file, go back to BatchGeo and drag the CSV file into the box.
 - Press "Map Now" and set a title for your map. Enter your email address into the box, and select "Unlisted". 
 - Once you click "Save Map", BatchGeo will send you an email with an embed code. Copy that HTML code and paste it wherever you want it to appear on your webpage– you may want it to show up at the bottom of your index page (so paste it in `index.njk`), or you could create a new detail page and put it there. 
 
