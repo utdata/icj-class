@@ -92,7 +92,7 @@ The data in the "landmarks" collection includes:
 
 Use all of these on the landmark detail pages.
 
-### Discography
+### Restaurants
 
 The data in "restaurants" includes;
 
@@ -109,7 +109,7 @@ You can put the restaurants on the index or its own page. You DO NOT need indivi
 
 On your index, you should use a Nunjucks `{% for landmark in austin.landmarks %}` loop like the books example to create your display of landmarks. You should use a similar loop for the restaurants.
 
-### Filter for member pages
+### Filter for landmark pages
 
 You can (and should) also use the "landmarks" collection for your landmarks detail pages to save a lot of extra coding. It works like this:
 
@@ -150,11 +150,11 @@ Canvas is the final word on deadlines, but in general they are in this order:
 
 For extra credit, you can add a map of notable murals in Austin to your project through [BatchGeo](https://batchgeo.com/).
 
-- Download this [csv data](AustinMurals.csv?raw=true), go back to BatchGeo and drag the CSV file into the box.
+- Download this [csv data](AustinMurals.csv?raw=true) by saving the page as a csv file, go back to BatchGeo and drag the CSV file into the box.
 - Press "Map Now" and set a title for your map. Enter your email address into the box, and select "Unlisted". 
 - Once you click "Save Map", BatchGeo will send you an email with an embed code. Copy that HTML code and paste it wherever you want it to appear on your webpage– you may want it to show up at the bottom of your index page (so paste it in `index.njk`), or you could create a new detail page and put it there. 
 
-### Tour dates table
+### Activities table
 
 Another extra credit option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of fun things to do in the city.
 
