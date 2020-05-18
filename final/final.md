@@ -2,135 +2,112 @@
 
 Your goal with this final project is to create a multi-page website using the [icj-project-template](https://github.com/utdata/icj-project-template) that has an index and multiple detail pages. It will be published through Github Pages.
 
-I am supplying you with the idea (a band website for Queen) and assets (images and data). You may add additional content and images, as long as they are public domain material (like from Wikipedia).
+I am supplying you with two ideas to choose from, each with their own collection of assets. You may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material.
 
-Your site should be clean and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
+Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
 
-## Some strategies on how to tackle a project
-
-> Read all the directions before you start coding anything.
-
-- Look through the photo and data assests so you know what you have to work with.
-- Physically draw out what you want your pages to look like so you have a goal in mind. (There is a first assignment to provide sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen. Draw each version out.
-- Work on the structure of the site first. Basically get all the template structure and HTML/Bootstrap elements on the page. Build the structure for mobile first, then consider wider page widths.
-- Then work on the loop logic for the member list and discography. Get the loops working first, then make adjustments to make them look the way you want.
-- Then work on the logic for the detail layout and pages. Again, get the structure working first so you know you are calling the data correctly, then make it look the way you want.
-- Lastly, you can make it all look pretty with CSS adjustments.
-
-Remember: Think mobile first, then adjust for larger screen widths.
+> Read all the directions completely before you start coding anything.
 
 ## Requirements
 
-### Project structure and helper notes
+The project should include:
 
-The project structure should include:
-
+- An **index**, **detail pages** and **additional content** as outlined below.
 - A base layout that is extended throughout the project.
-- A detail layout that is then extended to detail pages for the band members.
-- At least one Nunjucks partial that is included into another layout template. (A good project will have several.)
+- At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer already present.
 - The project must use the following Bootstrap components and concepts:
   - [Responsive images](https://getbootstrap.com/docs/4.4/content/images/) throughout.
   - A [Jumbotron](https://getbootstrap.com/docs/4.4/components/jumbotron/) for a header.
-  - A [Navbar/Navs](https://getbootstrap.com/docs/4.4/components/navbar/) that links to each member.
-- You must use at least one scss partial with your Sass code. (A good project would have several.)
+  - A [Navbar/Navs](https://getbootstrap.com/docs/4.4/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
+- You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the example already in the project.
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere.
-- This should all be in its own repo, published through Github Pages.
+- All pages should use responsive design. Photos should resize to their content.
+- Remove any now unused files related to the example book and bookstore pages.
+- This project should be in its own repo with the site published through Github Pages.
 
-Everything should look beautiful and be functional. Any additional content beyond that provided in the data can be pulled from Wikipedia, but include a link to the source of the material.
+Everything should look beautiful and be functional. You should not need any additional content beyond that provided in the assets collection. If you choose to use additional content, it should be public domain and include a link to the source.
 
 ### Index page
 
-The the index should have:
+In addition to the basic site structure, the index should have:
 
-- A short description of the band. You can get this from Wikipedia or other public sources, but please source it properly (i.e. give credit and link back).
-- A list of the original members with links to their detail pages. Use a Nunjucks loop using the data provided to write efficient code. One option might be to use the Bootstrap [Cards](https://getbootstrap.com/docs/4.4/components/card/) object with their image, name and url.
-- A listing of all of Queen's studio albums built from the the data/images provided. You could do this a number of ways, using cards, the Bootstrap [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks "for" loop, similar to the lesson we used in class.
+- A short description of the website. You can write this yourself or pull from public domain content and link back to the source.
+- A "tease" to each of the "baked" detail pages, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do this any number of ways through Bootstrap [Cards](https://getbootstrap.com/docs/4.4/components/card/), the [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks loop.
 
-### Detail pages
+### "Baked" detail pages
 
-Each band member page should extend a detail layout.
+Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md) page.
 
-Be sure to read the **very important note below** about how to filter data to use just one row of an array.
+The layout for these detail pages should include:
 
-The layout should have:
+- At least two columns that stack on mobile but render next to each other at a larger page width. (This is basic Bootstrap grids.)
+- Use all the data values on the detail pages, including a photo.
 
-- Two columns that stack on mobile but become two columns at `sm` and wider. You can adjust widths as the pages gets wider.
-- In those two columns, you should have (all from data provided):
-  - Photo of the band member
-  - Headline of their name
-  - All the bio information (birthdate, etc.)
-  - Narrative about the member. (See note in Members data below.)
+You can otherwise design the above however you wish.
 
-You can design or organize the above however you wish.
+### Additional content loop
 
-## Assets available
+In addition to data for the "baked" detail pages, there is at least one other data set available for each project. You must build a display (either a stand-alone page or an include inserted into the index) that uses all the elements from the additional data.
 
-To save you time, I've collected a series of images and JSON data about the band members and discography. I've supplied more images than necessary so you can choose ones you like.
+You are required to use a Nunjucks loop in the construction of the page or include.
 
-Available for you to use:
+## Extra credit options
 
-- A [collection of photos](img.zip) divided into three parts. Band photos, band members, and album covers. Expand the folder, take the images and put these inside your `src/img/` folder. Remember to restart gulp after installing the photos.
-- A [queen.json](queen.json?raw=true) file with: A "members" array about band members and a "discography" array for the list of albums. Save this as `src/njk/data/queen.json`.
-- A [tour.json](tour.json?raw=true) file for the extra credit option explained below.
+- Each asset collection includes data for use in a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/). You can build the table on a stand-alone page or pull into another through an include.
+- Some asset collections have an option for an interactive chart or feature. Details in the collections descriptions.
 
-### Members data
+## Assets collections available
 
-The data in the "members" collection includes:
+### Queen band website
 
-- slug: If you name your band member pages the same as this slug, you can use them in loops for the href URLs. For example, `href="{{ members.slug }}.html"` would link to `freddie-mercury.html` and so on.
-- name: Full printable name of the member.
-- instruments: A list of what instruments/positions they play.
-- tenure: When they were in the band.
-- birthplace
-- birthdate
-- image: The filename of a color image of the band member.
-- imagebw: the filename of a different, black and white image of the band member.
-- text: This is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag to use as HTML, like this: `{{ members.text | safe}}`.
+This idea is to build a website for the band Queen using the original members and studio albums.
 
-Use all of these on the member detail pages.
+- A collection of photos a the [queen-img.zip](queen-img.zip) file. Right-click on that link and download the zip file, expand it and put the images inside your `src/img/` folder. There are three collections of photos:
+  - Band photos
+  - Band members
+  - Album covers
+- Data stored in the [Queen data Google Sheet](https://docs.google.com/spreadsheets/d/1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE/edit#gid=1749378089). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. About the data:
+  - **members** is the data to use for "baked" pages.
+    - This data includes a `slug` field that you will need in your baking config.
+    - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ members.description | safe }}`.
+  - **discography** is the data to use for the "additional content" part of the assignment. It's a list of all the studio albums.
+  - **tour2020** is an EXTRA CREDIT opportunity where you can build a table of tour dates.
+  - **billboard** is an EXTRA CREDIT opportunity where you can build interactive chart on Datawrapper and the embed it somewhere on your site.
 
-### Discography
+### Austin tourism site
 
-The data in "discography" includes;
+This idea is to build something an Austin news organization might use as tourism microsite.
 
-- title: The title of the album
-- year: The year it was released
-- image: The filename of an image of the album
+- A collection of photos in [austin-img.zip](austin-img.zip). Right-click on that link and download the zip file, expand it and put the images inside your `src/img/` folder. There are three collections of photos:
+  - Austin wallpaper photos and logos
+  - Landmarks
+  - Restaurants
+- The Google Sheet [Austin Project Data](https://docs.google.com/spreadsheets/d/1Ts65v2RhdqWVJZSnlbaHp2eo2OrQmwkoyBkySpZIBks/edit#gid=0). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. This data includes:
+  - **landmarks** is the data you use for your "baked" detail pages.    - This data includes a `slug` field that you will need in your baking config.
+    - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ landmarks.description | safe }}`.
+  - **activities** is optional EXTRA CREDIT data where you can build a table.
+  - **murals** is optional EXTRA CREDIT for future use. (Still working this out.)
+- The Google Doc [Austin restaurants data](https://docs.google.com/document/d/18cbNgFAJx-eh6KQHQLoRy17BkmoGHXW7fAZ4U_K0clA/edit) is the "additional content" data for this collection. You'll make list of popular restaurants.
+  - Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder.
+  - For EXTRA CREDIT, add THREE new restaurants to the list using the same notation. You'll need to find and add the photos, too.
 
-> Side note: To create the `queen.json` file, I organized the information in a [Google spreadsheet](https://drive.google.com/open?id=1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE) and then used this [csvjson](https://www.csvjson.com/csv2json) site to convert to JSON. This is already done for you ... I'm just telling you how I did it.
+### Downloading data from Google Drive
 
-You can put the discography on the index or it's own page. You DO NOT need individual pages for each album.
+See the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#using-data-from-google-drive) section on "Using data from Google Drive" to see how to configure and download the data from the Google Sheets or Docs.
 
-## Important notes about using data
+> Remember to restart gulp after installing the photos or data.
 
-### Loops
+## Strategies on how to tackle a project
 
-On your index, you should use a Nunjucks `{% for member in queen.members %}` loop like the books example to create your display of members. You should use a similar loop for the discography.
+- Look through the photos and data assets so you know what you have to work with.
+- Physically draw out what you want your pages to look like so you have a goal in mind. (There is a first assignment to provide sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen. Draw each version out.
+- Set up your assets: photos and data.
+- Work on the structure before the design. Basically get the template structure and HTML/Bootstrap elements on the page. Again, consider mobile first and then wider page widths.
+- Then work on the loop logic for that part of the assignment. Get the loops working first (just printing an element to the page). Next figure out your HTML structure of the element, then use the loop for the part that should repeat.
+- For the "baking" pages, set up a simple layout and then configure the baking task in project.config.json. Once you get the pages building with data, then continue working on the structure and design of the page.
+- Once all the structure and logic are set, you can then make it all look pretty with HTML/CSS adjustments.
 
-### Filter for member pages
-
-You can (and should) also use the "members" collection for your band member detail pages to save a lot of extra coding. It works like this:
-
-On your `detail.njk` layout you can build your template to use properties from the "members" collection. You can code the whole page in the layout, and use placeholders for the data like this example:
-
-```html
-<h1>{{ members.name }}</h1>
-```
-
-`members` is the collection. `.name` is the key value you are using from the array.
-
-Then on the page for a specific band member, you can extend the `detail.njk` layout and then use the Nunjucks [set](https://mozilla.github.io/nunjucks/templating.html#set) tag to filter the data to a single "row" based on its order in the data. Here is the weird thing, the order count starts at zero. So, if you want to use Freddie Mercury's data, and he appears first in the data, you access it using `members[0]`.
-
-Filename `freddie-mercury.njk` would have the following content:
-
-```html
-{% extends '_layouts/detail.njk' %}
-{% set members = queen.members[0] %}
-```
-
-Given the above, now the `{{ members.name }}` value carried over from `detail.njk` will display the text "Freddie Mercury" on his page.
-
-Brian May appears second in the data, but since we count from zero he is position `1`. Create a page `brian-may.njk`, extend the `detail.njk` layout, set members to `queen.members[1]` and you'll get "Brian May" for the `{{ members.name }}` value.
+Remember: Think mobile first, then adjust for larger screen widths.
 
 ## Deadlines
 
@@ -142,21 +119,17 @@ Canvas is the final word on deadlines, but in general they are in this order:
 - On our last class day, you'll show your progress to everyone. You should publish what you have so far to Github Pages so we can review it in class.
 - Final deadline for the project when I pull a copy of your repo for grading.
 
-## Extra credit
+## Important notes about using data
 
-### Billboard hits chart
+### Loops
 
-For extra credit, you can add a bar chart of Queen's Billboard Hits to your project through [Datawrapper](https://www.datawrapper.de/).
+On your index, you should use a Nunjucks `{% for thing in file.array_name %}` loop like the books example to create your teases to your detail pages. You should use a similar loop for "additional content" loop.
 
-- Click "Start Creating".
-- Copy and paste this [csv data](queen-billboard-weeks.csv?raw=true) into Datawrapper.
-- Double check that the chart matches the csv data.
-- Make a bar chart and customize it. Make sure the chart has a title.
-- When it's finished, copy the embed code (make sure it's responsive iframe), and paste the code into your html where you want the chart to appear on your page.
+### Creating the "baked" pages
 
-### Tour dates table
+The method to create the "baked" detail pages are outlined in the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#bake-pages-from-data-and-a-layout).
 
-Another option is to make a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/) of Queen's 2020 tour dates.
+- You'll need to create a layout similar to the example `src/njk/_layouts/bake-book.njk`. This has all the structure of the detail pages.
+- You'll use either the **members** array from the Queen data or the **landmarks** array from the Austin data to build your pages.
+- Follow the README directions to configure `to_bake` commands in the `project.config.json` file.
 
-- Save the file [tour.json](tour.json?raw=true) into your `src/njk/data/` folder and restart gulp so the data is available.
-- Use this data to make a table with Queen's 2020 tour dates, cities and venues. Refer to [loops](#loops) for help.
