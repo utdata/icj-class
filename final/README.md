@@ -50,7 +50,7 @@ In addition to data for the "baked" detail pages, there is at least one other da
 
 You are required to use a Nunjucks loop in the construction of the page or include.
 
-## Extra credit options
+### Extra credit options
 
 - Each asset collection includes data for use in a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/). You can build the table on a stand-alone page or pull into another through an include.
 - Some asset collections have an option for an interactive chart or feature. Details in the collections descriptions.
@@ -61,7 +61,7 @@ You are required to use a Nunjucks loop in the construction of the page or inclu
 
 This idea is to build a website for the band Queen using the original members and studio albums.
 
-- A collection of photos in the [queen-img.zip](queen-img.zip) file. Go to that page and download the zip file, expand it and put the images inside your `src/img/` folder. There are three collections of photos:
+- A collection of photos in the [img-queen.zip](img-queen.zip) file. Go to that page and download the zip file, expand it and put the images inside your `src/img/` folder. There are three collections of photos:
   - Band photos
   - Band members
   - Album covers
@@ -77,7 +77,7 @@ This idea is to build a website for the band Queen using the original members an
 
 This idea is to build a tourism microsite similar to what a local news organization might do.
 
-- A collection of photos in [austin-img.zip](austin-img.zip). Open that link and then download the zip file, expand it and put the images inside your `src/img/` folder. There are three sets of photos:
+- A collection of photos in [img-austin.zip](img-austin.zip). Open that link and then download the zip file, expand it and put the images inside your `src/img/` folder. There are three sets of photos:
   - Austin wallpaper photos and logos
   - Landmarks
   - Restaurants
