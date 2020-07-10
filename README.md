@@ -6,6 +6,16 @@ The Canvas course is your official word on assignment due dates and such, but mo
 
 ## Lessons
 
+### Setting up
+
+You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-up) repo.
+
+### Command-line interface tools
+
+- [What is a terminal?](https://github.com/utdata/icj-cli-tools/blob/master/lectures/bash/bash-01-terminal.md)
+- [Moving around](https://github.com/utdata/icj-cli-tools/blob/master/lectures/bash/bash-02-moving-around.md)
+- [Git and Github](https://github.com/utdata/icj-cli-tools/blob/master/lectures/git/git-01-git-intro.md)
+
 ### HTML
 
 - [Codecademy HTML tutorial](https://www.codecademy.com/learn/learn-html)
