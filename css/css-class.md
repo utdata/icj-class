@@ -18,7 +18,7 @@ You have the internet at your disposal for help. Here are some resources you mig
 - You can review steps in the [Codecademy Learn 
 CSS](https://www.codecademy.com/learn/learn-css) course.
 - You can look up specific resources in the [W3 Schools HTML](https://www.w3schools.com/css/default.asp) documentation. [Shay Howe](https://learn.shayhowe.com/html-css/) has a pretty good tutorial. [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/CSS) also has good CSS docs.
-- Google it.
+- Google it. Use good search techniques: Include the term "css" and your goal or css property.
 
 ## CSS Reset
 
@@ -30,7 +30,7 @@ There is way to deal with this called CSS reset. The concept is to zero out all 
 
 So, let's do it:
 
-- In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTMLDocter reset](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
+- In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTML5resetCSS](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
 - We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing `</head>` tag.
 
 ```html
@@ -43,9 +43,9 @@ Refresh your recipe.html browser page and watch your something-kinda-special tur
 
 ## Relative font sizing
 
-If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that, a user can't increase the size of text in their browser, something a lot of old folks do. You'll see me do it in class all the time.
+If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that it makes is more difficult to adjust elements in relation to others on the page, especially in responsive design, which we are learning. (Responsive design is making web pages that work equally well on phones, tablet and desktops.)
 
-So there is a way to handle that by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://www.njimedia.com/how-i-met-the-old-fashioned-way-of-setting-font-sizes/), but know our next move is to set the base font at 62.5%, which will make the normally-default 16px font and makes the base 10px. This allows us to then use a relative measure called a `rem` where `2.4rem` is based 24px for a normally-sized browser.
+We'll use a method to manage sizes by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984), but know our next move is to take the default text size (16px) and set it to 10px, so that we can set every other font size relative to 10. (We do this by resetting the default font size to 62.5% of the original 16.) This allows us to then use a relative measure called a `rem` that are factors of ten, where `2.4rem` is the equivalent of 24px for a normally-sized browser.
 
 ## Create a site style file, set body defaults
 
@@ -60,11 +60,11 @@ body {
 }
 ```
 
-If you refresh your page in your browser, you'll see things get worse ... everything is super small now.
+If you refresh your page in your browser, you'll see things get worse ... everything is super small now. Don't worry, we'll fix it.
 
 ## Set article styles
 
-Let's set some boundaries for the article. If you look at the finished example above, the content is a certain width and centered in the page. We're going to define our `<article>` tag to include everything we have in the body currently. We'll add a footer later.
+Let's set some boundaries for the article. If you look at the finished example above, the content is a certain width and centered in the page. We're going to add and define an `<article>` tag to include everything we have in the body currently. We'll add a footer later.
 
 ### Add the article tag
 
@@ -72,11 +72,13 @@ Let's set some boundaries for the article. If you look at the finished example a
 - Add the closing `</article>` tag before the closing `</body>` tag near the bottom.
 - Save your html file.
 
+In doing this, we have defined the body of our web page to be an "article", which a recipe kinda is in the context of a website about recipes.
+
 ### Add the article styles
 
 - Now, in `styles.css`, add the following styles:
 
-> I encourage you to type as much of the code as you can so you understand how the code editor can help you write in the styles. When you get behind, then copy 'n' paste.
+> I encourage you to type as much of the code as you can so you understand how the code editor can help you write in the styles.
 
 ```css
 article {
@@ -103,11 +105,11 @@ p, ul, ol, dl {
 }
 ```
 
-What this has done is set all the text elements at basically `12px`, but we've use the `rem` measurement to set it relative to the base size, which was essentially 10px.
+What this has done is set all text-type elements at what is the equivalent to `12px`, but we've use the `rem` measurement to set it relative to the base size, which was essentially 10px.
 
-We've also given all of those elements a bottom margin so they don't sit on top of each other.
+We've set a line-height so lines of type don't sit on top of each other and we've also given all of those elements a bottom margin so the elements have some space between them.
 
-In the case above, it's important that we have commas between each text element. If we don't have those, the browser will think we need all of them together (and) instead of any of them (or).
+In the definition above, it's important that we have commas between each HTML element. If we don't have those, the browser will think we need all of them together (and) instead of any of them (or). We are setting these rules for p or ul or ol, etc. Not all of them used together.
 
 ## Set headline sizes
 
@@ -136,11 +138,11 @@ h3 {
 
 The first rule sets the font to a series of sans serif fonts, and we've done it for all headline sizes.
 
-The other rule set sizes and margins for various sizes of headlines. You'll notice that the margins are set in a single line. You can [review the rules here](https://www.w3schools.com/css/css_margin.asp).
+The other rule set sizes and margins for various sizes of headlines. You'll notice that the margins are set in a single line. You can [review the rules regarding that here](https://www.w3schools.com/css/css_margin.asp).
 
 ## Set the credit
 
-Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it specifically with CSS. We'll use a "class" because credits are not unique, and this way we could set them for all the credits on our site.
+Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it specifically with CSS. We'll use a "class" because credits may not unique on a web page, and this way we could set them for all the credits on our site.
 
 - In the html page, add the `class="credit"` attribute to the `<p>` tag around the credit "Source: Epicurious.com" so it looks like this:
 
@@ -148,7 +150,9 @@ Our next challenge is to set the credit. Because the credit is in a `<p>` tag, w
 <p class="credit">
 ```
 
-- Now that we've defined it, we can add the following styles to your style sheet to target that specific `<p>` tag:
+Always use lowercase characters in class names and use dashes if they are more than one word. This makes them readable and is considered convention in writing CSS. Having a common convention for things like this help people collaborate on code as it is predictable and readable. Name your classes for what the element is, not what you want it to look like. If you name your class for captions "red" and then decide later to make them blue, that would be confusing.
+
+- Now that we've defined it, we can add the following styles to your style sheet to target that class:
 
 ```css
 .credit {
@@ -158,17 +162,17 @@ Our next challenge is to set the credit. Because the credit is in a `<p>` tag, w
 }
 ```
 
-We set the credit as a new font, and then set the top and bottom margins.
+We've change the font from the default to Arial (with backups) and then set the top and bottom margins.
 
 ### Let's talk about tricks of the trade
 
-Sometimes I have trouble knowing if my CSS property is affecting the thing I want, so sometimes I'll set some crazy rule like `color-background: red;` to make sure I'm targeting what I want.
+Sometimes I have trouble knowing if my CSS property is affecting the thing I want, so sometimes I'll set some crazy CSS rule like `color-background: red;` to make sure I'm targeting what I want.
 
 The other thing I might do is use the browser **Inspector** to test styles right on the screen. Once I figure out my style, I can then add it to my styles file.
 
-It's easier to show this in person than to write it out, but you:
+It's easier to show this than to write it out, but you:
 
-- Use control-click on the element to get the menu for Inspector.
+- Use control-click on the element to get the contextual menu and choose Inspector.
 - Make sure you are on the correct element in the Element tab on the left pane of the Inspector.
 - Add/modify rules rules in the Styles tab on the right pane of the Inspector.
 
@@ -194,8 +198,8 @@ We want the recipe description to be a bit bigger than the other type. First we 
 
 At this point, you might be confused why sometimes we have a period before a style `.credit` and sometimes a hash `#description` and sometimes nothing `p, ul, li`. Let's define the difference and hopefully it will become clear.
 
-- HTML **elements** are the most generic thing you can style. A `<p>` tag or `<h1>`, etc. If you write a style for one, it affects ALL of those elements on your site.
-- But sometimes you have common elements that you re-use often, like byline. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="whatever"`. Now that it is classified, we can write one style that will affect all the bylines. What you call the class is up to you, but best practice is to choose a name that describes it is. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.whatever {font-family: Arial;}`.
+- HTML **elements** are the most generic thing you can style. A `<p>` tag or `<h1>`, etc. If you write a style for one, it affects ALL of those elements on your site. The style for a `<p>` tag is: `p {selector: rule;}`
+- But sometimes you have common elements that you re-use often, like photo credit. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="photo-credit"`. Now that it is classified, we can write one style that will affect all the bylines. What you call the class is up to you, but best practice is to choose a name that describes it is. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.photo-credit {font-family: Arial;}`.
 - There are also cases on a page where an element is used only one way. In this case we might "identify" that element with an **id** attribute: `id="unique-whatever"`. An example might be the main headline of a story; there is always only one. When we use an `id` we are indicating to the browser (and our fellow coders, and even Google) that this element only appears once on this page. When we write a style for an id, we precede the name with a hash to indicate the style is for an id: `#unique-whatever {font-family: Times;}`.
 
 ## Set the Yield box style
@@ -216,7 +220,7 @@ Save and refresh to see the lines. We used a [shorthand for the border property]
 
 ## Set the yield text
 
-Another story about tricks of the trade. When I was preparing this lecture, I had trouble getting the `<dt>` and `<dd>` values to show on the same line. So, what do you think I did? I googled it, of course, using the phrase "make css dd dt on same line". I got my answer [here](https://krijnhoetmer.nl/stuff/css/inline-dl/). It wasn't the first answer of my Google search ... I had to poke around on different Stack Overflow answers until I found one that worked for me.
+Another story about tricks of the trade. When I was preparing this lecture, I had trouble getting the `<dt>` and `<dd>` values to show on the same line. So, what do you think I did? I googled it, of course, using the phrase "make css dd dt on same line". I got my answer [here](https://krijnhoetmer.nl/stuff/css/inline-dl/). It wasn't the first answer of my Google search ... I had to poke around on different search results until I found one that worked for me.
 
 - Add the following styles to your style sheet.
 
@@ -236,7 +240,7 @@ dt {
 
 The first `<dl>` rule sets the font and size of the text. The next `<dt>` rule floats that part of the description to the left, sets a margin and makes it bold.
 
-- To finish out, go into the html file and add the colon after text inside the `<dt>` tags.
+- To finish out, go into the html file and add the colon after text inside the `<dt>` tags, like "Yield:".
 
 Could we have done this with paragraphs or divs? Absolutely. But then you wouldn't have learned about description lists ;-).
 
@@ -253,7 +257,7 @@ ul {
 }
 ```
 
-We did two things here: The position rule moves the list so it starts with the text. The `list-style-type` changed the bullet from a circle to a square. There are [other types as well](https://www.w3schools.com/cssref/pr_list-style-type.asp), and you can even use an image, though we won't get into that here.
+We did two things here: The position rule moves the list so it starts with the text instead of being indented. The `list-style-type` changed the bullet from a circle to a square. There are [other list-style-types as well](https://www.w3schools.com/cssref/pr_list-style-type.asp), and you can even use an image, though we won't get into that here.
 
 ## Set the ordered list style
 
@@ -269,15 +273,15 @@ It works the same way the unordered list did.
 
 ## Set the nutrition styles
 
-This is our last challenging piece and we get to learn some more advanced CSS foo. This is our goal:
+This is our last challenging piece and we get to learn some more advanced CSS fu. This is our goal:
 
 ![nutrition-list-example](../images/nutrition-list-example.png)
 
-But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if they were generated from an application or CMS of some kind, we might not know when to start the new section.
+But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if they were generated from an application or CMS of some kind, we might not know when to separate the left section from the right.
 
 What we'll do instead is use special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) to adjust every other list item.
 
-Let's do this in small steps so you can see the magic happen.
+Let's do this in incremental steps so you can see the magic happen.
 
 - Set the dotted border on the li tags with this:
 
@@ -289,10 +293,9 @@ Let's do this in small steps so you can see the magic happen.
 }
 ```
 
+Since we only want to change the list items that are within the nutrition div, we used both the `#nutrition` id and the `li` element selectors.
 
-Since we only want to change the list items that are within the nutrition div, we used both the `#nutrition` and the `li` element selectors.
-
-For the first rule we choose a "none" list style to remove the bullets, then on the next style we added the grey dotted line. Save and refresh to see your lines. Lastly, we added a red background color so you can see the outline of each `li` tag on the page. We'll take this rule out later.
+For the first rule we choose a "none" list style to remove the bullets, then on the next style we added the grey dotted line. Lastly, we added a red background color so you can see the outline of each `li` tag on the page. We'll take this rule out later. Save and refresh to see your lines.
 
 - Next, in the same rule, let's float all of the list items the left, so add this as a new line in that #nutrition li rule:
 
@@ -378,7 +381,7 @@ So, to do this we have to rewrite all the list items to have spans, and then to 
 
 ## Lets add a footer
 
-You may have noticed that this nutrition div is smack dab at the bottom of the page. Let's add a footer to close of the page nicely.
+You may have noticed that this nutrition div is hugging the bottom of the page. Let's add a footer to close of the page nicely.
 
 - Add this to the html file, after the closing `<article>` tag.
 
@@ -407,8 +410,12 @@ footer p {
 
 We used `clear: both` to make sure there are no floats affecting the footer. Still, because of floats, margins are acting super funky here, and the CSS doesn't understand how deep that nutrition section is, and that is why we have the crazy `200px` value on the margin.
 
-Tricks of the trade lesson #32: If it works, especially if you check all the browsers, then maybe it is good enough.
+Tricks of the trade lesson #32: If it works, especially if you check that it works in all the browsers (Chrome, Safari, Firefox, Edge), then maybe it is good enough.
 
 ## Save and push to Github
 
-If we haven't done so already, use the git cycle to push all your code to Github.
+Use the git cycle to push all your code to Github.
+
+## Turn in the assignment
+
+Turn in this Github URL to the Canvas assignment for CSS in-class.

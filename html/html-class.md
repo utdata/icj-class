@@ -53,6 +53,7 @@ Now to save time, we'll get the unstyled text for our document.
 
 `https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-120720-jpg`
 
+- Be usre to also add and ["alt" attribute](https://www.w3schools.com/tags/att_img_alt.asp) to your `img` tag, which allows screen readers (for the blind) to understand what the image is.
 - Put a `<p>` tag around the text that starts with "Source".
 - Add an `<a href>` tag around the word Epicurious.com and add this url:
 
@@ -61,7 +62,7 @@ Now to save time, we'll get the unstyled text for our document.
 - Add a [target attribute](https://www.w3schools.com/tags/att_a_target.asp) to open the link into a new window. This can come directly after the href url attribute.
 - Put `<p>` tags around the introductory paragraph that starts with "Purée".
 - For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
-- Create a [description list](https://www.w3schools.com/html/html_lists.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
+- Create a [description list](https://www.w3schools.com/html/html_lists_other.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
 
 ``` text
 Yield: 4 servings
