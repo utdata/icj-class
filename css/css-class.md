@@ -204,6 +204,10 @@ At this point, you might be confused why sometimes we have a period before a sty
 
 ## Set the Yield box style
 
+Here's our goal:
+
+<img src="../images/css-yield-done.png" width="320px">
+
 Let's set up the fancy lines above and below the yield values first.
 
 - In your html file, you should have a `<div>` surrounding the whole `<dl>` section, with an `id="yield"`.
