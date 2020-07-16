@@ -144,6 +144,10 @@ The other rule set sizes and margins for various sizes of headlines. You'll noti
 
 Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it specifically with CSS. We'll use a "class" because credits may not unique on a web page, and this way we could set them for all the credits on our site.
 
+Here is what we're going for:
+
+![css-source](../images/css-source.png)
+
 - In the html page, add the `class="credit"` attribute to the `<p>` tag around the credit "Source: Epicurious.com" so it looks like this:
 
 ```html
@@ -251,6 +255,10 @@ Could we have done this with paragraphs or divs? Absolutely. But then you wouldn
 ## Unordered list margins
 
 The default unordered list looks crappy. Let's move the bullets so they line up with the other text in the article. We do this with [list-position](https://www.w3schools.com/cssref/pr_list-style-position.asp).
+
+Here is our goal:
+
+![css-unordered-list](../images/css-unordered-list.png)
 
 - Add to your css file:
 
