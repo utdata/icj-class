@@ -11,7 +11,7 @@ Let's look at an example:
 /*
 If you had a function that took two arguments and returned their difference ...
 */
-function yourFunction(argument1, argument2) {
+function subtractionMachine(argument1, argument2) {
   let newValue = argument1 - argument2;
   return newValue;
 }
@@ -19,15 +19,20 @@ function yourFunction(argument1, argument2) {
 /*
 You would call it in your code by passing it the required arguments.
 If you used "return" in your function, then the "difference"
- variable below should be set to the value you "return"ed in your function
+variable below should be set to the value you "return"ed in your function
 */
-let difference = yourFunction(5, 3);
+let difference = subtractionMachine(5, 3);
 
-/* You can the log the function's value by logging the variable ... */
+/*
+You can the log the function's value by logging the variable ...
+*/
 console.log(difference);
 
-/* Or, you can log the "return"ed value directly: */
-console.log(yourFunction(5, 3));
+/*
+If I didn't want to create a variable firs, I can 
+log the "return"ed value directly:
+*/
+console.log(subtractionMachine(5, 3));
 ```
 
 
