@@ -17,9 +17,9 @@ function subtractionMachine(argument1, argument2) {
 }
 
 /*
-You would call it in your code by passing it the required arguments.
-If you used "return" in your function, then the "difference"
-variable below should be set to the value you "return"ed in your function
+We can create a variable "difference" and set it to the result or "return"
+of the subtractionMachine function. In this case below, we are giving the
+subractionMachine the "arguments" of 5 and 3.
 */
 let difference = subtractionMachine(5, 3);
 
@@ -35,10 +35,9 @@ log the "return"ed value directly:
 console.log(subtractionMachine(5, 3));
 ```
 
-
 ## Let's do it
 
-You can use the same `yourname-javascript` repo and files for this lesson that that we used for our first JavaScript lesson. We'll just keep writing in the same script tag.
+You can use the same `yourname-javascript` repo and files for this lesson that that we used for our first JavaScript lesson. We'll just keep writing in the same file and script tag.
 
 Let's write a function that takes a single argument - a number - and squares it, then uses `return` to give us back the squared number.
 
@@ -79,7 +78,7 @@ function makeSquare(theNumb) {
   console.log(try01);
 ```
 
-- Call the function two more times with a different value, but for one of these call the function makeSquare directly in the console log, like in our first example function above the "Let's Do It" heading.
+- Call the function two more times with a different value.
 
 BONUS: Update your function to use [JavaScript's Math Object](https://www.w3schools.com/Js/js_math.asp) to perform the squaring.
 
@@ -104,7 +103,7 @@ A JavaScript "property" is something about an object. Like its datatype (string 
 console.log(fullName.length)
 ```
 
-Would return a number to your console that equals the number of characters (including spaces) in `fullName`.
+The above log would return a number to your console that equals the number of characters (including spaces) in `fullName`.
 
 JavaScript "methods" are actions that can be performed on JavaScript objects. To call a method, we also follow the object with a period and the name of the method, but also `()` at the end, since we are performing an action.
 
@@ -117,7 +116,7 @@ console.log(fullNameReturn.toUpperCase())
 
 ## Save it
 
-- Commit your changes to Github.
+- Commit your changes to Github. It's important to commit and push to Github so I can see your changes at this point.
 
 ---
 
