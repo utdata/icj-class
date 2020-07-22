@@ -4,7 +4,7 @@ As we have worked on JavaScript in class, it has been a bit academic ... there h
 
 ## The Document Object Model
 
-JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript **object**. This process, called the Document Object Model -- or DOM, for short -- is a standard for how to get, change, add, or delete HTML elements using JavaScript.
+JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript **object**. This concept, called the Document Object Model -- or DOM, for short -- is a standard for how to get, change, add, or delete HTML elements using JavaScript.
 
 The DOM allows us to connect our JavaScript functions to HTML or CSS on the page.
 
@@ -33,7 +33,7 @@ Now let's get down to the detail.
   <input type="button" value="Make name">
 </form> 
 
-<h3 id="name">Name will go here</h3>
+<h3 id="nameHead">Name will go here</h3>
 ```
 
 - Save your file and open that page in a browser.
@@ -99,7 +99,7 @@ console.log(makeBetterName());
 
 You should be able to save your file, refresh your browser and see King Aragorn's name in the Console.
 
-OK, we've solved our first challenge of pulling the names from our fields. Now let's update our `<h3 id="name">` from our fuction.
+OK, we've solved our first challenge of pulling the names from our fields. Now let's update our `<h3 id="nameHead">` from our fuction.
 
 ### innerHTML
 
@@ -108,10 +108,10 @@ We can not only pluck the value of a filed with `getElementByID`, but we can als
 - In the "ELSE" part of our `makeBetterName` function, replace the "return fullName" line with this:
 
 ```js
-document.getElementById("name").innerHTML = fullName;
+document.getElementById("nameHead").innerHTML = fullName;
 ```
 
-- Save your file and refresh yor page, and now the `<h3>` tag (which had `id="name"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
+- Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
 
 We used the same DOM property `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property by assigning to it the contents of our `fullName` variable.
 
@@ -127,6 +127,8 @@ Our function is working like we want, but it's being called each time we refresh
 ```html
 <input type="button" value="Make name" onclick="makeBetterName()">
 ```
+
+What we've done here is used the [onclick](https://www.w3schools.com/jsref/event_onclick.asp) Event to add interactivity to our button. Until now it was just an element on the page that didn't do anything, but when we click on the button it fires the `makeBetterName` function, which uses our "name machine" to insert our text inside the `<h3>` we've specified through its id.
 
 - Save your file and refresh the page.
 - Click the "Make name" button and it should update the `<h3>` tag.
