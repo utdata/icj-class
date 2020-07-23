@@ -141,6 +141,10 @@ That is all well and good if the game doesn't end in a tie, but I'm a soccer fan
 - Review the W3Schools tutorial on [if, else and else if](https://www.w3schools.com/js/js_if_else.asp) or any other source you like and improve the function above to handle ties. Make it print "It was a tie" if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an `else if` to the function.
 - Make sure you add a new console log with the same home/away values to test your work.
 
+## Commit your work to Github
+
+Go ahead and save and commit your work and push it to Github so I can see your progress at this point.
+
 ---
 
 [Part 5: Bringing it together](js-class-04.md)
