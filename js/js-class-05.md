@@ -17,6 +17,10 @@ We will create an HTML form that allows a user to enter their first, middle and 
 3. Copy our `makeBetterName` function from our previous exercise.
 4. Modify that function and connect it to our forms elements and buttons.
 
+It will end up working like this:
+
+![js-form](../images/js-form.gif)
+
 Now let's get down to the detail.
 
 ## Create our page
