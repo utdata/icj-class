@@ -1,140 +1,146 @@
-# Bringing HTML, JavaScript together
+# Functions with flow control
 
-As we have worked on JavaScript in class, it has been a bit academic ... there has been no action on our web page. Let's change that, and marry our JavaScript to our HTML and make our our page do something.
+Now that we have a handle on how functions can work, we're going to have our functions make decisions based on values we've given it.
 
-## The Document Object Model
+## Conditional statements
 
-JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript **object**. This concept, called the Document Object Model -- or DOM, for short -- is a standard for how to get, change, add, or delete HTML elements using JavaScript.
+With JavaScript we can perform tests and make decisions based on the results of the test. There are [three types](https://www.w3schools.com/js/js_if_else.asp), in order of complexity:
 
-The DOM allows us to connect our JavaScript functions to HTML or CSS on the page.
+- An `if` statement allows us to perform an action if the test is true.
+- An `else` statement allows us to add an action if the test is false.
+- An `else if` statement allow us to perform a new test if the first `if` is false.
 
-## Our goal
+There is also `switch`, but we're not going to cover that here.
 
-We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. And overview of steps:
+## Let's create a better name function
 
-1. Create a new html page.
-2. Add some basic form elements and a button.
-3. Copy our `makeBetterName` function from our previous exercise.
-4. Modify that function and connect it to our forms elements and buttons.
+Let's take our `makeName` function we made before and make it mo betta.
 
-Now let's get down to the detail.
+As you recall, our previous function would take three names and put them together and return a full name. What if our user only gave us their middle initial? Then we would have returns like "Arthur C Clarke".
 
-## Create our page
+How might we test if the middle name is an initial? And then what might we do if that test is true?
 
-- Inside the same `yourname-javascript` repo we have been working in, create a new file called `form.html` and open it in VS Code.
-- Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`. Don't capitalize `html`. 
-- In between the <body> tags of the document, add the following HTML code. I'll explain afterward:
+Well, we know we can find out how long a string is with the property `.length`. If our middle name is only one character, then it would be an initial, right?
 
-```html
-<form id="nameForm">
-  <p>First name: <input type="text" name="first" value="Aragorn"></p>
-  <p>Middle name: <input type="text" name="middle" value="Elessar"></p>
-  <p>Last name: <input type="text" name="last" value="Telcontar"></p>
-  <input type="button" value="Make name">
-</form> 
+We'll start by building our base function, then we'll build on it to make it better.
 
-<h3 id="nameHead">Name will go here</h3>
-```
+- Add a console.log with the text "Making better name function:". This is just so we can see where this code starts working on our console.
+- Make a new function called `makeBetterName` that takes three arguments, `firstName`, `middleName` and `lastName`.
+- Inside that function we create a variable called `fullName` and take our inputs to make our name.
+- Return `fullName` out of the function.
 
-- Save your file and open that page in a browser.
+```js
+// Just a log to show in our Console
+console.log("Making a better name function:");
 
-We've introduced several new HTML elements here that we haven't used before.
-
-- [Forms](https://www.w3schools.com/html/html_form_elements.asp) provide a way for HTML pages to collect user input. We've given our form and id of `nameForm` so we can target it with JavaScript later.
-- [Input](https://www.w3schools.com/html/html_form_input_types.asp) elements define how we can provide the input. We have three inputs with `type="text"`, which gives us a text box. We have given each a `name` attribute, which we can access as a "property" of the form element with JavaScript. We also defined a default `value` to display text until we type something else in.
-- Lastly, we have a `type="button"` input, which we will use to fire our JavaScript function. (If you click on the button now, it doesn't do anything. Yet.)
-
-## Copy our function
-
-- Create a new <script> tag under the HTML we added, but just before the closing `</body>` tag.
-- Let's add a copy of our `makeBetterName` function into `form.html` page in the script tag.
-
-Here is the code:
-
-```html
-<script>
-function makeBetterName(fName, mName, lName) {
-  if (mName.length === 1) {
-    let fullName = fName + " " + mName + ". " + lName;
-    return fullName;
-  } else {
-    let fullName = fName + " " + mName + " " + lName;
-    return fullName;
-  }
+// A better name function to fix middle initials
+function makeBetterName(firstName, middleName, lastName) {
+  let fullName = firstName + " " + middleName + " " + lastName;
+  return fullName;
 }
-</script>
 ```
 
-## Modify our function
+So we've made yet another name machine like your last homework. It's OK if you've already used these variable names in your other code because these are only used _inside_ of this function, another example of Scope.
 
-There are couple of logic changes we need to make to our function to work with our form.
+OK, now we need to use the function so we can see the return. We need test for both true and false conditions, so we really need two tests. This time we're going to call the `makeBetterName` function right inside of some `console.log`s instead of creating variables first.
 
-- Instead of us sending name values into the function with console.log, we need the function to grab the values from our text inputs in the form.
-- Instead of returning our fullName value to the console.log, we want to replace the text in our `<h3>` tag so we can see it happen on the page.
-
-### getElementById
-
-Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elements.asp), we can find any named element on our HTML page. Once we "have" that object, we can find its various properties, like how long it is, or the contents of the tag, etc.
-
-The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we have "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
-
-(If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`).
-
-- In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
-- Add the following three lines before the IF in your `makeBetterName` function:
+- After your function closes (the last `}`), add these console.log tests:
 
 ```js
-let fName = document.getElementById("nameForm").first.value;
-let mName = document.getElementById("nameForm").middle.value;
-let lName = document.getElementById("nameForm").last.value;
+console.log(makeBetterName("Joan", "Marie", "Larkin"));
+console.log(makeBetterName("John", "F", "Kennedy"));
 ```
 
-What we are doing here is instead of feeding our names into the function through arguments, we are using `document.getElementByID` to find and get the "nameForm" element, and then we are accessing each input by its "name" property (i.e. `.first`). The property `.value` gives us the text of that is inside that input.
+- Save your code and refresh your page so you can see the name. "John F Kennedy" needs the period after the initial, which we'll tackle with an `if` statement.
 
-- Now, after the function, add a console.log that calls the function, but don't feed it names like we did before:
+### Make middle initial test
+
+To figure out if our `middleName` object is a single letter we can test its `.length` property. You might [look up the length property](https://www.google.com/search?q=javascript+length+property&oq=javascript+length+prop) to get a further explanation of it, but basically it counts the characters of the object.
+
+We'll use an `if` to do this test. Let's talk about how those work in JavaScript. Written in one line, the logic works like this:
+
+`if (perform the test) {do this if true}`
+
+1. For our (perform the test), we want to check if the length of middleName is one character.
+2. For our {do this if true} we will just `return true;`, which will write the word "true" to the Console for how.
+
+- Update your `makeBetterName` function to add the `if` statement below to your  function and include the `return false;` after the if statement.
 
 ```js
-console.log(makeBetterName());
+// Make a name with middle initial
+function makeBetterName(firstName, middleName, lastName) {
+  if (middleName.length === 1) {
+    return true;
+  }
+  let fullName = firstName + " " + middleName + " " + lastName;
+  return fullName;
+}
 ```
 
-You should be able to save your file, refresh your browser and see King Aragorn's name in the Console.
+Note the test here: `middleName.length === 1)`. We checking the **length** of `middleName` and testing if the value is "1", which would indicate a middle initial. Note that we use three equal signs `===` to test for truthiness.
 
-OK, we've solved our first challenge of pulling the names from our fields. Now let's update our `<h3 id="nameHead">` from our fuction.
+- Save your files and test in your browser to make sure you are getting Joan's name or a `true` value for John's "F".
 
-### innerHTML
+### Add period if true
 
-We can not only pluck the value of a filed with `getElementByID`, but we can also change existing text by using the [`.innerHTML` property](https://www.w3schools.com/js/js_htmldom_html.asp).
+Now let's update our true statement to fix our middle name. Here is conceptually what we need to do:
 
-- In the "ELSE" part of our `makeBetterName` function, replace the "return fullName" line with this:
+1. If our `middleName`is one character, then add a period to the end.
+
+If your `middleName` is one character we can use string concatenation reset the `middleName` to itself plus the period. Because `middleName` is an argument for our function, it is already instantiated as a variable, and it is only available inside this function. So, we can just modify it and then return the value out of the function.
+
+- In the `if` part of the function, replace the `return true` with a line that modifies the `middleName` variable to add the period. Code is shown below.
+- Update the return statement to return `middleName`.
+- Save and refresh your browser to check it. You should be getting back the middle initial and period if true, and "false" if false.
 
 ```js
-document.getElementById("nameHead").innerHTML = fullName;
+// Make a name with middle initial
+function makeBetterName(firstName, middleName, lastName) {
+  if (middleName.length === 1) {
+    // adding and updating here
+    middleName = middleName + ".";
+  }
+  let fullName = firstName + " " + middleName + " " + lastName;
+  return fullName;
+}
 ```
 
-- Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
+Add another console.log with another name that uses a middle initial and make sure that works, too.
 
-We used the same DOM property `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property by assigning to it the contents of our `fullName` variable.
+## Using else and if else
 
-- Go ahead and replace the `return fullName` line in the IF portion of the function with the same innerHTML line above, so it will work later when we have a single-letter middle name.
+Using a single `if` conditional is pretty straight-forward, but what if you want to perform a different action if the test fails? That's what we'll tackle next.
 
-### Hooking up the button
+I'm going to give you a function that tests which of two scores is higher and returns text with the answer. It has both an `if` and an `else`. I'll explain it, then give you a challenge to improve it.
 
-Our function is working like we want, but it's being called each time we refresh the page, and not when we click the button, so let's fix that. We do so by removing our console.log line, and then adding an "onclick" attribute to our button.
+- Add this code to your script tag, save and refresh your browser to see the console results. 
 
-- Remove the `console.log(makeBetterName())` line that we added earlier to test the function.
-- In form in the HTML body, update the input button to the following:
-
-```html
-<input type="button" value="Make name" onclick="makeBetterName()">
+```js
+  console.log("scoreCompare function");
+  function scoreCompare(home, away) {
+    if (home > away) {
+      return "Home team wins!";
+    } else {
+      return "Away team wins :("
+    }
+  }
+  console.log(scoreCompare(5,3));
+  console.log(scoreCompare(3,5));
 ```
 
-What we've done here is used the [onclick](https://www.w3schools.com/jsref/event_onclick.asp) Event to add interactivity to our button. Until now it was just an element on the page that didn't do anything, but when we click on the button it fires the `makeBetterName` function, which uses our "name machine" to insert our text inside the `<h3>` we've specified through its id.
+Let's walk through this line by line:
 
-- Save your file and refresh the page.
-- Click the "Make name" button and it should update the `<h3>` tag.
-- Put your own names into the text boxes and hit the button and it should change the headline.
-- Now that the form is working, you can remove the default values for King Aragorn in the names.
+- The first line is just a console log so you can see it in your browser.
+- The next line sets up the function called `scoreCompare` and it takes two arguments: `home` and `away`.
+- The `if` statement compares the home and away values, and if the home value is higher it returns the text "Home team wins!?
+- If the `if` statement is false, then the `else` kicks in and the function returns the text "Away team wins :(".
+- The two console logs at the bottom call the function with differing values.
+
+That is all well and good if the game doesn't end in a tie, but I'm a soccer fan and games often end in a tie. So here is your charge:
+
+- Review the W3Schools tutorial on [if, else and else if](https://www.w3schools.com/js/js_if_else.asp) or any other source you like and improve the function above to handle ties. Make it print "It was a tie" if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an `else if` to the function.
+- Make sure you add a new console log with the same home/away values to test your work.
 
 ---
 
-[Part 5](js-class-05.md)
+[Part 5: Bringing it together](js-class-04.md)

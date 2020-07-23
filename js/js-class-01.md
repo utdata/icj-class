@@ -170,4 +170,4 @@ OK, we now have created a variable that has your entire name, built from other v
 
 ---
 
-[Part 2](js-class-02.md)
+[Part 2: Functions](js-class-02.md)

@@ -1,4 +1,3 @@
-
 # Functions in JavaScript
 
 Functions allow you to reuse code and be more efficient in your programming.
@@ -88,31 +87,10 @@ One thing of note ... the variable that was declared inside the function, `squar
 
 ## Functions on your own
 
-- Add a comment with the intent of your function `// Functions on my own`. 
-- Write another function (and name it anything you want, but I named mine `makeName`) that takes three arguments -- `firstName`, `middleName` and `lastName` -- and uses the `+` operator to combine the three arguments to form a full name. Make sure you add spaces (' ') in between the arguments so the returned value doesn't look like ChristianClayMcDonald, or whatever. 
+- Add a comment with the intent of your function `// Functions on my own`.
+- Write another function (and name it anything you want, but I named mine `makeName`) that takes three arguments -- `firstName`, `middleName` and `lastName` -- and uses the `+` operator to combine the three arguments to form a full name. Make sure you add spaces (' ') in between the arguments so the returned value doesn't look like ChristianClayMcDonald, or whatever.
 - In your code, call the function with three different sets of names to make sure it works and log the returned value to the console each time.
-- For one of those names, I want you to use Robert "Beto" O'Rourke. Note that you will have to figure out a way to include the apostrophe in his last name and the double-quotes around "Beto". 
-
-## Property vs method
-
-Because they look similar and can get confusing, let's discuss the difference between properties and methods.
-
-A JavaScript "property" is something about an object. Like its datatype (string vs integer) or its length ("Bye" is three characters long). To call it, add a period after the variable name.
-
-```js
-console.log(fullName.length)
-```
-
-The above log would return a number to your console that equals the number of characters (including spaces) in `fullName`.
-
-JavaScript "methods" are actions that can be performed on JavaScript objects. To call a method, we also follow the object with a period and the name of the method, but also `()` at the end, since we are performing an action.
-
-If we want to see our `fullName` in uppercase, we can call a method on it.
-
-```js
-let fullNameReturn = makeFullName("Christian", "Clay", "McDonald");
-console.log(fullNameReturn.toUpperCase())
-```
+- For one of those names, I want you to use Robert "Beto" O'Rourke. Note that  his name has both a single quote and double quotes, so you will have to escape one or the other depending the quote style you used in your function.
 
 ## Save it
 
@@ -120,4 +98,4 @@ console.log(fullNameReturn.toUpperCase())
 
 ---
 
-[Part 3](js-class-03.md)
+[Part 3: Objects](js-class-03.md)

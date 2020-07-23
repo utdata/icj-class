@@ -49,11 +49,12 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
     - Conditional statements
   - Module 3: Functions
     - Functions: Interactive lesson
-- [JS basics](js/js-class-01.md)
-- [JS functions](js/js-class-02.md)
-- [JS flow control](js/js-class-03.md)
-- [JS with html](js/js-class-04.md)
-- [JS jQuery/Datatables](js/js-class-05.md)
+- [JS Basics](js/js-class-01.md)
+- [JS Functions](js/js-class-02.md)
+- [JS Objects](js/js-class-03.md)
+- [JS Flow control](js/js-class-04.md)
+- [JS with html](js/js-class-05.md)
+- [JS jQuery/Datatables](js/js-class-06.md)
 
 ### Sass
 
