@@ -147,4 +147,4 @@ Go ahead and save and commit your work and push it to Github so I can see your p
 
 ---
 
-[Part 5: Bringing it together](js-class-04.md)
+[Part 5: Bringing it together](js-class-05.md)
