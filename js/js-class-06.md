@@ -25,7 +25,7 @@ The steps below will walk you through using the DataTables plug-in to make an in
 
 ### #1: "Zero configuration"
 
-- Create a new file in your javascript folder called `datatable.html` and add the basic HTML5 boilerplate using Emmet.
+- Create a new file in your javascript-practice project folder called `datatable.html` and add the basic HTML5 boilerplate using Emmet.
 - Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
 - On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
 - On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:
@@ -55,6 +55,10 @@ The parts of this exercise to add the Datatables JavaScript and CSS files assume
 1. Create a copy of the HTML file you created above and call it `scrolling.html`. 
 2. Go to the "Scroll Vertical" example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in your <script></script> tags in the new HTML file you just created (_scrolling.html_) with the JavaScript on the "Scroll Vertical" example page.
 3. You should now have a table that isn't paginated and instead can be scrolled through, just like the example on the DataTables website.
-3. That's it! Commit the new file to your repository and publish the repository on Github.
 
-Post the link to your repository on Canvas.
+## Commit to Github and turn in
+
+That is our last JavaScript lesson!
+
+- Commit the new files to your repository and push ot Github.
+- Post the link to your repository to the Canvas assignment.

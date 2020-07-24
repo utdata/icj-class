@@ -137,6 +137,10 @@ What we've done here is used the [onclick Event](https://www.w3schools.com/jsref
 - Put your own names into the text boxes and hit the button and it should change the headline.
 - Make sure it still works with a middle initial.
 
+## Commit your change to Github
+
+Make sure you save, commit and push your changes to Github.
+
 ---
 
 [Part 5: Datatables plugin](js-class-06.md)
