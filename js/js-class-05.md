@@ -13,9 +13,10 @@ The DOM allows us to connect our JavaScript functions to HTML or CSS on the page
 We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. And overview of steps:
 
 1. Create a new html page.
-2. Add some basic form elements and a button.
+2. Introduce form elements through text boxes and a button.
 3. Copy our `makeBetterName` function from our previous exercise.
-4. Modify that function and connect it to our forms elements and buttons.
+4. Modify that function to use elements from the form _and_ update HTML on the page.
+5. Connect the form button to the makeBetterName function.
 
 It will end up working like this:
 
@@ -50,8 +51,7 @@ We've introduced several new HTML elements here that we haven't used before.
 
 ## Copy our function
 
-- Create a new <script> tag under the HTML we added, but just before the closing `</body>` tag.
-- Let's add a copy of our `makeBetterName` function into `form.html` page in the script tag.
+- Copy the `<script>` tag below and place it between our form element and the closing `</body>` tag on the page.
 
 Here is the code:
 
@@ -67,6 +67,8 @@ function makeBetterName(fName, mName, lName) {
 </script>
 ```
 
+This is a copy of our makeBetterName function from the last exercise. We'll now refactor it to meet our needs here.
+
 ## Modify our function
 
 There are couple of logic changes we need to make to our function to work with our form.
@@ -78,12 +80,12 @@ There are couple of logic changes we need to make to our function to work with o
 
 Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elements.asp), we can find any named element on our HTML page. Once we "have" that object, we can find its various properties, like how long it is, or the contents of the tag, etc.
 
-The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we have "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
+The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
 
 (If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`).
 
 - In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
-- Add the following three lines before the IF in your `makeBetterName` function:
+- Add the following three lines inside the function before the IF in your `makeBetterName` function:
 
 ```js
 let fName = document.getElementById("nameForm").first.value;
@@ -101,13 +103,13 @@ console.log(makeBetterName());
 
 You should be able to save your file, refresh your browser and see King Aragorn's name in the Console.
 
-OK, we've solved our first challenge of pulling the names from our fields. Now let's update our `<h3 id="nameHead">` from our fuction.
+OK, we've solved our first challenge of pulling the names from our fields. Now let's update our `<h3 id="nameHead">` from our function.
 
 ### innerHTML
 
-We can not only pluck the value of a filed with `getElementByID`, but we can also change existing text by using the [`.innerHTML` property](https://www.w3schools.com/js/js_htmldom_html.asp).
+We can not only pluck the value of a field with `getElementByID`, but we can also change existing text by using the [`.innerHTML` property](https://www.w3schools.com/js/js_htmldom_html.asp).
 
-- In the "ELSE" part of our `makeBetterName` function, replace the "return fullName" line with this:
+- In our function, replace the line `return fullName;` with this:
 
 ```js
 document.getElementById("nameHead").innerHTML = fullName;
@@ -115,13 +117,11 @@ document.getElementById("nameHead").innerHTML = fullName;
 
 - Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
 
-We used the same DOM property `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property by assigning to it the contents of our `fullName` variable.
-
-- Go ahead and replace the `return fullName` line in the IF portion of the function with the same innerHTML line above, so it will work later when we have a single-letter middle name.
+This new line of code uses the same DOM method `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property to shove content into it. What content was that? It's the contents of the `fullName` which now comes from our text boxes on the page.
 
 ### Hooking up the button
 
-Our function is working like we want, but it's being called each time we refresh the page, and not when we click the button, so let's fix that. We do so by removing our console.log line, and then adding an "onclick" attribute to our button.
+Our function is working like we want, but it's being called each time we refresh the page, and not when we click the button, so let's fix that. We do so by removing our console.log, and then adding an "onclick" attribute to our button.
 
 - Remove the `console.log(makeBetterName())` line that we added earlier to test the function.
 - In form in the HTML body, update the input button to the following:
@@ -130,11 +130,12 @@ Our function is working like we want, but it's being called each time we refresh
 <input type="button" value="Make name" onclick="makeBetterName()">
 ```
 
-What we've done here is used the [onclick](https://www.w3schools.com/jsref/event_onclick.asp) Event to add interactivity to our button. Until now it was just an element on the page that didn't do anything, but when we click on the button it fires the `makeBetterName` function, which uses our "name machine" to insert our text inside the `<h3>` we've specified through its id.
+What we've done here is used the [onclick Event](https://www.w3schools.com/jsref/event_onclick.asp) to add interactivity to our button. Until now it was just an element on the page that didn't do anything, but now when we click on the button it fires the `makeBetterName` function, which uses our "name machine" to insert our text inside the `<h3>` we've specified through its id.
 
 - Save your file and refresh the page.
 - Click the "Make name" button and it should update the `<h3>` tag.
 - Put your own names into the text boxes and hit the button and it should change the headline.
+- Make sure it still works with a middle initial.
 - Now that the form is working, you can remove the default values for King Aragorn in the names.
 
 ---
