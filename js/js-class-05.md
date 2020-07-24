@@ -136,7 +136,6 @@ What we've done here is used the [onclick Event](https://www.w3schools.com/jsref
 - Click the "Make name" button and it should update the `<h3>` tag.
 - Put your own names into the text boxes and hit the button and it should change the headline.
 - Make sure it still works with a middle initial.
-- Now that the form is working, you can remove the default values for King Aragorn in the names.
 
 ---
 
