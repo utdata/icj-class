@@ -17,7 +17,11 @@ Tables are great for displaying tabular data (hence the word table). But often t
 ## Goals of this lesson
 
 1. Add the required DataTables files to an HTML page (there's a CSS file and a JavaScript file, which we'll handle in the first problem below.)
-2. Call DataTables on your table using the example JavaScript provided on the DataTables website
+2. Call DataTables on your table using the example JavaScript provided on the DataTables website.
+
+It will look similar to this:
+
+![js-datatables](../images/js-datatable.gif)
 
 ## The steps
 
