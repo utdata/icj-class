@@ -59,12 +59,10 @@ Here is the code:
 <script>
 function makeBetterName(fName, mName, lName) {
   if (mName.length === 1) {
-    let fullName = fName + " " + mName + ". " + lName;
-    return fullName;
-  } else {
-    let fullName = fName + " " + mName + " " + lName;
-    return fullName;
+    mName = mName + ".";
   }
+  let fullName = fName + " " + mName + " " + lName;
+  return fullName;
 }
 </script>
 ```
