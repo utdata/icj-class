@@ -1,5 +1,7 @@
 # CSS class exercise
 
+> This lesson has a companion video that walk through it. Find it in Canvas under Panopto Video.
+
 CSS is the skin and DNA attributes that make one HTML skeleton look different from another. We use CSS to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson, and make it pretty.
 
 ## Goals 

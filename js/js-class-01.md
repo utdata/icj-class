@@ -1,5 +1,7 @@
 # JavaScript class assignment
 
+> There are a series of videos that are companions to this lesson. Find them in Canvas under Panopto Video.
+
 JavaScript is the programming language of the browser. We're going to practice using JavaScript by manipulating numbers, strings and making functions and seeing the result in our browser Console.
 
 The browser Console is a way for us to interact with JavaScript: We can see results of code through a "console log" or we can even write code there, but we'll mainly write in an HTML file and write to the console log.

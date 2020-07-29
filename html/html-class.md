@@ -1,5 +1,7 @@
 # HTML class assignment
 
+> This lesson has a companion video that walks through the lesson. Find it in Canvas under Panopto Video.
+
 The goal of this assignment is to:
 
 - Create git repo on your local machine to keep code under version control.
