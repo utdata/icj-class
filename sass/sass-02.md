@@ -16,20 +16,7 @@ The Bootstrap framework that we will use later in this class takes advantage of 
 
 ## Sass features
 
-We'll walk through the [Sass guide](https://sass-lang.com/guide) and talk about the features in class. If you are doing this on your own, resist the urge to install Sass, because we'll handle that later.
-
-## Overview and goals for this lesson
-
-We will start with a web project that is a two-page website for a band. It has been coded rather simply with regular, vanilla CSS. It works just fine, but as the site grows and there are more changes, having "Sassy CSS" will help with maintainability. So, our goals here are to:
-
-- Understand how the Sass structure works from a technical level:
-  - What is Node.js and how it is structured.
-  - How Node.js compiles our Sass SCSS into regular CSS the browser understands.
-- Rework the CSS into SCSS to:
-  - Improve readability of our styles through nesting.
-  - Use variables for increase flexibility of our styles.
-  - Rewrite style rules for efficiency and reusability.
-- We'll write new style rules in the Sassy way.
+We'll walk through the [Sass guide](https://sass-lang.com/guide) and talk about the features in class. If you are doing this on your own, resist the urge to install Sass, because we've already done that with our project template.
 
 ----
 

@@ -5,4 +5,4 @@
 - [Refactoring with Sass](sass-03.md)
 - [Publishing to the web](sass-04.md)
 
-This project uses the template repo [icj-sass-refactor-template](https://github.com/utdata/icj-sass-refactor-template).
+This project uses the template repo [icj-sass-template](https://github.com/utdata/icj-sass-template).

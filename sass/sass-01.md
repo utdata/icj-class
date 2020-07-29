@@ -1,12 +1,14 @@
 # Before Sass, let's talk Node.js
 
+> Before starting this lesson, make sure you've done [part two of setting up](https://github.com/utdata/icj-setting-up/blob/master/README.md).
+
 We will be learning about Sass through refactoring existing CSS into Sassy CSS. We are also introducing the Node.js development environment and because of this we need to take a detour to talk about it.
 
 **Node.js** is an open-source programming framework built using JavaScript. Many programmers like it because it allows them to write JavaScript not just for “front-end” browser tasks, but also for server-based or “back-end” tasks.
 
 For our purposes, consider Node as a development environment and ecosystem to use a bunch of mini-programs. Developers will create these mini-programs — known as packages — and share them through Node Package Manager, or **npm** for short. Think of npm as the App Store for these mini-programs. When we need something on our site like a photo slideshow, we don't have to reinvent the wheel because someone else already has, and they published it to the npm "app store".
 
-We need a number of these apps to convert Sass SCSS to CSS for our websitex .
+We need a number of these apps to convert Sass SCSS to CSS for our website.
 
 ## Downloading, running our project
 
@@ -69,13 +71,15 @@ As mentioned, files from the `src` folder get processed into `docs`. However, so
 
 The `docs` folder ends up being the "root" or base level of our site. All other files need to need to be referenced relative to where they live inside `docs`.
 
-- Files in the `src/html` get moved to the root level of `docs`. These are our website pages.
-- Files in the `src/scss` folder get compiled into `docs/css`. This means if you have an HTML file that lives at the root of `docs`, but want to link to a compiled css file of the same name, but with a `.css` extension, The link will be `href="css/filename.css"`
-- Files in the `src/img` folder are moved into `docs/img`. This means since your `index.html` file ends up in `docs`, then your img link needs to be `img src="img/filename.jpg"`.
+- Files in the `src/html` get moved to the root level of `docs`. **It's important to realize where these files get published in relation to your `css` and `img` folders.**
+- Sass files in the `src/scss` folder get compiled/rewritten into the `docs/css` folder. **There are two important implications of this:**
+  - While the filename you edit ends in `.scss`, the compiled file in `docs/css` a `.css` extension.
+  - This means your HTML files that end up at the root of `docs` will need to link to a compiled css file of the same name, but with a `.css` extension, the link will be `href="css/filename.css"`
+- Files in the `src/img` folder are moved into `docs/img`. Since your `index.html` file ends up in `docs`, then your img link needs to be `img src="img/filename.jpg"`.
 
 ### Configurations files
 
-The remaining files and folders in the root folder are part of the development ecosystem.
+The remaining files and folders in the root folder are part of the development ecosystem. We don't mess with this files much in our lessons, but here is a description of what they do:
 
 - `.gitignore` tells Git which files to ignore sending to Github.
 - `README.md` describes what the repo is about. It has our installation instructions.

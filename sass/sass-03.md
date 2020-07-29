@@ -1,21 +1,34 @@
 # Refactoring our Sass
 
+## Overview and goals for this lesson
+
+We are starting with a web project that is a two-page website for a band. It has been coded rather simply with regular, vanilla CSS. It works just fine, but as sites grow with more code, having "Sassy CSS" helps with maintainability. So, our goals here are to:
+
+- Understand how the Sass structure works from a technical level:
+  - What is Node.js and how it is structured.
+  - How Node.js compiles our Sass SCSS into regular CSS the browser understands.
+- Rework the CSS into SCSS to:
+  - Improve readability of our styles through nesting.
+  - Use variables for increase flexibility of our styles.
+  - Rewrite style rules for efficiency and reusability.
+- We'll write new style rules in the Sassy way.
+
 If you don't already have your code open in VS Code, go ahead and open it. Run `$ gulp dev` in your terminal to start the development environment.
-
-
 
 ## CSS is SCSS
 
-Any valid CSS is also valid SCSS. As such, we prep our project to use our new SCSS setup by using what we already have.
+Any valid CSS is also valid SCSS. As such, we'll copy traditional CSS into our new SCSS setup.
 
 - Copy the contents of `src/scss/old-styles.css` and paste it into `src/scss/new-styles.scss`. Once you do, you might see your terminal kick off the sass task to compile the file.
-- Now change the css `<link>` tag hrefs in our `src/html/index.html` and `src/html/shows.html` files to point to `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now.
+- Now, in our `src/html/index.html` and `src/html/shows.html` files, change the css `<link>` tag hrefs to point to `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now.
 
 ## Variables
 
-One of the most useful features of Sass is to define variables for certain CSS values. Once you use the variable names in your code, you can then change the definition of the variable in one place, affecting your whole site. This makes it easy to change or support themes throughout your website.
+One of the most useful features of Sass is to define variables for certain CSS values. Once you start using the variable names in your code, you can then change the definition of the variable in one place instead of throughout the code base. This makes it easy to support or change themes and make wholesale changes throughout your website.
 
-You create variable names with a dollar sign and then define its value like a CSS rule. When you want to use that variable's value, use that variable name as the rule. We set all the variables at the top of the file so they can be found easily.
+You create variable names with a preceding dollar sign and then define its value like a CSS rule. When you want to use that variable's value, use that variable name (with the `$`) as the CSS rule. As a matter of convention, we set all the variables at the top of our CSS files so they can be found easily.
+
+Here is an example:
 
 ```scss
 // set the variable
@@ -34,18 +47,18 @@ blockquote {
 }
 ```
 
-Now, if we wanted to change our dark borders from 3px black lines to 5px grey lines, we would do it ONCE when we set the `$dark-border` variable, and it would change throughout the site.
+Now, if we wanted to change our dark borders from 3px black lines to 5px grey lines, we would do it ONCE when we set the `$dark-border` variable at the top of the file, and it would change the value throughout the site.
 
 ### Variables exercise
 
 There are two colors defined in our styles for our Harvey Dale and the Cements band website. Let's Sassify them.
 
-- Create two new variables at the top of your `src/scss/new-styles.scss` file called `$primary-color` and `$secondary-color` and define their values from what is in the CSS.
-- Replace the values where those colors were used with the new variable names.
+- Create two new variables at the top of your `src/scss/new-styles.scss` file called `$primary-color` and `$secondary-color` and define their values from what is currently in the CSS.
+- In your CSS rules, replace the color values with the new variable names.
 - Save and check your page. There should be no difference.
 - Change your `$primary-color` variable value to a new color, like "red", and see if what happens.
 
-You should see your background color change on _both_ the "home" page and the "shows" page.
+You should see your background color change on _both_ the "home" page and the "shows" page. Be sure to check both of them.
 
 If you don't see a change, then make sure that your `gulp dev` task is running in your Terminal so your Sass is getting compiled. If that is working but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `new-styles.css` file.
 
@@ -53,7 +66,7 @@ If you don't see a change, then make sure that your `gulp dev` task is running i
 
 HTML code often has a clearly nested hierarchy. A `nav` element is often a parent to child `li` elements that make up the navigation links on a website.
 
-CSS doesn't have the same hierarchy by default, but it would be useful in some cases. With Sass, we can use a similar visual hierarchy. We do need to be careful not to nest too much, or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html heirarchy because then small changes in the HTML might break our styles.
+CSS doesn't have the same hierarchy by default, but Sass offers a similar visual hierarchy. Whlie it is useful, we do need to be careful not to nest too much or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html hierarchy because then small changes in the HTML might break our styles.
 
 Here is an example:
 
@@ -70,7 +83,7 @@ nav {
 }
 ```
 
-With this code above, we have specified the styles we are applying to the `ul` and `li` tags will only be applied if they are inside a `nav` element. When they get compiled, it will look like this:
+With this code above, we have specified the styles we are applying to the `ul` and `li` tags will _only_ be applied if they are inside a `nav` element. When they get compiled, it will look like this:
 
 ```css
 nav ul {
@@ -84,26 +97,48 @@ nav li {
 }
 ```
 
-Written in our first Sassy way, we can immediately understand that the `ul` and `li` rules apply only to the `nav` element. This particular example doesn't save lines of code, but it can.
+Written in our first Sassy way, we can immediately understand that the `ul` and `li` rules apply only to the `nav` element. It's easier to understand and maintain.
 
 ### Nesting exercise
 
 In our band website and the structure of our HTML, we can see there is `<div class="container">` that is the parent to all of what is contained in the body. There are two other div elements, `<div class="nav">` and `<div class="content">` that are nested inside the container.
 
-Looking at the CSS file, we have class elements for each of those, as well. Let's refactor our SCSS to reflect this nesting so it is more understandable.
+Looking at the CSS file, we have class rules that apply only to the `nav` and `content` divs. Let's refactor our SCSS to reflect this nesting so it is more understandable.
 
 If you look through your CSS, you'll see there are two rules dealing with `.nav` class. It is written this way so that the rule applied to the `<h4>` tag would only happen if it is also inside a div classed as `class="nav"`. This is a opportunity to nest the `h4` rule inside the `.nav` rule in your css so it is clear they work together.
 
 - In `new-styles.scss`, nest the selectors and their properties appropriately. Don't forget you'll no longer need the `.nav` part `.nav h4` if that selector is nested.
 
+This result should look like this:
+
+```css
+.nav {
+  width: 15%;
+  min-width: 140px;
+  color: #FFCFCF;
+  padding-top: 55px;
+  padding-right: 30px;
+  text-align: center;
+  
+  h4 {
+  -webkit-margin-before: 0;
+  margin-left: 50px;
+  }
+}
+```
+
 Look at your page in the browser to make sure everything is still working.
+
+### On your own
 
 - Back in your HTML file, consider `<div class="content">`. What elements are first descendants of `.content` in the css? In `new-styles.scss`, nest these selectors accordingly.
 - Do any of first descendants of `.nav` or `.content` style rules have descendants with properties? In `new-style.scss`, nest li and its properties inside of ul.
 
 Again, make sure nothing is broken on the page display.
 
-Let's pause and recollect. Do you notice any value that repeats itself over and over again inside of .content? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of .content.
+### Any children rule
+
+Let's pause and reflect. Do you notice any value that repeats itself over and over again inside of .content? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of .content.
 
 There's a shorthand CSS selector for applying a property to all direct children, `> * {rule;}`. Using this, we can set the padding rule to all the children of .content.
 
@@ -113,27 +148,27 @@ There's a shorthand CSS selector for applying a property to all direct children,
 
 ## Partials
 
-One advantage Sass allows you is to separate your SCSS rules into discrete files to help maintainability. It makes it easier to find the styles you are editing. (CSS would allow you to import multiple files, but each call would increase load time for your page. With Sass, they all get combined into a single file.)
+One advantage Sass allows you is to separate your SCSS rules into discrete files to help maintainability. It makes it easier to find the styles you are editing. (You _could_ import many CSS files into your HTML file, but each call would increase load time for your page. With Sass, they all get combined into a single file.)
 
-Sass partials filenames should start with an underscore, like `_nav.scss`, so Sass knows it will be imported and so it will not create a new compiled `.css` file.
+Sass partials filenames should start with an underscore, like `_nav.scss`, so Sass knows it will be imported and not create a new compiled `.css` file.
 
-## Partials practice
+### Partials practice
 
 - Inside the `/src/scss` folder, create a three new files:
   - `_base.scss`
   - `_nav.scss`
   - `_content.scss`
-- We'll leave our variables in `new-styles.scss`, so the can continue to apply to all the other code that follows.
-- Go into `new-styles.scss` and copy/cut all the lines for base elements ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
-- Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls.
+- We'll leave our variables in `new-styles.scss`, so they continue to apply to all the other code that follows.
+- Go into `new-styles.scss` and copy/cut all the lines generic rules that apply to the whole site  ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
+- Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls and add them to `_nav.scss`.
 - Do the same for all the `.content` calls into the `_content.scss` file.
-- Lastly, add @import calls into `new-styles.scss` for our partials. These @import calls will connect your partial scss folders with your `new-styles.scss`. Each should be formulated like this:
+- Lastly, after your variable rules, add @import calls into `new-styles.scss` for our partials. These @import calls will connect your partial scss folders with your `new-styles.scss`. Each should be formulated like this:
 
 ```scss
 @import 'base';
 ```
 
-Note that you don't need add the underscore or the `.scss` with these import designations, as Sass assumes it already.
+Note that you don't need add the underscore or the `.scss` with these import designations, as Sass assumes them already.
 
 Make sure these @imports come _AFTER_ your variables, because this CSS still cascades, and the variables are used by the imports.
 
@@ -151,7 +186,7 @@ Add styles that would make the navigation links be the primary color and behave 
 
 ![sass-hover](../images/sass-hover.gif)
 
-Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) are all separate properties and each one needs to be specified individually with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property.
+Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) are all separate properties and each one needs to be specified individually with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property, like this:
 
 ```scss
 a:hover {
