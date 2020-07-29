@@ -53,7 +53,7 @@ Now to save time, we'll get the unstyled text for our document.
 
 `https://assets.epicurious.com/photos/5b565307a41af20b8c167e18/6:4/w_620%2Ch_413/Grilled-Chicken-Salad-with-Romesco-recipe-120720-jpg`
 
-- Be usre to also add and ["alt" attribute](https://www.w3schools.com/tags/att_img_alt.asp) to your `img` tag, which allows screen readers (for the blind) to understand what the image is.
+- Be sure to also add and ["alt" attribute](https://www.w3schools.com/tags/att_img_alt.asp) to your `img` tag, which allows screen readers (for the blind) to understand what the image is.
 - Put a `<p>` tag around the text that starts with "Source".
 - Add an `<a href>` tag around the word Epicurious.com and add this url:
 

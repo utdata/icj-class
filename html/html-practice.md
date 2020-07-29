@@ -21,12 +21,12 @@ There are cases in this assignment where we have NOT covered a specific HTML tag
 - Code the overline (the text "OPEN THREADS") as an `<h4>`.
 - Code the main headline and the subhead with the proper hierarchy of header tags. (i.e., the main headline should be bigger than the subhead).
 - Code the subhead that is in the story "Under the radar" with the proper hierarchy of header tags. 
-- Properly link the byline to the included Twitter handle.
+- Put the byline in a `<p>` tag and properly link to the included Twitter handle.
 - Put the date in a `<span>` tag.
 - After the byline, add an image tag. Download [this image](https://github.com/utdata/icj-class/blob/master/html/spurs.jpg) and save it to your yourname-html-css-practice folder and then use it as the src in your image tag.
 - Create a credit line with the text "Soobum Im / USA TODAY Sports" in a `<p>` tag with a class of "credit" under the image.
-- Style all the text in `<p>` tags.
+- Style all the text in `<p>` tags. Each paragraph of text should have it's own beginning `<p>` and ending `</p>` tag.
 - There is a quoted text paragraph that starts with "Granted, not every starting ...". Put that in a `blockquote` tag. Don't know that one? Look it up.
 - Add a hypertext link to the text "ranking the starting five line-ups" to [this url](https://bleacherreport.com/articles/2789035-ranking-every-nba-teams-projected-starting-5-after-free-agency#slide7), opening in a new window.
 - Use an ORDERED list for the ranking list of teams in the middle of the story, but it should start with the Philadelphia 76ers as number 5. Don't know how to do that? Figure it out.
-- The last two paragraphs are the opening for the comments section of the article. Wrap both paragraphs with a `<div>` with an `id="comment-notes"` attribute.
+- The last two paragraphs are not really part of the article, but instead the opening for the comments section. Put the text within their own `<p>` tags and then wrap them both with a `<div>` with an `id="comment-notes"` attribute. That way you can style this section later.
