@@ -76,7 +76,7 @@ This will download all of their files into your Downloads folder.
 
 This should open your partner's project in VS Code and you should see all their files in the Explorer.
 
-## Run npn install
+## Run npm install
 
 - Open your Integrated Terminal and run this:
 
