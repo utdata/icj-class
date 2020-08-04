@@ -6,9 +6,9 @@ We now have us a pretty nice website, and we could imagine this being the entry 
 
 Fortunately, Bootstrap 4 has a robust system that enables customizing common elements quite easy.
 
-According to the [Theming section](https://getbootstrap.com/docs/4.1/getting-started/theming/), you can choose to either include **all** of the Bootstrap 4 sass files, or you could include individual items based on your needs. To keep things simple, we'll just import everything as we have above. (The advantage to picking and choosing which Sass files is you have smaller published CSS and JavaScript files when you are done.)
+According to the [Theming section](https://getbootstrap.com/docs/4.1/getting-started/theming/) in the documentation, you can choose to either include **all** of the Bootstrap 4 sass files, or you could include individual items based on your needs. To keep things simple, we'll just import everything as we have above. (The advantage to picking and choosing which Sass files is you have smaller published CSS and JavaScript files when you are done.)
 
-> **Note**: One thing that may happen as we are editing our `styles.scss` file during these exercises: If you incorrectly type one of the styles, it may stop your _gulp_ command with an error. If this happens, read the error to discover where the problem is, try to fix it and run `gulp` in your terminal again. It may help to run `gulp` in your Integrated Terminal so you can see when this happens.
+> **Note**: One thing that may happen as we are editing our `styles.scss` file during these exercises: If you incorrectly type one of the styles, it may stop your _gulp_ command with an error. If this happens, read the error to discover where the problem is, try to fix it and run `gulp dev` in your terminal again. It may help to run `gulp dev` in your Integrated Terminal so you can see when this happens.
 
 ## Theme colors
 
@@ -18,7 +18,7 @@ If you open up the `node_modules/bootstrap/scss/_variables.scss` file, you will 
 
 Let's change just the primary color:
 
-- Modify the `src/styles.scss` to the following:
+- Modify the `src/styles.scss` to the following ABOVE the Import Bootstrap styles comment:
 
 ```scss
 // Custom variable overrides go here Overrides
@@ -32,6 +32,8 @@ Save it and viola! We have Longhorn-ified our website.
 ![longhorn-theme](../images/bs-theme-change.png)
 
 If you are wondering how I knew what color to use for Longhorn Burnt Orange, [I looked it up](https://brand.utexas.edu/identity/color/).
+
+It's important to note that this types of changes that change existing Bootstrap variables (those with `$`) need to come BEFORE the import of the Bootstrap styles.
 
 Now let's change the background color.
 
@@ -51,7 +53,7 @@ We can test some custom adjustments to specific elements by using the inspector 
 
 In this case, the class responsible for the jumbotron is `.jumbotron`. Let's change the background color and add a slight border to the top of it, to simulate a drop shadow from the navbar. In this case we are using plain CSS declarations to make these style changes, because Sass understands those as well.
 
-- Add this under the bg-color declaration:
+- Add this under the bg-color declaration AFTER the Bootstrap import, since we are just acting on the existing element:
 
 ```scss
 .jumbotron {

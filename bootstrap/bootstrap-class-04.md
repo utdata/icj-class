@@ -26,4 +26,4 @@ There are other ways to publish [Github Pages](https://help.github.com/articles/
 
 ---
 
-**Next**: We'll [download and run](bootstrap-class-05.md) a fellow student's project.
+~~**Next**: We'll [download and run](bootstrap-class-05.md) a fellow student's project.~~

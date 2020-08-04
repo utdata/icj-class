@@ -19,9 +19,9 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
 ### HTML
 
 - [Codecademy HTML tutorial](https://www.codecademy.com/learn/learn-html)
-  - Section 1
+  - Elements and Structure
     - Introduction to HTML
-    - Documentation Standards
+    - HTML Document Standards
 - [HTML class](html/html-class.md)
 - [HTML practice](html/html-practice.md)
 
@@ -44,11 +44,11 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
 - [Codecademy JS Tutorial](https://www.codecademy.com/learn/introduction-to-javascript)
   - Module 1: Introduction
     - Introduction to Javascript
-    - Interactive lesson
+    - Variables
   - Module 2: Conditionals
     - Conditional statements
   - Module 3: Functions
-    - Functions: Interactive lesson
+    - Functions
 - [JS Basics](js/js-class-01.md)
 - [JS Functions](js/js-class-02.md)
 - [JS Objects](js/js-class-03.md)
