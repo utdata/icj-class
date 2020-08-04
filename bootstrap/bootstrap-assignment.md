@@ -1,6 +1,6 @@
 # Bootstrap homework assignment
 
-You are going to build a two-page Bootstrap project from scratch, based on Bootstrap documentation code and styles. There are screenshots of what I'm looking for at the end of this document.
+You are going to build a two-page Bootstrap project from scratch, based on Bootstrap documentation code and styles. There are screenshots of what I'm looking for at the end of this document. (You might peek at it real quick before moving on.)
 
 ## Resources
 
@@ -69,7 +69,7 @@ Once you have the structure in place, you can work on styling and details.
 ### Jumbotron styles
 
 - The jumbotron should have a background image that works reasonably well at all sizes. This is configured in SCSS, and the [background shorthand property](https://www.w3schools.com/css/css_background_shorthand.asp) will help here. You will need to set the image (the url), repeat (no-repeat) and position (center). You'll need one more style ["background-size: cover;"](https://www.w3schools.com/cssref/css3_pr_background-size.asp) to make it work right.
-- For the background image for the jumbotron, you'll have to reference it from the scss file. The path for this has to be relative from the compiled css file to the image, so it will be `url(../img/filename.jpg)`. Note the beginning `../` on that path is different than when you call images directly into the `index.html` page. (In contrast, all your other images referenced in HTML will be `src="img/filename.jpg"`.)
+- For the background image for the jumbotron, you'll have to reference it from the scss file. The path for this has to be relative from the compiled css file to the image, so it will be `url(../img/filename.jpg)`. Note the beginning `../` on that path is different than when you call images directly into the `index.html` page. **(In contrast, all your other images referenced in HTML will be `src="img/filename.jpg"`.)**
 - Set the main text in the jumbotron to use a Google font style of your choice.
 
 ### Story content
@@ -89,7 +89,7 @@ Once you have the structure in place, you can work on styling and details.
 
 ## Second page
 
-- Your second page needs to have an additional Bootstrap Carousel of three photos. (I'm going to make you go find this yourself in the Bootstrap docs.) The photos should also have the class that makes them responsive.
+- Your second page needs to have an additional Bootstrap Carousel of the three kraken photos. (Look up Carousel in the Bootstrap docs.) The photos should also have the class that makes them responsive.
 
 ## Extra credit
 
@@ -101,7 +101,12 @@ Publish your site using Github pages using the "master branch/docs folder" metho
 
 ## Examples
 
-Here is generally what the page should look like:
+Here is generally what the pages should look like:
+
+### Index page example
 
 ![bs-assignment-p1.jpg](../images/bs-assignment-p1.jpg)
+
+### Second page example
+
 ![bs-assignment-p2.jpg](../images/bs-assignment-p2.jpg)
