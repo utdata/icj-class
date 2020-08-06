@@ -57,7 +57,7 @@ In this case, the class responsible for the jumbotron is `.jumbotron`. Let's cha
 
 ```scss
 .jumbotron {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
     border-top: 3px solid rgb(219, 219, 219);
 }
 ```
