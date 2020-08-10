@@ -89,7 +89,7 @@ Once you have the structure in place, you can work on styling and details.
 
 ## Second page
 
-- Your second page needs to have an additional Bootstrap Carousel of the three kraken photos. (Look up Carousel in the Bootstrap docs.) The photos should also have the class that makes them responsive.
+- Your second page needs to have an additional Bootstrap Carousel of the three kraken photos. (Look up Carousel in the Bootstrap docs.) The included code has a class different from `img-fluid` that makes them responsive. Use the class provided.
 
 ## Extra credit
 
