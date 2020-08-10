@@ -14,6 +14,8 @@ We will:
 
 **ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/setting-up) and have tested that it works.
 
+**FINAL NOTE**: There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap in-class lesson**.
+
 This lesson is cribbed from:
 
 - [Learn Bootstrap 4 Final in 2018 by Gary Simon](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course), which is already out of date.

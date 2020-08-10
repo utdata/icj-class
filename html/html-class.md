@@ -1,6 +1,6 @@
 # HTML class assignment
 
-> This lesson has a companion video that walks through the lesson. Find it in Canvas under Panopto Video.
+> This lesson has a companion video that walks through the lesson. Find it in Canvas under Panopto Video. It's called **HTML in-class lesson**.
 
 The goal of this assignment is to:
 

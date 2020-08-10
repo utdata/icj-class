@@ -1,6 +1,6 @@
 # JavaScript class assignment
 
-> There are a series of videos that are companions to this lesson. Find them in Canvas under Panopto Video.
+> There are a series of videos that are companions to this lesson. Find them in Canvas under Panopto Video. They are numbered in order.
 
 JavaScript is the programming language of the browser. We're going to practice using JavaScript by manipulating numbers, strings and making functions and seeing the result in our browser Console.
 
