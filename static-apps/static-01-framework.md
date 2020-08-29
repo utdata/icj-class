@@ -2,11 +2,27 @@
 
 ## Goals for this lesson
 
-We will:
+We will learn the features of this project template in steps:
 
-- Learn about static site generators and the template we will use.
+### Templates
+
+- We'll learn about static site generators and templates.
 - We'll rebuild our Ship's Log site with two types of pages: an index, and then multiple entry pages.
-- We'll introduce a "data" element to repeat code in a loop.
+
+### Loops and Google Sheets data
+
+- We'll learn about using Google Sheets to manage data in our project.
+- We'll introduce loops to process data on our pages.
+
+### Google Docs and ArchieML for content
+
+- We'll learn about using Google Docs/ArchieML for content.
+- We'll refactor our blog pages to use Google Docs for the blog posts.
+
+### Baking pages
+
+- We'll learn about the bake command in the project
+- We'll create a series of pages based on a data source.
 
 ## Building up to the static-generator app
 
