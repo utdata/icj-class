@@ -2,69 +2,24 @@
 
 For our Pirate Cove blog we will have a number of entries that are all the same except for the story content.
 
-Before we look at the code that makes the detail page, let's look at the example in the browser. There is screenshot below or you can click on "link to a book page example" from our index.
-
-![static page example](../images/static-detail-page-example.png)
-
-This is a detail page made from our detail layouts at `src/njk/_layouts/detail.njk`.
-
 ## Review the detail layout and pages
 
-The reason we use a "detail layout" is because we'll have multiple "detail" pages that are all the same except the content. Our "Shipping News" page example would be just one book among a whole library of pages.
+Using a "layout" allows us to build a structure for a page once, but then use that structure on as many pages as we like without rewriting the code. Our "Shipping News" page example is just one book among a whole library of pages. Think of this like the Amazon shopping site. Every item you search for has the same basic structure, but the content is different for each item.
 
+Our blogs entries will be similar. We'll have the same page structure: a photo of Capt. McGillicutty in a column on the left, and the blog text in a column on the right.
 
->>>> THIS IS WHERE I STOPPED, though there is lots of editing below, too. I need to decide if I'm adding ArchieML to this or waiting for the final.
+> The library books example in the project template is a similar detail page, but it uses the "bake" feature to build out pages automatically from data. This "bake" feature is an optional enhancement we'll talk about later. For now, with our Pirate Cove blog, we'll just build our pages manually while still using a "layout" template.
 
+## Building the blog post template
 
+Our goal with building our blog post pages is to use (or extend) the overall site structure from the `base.njk` template, but then to add a new structure for our blog posts inside the "content" block that we can use for each of our blog posts.
 
+### Create an entry layout
 
-
-- Open up the `src/njk/_layouts/detail.njk` file and look at it. This is the content:
-
-```html
-{% extends '_layouts/base.njk' %}
-
-{% block page_title %}{{ book.title }}{% endblock %}
-
-{% block page_description %}{{ book.title }} by {{ book.author }}{% endblock %}
-
-{% block content %}
-<article class="container">
-  <div class="row">
-    <div class="col-sm-3">
-      {% block info %}
-        <img src="img/{{ book.img }}" alt="" class="img-fluid">
-        <p>{{ book.author }}</p>
-      {% endblock %}
-    </div>
-    <div class="col-sm-9">
-      {% block blurb %}
-        <h1>{{ book.title }}</h1>
-        <p>{{ book.blurb | safe}}</p>
-      {% endblock %}
-    </div>
-  </div>
-</article>
-{% endblock %}
-```
-
-Let's explain these:
-
-- The first line _extends_ the base layout so that all the HTML framework for the entire site is included. We don't have to rewrite or copy that.
-- Next we have two _blocks_ for the _page_title_ and _page_description_. Everything between the blocks will be rendered to its reserved space in the base template.
-- Next we have the _block content_. This is the guts of out layout, and it is being inserted into the middle of the base template.
-- Within our content block we have bootstrap HTML for a two-column layout. And, inside of each column we have new _blocks_ for "info" and "blurb".
-
-But what is all this `{{ book.title }}` and `{{ book.img}}` and stuff?
-
-This layout was built assuming there is data to feed into it. In this case it is looking one instance (or `book`) in the `library.books` array. This is the same data that is in `src/njk/_data/library.json`, but we will tell the page later which row of data we want.
-
-Open the page `src/njk/detail-shipping-news.njk` and you'll see an example of the detail page where it extends the template, then  one other line to set which row of the data we want. In this case the second row, or `library.books[1]` because the counting starts at zero. That's the number in the square brackets ... which row of the data, counting from zero.
-
-## Create an entry layout
+In order to understand how this works, we have to create both the "entry" layout and a page that uses it. So bear with me a bit here.
 
 - Create a new file in `src/njk/_layouts` with the name `entry.njk`.
-- Add this template to the page:
+- Add this code to the file and save it:
 
 ```html
 {% extends '_layouts/base.njk' %}
@@ -78,36 +33,61 @@ Open the page `src/njk/detail-shipping-news.njk` and you'll see an example of th
   <div class="row">
     <div class="col-sm-3">
     <!-- left column -->
+    <div class="col-sm-4 left-rail">
+      <img src="img/pirate.jpg" alt="pirate character" class="img-fluid">
+      <p class="byline">By Crit McGillicutty<br>
+      <span>Island Breeze Tribune</span></p>
+      <hr class="d-sm-none">
     </div>
     <div class="col-sm-9">
-    <!-- right column -->
+      <!-- right column -->
+      {% block entry %}Entry content.{% endblock %}
     </div>
   </div>
 </article>
 {% endblock %}
-
 ```
 
-## Create our first entry page
+Now we will create a new blog entry page that uses our new layout:
 
-- Create a new file as `src/njk/2018-10-18.njk` and place the following inside it:
+- Create a new file as `src/njk/2019-10-18.njk` and place the following inside it:
 
 ```html
 {% extends '_layouts/detail-entry.njk' %}
-{% set entry = library.books[1] %}
-
 ```
 
-Let's chat a bit about this:
+- Save the file and then go to the page in your web browser. It should be [http://localhost:3000/2019-10-18.html](http://localhost:3000/2019-10-18.html). (Your number after `localhost` might be different. Just add `2019-10-18.html` after your hostname.)
 
-- At the top, we _extend_ the detail layout (which in turn extends the base layout. (It's [Inception](https://media.giphy.com/media/3GuP496Wrkos8/source.gif)).
-- Next we have the _block page\_title_ and _block page\_description_ tags so we can udpate those values from the base layout since they are specific to this blog entry.
-- Next, we have the _block story_ with some example content.
+It should look like this:
 
-What you don't see here is _block info_ because that will be the same for every entry. We can fix that in our detail layout.
+![detail page](../images/static-detail-layout-begin.png)
 
-- Save your page and go look at it in your browser. You should be able to use your navigation link we updated earlier to go to the first page for for Oct. 18th.
+Let's chat a bit about this.
 
+We know we want Capt. McGillicutty's photo and byline on every page, so that is part of the `entry.njk` layout. But in the right-hand column we will want different content in for each blog post, so we have a Nunjucks "block" to reserve the space: `{% block entry %}Entry content.{% endblock %}`. Right now this block shows the text "Entry content.", but this is just default text. In each of our blog pages, we'll replace that replace that entry block with our blog entry content. Let's do that now.
+
+- Add the following code to your `2019-10-18.njk` file:
+
+```html
+{% block entry %}
+<h1>It was a dark and stormy night</h1>
+<p>Interloper crimp spanker Barbary Coast splice the main brace bilged on her anchor black spot chandler trysail salmagundi. Brigantine fire ship scallywag log squiffy bowsprit lateen sail American Main cog smartly. Dance the hempen jig bilge log galleon pirate yard list Barbary Coast Corsair run a rig.</p>
+<p>Broadside yard bilge rat coxswain ye lugsail dance the hempen jig bilged on her anchor sheet spyglass. Capstan chase guns Privateer maroon haul wind Nelsons folly rum starboard shrouds killick. Weigh anchor quarterdeck ahoy mizzen killick grog driver spike list Nelsons folly.</p>
+{% endblock %}
+```
+
+Now look at your block entry page, where you should have a headline and a couple of paragraphs of text where the blog entry should go.
+
+Let's review what we've done here:
+
+Our blog entry `2019-10-18.njk` starts with one line of code, the _extends_ Nunjucks tag that calls our `detail.njk` layout that defines the middle of our page. That `detail.njk` in turn extends the base layout that has the navigation, jumbotron and footer. (It's [Inception](https://media.giphy.com/media/3GuP496Wrkos8/source.gif).
+
+Our `detail.njk` layout reserves space for the blog content using the `{% block entry %}` tag. In our `2019-10-18.njk` file, we have replaced the default text there with our new content.
+
+
+
+
+>> this is where I stopped.
 
 
 

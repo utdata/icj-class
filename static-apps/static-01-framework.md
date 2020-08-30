@@ -51,9 +51,21 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 - run `npm install` to install all the Node software
 - run `gulp dev` to process all the files and start the server.
 
+## Review the example site
+
+Before we talk about how the project architecture is structured, let's tour the example pages that are included. As we do so, we'll just touch on how the example applies specific features.
+
+- All the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don't have to duplicate code for each new page.
+- On the index there is a listing of three books. As we explore the code later, you'll see that the code is written for only one library book, but it is within a "loop" that allows us to repeat that code over and over based on the number of rows we have in our library data. We are also using an optional feature where our library books content is downloaded from a Google Docs file.
+- The index also has a bookstores list, which is also a loop over some data. But, in this case, the data was downloaded from a Google Sheets spreadsheet. Sometimes having a more structured data source like a spreadsheet is helpful.
+- Lastly, there are individual pages for each book listed, which serve as an example of detail pages built from the same template. Only the text and image content is different for each page, but the structure is the same and from the same template.
+- These specific pages were created using another feature of the project where we can "bake" pages from data. Instead of a human creating a new file for each library book, they were generated automagically based on data from the Google Doc. If there were 100 books in the data, it would've built 100 pages.
+
+Storing our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code.
+
 ## Understand the project structure
 
-The easiest way to understand how this template works is to go study the README.md in the project template. **DON'T SKIP THIS PART**. While the README file is in your project, you might find it easier [to read the README online](https://github.com/utdata/icj-project-template). We will also go over it in class. If you are doing this on your own, READ THE README!
+The README.md in the project template has details about how different features work. **READ THE README**. While the README file is in your project, you might find it easier [to read the README online](https://github.com/utdata/icj-project-template). We will also go over it in class (or through video).
 
 ----
 
