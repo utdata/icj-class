@@ -91,17 +91,24 @@ Let's update the Brand and the links to point to three Ship's Log entries we wil
 
 - Open `src/njk/_includes/nav.njk`.
 - Find the `navbar-brand` segment and update the text "Navbar" to "Pirate Cove".
-- Find the dropdown part of the nav and change the name of the dropdown to "Ship's Log".
-- Find the part of the nav that has the dropdown and change the text "Library books" to "Ship's log".
-- Update the three links there to these urls, which are for pages we will add later:
+- AFTER the line that has <ul class="navbar-nav"> (about line 7), add the following:
 
 ```html
-  <a class="dropdown-item" href="2018-10-18.html">Oct. 18</a>
-  <a class="dropdown-item" href="2018-10-19.html">Oct. 19</a>
-  <a class="dropdown-item" href="2018-10-20.html">Oct. 20</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ship's log
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="2019-10-18.html">Oct. 18</a>
+          <a class="dropdown-item" href="2019-10-19.html">Oct. 19</a>
+          <a class="dropdown-item" href="2019-10-20.html">Oct. 20</a>
+        </div>
+      </li>
 ```
 
-Now, if you look at your index in your browser, you'll see that these navigation links have been updated. Again, we'll create the new pages later.
+You might have to fix in indenting of the first new line of code so it lines up with the closing `</li>`.
+
+Now, if you look at your index in your browser, you'll see that a new navigation dropdown has been added with three links. Again, we'll create the new pages later.
 
 ## The jumbotron
 

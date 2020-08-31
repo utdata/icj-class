@@ -69,4 +69,4 @@ The README.md in the project template has details about how different features w
 
 ----
 
-Next: [Editing templates](static-02-templates.md)
+Next: [Templates](static-02-templates.md)

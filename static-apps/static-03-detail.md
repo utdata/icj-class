@@ -18,15 +18,11 @@ Our goal with building our blog post pages is to use (or extend) the overall sit
 
 In order to understand how this works, we have to create both the "entry" layout and a page that uses it. So bear with me a bit here.
 
-- Create a new file in `src/njk/_layouts` with the name `entry.njk`.
+- Create a new file in `src/njk/_layouts` folder with the name `blog.njk`.
 - Add this code to the file and save it:
 
 ```html
 {% extends '_layouts/base.njk' %}
-
-{% block page_title %}Detail page title{% endblock %}
-
-{% block page_description %}Meta description for detail page.{% endblock %}
 
 {% block content %}
 <article class="container">
@@ -53,10 +49,10 @@ Now we will create a new blog entry page that uses our new layout:
 - Create a new file as `src/njk/2019-10-18.njk` and place the following inside it:
 
 ```html
-{% extends '_layouts/detail-entry.njk' %}
+{% extends '_layouts/detail-blog.njk' %}
 ```
 
-- Save the file and then go to the page in your web browser. It should be [http://localhost:3000/2019-10-18.html](http://localhost:3000/2019-10-18.html). (Your number after `localhost` might be different. Just add `2019-10-18.html` after your hostname.)
+- Save the file and then go to the page in your web browser. You should be able to use the Ship's Log navigation item to get to the Oct. 18 page.
 
 It should look like this:
 
@@ -64,7 +60,7 @@ It should look like this:
 
 Let's chat a bit about this.
 
-We know we want Capt. McGillicutty's photo and byline on every page, so that is part of the `entry.njk` layout. But in the right-hand column we will want different content in for each blog post, so we have a Nunjucks "block" to reserve the space: `{% block entry %}Entry content.{% endblock %}`. Right now this block shows the text "Entry content.", but this is just default text. In each of our blog pages, we'll replace that replace that entry block with our blog entry content. Let's do that now.
+Just like our Bootstrap homework, we want Capt. McGillicutty's photo and byline on every blog page, so that is part of the `blog.njk` layout. But in the right-hand column we will want different content for each blog post, so we have a new Nunjucks "block" to reserve the space: `{% block entry %}Entry content.{% endblock %}`. Right now this block shows the text "Entry content.", but this is just default text. In each of our blog pages, we'll replace that replace that entry block with our blog entry content. Let's do that now.
 
 - Add the following code to your `2019-10-18.njk` file:
 
@@ -76,80 +72,49 @@ We know we want Capt. McGillicutty's photo and byline on every page, so that is 
 {% endblock %}
 ```
 
-Now look at your block entry page, where you should have a headline and a couple of paragraphs of text where the blog entry should go.
+Now look at your block entry page, where you should now have a headline and a couple of paragraphs of text where the blog entry should go.
 
 Let's review what we've done here:
 
-Our blog entry `2019-10-18.njk` starts with one line of code, the _extends_ Nunjucks tag that calls our `detail.njk` layout that defines the middle of our page. That `detail.njk` in turn extends the base layout that has the navigation, jumbotron and footer. (It's [Inception](https://media.giphy.com/media/3GuP496Wrkos8/source.gif).
+We have built one blog page of many we will have, but we've done so in a way where we can reuse code.
 
-Our `detail.njk` layout reserves space for the blog content using the `{% block entry %}` tag. In our `2019-10-18.njk` file, we have replaced the default text there with our new content.
+The file `2019-10-18.njk` starts with one line of code, the _extends_ Nunjucks tag that calls our `_layouts/blog.njk` layout that defines the middle of our page. The `blog.njk` layout has two columns, one the left the photo so the Captain's byline will be on every blog, then the column on the right that has a `{% block entry %}` tag that will contain that entry's specific text.
 
+ The `blog.njk` layout in turn extends the `_layouts/base.njk` layout that has the navigation, jumbotron and footer, the framework of our site that will be common to every page on the site. That `base.njk` file has a `{% block content %}` tag that gets replaced with our blog entry. (It's [Inception](https://media.giphy.com/media/3GuP496Wrkos8/source.gif).
 
+Sometimes it helps to think of it from the other direction:
 
-
->> this is where I stopped.
-
-
+This page starts with `_layouts/base.njk` to get the framework of the site with space reserved for the "content" block. Then `_layouts/blog.njk` uses that base layout but replaces "content" with new code. The blog layout has space reserved for the "entry" block. Finally `2019-10-18.njk` uses the blog layout, but replaces that "entry" block with the actual text of our blog entry.
 
 ## Create your other detail pages
 
 Now, let's create a pages for our other blog entries.
 
-- Inside the `src/njk` folder, create a new files for: `2018-10-19.njk` and =`2018-10-20.njk`. (If you'll recall, this is similar to the file name we used in our navigation except for the extension. Each `filename.njk` file added inside `src/njk/` will become a new HTML page of the same name at `docs/filename.html`.)
-- Inside these files, add the same entry code as you did for the first page.
+- Inside the `src/njk` folder, create a new files for: `2019-10-19.njk` and =`2019-10-20.njk`. (Each `filename.njk` file added inside `src/njk/` will become a new HTML page of the same name at `docs/filename.html`.)
+- Inside these files, add the same entry code as you did for the first page, but change the headlines to something clever so you can tell them apart when you are viewing them.
 
-Think about this for a second: You added a new pages to your website with just those few lines of code, compared to when you did this with the Bootstrap Homework assignment, when you had to copy the whole page, likely getting them out of sync. Now you can change the framework of the site without editing individual pages.
+Once you save them, you should be able to use the navigation we updated earlier to get to all three pages. If they don't work, make sure you put the pages in the right folder and named them correctly.
 
-## Edit the detail layout
+Think about this for a second: You added new blog entries to your website with just those few lines of code. Compare this to when you did this with the Bootstrap homework assignment when you had to copy the HTML for the entire page, likely getting them out of sync as you made updates. Now you can change the framework of the site without editing individual pages.
 
-If you remember on our Pirate Cove "blog" pages, we have the same content in the left rail all the time.
+## Update page title and description blocks
 
-![static blog example](../images/static-blog-example.png)
+Now I want you to update all three blog pages in a similar way:
 
-As cute as the kitten is, what we need on all the entry pages is the picture of Capt. McGillicutty and his byline, etc. The photo and byline on the left will always be the same. Because of this, we can update the detail-entry layout to use the correct picture and it will update on all three entry pages.
-
-- Open the detail layout `src/njk/_layouts/detail-entry.njk`.
-- Replace the code between `{% block info %}` and `{% endblock %}` with this:
+- Add the following blocks to all three entries. Put it between the extends code and the entry block, but it doesn't really matter.
 
 ```html
-{% block info %}
-  <img src="img/pirate.jpg" alt="pirate character" class="img-fluid">
-  <p class="byline">By Crit McGillicutty<br>
-  <span>Island Breeze Tribune</span></p>
-{% endblock %}
+{% block page_title %}Page title{% endblock %}
+
+{% block page_description %}Captain's log from 2019-10-XX.{% endblock %}
 ```
 
-This will put the "Crit McGillicutty" byline and photo on every detail entry page, but also allow us to override or add to the block if we needed to.
+- Now in each entry replace the text "Page title" with the text of the headline for that entry. (Don't include the H1.)
+- Update the page description block with the correct date for that entry.
+- Save all the pages.
 
-## Using entries data in the detail page
-
-As you may recall, our `data.json` file has three key values for each entry: date, url and title. We can use that data in this detail page, but we need to tell the page _which_ of the three entries in our data to use. The template can grab the data by its order, but it's weird that it starts counting at `0` instead of at the number 1.
-
-- Open your page `src/njk/2018-10-18.njk`.
-- After the _extends_ line, add this:
-
-```html
-{% set entry = data.entries[0] %}
-```
-
-- Now, in your `<h1>` tag, replace the text there with this: `{{ entry.title }}`
-- On the next line for the data, replace the text "Oct. XX, 2018" with this: `{{ entry.date }}`
-- Save your page and go look at it.
-
-Now your text should look like this:
-
-![blog entry 0](../images/static-blog-entry-0.png)
-
-Update your other two entries in a similar way:
-
-- Add the `set entry` code after the extends line, but change the number to `1` for the 19th and `2` for the 20th.
-- Update the _page\_title_ block use use `{{ entry.title}}`.
-- Update the _page\_description_ block to say, essentially: "Blog entry for _date_, _title_" but use the proper data tags.
-
-## Check your pages
-
-You should now have a site where the dropdown nav links go to three good story pages and the links from the home page content should also work. Check them now. If they are broken, then compare the filenames used in the navigation with the file names of your pages. The only difference should be `.njk` vs `.html`.
+If you go to each of the pages you'll see the headline is now in added to title of the browser. Both the `page_title` and `page_description` blocks are in the `_layouts.base.njk` file, and you've replace those blocks those for these pages. (You don't really see the page description displayed anywhere as that is a meta tag in the `<head>` of the page and it is used by Google in search returns to show what the page is about.)
 
 ---
 
-NEXT: [Clean up and publishing](static-05-publish.md)
+NEXT: [Loops and data](static-04-loops.md)
