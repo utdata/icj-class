@@ -1,11 +1,6 @@
 # Building our Ship's log blog
 
-- Have them make a copy of the pirate blog
-- add the new doc to the config and fetch
-- add a new bake layout
-- add a config to bake
-- add a loop to the nav or the index.
-- add a new entry, fetch and bake
+Previous: [Bake explain](static-05-bake-explain.md)
 
 OK, now we are going to apply this "baking" concept to our Ship's Log blog pages. We'll automagically create a new page for each blog entry that has been written in a Google Doc.
 
@@ -13,9 +8,9 @@ Remember we need three things: The data, the layout, and a config to marry them.
 
 ## The blog data
 
-- Open this [Pirate blog doc](https://docs.google.com/document/d/18XALhwT3zGnY6XHy1z1Z_7zfakvRSp-wlnlrTgFO3QQ/copy#). As you do so, it will make a copy of my document so you have your own version.
+- Open this [Pirate blog doc](https://docs.google.com/document/d/18XALhwT3zGnY6XHy1z1Z_7zfakvRSp-wlnlrTgFO3QQ/copy#). As you do so, you'll be asked to make a copy of your own, which I want you to use.
 - Click on the Share button and make the document "viewable" to "Anyone with the link". This has to be done to download the data into our project.
-- Look at the structure of the data, where there are three blog entries. The only difference from the books example is the part for `[.+post]` at the beginning of the blog text, which also has the ending `[]`. This structure allows us to have cleaner paragraphs of text in our blog entries.
+- Look at the structure of the data, where there are three blog entries. The only difference between this and the books example is a new structure for `[.+post]` at the beginning of the blog text, which also has the ending `[]`. This structure allows us to have cleaner paragraphs of text in our blog entries.
 
 ## Config the data
 
@@ -135,3 +130,5 @@ Let's finish this out.
 ---
 
 Your done!
+
+Previous: [Bake explain](static-05-bake-explain.md)

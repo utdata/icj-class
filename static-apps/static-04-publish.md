@@ -1,5 +1,7 @@
 # Make it pretty and publish
 
+Previous: [Loops](static-03-loops.md)
+
 While we aren't finished with this project, I'd like you to clean up what we have and publish it.
 
 ## Base styles update
@@ -23,3 +25,5 @@ For these, you'll need to do some documentation reading and exploration for the 
 ---
 
 Next: [Baking pages](static-05-bake-explain.md)
+
+Previous: [Loops](static-03-loops.md)

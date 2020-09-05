@@ -1,5 +1,7 @@
 # Layouts and blocks
 
+Previous: [Framework](static-01-framework.md)
+
 We're going to rebuild the framework of the Pirate Cove site you built in the Bootstrap assignment using this new structure to improve code efficiency and site maintainability. We'll build the index, a new page listing pirate ships and multiple blog entries.
 
 Here are some screen shots of the finished product you are working toward.
@@ -208,3 +210,5 @@ What we've done here is add a Bootstrap row and col that will always span the pa
 ----
 
 Next: [Loops](static-03-loops.md)
+
+Previous: [Framework](static-01-framework.md)

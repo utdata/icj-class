@@ -1,5 +1,7 @@
 # Baking detail pages
 
+Previous: [Publish](static-04-publish.md)
+
 To recreate our Ship's log blog we are going to introduce two new features: Using Google Docs/ArchieML and "baking" pages.
 
 Before we dive into it, let's go through how the concepts work by looking at the Library Books example included in the project. As we go through it, think about how each book could be a blog post.
@@ -93,4 +95,6 @@ Pretty f'n cool, isn't it? With a project like this you can create something lik
 
 ---
 
-Next: [Build our blog][static-06-bake-blog.md]
+Next: [Build our blog](static-06-bake-blog.md)
+
+Previous: [Publish](static-04-publish.md)
