@@ -4,9 +4,17 @@ We're going to rebuild the framework of the Pirate Cove site you built in the Bo
 
 Here are some screen shots of the finished product you are working toward.
 
-- [Index page](../images/static-done-index.png)
-- [Pirate ship page](../images/static-done-pirate-ship.png)
-- [Entry page example](../images/static-done-entry-page.png)
+### Index
+
+![Index page](../images/static-done-index.png)
+
+### Pirate ships page
+
+![Pirate ship page](../images/static-done-pirate-ships.png)
+
+### Blog entry page
+
+![Entry page example](../images/static-done-entry-page.png)
 
 ## Install the assets
 
