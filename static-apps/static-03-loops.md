@@ -1,130 +1,224 @@
 # Data and loops
 
-If you look at the content on our example index page, you'll notice the main headline, some text, and then a list of books and authors.
+Previous: [Layouts](static-02-layouts.md)
 
-![index content block](../images/static-index-content.png)
+We're going to create the Pirate Ships page we added to our nav earlier and introduce some data to our project and build some loops to display that data.
 
-We're going to update our index page to look more like a blog index page, and we'll use a Nunjucks loop and data to create a series of links to our Ship's Log entries.
+## Create a new page
 
-Open up the `src/njk/index.njk` and take a look at it.
-
-- The first line `{% extends '_layouts/base.njk' %}` _extends_ the "base" layout. This gives us all the header, footer, etc for the page, but allows us to insert content into the reserved _blocks_.
-- The next bit `{% block page_title %}` is _block_ that allows us to replace the default title, which we should do. Update the contents of that block with "The Ship's Log". When this page is built, the text "The Ship's Log" will replace the text "Default title" in the base template.
-- Next we have `{% block page_description %}` which is a _block_ for a unique search description for this page. Update that with "A daily blog from Capt. Crit McGillicutty." This updates the meta description on the base template.
-- Next, we have `{% block content %}`, which is the guts of our page. It sets up a container div to give margins for all our content. Inside that is headline and a row and column for content, etc. This is standard Bootstrap rows and columns.
-
-As you get further into the code there is a bit about `library.books`, which prints out a series of books from a data file:
+- Create a new page inside `src/njk/` called `pirate-ships.njk`.
+- Add the following code:
 
 ```html
-<ul>
-  {% for book in library.books %}
-    <li>{{ book.title }}, {{ book.author }}</li>
-  {% endfor %}
-</ul>
+<article class="container">
+  <h1>Ships of the Golden Age of pirates</h1>
+  <p>Intro text here.</p>
+</article>
 ```
 
-Does this look vaguely familiar? Like from our JavaScript classes? It is indeed ... the [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) template language uses the same concepts and the functions are executed using pre-written JavaScript we installed witn `npm install`.
+- Save the file and then test your navigation link to make sure it works. If it doesn't, make sure you created the new file in the right folder. It should be right next to `index.njk`.
 
-Our "for loop" repeats the `<li>` line of code as long as the condition is true. In our case Nunjucks will repeat the code for each new "book" in the "books" collection. We could have an _else_ condition here to display code if there are no books in our data, but they are optional depending on your logic needs.
+## Let's add some data
 
-The `endfor` tells Nunjucks to end the looping code.
+OK, are you ready to jump into some advanced features here? We are going to introduce a concept where we have a Google Sheet to manage the editing of data, but then we'll "fetch" that data into our project so we can use it in the next step.
 
-But where is this collection of "books" collection coming from? The icj-project-template is set up so you can store data collections as JSON files in the `src/njk/_data/` folder. Look there and you'll find a file called `library.json`. Open that up and you'll see a more extensive version similar to this:
+### The data source: Google Sheets
+
+I have already created a Google Sheet of [pirate data](https://docs.google.com/spreadsheets/d/1G-aJA1H5C-B05Hlpx2RiojYcsNNXQ5ntvUEArRZ5O6w/edit?usp=sharing). Click on that link so you can take a look at it. Imagine you are in a newsroom and many reporters are gathering data for your project. You could share a Sheet like this with them and they could edit it and create new rows of data. It's a good way to keep track of stuff.
+
+Our next trick is to tell our project here to download that data and format it in a way that we can use it. That file type we want in the end is called JSON, or JavaScript Object Notation. JSON is just "data" for JavaScript. There is a feature built into this project where we can download this data and translate it. One thing to know is the Google Sheet needs to be shared so that "anyone" can view it.
+
+Here we will "tell" this project about the Google Sheet.
+
+- Open the file in your project called `project.config.json`.
+- After the closing `}` on line 12, we are going to add the following code:
+
+```json
+,
+    {
+      "fileId": "1G-aJA1H5C-B05Hlpx2RiojYcsNNXQ5ntvUEArRZ5O6w",
+      "type": "sheet",
+      "name": "pirates"
+    }
+```
+
+That first comma in the code above needs to come right after the `}` that closes out the "bookstores" configuration.
+
+The `fileID` value there is from the URL of the Google Sheet. It's the long string before `/edit/` in the URL, and it is unique to for every Google Sheet (and Doc, for that matter.). The `type` is "sheet". the other possible value is "doc". We'll do one of those later. The `name` is what we want the file to be called when it is downloaded.
+
+What we've done here is add to a "files" array in this JSON config file. This is a list of all the Google Sheets and Docs used in the project.
+
+Before we can download the data we have to stop our browsersync process and run a new one to fetch our data.
+
+- Go to your Terminal and do Control-C to stop the browsersync.
+- Run `gulp fetch`. "gulp" is our command and "fetch" is our task.
+- The result of the command should download three files. (Two were already in the config  -- library & bookstores -- and we just added the new one "pirates".)
+
+This downloaded all the files to the `src/data/` folder.
+
+Go ahead and open the files at `src/data/pirates.json` and peek at it. Here is just a snippet:
 
 ```json
 {
-  "books": [
+  "ships": [
     {
-      "title": "The Clown",
-      "author": "Heinrich Böll"
-    },
-    {
-      "title": "The Shipping News",
-      "author": "Annie Proulx"
-    },
-    {
-      "title": "The Hearing Trumpet",
-      "author": "Leonora Carrington"
+      "ship_name": "Queen Anne’s Revenge",
+      "captain": "Edward \"Blackbeard\" Teach",
+      "blurb": "Edward \"Blackbeard\" Teach was one of the most feared pirates in history. In November 1717, he captured La Concorde, a massive French ship used to transport enslaved people. He refitted the Concorde, mounting 40 cannons on board and renaming her Queen Anne's Revenge. With a 40-cannon warship, Blackbeard ruled the Caribbean and the eastern coast of North America. In 1718, the Queen Anne's Revenge ran aground and was abandoned. In 1996 searchers found a sunken ship they believe to be the Queen Anne's Revenge in the waters off of North Carolina: some items including a bell and an anchor are on display in local museums.",
+      "source": "https://www.thoughtco.com/famous-pirate-ships-2136286"
     }
   ]
 }
 ```
 
-This is a typical example of JSON, the data format for JavaScript. Here we define the "books" collection first, then set it to an **array** of key-value pairs ... "title" and "author". Think of each of those sets as a row of data in a spreadsheet.
+Inside this `pirates.json` file is an _array_ called "ships". Think of arrays as a collection of data. We could have more than one array in our file, but right now we only have one.
 
-Nunjucks can access the data from the current row through the key: `{{ book.title }}` gets the value "The Clown" on it's first pass through the data.
+Inside our "ships" array we have eight _items_, one for each ship.
 
-When we started Gulp with `gulp dev`, this "books" data collection was loaded into the Nunjucks "context", meaning it was made available to it. This was all set up in the Gulp tasks by the developer (me).
+Each item (or ship in our case) has _objects_ that are in key:value pairs. Our first "key" is `ship_name` and our first "value" is `"Queen Anne’s Revenge"`.
 
-## Review the Bookstores list
+I'll try to keep all of these terms straight, but I admit I mix them up.
 
-If you go further down the index page you'll see a new Bootstrap and row and column and then a new loop that prints out a list of bookstores. Before we modify it, study the loop and look at the data that drives it so you can see how it works.
+The key here is that we have downloaded this data, once we restart our dev environment the data will be "in context", meaning our program will allow us to access it.
 
-Your next task will be to add new data for our blog entries and modify that loop to pull from it.
+It's probably easier to do it than explain it.
 
-## Get the data from our blog entries
+- Restart `gulp dev`.
+- Go into your `src/njk/pirate-ships.njk` file.
+- After our `<p>` tag in the intro, add a new line and add this:
 
-We want to print out a list of all our blog entries, but first we need the data. We will create a new .json file and restart `gulp dev`.
-
-- Create a new file at `src/njk/_data/shiplog.json` file.
-- Add then add following code:
-
-```json
-{
-  "entries": [
-    {
-      "date": "October 18, 2018",
-      "url": "2018-10-18.html",
-      "title": "It was a dark and stormy night",
-      "photo": "kraken01.jpg"
-    },
-    {
-      "date": "October 19, 2018",
-      "url": "2018-10-19.html",
-      "title": "Fear the Kraken",
-      "photo": "kraken02.jpg"
-    },
-    {
-      "date": "October 20, 2018",
-      "url": "2018-10-20.html",
-      "title": "Call me Ishmael",
-      "photo": "kraken03.jpg"
-    }
-  ]
-}
+```html
+<h3>{{ pirates.ships[0].ship_name }}</h3>
 ```
 
-- Kill your BrowserSync server (Control-c in your Terminal) and restart it with `gulp dev`. Data is imported during the Gulp startup sequence, so we have to restart that each time we add or edit data.
+When the page refreshes you should see "Queen Anne's Revenge" show up.
 
-## Modify your loops to use new data
+"pirates" is the name of the file. "ships" is the name of the array. "[0]" is the order of the item, and we want the first one. Remember JavaScript starts counting at zero. "ship_name" is the object we are pulling from the item.
 
-- Remove the books loop and the `<ul>` tags around them. We won't use that anymore.
-- Go down to the bookstores part of the page.
-- In the bookstores loop, you'll replace the references to the bookstores data with references to your blog entry data.
-  - in the "for loop" call, replace `store` with `entry`
-  - Also in "for loop", replace `bookstores.stores` with `shipslog.entires`
-  - replace `store.url` with `entry.url`
-  - replace `store.name` with `entry.title`
-  - replace `store.address` with `entry.date`
+Now go back and change the number to `[1]` instead of `[0]` and save it. What do you think the result will be? Go back look at the page and see. After you've seen the change, you can go ahead and remove the H3 and contents, as we don't need it here. I just wanted to show how it works.
 
-Save your file and check your page to see if everything worked and make it so before moving on.
+So now we have a list of pirate ships in our project "context" and can build a cool list of them. That is next.
 
-We changed what the loop was looking for: `for entry in shiplog.entries`. The "shiplog.entries" comes from the name fo the file the "shiplog" in `shiplog.json`) and the name of the array inside the file ("entries"). The "entry" term is what we are calling a single pass through the data within the loop. While we could use whatever term we want there as long as we are consistent, it is good practice to use a variable name that is a singlar term for whatever your collection is.
+## Loops with data
 
-Now, in our `<h3>` tag we are accessing the values in the data through their keys: `{{ entry.title }}`. The **entry** part of that term comes from what we defined it in the loop (for _entry_ in shiplog.entries). And **title** part is the "key" that matches the value we want from that row of the data.
+Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/4.5/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/4.5/components/card/#using-grid-markup).
 
-This might seem like overkill for just three lines of data, but you'll see as we progress that we can turn our data into a content management system of sorts.
+- Go to the [Using grid markup](https://getbootstrap.com/docs/4.5/components/card/#using-grid-markup) section in the docs and copy the code provided there.
+- After the closing `</p>` tag for the intro, add a new line.
+- Paste your code. This already has the row and columns we need.
+- Save your file and look at your page.
 
-### Tools to make JSON data
+It should look like this:
 
-If you have a spreadsheet of data that you need in JSON format, [CSVJSON](https://www.csvjson.com/) is a tool that can help with that. You'll learn an even better way using Google Drive when we get to the final project.
+![Grid cards added](../images/static-grid-cards-added.png)
 
-It should look something like this:
+We now have two cards on our page. Each card is in a column set at `col-sm-6`, so they show over six columns at small or larger. If you view on a phone, they will stack. By putting each card in a column like this, we can use the `cols-` controls to decide how many should display next to each other at each breakpoint.
 
-![headline stack](../images/static-headline-stack.png)
+Our plan here is to have a card for each ship in our data. We could create eight columns/cards and use our data inside each card, but what if we add more ships to our data source later? Instead, we'll create a **loop** that writes a new column/card for each ship in our data.
 
-> Note: Your hrefs won't actually work yet because we haven't created those pages yet. That is next!
+Our Nunjucks templating system allows for loops like this because it is written in JavaScript. It might help to reference the [Nunjucks documentation on "for" loops](https://mozilla.github.io/nunjucks/templating.html#for) to see how they work.
+
+We're going to remove one of our new column/cards, but then set the remaining one to draw for each new ship in our data.
+
+- In the cards code, remove the one of the col/cards. It starts with `<div class="col-sm-6">` and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.
+- Add a new line _after_ the closing of the `<div class="row">` line.
+- Add the following to the new line: `{% for ship in pirates.ships %}`
+- Add a new line right _above_ the closing `</div>` for the row.
+- Add the following to the new line: `{% endfor %}`
+
+That code should look like this:
+
+```html
+  <div class="row">
+    {% for ship in pirates.ships %}
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+```
+
+- Save your file and go look at your page.
+
+Now you have eight cards! Let's break down what we've done here.
+
+Let's take this line: `{% for ship in pirates.ships %}`
+
+- `{%  %}` indicates we are doing special stuff, just like we've done before with "blocks" and "extend".
+- `for` means we are starting the loop.
+- `ship` is what we are calling a single pass through the data. We are "naming" that single item as a "ship" so we can refer later to key values in that row of data. We can use any word we want, but I always use a term logical to the data. We are looping through a bunch of ships, so a single one of those is a single "ship".
+- `in pirates.ships` is defining which array we are looping through. The "pirates" part is the file we are looking in, and "ships" is the name of the array inside that file.
+
+Everything after that will get repeated until we reach:
+
+`(% endfor %)`
+
+which says STOP REPEATING.
+
+### Update the headline
+
+At this point you are thinking "That's cool, Prof, but they are all the same." Well, remember when I showed above that we can call data from an array? We'll do that next, except we don't have to specify the order from the array since we've named the current pass as a "ship". We are now going to call that data in our loop.
+
+- For the headline in the `<h5>` text, replace "Special title treatment" with this: `{{ ship.ship_name }}`
+- Save your file and go look at your page. Now you have a new ship name in each card.
+
+To call a variable from our data, we use the double curly-brace: `{{ }}`. (This is opposed to `{% %}` which does other things).
+
+Since we named a single item a "ship" we use that, and then use the dot notation to call the object key : `{{ ship.ship_name }}`. I like to put spaces around the names for readability, but it is not required.
+
+### Update the blurb
+
+If we look at our example JSON, we see the key for the description of the ship is called a `blurb`. So we can use the same style to replace the text in our code with the new value.
+
+- Go into the code and replace the text inside the `<p>` tag with: `{{ ship.blurb }}`
+- Save and check your page.
+
+Now you should be showing the description of each ship after the name of the ship.
+
+### Update the source link
+
+We have these big buttons that look like they could be a link to somewhere, which would be perfect to use to link to the webpage with more information about our ship. We'll modify those next to add the URL, change the text and change the button display to a simple link.
+
+- Go into the `href` of the button and replace the `#` with: `{{ ship.source }}`. This is the URL in our data that is the website where we got the info. We are inserting it into an href.
+- Remove the `class="btn btn-primary"` as that is what make the link into a button. (Which is cool, but we don't need to draw that much attention to our source link.)
+- Replace the text "Go somewhere" with simply "Source".
+- Inside the `href` element, and an attribute to open the link in a new page: `target="_blank"`.
+- Save your file and go check your page and make sure the links work properly.
+
+### Adding the captain
+
+The last thing we need is to add our captain into the card. We don't have an HTML element to update from our Bootstrap code, so we'll just add our own.
+
+- Add a new line after the `<h5>` line.
+- Add an `<h6>` and fill it with the code necessary to display the captain's name. Refer to the JSON example above to figure out what the key value is.
+- Save and check.
+
+### Adjusting columns for breakpoints
+
+The cards example we pulled from the Bootstrap docs has just one column breakpoint set at `col-sm-6` which gives us two cards per row. Let's adjust that for larger screens to show three cards per row.
+
+Remember, we are working with a 12 column grid. When we set `col-sm-6` that means that each card takes up six columns, which gives us the two cards. If at the large size we want three to a row, then we would want each card to take **four** columns. (12 / 3 = 4).
+
+- On the line that has `<div class="col-sm-6">`, add another class `col-lg-4` so it looks like this: `<div class="col-sm-6 col-lg-4">`
+- Save your file and look at your page.
+- Change the width of your browser from wide to very small and watch the columns change.
+  - Remember another way to do this is to use the Inspector. Get the inspector, then click the little "mobile" icon and controls to show different types of mobile devices.
+
+## Fix some display nits
+
+We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/4.5/utilities/spacing/).
+
+- On the `class="card"` div, add another class so it is `class="card mb-4"`. We did the same thing in our Bootstrap lesson. `m` is margin, `b` is bottom and `4` is a value between 1-5.
+- Save and check that you have vertical space between the cards.
 
 ---
 
-Next: [Detail pages](static-04-detail.md)
+Next: [Make pretty and publish](static-04-publish.md)
+
+Previous: [Layouts](static-02-layouts.md)
