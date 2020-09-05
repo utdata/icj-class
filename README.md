@@ -87,7 +87,7 @@ Better CSS with Sass
 
 ### Final project
 
-- [Requirements, instructions and files](final/final.md)
+- [Requirements, instructions and files](final/README.md)
 
 ### First Graphics App
 

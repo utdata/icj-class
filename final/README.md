@@ -35,7 +35,7 @@ In addition to the basic site structure, the index should have:
 
 ### "Baked" detail pages
 
-Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#bake-pages-from-data-and-a-layout) page.
+Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#bake-pages-from-data-and-a-layout) page and covered in the [static-apps lesson](../static-apps/README.md).
 
 The layout for these detail pages should include:
 
@@ -65,7 +65,7 @@ This idea is to build a website for the band Queen using the original members an
   - Band photos
   - Band members
   - Album covers
-- Data stored in the [Queen data Google Sheet](https://docs.google.com/spreadsheets/d/1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE/edit#gid=1749378089). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. About the data:
+- Data stored in the [Queen data Google Sheet](https://docs.google.com/spreadsheets/d/1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE/copy). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. About the data:
   - **members** is the data to use for "baked" pages.
     - This data includes a `slug` field that you will need in your baking config.
     - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
@@ -81,13 +81,13 @@ This idea is to build a tourism microsite similar to what a local news organizat
   - Austin wallpaper photos and logos
   - Landmarks
   - Restaurants
-- The Google Sheet [Austin Project Data](https://docs.google.com/spreadsheets/d/1Ts65v2RhdqWVJZSnlbaHp2eo2OrQmwkoyBkySpZIBks/edit#gid=0). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. This data includes:
+- The Google Sheet [Austin Project Data](https://docs.google.com/spreadsheets/d/1Ts65v2RhdqWVJZSnlbaHp2eo2OrQmwkoyBkySpZIBks/copy). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. This data includes:
   - **landmarks** is the data you use for your "baked" detail pages.
     - This data includes a `slug` field that you will need in your baking config.
     - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
   - **activities** is optional EXTRA CREDIT data where you can build a table from the data.
   - **murals** is optional EXTRA CREDIT for future use. (Still working this out.)
-- The Google Doc [Austin restaurants data](https://docs.google.com/document/d/18cbNgFAJx-eh6KQHQLoRy17BkmoGHXW7fAZ4U_K0clA/edit) is the "additional content" data for this collection. Make a copy of that file for your own Google Drive account configure it for download like the sheet above.
+- The Google Doc [Austin restaurants data](https://docs.google.com/document/d/18cbNgFAJx-eh6KQHQLoRy17BkmoGHXW7fAZ4U_K0clA/copy) is the "additional content" data for this collection. Make a copy of that file for your own Google Drive account configure it for download like the sheet above.
   - With this data you'll make a display of popular restaurants.
   - For EXTRA CREDIT, add THREE new restaurants to the Google Doc list using the same notation. You'll need to find and add the photos, too.
 
@@ -101,7 +101,7 @@ See the [icj-project-template README](https://github.com/utdata/icj-project-temp
 
 - Look through the photos and data assets so you know what you have to work with.
 - Physically draw out what you want your pages to look like so you have a goal in mind. (There is a first assignment to provide sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen. Draw each version out.
-- Set up your assets: photos and data.
+- Set up your assets: photos and fetching data.
 - Work on the structure before the design. Basically get the template structure and HTML/Bootstrap elements on the page. Again, consider mobile first and then wider page widths.
 - Then work on the loop logic for that part of the assignment. Get the loops working first (just printing an element to the page). Next figure out your HTML structure of the element, then use the loop for the part that should repeat.
 - For the "baking" pages, set up a simple layout and then configure the baking task in project.config.json. Once you get the pages building with data, then continue working on the structure and design of the page.
