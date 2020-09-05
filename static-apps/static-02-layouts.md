@@ -70,7 +70,7 @@ This is an example of the Nunjucks _block_ tag, and this one is called "page_tit
 - Nunjucks block tags start with `{% block tag_name %}` and end with `{% endblock %}`.
 - The content inside the tag will display UNLESS you override it later with a new block tag of the same name.
 
-> You can also call the tag and append code to it using [super](https://mozilla.github.io/nunjucks/templating.html#super), but we aren't doing that here.
+> You can also call the block and append code to it using [super](https://mozilla.github.io/nunjucks/templating.html#super), but we aren't doing that here.
 
 We want our site name to be at the beginning of every page title of our site, but then we want to override the actual title of each page with it's own title.
 
@@ -107,13 +107,13 @@ Includes are bits of project code that we break off into it's own file because w
 
 If we look in our `base.njk` layout at about line 13, we'll see this code: `{% include "_includes/nav.njk" %}`. What an include does is when the browser renders the page, it takes all the code inside that `nav.njk` file and inserts it into that location in the layout/page. It's sorta like a "block" but dumber. We can't overwrite it. But it is really handy to break up your code into logical files so you can find code later when your website gets complex.
 
-Our example here is the navigation for the website, which we've saved in `src/njk/_includes/nav.njk`. In maintaining a website, you'll often go into the navigation and make changes, so it makes sense to put it in separate file where we can easily find it.
+Our example here is the navigation for the website, which is saved in `src/njk/_includes/nav.njk`. In maintaining a website, you'll often go into the navigation and make changes, so it makes sense to put it in separate file where we can easily find it.
 
 Let's update the Brand and a link to a new page we'll add later.
 
 - Open `src/njk/_includes/nav.njk`.
 - Find the `navbar-brand` segment and update the text "Navbar" to "Pirate Cove".
-- AFTER the line that has <ul class="navbar-nav"> (about line 7), add the following:
+- AFTER the line that has `<ul class="navbar-nav">` (about line 7), add the following:
 
 ```html
       <li class="nav-item">
@@ -144,7 +144,7 @@ In our original Pirate Cove site, we had the cool header with a photo background
 </div>
 ```
 
-Now that we have the partial built, we can add it to the `base.njk` file right after the nav:
+Now that we have the partial built, we can add it to the `base.njk` on a new line after the nav include:
 
 ```html
 {% include "_partials/jumbotron.njk" %}

@@ -23,7 +23,7 @@ We will learn the features of this project template in steps:
 
 ## Building up to the static-generator app
 
-Through this semester we've been building your coding skills, adding a new language or tool at each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.
+Throughout this semester we've been building your coding skills, adding a new language or tool at each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.
 
 When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on every page. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
@@ -31,7 +31,7 @@ Static Site Generators are an approach to web development that allow you to buil
 
 There are [many tools](https://www.staticgen.com/) to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.
 
-For our class, I have provided you a project framework in a repo that uses Node.js and Nunjucks create a template environment.
+For our class, I have provided you a project framework in a repo that uses Node.js and Nunjucks create a static-app environment.
 
 ### Nunjucks
 
@@ -52,11 +52,11 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 
 Before we talk about how the project architecture is structured, let's tour the example pages that are included. As we do so, we'll just touch on how the example code applies to specific project features.
 
-- All the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don't have to duplicate code for each new page.
+- All the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single layout, so we don't have to duplicate code for each new page.
 - The index also has a bookstores list down the page a bit, which is a loop over some data. As we explore the code later you'll see there is only code for one entry, but we repeat that code for every row in data file. In this case the data was downloaded from a Google Sheets spreadsheet, an optional feature of the project. Sometimes having a structured data source like a spreadsheet is helpful.
 - The index also has a listing of three books. This is also built within a "loop" that allows us to repeat the same code over and over. In this case our book data was downloaded from a Google Docs file written in a special structure called ArchieML, developed by The New York Times.
 - Lastly, there are individual pages for each book listed, which serve as an example of detail pages built from the same template (called layouts in this project). Only the text and image content is different for each page, but the structure for each page comes from the same layout.
-- These specific pages were created using another feature of the project where we can "bake" pages from data. Instead of a human creating a new file for each library book, they were generated automagically based on data from the Google Doc. If there were 100 books in the data, it would've built 100 pages.
+- These specific book pages were created using another feature of the project where we can "bake" pages from data. Instead of a human creating a new file for each library book, they were generated automagically based on data from the Google Doc. If there were 100 books in the data, it would've built 100 pages.
 
 Storing our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code. It's super powerful, and used by newsrooms like NYT, NPR and The Texas Tribune.
 

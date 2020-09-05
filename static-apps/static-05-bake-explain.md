@@ -8,7 +8,7 @@ Before we dive into it, let's go through how the concepts work by looking at the
 
 ## Let's review the example
 
-Go back to your site and click on the "Index example" link we added. The page shows three different books at the top of the page. There is a link at the bottom of each book ... click on those and gander at them.
+Go back to your site and click on the "Index example" link we added to the nav. The page shows three different books at the top of the page. There is a link at the bottom of each book ... click on those and gander at them.
 
 This is a screen shot of one of those pages. (It's a good book. Read it.)
 
@@ -59,7 +59,7 @@ The first line `{% extends '_layouts/base.njk' %}
 
 The next line `{% set relative_path = "../" %}` is something we need to include because our generated book pages are created INSIDE another folder like this, `books/the-shipping-news.html`. To make a long story short, we need it to make navigation links work.
 
-The next two lines are our `page_title` and `page_description` blocks to set those for each book page. You'll notice that a variable pulling data like `{{ title }}` is inside those. What's a little different here than in our pirate ship loop is we don't have to name what file or array this is coming from. That's because we handle it later in the `project.config.json` later.
+The next two lines are our `page_title` and `page_description` blocks to set those for each book page. You'll notice that a variable pulling data like `{{ title }}` is inside those. What's a little different here than in our pirate ship loop is we don't have to name what file or array this is coming from. That's because we handle it later in the `project.config.json`.
 
 Then we get to the "block content". This has our page structure for each book page. It's set up to be a basic two-column layout with the photo on the left and the text on the right. Note that there are data variables used throughout, assigning data to different places on the page. Again, we just need the "key" name because we define the file and array later.
 

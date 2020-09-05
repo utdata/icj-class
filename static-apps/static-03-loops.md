@@ -44,7 +44,7 @@ Here we will "tell" this project about the Google Sheet.
 
 That first comma in the code above needs to come right after the `}` that closes out the "bookstores" configuration.
 
-The `fileID` value there is from the URL of the Google Sheet. It's the long string before `/edit/` in the URL, and it is unique to for every Google Sheet (and Doc, for that matter.). The `type` is "sheet". the other possible value is "doc". We'll handle those later. The `name` is what we want the file to be called when it is downloaded.
+The `fileID` value there is from the URL of the Google Sheet. It's the long string before `/edit/` in the URL, and it is unique to for every Google Sheet (and Doc, for that matter.). The `type` is "sheet". the other possible value is "doc". We'll do one of those later. The `name` is what we want the file to be called when it is downloaded.
 
 What we've done here is add to a "files" array in this JSON config file. This is a list of all the Google Sheets and Docs used in the project.
 
@@ -62,7 +62,7 @@ Go ahead and open the files at `src/data/pirates.json` and peek at it. Here is j
 {
   "ships": [
     {
-      "ship_name": "Blackbeard’s Queen Anne’s Revenge",
+      "ship_name": "Queen Anne’s Revenge",
       "captain": "Edward \"Blackbeard\" Teach",
       "blurb": "Edward \"Blackbeard\" Teach was one of the most feared pirates in history. In November 1717, he captured La Concorde, a massive French ship used to transport enslaved people. He refitted the Concorde, mounting 40 cannons on board and renaming her Queen Anne's Revenge. With a 40-cannon warship, Blackbeard ruled the Caribbean and the eastern coast of North America. In 1718, the Queen Anne's Revenge ran aground and was abandoned. In 1996 searchers found a sunken ship they believe to be the Queen Anne's Revenge in the waters off of North Carolina: some items including a bell and an anchor are on display in local museums.",
       "source": "https://www.thoughtco.com/famous-pirate-ships-2136286"
@@ -81,9 +81,7 @@ I'll try to keep all of these terms straight, but I admit I mix them up.
 
 The key here is that we have downloaded this data, once we restart our dev environment the data will be "in context", meaning our program will allow us to access it.
 
-It's probably easier to it than explain it.
-
-~~An example would be `{{ pirates.ships[0].ship_name }}` would give us "Queen Anne's Revenge" in return. The `[0]` part of that is finding the first item in the array. JavaScript is weird in that it starts counting at Zero instead of One.~~
+It's probably easier to do it than explain it.
 
 - Restart `gulp dev`.
 - Go into your `src/njk/pirate-ships.njk` file.
@@ -95,6 +93,8 @@ It's probably easier to it than explain it.
 
 When the page refreshes you should see "Queen Anne's Revenge" show up.
 
+"pirates" is the name of the file. "ships" is the name of the array. "[0]" is the order of the item, and we want the first one. Remember JavaScript starts counting at zero. "ship_name" is the object we are pulling from the item.
+
 Now go back and change the number to `[1]` instead of `[0]` and save it. What do you think the result will be? Go back look at the page and see. After you've seen the change, you can go ahead and remove the H3 and contents, as we don't need it here. I just wanted to show how it works.
 
 So now we have a list of pirate ships in our project "context" and can build a cool list of them. That is next.
@@ -104,7 +104,7 @@ So now we have a list of pirate ships in our project "context" and can build a c
 Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/4.5/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/4.5/components/card/#using-grid-markup).
 
 - Go to the [Using grid markup](https://getbootstrap.com/docs/4.5/components/card/#using-grid-markup) section in the docs and copy the code provided there.
-- After the closing `</p> tag for the intro, add a new line.
+- After the closing `</p>` tag for the intro, add a new line.
 - Paste your code. This already has the row and columns we need.
 - Save your file and look at your page.
 
@@ -163,7 +163,7 @@ which says STOP REPEATING.
 
 ### Update the headline
 
-At this point you are thinking "That's cool, Prof, but they are all the same." Well, remember when I showed above that we can call data from an array? We'll do that next, except we don't have to specify which item in the array since we've named the current pass as a "ship". We are now going to call that data in our loop.
+At this point you are thinking "That's cool, Prof, but they are all the same." Well, remember when I showed above that we can call data from an array? We'll do that next, except we don't have to specify the order from the array since we've named the current pass as a "ship". We are now going to call that data in our loop.
 
 - For the headline in the `<h5>` text, replace "Special title treatment" with this: `{{ ship.ship_name }}`
 - Save your file and go look at your page. Now you have a new ship name in each card.
@@ -185,7 +185,7 @@ Now you should be showing the description of each ship after the name of the shi
 
 We have these big buttons that look like they could be a link to somewhere, which would be perfect to use to link to the webpage with more information about our ship. We'll modify those next to add the URL, change the text and change the button display to a simple link.
 
-- Go into the `href` of the button and replace the `#` with: `{{ ship.source }}`. This is the URL to the website where we got the info and we are inserting it into an href.
+- Go into the `href` of the button and replace the `#` with: `{{ ship.source }}`. This is the URL in our data that is the website where we got the info. We are inserting it into an href.
 - Remove the `class="btn btn-primary"` as that is what make the link into a button. (Which is cool, but we don't need to draw that much attention to our source link.)
 - Replace the text "Go somewhere" with simply "Source".
 - Inside the `href` element, and an attribute to open the link in a new page: `target="_blank"`.

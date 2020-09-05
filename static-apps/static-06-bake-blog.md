@@ -15,7 +15,7 @@ Remember we need three things: The data, the layout, and a config to marry them.
 ## Config the data
 
 - Open your `project.config.json` file.
-- In the `files` array, we need to add a new value. You can copy/paste one of the other ones, but make sure you include the comma that separates each entry.
+- In the `files` array, we need to add a new value. You can copy/paste one of the other examples, but make sure you include the comma that separates each entry.
   - Update the `fileID` with the ID of your new Google Doc. It's the part of the URL just before `/edit/`.
   - Set the `type` as "doc".
   - Set the `name` as "blog".
@@ -37,9 +37,9 @@ Now that we have data, we need to create our layout. Because baking layouts are 
 {% set relative_path = "../" %}
 {% from '_macros/prose.njk' import prose %}
 
-{% block page_title %}{{ title }}{% endblock %}
+{% block page_title %}{{ headline }}{% endblock %}
 
-{% block page_description %}{{ title }} by {{ author }}{% endblock %}
+{% block page_description %}{{ headline }} by Capt. Crit McGillicutty{% endblock %}
 
 {% block content %}
   <article class="container">
@@ -64,6 +64,7 @@ This code is very similar to the `bake-books.njk` layout with these exceptions:
 
 1. `{% from '_macros/prose.njk' import prose %}` near the top of the file is something we need to process our multi-paragraph blog post.
 2. `{{ prose(post) }}` is the variable to pull that post data. We are wrapping that "post" data in the `prose` macro to create a new `<p>` tag for each paragraph.
+3. Also note the `src` tag for the images. They have to include `../img/` as part of the path because we'll be building these pages inside a `blog/` directory, and the photos are in the parent directory inside an `img/` folder.
 
 All that code was pre-written because this is a common thing we have to do in projects. All you need to do is to remember that when you use multiple paragraphs you have to format your original Google Doc correctly (with the `[.+tag_name]` thingy), to include the macro, and to wrap the item in `prose(tag_name)`.
 
@@ -84,9 +85,9 @@ Now it's time to match these two things in our our config file.
     }
 ```
 
-Note the differences in the key values. Review these key values and compare them to the books one that was there before. All the values are new (though we used the term "slug" in both data sets).
+Note the differences in the key values. Review these key values and compare them to the books example. All the values are new (though we used the term "slug" in both data sets).
 
-With this configuration, we will create new page inside a folder called "blog", and each page will be named using the slug value -- which is formatted like a date in our data -- so the pages will end up something like `blog/2019-10-18.html`.
+With this configuration, we will create our new pages inside a folder called "blog", and each page will be named using the slug value -- which is a url-friendly date in our data -- so the pages will end up something like `blog/2019-10-18.html`.
 
 ## Let's bake
 
@@ -95,7 +96,7 @@ OK, now it's magic time. We have to restart our dev environment to get everythin
 - In your Terminal, quit browsersync.
 - Run `gulp dev`.
 - If you look in your `docs/` folder, you should see a new `blogs/`folder with two pages inside.
-- In your browser, you should be able to add `blog/2019-10-18.html` to the end of the existing URL and get to the first page.
+- In your browser, you should be able able to replace `index.html` with `blog/2019-10-18.html` to see the first page.
 
 ## Add a blog loop to the index
 
@@ -117,7 +118,7 @@ Once you have your index blog post loop going, I want you to add another blog to
 2. Set the slug as `2019-10-20`.
 3. Use the `kraken03.jpg` photo.
 4. Add your own [pirate ipsum](https://pirateipsum.me/) or write something yourself, but use multiple paragraphs.
-5. You'll need to quit your browsersync and use `gulp fetch` to get the updates. Once you run gulp dev again you should see the new entries.
+5. You'll need to quit your browsersync and use `gulp fetch` to get the updates. Once you run `gulp dev` again you should see the new entry.
 
 ## Clean up and republish to Github
 

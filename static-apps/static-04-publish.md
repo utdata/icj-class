@@ -20,7 +20,6 @@ For these, you'll need to do some documentation reading and exploration for the 
 - Push all your code to Github.
 - Use Settings to set up Gihub Pages to use the `master/docs` directory.
 - Add your published link to your Gitub repo at the top.
-- Turn in your Github repo link to the Canvas assignment
 
 ---
 
