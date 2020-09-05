@@ -102,8 +102,36 @@ OK, now it's magic time. We have to restart our dev environment to get everythin
 - If you look in your `docs/` folder, you should see a new `blogs/`folder with two pages inside.
 - In your browser, you should be able to add `blog/2019-10-18.html` to the end of the existing URL and get to the first page.
 
-## Add loop to index
+## Add a blog loop to the index
+
+Now it's time to include a list of our blog entries on the index page. You'll use what you've learned about loops when you did the pirate ships and then apply them here. I'll guide you _a little_, but I want to you to think a bit about it on your own.
+
+I'd like you to build a list of blog entries on the home page, and include the date of the entry, the headline and link to the blog entry. Here are some hints and things to think about.
+
+1. You have the blog data in context to use in a "for" loop. You are pulling `from blog.blogs`.
+2. You can build the HTML within the loop and use the data variables to get the headline, date and slug. The slug can be used to build the href to the blog entry. Just think about the path of where the blogs posts are relative to the index. The pages end in `.html`.
+3. If you build the loop in the same row/col as your intro text, then it will be the same width as that and look pretty decent.
+
+The "look" of these are up to you. You might keep it simple.
 
 ## Add a new blog entry
 
-## Republish to Github
+Once you have your index blog post loop going, I want you to add another blog to your Google Doc and fetch it into your project. Some thoughts on that:
+
+1. There is a template at the top of the Doc. You can copy/paste that below the `:endskip` and fill it out.
+2. Set the slug as `2019-10-20`.
+3. Use the `kraken03.jpg` photo.
+4. Add your own [pirate ipsum](https://pirateipsum.me/) or write something yourself, but use multiple paragraphs.
+5. You'll need to quit your browsersync and use `gulp fetch` to get the updates. Once you run gulp dev again you should see the new entries.
+
+## Clean up and republish to Github
+
+Let's finish this out.
+
+- Clean up `_includes/nav.njk` to remove the bits about the example index and the Library books, since we aren't using those. You might peruse that books list, as it another example of using loops.
+- Commit everything and push it again to Github. Make sure your site works well on the published link, as sometimes issues arise in publishing that are not apparent in your dev environment.
+- Turn in your Github repo link to the Canvas assignment.
+
+---
+
+Your done!

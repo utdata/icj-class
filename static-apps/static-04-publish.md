@@ -8,6 +8,8 @@ While we aren't finished with this project, I'd like you to clean up what we hav
 
 ## Index updates
 
+For these, you'll need to do some documentation reading and exploration for the solutions.
+
 - When viewed on a desktop, the intro text on the index is really wide and not very readable. Play with the column [grid](https://getbootstrap.com/docs/4.5/layout/grid/) on the index so that the content uses full width on mobile, but fewer columns at the `md` and higher breakpoints. The content should be centered on the page, though, which you can do by applying an [offset](https://getbootstrap.com/docs/4.5/layout/grid/#offsetting-columns) to move the column over to the right.
 - Go back into the pirate ships page and then peruse the [Bootstrap cards](https://getbootstrap.com/docs/4.5/components/card/#background-and-color) docs and look at how you can modify the look of those with colors and styles. Make them look a little nicer. Your choice, but make sure you can read the link text. You can use SCSS to change that color if you wish.
 

@@ -2,12 +2,11 @@
 
 We're going to rebuild the framework of the Pirate Cove site you built in the Bootstrap assignment using this new structure to improve code efficiency and site maintainability. We'll build the index, a new page listing pirate ships and multiple blog entries.
 
-Here are some screen casts of the finished product you are working toward. I'm showing only the index and one entry page, but you will make three entry pages.
+Here are some screen shots of the finished product you are working toward.
 
-> These will need to be updated!!!
-
-- [Index page](https://drive.google.com/open?id=1VVL4bHhFsalq-mj2Yy14C1U62lUqOFgi)
-- [Entry page example](https://drive.google.com/open?id=1gOk9bUFAmtR82MmAobNK8jovrVnIW_z_)
+- [Index page](../images/static-done-index.png)
+- [Pirate ship page](../images/static-done-pirate-ship.png)
+- [Entry page example](../images/static-done-entry-page.png)
 
 ## Install the assets
 
