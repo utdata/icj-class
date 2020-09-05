@@ -124,7 +124,7 @@ Once you have your index blog post loop going, I want you to add another blog to
 
 Let's finish this out.
 
-- Clean up `_includes/nav.njk` to remove the bits about the example index and the Library books, since we aren't using those. You might peruse that books list, as it another example of using loops.
+- Clean up `_includes/nav.njk` to remove the bits about the example index and the Library books, since we aren't using those. You might peruse that books list while you are there, as it is another example of using loops.
 - Commit everything and push it again to Github. Make sure your site works well on the published link, as sometimes issues arise in publishing that are not apparent in your dev environment.
 - Turn in your Github repo link to the Canvas assignment.
 
