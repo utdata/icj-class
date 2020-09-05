@@ -88,7 +88,3 @@ Better CSS with Sass
 ### Final project
 
 - [Requirements, instructions and files](final/README.md)
-
-### First Graphics App
-
-- [FGA notes](fga/fga.md)
