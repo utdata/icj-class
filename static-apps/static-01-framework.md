@@ -4,31 +4,28 @@
 
 We will learn the features of this project template in steps:
 
-### Templates
+### Layouts
 
-- We'll learn about static site generators and templates.
-- We'll rebuild our Ship's Log site with two types of pages: an index, and then multiple entry pages.
+- We'll learn about static site generators and layouts.
+- We'll build a new page using the base layout.
 
 ### Loops and Google Sheets data
 
 - We'll learn about using Google Sheets to manage data in our project.
 - We'll introduce loops to process data on our pages.
 
-### Google Docs and ArchieML for content
+### Google Docs, ArchieML and baking pages
 
 - We'll learn about using Google Docs/ArchieML for content.
-- We'll refactor our blog pages to use Google Docs for the blog posts.
-
-### Baking pages
-
-- We'll learn about the bake command in the project
-- We'll create a series of pages based on a data source.
+- We'll learn about the bake command in the project.
+- We'll create blog pages based on Google Doc source.
+- We'll update our index page to build links to the blog pages.
 
 ## Building up to the static-generator app
 
 Through this semester we've been building your coding skills, adding a new language or tool at each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.
 
-When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on two pages. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
+When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on every page. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
 Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be used published with a web server without the need of a live database.
 
@@ -38,7 +35,7 @@ For our class, I have provided you a project framework in a repo that uses Node.
 
 ### Nunjucks
 
-For this lesson, we'll introduce the JavaScript template language [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) and a couple of other tools. We'll take the Bootstrap project that you built previously, and "extrapolate" it so you can build similar projects with more pages much faster.
+For this lesson, we'll introduce the JavaScript template language [Nunjucks](https://mozilla.github.io/nunjucks/templating.html) and a couple of other tools. We'll take the "Pirate Cove" Bootstrap project that you built previously, and "extrapolate" it so you can build similar projects with more pages much faster.
 
 ## Set up development
 
@@ -53,15 +50,15 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 
 ## Review the example site
 
-Before we talk about how the project architecture is structured, let's tour the example pages that are included. As we do so, we'll just touch on how the example applies specific features.
+Before we talk about how the project architecture is structured, let's tour the example pages that are included. As we do so, we'll just touch on how the example code applies to specific project features.
 
 - All the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don't have to duplicate code for each new page.
-- On the index there is a listing of three books. As we explore the code later, you'll see that the code is written for only one library book, but it is within a "loop" that allows us to repeat that code over and over based on the number of rows we have in our library data. We are also using an optional feature where our library books content is downloaded from a Google Docs file.
-- The index also has a bookstores list, which is also a loop over some data. But, in this case, the data was downloaded from a Google Sheets spreadsheet. Sometimes having a more structured data source like a spreadsheet is helpful.
-- Lastly, there are individual pages for each book listed, which serve as an example of detail pages built from the same template. Only the text and image content is different for each page, but the structure is the same and from the same template.
+- The index also has a bookstores list down the page a bit, which is a loop over some data. As we explore the code later you'll see there is only code for one entry, but we repeat that code for every row in data file. In this case the data was downloaded from a Google Sheets spreadsheet, an optional feature of the project. Sometimes having a structured data source like a spreadsheet is helpful.
+- The index also has a listing of three books. This is also built within a "loop" that allows us to repeat the same code over and over. In this case our book data was downloaded from a Google Docs file written in a special structure called ArchieML, developed by The New York Times.
+- Lastly, there are individual pages for each book listed, which serve as an example of detail pages built from the same template (called layouts in this project). Only the text and image content is different for each page, but the structure for each page comes from the same layout.
 - These specific pages were created using another feature of the project where we can "bake" pages from data. Instead of a human creating a new file for each library book, they were generated automagically based on data from the Google Doc. If there were 100 books in the data, it would've built 100 pages.
 
-Storing our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code.
+Storing our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code. It's super powerful, and used by newsrooms like NYT, NPR and The Texas Tribune.
 
 ## Understand the project structure
 
@@ -69,4 +66,4 @@ The README.md in the project template has details about how different features w
 
 ----
 
-Next: [Templates](static-02-templates.md)
+Next: [Layouts](static-02-layouts.md)
