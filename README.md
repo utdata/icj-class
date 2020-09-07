@@ -24,6 +24,7 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
     - HTML Document Standards
 - [HTML class](html/html-class.md)
 - [HTML practice](html/html-practice.md)
+- Quiz in Canvas
 
 ### CSS
 
@@ -38,6 +39,7 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
     - CSS Display and Positioning
 - [CSS class](css/css-class.md)
 - [CSS practice](css/css-practice.md)
+- Quiz in Canvas
 
 ### JavaScript
 
@@ -55,6 +57,7 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
 - [JS Flow control](js/js-class-04.md)
 - [JS with html](js/js-class-05.md)
 - [JS jQuery/Datatables](js/js-class-06.md)
+- Quiz in Canvas
 
 ### Sass
 
