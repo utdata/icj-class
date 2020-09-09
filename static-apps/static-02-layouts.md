@@ -45,6 +45,19 @@ To keep us from getting bogged down in the advanced features of the projects tem
 
 Your browserSyncReload should've kicked off as you renamed and added files. If you look at your index page now it just has the navigation, footer and the text "Content goes here". If that isn't happening, run `gulp dev`.
 
+Now, it's likely you are looking at this `index.njk` file and wondering how these few lines of code is display more than just one line of text in the browser? Where is the navigation coming from? Or the footer? This is the magic of Nunjucks.
+
+Look the first line of our index file: `{% extends '_layouts/base.njk' %}`. This Nunjucks  
+Let's look at these files and this structure a little closer. As I've said in the introduction, Nunjucks allows us to separate our code into chunks and reuse it in different places so we don't repeat code over and over. This is the prime example.
+
+- Open up the file `src/njk/_layouts/base.njk` and take a look at it.
+
+This is the file that holds the basic structure of _every_ page on our website. It has the required HTML5 tags, `<head>` and `<body>` and such that is common to every web page.
+
+But the `base.njk` file also has examples of two other Nunjucks features we are getting into next: _blocks_ and _includes_.
+
+
+
 When we reviewed the layouts in class (or on video), we likely talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
 
 In our `index.njk` file, that first "extends" line of code is telling this page to use all the code in in `_layouts/base.njk` (which is the framework of our site), and then anything that follows is being _inserted_ into that framework.
@@ -144,10 +157,10 @@ In our original Pirate Cove site, we had the cool header with a photo background
 </div>
 ```
 
-Now that we have the partial built, we can add it to the `base.njk` on a new line after the nav include:
+Now that we have the include built, we can add it to the `base.njk` on a new line after the nav include:
 
 ```html
-{% include "_partials/jumbotron.njk" %}
+{% include "_includes/jumbotron.njk" %}
 ```
 
 If you look at your browser now you should see the beginnings of a jumbotron, though it doesn't quite look right with our photo and such as we haven't added CSS to make it so. That is next.
