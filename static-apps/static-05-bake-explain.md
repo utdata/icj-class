@@ -16,7 +16,7 @@ This is a screen shot of one of those pages. (It's a good book. Read it.)
 
 All of the individual book pages have the same structure: A book photo on the left, and on the right a headline and blurb about the book.
 
-All the book pages were built from the same layout, but the content is different. It's much like amazon.com, where every item for purchase on the site has the same page structure, but the content is different depending on the item you are viewing.
+All the book pages were built from the same template, but the content is different. It's much like amazon.com, where every item for purchase on the site has the same page structure, but the content is different depending on the item you are viewing.
 
 All of these book pages were built automagically from a data source. Amazon works similarly, but pulls the item contents from a database. (It's a _little_ more complicated than that, but you get the idea.)
 
@@ -46,15 +46,15 @@ You'll see the `books` array near the top. That's the only one we are worried ab
 
 > As an aside: You can use any properly-formatted `.json` file in a project as long as it is in the `src/data` folder; it doesn't have to come from a Google Doc or Sheet. It's just a nice convenience because of the shared editing features that Google gives you.
 
-### The bake layout
+### The bake template
 
 OK, so we understand the data, but how are we using it?
 
-The baking feature in the project needs three things: The data (got it!), a layout to build the pages from, and a configuration to match the data the layout.
+The baking feature in the project needs three things: The data (got it!), a template to build the pages from, and a configuration to match the data the template.
 
-- Open up our example layout in `src/njk/_layouts/bake-book.njk`.
+- Open up our example template in `src/njk/_templates/bake-book.njk`.
 
-The first line `{% extends '_layouts/base.njk' %}
+The first line `{% extends '_templates/base.njk' %}
 ` gives us the structure of our site. We've seen that before.
 
 The next line `{% set relative_path = "../" %}` is something we need to include because our generated book pages are created INSIDE another folder like this, `books/the-shipping-news.html`. To make a long story short, we need it to make navigation links work.
@@ -67,12 +67,12 @@ The only other thing new here is `{{ blurb | safe }}` for the description of the
 
 ### Lastly, the project.config
 
-If you open our `project.config.json` back up and look at the array called `"to_bake"`. This is where we define which layout should be used with what data. Here is an example and description of each field:
+If you open our `project.config.json` back up and look at the array called `"to_bake"`. This is where we define which template should be used with what data. Here is an example and description of each field:
 
 ```json
 "to_bake": [
     {
-      "layout": "bake-book",
+      "template": "bake-book",
       "data": "library",
       "array": "books",
       "slug": "slug",
@@ -81,7 +81,7 @@ If you open our `project.config.json` back up and look at the array called `"to_
   ]
 ```
 
-- **`layout`** is the name of the layout file stored in `src/njk/_layouts` that will be used to build the pages. Note you don't need the extension in name.
+- **`template`** is the name of the template file stored in `src/njk/_templates` that will be used to build the pages. Note you don't need the extension in name.
 - **`data`** is the name of the data file to build from. You don't need `.json` in the name.
 - **`array`** is the name of the array you are using from the JSON file.
 - **`slug`** is a key required from the data that will become the filename of each file created. The field used in the data needs to be in a URL-friendly format with all lowercase letters with dashes instead of spaces.
@@ -89,7 +89,7 @@ If you open our `project.config.json` back up and look at the array called `"to_
 
 ### The generation
 
-With these three things: The data, the layout, and the config that brings them together, we can run `gulp bake` (or `gulp dev`) and a new page will be created in our destination folder for every item in our data. Whether there are three items or 300.
+With these three things: The data, the template, and the config that brings them together, we can run `gulp bake` (or `gulp dev`) and a new page will be created in our destination folder for every item in our data. Whether there are three items or 300.
 
 Pretty f'n cool, isn't it? With a project like this you can create something like a restaurant guide with a unique page for every establishment, all while managing the data in a Google Sheet or Doc.
 

@@ -4,7 +4,7 @@ Previous: [Bake explain](static-05-bake-explain.md)
 
 OK, now we are going to apply this "baking" concept to our Ship's Log blog pages. We'll automagically create a new page for each blog entry that has been written in a Google Doc.
 
-Remember we need three things: The data, the layout, and a config to marry them.
+Remember we need three things: The data, the template, and a config to marry them.
 
 ## The blog data
 
@@ -25,15 +25,15 @@ Remember we need three things: The data, the layout, and a config to marry them.
 
 It should now download **four** files, and "blog" should be one of them. If it doesn't work, read the error. If it says something about "Unexpected token" or "parse error", then it's likely your `project.config.json` file is not configured properly. If it says something like "The caller does not have permission", then you haven't set your Google Doc to be "viewable" to "Anyone with the link".
 
-## Create the bake-blog layout
+## Create the bake-blog template
 
-Now that we have data, we need to create our layout. Because baking layouts are a bit special, like to name them with the word "bake-" do I know what they are being used for.
+Now that we have data, we need to create our template. Because baking templates are a bit special, like to name them with the word "bake-" do I know what they are being used for.
 
-- Create a new file in `src/njk/_layouts/` called `bake-blog.njk`.
+- Create a new file in `src/njk/_templates/` called `bake-blog.njk`.
 - Put the following code inside the template and save it. I'll explain it after.
 
 ```html
-{% extends '_layouts/base.njk' %}
+{% extends '_templates/base.njk' %}
 {% set relative_path = "../" %}
 {% from '_macros/prose.njk' import prose %}
 
@@ -60,7 +60,7 @@ Now that we have data, we need to create our layout. Because baking layouts are 
 {% endblock %}
 ```
 
-This code is very similar to the `bake-books.njk` layout with these exceptions:
+This code is very similar to the `bake-books.njk` template with these exceptions:
 
 1. `{% from '_macros/prose.njk' import prose %}` near the top of the file is something we need to process our multi-paragraph blog post.
 2. `{{ prose(post) }}` is the variable to pull that post data. We are wrapping that "post" data in the `prose` macro to create a new `<p>` tag for each paragraph.
@@ -68,7 +68,7 @@ This code is very similar to the `bake-books.njk` layout with these exceptions:
 
 All that code was pre-written because this is a common thing we have to do in projects. All you need to do is to remember that when you use multiple paragraphs you have to format your original Google Doc correctly (with the `[.+tag_name]` thingy), to include the macro, and to wrap the item in `prose(tag_name)`.
 
-## Marry the data to the layout
+## Marry the data to the template
 
 Now it's time to match these two things in our our config file.
 
@@ -77,7 +77,7 @@ Now it's time to match these two things in our our config file.
 
 ```json
     {
-      "layout": "bake-blog",
+      "template": "bake-blog",
       "data": "blog",
       "array": "blogs",
       "slug": "slug",

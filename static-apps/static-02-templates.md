@@ -1,4 +1,4 @@
-# Layouts and blocks
+# Templates and blocks
 
 Previous: [Framework](static-01-framework.md)
 
@@ -28,13 +28,13 @@ We need to add the image files in [pirate-photos.zip](pirate-photos.zip) to our 
 
 ## Copy and rename the index
 
-To keep us from getting bogged down in the advanced features of the projects template, let's rename our current index (so we can keep it for reference later) and make a new one.
+To keep us from getting bogged down in the advanced features of the projects rig, let's rename our current index (so we can keep it for reference later) and make a new one.
 
 - rename the file `index.njk` to `index-example.njk`
 - create a new file `index.njk` in the same `njk` folder and insert the following code:
 
 ```html
-{% extends '_layouts/base.njk' %}
+{% extends '_templates/base.njk' %}
 
 {% block content %}
 <div class="container">
@@ -45,32 +45,27 @@ To keep us from getting bogged down in the advanced features of the projects tem
 
 Your browserSyncReload should've kicked off as you renamed and added files. If you look at your index page now it just has the navigation, footer and the text "Content goes here". If that isn't happening, run `gulp dev`.
 
-Now, it's likely you are looking at this `index.njk` file and wondering how these few lines of code is display more than just one line of text in the browser? Where is the navigation coming from? Or the footer? This is the magic of Nunjucks.
+Now, it's likely you are looking at this `index.njk` file and wondering how these few lines of code displays more than just one line of text in the browser? Where is the navigation coming from? Or the footer? This is the magic of Nunjucks.
 
-Look the first line of our index file: `{% extends '_layouts/base.njk' %}`. This Nunjucks  
-Let's look at these files and this structure a little closer. As I've said in the introduction, Nunjucks allows us to separate our code into chunks and reuse it in different places so we don't repeat code over and over. This is the prime example.
+Look the first line of our index file: `{% extends '_templates/base.njk' %}`. This Nunjucks tag `extends` tag is used with a concept called "template inheritance". This file, `index.njk`, is using all the code in `_templates/base.njk` and then using the Nunjucks `block` tag to replace and inject code into the base template. This way, we can reuse the `base.njk` template for every page on our site.
 
-- Open up the file `src/njk/_layouts/base.njk` and take a look at it.
+Let's look at it from the other direction.
 
-This is the file that holds the basic structure of _every_ page on our website. It has the required HTML5 tags, `<head>` and `<body>` and such that is common to every web page.
+- Open up the file `src/njk/_templates/base.njk` and take a look at it.
 
-But the `base.njk` file also has examples of two other Nunjucks features we are getting into next: _blocks_ and _includes_.
+This file has all the required HTML5 tags, `<head>` and `<body>` and such, that is common to every web page. But `base.njk` also has examples of two other Nunjucks tags -- _blocks_ and _includes_ -- that allow us to extend and use this code in other web pages of our site. We'll dive into those next.
 
+So, to recap again, our `index.njk` file has that first "extends" line of code that is telling this page to use all the code in in `_templates/base.njk` (which is the framework of our site), and then anything that follows is being _inserted_ into that framework.
 
+## Nunjucks template inheritance and blocks
 
-When we reviewed the layouts in class (or on video), we likely talked about the code inside the `src/njk/_layouts/base.njk` file, and how every page on our site uses this file.
-
-In our `index.njk` file, that first "extends" line of code is telling this page to use all the code in in `_layouts/base.njk` (which is the framework of our site), and then anything that follows is being _inserted_ into that framework.
-
-## Nunjucks layout inheritance and blocks
-
-We'll make a some changes in both our base layout and our index so we can see how they work together. 
+We'll make a some changes in both our base template and our index so we can see how these templates and blocks work together.
 
 - First, take a look at the title of your page in your browser. Note it says "Default title":
 
 ![Default title](../images/static-default-title.png)
 
-- Now open the file `src/njk/_layouts/base.njk`
+- Now open the file `src/njk/_templates/base.njk`
 
 - Take a look at the `<title>` tag here:
 
@@ -87,7 +82,7 @@ This is an example of the Nunjucks _block_ tag, and this one is called "page_tit
 
 We want our site name to be at the beginning of every page title of our site, but then we want to override the actual title of each page with it's own title.
 
-- Open the `src/njk/_layouts/base.njk` file.
+- Open the `src/njk/_templates/base.njk` file.
 - On the line that looks like this: `<title>{% block page_title %}Default title{% endblock %}</title>`, add "Pirate Cove | " right after the `<title>` tag so it looks like this:
 
 `<title>Pirate Cove | {% block page_title %}Default title{% endblock %}</title>`
@@ -112,13 +107,13 @@ Now your title looks like this:
 
 So, we have "Pirate Cove | " on every page, and on this specific page we have replaced "Default title" with new title text in the `{% block page_title %}` block.
 
-This concept will repeat again and again. We reserve space in a template (or layout), sometimes adding default content, and then we override it later when "extending" that layout.
+This concept will repeat again and again. We reserve space in a template, sometimes adding default content, and then we override it later when "extending" that template.
 
 ## Using Nunjucks includes
 
 Includes are bits of project code that we break off into it's own file because we are reusing it, or just for organizational purposes.
 
-If we look in our `base.njk` layout at about line 13, we'll see this code: `{% include "_includes/nav.njk" %}`. What an include does is when the browser renders the page, it takes all the code inside that `nav.njk` file and inserts it into that location in the layout/page. It's sorta like a "block" but dumber. We can't overwrite it. But it is really handy to break up your code into logical files so you can find code later when your website gets complex.
+If we look in our `base.njk` template at about line 13, we'll see this code: `{% include "_includes/nav.njk" %}`. What an include does is when the browser renders the page, it takes all the code inside that `nav.njk` file and inserts it into that location in the template/page. It's sorta like a "block" but dumber. We can't overwrite it. But it is really handy to break up your code into logical files so you can find code later when your website gets complex.
 
 Our example here is the navigation for the website, which is saved in `src/njk/_includes/nav.njk`. In maintaining a website, you'll often go into the navigation and make changes, so it makes sense to put it in separate file where we can easily find it.
 

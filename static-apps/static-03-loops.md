@@ -1,6 +1,6 @@
 # Data and loops
 
-Previous: [Layouts](static-02-layouts.md)
+Previous: [Templates](static-02-templates.md)
 
 We're going to create the Pirate Ships page we added to our nav earlier and introduce some data to our project and build some loops to display that data.
 
@@ -221,4 +221,4 @@ We have all our content here, but let's make it a bit nicer. The cards sit on to
 
 Next: [Make pretty and publish](static-04-publish.md)
 
-Previous: [Layouts](static-02-layouts.md)
+Previous: [Templates](static-02-templates.md)
