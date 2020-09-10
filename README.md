@@ -82,7 +82,7 @@ Better CSS with Sass
 ### Static apps
 
 - [Part 1: Framework and setup](static-apps/static-01-framework.md)
-- [Part 2: Layouts and blocks](static-apps/static-02-layouts.md)
+- [Part 2: Templates and blocks](static-apps/static-02-templates.md)
 - [Part 3: Data and loops](static-apps/static-03-loops.md)
 - [Part 4: Publishing](static-apps/static-04-publish.md)
 - [Part 5: Bake explanation](static-apps/static-05-bake-explain.md)
