@@ -10,10 +10,14 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 - Add the following code:
 
 ```html
+{% extends '_layouts/base.njk' %}
+
+{% block content %}
 <article class="container">
   <h1>Ships of the Golden Age of pirates</h1>
   <p>Intro text here.</p>
 </article>
+{% endblock %}
 ```
 
 - Save the file and then test your navigation link to make sure it works. If it doesn't, make sure you created the new file in the right folder. It should be right next to `index.njk`.
