@@ -10,7 +10,7 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 - Add the following code:
 
 ```html
-{% extends '_layouts/base.njk' %}
+{% extends '_templates/base.njk' %}
 
 {% block content %}
 <article class="container">
