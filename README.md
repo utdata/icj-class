@@ -4,6 +4,8 @@ This repo is for class assignments and resources for UT-Austin School of Journal
 
 The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are in this repository.
 
+> Current for Fall 2020
+
 ## Lessons
 
 ### Setting up
