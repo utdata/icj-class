@@ -57,7 +57,7 @@ The baking feature in the project needs three things: The data (got it!), a temp
 The first line `{% extends '_templates/base.njk' %}
 ` gives us the structure of our site. We've seen that before.
 
-The next line `{% set relative_path = "../" %}` is something we need to include because our generated book pages are created INSIDE another folder like this, `books/the-shipping-news.html`. To make a long story short, we need it to make navigation links work.
+The next line `{% set relative_path = "../" %}` is something we need to include because our generated book pages are created INSIDE another folder like this, `books/the-shipping-news.html`. (You might remember we included the `{{ relative_path }}` variable when we added navigation links earlier. To make a long story short, we need both of these things to make navigation links work from these pages.)
 
 The next two lines are our `page_title` and `page_description` blocks to set those for each book page. You'll notice that a variable pulling data like `{{ title }}` is inside those. What's a little different here than in our pirate ship loop is we don't have to name what file or array this is coming from. That's because we handle it later in the `project.config.json`.
 

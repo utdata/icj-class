@@ -125,16 +125,18 @@ Let's update the Brand and a link to a new page we'll add later.
 
 ```html
       <li class="nav-item">
-         <a class="nav-link" href="pirate-ships.html">Pirate ships</a>
+         <a class="nav-link" href="{{ relative_path }}pirate-ships.html">Pirate ships</a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="index-example.html">Index example</a>
+         <a class="nav-link" href="{{ relative_path }}index-example.html">Index example</a>
       </li>
 ```
 
 You might have to fix in indenting in some of the code block so it lines up with the `</li>` that follows it.
 
 Now, if you look at your index in your browser, you'll see we've added two new navigation links. One is to the original index example (so we can see it later), and the other is a new page that we will create later.
+
+You might notice that we have this `{{ relative_path }}` in front of our URLs here in the nav. Not to get too far into it, but we will need that later when we create new web pages inside folders on our site. Those pages will need to understand where they are in relation to the index.
 
 ## The jumbotron
 
@@ -148,7 +150,7 @@ In our original Pirate Cove site, we had the cool header with a photo background
 ```html
 <div class="jumbotron banner text-center">
   <h1>The Ship's Log</h1>
-  <p>A diary by Capt. Crit McGillicutty</p> 
+  <p>A diary by Capt. Crit McGillicutty</p>
 </div>
 ```
 
