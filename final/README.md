@@ -1,6 +1,6 @@
 # Your final project
 
-Your goal with this final project is to create a multi-page website using the [icj-project-template](https://github.com/utdata/icj-project-template) that has an index and multiple detail pages. It will be published through Github Pages.
+Your goal with this final project is to create a multi-page website using the [icj-project-rig](https://github.com/utdata/icj-project-rig) that has an index and multiple detail pages. It will be published through Github Pages.
 
 I am supplying you with two ideas to choose from, each with their own collection of assets. You may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material.
 
@@ -35,7 +35,7 @@ In addition to the basic site structure, the index should have:
 
 ### "Baked" detail pages
 
-Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#bake-pages-from-data-and-a-layout) page and covered in the [static-apps lesson](../static-apps/README.md).
+Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-rig README](https://github.com/utdata/icj-project-rig#bake-pages-from-data-and-a-template) page and covered in the [static-apps lesson](../static-apps/README.md).
 
 The layout for these detail pages should include:
 
@@ -93,7 +93,7 @@ This idea is to build a tourism microsite similar to what a local news organizat
 
 ### Downloading data from Google Drive
 
-See the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#using-data-from-google-drive) section on "Using data from Google Drive" to see how to configure and download the data from the Google Sheets or Docs.
+See the [icj-project-rig README](https://github.com/utdata/icj-project-rig#using-data-from-google-drive) section on "Using data from Google Drive" to see how to configure and download the data from the Google Sheets or Docs.
 
 > Remember to restart gulp after installing the photos or data.
 
@@ -129,7 +129,7 @@ A strategy to use is to figure how you want the multiple elements to look, then 
 
 ### Creating the "baked" pages
 
-The method to create the "baked" detail pages are outlined in the [icj-project-template README](https://github.com/utdata/icj-project-template/blob/master/README.md#bake-pages-from-data-and-a-layout).
+The method to create the "baked" detail pages are outlined in the [icj-project-rig README](https://github.com/utdata/icj-project-rig#bake-pages-from-data-and-a-template).
 
 - You'll need to create a layout similar to the example `src/njk/_layouts/bake-book.njk`. This layout will be used to create each individual page from the data.
 - You'll use either the **members** array from the Queen data or the **landmarks** array from the Austin data to build your pages.
