@@ -19,7 +19,7 @@ Your page will refresh and after a few minutes, your website will be available o
 
 `https://{githubusername}.github.io/{project-name}/`
 
-Please take that URL and add it to your Github repo like this:
+Please take that URL and add it to your Github repo in the About section like this:
 
 ![bs-save-url.gif](../images/bs-save-url.gif)
 
