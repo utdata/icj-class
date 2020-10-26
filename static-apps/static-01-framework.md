@@ -6,7 +6,7 @@ We will learn the features of this project rig in steps:
 
 ### Templates
 
-- We'll learn about static site generators and templates.
+- We'll learn about static-site generators and templates.
 - We'll build a new page using the base template.
 
 ### Loops and Google Sheets data
@@ -23,11 +23,11 @@ We will learn the features of this project rig in steps:
 
 ## Building up to the static-generator app
 
-Throughout this semester we've been building your coding skills, adding a new language or tool at each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.
+Throughout this semester we've been building your coding skills, adding a new language or tool each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.
 
 When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on every page. Imagine if your site had hundreds of pages. That's too labor intensive in the age of computers. With this lesson we'll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.
 
-Static Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be used published with a web server without the need of a live database.
+Static-Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be published to a web server without the need of a live database.
 
 There are [many tools](https://www.staticgen.com/) to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.
 
