@@ -60,6 +60,8 @@ Before we can download the data we have to stop our browsersync process and run 
 
 This downloaded all the files to the `src/data/` folder.
 
+> If you have a problem with `gulp fetch` and get an error, you can use [these steps](gulp-fetch-problems.md) to download the data. Do that and then move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
+
 Go ahead and open the files at `src/data/pirates.json` and peek at it. Here is just a snippet:
 
 ```json

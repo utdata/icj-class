@@ -23,6 +23,8 @@ Remember we need three things: The data, the template, and a config to marry the
 - In your Terminal, quit browsersync with Control-c.
 - Run `gulp fetch`.
 
+> If you had problems with `gulp fetch` before and went through [these steps](gulp-fetch-problems.md) then you already have the data and can move on. But do reach out to me so we can fix it.
+
 It should now download **four** files, and "blog" should be one of them. If it doesn't work, read the error. If it says something about "Unexpected token" or "parse error", then it's likely your `project.config.json` file is not configured properly. If it says something like "The caller does not have permission", then you haven't set your Google Doc to be "viewable" to "Anyone with the link".
 
 ## Create the bake-blog template
