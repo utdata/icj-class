@@ -70,8 +70,8 @@ This idea is to build a website for the band Queen using the original members an
     - This data includes a `slug` field that you will need in your baking config.
     - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
   - **discography** is the data to use for the "additional content" part of the assignment. It's a list of all the studio albums.
-  - **tour2020** is an EXTRA CREDIT opportunity where you can build a table of tour dates.
-  - **billboard** is an EXTRA CREDIT opportunity where you can build interactive chart using [Datawrapper](https://www.datawrapper.de/) and the embed it somewhere on your site. Datawrapper's free version is fairly easy and will work fine for this. You can use either the "Weeks on chart" or "Top position" field as you prefer.
+  - **tour2020** is an EXTRA CREDIT opportunity where you can build a table of tour dates using a loop.
+  - **billboard** is an EXTRA CREDIT opportunity where you can build interactive chart using [Datawrapper](https://www.datawrapper.de/) and the spreadsheet data and then embed it somewhere on your site. Datawrapper's free version is fairly easy and will work fine for this. You can use either the "Weeks on chart" or "Top position" field as you prefer.
 
 ### Austin tourism site
 
@@ -134,3 +134,7 @@ The method to create the "baked" detail pages are outlined in the [icj-project-r
 - You'll need to create a layout similar to the example `src/njk/_layouts/bake-book.njk`. This layout will be used to create each individual page from the data.
 - You'll use either the **members** array from the Queen data or the **landmarks** array from the Austin data to build your pages.
 - Follow the README directions to configure `to_bake` commands in the `project.config.json` file.
+
+## Working around Gulp Fetch
+
+For my students on PCs with OneDrive who can't fetch data, I want you to set up the Google Docs files and project.config.json files all as if it will work.
