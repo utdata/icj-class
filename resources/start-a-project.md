@@ -159,6 +159,6 @@ Some projects we do in the class begin with a set of template files that already
 - `git add .` to add the files
 - `git commit -m "first commit` to save the files.
 - Create your repo in Github.com.
-- Copy the second block and run it. You might need to hit return again to run the last line, `git push origin main`. 
+- Copy the second block and run it. You might need to hit return again to run the last line, `git push origin main`.
 
 You should be ready to continue with the assignment.
