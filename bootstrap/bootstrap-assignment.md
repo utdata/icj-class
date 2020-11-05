@@ -79,7 +79,7 @@ Once you have the structure in place, you can work on styling and details.
 - The column on the left should have the pirate mugshot photo (see the example for [responsive images](https://getbootstrap.com/docs/4.4/content/images/#responsive-images) in the Bootstrap docs to see how to make the photo fit the width of the column at different sizes).
 - The Byline name and source should be different in style or font.
 - The right column should have a headline and "story" text (which can be [pirate ipsum](https://pirateipsum.me/) or similar).
-- You must introduce at least one [Google Font](https://fonts.google.com/) to the content. Like a headline font. It can be the same font that is in the jumbotron. You'll need to figure out how to do that, but you can figure it out if you read the directions.
+- You must introduce at least one [Google Font](https://fonts.google.com/) to the content. Like for the jumbotron or headline font, but DO NOT change _every_ font! [Here is help on how to do it.](../resources/google-fonts.md)
 
 ### The footer
 

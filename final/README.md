@@ -20,7 +20,7 @@ The project should include:
   - A [Jumbotron](https://getbootstrap.com/docs/4.5/components/jumbotron/) for a header.
   - A [Navbar/Navs](https://getbootstrap.com/docs/4.5/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
 - You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the example already in the project.
-- You must use at least one [Google Font](https://fonts.google.com/) somewhere.
+- You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](../resources/google-fonts.md).)
 - Remove any unused files related to the example book and bookstore pages.
 - This project should be in its own repo with the site published through Github Pages.
 
