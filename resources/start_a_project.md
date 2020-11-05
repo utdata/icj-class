@@ -4,6 +4,8 @@ A cheatsheet and lesson on how to start a new project from scratch for Intro to 
 
 Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#using-degit).
 
+> This is updated to use `main` instead of `master` as the default branch in Git/Github.
+
 ## Overview of the steps
 
 These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#a-very-detailed-version-of-starting-a-new-project).
@@ -26,21 +28,20 @@ These are the overall steps in case you just need reminders of the order. A more
   - Name it the same as your local folder.
   - DO NOT include the README or .gitignore files.
 - Once created, review the lines of code Github suggests:
-  - Find the line that starts `git remote add origin` and copy that line.
+  - Find the second block "…or push an existing repository from the command line" and copy that code.
 - Back in VS Code:
-  - Enter that copied line in your Terminal and run it.
-- Do `git push origin master` to push you local code to Github.
+  - Enter that copied line in your Terminal and run it. You might have to hit return again to run `git push origin main`.
 
 You are now ready to complete the rest of the assignment. You can use the git cycle to commit any further changes.
 
 ## The git cycle
 
-As you work through the project, use the git cycle to save your code to your local machine, then push those changs to Github.
+As you work through the project, use the git cycle to save your code to your local machine, then push those changes to Github.
 
 - `git status` tells you where you are in the it cycle.
 - `git add .` adds all changed files into your stage
 - `git commit -m "Your message"` commits your changes to your computer.
-- `git push origin master` pushes your local changes to Github.
+- `git push origin main` pushes your local changes to Github.
 
 ## A very detailed version of starting a new project
 
@@ -72,7 +73,7 @@ Opening the folder in VS Code will make sure that your computer knows where all 
   - Or, you can go to **File > Open** (Or use the keyboard command: _Command-O_).
 - Once the folder opens, the document tray should show the folder name.
 
-![Folder name](images/00-folder-open.png)
+![Folder name](../images/00-folder-open.png)
 
 ### Create your README
 
@@ -104,9 +105,9 @@ The `.gitigore` tells git to ignore certain files your computer will create but 
 - In a browser, go to [gitignore.io](https://gitignore.io)
 - Insert the following values
 
-![gitignore values](images/00-gitignore-values.png)
+![gitignore values](../images/00-gitignore-values.png)
 
-- Hit **Create**
+- Hit **Create**.
 - Copy all the text from the resulting window.
 - Paste it into your `.gitignore` file in VS Code. Save the file.
 
@@ -135,12 +136,13 @@ Now we create the repo in Github so we can connect to it.
 Once you create the repo, you'll get a page back with a lot of code.
 
 - Make sure the `SSH` button is selected in the top box.
-- Look for the line that starts with `git remote add origin` and copy that line.
+- Go to the second block "…or push an existing repository from the command line" and copy the code there to get the three lines.
 
-![Connect to Github](images/00-connect-github.png)
+![Connect to Github](../images/00-connect-github.png)
 
-- Go back to VS Code and paste the command into your Terminal and run it.
-- `git push origin master` will then push your changes to Github.
+- Paste those into your terminal. You _might_ have to press return again to run the last line.
+
+From now on, you'll use `git push origin main` to push your code.
 
 If you want to make sure it worked, go back to your browser and refresh the page and you should see your files there.
 
@@ -157,7 +159,6 @@ Some projects we do in the class begin with a set of template files that already
 - `git add .` to add the files
 - `git commit -m "first commit` to save the files.
 - Create your repo in Github.com.
-- Copy the `git remote add origin` line and run it.
-- `git push origin master` to push the code to Github.
+- Copy the second block and run it. You might need to hit return again to run the last line, `git push origin main`. 
 
 You should be ready to continue with the assignment.

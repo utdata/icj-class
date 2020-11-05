@@ -6,7 +6,7 @@ I am supplying you with two ideas to choose from, each with their own collection
 
 Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
 
-> Read all the directions completely before you start coding anything.
+> Read all the directions completely before you start coding anything. Here are also the [slides from the design and tips lecture](https://docs.google.com/presentation/d/1hZqA9K4fYotAJFZi5T8ZXie_9eUW0odbYtKZwsxCImw/edit?usp=sharing).
 
 ## Requirements
 
