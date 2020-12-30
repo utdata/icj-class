@@ -28,9 +28,11 @@ These are the overall steps in case you just need reminders of the order. A more
   - Name it the same as your local folder.
   - DO NOT include the README or .gitignore files.
 - Once created, review the lines of code Github suggests:
-  - Find the second block "…or push an existing repository from the command line" and copy that code.
+  - Make sure under "Quick setup — if you’ve done this kind of thing before" that the **SSH** button is selected (that the SSH button is grey and that the line of code next to is starts with **git@github** and NOT https.)
+  - Find the second block of code options "…or push an existing repository from the command line" and copy those multiple lines of code.
 - Back in VS Code:
-  - Enter that copied line in your Terminal and run it. You might have to hit return again to run `git push origin main`.
+  - In your Terminal in VS Code, paste in the lines of code from Github to run them.
+  - **You might have to hit return again** to run `git push origin main`.
 
 You are now ready to complete the rest of the assignment. You can use the git cycle to commit any further changes.
 
@@ -58,7 +60,7 @@ Create this folder inside you `Documents/icj` so you always know where your code
 - Use all lowercase letters. It's just helpful.
 - Use dashes instead of spaces in the name. It's helpful, and depending on the project the folder name can end up being part of a URL.
 
-An example:
+A good example:
 
 `christian-project-name`
 
@@ -92,7 +94,7 @@ For this class, I want to to at least include this information in your README, a
 
 # The project name
 
-By Christian McDonald
+By Your Name
 
 The project is due on Month Day Year.
 ```
@@ -103,7 +105,7 @@ The `.gitigore` tells git to ignore certain files your computer will create but 
 
 - `touch .gitignore` will create the file.
 - In a browser, go to [gitignore.io](https://gitignore.io)
-- Insert the following values
+- Insert the following values: macOS, Windows, VisualStudioCode.
 
 ![gitignore values](../images/00-gitignore-values.png)
 
@@ -150,7 +152,7 @@ You should now be ready to continue with the assignment.
 
 ## Using degit
 
-Some projects we do in the class begin with a set of template files that already include a README and gitignore file.
+Some class projects begin with a set of template files that already include a README and gitignore file. In this case, we create the folder on our hard drive, but use the `degit` command to download all our needed files.
 
 - Create your project folder inside the `icj` folder.
 - Launch VS Code and open the folder.
