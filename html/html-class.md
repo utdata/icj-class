@@ -27,7 +27,7 @@ You have the internet at your disposal for help. Here are some resources you mig
 
 ## Project setup
 
-This is the same project set up we did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/master/start_a_project.md) if you need a refresher. This is something you should eventually learn to do without having to look it up.
+This is the same project set up we did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/main/start_a_project.md) if you need a refresher. This is something you should eventually learn to do without having to look it up.
 
 Not every step of this project is explained in detail because you should be using knowledge gained from the Codecademy tutorial. In class, I'll show you each step, then you can follow along after it is demonstrated. Along the way, I'll show you some tips and tricks of working in Visual Studio Code.
 
@@ -47,7 +47,7 @@ If all that fails and we can't figure it out, you can go to [W3 School](https://
 
 Now to save time, we'll get the unstyled text for our document.
 
-- Go to the [html-class-text.txt file](https://raw.githubusercontent.com/utdata/icj-class/master/html/html-class-text.txt) in this Github repo and copy/paste the contents in between the `<body>` tag of your document.
+- Go to the [html-class-text.txt file](https://raw.githubusercontent.com/utdata/icj-class/main/html/html-class-text.txt) in this Github repo and copy/paste the contents in between the `<body>` tag of your document.
 - The first line of text is the headline of the article, and that next needs to be in two places:
   - **Copy** the text "Grilled Chicken Salad with Romesco Sauce" and paste it into a `<title>` tag in the head of the document. The `<title>` tag are the words that show on the tab of your browser.
   - Go back to the body of the text and add the open and close `<h1>` tags around that line to make a main headline.

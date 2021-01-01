@@ -1,6 +1,6 @@
 # Before Sass, let's talk Node.js
 
-> Before starting this lesson, make sure you've done [part two of setting up](https://github.com/utdata/icj-setting-up/blob/master/README.md).
+> Before starting this lesson, make sure you've done [part two of setting up](https://github.com/utdata/icj-setting-up/blob/main/README.md).
 
 We will be learning about Sass through refactoring existing CSS into Sassy CSS. We are also introducing the Node.js development environment and because of this we need to take a detour to talk about it.
 
