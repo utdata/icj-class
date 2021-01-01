@@ -4,7 +4,7 @@ This repo is for class assignments and resources for UT-Austin School of Journal
 
 The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are in this repository.
 
-> Current for Fall 2020
+> Updating for Spring 2021: Git and Github are renaming the default origin branch from "master" to "main". This is an ongoing change in January 2021 and not all references might be updated.
 
 ## Lessons
 
