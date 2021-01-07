@@ -2,7 +2,7 @@
 
 For this practice assignment you are coding a story in HTML as indicated below. Points will be taken off for improper syntax and indentation. Make clean code.
 
-There are cases in this assignment where we have NOT covered a specific HTML tag in class. You will need to look it up. (Google!!!)
+There are some tasks as part of this assignment where we have NOT covered the specific HTML tag in class. That's on purpose. You will need to Google it, as that is part of the developer process.
 
 ## Getting started
 
