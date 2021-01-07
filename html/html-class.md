@@ -2,6 +2,8 @@
 
 > This lesson has a companion video that walks through the lesson. Find it in Canvas under Panopto Video. It's called **HTML in-class lesson**.
 
+Not every step of this project is explained in detail because you should be using knowledge gained from the Codecademy tutorial. In class (or the Panopto video), I'll show you each step, then you can follow along after it is demonstrated. Along the way, I'll show you some tips and tricks of working in Visual Studio Code.
+
 The goal of this assignment is to:
 
 - Create git repo on your local machine to keep code under version control.
@@ -17,7 +19,9 @@ To meet these objectives, you'll be "coding up" this recipe page with HTML. When
 
 ![HTML gif](html-done.gif)
 
-Since the gif moves all about, here is a [PNG of the done HTML](html-done.png).
+Since the gif moves all about, here is a [PNG of the rendered HTML](html-done.png).
+
+You also might open and gander at [the recipe page](https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce) this was taken from. (I wouldn't leave that page open as that website is awful and will crash your browser.)
 
 ## Resources
 
@@ -29,13 +33,15 @@ You have the internet at your disposal for help. Here are some resources you mig
 
 ## Project setup
 
-This is the same project set up we did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/main/resources/start-a-project.md) if you need a refresher. This is something you should eventually learn to do without having to look it up.
+This is the same project set up we did in our git/Github intro, but [here are the steps](https://github.com/utdata/icj-class/blob/main/resources/start-a-project.md) if you need a refresher. I also have a [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view). This is something you should eventually learn to do without having to look it up.
 
-Not every step of this project is explained in detail because you should be using knowledge gained from the Codecademy tutorial. In class (or the screencast), I'll show you each step, then you can follow along after it is demonstrated. Along the way, I'll show you some tips and tricks of working in Visual Studio Code.
+- Create a project folder and name it `yourname-html-css`.
+- Add a `README.md` and a `.gitignore file`.
+- Create your Github repo and connect it to your local project.
 
 ## Build a recipe web page
 
-We're going to build the HTML structure for a recipe. You might open and gander at [the recipe](https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce) this was taken from. (I wouldn't leave it open as that website is awful and will crash your browser.)
+We're going to build the HTML structure for the recipe page noted above.
 
 - Create and save a new HTML document called `recipe.html`. You can use the `touch` command to do this.
 
@@ -53,23 +59,29 @@ Now to save time, we'll get the unstyled text for our document.
 
 Now we'll download the photo we will need.
 
-- Go to [this page](grilled-chicken-salad-with-romesco-recipe.jpg) in Github. Use the **Download** button to download the photo, which will likely go to your Downloads folder. 
-- Move that photo into your project folder on your computer so it is in the same folder as `recipe.html`.
+- Go to [this page](grilled-chicken-salad-with-romesco-recipe.jpg) in Github.
+- Right-click right in the middle of the photo to get the contextual menu and choose **Save image as**.
+- Save the photo into your project folder, the same as `recipe.html`.
 
-Now to "code up" or text into real HTML:
+![html-save-photo](../images/html-save-recipe-image.gif)
+
+Now to "code up" our text into real HTML:
 
 - The first line of text is the headline of the article, and that next needs to be in two places:
   - **Copy** the text "Grilled Chicken Salad with Romesco Sauce" and paste it into a `<title>` tag in the head of the document. The `<title>` tag are the words that show on the tab of your browser.
   - Go back to the body of the text and add the open and close `<h1>` tags around that line to make a main headline.
-- Below the `<h1>` tag, add an `<img>` tag with the `src=""` going to the photo in the same folder. Note that you can just type `img` in your editor and then use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out the required elements of the tag.
-- Be sure to also add and ["alt" attribute](https://www.w3schools.com/tags/att_img_alt.asp) to your `img` tag, which allows screen readers (for the blind) to understand what the image is.
+- Below the `<h1>` tag, add an `<img>` tag with the `src=""` going to the photo you just saved in the same folder. Note that you can just type `img` in your editor and then use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out the required elements of the tag.
+- Be sure to also add and ["alt" attribute](https://www.w3schools.com/tags/att_img_alt.asp) to your `img` tag, which allows screen readers (for the blind) to understand what the image is. You might say "recipe photo" for this one.
 - Put a `<p>` tag around the text that starts with "Source".
-- Add an `<a href>` tag around the word Epicurious.com and add this url:
+- Add an `<a href>` tag around the word `Epicurious.com` and add this url:
 
 `https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce`
 
 - Add a [target attribute](https://www.w3schools.com/tags/att_a_target.asp) to open the link into a new window. This can come directly after the href url attribute.
 - Put `<p>` tags around the introductory paragraph that starts with "Purée".
+
+> **HELPFUL TIP:** You will want to occasionally check to see how your code is displaying in a browser to make sure everything is working as expected. To do this, make sure your file is saved in VS Code, and then go to Chrome to File > Open file and then find and open the `recipe.html` file to see the results. After you've coded a bit more, save your VS Code file and refresh the page in Chrome to see your progress.
+
 - For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
 - Create a [description list](https://www.w3schools.com/html/html_lists_other.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
 
@@ -79,9 +91,11 @@ Active Time: 45 minutes
 Total Time: 1 hour
 ```
 
-- Create a new `<div>` with an `id="ingredients` that starts before the  "Ingredients" headline, and closes right before "Preparation".
+- Create a new `<div>` with an `id="ingredients"` that starts before the  "Ingredients" headline, and closes right before "Preparation".
 - Before we build the `<h2>` tag around the "Ingredients" headline, let's learn more about [Emmet](https://docs.emmet.io/) and how it can help us. Emmet is a shorthand syntax and tool for programmers to help write code blocks, and it is [baked into VS Code](https://code.visualstudio.com/docs/editor/emmet). You won't be wowed at this example, but the next one will bring both shock and awe.
 - Highlight the "Ingredient" header. Do **command-shift-p** to bring up the Command Palette. (Control-shift-p for Windows.) Begin typing in the text "Emmet: Wrap" and you'll see the list of commands filter down. Use your arrow keys to select **Emmet: Wrap with Abbreviation** and hit return. That list will go away but the box will remain so you cantype in the next command. Type in the text `h2` and hit return. This will wrap your text in both the beginning and ending `<h2>` tags.
+
+Here is what that more or less looks like:
 
 ![emmet h2](../images/emmet-h2.gif)
 

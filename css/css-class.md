@@ -13,6 +13,8 @@ This will be our finished product:
 
 ![finished-in-class](../images/finished-in-class.gif)
 
+Here is a [PNG of the in-class project](recipe-css-finished.png), which might be easier to study.
+
 ## Resources
 
 You have the internet at your disposal for help. Here are some resources you might find useful.
@@ -237,7 +239,7 @@ Another story about tricks of the trade. When I was preparing this lecture, I ha
 ```css
 dl {
   font-family: 'Franklin Gothic', Arial, sans-serif;
-  font-size: 1.75em;
+  font-size: 1.75rem;
   padding: 12px 0;
 }
 

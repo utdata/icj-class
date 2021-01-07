@@ -6,6 +6,8 @@ Starting a new project with `degit`, which we use later in the semester, is at t
 
 > This is updated to use `main` instead of `master` as the default branch in Git/Github.
 
+> Here is a [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.
+
 ## Overview of the steps
 
 These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#a-very-detailed-version-of-starting-a-new-project).
@@ -47,7 +49,7 @@ As you work through the project, use the git cycle to save your code to your loc
 
 ## A very detailed version of starting a new project
 
-This is the same as above, but with more detail, description and visuals.
+This is the same as above, but with more detail, description and visuals. There is also this [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.
 
 ### Create your project folder
 
