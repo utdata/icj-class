@@ -34,7 +34,7 @@ There is way to deal with this called CSS reset. The concept is to zero out all 
 
 So, let's do it:
 
-- In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTML5resetCSS](https://github.com/richclark/HTML5resetCSS/blob/master/reset.css) file.
+- In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTML5resetCSS](https://raw.githubusercontent.com/richclark/HTML5resetCSS/master/reset.css) file.
 - We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing `</head>` tag.
 
 ```html
