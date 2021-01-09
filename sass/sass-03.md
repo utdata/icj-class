@@ -319,9 +319,11 @@ To make sure you have an understanding about how files work together, I want you
 - Add an h3 headline and a fake text paragraph for each of three members in the content section. The content doesn't matter as much to me as using good coding techniques.
 - Update the navigation on all the pages so they all work together.
 
-## Publish to Github
+## Push to Github
 
-Once everything checks out, you might push your changes to Github to save your work.
+If you haven't already, you should run `git init`, `git add .` and `git commit -m "message"` for this repo, and then create your Github repo and connect them.
+
+Push all your changes to this point to Github.
 
 ------
 
