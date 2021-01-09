@@ -1,6 +1,6 @@
 # Sass and SCSS
 
-Sass is system that makes writing CSS more efficient. SCSS (Sassy CSS) is the syntax we use, and it has to be processed (or "compiled" in tech speak) into regular CSS before the browser can understand it. Think of it as a translation service. In our case we are using Gulp and some other npm task to do that translation, hence all the need for the development environment.
+Sass is system that makes writing CSS more efficient. SCSS (Sassy CSS) is the syntax we use, and it has to be processed (or "compiled" in tech speak) into regular CSS before the browser can understand it. Think of it as a translation service. In our case we are using Gulp and some other npm tasks to do that translation, hence all the need for the development environment.
 
 Some of the benefits/features of Sass/SCSS are:
 

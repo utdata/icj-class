@@ -173,7 +173,7 @@ You may have noticed when we started this project that there was a separate `res
 
 That's great, but that can make for some really long CSS files that are hard to manage. Sass allows for a concept called **partials** that allow us to break out SCSS files into smaller chunks to we can better organize it. Many developers will break up their code based on the part of the page or the function the code supports.
 
-Sass partial filenames should start with an underscore, like `_nav.scss`, so Sass can know that it will be imported and not create a new compiled `.css` file.
+Sass partial filenames should start with an underscore, like `_nav.scss`, so Sass can know that it will be "used" and not create a new compiled `.css` file.
 
 ### Making the reset a partial
 
@@ -211,7 +211,7 @@ OK, so that you've seen how that works, I want you to create three new partials 
 @import 'base';
 ```
 
-Remember that you don't need add the underscore or the `.scss` with these import designations, as Sass assumes them already.
+Remember that you don't need to add the underscore or the `.scss` with these import designations, as Sass assumes them already.
 
 Make sure these @imports come _AFTER_ your variables, because this CSS still cascades, and the variables are used by the imports.
 
@@ -248,7 +248,7 @@ Remember, you want these styles to only apply in the navigation.
 
 ### Content link colors
 
-For the content, I want hrefs to _have_ and underline, and that the color of the links be something other than the default color, and one that makes sense given the primary color you use.
+For the content, I want hrefs to _have_ the underline, and that the color of the links be something other than the browser default blue/purple color. Choose a color that makes sense given the primary color you use (which might be your secondary color).
 
 ### Set bullet style for shows
 
@@ -273,7 +273,7 @@ Take a look at the `docs` folder in your VS Code Explorer.
 
 ![docs](../images/sass-docs.png)
 
-It is this folder were all our processed pages are sent to ... it is our "real" website, even though we edit from the `src` folder. It is the "root" of our site and where our `index.html` page lives. Everything else is relative to that folder. When we launch our environment, it goes to `http://localhost:3000/` but it displays the `index.html` page. Once you click through to the `shows.html` page, it url changes to `http://localhost:3000/shows.html`.
+It is this folder were all our processed pages are sent to ... it is our "real" website, even though we edit from the `src` folder. It is the "root" of our site and where our `index.html` page lives. Everything else is relative to that folder. When we launch our environment, it goes to `http://localhost:3000/` but it displays the `index.html` page. Once you click through to the `shows.html` page, it url changes to `http://localhost:3000/shows.html`. If you click on the Home link it takes you to `http://localhost:3000/index.html`, which is the same exact page as `http://localhost:3000/`.
 
 If you look inside `index.html` in the nav element you'll see this:
 
@@ -281,22 +281,24 @@ If you look inside `index.html` in the nav element you'll see this:
   <li><a href="shows.html">Shows</a></li>
 ```
 
-This link is going to the `shows.html` page, which is right next to `index.html`. There are no folders or anything that the path has to traverse ... it just names the file because they are adjacent.
+This link is going to the `shows.html` page, which is right next to `index.html`. There are no folders or anything that the path has to traverse ... it just names the file because they are adjacent to each other in the file structure.
 
-But look a little further and you'll see this:
+But look a little further into the page and you'll see this:
 
 ```html
   <img src="img/harvey-dale.jpg"/>
 ```
 
-If you look at our `docs` folder structure above, you'll see that the `harvey-dale.jpg` photo is inside a folder called `img`. Because of this our `src=` path has to include that folder name. This path is **relative** to where the `index.html` page is.
+If you look at our `docs` folder structure above, you'll see that the `harvey-dale.jpg` photo is inside a folder called `img`. Because of this our `src=` path has to include that folder name in the path. This path is **relative** to where the `index.html` page lives.
 
-We have `img/` and a `css/` folder. The folders are there just for organization ... those files could technically live anywhere within `docs` if paths are written correctly, but that would be messy.
+We have `img/` and `css/` folders. The folders are there just for organization ... those files could technically live anywhere within `docs` if paths are written correctly, but that would be messy.
 
-I might be overgeneralizing, but most websites publish files following two philosophies:
+I might be overgeneralizing, but most websites organize directory structures following two philosophies:
 
-- Folder organization as site structure: A news site might have a `sports/` directory to put all the sports files here.
+- Folder organization as site structure: A news site might have a `sports/` directory to put all the sports-related files here.
 - Folders based on file type, like images, scripts, etc.
+
+That all said, it is up to the developer to decide.
 
 ## How files are generated into docs
 
