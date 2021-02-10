@@ -239,7 +239,7 @@ Another story about tricks of the trade. When I was preparing this lecture, I ha
 ```css
 dl {
   font-family: 'Franklin Gothic', Arial, sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.1rem;
   padding: 12px 0;
 }
 
