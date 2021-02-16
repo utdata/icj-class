@@ -1,5 +1,7 @@
 # Using DataTables
 
+> SPRING 2021 SNOWPOCALPSE: The following assginment is no longer required. You are welcome to do it, but it will not be part of your grade.
+
 For this lesson, you're going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point.
 
 jQuery is a framework that makes it easier to use JavaScript. It's particularly useful for simply traversing the DOM in an HTML page. Because of this, there are a number of tools and plug-ins written in jQuery.
