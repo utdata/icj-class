@@ -29,4 +29,4 @@ There are other ways to publish [Github Pages](https://docs.github.com/en/github
 
 ---
 
-~~**Next**: We'll [download and run](bootstrap-class-05.md) a fellow student's project.~~
+**Next**: We'll [create a detail page](bootstrap-class-05.md).
