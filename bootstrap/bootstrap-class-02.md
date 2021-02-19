@@ -4,7 +4,7 @@ This is a continuation from [part 1](bootstrap-class-01.md)
 
 ## The grid
 
-The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.5/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Bootstrap for now.)
+The first thing that Bootstrap brings us is a [12-column grid setup](https://getbootstrap.com/docs/4.6/layout/grid/) to "layout" your page. It allows you to define differing column widths for different viewport widths through a series of class names. It uses a core CSS feature called "flexbox" to do this. (FYI you may read about a newer core CSS feature called CSS Grid that still lags a little in browser adoption, so we'll stick with Bootstrap for now.)
 
 We are going to start with a `container` div. A container div in Bootstrap centers content in the middle of the page and adjusts the outside margin depending on the viewport width. (`.container-fluid` would go 100% of the page.)
 
@@ -42,7 +42,7 @@ Take a look at localhost page and you'll see a Rasta party of boxes in red, yell
 
 Each of the colored sections are "column" divs, hence the class name of `col`. They are all surrounded by a `row` div. Columns always have to be a child of a row, or the Bootstrap grid won't work right.
 
-The `bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.5/utilities/colors/) that I'm using as a convenience here to show the three different boxes.
+The `bg-danger` and the other bg-classes are [Bootstrap color classes](https://getbootstrap.com/docs/4.6/utilities/colors/) that I'm using as a convenience here to show the three different boxes.
 
 These three columns are evenly distributed and space across the container space. Adjust your browser width smaller and wider and you'll see they stay that way at every width.
 
@@ -85,7 +85,7 @@ Now that we've learned a little about columns, let's comment out that whole row 
 
 ## The card component
 
-I want to introduce our first Bootstrap "component", called  [Bootstrap cards](https://getbootstrap.com/docs/4.5/components/card/). A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+I want to introduce our first Bootstrap "component", called  [Bootstrap cards](https://getbootstrap.com/docs/4.6/components/card/). A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
 
 BEFORE we add this code below inside your `container` div, look at the column classes and tell me what you _think_ will happen?
 
@@ -129,7 +129,7 @@ Note that for the "sm" breakpoint, we have one `sm-col-12`, but the other two ar
 
 ## Adding margins and padding on elements though a class
 
-You may notice that on smaller breakpoints the boxes stack up on top of each other with no space. We can use Bootstrap [spacing utility classes](https://getbootstrap.com/docs/4.5/utilities/spacing/) to adjust for this.
+You may notice that on smaller breakpoints the boxes stack up on top of each other with no space. We can use Bootstrap [spacing utility classes](https://getbootstrap.com/docs/4.6/utilities/spacing/) to adjust for this.
 
 It works like this:
 
@@ -154,7 +154,7 @@ And at the small width, it should look like this:
 
 Now that we understand the basic grid structure of Bootstrap and some of the ways to control columns, margins and padding, let's hit another component common to almost every website: Navigation.
 
-Navigation is separated into two parts in Bootstrap [Navs](https://getbootstrap.com/docs/4.5/components/navs/) and [Navbars](https://getbootstrap.com/docs/4.5/components/navbar/). Navs are the links, and navbars are the containers that hold them.
+Navigation is separated into two parts in Bootstrap [Navs](https://getbootstrap.com/docs/4.6/components/navs/) and [Navbars](https://getbootstrap.com/docs/4.6/components/navbar/). Navs are the links, and navbars are the containers that hold them.
 
 I'll be honest ... I usually just find an example of what I need in Bootstrap documentation and then copy the code, and then play with it until I get what I want. When you are working for a journalism organization, this is usually already decided for you and is part of the template you starting with.
 
@@ -189,7 +189,7 @@ This will add a nice blue navigation bar:
 
 ![navbar](../images/bs-navbar-01.png)
 
-But the nav bar is sitting on top of the cards. How might you use Bootstrap [spacing utility classes](https://getbootstrap.com/docs/4.5/utilities/spacing/) to fix that? Keep that thought, but let's leave it for later.
+But the nav bar is sitting on top of the cards. How might you use Bootstrap [spacing utility classes](https://getbootstrap.com/docs/4.6/utilities/spacing/) to fix that? Keep that thought, but let's leave it for later.
 
 Let's fancy-up our nav a little.
 
@@ -230,7 +230,7 @@ You'll notice when you view this at smaller sizes that some of the navigation it
 
 ## Jumbotron
 
-The [Jumbotron](https://getbootstrap.com/docs/4.5/components/jumbotron/) is a hero-type display typically used at the top of a site. Let's add this component right under our complete `<nav>` code.
+The [Jumbotron](https://getbootstrap.com/docs/4.6/components/jumbotron/) is a hero-type display typically used at the top of a site. Let's add this component right under our complete `<nav>` code.
 
 ```html
 <div class="jumbotron">
@@ -272,9 +272,9 @@ As a bit of an aside ... the `<section>` tag above is another [semantic html ele
 
 This row/col combination we've added uses eight columns for text, and then the remaining four for a vertical navigation item we'll add next.
 
-Bootstrap 4 has a [Typography section](https://getbootstrap.com/docs/4.5/content/typography/) that will provide you with all of the type-based helper classes. It's fairly straightforward. We're using `.lead` to place emphasis on a subheading underneath our `<h3>` element.
+Bootstrap 4 has a [Typography section](https://getbootstrap.com/docs/4.6/content/typography/) that will provide you with all of the type-based helper classes. It's fairly straightforward. We're using `.lead` to place emphasis on a subheading underneath our `<h3>` element.
 
-There is also a [Text utilities](https://getbootstrap.com/docs/4.5/utilities/text/) documentation that provides you with text alignment options, transform, italics and font weights.
+There is also a [Text utilities](https://getbootstrap.com/docs/4.6/utilities/text/) documentation that provides you with text alignment options, transform, italics and font weights.
 
 On small viewports, let's say that we want our type to be centered instead of the default behavior, which is left aligned.
 

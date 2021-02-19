@@ -107,9 +107,9 @@ So now we have a list of pirate ships in our project "context" and can build a c
 
 ## Loops with data
 
-Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/4.5/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/4.5/components/card/#using-grid-markup).
+Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/4.6/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/4.6/components/card/#using-grid-markup).
 
-- Go to the [Using grid markup](https://getbootstrap.com/docs/4.5/components/card/#using-grid-markup) section in the docs and copy the code provided there.
+- Go to the [Using grid markup](https://getbootstrap.com/docs/4.6/components/card/#using-grid-markup) section in the docs and copy the code provided there.
 - After the closing `</p>` tag for the intro, add a new line.
 - Paste your code. This already has the row and columns we need.
 - Save your file and look at your page.
@@ -218,7 +218,7 @@ Remember, we are working with a 12 column grid. When we set `col-sm-6` that mean
 
 ## Fix some display nits
 
-We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/4.5/utilities/spacing/).
+We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/4.6/utilities/spacing/).
 
 - On the `class="card"` div, add another class so it is `class="card mb-4"`. We did the same thing in our Bootstrap lesson. `m` is margin, `b` is bottom and `4` is a value between 1-5.
 - Save and check that you have vertical space between the cards.

@@ -64,7 +64,7 @@ Once you have the structure in place, you can work on styling and details.
 ### Navbar styles
 
 - The nav links should have an underline on hover only. You'll need to write CSS to make this happen.
-- The nav link for the active page (i.e., the one you are viewing) should be bold. There is a [special class](https://getbootstrap.com/docs/4.4/components/navbar/#nav) for this that you can find in the Bootstrap documentation in the Navbar section.
+- The nav link for the active page (i.e., the one you are viewing) should be bold. There is a [special class](https://getbootstrap.com/docs/4.6/components/navbar/#nav) for this that you can find in the Bootstrap documentation in the Navbar section.
 
 ### Jumbotron styles
 
@@ -76,7 +76,7 @@ Once you have the structure in place, you can work on styling and details.
 
 - While you need two "story" pages (the index and one new page), you should finish ALL of the index before creating the second page. That way you can duplicate it and then make your text changes.
 - The story content should have two columns that stack on a phone, but are side-by-side at the "sm" size and larger.
-- The column on the left should have the pirate mugshot photo (see the example for [responsive images](https://getbootstrap.com/docs/4.4/content/images/#responsive-images) in the Bootstrap docs to see how to make the photo fit the width of the column at different sizes).
+- The column on the left should have the pirate mugshot photo (see the example for [responsive images](https://getbootstrap.com/docs/4.6/content/images/#responsive-images) in the Bootstrap docs to see how to make the photo fit the width of the column at different sizes).
 - The Byline name and source should be different in style or font.
 - The right column should have a headline and "story" text (which can be [pirate ipsum](https://pirateipsum.me/) or similar).
 - You must introduce at least one [Google Font](https://fonts.google.com/) to the content. Like for the jumbotron or headline font, but DO NOT change _every_ font! [Here is help on how to do it.](../resources/google-fonts.md)

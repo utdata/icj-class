@@ -22,11 +22,11 @@ This lesson is cribbed from:
 
 ## About Bootstrap
 
-[Bootstrap 4](https://getbootstrap.com/docs/4.1/getting-started/introduction/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable. It is far from the only framework, but it is very popular. It is a "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop.
+[Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable. It is far from the only framework, but it is very popular. It is a "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop.
 
 Throughout this lesson, we will refer to:
 
-- [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+- [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 - W3 Schools' [Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/).
 - The [Learn Bootstrap screencasts](https://scrimba.com/g/gbootstrap4) you had as prework.
 

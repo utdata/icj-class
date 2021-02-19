@@ -16,9 +16,9 @@ The project should include:
 - A base layout that is extended throughout the project.
 - At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer already present.
 - The project must use the following Bootstrap components and concepts:
-  - Responsive design and [images](https://getbootstrap.com/docs/4.5/content/images/) used throughout.
-  - A [Jumbotron](https://getbootstrap.com/docs/4.5/components/jumbotron/) for a header.
-  - A [Navbar/Navs](https://getbootstrap.com/docs/4.5/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
+  - Responsive design and [images](https://getbootstrap.com/docs/4.6/content/images/) used throughout.
+  - A [Jumbotron](https://getbootstrap.com/docs/4.6/components/jumbotron/) for a header.
+  - A [Navbar/Navs](https://getbootstrap.com/docs/4.6/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
 - You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the example already in the project.
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](../resources/google-fonts.md).)
 - Remove any unused files related to the example book and bookstore pages.
@@ -31,7 +31,7 @@ Everything should look beautiful and be functional. You should not need any addi
 In addition to the basic site structure, the index should have:
 
 - A short description of the website. You can write this yourself or pull from public domain content and link back to the source.
-- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do this any number of ways through Bootstrap [Cards](https://getbootstrap.com/docs/4.5/components/card/), the [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks loop.
+- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do this any number of ways through Bootstrap [Cards](https://getbootstrap.com/docs/4.6/components/card/), the [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks loop.
 
 ### "Baked" detail pages
 
