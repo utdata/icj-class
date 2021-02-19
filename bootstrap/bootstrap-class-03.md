@@ -6,7 +6,7 @@ We now have us a pretty nice website, and we could imagine this being the entry 
 
 Fortunately, Bootstrap 4 has a robust system that enables customizing common elements quite easy.
 
-According to the [Theming section](https://getbootstrap.com/docs/4.1/getting-started/theming/) in the documentation, you can choose to either include **all** of the Bootstrap 4 sass files, or you could include individual items based on your needs. To keep things simple, we'll just import everything as we have above. (The advantage to picking and choosing which Sass files is you have smaller published CSS and JavaScript files when you are done.)
+According to the [Theming section](https://getbootstrap.com/docs/4.6/getting-started/theming/) in the documentation, you can choose to either include **all** of the Bootstrap 4 sass files, or you could include individual items based on your needs. To keep things simple, we'll just import everything as we have above. (The advantage to picking and choosing which Sass files is you have smaller published CSS and JavaScript files when you are done.)
 
 > **Note**: One thing that may happen as we are editing our `styles.scss` file during these exercises: If you incorrectly type one of the styles, it may stop your _gulp_ command with an error. If this happens, read the error to discover where the problem is, try to fix it and run `gulp dev` in your terminal again. It may help to run `gulp dev` in your Integrated Terminal so you can see when this happens.
 
