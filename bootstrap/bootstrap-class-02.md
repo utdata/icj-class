@@ -164,7 +164,7 @@ But let's add a basic nav so we can talk about it.
 
 ``` html
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">WebPirates</a>
+  <a class="navbar-brand" href="index.html">WebPirates</a>
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">

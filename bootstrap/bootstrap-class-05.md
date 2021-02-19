@@ -1,105 +1,128 @@
-# Downloading and running an npm project
+# Index vs other pages
 
-## Goals
+OK, you have a Bootstrap website published now. It is only one page, but it is a special one. We named this page `index.html` for a reason because that is one of the default page names that browsers look for when they read a website directory.
 
-- Download a fellow student's repo to our local machine, treating it as a new project template.
-- Run `npm install` to install all the software needed to work on the project.
-- Run `gulp` to set up our development environment.
+When you run `gulp dev` on your local machine, the development server takes all the HTML files it finds in `src/html` and processes them as complete pages in our `docs/` folder. When `gulp dev` launches your browser it sets that `docs/` folder as the "root" of our server and then publishes it at our dev url, something like `http://localhost:3002/` (Your number at the end may differ). The browser at that point is looking at the files inside the `docs/` folder for a default page to load, finding `index.html`.
 
-## A little background
+A similar thing happens when you use Github Pages. We used the Github Pages settings to set our site to load from that same `docs/` folder, so when it publishes my version of this site -- `https://utdata.github.io/icj-bootstrap-answers/` -- you'll notice there is nothing after the last `/` of that URL. When a web server is given that URL it looks inside the `docs/` folder of the repo and finds `index.html`.
 
-When we started this project, we created a series of folders and then installed a bunch of npm packages. As we did so, we created a file called `package.json` (and `package-lock.json`). It looks something like this:
+Website home pages like this act as gateways to the rest of our site. So far we've built the gate, but there is nothing behind it. Let's change that.
 
-```js
-{
-  "name": "bootstrap-yourname",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.24.7",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
-  },
-  "dependencies": {
-    "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.4"
-  }
-}
+## Adding a new page
+
+Let's add a new page to our website.
+
+- Add a new file inside `src/html` called `story-page.html`.
+- Inside of that page, add all of the code below.
+- If you are not already running your browsersync process, you'll need to run `gulp dev` again so the new page will get processed.
+
+```html
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>Learn about ye Pirates, matey!</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+<body>
+  <!-- Content starts here -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="index.html">WebPirates</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+              Ships
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Ranger</a>
+              <a class="dropdown-item" href="#">Queen Anne's Revenge</a>
+              <a class="dropdown-item" href="#">William</a>
+            </div>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <article>
+      <h1>Learn about ye Pirates, matey!</h1>
+      <p>Row scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. </p>
+      <p>Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+      <p>Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
+    </article>
+
+  </div>
+          <!-- Closing scripts here -->
+  <script src="js/jquery.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
 ```
 
-The syntax of the file is called JSON, which is the preferred datatype for Javascript. It is the lines `devDependencies` and `dependencies` that will tell npm what to install.
+## Relative URLs
 
-When we used the npm install processes on our own projects it also created the `node_modules` folder, which contains all the software you used, like `gulp` and `gulp-sass`, etc. However, you'll recall we also created a `.gitignore` file to exclude those files because there are thousands of them and they don't need to be saved in our repo (which you'll see in a moment).
+OK, let's go to your new page in your browser.
 
-FWIW, this is the line in the `.gitignore` file that excludes our `node_modules` folder.
+- Go to your URL bar and look at the end of the page that is being viewed. It should be either `/` or `/index.html`.
+  - If your URL says `index.html` at the end, then change that part to `story-page.html`.
+  - If your URL ends in `/`, then just add `story-page.html` to the end.
 
-```bash
-# Dependency directories
-node_modules/
+This should show your new page, which should be something like this:
+
+![New page](../images/bs-new-page.png)
+
+### About the code inside our story page
+
+The code inside the page `story-page.html` has some-but-not-all of the same code that is in `index.html`. We needed all the HTML5 boilerplate stuff, Bootstrap markup and our links to the CSS and JavaScript files. We kept our nav, too.
+
+We didn't include the Jumbotron because we don't really need it on this detail page. We added some code for an article, basically an HTML `<article>` element, and `h1` and some paragraphs of text.
+
+## Link between pages
+
+We have new page, but our home page doesn't link to it. Let's fix that.
+
+- Open up `index.html` and update the button code in the jumbotron to look like this:
+
+```html
+<a class="btn btn-primary btn-lg" href="story-page.html" role="button">Learn more</a>
 ```
 
-It is the `package.json` file that is the secret sauce. It was our use of the flags `--save` and `--save-dev` during installation that added our packages to that list.
+Basically you are removing the `#` placeholder that was inside the `href=""` part of the "a" tag and replacing it with a real link. You'll often see href example code use  `#` as a placeholder. If it wasn't changed, it would just link to the same page you are on.
 
-This file allows another developer to download your repo and then run `npm install` to install all the npn packages into their own `node_modules` folder and then run all your code. (If you or another developer forgets the `--save` and `--save-dev` flags during the install, then the software won't work for the next developer that comes along.)
+Because `index.html` and `story-page.html` are files that live next to each other in our published site (the `docs/` folder), we don't need a path before the name of the file.
 
-This is what we'll test using your partner's repo.
+We always use _relative_ links like this between files. We do NOT include the whole domain in the href because that domain might be different depending on where we publish the website.
 
-## Download the repo
+### Test your links
 
-- Pick a partner in class and go to their Github page.
-- Click on Repositories to list all their repos.
-- Click on the link to their `bootstrap-myname` repo.
-- Click on the **Clone or download** button and then click on **Download ZIP**.
+- Click on the name of your site at the top-left of your nav, as that is set to go to `index.html` of your site.
+- Then click on the "Learn more" button in the Jumbotron to make sure your link has been built correctly to your new `story-page.html` file.
 
-![bs-download](../images/bs-download.png)
+## Republish your site to Github
 
-This will download all of their files into your Downloads folder.
+- Go through the git cycle, including pushing to Github.
 
-- Find and open your Downloads folder.
-- If the file was not un-zipped automatically on download, double-click on it to extract their actual folder. (This may work a little differently on Windows machines).
-- Now move (you can drag 'n' drop) that entire folder into your `Documents/code` folder.
-
-## Open the folder in VS Code
-
-- Close all your other VS Code windows so you don't get confused. (But don't quit the VS Code app.)
-- Go under **File** to **New Window**
-- On the Welcome screen under **Start** you'll see a link for **Open Folder**. Click on that link.
-- Negotiate to your `Documents/code/bootstrap-yourpartner` folder (but _not_ inside of it!) and click the **Open** button.
-
-This should open your partner's project in VS Code and you should see all their files in the Explorer.
-
-## Run npm install
-
-- Open your Integrated Terminal and run this:
-
-```bash
-npm install
-```
-
-You should see a bunch of stuff happen ... a `node_modules` folder will be created and a bunch of stuff will be downloaded into it.
-
-## Launch the project
-
-Now you just have to run the default gulp task to get the project running.
-
-```bash
-gulp
-```
-
-This should generate all the CSS and JavaScript files needed and launch a browser with your partners project.
-
-## We did not clone!
-
-In this case, we did not use `git clone` on the file when we downloaded it, so these files are not connected to your partner's Github file. That was planned, as this is one way that developers save template projects that you don't want overwritten with new changes.
+Shortly after you push you should be able to test your new changes at your Github Pages site.
 
 ---
 
-We are done with this lesson!
+We'll stop here. Turn in your Github link to the Canvas assignment.
+
+~~Next: Let's [practice downloading](bootstrap-class-06.md) and running a classmates project~~
