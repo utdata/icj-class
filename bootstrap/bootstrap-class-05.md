@@ -76,8 +76,6 @@ Let's add a new page to our website.
 </html>
 ```
 
-## Relative URLs
-
 OK, let's go to your new page in your browser.
 
 - Go to your URL bar and look at the end of the page that is being viewed. It should be either `/` or `/index.html`.
@@ -94,7 +92,7 @@ The code inside the page `story-page.html` has some-but-not-all of the same code
 
 We didn't include the Jumbotron because we don't really need it on this detail page. We added some code for an article, basically an HTML `<article>` element, and `h1` and some paragraphs of text.
 
-## Link between pages
+## Links between pages
 
 We have new page, but our home page doesn't link to it. Let's fix that.
 
