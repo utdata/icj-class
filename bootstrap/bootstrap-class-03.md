@@ -23,7 +23,7 @@ Let's change just the primary color:
 ```scss
 // Custom variable overrides go here Overrides
 $theme-colors: (
-  "primary": #d95700
+  "primary": #bf5700
 );
 ```
 
