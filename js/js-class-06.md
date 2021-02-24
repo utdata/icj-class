@@ -1,6 +1,6 @@
 # Using DataTables
 
-> SPRING 2021 SNOWPOCALYPSE: The following assignment is no longer required. You are welcome to do it, but it will not be part of your grade.
+> **SPRING 2021 SNOWPOCALYPSE**: The following assignment is no longer required. You are welcome to do it, but it will not be part of your grade.
 
 For this lesson, you're going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point.
 
