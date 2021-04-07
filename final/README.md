@@ -2,7 +2,7 @@
 
 Your goal with this final project is to create a multi-page website using the [icj-project-rig](https://github.com/utdata/icj-project-rig) that has an index and multiple detail pages. It will be published through Github Pages.
 
-I am supplying you with two ideas to choose from, each with their own collection of assets. You may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material.
+I am supplying you with two ideas to choose from, each with its own collection of assets. (You may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material, but you may find that more work than it is worth.)
 
 Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
 
