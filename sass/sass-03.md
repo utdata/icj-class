@@ -20,8 +20,8 @@ When the browser starts up, you'll have a working multi-page website that uses t
 
 This first thing to know is any valid CSS is also valid SCSS. As such, we'll use our traditional CSS to seed our new SCSS setup.
 
-- Copy the contents of `src/scss/old-styles.css` and paste it into `src/scss/new-styles.scss`. Once you do, you might see your terminal kick off the sass task to compile the file.
-- Now, in both our html files -- `src/html/index.html` and `src/html/shows.html` -- you'll see a style `<link>` tag that references the `old-styles.css` file. Change that to point to the `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now. Make sure you change both the index and shows files.
+1. Copy the contents of `src/scss/old-styles.css` and paste it into `src/scss/new-styles.scss`. Once you do, you might see your terminal kick off the sass task to compile the file.
+1. Now, in both our html files -- `src/html/index.html` and `src/html/shows.html` -- you'll see a style `<link>` tag that references the `old-styles.css` file. Change that to point to the `css/new-styles.css`. Once you save, you'll again see your browser refresh, but you should not see any difference in the page because our new SCSS is the same as the old, for now. Make sure you change both the index and shows files.
 
 You might have noticed another style link going to a reset css file. We'll deal with that in a minute.
 
@@ -55,10 +55,10 @@ Now, if we wanted to change our dark borders from 3px black lines to 5px grey li
 
 There are two colors defined in our styles for our Harvey Dale and the Cements band website. Let's Sassify them.
 
-- Create two new variables at the top of your `src/scss/new-styles.scss` file called `$primary-color` and `$secondary-color` and define their values from what is currently in the CSS.
-- In your CSS rules, replace the color values with the new variable names.
-- Save and check your page. There should be no difference.
-- Change your `$primary-color` variable value to a new color, like "red", and see if what happens.
+1. Create two new variables at the top of your `src/scss/new-styles.scss` file called `$primary-color` and `$secondary-color` and define their values from what is currently in the CSS.
+1. In your CSS rules, replace the color values with the new variable names.
+1. Save and check your page. There should be no difference.
+1. Change your `$primary-color` variable value to a new color, like "red", and see if what happens.
 
 You should see your background color change on _both_ the "home" page and the "shows" page. Be sure to check both of them.
 
@@ -126,7 +126,9 @@ We'll combine the first two, and then you can do the rest on your own. We are st
 }
 ```
 
-We want to the `.content ul` rule to be nested inside the `.content` rule above it, after the rules that are already there. When we do that refactor, we need to remove what would be an extra `.content` selector before the `ul`. The nested rule should also be indented. Like this:
+We want to the `.content ul` rule to be nested inside the `.content` rule above it, after the rules that are already there. When we do that refactor, we need to remove what would be an extra `.content` selector before the `ul`. 
+
+1. Edit your .scss file to nest `.content ul` inside the `.content` rule. It should look like this, including indentation:
 
 ```scss
 .content {
@@ -141,23 +143,21 @@ We want to the `.content ul` rule to be nested inside the `.content` rule above 
 }
 ```
 
-After you make this change, make sure the styles are still building correctly and nothing broke on your page.
-
 ### On your own
 
-- Refactor the rest of the `.content` rules to fit like we didthe one above.
-
-Again, make sure nothing is broken on the page display.
+1. After you making the change above, make sure the styles are still building correctly and nothing broke on your page.
+1. Refactor the rest of the `.content` rules to fit like we did the one above.
+1. Again, make sure nothing is broken on the page display.
 
 ### Any children rule
 
-Let's pause and reflect. Do you notice any value that repeats itself over and over again inside of .content? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of .content. In some cases it is the only rule for that style.
+Let's pause and reflect. Do you notice any value that repeats itself over and over again inside of `.content`? If you look closely you will see that `padding-left: 30px` is an attribute of every direct child of `.content`. In some cases it is the only rule for that style.
 
 This rule was added so that all the items inside `<div class="content">` would have some space between the nav block and the content. It's not a particularly great way to handle this as you have to create a new rule for every possible element you might add into the content div on your page.
 
 There's a shorthand CSS selector for applying a property to all "child" elements, the `> * {rule;}`. Using this, we can set the padding rule to be applied to _anything_ inside the `.content` div. Let's use this to set padding and clean up all the extra rules that do the same thing.
 
-- Inside the `.content` rule, before the other nested rules, add this one. Make sure it is indented properly like other nested rules:
+1. Inside the `.content` rule, before the other nested rules, add this one. Make sure it is indented properly like other nested rules:
 
 ```scss
  > * {
@@ -165,7 +165,7 @@ There's a shorthand CSS selector for applying a property to all "child" elements
  }
 ```
 
-- Now that you've done this you can remove all the other `padding-left: 30px;` everywhere else. In some cases, you no longer even need the style at all for that element because the padding was the only rule.
+1. Now that you've done this you can remove all the other `padding-left: 30px;` everywhere else. In some cases, you no longer even need the style at all for that element because the padding was the only rule.
 
 ## Partials
 
@@ -181,8 +181,8 @@ Together, we'll modify the `reset.css` file and make it into a Sass partial.
 
 We first need to change the name of the file so it starts with an underscore `_` and ends in `.scss` so Sass can deal with it properly.
 
-- In your Explorer list find the file `reset.css` file (it's in `src/scss/`) and rename it to `_reset.scss`.
-- Go into the `new-styles.scss` file and at the top of the file but **below** your color variables, add the following:
+1. In your Explorer list find the file `reset.css` file (it's in `src/scss/`) and rename it to `_reset.scss`.
+1. Go into the `new-styles.scss` file and at the top of the file but **below** your color variables, add the following:
 
 ```scss
 @import 'reset';
@@ -190,22 +190,22 @@ We first need to change the name of the file so it starts with an underscore `_`
 
 Note that you don't need to include the underscore or the file extension to the import call, as Sass will understand that automatically. (Though I don't think it would break if you had them.)
 
-- Now go into both `index.html` and `shows.html` and remove the line of code that links to the old reset file.
-- Make sure that your Gulp process is still working and your page is still working OK.
+1. Now go into both `index.html` and `shows.html` and remove the line of code that links to the old reset file.
+1. Make sure that your Gulp process is still working and your page is still working OK.
 
 ### Partials practice
 
 OK, so that you've seen how that works, I want you to create three new partials to divide your scss files: base, nav and content.
 
-- Inside the `/src/scss` folder, create a three new files:
-  - `_base.scss`
-  - `_nav.scss`
-  - `_content.scss`
-- We'll leave our variables in `new-styles.scss`, so they continue to apply to all the other code that follows.
-- Go into `new-styles.scss` and copy/cut all the lines generic rules that apply to the whole site  ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
-- Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls and add them to `_nav.scss`.
-- Do the same for all the `.content` calls into the `_content.scss` file.
-- Lastly, after your variable rules, add @import calls into `new-styles.scss` for our new partials _AFTER_ the import for reset.
+1. Inside the `/src/scss` folder, create a three new files:
+    - `_base.scss`
+    - `_nav.scss`
+   - `_content.scss`
+1. We'll leave our variables in `new-styles.scss`, so they continue to apply to all the other code that follows.
+1. Go into `new-styles.scss` and copy/cut all the lines generic rules that apply to the whole site  ... i.e. those not in the `.nav` and `.content`. Add those lines to `_base.scss`.
+1. Go into `new-styles.scss` and copy/cut all the lines for the `.nav` calls and add them to `_nav.scss`.
+1. Do the same for all the `.content` calls into the `_content.scss` file.
+1. Lastly, after your variable rules, add @import calls into `new-styles.scss` for our new partials _AFTER_ the import for reset.
 
 ```scss
 @import 'base';
@@ -223,7 +223,8 @@ Now I'd like you to write some new SCSS to modify and/or fix a couple of things 
 
 ### Text sizes
 
-- Increase the size of all paragraphs and lists that are in the **content** div without affecting the size of items in the nav div.(Headlines should remain larger than `1rem`.)
+1. Increase the size of all paragraphs and lists that are in the **content** div without affecting the size of items in the nav div. (Headlines should remain larger than `1rem`.)
+1. Also set a `line-height` rule within those same paragraphs to give some space between lines of text.
 
 ### Nav link updates
 
@@ -241,8 +242,8 @@ a:hover {
 
 You'll want to set these styles in the `_nav.scss` file.
 
-- Set both the link and visited values to have the primary color, and the text-decoration to none.
-- Set hover color to the primary color, and text-decoration to underline.
+1. Set both the link and visited values to have the primary color, and the text-decoration to none.
+1. Set hover color to the primary color, and text-decoration to underline.
 
 Remember, you want these styles to only apply in the navigation.
 
@@ -256,10 +257,10 @@ The list of shows on the `shows.html` is hard to read. Make some changes to make
 
 ![sass-bullet-list.png](../images/sass-bullet-list.png)
 
-- Make the list of shows a bulleted list. (Style of your choice.)
-- Make sure the bullets line up vertically with the video on the page.
+1. Make the list of shows a bulleted list. (Style of your choice.)
+1. Make sure the bullets line up vertically with the video on the page.
 
-One challenge ... make sure you don't _add_ bullets to the list items in the nav.
+**Of note:** Make sure you don't _add_ bullets to the list items in the nav.
 
 ## File names and paths
 
@@ -314,10 +315,10 @@ When we write paths between HTML, style or image files, we have to think about h
 
 To make sure you have an understanding about how files work together, I want you to create a new HTML page that will have "bios" for this trio in Harvey Dale and the Cements:
 
-- Create a single new html page that will publish next to `index.html` and `shows.html`. You can choose the filename (though it should make sense). You can use a copy of one of the existing pages to get started.
-- Change the main headline of the new page to reflect the new content.
-- Add an h3 headline and a fake text paragraph for each of three members in the content section. The content doesn't matter as much to me as using good coding techniques.
-- Update the navigation on all the pages so they all work together.
+1. Create a single new html page that will publish next to `index.html` and `shows.html`. You can choose the filename (though it should make sense). You can use a copy of one of the existing pages to get started.
+1. Change the main headline of the new page to reflect the new content.
+1. Add an h3 headline and a fake text paragraph for each of three members in the content section. The content doesn't matter as much to me as using good coding techniques.
+1. Update the navigation on all the pages so they all work together.
 
 ## Push to Github
 

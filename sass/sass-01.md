@@ -18,17 +18,17 @@ For this project, we are starting from a template saved in a repo. We'll use a s
 
 As such, we won't need to create a README or .gitignore file because they will be part of the template. But you will need to create a project folder:
 
-- Create a new project folder called `yourname-sass` inside your `icj` folder.
-- Open that folder in VS Code and open your terminal.
-- In your terminal, run `degit utdata/icj-sass-template`. This should download all the template files into your folder.
-- Run `npm install`. This will download all the packages we need from the npm "app store". It will take a couple of minutes.
-- Run `gulp dev`.
+1. Create a new project folder called `yourname-sass` inside your `icj` folder.
+1. Open that folder in VS Code and open your terminal.
+1. In your terminal, run `degit utdata/icj-sass-template`. This should download all the template files into your folder.
+1. Run `npm install`. This will download all the packages we need from the npm "app store". It will take a couple of minutes.
+1. Run `gulp dev`.
 
 When you run `gulp dev` from your Terminal, a _bunch of cool stuff happens_. The process creates our "development environment":
 
 - All HTML and image files are copied from the `src` directory to the `docs` directory, which is where our publishable code will live.
 - A task compiles all the fancy SCSS files into regular CSS files that your browser can read.
-- A program called Browsersync launches a web browser window and displays your web page=.
+- A program called Browsersync launches a web browser window and displays your web page                              .
 - Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.
 
 (Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run `$ gulp dev`.)
@@ -59,7 +59,7 @@ src
 
 The `docs` folder is our publishing folder, where our website lives. These are the files that will be published to the web as a working website. Everything outside the `docs` folder just supports the creation of the files inside `docs`. DON'T EDIT ANY FILES IN THE `docs` FOLDER. If you do, the changes will just be overwritten.
 
-> We the `docs` folder for our publishable code to take advantage of a special feature in Github that will give us free publishing to the Internet. Other common folder names for publishing you might come across are `dist` and `public`.
+> We use the `docs` folder for our publishable code to take advantage of a special feature in Github that will give us free publishing to the Internet. Other common folder names for publishing you might come across are `dist` and `public`.
 
 ```
 docs (don't edit anything in here)
