@@ -17,8 +17,8 @@ I'll be using Chrome in class, so it might be helpful to do the same. Safari, Fi
 
 ## Set up your project
 
-- Create a new project folder called `yourname-javascript`. Create and connect with a new Github repo of the same name.
-- You'll need to create a new HTML file (call it `js-practice.html`) with the HTML5 boilerplate.
+1. Create a new project folder called `yourname-javascript`. Create and connect with a new Github repo of the same name. Include a README and .gitignore file.
+1. You'll need to create a new HTML file (call it `js-practice.html`) with the HTML5 boilerplate.
 
 Like CSS, you can write Javascript either in an HTML page, or in a separate file and link to it. We will be typing all our code within a `<script>` tag inside the body of our HTML page. Mark the answers for each question using JavaScript's comment syntax. As you see below, there are two ways to write a JavaScript comment:
 
@@ -40,7 +40,7 @@ You'll test all of our code by opening this page with a browser window and then 
 
 To get started:
 
-- Once you've created your `js-practice.html` file, add this code inside it:
+1. Once you've created your `js-practice.html` file, add this code inside it:
 
 ```html
 <!DOCTYPE html>
@@ -59,24 +59,24 @@ To get started:
 </html>
 ```
 
-- Save your file
-- In your browser, open your `js-practice.html` page. It will be blank. That's OK.
-- Right-click (control-click on Mac) in the middle of the page and choose **Inspector**.
-- When then Inspector loads, click on the **Console** tab.
-- You can close any other little windows that pop up.
+1. Save your file
+1. In your browser, open your `js-practice.html` page. It will be blank. That's OK.
+1. Right-click (control-click on Mac) in the middle of the page and choose **Inspector**.
+1. When then Inspector loads, click on the **Console** tab.
+1. You can close any other little windows that pop up.
 
 ![js-console](../images/js-console.gif)
 
 Let's log some text to the Console so you can see it work.
 
-- In your HTML file between the script tags, on a line by itself, add this:
+1. In your HTML file between the script tags, on a line by itself, add this:
 
 ```js
 console.log("Let's do math:");
 ```
 
-- Save your `js-practice.html` file.
-- Go back to your browser and refresh it and you should see the log print in the console.
+1. Save your `js-practice.html` file.
+1. Go back to your browser and refresh it and you should see the log print in the console.
 
 ![js-console-log](../images/js-console-log.png)
 
@@ -84,14 +84,14 @@ Note we used double-quotes to signify our string. Just so you know, we could use
 
 ## Writing to the console
 
-- Under your first console.log, use `let` to create a new variable `x` and set it to `5`. Log `x`'s value to the console. (We'll talk about `let` and what a variable is below.)
+1. Under your first console.log, use `let` to create a new variable `x` and set it to `5`. Log `x`'s value to the console. (We'll talk about `let` and what a variable is below.)
 
 ```js
 let x = 5;
 console.log(x);
 ```
 
-- Save your html page, then refresh your browser and you should see your console update to include the "5" in the log.
+1. Save your html page, then refresh your browser and you should see your console update to include the "5" in the log.
 
 The browser will act on all our code written in JavaScript, in the order that we write it. You don't actually see it happen, unless there is some result for you to see. We are using `console.log` to see that result.
 
@@ -117,16 +117,15 @@ When we used `console.log` to print log our variable "x" to the screen, it retur
 
 ## Let's do some math in JavaScript
 
-- Use `let` to create a new variable `y` and set it to `3`. Log `y`'s value to the console.
+1. Use `let` to create a new variable `y` and set it to `3`. Log `y`'s value to the console.
 
 ```js
 let y = 3;
 console.log(y);
 ```
 
-- Save your file and refresh your browser to make sure it worked.
-
-- Create a new variable `z` and set it to `x` multiplied `y`, using the `x` and `y` variables (don't just use the numbers 3 and 5). Log `z`'s value to the Console. The character `*` is our your multiplication tool.
+1. Save your file and refresh your browser to make sure it worked.
+1. Create a new variable `z` and set it to `x` multiplied `y`, using the `x` and `y` variables (don't just use the numbers 3 and 5). Log `z`'s value to the Console. The character `*` is our your multiplication tool.
 
 ```js
 let z = x * y;
@@ -135,15 +134,15 @@ console.log(z);
 
 ### Math on your own
 
-- Add a JavaScript comment called "Math on my own".
-- Repeat those last steps, but demonstrate addition (`+`), subtraction (`-`) and division (`/`) using **new** variable names (not `z`) and values. These are three different new things, each logged to the Console.
-- Make sure they worked in your browser.
-- Commit your changes to Github.
+1. Add a JavaScript comment called "Math on my own".
+1. Repeat those last steps, but demonstrate addition (`+`), subtraction (`-`) and division (`/`) using **new** variable names (not `z`) and values. These are three different new things, each logged to the Console.
+1. Make sure they worked in your browser.
+1. Commit your changes to Github.
 
 ## Working with strings
 
-- Add a new console log with the text "Working with strings:".
-- Create separate variables for your first, middle and last name. Log each of them to the console.
+1. Add a new console log with the text "Working with strings:".
+1. Create separate variables for your first, middle and last name. Log each of them to the console.
 
 (While any combination of letters _could_ be used to create a variable name, note that convention is to use camelCase if your variable has more than one word, meaning the first letter of the variable name is lowercase, but you would uppercase the first character of other words in the variable name.)
 
@@ -155,7 +154,7 @@ let middleName = 'Clay';
 let lastName = 'McDonald';
 ```
 
-- Use string concatenation (`+`) to join the variables you just created into a new variable called `name`. Make sure to include spaces in quotation marks between each name part. Log it to the console.
+1. Use string concatenation (`+`) to join the variables you just created into a new variable called `name`. Make sure to include spaces in quotation marks between each name part. Log it to the console.
 
 ```js
 let name = firstName + " " + middleName + " " + lastName;
@@ -166,9 +165,9 @@ OK, we now have created a variable that has your entire name, built from other v
 
 ### Strings on your own
 
-- Add a JavaScript comment with the text "Strings on my own".
-- Create a new variable, `greeting`, and in it, join the string `'My name is'` together with `name` so its new value is *My name is YOUR NAME*. Log that new value to the console.
-- Commit your changes to Github.
+1. Add a JavaScript comment with the text "Strings on my own".
+1. Create a new variable, `greeting`, and in it, join the string `'My name is'` together with `name` so its new value is *My name is YOUR NAME*. Log that new value to the console.
+1. Commit your changes to Github.
 
 ---
 

@@ -24,10 +24,10 @@ Well, we know we can find out how long a string is with the property `.length`. 
 
 We'll start by building our base function, then we'll build on it to make it better.
 
-- Add a console.log with the text "Making better name function:". This is just so we can see where this code starts working on our console.
-- Make a new function called `makeBetterName` that takes three arguments, `firstName`, `middleName` and `lastName`.
-- Inside that function we create a variable called `fullName` and take our inputs to make our name.
-- Return `fullName` out of the function.
+1. Add a console.log with the text "Making better name function:". This is just so we can see where this code starts working on our console.
+1. Make a new function called `makeBetterName` that takes three arguments, `firstName`, `middleName` and `lastName`.
+1. Inside that function we create a variable called `fullName` and take our inputs to make our name.
+1. Return `fullName` out of the function.
 
 ```js
 // Just a log to show in our Console
@@ -44,14 +44,14 @@ So we've made yet another name machine like your last homework. It's OK if you'v
 
 OK, now we need to use the function so we can see the return. We need test for both true and false conditions, so we really need two tests. This time we're going to call the `makeBetterName` function right inside of some `console.log`s instead of creating variables first.
 
-- After your function closes (the last `}`), add these console.log tests:
+1. After your function closes (the last `}`), add these console.log tests:
 
 ```js
 console.log(makeBetterName("Joan", "Marie", "Larkin"));
 console.log(makeBetterName("John", "F", "Kennedy"));
 ```
 
-- Save your code and refresh your page so you can see the name. "John F Kennedy" needs the period after the initial, which we'll tackle with an `if` statement.
+1. Save your code and refresh your page so you can see the name. "John F Kennedy" needs the period after the initial, which we'll tackle with an `if` statement.
 
 ### Make middle initial test
 
@@ -61,10 +61,10 @@ We'll use an `if` to do this test. Let's talk about how those work in JavaScript
 
 `if (perform the test) {do this if true}`
 
-1. For our (perform the test), we want to check if the length of middleName is one character.
-2. For our {do this if true} we will just `return true;`, which will write the word "true" to the Console for how.
+- For our (perform the test), we want to check if the length of middleName is one character.
+- For our {do this if true} we will just `return true;`, which will write the word "true" to the Console for how.
 
-- Update your `makeBetterName` function to add the `if` statement below to your  function and include the `return false;` after the if statement.
+1. Update your `makeBetterName` function to add the `if` statement below to your  function and include the `return false;` after the if statement.
 
 ```js
 // Make a name with middle initial
@@ -79,19 +79,17 @@ function makeBetterName(firstName, middleName, lastName) {
 
 Note the test here: `middleName.length === 1)`. We checking the **length** of `middleName` and testing if the value is "1", which would indicate a middle initial. Note that we use three equal signs `===` to test for truthiness.
 
-- Save your files and test in your browser to make sure you are getting Joan's name or a `true` value for John's "F".
+1. Save your files and test in your browser to make sure you are getting Joan's name or a `true` value for John's "F".
 
 ### Add period if true
 
-Now let's update our true statement to fix our middle name. Here is conceptually what we need to do:
-
-1. If our `middleName`is one character, then add a period to the end.
+Now let's update our true statement to fix our middle name. Here is conceptually what we need to do: If our `middleName`is one character, then add a period to the end.
 
 If your `middleName` is one character we can use string concatenation reset the `middleName` to itself plus the period. Because `middleName` is an argument for our function, it is already instantiated as a variable, and it is only available inside this function. So, we can just modify it and then return the value out of the function.
 
-- In the `if` part of the function, replace the `return true` with a line that modifies the `middleName` variable to add the period. Code is shown below.
-- Update the return statement to return `middleName`.
-- Save and refresh your browser to check it. You should be getting back the middle initial and period if true, and "false" if false.
+1. In the `if` part of the function, replace the `return true` with a line that modifies the `middleName` variable to add the period. Code is shown below.
+1. Update the return statement to return `middleName`.
+1. Save and refresh your browser to check it. You should be getting back the middle initial and period if true, and "false" if false.
 
 ```js
 // Make a name with middle initial
@@ -113,7 +111,7 @@ Using a single `if` conditional is pretty straight-forward, but what if you want
 
 I'm going to give you a function that tests which of two scores is higher and returns text with the answer. It has both an `if` and an `else`. I'll explain it, then give you a challenge to improve it.
 
-- Add this code to your script tag, save and refresh your browser to see the console results. 
+1. Add this code to your script tag, save and refresh your browser to see the console results. 
 
 ```js
   console.log("scoreCompare function");
@@ -138,8 +136,8 @@ Let's walk through this line by line:
 
 That is all well and good if the game doesn't end in a tie, but I'm a soccer fan and games often end in a tie. So here is your charge:
 
-- Review the W3Schools tutorial on [if, else and else if](https://www.w3schools.com/js/js_if_else.asp) or any other source you like and improve the function above to handle ties. Make it print "It was a tie" if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an `else if` to the function.
-- Make sure you add a new console log with the same home/away values to test your work.
+1. Review the W3Schools tutorial on [if, else and else if](https://www.w3schools.com/js/js_if_else.asp) or any other source you like and improve the function above to handle ties. Make it print "It was a tie" if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an `else if` to the function.
+2. Make sure you add a new console log with the same home/away values to test your work.
 
 ## Commit your work to Github
 

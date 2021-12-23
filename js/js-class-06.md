@@ -1,7 +1,5 @@
 # Using DataTables
 
-> **SPRING 2021 SNOWPOCALYPSE**: The following assignment is no longer required. You are welcome to do it, but it will not be part of your grade.
-
 For this lesson, you're going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point.
 
 jQuery is a framework that makes it easier to use JavaScript. It's particularly useful for simply traversing the DOM in an HTML page. Because of this, there are a number of tools and plug-ins written in jQuery.
@@ -18,8 +16,8 @@ Tables are great for displaying tabular data (hence the word table). But often t
 
 ## Goals of this lesson
 
-1. Add the required DataTables files to an HTML page (there's a CSS file and a JavaScript file, which we'll handle in the first problem below.)
-2. Call DataTables on your table using the example JavaScript provided on the DataTables website.
+- Add the required DataTables files to an HTML page (there's a CSS file and a JavaScript file, which we'll handle in the first problem below.)
+- Call DataTables on your table using the example JavaScript provided on the DataTables website.
 
 It will look similar to this:
 
@@ -31,16 +29,16 @@ The steps below will walk you through using the DataTables plug-in to make an in
 
 ### #1: "Zero configuration"
 
-- Create a new file in your javascript-practice project folder called `datatable.html` and add the basic HTML5 boilerplate using Emmet.
-- Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
-- On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
-- On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:
-    + Start with the **HTML** tab and copy the code in the box. Take the contents of that box and put it in your `datatable.html` HTML page between the `<body>` tags. Go ahead and look at your page in a browser, so you will see how it changes later.
-    + Go back to the **JavaScript** tab. The contents of that box should go inside a `<script></script>` tag at the bottom of your `datatable.html` HTML page before the close of the `</body>` tag.
+1. Create a new file in your javascript-practice project folder called `datatable.html` and add the basic HTML5 boilerplate using Emmet.
+1. Go to the DataTables home page (https://www.datatables.net/) and click the link for "Examples".
+1. On the Examples page, choose the "Zero configuration" example under "Basic initialisation".
+1. On the page with the example you'll see tabs below the table for "JavaScript", "HTML" and "CSS" with the code you need. However, there are some assumptions in the instructions, so listen up:
+    - Start with the **HTML** tab and copy the code in the box. Take the contents of that box and put it in your `datatable.html` HTML page between the `<body>` tags. Go ahead and look at your page in a browser, so you will see how it changes later.
+    - Go back to the **JavaScript** tab. The contents of that box should go inside a `<script></script>` tag at the bottom of your `datatable.html` HTML page before the close of the `</body>` tag.
 
 The parts of this exercise to add the Datatables JavaScript and CSS files assumes some knowledge and is not explained well in the directions.
 
- Copy the three links below and add them to the bottom of your `<head>` tag just before the closing `</head>`.
+1. Copy the three links below and add them to the bottom of your `<head>` tag just before the closing `</head>`.
 
 ```html
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -48,7 +46,7 @@ The parts of this exercise to add the Datatables JavaScript and CSS files assume
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 ```
 
-- Save your page and look at it in your browser. You should have a working table.
+1. Save your page and look at it in your browser. You should have a working table.
 
 ### Recap of how this works
 
@@ -66,5 +64,5 @@ The parts of this exercise to add the Datatables JavaScript and CSS files assume
 
 That is our last JavaScript lesson!
 
-- Commit the new files to your repository and push ot Github.
-- Post the link to your repository to the Canvas assignment.
+1. Commit the new files to your repository and push ot Github.
+1. Post the link to your repository to the Canvas assignment.

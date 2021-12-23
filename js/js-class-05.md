@@ -12,11 +12,11 @@ The DOM allows us to connect our JavaScript functions to HTML or CSS on the page
 
 We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. And overview of steps:
 
-1. Create a new html page.
-2. Introduce form elements through text boxes and a button.
-3. Copy our `makeBetterName` function from our previous exercise.
-4. Modify that function to use elements from the form _and_ update HTML on the page.
-5. Connect the form button to the makeBetterName function.
+- Create a new html page.
+- Introduce form elements through text boxes and a button.
+- Copy our `makeBetterName` function from our previous exercise.
+- Modify that function to use elements from the form _and_ update HTML on the page.
+- Connect the form button to the makeBetterName function.
 
 It will end up working like this:
 
@@ -26,9 +26,9 @@ Now let's get down to the detail.
 
 ## Create our page
 
-- Inside the same `yourname-javascript` repo we have been working in, create a new file called `form.html` and open it in VS Code.
-- Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`. Don't capitalize `html`. 
-- In between the <body> tags of the document, add the following HTML code. I'll explain afterward:
+1. Inside the same `yourname-javascript` repo we have been working in, create a new file called `form.html` and open it in VS Code.
+1. Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`. Don't capitalize `html`. 
+1. In between the <body> tags of the document, add the following HTML code. I'll explain afterward:
 
 ```html
 <form id="nameForm">
@@ -41,7 +41,7 @@ Now let's get down to the detail.
 <h3 id="nameHead">Name will go here</h3>
 ```
 
-- Save your file and open that page in a browser.
+1. Save your file and open that page in a browser.
 
 We've introduced several new HTML elements here that we haven't used before.
 
@@ -51,7 +51,7 @@ We've introduced several new HTML elements here that we haven't used before.
 
 ## Copy our function
 
-- Copy the `<script>` tag below and place it between our form element and the closing `</body>` tag on the page.
+1. Copy the `<script>` tag below and place it between our form element and the closing `</body>` tag on the page.
 
 Here is the code:
 
@@ -84,8 +84,8 @@ The easiest way to do this is with `document.getElementByID("id_name_here")`. On
 
 (If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`).
 
-- In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
-- Add the following three lines inside the function before the IF in your `makeBetterName` function:
+1. In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
+1. Add the following three lines inside the function before the IF in your `makeBetterName` function:
 
 ```js
 let fName = document.getElementById("nameForm").first.value;
@@ -95,7 +95,7 @@ let lName = document.getElementById("nameForm").last.value;
 
 What we are doing here is instead of feeding our names into the function through arguments, we are using `document.getElementByID` to find and get the "nameForm" element, and then we are accessing each input by its "name" property (i.e. `.first`). The property `.value` gives us the text of that is inside that input.
 
-- Now, after the function, add a console.log that calls the function, but don't feed it names like we did before:
+1. Now, after the function, add a console.log that calls the function, but don't feed it names like we did before:
 
 ```js
 console.log(makeBetterName());
@@ -109,13 +109,13 @@ OK, we've solved our first challenge of pulling the names from our fields. Now l
 
 We can not only pluck the value of a field with `getElementByID`, but we can also change existing text by using the [`.innerHTML` property](https://www.w3schools.com/js/js_htmldom_html.asp).
 
-- In our function, replace the line `return fullName;` with this:
+1. In our function, replace the line `return fullName;` with this:
 
 ```js
 document.getElementById("nameHead").innerHTML = fullName;
 ```
 
-- Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
+1. Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
 
 This new line of code uses the same DOM method `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property to shove content into it. What content was that? It's the contents of the `fullName` which now comes from our text boxes on the page.
 
@@ -123,8 +123,8 @@ This new line of code uses the same DOM method `getElementByID` to identify the 
 
 Our function is working like we want, but it's being called each time we refresh the page, and not when we click the button, so let's fix that. We do so by removing our console.log, and then adding an "onclick" attribute to our button.
 
-- Remove the `console.log(makeBetterName())` line that we added earlier to test the function.
-- In form in the HTML body, update the input button to the following:
+1. Remove the `console.log(makeBetterName())` line that we added earlier to test the function.
+1. In form in the HTML body, update the input button to the following:
 
 ```html
 <input type="button" value="Make name" onclick="makeBetterName()">
@@ -132,10 +132,10 @@ Our function is working like we want, but it's being called each time we refresh
 
 What we've done here is used the [onclick Event](https://www.w3schools.com/jsref/event_onclick.asp) to add interactivity to our button. Until now it was just an element on the page that didn't do anything, but now when we click on the button it fires the `makeBetterName` function, which uses our "name machine" to insert our text inside the `<h3>` we've specified through its id.
 
-- Save your file and refresh the page.
-- Click the "Make name" button and it should update the `<h3>` tag.
-- Put your own names into the text boxes and hit the button and it should change the headline.
-- Make sure it still works with a middle initial.
+1. Save your file and refresh the page.
+1. Click the "Make name" button and it should update the `<h3>` tag.
+1. Put your own names into the text boxes and hit the button and it should change the headline.
+1. Make sure it still works with a middle initial.
 
 ## Commit your change to Github
 
