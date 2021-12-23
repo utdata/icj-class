@@ -4,7 +4,7 @@
 
 CSS is the skin and DNA attributes that make one HTML skeleton look different from another. We use CSS to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson, and make it pretty.
 
-## Goals 
+## Goals
 
 - To understand default browser styling and how to handle it.
 - To use CSS styles to give visual appeal to page, applying the principles we learned in the Codecademy lessons.
@@ -34,8 +34,8 @@ There is way to deal with this called CSS reset. The concept is to zero out all 
 
 So, let's do it:
 
-- In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTML5resetCSS](https://raw.githubusercontent.com/richclark/HTML5resetCSS/master/reset.css) file.
-- We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing `</head>` tag.
+1. In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTML5resetCSS](https://raw.githubusercontent.com/richclark/HTML5resetCSS/master/reset.css) file.
+2. We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing `</head>` tag.
 
 ```html
   <link rel="stylesheet" type="text/css" href="reset.css">
@@ -53,9 +53,9 @@ We'll use a method to manage sizes by setting a base size for fonts, and then ma
 
 ## Create a site style file, set body defaults
 
-- Create a new file and call it `styles.css`.
-- Now, in your `recipe.html` file, add a different `<link>` tag referring to that css file after the `reset.css` link.
-- Now we'll add some defaults for the `<body>` tag in the `styles.css` file. Add this to the top, then save both the css and html files.
+1. Create a new file and call it `styles.css`.
+1. Now, in your `recipe.html` file, add a different `<link>` tag referring to that css file after the `reset.css` link.
+1. Now we'll add some defaults for the `<body>` tag in the `styles.css` file. Add this to the top, then save both the css and html files.
 
 ```css
 body {
@@ -72,15 +72,15 @@ Let's set some boundaries for the article. If you look at the finished example a
 
 ### Add the article tag
 
-- In `recipe.html`, add a beginning `<article>` on a new line after the beginning `<body>` tag.
-- Add the closing `</article>` tag before the closing `</body>` tag near the bottom.
-- Save your html file.
+1. In `recipe.html`, add a beginning `<article>` on a new line after the beginning `<body>` tag.
+1. Add the closing `</article>` tag before the closing `</body>` tag near the bottom.
+1. Save your html file.
 
 In doing this, we have defined the body of our web page to be an "article", which a recipe kinda is in the context of a website about recipes.
 
 ### Add the article styles
 
-- Now, in `styles.css`, add the following styles:
+1. Now, in `styles.css`, add the following styles:
 
 > I encourage you to type as much of the code as you can so you understand how the code editor can help you write in the styles.
 
@@ -152,7 +152,7 @@ Here is what we're going for:
 
 ![css-source](../images/css-source.png)
 
-- In the html page, add the `class="credit"` attribute to the `<p>` tag around the credit "Source: Epicurious.com" so it looks like this:
+1. In the html page, add the `class="credit"` attribute to the `<p>` tag around the credit "Source: Epicurious.com" so it looks like this:
 
 ```html
 <p class="credit">
@@ -160,7 +160,7 @@ Here is what we're going for:
 
 Always use lowercase characters in class names and use dashes if they are more than one word. This makes them readable and is considered convention in writing CSS. Having a common convention for things like this help people collaborate on code as it is predictable and readable. Name your classes for what the element is, not what you want it to look like. If you name your class for captions "red" and then decide later to make them blue, that would be confusing.
 
-- Now that we've defined it, we can add the following styles to your style sheet to target that class:
+1. Now that we've defined it, we can add the following styles to your style sheet to target that class:
 
 ```css
 .credit {
@@ -180,9 +180,9 @@ The other thing I might do is use the browser **Inspector** to test styles right
 
 It's easier to show this than to write it out, but you:
 
-- Use control-click on the element to get the contextual menu and choose Inspector.
-- Make sure you are on the correct element in the Element tab on the left pane of the Inspector.
-- Add/modify rules rules in the Styles tab on the right pane of the Inspector.
+1. Use control-click on the element to get the contextual menu and choose Inspector.
+2. Make sure you are on the correct element in the Element tab on the left pane of the Inspector.
+3. Add/modify rules rules in the Styles tab on the right pane of the Inspector.
 
 Here is an example in a screencast:
 
@@ -192,8 +192,8 @@ Here is an example in a screencast:
 
 We want the recipe description to be a bit bigger than the other type. First we need to give it an "id", then give the id a style.
 
-- In the html file, add an `<id>` attribute called "description" to the `<p>` tag around the "Purée grilled bell peppers" paragraph. We use `<id>` because there is always only one per recipe (it will not repeat), and we need to target it specifically.
-- In the CSS file, add the following style:
+1. In the html file, add an `<id>` attribute called "description" to the `<p>` tag around the "Purée grilled bell peppers" paragraph. We use `<id>` because there is always only one per recipe (it will not repeat), and we need to target it specifically.
+1. In the CSS file, add the following style:
 
 ```css
 #description {
@@ -218,8 +218,8 @@ Here's our goal:
 
 Let's set up the fancy lines above and below the yield values first.
 
-- In your html file, you should have a `<div>` surrounding the whole `<dl>` section, with an `id="yield"`.
-- In the css file, add the following:
+1. In your html file, you should have a `<div>` surrounding the whole `<dl>` section, with an `id="yield"`.
+1. In the css file, add the following:
 
 ```css
 #yield {
@@ -234,7 +234,7 @@ Save and refresh to see the lines. We used a [shorthand for the border property]
 
 Another story about tricks of the trade. When I was preparing this lecture, I had trouble getting the `<dt>` and `<dd>` values to show on the same line. So, what do you think I did? I googled it, of course, using the phrase "make css dd dt on same line". I got my answer [here](https://krijnhoetmer.nl/stuff/css/inline-dl/). It wasn't the first answer of my Google search ... I had to poke around on different search results until I found one that worked for me.
 
-- Add the following styles to your style sheet.
+1. Add the following styles to your style sheet.
 
 ```css
 dl {
@@ -252,7 +252,7 @@ dt {
 
 The first `<dl>` rule sets the font and size of the text. The next `<dt>` rule floats that part of the description to the left, sets a margin and makes it bold.
 
-- To finish out, go into the html file and add the colon after text inside the `<dt>` tags, like "Yield:".
+1. To finish out, go into the html file and add the colon after text inside the `<dt>` tags, like "Yield:".
 
 Could we have done this with paragraphs or divs? Absolutely. But then you wouldn't have learned about description lists ;-).
 
@@ -264,7 +264,7 @@ Here is our goal:
 
 ![css-unordered-list](../images/css-unordered-list.png)
 
-- Add to your css file:
+1. Add to your css file:
 
 ```css
 ul {
@@ -299,7 +299,7 @@ What we'll do instead is use special CSS selector called [nth-child](https://www
 
 Let's do this in incremental steps so you can see the magic happen.
 
-- Set the dotted border on the li tags with this:
+1. Set the dotted border on the li tags with this:
 
 ```css
 #nutrition li {
@@ -313,7 +313,7 @@ Since we only want to change the list items that are within the nutrition div, w
 
 For the first rule we choose a "none" list style to remove the bullets, then on the next style we added the grey dotted line. Lastly, we added a red background color so you can see the outline of each `li` tag on the page. We'll take this rule out later. Save and refresh to see your lines.
 
-- Next, in the same rule, let's float all of the list items the left, so add this as a new line in that #nutrition li rule:
+1. Next, in the same rule, let's float all of the list items the left, so add this as a new line in that #nutrition li rule:
 
 ```css
   float: left;
@@ -321,7 +321,7 @@ For the first rule we choose a "none" list style to remove the bullets, then on 
 
 Save and refresh, and then you'll see all of the list items try to fit on the same space. Well, what we really want is for each line to take up half of the space.
 
-- Add another value to the same rule. We're using a little less than 50% to give us some wiggle room with margins later:
+1. Add another value to the same rule. We're using a little less than 50% to give us some wiggle room with margins later:
 
 ```css
   width: 48%
@@ -340,7 +340,7 @@ OK, we are looking pretty good, but this would look tons better if we could make
 
 So, to do this we have to rewrite all the list items to have spans, and then to class those spans so we can target them with css. In order to save time, just copy/paste to replace them.
 
-- In the html file, replace all the li's under "Nutrition Information" with this (make sure to nest it inside the ul tag, which should still be there):
+1. In the html file, replace all the li's under "Nutrition Information" with this (make sure to nest it inside the ul tag, which should still be there):
 
 ```html
         <li>
@@ -385,7 +385,7 @@ So, to do this we have to rewrite all the list items to have spans, and then to 
         </li>
 ```
 
-- Next, add the CSS to make the `nutri-value` spans move to the right:
+1. Next, add the CSS to make the `nutri-value` spans move to the right:
 
 ```css
 #nutrition .nutri-value {
@@ -393,13 +393,13 @@ So, to do this we have to rewrite all the list items to have spans, and then to 
 }
 ```
 
-- Once everything is good, you can comment out the red background color, if you haven't already.
+1. Once everything is good, you can comment out the red background color, if you haven't already.
 
 ## Lets add a footer
 
 You may have noticed that this nutrition div is hugging the bottom of the page. Let's add a footer to close of the page nicely.
 
-- Add this to the html file, after the closing `<article>` tag.
+1. Add this to the html file, after the closing `<article>` tag.
 
 ```html
   <footer>
@@ -409,7 +409,7 @@ You may have noticed that this nutrition div is hugging the bottom of the page. 
 
 If you hit refresh, you'll notice that the footer ends up being way off to the right. This is because of all the floats in the nutrition section. There is a css property called [clear](https://www.w3schools.com/cssref/pr_class_clear.asp) that can help us here.
 
-- Add these values to the css file:
+1. Add these values to the css file:
 
 ```css
 footer {

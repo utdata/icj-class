@@ -86,7 +86,7 @@ Now to "code up" our text into real HTML:
 
 ![go live](../images/html-go-live.png)
 
-### Back to yield
+### Back to the markup
 
 1. For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
 1. Create a [description list](https://www.w3schools.com/html/html_lists_other.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
