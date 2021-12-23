@@ -4,19 +4,17 @@ This repo is for class assignments and resources for UT-Austin School of Journal
 
 The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are in this repository.
 
-> Updating for Spring 2021: Git and Github are renaming the default origin branch from "master" to "main". This is an ongoing change in January 2021 and not all references might be updated.
-
 ## Lessons
 
-### Setting up
-
-You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-up) repo.
-
-### Command-line interface tools
+### Command-line interface tools and computer setup
 
 - [What is a terminal?](https://github.com/utdata/icj-cli-tools/blob/main/lectures/bash/bash-01-terminal.md)
 - [Moving around](https://github.com/utdata/icj-cli-tools/blob/main/lectures/bash/bash-02-moving-around.md)
 - [Git and Github](https://github.com/utdata/icj-cli-tools/blob/main/lectures/git/git-01-git-intro.md)
+
+We'll also do some computer setup:
+
+- [Setting up your computer](https://github.com/utdata/icj-setting-up)
 
 ### HTML
 
@@ -31,9 +29,11 @@ You'll find this in the [icj-setting-up](https://github.com/utdata/icj-setting-u
 ### CSS
 
 - [Codecademy CSS tutorial](https://www.codecademy.com/learn/learn-css)
-  - Selectors and visual rules
-    - CSS Setup and Selectors
-    - CSS Visual Rules
+  - Syntax and selectors
+    - Setup and Syntax
+    - Selectors
+  - Visual rules
+    - Visual rules
   - The Box Model
     - The Box Model
     - Changing the Box Model
