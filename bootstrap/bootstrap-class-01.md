@@ -1,4 +1,4 @@
-# Using Bootstrap 4: Setup
+# Using Bootstrap 5: Setup
 
 ## Goals
 
@@ -7,28 +7,25 @@ We will:
 - Download and discuss using a Node development environment.
 - Discuss the benefits of using a mobile-first framework.
 - Use Bootstrap's grid-system to create a responsive website.
-- Add pre-built components like navigation, jumbotron displays, etc.
+- Add pre-built components like navigation, components, etc.
 - Introduce Sass/SCSS for customization.
 
-**NOTE**: Before doing this lesson in class, you should have watched all the lessons in the [Learn Bootstrap 4 screencasts](https://scrimba.com/g/gbootstrap4) to get an idea of how Bootstrap 4 works.
+**NOTE**: Before doing this lesson in class, you should have gone through any Bootstrap tutorials as outlined in Canvas. This walkthrough assumes you have some knowledge based on those.
 
 **ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/setting-up) and have tested that it works.
 
-**FINAL NOTE**: There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap in-class lesson**.
-
-This lesson is cribbed from:
-
-- [Learn Bootstrap 4 Final in 2018 by Gary Simon](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course), which is already out of date.
+**FINAL NOTE**: There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap in-class lesson**. It was recorded in Spring 2020 so it is aging.
 
 ## About Bootstrap
 
-[Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable. It is far from the only framework, but it is very popular. It is a "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop.
+[Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable. It is one of many frameworks, but it is very popular. It is a "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop.
 
 Throughout this lesson, we will refer to:
 
-- [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- W3 Schools' [Bootstrap 4 Tutorial](https://www.w3schools.com/bootstrap4/).
-- The [Learn Bootstrap screencasts](https://scrimba.com/g/gbootstrap4) you had as prework.
+- [Bootstrap documentation](https://getbootstrap.com/docs/getting-started/introduction/)
+- Tutorial Republic's [Bootstrap 5 tutorial](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/)
+
+There are plenty of tutorials on the web, including [W3 Schools' Bootstrap 5 Tutorial](https://www.w3schools.com/bootstrap5/) and Net Ninja's videos [Bootstrap 5 Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR).
 
 ## Create your project and Github repo
 
@@ -37,18 +34,20 @@ We'll create our project and get all our files, then get into the lesson.
 - Create a new folder in your `icj/` folder called `yourname-bootstrap`.
 - In VS Code, open a new window and open your new folder.
 - Open the Integrated Terminal.
-- Run `$ degit utdata/icj-bootstrap-template` to download the files.
-- Run `$ npm install` to install the node packages.
-- Run `$ git init` to intilize git.
-- Run `$ git add .` to add the files.
-- Run `$ git commit -m "first commit"` to commit the files.
+  - Run `$ degit utdata/icj-bootstrap-template` to download the files.
+  - Run `$ npm install` to install the node packages.
+  - Run `$ git init` to intilize git.
+  - Run `$ git add .` to add the files.
+  - Run `$ git commit -m "first commit"` to commit the files.
 - Go to Github and create a repository of the same name.
-- Use the `git remote add` command provided there to sync the repos.
+  - Use the the `git remote add` command provided there in your Terminal to sync the repos.
 - Run `$ git push origin master` to push the code to Github.
 
-The project already has README.md and .gitignore files. Edit the README file by adding a new section at the top with your name and the date you started the project.
+The project already has README.md and .gitignore files, but you should update the README with information specific to your project.
 
-> When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. These will not affect our work on this project.
+1. Edit the README file by adding a new section at the top with your name and the date you started the project. Note it is a Bootstrap 5 class project.
+
+> OF NOTE: When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. These will not affect our work on this project.
 
 ### A quick note about Node.js and npm
 
