@@ -72,14 +72,13 @@ Better CSS with Sass
 
 ### Bootstrap
 
-- [Bootstrap Tutorial on Scrimba](https://scrimba.com/g/gbootstrap4)
-  - Do all 11 sessions
-- [Part 1: Setup](bootstrap/bootstrap-class-01.md)
-- [Part 2: Using Bootstrap](bootstrap/bootstrap-class-02.md)
-- [Part 3: Modifying Bootstrap](bootstrap/bootstrap-class-03.md)
-- [Part 4: Publishing to the web](bootstrap/bootstrap-class-04.md)
-- [Part 5: Index vs detail pages](bootstrap/bootstrap-class-05.md)
-- [Part 6: Running an npm project](bootstrap/bootstrap-class-06.md)
+- See Canvas for Tutorial links
+- [Setup](bootstrap/bootstrap-class-01.md)
+- [Bootstrap components](bootstrap/bootstrap-class-02.md)
+- [Bootstrap grids](bootstrap/bootstrap-class-03.md)
+- [Bootstrap cards](bootstrap/bootstrap-class-04.md)
+- [Customizing Bootstrap](bootstrap/bootstrap-class-05.md)
+- [Github Pages publishing](bootstrap/bootstrap-class-06.md)
 - [Homework](bootstrap/bootstrap-assignment.md)
 
 ### Static apps
