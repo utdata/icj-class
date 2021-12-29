@@ -1,16 +1,12 @@
 # Bootstrap Components
 
-We're going to use Bootstrap **components** to build a _very generic_ two-page website. We'll also talk about different **content** and **utilities** classes.
+> This is a continuation of the Bootstrap tuorial.
 
-Here is our goal:
+We're going to explore many parts of the Bootstrap documentation, using **Components**,  **Content** and **Utilities** classes to build a _very generic_ single-page website.
 
-An index page:
+Here is our goal, a page like this:
 
 ![bs-class-index](../images/bs-class-index.png)
-
-An article page:
-
-![bs-class-article.png](../images/bs-class-article.png)
 
 We'll be pulling code from Bootstrap [documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and [examples](https://getbootstrap.com/docs/5.1/examples/) to build these pages. In some cases we aren't even updating the example text, we're just getting the components on our pages.
 
@@ -32,6 +28,8 @@ In our case we want the [Navbars](https://getbootstrap.com/docs/5.1/components/n
 This will add a nice navigation bar to our site:
 
 ![navbar](../images/bs-navbar-01.png)
+
+> NOTE: As you copy and past code into your index.html file, you may have to adjust the indents of some rows. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what. That, **and it is part of your grade**, because I want to build good habits.
 
 ### Adjust the navbar color
 
@@ -166,15 +164,19 @@ You set the color, width, style and radius of borders with various [border]() cl
 
 ### Button component
 
-Here we'll dive back into the components section to get a [button](https://getbootstrap.com/docs/5.1/components/buttons/) to add to our Jumbotron-like header.
+Here we'll dive back into the components section of the docs to get a [button](https://getbootstrap.com/docs/5.1/components/buttons/) to add to our Jumbotron-like header.
 
-1. Go to [sizes](https://getbootstrap.com/docs/5.1/components/buttons/#sizes) part of the button docs to find the code for a **Large button**.
+1. In the Button section of Components, go to [sizes](https://getbootstrap.com/docs/5.1/components/buttons/#sizes) part to find the code for a **Large button**.
 2. Add this code on a new line after the closing `p` tag in the header.
 
 We'll edit this button later to make it go to a new page.
+
+With this, we have our "Jumbotron"-like header. At this point, you page should be looking like this:
+
+![Button added](../images/bs-button-added.png)
 
 This might be a good time to use the git cycle to save and push your efforts to Github.
 
 ---
 
-**Next**: We introduce the [Bootstrap grid]().
+**Next**: We introduce the [Bootstrap grid](bootstrap-class-03.md).

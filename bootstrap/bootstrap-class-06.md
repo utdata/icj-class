@@ -1,105 +1,34 @@
-# Downloading and running an npm project
+# Publishing to Github Pages
 
-## Goals
+> This is a continuation of the Bootstrap tutorial.
 
-- Download a fellow student's repo to our local machine, treating it as a new project template.
-- Run `npm install` to install all the software needed to work on the project.
-- Run `gulp` to set up our development environment.
+Github has a way that we can publish static web pages to the web, for free, using [Github Pages](https://pages.github.com/). While it is not intended for commercial use, it is sufficient and appropriate for our class. There is a _soft_ 100GB limit per month. If you exceed that, you'll get a polite email from Github suggesting better ways to handle your traffic. Consider that a lovely problem to have because 100GB is quite a lot.
 
-## A little background
+There are [Github tutorials](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) on setting up Github pages. We'll go through one of the many methods here.
 
-When we started this project, we created a series of folders and then installed a bunch of npm packages. As we did so, we created a file called `package.json` (and `package-lock.json`). It looks something like this:
+## Publishing through the /docs/ folder
 
-```js
-{
-  "name": "bootstrap-yourname",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.24.7",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
-  },
-  "dependencies": {
-    "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.4"
-  }
-}
-```
+Github pages allows us to use a folder called `docs/` as our distribution folder, and the template we are using is built to use that feature.
 
-The syntax of the file is called JSON, which is the preferred datatype for Javascript. It is the lines `devDependencies` and `dependencies` that will tell npm what to install.
+- Go to your Github repo for this project and select **Settings**.
+- On the left navigation, look for **Pages**.
+- Where is has the dropdown for **Source**:
+  - Choose the **main** branch.
+  - For the next dropdown, choose `/docs`.
+  - Click the **Save** button.
 
-When we used the npm install processes on our own projects it also created the `node_modules` folder, which contains all the software you used, like `gulp` and `gulp-sass`, etc. However, you'll recall we also created a `.gitignore` file to exclude those files because there are thousands of them and they don't need to be saved in our repo (which you'll see in a moment).
+Your page will refresh and after a few minutes, your website will be available on the web at a url based on your username and project repo name:
 
-FWIW, this is the line in the `.gitignore` file that excludes our `node_modules` folder.
+`https://{githubusername}.github.io/{project-name}/`
 
-```bash
-# Dependency directories
-node_modules/
-```
+Please take that URL and add it to your Github repo in the About section like this:
 
-It is the `package.json` file that is the secret sauce. It was our use of the flags `--save` and `--save-dev` during installation that added our packages to that list.
+![bs-save-url.gif](../images/bs-save-url.gif)
 
-This file allows another developer to download your repo and then run `npm install` to install all the npn packages into their own `node_modules` folder and then run all your code. (If you or another developer forgets the `--save` and `--save-dev` flags during the install, then the software won't work for the next developer that comes along.)
+## More Github pages
 
-This is what we'll test using your partner's repo.
-
-## Download the repo
-
-- Pick a partner in class and go to their Github page.
-- Click on Repositories to list all their repos.
-- Click on the link to their `bootstrap-myname` repo.
-- Click on the **Clone or download** button and then click on **Download ZIP**.
-
-![bs-download](../images/bs-download.png)
-
-This will download all of their files into your Downloads folder.
-
-- Find and open your Downloads folder.
-- If the file was not un-zipped automatically on download, double-click on it to extract their actual folder. (This may work a little differently on Windows machines).
-- Now move (you can drag 'n' drop) that entire folder into your `Documents/code` folder.
-
-## Open the folder in VS Code
-
-- Close all your other VS Code windows so you don't get confused. (But don't quit the VS Code app.)
-- Go under **File** to **New Window**
-- On the Welcome screen under **Start** you'll see a link for **Open Folder**. Click on that link.
-- Negotiate to your `Documents/code/bootstrap-yourpartner` folder (but _not_ inside of it!) and click the **Open** button.
-
-This should open your partner's project in VS Code and you should see all their files in the Explorer.
-
-## Run npm install
-
-- Open your Integrated Terminal and run this:
-
-```bash
-npm install
-```
-
-You should see a bunch of stuff happen ... a `node_modules` folder will be created and a bunch of stuff will be downloaded into it.
-
-## Launch the project
-
-Now you just have to run the default gulp task to get the project running.
-
-```bash
-gulp
-```
-
-This should generate all the CSS and JavaScript files needed and launch a browser with your partners project.
-
-## We did not clone!
-
-In this case, we did not use `git clone` on the file when we downloaded it, so these files are not connected to your partner's Github file. That was planned, as this is one way that developers save template projects that you don't want overwritten with new changes.
+There are other ways to publish [Github Pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages), depending on your needs.
 
 ---
 
-We are done with this lesson!
+We'll stop here. Turn in your Github link to the Canvas assignment.

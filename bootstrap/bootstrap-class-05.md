@@ -1,125 +1,83 @@
-# Index vs other pages
+# Customizing Bootstrap
 
-OK, you have a Bootstrap website published now. It is only one page, but it is a special one. We named this page `index.html` for a reason because that is one of the default page names that browsers look for when they read a website directory.
+> This is a continuation of the Bootstrap tutorial.
 
-When you run `gulp dev` on your local machine, the development server takes all the HTML files it finds in `src/html` and processes them as complete pages in our `docs/` folder. When `gulp dev` launches your browser it sets that `docs/` folder as the "root" of our server and then publishes it at our dev url, something like `http://localhost:3002/` (Your number at the end may differ). The browser at that point is looking at the files inside the `docs/` folder for a default page to load, finding `index.html`.
+If you look at [Customize](https://getbootstrap.com/docs/5.1/customize/overview/) section of the Bootstrap documentation, you can see there a bunch of different ways you can customize your site, including:
 
-A similar thing happens when you use Github Pages. We used the Github Pages settings to set our site to load from that same `docs/` folder, so when it publishes my version of this site -- `https://utdata.github.io/icj-bootstrap-answers/` -- you'll notice there is nothing after the last `/` of that URL. When a web server is given that URL it looks inside the `docs/` folder of the repo and finds `index.html`.
+- Modifying Bootstrap Sass variable settings
+- Choosing different Bootstrap styles
+- Modifying existing Bootstrap styles
+- Creating new styles
 
-Website home pages like this act as gateways to the rest of our site. So far we've built the gate, but there is nothing behind it. Let's change that.
+Since this is a Sass-based system, we'll make all our CSS changes in our `src/styles.scss` file.
 
-## Adding a new page
+## Modifying Bootstrap Sass variables
 
-Let's add a new page to our website.
+Most default styles in Bootstrap are built upon a set of variables to take advantage of that Sass feature. We can quickly make changes across our site based on resetting these variables.
 
-- Add a new file inside `src/html` called `story-page.html`.
-- Inside of that page, add all of the code below.
-- If you are not already running your browsersync process, you'll need to run `gulp dev` again so the new page will get processed.
+You'll need to read the [Customize Sass](https://getbootstrap.com/docs/5.1/customize/sass/) documentation for a full explanation, but we'll show the power of this here by changing our primary color and background color variables.
 
-```html
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-  <head>
-    <title>Learn about ye Pirates, matey!</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+1. Open your `src/scss/styles.scss` file and look through the comments at the top of the file that explain it. Some things have to be in a specific order.
+1. After the variable examples shown there and before the `@import` example, add the following and then save the file:
 
-<body>
-  <!-- Content starts here -->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="index.html">WebPirates</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
-              Ships
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Ranger</a>
-              <a class="dropdown-item" href="#">Queen Anne's Revenge</a>
-              <a class="dropdown-item" href="#">William</a>
-            </div>
-          </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <article>
-      <h1>Learn about ye Pirates, matey!</h1>
-      <p>Row scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. </p>
-      <p>Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
-      <p>Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
-    </article>
-
-  </div>
-          <!-- Closing scripts here -->
-  <script src="js/jquery.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.js"></script>
-</body>
-</html>
+```scss
+$primary: #bf5700;
+$body-bg: #ededed;
 ```
 
-OK, let's go to your new page in your browser.
+If you look at your page, all the blue stuff should now be burnt orange and the background should be grey. (#hookem).
 
-- Go to your URL bar and look at the end of the page that is being viewed. It should be either `/` or `/index.html`.
-  - If your URL says `index.html` at the end, then change that part to `story-page.html`.
-  - If your URL ends in `/`, then just add `story-page.html` to the end.
+## Choosing different Bootstrap classes
 
-This should show your new page, which should be something like this:
+OK, but now our Jumbotron header is kinda dark. Let's change the background to white and the text to black by choosing different Bootstrap styles there.
 
-![New page](../images/bs-new-page.png)
+1. Find your header div in your index code.
+2. In the class, change `bg-secondary text-white` to just `bg-white`. Leave the spacing and border classes.
 
-### About the code inside our story page
+This changes the header background to white and returns the text to its default black. Using the utility styles can allow quick display changes.
 
-The code inside the page `story-page.html` has some-but-not-all of the same code that is in `index.html`. We needed all the HTML5 boilerplate stuff, Bootstrap markup and our links to the CSS and JavaScript files. We kept our nav, too.
+## Updating an existing Bootstrap class
 
-We didn't include the Jumbotron because we don't really need it on this detail page. We added some code for an article, basically an HTML `<article>` element, and `h1` and some paragraphs of text.
+Within our highlight section we coded our first paragraph to have a `lead` [typography class](https://getbootstrap.com/docs/5.1/content/typography/#lead), and it is the same `lead` class earlier in the header. We can also change or build upon that style, which we will do next.
 
-## Links between pages
+1. In your `src/styles.scss` file near the bottom, after the comment about custom styles, add this and then save and view the result:
 
-We have new page, but our home page doesn't link to it. Let's fix that.
-
-- Open up `index.html` and update the button code in the jumbotron to look like this:
-
-```html
-<a class="btn btn-primary btn-lg" href="story-page.html" role="button">Learn more</a>
+```css
+// highlight lead
+.highlight {
+  .lead {
+    font-weight: lighter;    
+  }
+}
 ```
 
-Basically you are removing the `#` placeholder that was inside the `href=""` part of the "a" tag and replacing it with a real link. You'll often see href example code use  `#` as a placeholder. If it wasn't changed, it would just link to the same page you are on.
+This style made the lead paragraph a lighter color than the default `lead` style. Bootstrap supports Sass, so the style was nested so the change to `lead` only happens when it is inside something also classed with `highlight`, which our container is. This way we only changed the lead there and NOT in the header or anywhere else we might use it on the site outside of a highlight div. (This is why we added the `highlight` class to the div!)
 
-Because `index.html` and `story-page.html` are files that live next to each other in our published site (the `docs/` folder), we don't need a path before the name of the file.
+### Write a new style
 
-We always use _relative_ links like this between files. We do NOT include the whole domain in the href because that domain might be different depending on where we publish the website.
+Next we'll create our own style in CSS just like any normal HTML page.
 
-### Test your links
+1. In the highlight column that has the photo, update the `<p>` tag to give it a class of `caption`.
+1. Go into your `styles.scss` file and add a style rule for `.caption` that sets the font-weight to bold and the font-style to italic. This is just like writing any css style to a class, so I'll let you figure it out.
 
-- Click on the name of your site at the top-left of your nav, as that is set to go to `index.html` of your site.
-- Then click on the "Learn more" button in the Jumbotron to make sure your link has been built correctly to your new `story-page.html` file.
+Unlike the `lead` class, this `.caption` class does not pre-exist in Bootstrap. We just created our own style and used it, and we can reuse it on other pages that use this stylesheet, if we want.
 
-## Republish your site to Github
+## Add a footer
 
-- Go through the git cycle, including pushing to Github.
+Lastly, I want you to add a footer element with the following specs (which you can visualize below). There are a number of ways you can do this, and I want you to choose how. Here are the specs:
 
-Shortly after you push you should be able to test your new changes at your Github Pages site.
+- It should be built from the footer symantic element `<footer>`.
+- The text should be centered with some spacing around the words to give them air.
+- The background should be white.
+
+## And we're done, almost
+
+We are done with our site and it should look like this:
+
+![bs-class-index](../images/bs-class-index.png)
 
 ---
 
-We'll stop here. Turn in your Github link to the Canvas assignment.
+**Next**: We'll [publish to the web]().
 
-~~Next: Let's [practice downloading](bootstrap-class-06.md) and running a classmates project~~
+---

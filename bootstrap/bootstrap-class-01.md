@@ -133,4 +133,4 @@ Congrats! You are now ready to get down to business and build a website.
 
 ---
 
-**Next**: We actually get started with [Bootstrap Components]().
+**Next**: We actually get started with [Bootstrap Components](bootstrap-class-02.md).
