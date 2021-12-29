@@ -29,7 +29,7 @@ This will add a nice navigation bar to our site:
 
 ![navbar](../images/bs-navbar-01.png)
 
-> NOTE: As you copy and past code into your index.html file, you may have to adjust the indents of some rows. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what. That, **and it is part of your grade**, because I want to build good habits.
+> NOTE: As you copy and paste code into your index.html file, you may have to adjust the indents of some rows. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what. That, **and it is part of your grade**, because I want to build good habits.
 
 ### Adjust the navbar color
 
@@ -57,11 +57,11 @@ I also want to point out here in the example the **Home** nav-link, which has tw
 - The class `active` here makes that item bold in the navigation bar to give the reader a visual clue you that you are viewing that specific page from the navigation menu.
 - The attribute `aria-current="page"` denotes to screen readers this is the active link and is important for those who can't "see" the visual clue that the `active` class gives us.
 
-When building web sites, you should update page navigation to relfect both of those for each pages.
+When building web sites, you should update page navigation to reflect both of those for each pages.
 
 ## A Jumbotron site header
 
-Once upon a time (like 2021) Bootstrap had a special header component called a [Jumbotron](https://getbootstrap.com/docs/5.1/examples/jumbotron/). With Bootstrap 5's released in May 2021 they got rid of it because you can build a similar display with their existing utility classes, which allows us to introduce  Bootstrap examples along with content and utilites classes.
+Once upon a time (like 2021) Bootstrap had a special header component called a [Jumbotron](https://getbootstrap.com/docs/5.1/examples/jumbotron/). With Bootstrap 5's release in May 2021 they got rid of it because you can build a similar display with their existing utility classes, which allows us to introduce  Bootstrap examples along with content and utilites classes.
 
 First let's take a look at what we are talking about.
 
@@ -69,7 +69,7 @@ First let's take a look at what we are talking about.
 
 Now, these examples aren't quite as easy to use as the Component documentation. To see how they work you have to either download the examples (which gets you all of them) or view the source code of each page (In Chrome, View > Developer > View Source.)
 
-Instead, we are just going to build this bit-by-bit.
+Instead, we are just going to build this bit-by-bit. But I did want you to see the examples so you know our goal.
 
 1. After your nav, add a new `div` with a `class="container"`.
 1. Inside that div, add another `div` with `id="header"`.
@@ -88,18 +88,16 @@ It should be something like this:
 
 Let's talk about that **container**. In Bootstrap, a container div applies some margins and puts the content in the center of the browser. It's an important building block with responsive design because those margins expand/contract depending on your device width.
 
-We will be putting more stuff inside that container div below the header, but that comes later.
-
 The rest of that:
 
-- We created a div with an id of `header` because will always be a unique item on the page. Giving it an id let's us target CSS styles to that part of the page if needed.
+- We created a div with an id of `header` because  it will be a unique item on the page. Giving it an id let's us target CSS styles to that part of the page if needed.
 - The `h1` and `p` tags are standard. For now. We're about to gussy 'em up.
 
-We will be giving a tour of Bootstrap content and utilites class as we go along.
+We will be doing a tour of Bootstrap content and utilites class as we go along.
 
 ### Typography classes
 
-Let's take a gander at Bootstraps [Typography](https://getbootstrap.com/docs/5.1/content/typography/) documentation. These are a set of classes that can be applied to elements that give them a certain look. Because Bootstrap is customizable, it is possible to set these classes and then update them later with Sass. We're going to stick with default styles for now.
+Let's gander at Bootstrap's [Typography](https://getbootstrap.com/docs/5.1/content/typography/) documentation. These are a set of classes that can be applied to elements that give them a certain look. Because Bootstrap is customizable, it is possible to set these classes and then update them later with Sass. We're going to stick with default styles for now.
 
 1. Look through the [Display headings](https://getbootstrap.com/docs/5.1/content/typography/#display-headings) section to see how to apply the `display-4` class and add that to your `h1` within your header.
 2. Look at the [Lead](https://getbootstrap.com/docs/5.1/content/typography/#lead) section and then add that class to your `p` tag within the header.
@@ -110,9 +108,9 @@ At this point your index should be looking something like this:
 
 ### Backgrounds
 
-[Backgrounds](https://getbootstrap.com/docs/5.1/utilities/background/) help us start out the tour of utilities documentation. We'll add some to our jumbotron.
+We're going to add some color to our Jumbotron-like header using a background color. The [Background](https://getbootstrap.com/docs/5.1/utilities/background/) classes are found in the **Utilities** part of the documentation.
 
-1. Browser through the [Backgrounds](https://getbootstrap.com/docs/5.1/utilities/background/) docs so you can see how they are used.
+1. Browse through the [Backgrounds](https://getbootstrap.com/docs/5.1/utilities/background/) docs so you can see how they are used.
 1. On the header div, add the class attribute to make the background our "secondary" color (the default whis is a dark gray color).
 
 ```html
@@ -129,7 +127,7 @@ Still ugly, but we are getting there.
 
 Next on the tour are utility classes to control text colors.
 
-1. Look through the [color](https://getbootstrap.com/docs/5.1/utilities/colors/) documentations and figure out how to make white text.
+1. Look through the [color](https://getbootstrap.com/docs/5.1/utilities/colors/) documentation and figure out how to make white text.
 2. Add that class to the same div that you added the background color, so it look like this:
 
 ```html
@@ -142,17 +140,19 @@ Still ugly, but you should have white text on the dark gray background.
 
 Next we'll give our text some room to breathe using utility classes to control spacing between elements like margins and padding.
 
-1. In a browser, go to the [Spacing](https://getbootstrap.com/docs/5.1/utilities/spacing/) documentation and look it over, especially the [notation](https://getbootstrap.com/docs/5.1/utilities/spacing/#notation) section.
+1. Go to the [Spacing](https://getbootstrap.com/docs/5.1/utilities/spacing/) documentation and look it over, especially the [notation](https://getbootstrap.com/docs/5.1/utilities/spacing/#notation) section.
 
-Basically this shorthand to build space around items (margin) and inside items (padding). While I can't explain it better than they have, here is an abbreviated version:
+Basically this shorthand to build space around items (margin) and inside items (padding). While I can't explain it better than they have, here is an abbreviated version of the shorthand:
 
-- You use `m` margin or `p` for padding.
+- You use `m` for margin or `p` for padding.
 - Following _m_ or _p_ you add either: `t` (top), `b` (bottom), `l` (left), `r` (right), `x` (left and right), `y` (top and bottom), or nothing for all 4 sides.
 - Then, you specify sizes with a hyphen and a value of `0` through `5` (5 being the largest amount of spacing).
 
-We're going to build our header div to do this. Let's add the code first then I'll explain.
+So, `pt-4` would be _padding_ on the _top_ at a value of _4_.
 
-1. Add these classes to the header div. (If you do this one at a time you can see what each does):
+We'll use this on our header. Let's add the code first then I'll explain.
+
+1. Add these as a `class=""` to the header div. (If you do this one at a time you can see what each does):
     - `my-4` adds a margin to top and bottom of the div, basically moving it off the navigation.
     - `p-5` adds padding, the space "inside" the div between the border and the text.
 
@@ -160,16 +160,17 @@ We're going to build our header div to do this. Let's add the code first then I'
 
 You set the color, width, style and radius of borders with various [border]() classes. Let's use those to add a slight radius to our header corners.
 
-1. Review the [border-radius](https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius) docs and add the class to your header div to make the corners of the box rounded. It's a pretty slight change.
+1. Review the [border-radius](https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius) docs and add the class to your header div to make the corners of the box rounded. It's a pretty slight visual change.
 
 ### Button component
 
-Here we'll dive back into the components section of the docs to get a [button](https://getbootstrap.com/docs/5.1/components/buttons/) to add to our Jumbotron-like header.
+Here we'll dive back into the components section of the docs to get a **button** to add to our Jumbotron-like header. But let's use the **Search docs** to find it.
 
-1. In the Button section of Components, go to [sizes](https://getbootstrap.com/docs/5.1/components/buttons/#sizes) part to find the code for a **Large button**.
-2. Add this code on a new line after the closing `p` tag in the header.
-
-We'll edit this button later to make it go to a new page.
+1. Go to any page in the [Bootstrap docs](https://getbootstrap.com/docs/5.1/getting-started/introduction/).
+1. In the search bar at top left, type in "button". As you do, you'll see options pop up under the search. Choose the "Buttons / Buttons" option to get to the main Buttons page.
+1. If your browser window is set wide enough, you should see an additional "One this page" navigation on the right side. Click on the **Sizes** link there. If you don't have that navigation, just scroll down the page until you find Sizes.
+1. In the **Large button** example, copy the first line that has `btn-primary` as part of the classes.
+1.. Add this code on a new line after the closing `p` tag in the header.
 
 With this, we have our "Jumbotron"-like header. At this point, you page should be looking like this:
 
@@ -179,4 +180,4 @@ This might be a good time to use the git cycle to save and push your efforts to 
 
 ---
 
-**Next**: We introduce the [Bootstrap grid](bootstrap-class-03.md).
+**Next**: We introduce the [Bootstrap grid](bootstrap-class-03.md)

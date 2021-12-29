@@ -15,10 +15,10 @@ Since this is a Sass-based system, we'll make all our CSS changes in our `src/st
 
 Most default styles in Bootstrap are built upon a set of variables to take advantage of that Sass feature. We can quickly make changes across our site based on resetting these variables.
 
-You'll need to read the [Customize Sass](https://getbootstrap.com/docs/5.1/customize/sass/) documentation for a full explanation, but we'll show the power of this here by changing our primary color and background color variables.
+For a full explanation you would need to read the [Customize Sass](https://getbootstrap.com/docs/5.1/customize/sass/) documentation, but we'll show the power of this here by changing our primary color and background color variables.
 
 1. Open your `src/scss/styles.scss` file and look through the comments at the top of the file that explain it. Some things have to be in a specific order.
-1. After the variable examples shown there and before the `@import` example, add the following and then save the file:
+1. After the variable examples shown there but before the `@import` example, add the following and then save the file:
 
 ```scss
 $primary: #bf5700;
@@ -53,7 +53,7 @@ Within our highlight section we coded our first paragraph to have a `lead` [typo
 
 This style made the lead paragraph a lighter color than the default `lead` style. Bootstrap supports Sass, so the style was nested so the change to `lead` only happens when it is inside something also classed with `highlight`, which our container is. This way we only changed the lead there and NOT in the header or anywhere else we might use it on the site outside of a highlight div. (This is why we added the `highlight` class to the div!)
 
-### Write a new style
+## Write a new style
 
 Next we'll create our own style in CSS just like any normal HTML page.
 
@@ -70,6 +70,10 @@ Lastly, I want you to add a footer element with the following specs (which you c
 - The text should be centered with some spacing around the words to give them air.
 - The background should be white.
 
+## Push your code to Github
+
+1. Use the git cycle to push all your changes to Github.
+
 ## And we're done, almost
 
 We are done with our site and it should look like this:
@@ -78,6 +82,6 @@ We are done with our site and it should look like this:
 
 ---
 
-**Next**: We'll [publish to the web]().
+**Next**: We'll [publish to the web](bootstrap-class-06.md).
 
 ---

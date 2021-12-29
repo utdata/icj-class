@@ -1,4 +1,4 @@
-# Using Bootstrap 5: Note Setup
+# Using Bootstrap 5: Node Setup
 
 ## Goals
 
@@ -6,19 +6,19 @@ We will:
 
 - Download and discuss using a Node development environment.
 - Discuss the benefits of using a mobile-first framework.
-- Use Bootstrap's grid-system to create a responsive website.
 - Add pre-built components like navigation, etc.
+- Use Bootstrap's grid-system to create a responsive website.
 - Introduce Sass/SCSS for customization.
 
 **NOTE**: Before doing this lesson in class, you should have gone through any Bootstrap tutorials as outlined in Canvas. This walkthrough assumes you have some knowledge based on those.
 
-**ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/setting-up) and have tested that it works.
+**ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/icj-setting-up/blob/main/README.md) and have tested that it works.
 
 **FINAL NOTE**: There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap in-class lesson**.
 
 ## About Bootstrap
 
-[Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable.  Its "mobile-first, responsive design" framework that allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is one of many frameworks, it is very popular one.
+[Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable.  Its "mobile-first, responsive design" framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.
 
 Throughout this lesson, we will extensively refer to:
 
@@ -61,7 +61,7 @@ Bootstrap is available through npm, and the project template we are using has be
 
 The `docs/` folder is where all our finished site files go. It is the folder that will be read by the web server.
 
-> DO NOT EDIT FILES IN THE DOCS FOLDER!!!
+> **SUPER IMPORTANT:** DO NOT EDIT FILES IN THE DOCS FOLDER!!! You will lose your edits if you do.
 
 Most web apps like this will use a different folder name, like `dist/` or `public/`, but we are using `docs/` to take advantage of some free web serving services offered by Github.
 
@@ -75,8 +75,8 @@ Inside our docs folder, you will eventually see the following:
 
 **This is where we edit our files.** Any change we make here gets compiled or copied into the `docs/` folder by our Node.js server.
 
-- The `html` folder has `index.html` file that we will be adding all our HTML code.
-- the `img` folder is for our original image files. They get "minified" and placed `docs/img/`
+- The `html` folder has the `index.html` file that we will be adding all our HTML code.
+- the `img` folder is for our original image files. They get "minified" and placed in `docs/img/`.
 - The `scss` folder has `styles.scss` file were we will add all our Sassy css.
 
 As you'll soon see, when our server is running, each time we save a file in either of these folders, the scss will be compiled and our HTML copied into the `docs/` folder.
@@ -87,13 +87,13 @@ While we are in our src folder, let's look at our HTML.
 
 1. Open `src/html/index.html` and take a look at it.
 
-There are several things going on here with this file beyond the base HTML. In the `<head>` we are pulling in css files that will be generated through Sass, including for the Bootstrap framework. At the bottom we are pulling in the JavaScript files that we need for Bootstrap, which will also be copied there by our server.
+There are several things going on here with this file beyond the base HTML. In the `<head>` we are pulling in css file that will be generated through Sass, including for the Bootstrap framework. At the bottom we are pulling in the JavaScript file that we need for Bootstrap, which will also be copied there by our development environment.
 
 #### Inspect the scss file
 
 1. Open the `src/scss/styles.scss` file
 
-You'll see the `@import` here that pulls in all the Bootstrap css from our `node_modules` folder that we downloaded when we ran `npm install`. You don't see the result yet on our index page, but you will soon.
+You'll see an `@import` here that pulls in all the Bootstrap css from our `node_modules` folder that we downloaded when we ran `npm install`. You don't see the result yet on our index page, but you will soon. There are also some comments to guide you.
 
 ### Inspect the configuration files
 
@@ -127,7 +127,7 @@ Let's run it and see if it works.
 gulp dev
 ```
 
-With any luck, http://localhost:3000 will load up in the browser and you'll see some testing text on your screen. This means everything should be good to go.
+With any luck <http://localhost:3000> will load up in the browser and you'll see some testing text on your screen. This means everything should be good to go.
 
 Congrats! You are now ready to get down to business and build a website.
 

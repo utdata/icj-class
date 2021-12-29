@@ -13,12 +13,12 @@ Our goal here is to build this part of our page:
 1. Scan through the [Bootstrap cards](https://getbootstrap.com/docs/5.1/components/card/) documentation
 and note all the different types of cards you can make. Compare the different styles and note which classes are used.
 
-> IMPORTANT: In a lot of these examples you'll see `style="width: 18rem;"`. Bootstrap uses it here so the card doesn't stretch across the column. **Most of the time you don't want this style and should delete it.** We'll use other ways to control width.
+> IMPORTANT: In a lot of these examples you'll see `style="width: 18rem;"`. Bootstrap uses it here so the card doesn't stretch across the column in their examples. **Most of the time you don't want this style and should delete it.** We'll use other ways to control width.
 
 1. In your index page after the `highlight` container div, add a new container div.
 1. In the docs, find the [Grid cards](https://getbootstrap.com/docs/5.1/components/card/#grid-cards) example. Copy the first grid example there and put that inside your container div.
 1. Save and look at it. Because we are pulling from the template and there are parts we don't need, we need to make some edits.
-    - Delete one of the four cards so there are only three. You should be able to figure out where they start and end by look at the patterns in the code.
+    - Delete one of the four cards so there are only three. You should be able to figure out where they start and end by looking at the patterns in the code.
     - Remove the `<img>` line in each of the cards since we don't need the photo.
 
 With this setup, each card is inside a Bootstrap column. We can use a special [Row columns](https://getbootstrap.com/docs/5.1/layout/grid/#row-columns) class to set how many columns (and therefore how many cards) should show in a row before the columns/cards wrap into a new row.
@@ -39,7 +39,4 @@ Next we'll explore some customizations.
 
 ---
 
-**Next:** [Customizing Bootstrap]()
-
----
-
+**Next:** [Customizing Bootstrap](bootstrap-class-05.md)

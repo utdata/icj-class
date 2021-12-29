@@ -68,7 +68,7 @@ Bootstrap works from smallest to largest, so once you set a grid width for `col-
 
 This makes the middle column wider when viewed at the "small" breakpoint or wider, but they each still show over all 12 columns when at the extra-small default breakpoint. **Note that those column numbers add up to 12**. If the total is greater than 12, it breaks into a new column.
 
-Now we will make these columns all the same for the medium breakpoint, without changing the small one.
+Now we will make these columns all the same width for the medium breakpoint, without changing the small breakpoint.
 
 1. After the col-sm designations in the class, add a space and then this designation for the medium breakpoint: `col-md-4`. Do this for all three columns.
 
@@ -161,7 +161,7 @@ When you look at the result, the first column with the headline and text will be
 
 ### Responsive images
 
-There is a magical "responsive image" class in Bootstrap `img-fluid` that changes the width of a photo to be the width of the item that holds it. But setting this, the photo will grow and shrink to fit the column.
+There is a magical "responsive image" class in Bootstrap `img-fluid` that changes the width of a photo to be the width of the item that holds it. By setting this, the photo will grow and shrink to fit the column.
 
 1. Add a class to your image tag and set it to `class="img-fluid"`.
 
@@ -182,6 +182,4 @@ We've finished building this part of the pages for now. Next we'll add the cards
 
 ---
 
-**Next**: [Bootstrap cards]()
-
----
+**Next**: [Bootstrap cards](bootstrap-class-04.md)
