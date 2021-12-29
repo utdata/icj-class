@@ -21,6 +21,8 @@ and note all the different types of cards you can make. Compare the different st
     - Delete one of the four cards so there are only three. You should be able to figure out where they start and end by looking at the patterns in the code.
     - Remove the `<img>` line in each of the cards since we don't need the photo.
 
+## Adjusting grid cards
+
 With this setup, each card is inside a Bootstrap column. We can use a special [Row columns](https://getbootstrap.com/docs/5.1/layout/grid/#row-columns) class to set how many columns (and therefore how many cards) should show in a row before the columns/cards wrap into a new row.
 
 The `row-cols` setting in the template says to display 1 card per row `row-cols-1` until the medium width, which is changes to 2 cols per row with `row-cols-md-2`. The last style there `g-4` sets the gutter width between the columns.
