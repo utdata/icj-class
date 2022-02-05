@@ -10,9 +10,9 @@ There are some tasks as part of this assignment where we have NOT covered the sp
 - Create a `README.md` file using proper Markdown with a title, the assignment name and the due date.
 - Create a `.gitignore` file like we did in class. Make sure to go to gitignore.io and paste the code from there like we did in class. 
 - Use the [git cycle](https://github.com/utdata/icj-class/blob/main/start_a_project.md) to add and commit the files.
-- Create a new repo in Github with the same name as your local folder. Do NOT include the readme or gitignore.
-- In the resulting directions, copy the `git remote add ...` and use that to connect your local repo to the Github repo.
-- `git push` to the repo and make sure it works.
+- Create a new repo in Github with the same name as your local folder. Do NOT check the boxes there for the readme or gitignore since you created them locally.
+- After you create the repo you'l get a copule of sets of directions. You want the second set that starts with `git remote add ...`. It makes the connect, changes your branch name to `main` (if needed) and pushes the content. If you copy/paste the three commands together, not you might need to press return to run the last command.
+- Refresh our Github page to make sure everything worked.
 
 ## The assignment requirements
 
