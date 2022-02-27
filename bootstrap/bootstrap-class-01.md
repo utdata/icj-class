@@ -33,11 +33,11 @@ We'll take some leaps of faith and create our project and get all our files, so 
 1. Create a new folder in your `icj/` folder called `yourname-bootstrap`.
 1. In VS Code, open a new window and open your new folder.
 1. Open the Integrated Terminal.
-    - Run `$ degit utdata/icj-bootstrap-template` to download the files.
-    - Run `$ npm install` to install the node packages.
-    - Run `$ git init` to intilize git.
-    - Run `$ git add .` to add the files.
-    - Run `$ git commit -m "first commit"` to commit the files.
+    - Run `degit utdata/icj-bootstrap-template` to download the files.
+    - Run `npm install` to install the node packages.
+    - Run `git init` to intilize git.
+    - Run `git add .` to add the files.
+    - Run `git commit -m "first commit"` to commit the files.
 1. Go to Github and create a repository of the same name.
 1. Use the "or push an existing repository from the command line" commands from Github to sync the repos.
 
@@ -45,7 +45,7 @@ The project already has README.md and .gitignore files, but you should update th
 
 1. Edit the README file by adding a new section at the top with your name and the date you started the project. Note it is a Bootstrap 5 class project.
 
-> OF NOTE: When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. These will not affect our work on this project.
+> OF NOTE: When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**.
 
 ### A quick note about Node.js and npm
 
