@@ -1,7 +1,5 @@
 # The static app framework
 
-> **THIS _LIKELY_ NEEDS UPDATING FOR SPRING 2022**
-
 ## Goals for this lesson
 
 We will learn the features of this project rig in steps:

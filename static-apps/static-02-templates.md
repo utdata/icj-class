@@ -85,7 +85,9 @@ We want our site name to be at the beginning of every page title of our site, bu
 - Open the `src/njk/_templates/base.njk` file.
 - On the line that looks like this: `<title>{% block page_title %}Default title{% endblock %}</title>`, add "Pirate Cove | " right after the `<title>` tag so it looks like this:
 
-`<title>Pirate Cove | {% block page_title %}Default title{% endblock %}</title>`
+```html
+<title>Pirate Cove | {% block page_title %}Default title{% endblock %}</title>`
+```
 
 - Save the file and go look at your index page in your browser. Now you title should look like this:
 
@@ -148,9 +150,11 @@ In our original Pirate Cove site, we had the cool header with a photo background
 - Insert into it the following code:
 
 ```html
-<div class="jumbotron banner text-center">
-  <h1>The Ship's Log</h1>
-  <p>A diary by Capt. Crit McGillicutty</p>
+<div id="jumbo" class="p-5 mb-4 bg-light">
+  <div class="container-fluid py-5 text-center">
+    <h1 class="display-5 fw-bold">Ship's Log</h1>
+    <p>A diary by Capt. Crit 'Red Beard' McGillicutty</p>
+  </div>
 </div>
 ```
 
@@ -170,14 +174,14 @@ Since this project uses Bootstrap it also uses Sass for our CSS, and we'll use i
 - Add this to your `_jumbotron.scss` file:
 
 ```scss
-.jumbotron.banner {
+#jumbo {
   background: url(../img/pirate-ship.jpg) no-repeat center;
   background-size: cover;
   color: white;
   padding-top: 12rem
 }
 
-.jumbotron {
+#jumbo {
   margin-bottom: 30px;
 }
 ```

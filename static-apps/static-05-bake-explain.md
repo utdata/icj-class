@@ -26,7 +26,7 @@ Here's how it works. We'll work through it one step at at time:
 
 There is a [Library books data Google Doc](https://docs.google.com/document/d/1RgMhjtkXlbbf9uzSzy_xPRKwxcVZIZqVytgM_JoU4E4/edit?usp=sharing) that is viewable to the public.
 
-Take a look at how that doc is structured. It uses a "language" called [ArchieML](http://archieml.org/) developed by the New York Times. It allows authors to create structured text in a Google Doc and for that content to be converted into JSON for projects like this. It's not particularly hard to use (it was created for reporters, after all) but it take some getting used to.
+Take a look at how that doc is structured. It uses a "language" called [ArchieML](http://archieml.org/) developed by the New York Times. It allows authors to create structured text in a Google Doc and for that content to be converted into JSON for projects like this. It's not particularly hard to use (it was created for reporters, after all) but it takes some getting used to.
 
 At the top we have `[books]`, which is naming our array.
 
@@ -50,12 +50,11 @@ You'll see the `books` array near the top. That's the only one we are worried ab
 
 OK, so we understand the data, but how are we using it?
 
-The baking feature in the project needs three things: The data (got it!), a template to build the pages from, and a configuration to match the data the template.
+The baking feature in the project needs three things: The data (got it!), a template to build the pages from, and a configuration to match the data to the template.
 
 - Open up our example template in `src/njk/_templates/bake-book.njk`.
 
-The first line `{% extends '_templates/base.njk' %}
-` gives us the structure of our site. We've seen that before.
+The first line `{% extends '_templates/base.njk' %}` gives us the structure of our site. We've seen that before.
 
 The next line `{% set relative_path = "../" %}` is something we need to include because our generated book pages are created INSIDE another folder like this, `books/the-shipping-news.html`. (You might remember we included the `{{ relative_path }}` variable when we added navigation links earlier. To make a long story short, we need both of these things to make navigation links work from these pages.)
 

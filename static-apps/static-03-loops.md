@@ -48,7 +48,7 @@ Here we will "tell" this project about the Google Sheet.
 
 That first comma in the code above needs to come right after the `}` that closes out the "bookstores" configuration.
 
-The `fileID` value there is from the URL of the Google Sheet. It's the long string before `/edit/` in the URL, and it is unique to for every Google Sheet (and Doc, for that matter.). The `type` is "sheet". the other possible value is "doc". We'll do one of those later. The `name` is what we want the file to be called when it is downloaded.
+The `fileId` value there is from the URL of the Google Sheet. It's the long string before `/edit/` in the URL, and it is unique to for every Google Sheet (and Doc, for that matter.). The `type` is "sheet". the other possible value is "doc". We'll do one of those later. The `name` is what we want the file to be called when it is downloaded.
 
 What we've done here is add to a "files" array in this JSON config file. This is a list of all the Google Sheets and Docs used in the project.
 
@@ -99,17 +99,17 @@ It's probably easier to do it than explain it.
 
 When the page refreshes you should see "Queen Anne's Revenge" show up.
 
-"pirates" is the name of the file. "ships" is the name of the array. "[0]" is the order of the item, and we want the first one. Remember JavaScript starts counting at zero. "ship_name" is the object we are pulling from the item.
+`pirates` is the name of the file. `ships` is the name of the array. `[0]` is the order of the item, and we want the first one. Remember JavaScript starts counting at zero. `ship_name` is the object we are pulling from the item.
 
-Now go back and change the number to `[1]` instead of `[0]` and save it. What do you think the result will be? Go back look at the page and see. After you've seen the change, you can go ahead and remove the H3 and contents, as we don't need it here. I just wanted to show how it works.
+Now go back into your ships page and change the number to `[1]` instead of `[0]` and save it. What do you think the result will be? Go back look at the page and see. After you've seen the change, you can go ahead and remove the H3 and contents, as we don't need it here. I just wanted to show how it works.
 
 So now we have a list of pirate ships in our project "context" and can build a cool list of them. That is next.
 
 ## Loops with data
 
-Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/4.6/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/4.6/components/card/#using-grid-markup).
+Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.1/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/5.1/components/card/#using-grid-markup).
 
-- Go to the [Using grid markup](https://getbootstrap.com/docs/4.6/components/card/#using-grid-markup) section in the docs and copy the code provided there.
+- Go to the [Using grid markup](https://getbootstrap.com/docs/5.1/components/card/#using-grid-markup) section in the docs and copy the code provided there.
 - After the closing `</p>` tag for the intro, add a new line.
 - Paste your code. This already has the row and columns we need.
 - Save your file and look at your page.
@@ -218,7 +218,7 @@ Remember, we are working with a 12 column grid. When we set `col-sm-6` that mean
 
 ## Fix some display nits
 
-We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/4.6/utilities/spacing/).
+We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/5.1/utilities/spacing/).
 
 - On the `class="card"` div, add another class so it is `class="card mb-4"`. We did the same thing in our Bootstrap lesson. `m` is margin, `b` is bottom and `4` is a value between 1-5.
 - Save and check that you have vertical space between the cards.

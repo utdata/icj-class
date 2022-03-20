@@ -8,7 +8,7 @@ Remember we need three things: The data, the template, and a config to marry the
 
 ## The blog data
 
-- Open this [Pirate blog doc](https://docs.google.com/document/d/18XALhwT3zGnY6XHy1z1Z_7zfakvRSp-wlnlrTgFO3QQ/copy#). As you do so, you'll be asked to make a copy of your own, which I want you to use.
+- Open this [Pirate blog doc](https://docs.google.com/document/d/18XALhwT3zGnY6XHy1z1Z_7zfakvRSp-wlnlrTgFO3QQ/copy#). As you do so, you'll be asked to make a copy of your own, which I want you to do.
 - Click on the Share button and make the document "viewable" to "Anyone with the link". This has to be done to download the data into our project.
 - Look at the structure of the data, where there are three blog entries. The only difference between this and the books example is a new structure for `[.+post]` at the beginning of the blog text, which also has the ending `[]`. This structure allows us to have cleaner paragraphs of text in our blog entries.
 
