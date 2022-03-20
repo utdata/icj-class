@@ -1,10 +1,8 @@
 # Your final project
 
-> **THIS NEEDS UPDATING FOR SPRING 2022 !!!**
-
 Your goal with this final project is to create a multi-page website using the [icj-project-rig](https://github.com/utdata/icj-project-rig) that has an index and multiple detail pages. It will be published through Github Pages.
 
-I am supplying you with two ideas to choose from, each with its own collection of assets. (You may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material, but you may find that more work than it is worth.)
+I am supplying you with two ideas to choose from, each with its own collection of assets. (Or you may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material. Talk with me if you want to go this route.)
 
 Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
 
@@ -16,14 +14,14 @@ The project should include:
 
 - An **index**, **detail pages** and **additional content** as outlined below.
 - A base layout that is extended throughout the project.
-- At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer already present.
+- At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer includes already present.
 - The project must use the following Bootstrap components and concepts:
-  - Responsive design and [images](https://getbootstrap.com/docs/4.6/content/images/) used throughout.
-  - A [Jumbotron](https://getbootstrap.com/docs/4.6/components/jumbotron/) for a header.
-  - A [Navbar/Navs](https://getbootstrap.com/docs/4.6/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
-- You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the example already in the project.
+  - Responsive design and [images](https://getbootstrap.com/docs/5.1/content/images/) used throughout.
+  - A hero display header that includes a background image. (At least on the index.)
+  - A [Navbar](https://getbootstrap.com/docs/5.1/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
+- You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the examples already in the project.
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](../resources/google-fonts.md).)
-- Remove any unused files related to the example book and bookstore pages.
+- **Remove any unused files** related to the example book and bookstore pages.
 - This project should be in its own repo with the site published through Github Pages.
 
 Everything should look beautiful and be functional. You should not need any additional content beyond that provided in the assets collection. If you choose to use additional content, it should be public domain and include a link to the source.
@@ -33,7 +31,7 @@ Everything should look beautiful and be functional. You should not need any addi
 In addition to the basic site structure, the index should have:
 
 - A short description of the website. You can write this yourself or pull from public domain content and link back to the source.
-- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do this any number of ways through Bootstrap [Cards](https://getbootstrap.com/docs/4.6/components/card/), the [Media List](https://getbootstrap.com/docs/4.0/layout/media-object/#media-list) or your own HTML design as long as you use the images and data in a Nunjucks loop.
+- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do use Bootstrap [Cards](https://getbootstrap.com/docs/5.1/components/card/) or your own HTML design as long as you use the images and data in a Nunjucks loop.
 
 ### "Baked" detail pages
 
@@ -72,7 +70,7 @@ This idea is to build a website for the band Queen using the original members an
     - This data includes a `slug` field that you will need in your baking config.
     - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
   - **discography** is the data to use for the "additional content" part of the assignment. It's a list of all the studio albums.
-  - **tour2020** is an EXTRA CREDIT opportunity where you can build a table of tour dates using a loop.
+  - **tour** is an EXTRA CREDIT opportunity where you can build a table of tour dates using a loop.
   - **billboard** is an EXTRA CREDIT opportunity where you can build interactive chart using [Datawrapper](https://www.datawrapper.de/) and the spreadsheet data and then embed it somewhere on your site. Datawrapper's free version is fairly easy and will work fine for this. You can use either the "Weeks on chart" or "Top position" field as you prefer.
 
 ### Austin tourism site
@@ -86,9 +84,9 @@ This idea is to build a tourism microsite similar to what a local news organizat
 - The Google Sheet [Austin Project Data](https://docs.google.com/spreadsheets/d/1Ts65v2RhdqWVJZSnlbaHp2eo2OrQmwkoyBkySpZIBks/copy). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. This data includes:
   - **landmarks** is the data you use for your "baked" detail pages.
     - This data includes a `slug` field that you will need in your baking config.
-    - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
+    - The `description` field is a several paragraph description of the location, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
   - **activities** is optional EXTRA CREDIT data where you can build a table from the data.
-  - **murals** is optional EXTRA CREDIT for future use. (Still working this out.)
+  - **murals** is optional EXTRA CREDIT. (You could make another table or even a map with [Batchgeo.com](https://batchgeo.com/), [Datawrapper](https://academy.datawrapper.de/article/114-how-to-create-a-symbol-map-in-datawrapper) or some other service?)
 - The Google Doc [Austin restaurants data](https://docs.google.com/document/d/18cbNgFAJx-eh6KQHQLoRy17BkmoGHXW7fAZ4U_K0clA/copy) is the "additional content" data for this collection. Make a copy of that file for your own Google Drive account configure it for download like the sheet above.
   - With this data you'll make a display of popular restaurants.
   - For EXTRA CREDIT, add THREE new restaurants to the Google Doc list using the same notation. You'll need to find and add the photos, too.
