@@ -1,0 +1,140 @@
+# Your final project
+
+Your goal with this final project is to create a multi-page website using the [icj-project-rig](https://github.com/utdata/icj-project-rig) that has an index and multiple detail pages. It will be published through Github Pages.
+
+I am supplying you with two ideas to choose from, each with its own collection of assets. (Or you may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material. Talk with me if you want to go this route.)
+
+Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
+
+> Read all the directions completely before you start coding anything. Here are also the [slides from the design and tips lecture](https://docs.google.com/presentation/d/1hZqA9K4fYotAJFZi5T8ZXie_9eUW0odbYtKZwsxCImw/edit?usp=sharing).
+
+## Requirements
+
+The project should include:
+
+- An **index**, **detail pages** and **additional content** as outlined below.
+- A base layout that is extended throughout the project.
+- At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer includes already present.
+- The project must use the following Bootstrap components and concepts:
+  - Responsive design and [images](https://getbootstrap.com/docs/5.1/content/images/) used throughout.
+  - A hero display header that includes a background image. (At least on the index.)
+  - A [Navbar](https://getbootstrap.com/docs/5.1/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
+- You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the examples already in the project.
+- You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](../resources/google-fonts.md).)
+- **Remove any unused files** related to the example book and bookstore pages.
+- This project should be in its own repo with the site published through Github Pages.
+
+Everything should look beautiful and be functional. You should not need any additional content beyond that provided in the assets collection. If you choose to use additional content, it should be public domain and include a link to the source.
+
+### Index page
+
+In addition to the basic site structure, the index should have:
+
+- A short description of the website. You can write this yourself or pull from public domain content and link back to the source.
+- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do use Bootstrap [Cards](https://getbootstrap.com/docs/5.1/components/card/) or your own HTML design as long as you use the images and data in a Nunjucks loop.
+
+### "Baked" detail pages
+
+Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-rig README](https://github.com/utdata/icj-project-rig#bake-pages-from-data-and-a-template) page and covered in the [static-apps lesson](../static-apps/README.md).
+
+The layout for these detail pages should include:
+
+- At least two columns that stack on mobile but render next to each other at a larger page width. (This is basic Bootstrap grids.)
+- Use all the data values on the detail pages, including a photo.
+
+You can otherwise design the above however you wish.
+
+### Additional content loop
+
+In addition to data for the "baked" detail pages, there is at least one other data set available for each project. You must build a display (either a stand-alone page or an include inserted into the index) that uses all the elements from the additional data.
+
+You are required to use a Nunjucks loop in the construction of the page or include.
+
+### Extra credit options
+
+- Each asset collection includes data for use in a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/). You can build the table on a stand-alone page or pull into another through an include.
+- Some asset collections have an option for an interactive chart or feature. Details in the collections descriptions.
+
+## Available assets collections
+
+### Queen band website
+
+This idea is to build a website for the band Queen using the original members and studio albums.
+
+- A collection of photos in the [img-queen.zip](img-queen.zip) file. Go to that page and download the zip file, expand it and put the images inside your `src/img/` folder. There are three collections of photos:
+  - Band photos
+  - Band members
+  - Album covers
+- Data stored in the [Queen data Google Sheet](https://docs.google.com/spreadsheets/d/1rT71c8CXtx3x2ak6nawjpAGukLNLo1lrbLuvjvZ9zFE/copy). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. About the data:
+  - **members** is the data to use for "baked" pages.
+    - This data includes a `slug` field that you will need in your baking config.
+    - The `description` field is a several paragraph description of the band member, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
+  - **discography** is the data to use for the "additional content" part of the assignment. It's a list of all the studio albums.
+  - **tour** is an EXTRA CREDIT opportunity where you can build a table of tour dates using a loop.
+  - **billboard** is an EXTRA CREDIT opportunity where you can build interactive chart using [Datawrapper](https://www.datawrapper.de/) and the spreadsheet data and then embed it somewhere on your site. Datawrapper's free version is fairly easy and will work fine for this. You can use either the "Weeks on chart" or "Top position" field as you prefer.
+
+### Austin tourism site
+
+This idea is to build a tourism microsite similar to what a local news organization might do.
+
+- A collection of photos in [img-austin.zip](img-austin.zip). Open that link and then download the zip file, expand it and put the images inside your `src/img/` folder. There are three sets of photos:
+  - Austin wallpaper photos and logos
+  - Landmarks
+  - Restaurants
+- The Google Sheet [Austin Project Data](https://docs.google.com/spreadsheets/d/1Ts65v2RhdqWVJZSnlbaHp2eo2OrQmwkoyBkySpZIBks/copy). Make a copy of that file for your own Google Drive account and share it as "Anyone who has the link can view". You can then configure "fetch" to download the data into your `src/data` folder. This data includes:
+  - **landmarks** is the data you use for your "baked" detail pages.
+    - This data includes a `slug` field that you will need in your baking config.
+    - The `description` field is a several paragraph description of the location, in HTML. You can use the [safe](https://mozilla.github.io/nunjucks/templating.html#safe) tag in your template to use as HTML, like this: `{{ description | safe }}`.
+  - **activities** is optional EXTRA CREDIT data where you can build a table from the data.
+  - **murals** is optional EXTRA CREDIT. (You could make another table or even a map with [Batchgeo.com](https://batchgeo.com/), [Datawrapper](https://academy.datawrapper.de/article/114-how-to-create-a-symbol-map-in-datawrapper) or some other service?)
+- The Google Doc [Austin restaurants data](https://docs.google.com/document/d/18cbNgFAJx-eh6KQHQLoRy17BkmoGHXW7fAZ4U_K0clA/copy) is the "additional content" data for this collection. Make a copy of that file for your own Google Drive account configure it for download like the sheet above.
+  - With this data you'll make a display of popular restaurants.
+  - For EXTRA CREDIT, add THREE new restaurants to the Google Doc list using the same notation. You'll need to find and add the photos, too.
+
+### Downloading data from Google Drive
+
+See the [icj-project-rig README](https://github.com/utdata/icj-project-rig#using-data-from-google-drive) section on "Using data from Google Drive" to see how to configure and download the data from the Google Sheets or Docs.
+
+> Remember to restart gulp after installing the photos or data.
+
+## Strategies on how to tackle a project
+
+- Look through the photos and data assets so you know what you have to work with.
+- Physically draw out what you want your pages to look like so you have a goal in mind. (There is a first assignment to provide sketches.) Think first how it will look on a phone, then a tablet, then a desktop screen. Draw each version out.
+- Set up your assets: photos and fetching data.
+- Work on the structure before the design. Basically get the template structure and HTML/Bootstrap elements on the page. Again, consider mobile first and then wider page widths.
+- Then work on the loop logic for that part of the assignment. Get the loops working first (just printing an element to the page). Next figure out your HTML structure of the element, then use the loop for the part that should repeat.
+- For the "baking" pages, set up a simple layout and then configure the baking task in project.config.json. Once you get the pages building with data, then continue working on the structure and design of the page.
+- Once all the structure and logic are set, you can then make it all look pretty with HTML/CSS adjustments.
+
+Remember: Think mobile first, then adjust for larger screen widths.
+
+## Deadlines
+
+Canvas is the final word on deadlines, but in general they are in this order:
+
+- A sketch of your index and detail layouts, including mobile, tablet and desktop views.
+- A check-in on your HTML templates and data. It's best to get all your logic working before you start styling it. I'll also be checking for responsive design (i.e., different column widths for different screen widths.)
+- A check-in on your CSS. You don't have to be finished, but this allows me to offer some feedback.
+- On our last class day, you'll show your progress to everyone. You should publish what you have so far to Github Pages so we can review it in class.
+- Final deadline for the project when I pull a copy of your repo for grading.
+
+## Important notes about using data
+
+### Loops
+
+On your index, you should use a Nunjucks `{% for thing in file_name.array_name %}` loop like the books example to create your teases to your detail pages. You should use a similar loop for "additional content" loop.
+
+A strategy to use is to figure how you want the multiple elements to look, then figure out the part of that code that repeats over and over. Your loop should go around that part, then use the data variables to fill in the content.
+
+### Creating the "baked" pages
+
+The method to create the "baked" detail pages are outlined in the [icj-project-rig README](https://github.com/utdata/icj-project-rig#bake-pages-from-data-and-a-template).
+
+- You'll need to create a layout similar to the example `src/njk/_layouts/bake-book.njk`. This layout will be used to create each individual page from the data.
+- You'll use either the **members** array from the Queen data or the **landmarks** array from the Austin data to build your pages.
+- Follow the README directions to configure `to_bake` commands in the `project.config.json` file.
+
+## Working around Gulp Fetch
+
+For my students on PCs with OneDrive who can't fetch data, I want you to set up the Google Docs files and project.config.json files all as if it will work.
