@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists – bs-00-intro</title>
+<title>Intro to Coding for Journalists - Using Bootstrap 5: Node Setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./bs-01-components.html" rel="next">
-<link href="./sass-03-refactor.html" rel="prev">
+<link href="./sass-04-publish.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -64,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 
 <div id="quarto-search-results"></div>
@@ -74,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">bs-00-intro.html</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Using Bootstrap 5: Node Setup</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -220,37 +254,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-01.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-01-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-02.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-02-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-03.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-03-objects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-04.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-04-flow-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-05.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-05-html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-06.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -268,19 +302,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-01-node.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">sass-01-node.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-02-scss.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">sass-02-scss.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-03-refactor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">sass-03-refactor.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sass-04-publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Publish the /doc folder to the web</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./bs-00-intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">bs-00-intro.html</span></a>
+ <span class="menu-text">Using Bootstrap 5: Node Setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -297,45 +337,45 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">bs-01-components.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">bs-02-grids.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">bs-03-cards.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">bs-04-customize.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-05-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">bs-05-publish.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Publishing to Github Pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">bs-06-practice.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./sa-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">sa-00-intro.html</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text">sa-00-intro.qmd</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -343,38 +383,38 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-01-framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">sa-01-framework.html</span></span></a>
+  <a href="./sapp-01-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-02-templates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">sa-02-templates.html</span></span></a>
+  <a href="./sapp-02-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-03-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">sa-03-loops.html</span></span></a>
+  <a href="./sapp-03-loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-04-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">sa-04-publish.html</span></span></a>
+  <a href="./sapp-04-publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-05-bake-explain.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">sa-05-bake-explain.html</span></span></a>
+  <a href="./sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-06-bake-blog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">sa-06-bake-blog.html</span></span></a>
+  <a href="./sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
       </ul>
@@ -382,7 +422,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fp-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">fp-00-intro.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -419,14 +459,176 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#about-bootstrap" id="toc-about-bootstrap" class="nav-link" data-scroll-target="#about-bootstrap">About Bootstrap</a></li>
+  <li><a href="#create-your-project-and-github-repo" id="toc-create-your-project-and-github-repo" class="nav-link" data-scroll-target="#create-your-project-and-github-repo">Create your project and Github repo</a>
+  <ul class="collapse">
+  <li><a href="#a-quick-note-about-node.js-and-npm" id="toc-a-quick-note-about-node.js-and-npm" class="nav-link" data-scroll-target="#a-quick-note-about-node.js-and-npm">A quick note about Node.js and npm</a></li>
+  </ul></li>
+  <li><a href="#lets-review-the-project-files" id="toc-lets-review-the-project-files" class="nav-link" data-scroll-target="#lets-review-the-project-files">Let’s review the project files</a>
+  <ul class="collapse">
+  <li><a href="#the-docs-folder" id="toc-the-docs-folder" class="nav-link" data-scroll-target="#the-docs-folder">The docs folder</a></li>
+  <li><a href="#the-src-folder" id="toc-the-src-folder" class="nav-link" data-scroll-target="#the-src-folder">The src folder</a></li>
+  <li><a href="#inspect-the-configuration-files" id="toc-inspect-the-configuration-files" class="nav-link" data-scroll-target="#inspect-the-configuration-files">Inspect the configuration files</a></li>
+  </ul></li>
+  <li><a href="#launch" id="toc-launch" class="nav-link" data-scroll-target="#launch">Launch</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Using Bootstrap 5: Node Setup</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="goals" class="level2">
+<h2 class="anchored" data-anchor-id="goals">Goals</h2>
+<p>We will:</p>
+<ul>
+<li>Download and discuss using a Node development environment.</li>
+<li>Discuss the benefits of using a mobile-first framework.</li>
+<li>Add pre-built components like navigation, etc.</li>
+<li>Use Bootstrap’s grid-system to create a responsive website.</li>
+<li>Introduce Sass/SCSS for customization.</li>
+</ul>
+<p><strong>NOTE</strong>: Before doing this lesson in class, you should have gone through any Bootstrap tutorials as outlined in Canvas. This walkthrough assumes you have some knowledge based on those.</p>
+<p><strong>ALSO NOTE</strong>: Before starting this lesson, you should have Node and npm installed, as covered in <a href="https://github.com/utdata/icj-setting-up/blob/main/README.md">Part 2: Node setup</a> and have tested that it works.</p>
+<p><strong>FINAL NOTE</strong>: There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for <strong>Bootstrap in-class lesson</strong>.</p>
+</section>
+<section id="about-bootstrap" class="level2">
+<h2 class="anchored" data-anchor-id="about-bootstrap">About Bootstrap</h2>
+<p><a href="https://getbootstrap.com/">Bootstrap</a> is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site – navigation, buttons, colors, boxes, grids – are all pre-built, but also customizable. Its “mobile-first, responsive design” framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.</p>
+<p>Throughout this lesson, we will extensively refer to:</p>
+<ul>
+<li><a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap documentation</a></li>
+</ul>
+<p>This is a very basic walkthrough of Bootstrap 5. There are plenty of tutorials on the web, including <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/">Tutorial Republic’s Bootstrap 5 tutorial</a>, <a href="https://www.w3schools.com/bootstrap5/">W3 Schools’ Bootstrap 5 Tutorial</a> and Net Ninja’s videos <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR">Bootstrap 5 Crash Course Tutorial</a>.</p>
+</section>
+<section id="create-your-project-and-github-repo" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-project-and-github-repo">Create your project and Github repo</h2>
+<p>We’ll take some leaps of faith and create our project and get all our files, so we have something to talk about within the lesson.</p>
+<ol type="1">
+<li>Create a new folder in your <code>icj/</code> folder called <code>yourname-bootstrap</code>.</li>
+<li>In VS Code, open a new window and open your new folder.</li>
+<li>Open the Integrated Terminal.
+<ul>
+<li>Run <code>degit utdata/icj-bootstrap-template</code> to download the files.</li>
+<li>Run <code>npm install</code> to install the node packages.</li>
+<li>Run <code>git init</code> to intilize git.</li>
+<li>Run <code>git add .</code> to add the files.</li>
+<li>Run <code>git commit -m "first commit"</code> to commit the files.</li>
+</ul></li>
+<li>Go to Github and create a repository of the same name.</li>
+<li>Use the “or push an existing repository from the command line” commands from Github to sync the repos.</li>
+</ol>
+<p>The project already has README.md and .gitignore files, but you should update the README with information specific to your project.</p>
+<ol type="1">
+<li>Edit the README file by adding a new section at the top with your name and the date you started the project. Note it is a Bootstrap 5 class project.</li>
+</ol>
+<blockquote class="blockquote">
+<p>OF NOTE: When running <code>npm install</code> or when viewing your project on Github, you will see warnings about outdated packages and dependencies. <strong>These will not affect our work on this project</strong>.</p>
+</blockquote>
+<section id="a-quick-note-about-node.js-and-npm" class="level3">
+<h3 class="anchored" data-anchor-id="a-quick-note-about-node.js-and-npm">A quick note about Node.js and npm</h3>
+<p><strong>Node.js</strong> is an open-source programming framework built using JavaScript. Many programmers like it because it allows them to write JavaScript not just in their browser for “front-end” tasks, but also in the terminal or on a server for “back-end” tasks.</p>
+<p>For our purposes, Node is really an ecosystem to use a bunch of mini-programs built in JavaScript. Developers will create these mini-programs – known as packages – in that ecosystem and then share them with the world through <strong>npm</strong>. Node Package Manager, or npm for short, is like the App Store for these packages. When someone creates a package to do something – say a photo slide-show for the web – and then shares it on npm, then we don’t have to reinvent that wheel.</p>
+<p>Bootstrap is available through npm, and the project template we are using has been configured to utilize it. While this method is a bit more complicated than just including the Bootstrap CSS and Javascript links in an HTML page, it is also infinitely more powerful, as you will see in future lessons.</p>
+</section>
+</section>
+<section id="lets-review-the-project-files" class="level2">
+<h2 class="anchored" data-anchor-id="lets-review-the-project-files">Let’s review the project files</h2>
+<section id="the-docs-folder" class="level3">
+<h3 class="anchored" data-anchor-id="the-docs-folder">The docs folder</h3>
+<p>The <code>docs/</code> folder is where all our finished site files go. It is the folder that will be read by the web server.</p>
+<blockquote class="blockquote">
+<p><strong>SUPER IMPORTANT:</strong> DO NOT EDIT FILES IN THE DOCS FOLDER!!! You will lose your edits if you do.</p>
+</blockquote>
+<p>Most web apps like this will use a different folder name, like <code>dist/</code> or <code>public/</code>, but we are using <code>docs/</code> to take advantage of some free web serving services offered by Github.</p>
+<p>Inside our docs folder, you will eventually see the following:</p>
+<ul>
+<li>A <code>css/</code> folder with all our compiled css. We won’t edit these files, because we will be using Sass and editing from the <code>src/scss/</code> folder.</li>
+<li>A <code>js/</code> folder. There are some Node.js server tasks that will copy files here for us.</li>
+<li>An <code>index.html</code> file. This is the HTML page we will be building, but we will will be editing it from the <code>src/</code> folder.</li>
+</ul>
+</section>
+<section id="the-src-folder" class="level3">
+<h3 class="anchored" data-anchor-id="the-src-folder">The src folder</h3>
+<p><strong>This is where we edit our files.</strong> Any change we make here gets compiled or copied into the <code>docs/</code> folder by our Node.js server.</p>
+<ul>
+<li>The <code>html</code> folder has the <code>index.html</code> file that we will be adding all our HTML code.</li>
+<li>the <code>img</code> folder is for our original image files. They get “minified” and placed in <code>docs/img/</code>.</li>
+<li>The <code>scss</code> folder has <code>styles.scss</code> file were we will add all our Sassy css.</li>
+</ul>
+<p>As you’ll soon see, when our server is running, each time we save a file in either of these folders, the scss will be compiled and our HTML copied into the <code>docs/</code> folder.</p>
+<section id="inspect-the-html-file" class="level4">
+<h4 class="anchored" data-anchor-id="inspect-the-html-file">Inspect the html file</h4>
+<p>While we are in our src folder, let’s look at our HTML.</p>
+<ol type="1">
+<li>Open <code>src/html/index.html</code> and take a look at it.</li>
+</ol>
+<p>There are several things going on here with this file beyond the base HTML. In the <code>&lt;head&gt;</code> we are pulling in css file that will be generated through Sass, including for the Bootstrap framework. At the bottom we are pulling in the JavaScript file that we need for Bootstrap, which will also be copied there by our development environment.</p>
+</section>
+<section id="inspect-the-scss-file" class="level4">
+<h4 class="anchored" data-anchor-id="inspect-the-scss-file">Inspect the scss file</h4>
+<ol type="1">
+<li>Open the <code>src/scss/styles.scss</code> file</li>
+</ol>
+<p>You’ll see an <code>@import</code> here that pulls in all the Bootstrap css from our <code>node_modules</code> folder that we downloaded when we ran <code>npm install</code>. You don’t see the result yet on our index page, but you will soon. There are also some comments to guide you.</p>
+</section>
+</section>
+<section id="inspect-the-configuration-files" class="level3">
+<h3 class="anchored" data-anchor-id="inspect-the-configuration-files">Inspect the configuration files</h3>
+<p>The remaining files in the root level of the project are configuration files that help make this development ecosystem run.</p>
+<ul>
+<li>The <code>.gitignore</code> file. It’s configured for a Node.js based web app.</li>
+<li>The <code>README.md</code> file explains how to get started with this template.</li>
+<li>The <code>gulpfile.js</code> is our magic task runner. More on that below.</li>
+<li>The <code>package.json</code> and <code>package-lock.json</code> files keep track of all the npm packages we are using. When you run <code>$ npm install</code>, it downloads all the software into the <code>node_modules</code> folder, which is <em>NOT</em> saved into Github because it contains thousands of files.</li>
+</ul>
+<section id="more-about-the-gulpfile" class="level4">
+<h4 class="anchored" data-anchor-id="more-about-the-gulpfile">More about the gulpfile</h4>
+<p><a href="https://www.npmjs.com/package/gulp">Gulp</a> is our task runner that creates our server, compiles our CSS and copies files where we need them. The <code>gulpfile.js</code> is the main controller file works works with a series of files in the <code>tasks</code> folder.</p>
+<p>Each task file does a single thing, like clean out folders, copy files to different directories, or run the Sass CSS compiler. Each task uses one or more node packages to do its work, and the names of the file indicates more or less what that is. We might review some of these in class and you are free to poke around there, but I’d be careful in editing these files at this point.</p>
+<p>This setup gives us the two commands that we will use the most:</p>
+<ul>
+<li><code>gulp</code> will compile our CSS and copy all our files into the <code>docs/</code> folder.</li>
+<li><code>gulp dev</code> will do all of the above, plus start our web server so we can see our page.</li>
+</ul>
+<p>I can tell you I did not write all this JavaScript. I found examples on the web that were close to what I needed and I used those, along with documentation, to configure them for my needs.</p>
+</section>
+</section>
+</section>
+<section id="launch" class="level2">
+<h2 class="anchored" data-anchor-id="launch">Launch</h2>
+<p>Let’s run it and see if it works.</p>
+<ol type="1">
+<li>In your VS Code Terminal, do this:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gulp</span> dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>With any luck <a href="http://localhost:3000" class="uri">http://localhost:3000</a> will load up in the browser and you’ll see some testing text on your screen. This means everything should be good to go.</p>
+<p>Congrats! You are now ready to get down to business and build a website.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -664,13 +866,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sass-03-refactor.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">sass-03-refactor.html</span></span>
+      <a href="./sass-04-publish.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Publish the /doc folder to the web</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./bs-01-components.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">bs-01-components.html</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

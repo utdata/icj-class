@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists – bs-04-customize</title>
+<title>Intro to Coding for Journalists - 25&nbsp; Customizing Bootstrap</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -64,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 
 <div id="quarto-search-results"></div>
@@ -74,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">bs-00-intro.html</a></li><li class="breadcrumb-item"><a href="./bs-04-customize.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">bs-04-customize.html</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Using Bootstrap 5: Node Setup</a></li><li class="breadcrumb-item"><a href="./bs-04-customize.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -220,37 +254,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-01.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-01-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-02.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-02-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-03.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-03-objects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-04.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-04-flow-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-05.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-05-html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-06.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -268,19 +302,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-01-node.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">sass-01-node.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-02-scss.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">sass-02-scss.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-03-refactor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">sass-03-refactor.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sass-04-publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Publish the /doc folder to the web</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./bs-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">bs-00-intro.html</span></a>
+ <span class="menu-text">Using Bootstrap 5: Node Setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -297,45 +337,45 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">bs-01-components.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">bs-02-grids.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">bs-03-cards.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">bs-04-customize.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-05-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">bs-05-publish.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Publishing to Github Pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">bs-06-practice.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./sa-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">sa-00-intro.html</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text">sa-00-intro.qmd</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -343,38 +383,38 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-01-framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">sa-01-framework.html</span></span></a>
+  <a href="./sapp-01-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-02-templates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">sa-02-templates.html</span></span></a>
+  <a href="./sapp-02-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-03-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">sa-03-loops.html</span></span></a>
+  <a href="./sapp-03-loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-04-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">sa-04-publish.html</span></span></a>
+  <a href="./sapp-04-publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-05-bake-explain.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">sa-05-bake-explain.html</span></span></a>
+  <a href="./sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-06-bake-blog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">sa-06-bake-blog.html</span></span></a>
+  <a href="./sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
       </ul>
@@ -382,7 +422,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fp-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">fp-00-intro.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -419,14 +459,123 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#modifying-bootstrap-sass-variables" id="toc-modifying-bootstrap-sass-variables" class="nav-link active" data-scroll-target="#modifying-bootstrap-sass-variables"><span class="header-section-number">25.1</span> Modifying Bootstrap Sass variables</a></li>
+  <li><a href="#choosing-different-bootstrap-classes" id="toc-choosing-different-bootstrap-classes" class="nav-link" data-scroll-target="#choosing-different-bootstrap-classes"><span class="header-section-number">25.2</span> Choosing different Bootstrap classes</a></li>
+  <li><a href="#updating-an-existing-bootstrap-class" id="toc-updating-an-existing-bootstrap-class" class="nav-link" data-scroll-target="#updating-an-existing-bootstrap-class"><span class="header-section-number">25.3</span> Updating an existing Bootstrap class</a></li>
+  <li><a href="#write-a-new-style" id="toc-write-a-new-style" class="nav-link" data-scroll-target="#write-a-new-style"><span class="header-section-number">25.4</span> Write a new style</a></li>
+  <li><a href="#add-a-footer" id="toc-add-a-footer" class="nav-link" data-scroll-target="#add-a-footer"><span class="header-section-number">25.5</span> Add a footer</a></li>
+  <li><a href="#push-your-code-to-github" id="toc-push-your-code-to-github" class="nav-link" data-scroll-target="#push-your-code-to-github"><span class="header-section-number">25.6</span> Push your code to Github</a></li>
+  <li><a href="#and-were-done-almost" id="toc-and-were-done-almost" class="nav-link" data-scroll-target="#and-were-done-almost"><span class="header-section-number">25.7</span> And we’re done, almost</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<blockquote class="blockquote">
+<p>This is a continuation of the Bootstrap tutorial.</p>
+</blockquote>
+<p>If you look at <a href="https://getbootstrap.com/docs/5.1/customize/overview/">Customize</a> section of the Bootstrap documentation, you can see there a bunch of different ways you can customize your site, including:</p>
+<ul>
+<li>Modifying Bootstrap Sass variable settings</li>
+<li>Choosing different Bootstrap styles</li>
+<li>Modifying existing Bootstrap styles</li>
+<li>Creating new styles</li>
+</ul>
+<p>Since this is a Sass-based system, we’ll make all our CSS changes in our <code>src/styles.scss</code> file.</p>
+<section id="modifying-bootstrap-sass-variables" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="modifying-bootstrap-sass-variables"><span class="header-section-number">25.1</span> Modifying Bootstrap Sass variables</h2>
+<p>Most default styles in Bootstrap are built upon a set of variables to take advantage of that Sass feature. We can quickly make changes across our site based on resetting these variables.</p>
+<p>For a full explanation you would need to read the <a href="https://getbootstrap.com/docs/5.1/customize/sass/">Customize Sass</a> documentation, but we’ll show the power of this here by changing our primary color and background color variables.</p>
+<ol type="1">
+<li>Open your <code>src/scss/styles.scss</code> file and look through the comments at the top of the file that explain it. Some things have to be in a specific order.</li>
+<li>After the variable examples shown there but before the <code>@import</code> example, add the following and then save the file:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">$primary</span>: <span class="cn">#bf5700</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#ededed</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you look at your page, all the blue stuff should now be burnt orange and the background should be grey. (#hookem).</p>
+</section>
+<section id="choosing-different-bootstrap-classes" class="level2" data-number="25.2">
+<h2 data-number="25.2" class="anchored" data-anchor-id="choosing-different-bootstrap-classes"><span class="header-section-number">25.2</span> Choosing different Bootstrap classes</h2>
+<p>OK, but now our Jumbotron header is kinda dark. Let’s change the background to white and the text to black by choosing different Bootstrap styles there.</p>
+<ol type="1">
+<li>Find your header div in your index code.</li>
+<li>In the class, change <code>bg-secondary text-white</code> to just <code>bg-white</code>. Leave the spacing and border classes.</li>
+</ol>
+<p>This changes the header background to white and returns the text to its default black. Using the utility styles can allow quick display changes.</p>
+</section>
+<section id="updating-an-existing-bootstrap-class" class="level2" data-number="25.3">
+<h2 data-number="25.3" class="anchored" data-anchor-id="updating-an-existing-bootstrap-class"><span class="header-section-number">25.3</span> Updating an existing Bootstrap class</h2>
+<p>Within our highlight section we coded our first paragraph to have a <code>lead</code> <a href="https://getbootstrap.com/docs/5.1/content/typography/#lead">typography class</a>, and it is the same <code>lead</code> class earlier in the header. We can also change or build upon that style, which we will do next.</p>
+<ol type="1">
+<li>In your <code>src/styles.scss</code> file near the bottom, after the comment about custom styles, add this and then save and view the result:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="er">// highlight lead</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.highlight</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.lead</span> {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span>: <span class="dv">lighter</span><span class="op">;</span>    </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This style made the lead paragraph a lighter color than the default <code>lead</code> style. Bootstrap supports Sass, so the style was nested so the change to <code>lead</code> only happens when it is inside something also classed with <code>highlight</code>, which our container is. This way we only changed the lead there and NOT in the header or anywhere else we might use it on the site outside of a highlight div. (This is why we added the <code>highlight</code> class to the div!)</p>
+</section>
+<section id="write-a-new-style" class="level2" data-number="25.4">
+<h2 data-number="25.4" class="anchored" data-anchor-id="write-a-new-style"><span class="header-section-number">25.4</span> Write a new style</h2>
+<p>Next we’ll create our own style in CSS just like any normal HTML page.</p>
+<ol type="1">
+<li>In the highlight column that has the photo, update the <code>&lt;p&gt;</code> tag to give it a class of <code>caption</code>.</li>
+<li>Go into your <code>styles.scss</code> file and add a style rule for <code>.caption</code> that sets the font-weight to bold and the font-style to italic. This is just like writing any css style to a class, so I’ll let you figure it out.</li>
+</ol>
+<p>Unlike the <code>lead</code> class, this <code>.caption</code> class does not pre-exist in Bootstrap. We just created our own style and used it, and we can reuse it on other pages that use this stylesheet, if we want.</p>
+</section>
+<section id="add-a-footer" class="level2" data-number="25.5">
+<h2 data-number="25.5" class="anchored" data-anchor-id="add-a-footer"><span class="header-section-number">25.5</span> Add a footer</h2>
+<p>Lastly, I want you to add a footer element with the following specs (which you can visualize below). There are a number of ways you can do this, and I want you to choose how. Here are the specs:</p>
+<ul>
+<li>It should be built from the footer symantic element <code>&lt;footer&gt;</code>.</li>
+<li>The text should be centered with some spacing around the words to give them air.</li>
+<li>The background should be white.</li>
+</ul>
+</section>
+<section id="push-your-code-to-github" class="level2" data-number="25.6">
+<h2 data-number="25.6" class="anchored" data-anchor-id="push-your-code-to-github"><span class="header-section-number">25.6</span> Push your code to Github</h2>
+<ol type="1">
+<li>Use the git cycle to push all your changes to Github.</li>
+</ol>
+</section>
+<section id="and-were-done-almost" class="level2" data-number="25.7">
+<h2 data-number="25.7" class="anchored" data-anchor-id="and-were-done-almost"><span class="header-section-number">25.7</span> And we’re done, almost</h2>
+<p>We are done with our site and it should look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bs-class-index.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">bs-class-index</figcaption>
+</figure>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -665,12 +814,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./bs-03-cards.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">bs-03-cards.html</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The card component</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./bs-05-publish.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">bs-05-publish.html</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Publishing to Github Pages</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

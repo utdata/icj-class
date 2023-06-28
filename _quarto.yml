@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
   resources:
-    - resources*
+    - resources/*
 book:
   title: "Intro to Coding for Journalists"
   author: "Christian McDonald"
@@ -30,17 +30,18 @@ book:
         - css-02-practice.qmd
     - part: js-00-intro.qmd
       chapters: 
-        - js-class-01.qmd
-        - js-class-02.qmd
-        - js-class-03.qmd
-        - js-class-04.qmd
-        - js-class-05.qmd
-        - js-class-06.qmd
+        - js-01-basics.qmd
+        - js-02-functions.qmd
+        - js-03-objects.qmd
+        - js-04-flow-control.qmd
+        - js-05-html.qmd
+        - js-06-datatables.qmd
     - part: sass-00-intro.qmd
       chapters: 
         - sass-01-node.qmd
         - sass-02-scss.qmd
         - sass-03-refactor.qmd
+        - sass-04-publish.qmd
     - part: bs-00-intro.qmd
       chapters: 
         - bs-01-components.qmd
@@ -49,14 +50,14 @@ book:
         - bs-04-customize.qmd
         - bs-05-publish.qmd
         - bs-06-practice.qmd
-    - part: sa-00-intro.qmd
+    - part: sapp-00-intro.qmd
       chapters: 
-        - sa-01-framework.qmd
-        - sa-02-templates.qmd
-        - sa-03-loops.qmd
-        - sa-04-publish.qmd
-        - sa-05-bake-explain.qmd
-        - sa-06-bake-blog.qmd
+        - sapp-01-framework.qmd
+        - sapp-02-templates.qmd
+        - sapp-03-loops.qmd
+        - sapp-04-publish.qmd
+        - sapp-05-bake-explain.qmd
+        - sapp-06-bake-blog.qmd
     - fp-00-intro.qmd
   appendices:
     - a-google-fonts.qmd

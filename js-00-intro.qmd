@@ -1,17 +1,3 @@
 ### JavaScript
 
-- [Codecademy JS Tutorial](https://www.codecademy.com/learn/introduction-to-javascript)
-  - Module 1: Introduction
-    - Introduction to Javascript
-    - Variables
-  - Module 2: Conditionals
-    - Conditional statements
-  - Module 3: Functions
-    - Functions
-- [JS Basics](js-class-01.qmd)
-- [JS Functions](js-class-02.qmd)
-- [JS Objects](js-class-03.qmd)
-- [JS Flow control](js-class-04.qmd)
-- [JS with html](js-class-05.qmd)
-- [JS jQuery/Datatables](js-class-06.qmd)
-- Quiz in Canvas
+Intro page.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists – sass-01-node</title>
+<title>Intro to Coding for Journalists - 18&nbsp; Before Sass, let’s talk Node.js</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./sass-02-scss.html" rel="next">
-<link href="./js-class-06.html" rel="prev">
+<link href="./js-06-datatables.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 
 <div id="quarto-search-results"></div>
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sass-01-node.html">sass-00-intro.qmd</a></li><li class="breadcrumb-item"><a href="./sass-01-node.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">sass-01-node.html</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sass-01-node.html">sass-00-intro.qmd</a></li><li class="breadcrumb-item"><a href="./sass-01-node.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let's talk Node.js</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -220,37 +220,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-01.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-01-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-02.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-02-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-03.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-03-objects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-04.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-04-flow-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-05.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-05-html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-class-06.html" class="sidebar-item-text sidebar-link">
+  <a href="./js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -268,19 +268,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-01-node.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">sass-01-node.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-02-scss.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">sass-02-scss.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-03-refactor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">sass-03-refactor.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sass-04-publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Publish the /doc folder to the web</span></span></a>
   </div>
 </li>
       </ul>
@@ -288,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./bs-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">bs-00-intro.html</span></a>
+ <span class="menu-text">Using Bootstrap 5: Node Setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -297,45 +303,45 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">bs-01-components.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">bs-02-grids.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">bs-03-cards.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">bs-04-customize.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-05-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">bs-05-publish.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Publishing to Github Pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">bs-06-practice.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./sa-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">sa-00-intro.html</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text">sa-00-intro.qmd</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -343,38 +349,38 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-01-framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">sa-01-framework.html</span></span></a>
+  <a href="./sapp-01-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-02-templates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">sa-02-templates.html</span></span></a>
+  <a href="./sapp-02-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-03-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">sa-03-loops.html</span></span></a>
+  <a href="./sapp-03-loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-04-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">sa-04-publish.html</span></span></a>
+  <a href="./sapp-04-publish.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-05-bake-explain.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">sa-05-bake-explain.html</span></span></a>
+  <a href="./sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sa-06-bake-blog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">sa-06-bake-blog.html</span></span></a>
+  <a href="./sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
       </ul>
@@ -382,7 +388,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fp-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">fp-00-intro.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -419,14 +425,134 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#downloading-running-our-project" id="toc-downloading-running-our-project" class="nav-link active" data-scroll-target="#downloading-running-our-project"><span class="header-section-number">18.1</span> Downloading, running our project</a></li>
+  <li><a href="#the-structure-of-the-project" id="toc-the-structure-of-the-project" class="nav-link" data-scroll-target="#the-structure-of-the-project"><span class="header-section-number">18.2</span> The structure of the project</a>
+  <ul class="collapse">
+  <li><a href="#src" id="toc-src" class="nav-link" data-scroll-target="#src"><span class="header-section-number">18.2.1</span> src</a></li>
+  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"><span class="header-section-number">18.2.2</span> docs</a></li>
+  </ul></li>
+  <li><a href="#how-development-environment-works" id="toc-how-development-environment-works" class="nav-link" data-scroll-target="#how-development-environment-works"><span class="header-section-number">18.3</span> How development environment works</a>
+  <ul class="collapse">
+  <li><a href="#configurations-files" id="toc-configurations-files" class="nav-link" data-scroll-target="#configurations-files"><span class="header-section-number">18.3.1</span> Configurations files</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<blockquote class="blockquote">
+<p>Before starting this lesson, make sure you’ve done <a href="https://github.com/utdata/icj-setting-up/blob/main/README.md">part two of setting up</a>.</p>
+</blockquote>
+<p><strong>Sass</strong> is a method of writing more efficient CSS code and we’ll learn about it through refactoring some existing CSS into Sassy CSS.</p>
+<p>But, we are also introducing the Node.js development environment and because of this we need to take a detour to talk about it.</p>
+<p><strong>Node.js</strong> is an open-source server environment built using JavaScript. Many programmers like it because it allows them to write JavaScript not just for “front-end” browser tasks, but also for server-based or “back-end” tasks.</p>
+<p>For our purposes, consider Node as a development environment and ecosystem that allows us to use code written both other people so we don’t have to write it ourselves. Developers will create mini-programs — known as packages — and share them through Node Package Manager, or <strong>npm</strong> for short. Think of npm as the App Store for Node.js. When we need to do something like convert a Google Spreadsheet into data usable in our project, we don’t have to write the code ourselves because someone else has already done so and published it to the npm “app store”.</p>
+<p>We need a number of these apps to convert our fancy Sass SCSS into vanilla CSS our browser will understand.</p>
+<section id="downloading-running-our-project" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="downloading-running-our-project"><span class="header-section-number">18.1</span> Downloading, running our project</h2>
+<p>For this project, we are starting from a template saved in a repo. We’ll use a special npm package called <a href="https://www.npmjs.com/package/degit">degit</a> to start our project. You should already have installed it globally when we did our Node setup.</p>
+<p>As such, we won’t need to create a README or .gitignore file because they will be part of the template. But you will need to create a project folder:</p>
+<ol type="1">
+<li>Create a new project folder called <code>yourname-sass</code> inside your <code>icj</code> folder.</li>
+<li>Open that folder in VS Code and open your terminal.</li>
+<li>In your terminal, run <code>degit utdata/icj-sass-template</code>. This should download all the template files into your folder.</li>
+<li>Run <code>npm install</code>. This will download all the packages we need from the npm “app store”. It will take a couple of minutes.</li>
+<li>Run <code>gulp dev</code>.</li>
+</ol>
+<p>When you run <code>gulp dev</code> from your Terminal, a <em>bunch of cool stuff happens</em>. The process creates our “development environment”:</p>
+<ul>
+<li>All HTML and image files are copied from the <code>src</code> directory to the <code>docs</code> directory, which is where our publishable code will live.</li>
+<li>A task compiles all the fancy SCSS files into regular CSS files that your browser can read.</li>
+<li>A program called Browsersync launches a web browser window and displays your web page .</li>
+<li>Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.</li>
+</ul>
+<p>(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run <code>$ gulp dev</code>.)</p>
+</section>
+<section id="the-structure-of-the-project" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="the-structure-of-the-project"><span class="header-section-number">18.2</span> The structure of the project</h2>
+<p>The template you pulled already as the Node.js development environment defined with a specific (and common) folder structure.</p>
+<p>Let’s talk about how the folder system is structured:</p>
+<section id="src" class="level3" data-number="18.2.1">
+<h3 data-number="18.2.1" class="anchored" data-anchor-id="src"><span class="header-section-number">18.2.1</span> src</h3>
+<p>You will only work with the files in the <code>src</code> folder. There are a series of “tasks” in the development system that will process and move files to the <code>docs</code> folder, which is our “publishable” website.</p>
+<pre><code>src
+├── html (files here are moved to the root of `docs`.)
+│   ├── index.html
+│   ├── shows.css
+├── scss (files here get complied into a folder called `docs/css`.)
+│   ├── new-styles.css
+│   ├── old-styles.css
+├── img (files here are moved into a similar folder called `docs/img`.)
+│   ├── harvey-dale.jpg</code></pre>
+</section>
+<section id="docs" class="level3" data-number="18.2.2">
+<h3 data-number="18.2.2" class="anchored" data-anchor-id="docs"><span class="header-section-number">18.2.2</span> docs</h3>
+<p>The <code>docs</code> folder is our publishing folder, where our website lives. These are the files that will be published to the web as a working website. Everything outside the <code>docs</code> folder just supports the creation of the files inside <code>docs</code>. DON’T EDIT ANY FILES IN THE <code>docs</code> FOLDER. If you do, the changes will just be overwritten.</p>
+<blockquote class="blockquote">
+<p>We use the <code>docs</code> folder for our publishable code to take advantage of a special feature in Github that will give us free publishing to the Internet. Other common folder names for publishing you might come across are <code>dist</code> and <code>public</code>.</p>
+</blockquote>
+<pre><code>docs (don't edit anything in here)
+├── css
+│   ├── (files from `src/scss` end up here)
+├── img
+│   ├── (files from `src/img` end up here)
+├── index.html
+├── shows.html
+</code></pre>
+</section>
+</section>
+<section id="how-development-environment-works" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="how-development-environment-works"><span class="header-section-number">18.3</span> How development environment works</h2>
+<p>As mentioned, files from the <code>src</code> folder get processed into <code>docs</code>. However, the published structure isn’t exactly the same as <code>src</code> so pay attention.</p>
+<p>The <code>docs</code> folder ends up being the “root” or base level of our site. All other files in the project need to need to be referenced relative to where they live inside <code>docs</code>.</p>
+<ul>
+<li>Files in the <code>src/html</code> get moved to the root level of <code>docs</code>. <strong>It’s important to realize where these files get published in relation to your <code>css</code> and <code>img</code> folders.</strong></li>
+<li>Sass files in the <code>src/scss</code> folder get compiled/rewritten into the <code>docs/css</code> folder. <strong>There are two important implications of this:</strong>
+<ul>
+<li>While the filename you edit ends in <code>.scss</code>, the compiled file in <code>docs/css</code> a <code>.css</code> extension.</li>
+<li>This means your HTML files that end up at the root of <code>docs</code> will need to link to a compiled css file of the same name, but inside the css folder and with a <code>.css</code> extension, like <code>href="css/filename.css"</code>.</li>
+</ul></li>
+<li>Files in the <code>src/img</code> folder are moved into <code>docs/img</code>. Since your <code>index.html</code> file ends up in <code>docs</code>, then your img link needs to be <code>img src="img/filename.jpg"</code>.</li>
+</ul>
+<section id="configurations-files" class="level3" data-number="18.3.1">
+<h3 data-number="18.3.1" class="anchored" data-anchor-id="configurations-files"><span class="header-section-number">18.3.1</span> Configurations files</h3>
+<p>The remaining files and folders in the root folder are part of the development ecosystem. We don’t mess with this files much in our lessons, but here is a description of what they do:</p>
+<ul>
+<li><code>.gitignore</code> tells Git which files to ignore sending to Github.</li>
+<li><code>README.md</code> describes what the repo is about. It has our installation instructions.</li>
+<li><code>.gulpfile.js</code> is the file that controls our task manager. This is where we tell the <strong>Gulp</strong> program where to find our Sass SCSS files and then where to place the compiled new CSS files. We won’t edit this file, but know it is necessary.</li>
+<li>The files inside <code>tasks</code> are the workhorse of Gulp. Like the gulpfile, we won’t get into how they work. Just know this is the guts of the development ecosystem.</li>
+<li><code>package.json</code> is the file that tells the Node.js ecosystem which packages to download from npm. It is pre-configured for you.</li>
+<li><code>package-lock.json</code> is created by the <code>npm install</code> command based on the <code>package.json</code> file. It contains a bunch of details about dependencies that we don’t need to worry much about. Again, it is created by npm.</li>
+<li>A <code>node_modules</code> folder is generated from <code>package.json</code> when you run <code>$ npm install</code>. It will contain all the mini-programs, and it will NOT be pushed to Github ’cause it is huge.</li>
+</ul>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -665,13 +791,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./js-class-06.html" class="pagination-link">
+      <a href="./js-06-datatables.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./sass-02-scss.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">sass-02-scss.html</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
