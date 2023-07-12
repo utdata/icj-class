@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 17&nbsp; JS jQuery/Datatables</title>
+<title>Intro to Coding for Journalists - 16&nbsp; JS jQuery/Datatables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sass-01-node.html" rel="next">
+<link href="./sass-00-intro.html" rel="next">
 <link href="./js-05-html.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -91,7 +91,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -108,10 +109,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-06-datatables.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-06-datatables.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -136,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Home</span></span></a>
+ <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -151,25 +152,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bash-01-terminal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bash</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bash</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bash-02-move.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving around</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bash-03-view.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Looking at files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Looking at files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bash-04-commands.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Commands in bash</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Commands in bash</span></span></a>
   </div>
 </li>
       </ul>
@@ -186,13 +187,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./git-01-clone.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning repos, sharing code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cloning repos, sharing code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./git-02-branch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Git branches and pull requests</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Git branches and pull requests</span></span></a>
   </div>
 </li>
       </ul>
@@ -209,13 +210,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./html-01-class.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML class</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML class</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./html-02-practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">HTML practice</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML practice</span></span></a>
   </div>
 </li>
       </ul>
@@ -232,13 +233,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./css-01-class.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CSS class</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">CSS class</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./css-02-practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">CSS practice</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CSS practice</span></span></a>
   </div>
 </li>
       </ul>
@@ -255,45 +256,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./js-01-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./js-02-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./js-03-objects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./js-04-flow-control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./js-05-html.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./js-06-datatables.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
- <span class="menu-text">sass-00-intro.qmd</span></a>
+            <a href="./sass-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sass Intro</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -302,25 +303,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-01-node.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-02-scss.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-03-refactor.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sass-04-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Publish the /doc folder to the web</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Publish the /doc folder to the web</span></span></a>
   </div>
 </li>
       </ul>
@@ -328,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./bs-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Using Bootstrap 5: Node Setup</span></a>
+ <span class="menu-text">Bootstrap</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -337,45 +338,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-05-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Publishing to Github Pages</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Publishing to Github Pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
- <span class="menu-text">sa-00-intro.qmd</span></a>
+            <a href="./sapp-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Static apps intro</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -384,37 +385,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sapp-01-framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sapp-02-templates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sapp-03-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sapp-04-publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
       </ul>
@@ -422,7 +423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fp-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -464,17 +465,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#using-datatables" id="toc-using-datatables" class="nav-link active" data-scroll-target="#using-datatables"><span class="header-section-number">18</span> Using DataTables</a>
+  <li><a href="#using-datatables" id="toc-using-datatables" class="nav-link active" data-scroll-target="#using-datatables"><span class="header-section-number">17</span> Using DataTables</a>
   <ul class="collapse">
-  <li><a href="#lets-talk-about-tables" id="toc-lets-talk-about-tables" class="nav-link" data-scroll-target="#lets-talk-about-tables"><span class="header-section-number">18.1</span> Let’s talk about tables</a></li>
-  <li><a href="#goals-of-this-lesson" id="toc-goals-of-this-lesson" class="nav-link" data-scroll-target="#goals-of-this-lesson"><span class="header-section-number">18.2</span> Goals of this lesson</a></li>
-  <li><a href="#the-steps" id="toc-the-steps" class="nav-link" data-scroll-target="#the-steps"><span class="header-section-number">18.3</span> The steps</a>
+  <li><a href="#lets-talk-about-tables" id="toc-lets-talk-about-tables" class="nav-link" data-scroll-target="#lets-talk-about-tables"><span class="header-section-number">17.1</span> Let’s talk about tables</a></li>
+  <li><a href="#goals-of-this-lesson" id="toc-goals-of-this-lesson" class="nav-link" data-scroll-target="#goals-of-this-lesson"><span class="header-section-number">17.2</span> Goals of this lesson</a></li>
+  <li><a href="#the-steps" id="toc-the-steps" class="nav-link" data-scroll-target="#the-steps"><span class="header-section-number">17.3</span> The steps</a>
   <ul class="collapse">
-  <li><a href="#zero-configuration" id="toc-zero-configuration" class="nav-link" data-scroll-target="#zero-configuration"><span class="header-section-number">18.3.1</span> #1: “Zero configuration”</a></li>
-  <li><a href="#recap-of-how-this-works" id="toc-recap-of-how-this-works" class="nav-link" data-scroll-target="#recap-of-how-this-works"><span class="header-section-number">18.3.2</span> Recap of how this works</a></li>
-  <li><a href="#scroll-vertical" id="toc-scroll-vertical" class="nav-link" data-scroll-target="#scroll-vertical"><span class="header-section-number">18.3.3</span> #2: “Scroll Vertical”</a></li>
+  <li><a href="#zero-configuration" id="toc-zero-configuration" class="nav-link" data-scroll-target="#zero-configuration"><span class="header-section-number">17.3.1</span> #1: “Zero configuration”</a></li>
+  <li><a href="#recap-of-how-this-works" id="toc-recap-of-how-this-works" class="nav-link" data-scroll-target="#recap-of-how-this-works"><span class="header-section-number">17.3.2</span> Recap of how this works</a></li>
+  <li><a href="#scroll-vertical" id="toc-scroll-vertical" class="nav-link" data-scroll-target="#scroll-vertical"><span class="header-section-number">17.3.3</span> #2: “Scroll Vertical”</a></li>
   </ul></li>
-  <li><a href="#commit-to-github-and-turn-in" id="toc-commit-to-github-and-turn-in" class="nav-link" data-scroll-target="#commit-to-github-and-turn-in"><span class="header-section-number">18.4</span> Commit to Github and turn in</a></li>
+  <li><a href="#commit-to-github-and-turn-in" id="toc-commit-to-github-and-turn-in" class="nav-link" data-scroll-target="#commit-to-github-and-turn-in"><span class="header-section-number">17.4</span> Commit to Github and turn in</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -484,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></h1>
 </div>
 
 
@@ -499,19 +500,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="using-datatables" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Using DataTables</h1>
+<section id="using-datatables" class="level1" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> Using DataTables</h1>
 <p>For this lesson, you’re going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point.</p>
 <p>jQuery is a framework that makes it easier to use JavaScript. It’s particularly useful for simply traversing the DOM in an HTML page. Because of this, there are a number of tools and plug-ins written in jQuery.</p>
 <p>The purpose of this exercise is to show that you can use many of the tools quickly with just a little JavaScript knowledge.</p>
-<section id="lets-talk-about-tables" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="lets-talk-about-tables"><span class="header-section-number">18.1</span> Let’s talk about tables</h2>
+<section id="lets-talk-about-tables" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="lets-talk-about-tables"><span class="header-section-number">17.1</span> Let’s talk about tables</h2>
 <p>Before we jump into this, take some time to look at <a href="https://www.w3schools.com/html/html_tables.asp">HTML Tables</a> by comparing the <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table">first “Try it” example</a> on the W3 Tutorial site to <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_headings_left">this “Try it” example</a>.</p>
 <p>Like other elements we have dealt with there is an HTML structure that is the skeleton of the table, and then the display of that element can be enhanced using CSS.</p>
 <p>Tables are great for displaying tabular data (hence the word table). But often those tables can get really long, and we can help make them more useful to readers by adding JavaScript to make them sortable and filterable, sort of like a spreadsheet.</p>
 </section>
-<section id="goals-of-this-lesson" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="goals-of-this-lesson"><span class="header-section-number">18.2</span> Goals of this lesson</h2>
+<section id="goals-of-this-lesson" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="goals-of-this-lesson"><span class="header-section-number">17.2</span> Goals of this lesson</h2>
 <ul>
 <li>Add the required DataTables files to an HTML page (there’s a CSS file and a JavaScript file, which we’ll handle in the first problem below.)</li>
 <li>Call DataTables on your table using the example JavaScript provided on the DataTables website.</li>
@@ -524,11 +525,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="the-steps" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="the-steps"><span class="header-section-number">18.3</span> The steps</h2>
+<section id="the-steps" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="the-steps"><span class="header-section-number">17.3</span> The steps</h2>
 <p>The steps below will walk you through using the DataTables plug-in to make an interactive table. If at any point you get an error in your Console, stop before moving on to the next step. Each step is dependent on the step before.</p>
-<section id="zero-configuration" class="level3" data-number="18.3.1">
-<h3 data-number="18.3.1" class="anchored" data-anchor-id="zero-configuration"><span class="header-section-number">18.3.1</span> #1: “Zero configuration”</h3>
+<section id="zero-configuration" class="level3" data-number="17.3.1">
+<h3 data-number="17.3.1" class="anchored" data-anchor-id="zero-configuration"><span class="header-section-number">17.3.1</span> #1: “Zero configuration”</h3>
 <ol type="1">
 <li>Create a new file in your javascript-practice project folder called <code>datatable.html</code> and add the basic HTML5 boilerplate using Emmet.</li>
 <li>Go to the DataTables home page (https://www.datatables.net/) and click the link for “Examples”.</li>
@@ -550,16 +551,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Save your page and look at it in your browser. You should have a working table.</li>
 </ol>
 </section>
-<section id="recap-of-how-this-works" class="level3" data-number="18.3.2">
-<h3 data-number="18.3.2" class="anchored" data-anchor-id="recap-of-how-this-works"><span class="header-section-number">18.3.2</span> Recap of how this works</h3>
+<section id="recap-of-how-this-works" class="level3" data-number="17.3.2">
+<h3 data-number="17.3.2" class="anchored" data-anchor-id="recap-of-how-this-works"><span class="header-section-number">17.3.2</span> Recap of how this works</h3>
 <ul>
 <li>In our <code>&lt;head&gt;</code> tag we have links to the JQuery JavaScript plugin, the Datatables-specific Javascript files and the Datatables CSS to make it look pretty.</li>
 <li>In the <code>&lt;body&gt;</code> tag you have your HTML table.</li>
 <li>At the bottom you have a <code>&lt;script&gt;</code> tag that tells the page to apply the Datatables javascript to our specific table (based on the <code>id</code> of the table.)</li>
 </ul>
 </section>
-<section id="scroll-vertical" class="level3" data-number="18.3.3">
-<h3 data-number="18.3.3" class="anchored" data-anchor-id="scroll-vertical"><span class="header-section-number">18.3.3</span> #2: “Scroll Vertical”</h3>
+<section id="scroll-vertical" class="level3" data-number="17.3.3">
+<h3 data-number="17.3.3" class="anchored" data-anchor-id="scroll-vertical"><span class="header-section-number">17.3.3</span> #2: “Scroll Vertical”</h3>
 <ol type="1">
 <li>Create a copy of the HTML file you created above and call it <code>scrolling.html</code>.</li>
 <li>Go to the “Scroll Vertical” example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in your
@@ -569,8 +570,8 @@ tags in the new HTML file you just created (<em>scrolling.html</em>) with the Ja
 </ol>
 </section>
 </section>
-<section id="commit-to-github-and-turn-in" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="commit-to-github-and-turn-in"><span class="header-section-number">18.4</span> Commit to Github and turn in</h2>
+<section id="commit-to-github-and-turn-in" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="commit-to-github-and-turn-in"><span class="header-section-number">17.4</span> Commit to Github and turn in</h2>
 <p>That is our last JavaScript lesson!</p>
 <ol type="1">
 <li>Commit the new files to your repository and push ot Github.</li>
@@ -818,12 +819,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./js-05-html.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS with html</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS with html</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sass-01-node.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sass-00-intro.html" class="pagination-link">
+        <span class="nav-page-text">Sass Intro</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

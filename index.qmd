@@ -1,1 +1,78 @@
-{{< include README.md >}}
+# Preface {.unnumbered}
+
+::: callout-warning
+This class is under a major rewrite for Fall 2023. It pulls together a bunch separate lessons and repos.
+:::
+
+This is the course material for the UT-Austin School of Journalism and Media course "Intro Coding for Journalists". The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.
+
+The online version of the book is [here](utdata.github.io/icj-class/).
+
+The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.
+
+## The structure of the class
+
+You can see the chapter breakdown, but the book is more or less structured like this:
+
+- Using command-line tools
+- Computer setup
+- HTML: The skeleton of the web
+- CSS: The skin of the web
+- JavaScript: The muscles of the web
+- SASS: Better web skins
+- Bootstrap: OMG, the web solved
+- Static apps: HFS, I can make it
+
+## A word about my lessons
+
+For all my lessons I typically put directions for YOU to do in numbered lists:
+
+1. Do this thing.
+1. Then do that thing.
+
+Sometimes there is code after or among the the directions, but it is in a code block with a grey background.
+
+1. Do this thing:
+
+```bash
+$ command --flag
+This is the output
+```
+
+1. Then do the next thing.
+1. Sometimes the code will be in the bullet item itself, but still in a code block. Do this: `$ command`.
+
+I typically use an unordered bullet list for explanations and other non-"do" things:
+
+- This is just a note about something
+- And this is another
+
+Regular paragraph text such as this one are usually an explanation, background or whatever.
+
+If **something is in bold** or IN ALL CAPS or _in italics for emphasis_ then there is usually a reason why, so pay attention.
+
+I try to be consistent about such things, but I'm human so sometimes I'm not.
+
+:::callout
+Sometimes I put unimportant but interesting side notes in callouts like this.
+:::
+
+::: callout-important
+But sometimes I'll put important notes in these callout sections, too. I'll usually say if they are important in bold at the beginning, like this one.
+:::
+
+## Mac vs PC
+
+On some occaisions I may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.
+
+::: {.panel-tabset}
+
+## Mac
+
+I use macOS so most directions are from that perspective.
+
+## PC
+
+Usually you can use **Cntl-whatever** no a PC as an equivalent to **Cmd-whatever** on a Mac. You can also use they Help menu to find they keyboard command no matter what playform you use.
+
+:::

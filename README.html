@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -62,135 +96,53 @@ Warning
 </div>
 <p>This is a guide for the UT-Austin School of Journalism and Media course “Intro Coding for Journalists”. The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.</p>
 <p>The online version of the book is [link TK].</p>
-<p>The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are in this repository.</p>
-<section id="lessons" class="level2">
-<h2 class="anchored" data-anchor-id="lessons">Lessons</h2>
-<p>The book is</p>
-<section id="command-line-interface-tools-and-computer-setup" class="level3">
-<h3 class="anchored" data-anchor-id="command-line-interface-tools-and-computer-setup">Command-line interface tools and computer setup</h3>
+<p>The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.</p>
+<section id="the-structure-of-the-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-structure-of-the-class">The structure of the class</h2>
+<p>You can see the chapter breakdown, but the book is more or less structured like this:</p>
 <ul>
-<li><a href="https://github.com/utdata/icj-cli-tools/blob/main/lectures/bash/bash-01-terminal.md">What is a terminal?</a></li>
-<li><a href="https://github.com/utdata/icj-cli-tools/blob/main/lectures/bash/bash-02-moving-around.md">Moving around</a></li>
-<li><a href="https://github.com/utdata/icj-cli-tools/blob/main/lectures/git/git-01-git-intro.md">Git and Github</a></li>
-</ul>
-<p>We’ll also do some computer setup:</p>
-<ul>
-<li><a href="https://github.com/utdata/icj-setting-up">Setting up your computer</a></li>
-</ul>
-</section>
-<section id="html" class="level3">
-<h3 class="anchored" data-anchor-id="html">HTML</h3>
-<ul>
-<li><a href="https://www.codecademy.com/learn/learn-html">Codecademy HTML tutorial</a>
-<ul>
-<li>Elements and Structure
-<ul>
-<li>Introduction to HTML</li>
-<li>HTML Document Standards</li>
-</ul></li>
-</ul></li>
-<li><a href="html/html-class.md">HTML class</a></li>
-<li><a href="html/html-practice.md">HTML practice</a></li>
-<li>Quiz in Canvas</li>
+<li>Using command-line tools.</li>
+<li>Computer setup</li>
+<li>HTML: The skeleton of the web</li>
+<li>CSS: The skin of the web</li>
+<li>JavaScript: The muscles of the web</li>
+<li>SASS: Better web skins</li>
+<li>Bootstrap: OMG, the web solved</li>
+<li>Static apps: HFS, I can make it</li>
 </ul>
 </section>
-<section id="css" class="level3">
-<h3 class="anchored" data-anchor-id="css">CSS</h3>
+<section id="a-word-about-my-lessons" class="level2">
+<h2 class="anchored" data-anchor-id="a-word-about-my-lessons">A word about my lessons</h2>
+<p>For all my lessons I typically put directions for YOU to do in numbered lists:</p>
+<ol type="1">
+<li>Do this thing.</li>
+<li>Then do that thing.</li>
+</ol>
+<p>Sometimes there is code after or among the the directions, but it is in a code block with a grey background.</p>
+<ol type="1">
+<li>Do this thing:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> command <span class="at">--flag</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">This</span> is the output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Then do the next thing.</li>
+<li>Sometimes the code will be in the bullet item itself, but still in a code block. Do this: <code>$ command</code>.</li>
+</ol>
+<p>I typically use an unordered bullet list for non-“do” things:</p>
 <ul>
-<li><a href="https://www.codecademy.com/learn/learn-css">Codecademy CSS tutorial</a>
-<ul>
-<li>Syntax and selectors
-<ul>
-<li>Setup and Syntax</li>
-<li>Selectors</li>
-</ul></li>
-<li>Visual rules
-<ul>
-<li>Visual rules</li>
-</ul></li>
-<li>The Box Model
-<ul>
-<li>The Box Model</li>
-<li>Changing the Box Model</li>
-</ul></li>
-<li>Display and Positioning
-<ul>
-<li>CSS Display and Positioning</li>
-</ul></li>
-</ul></li>
-<li><a href="css/css-class.md">CSS class</a></li>
-<li><a href="css/css-practice.md">CSS practice</a></li>
-<li>Quiz in Canvas</li>
+<li>This is just a note about something</li>
+<li>And this is another</li>
 </ul>
-</section>
-<section id="javascript" class="level3">
-<h3 class="anchored" data-anchor-id="javascript">JavaScript</h3>
-<ul>
-<li><a href="https://www.codecademy.com/learn/introduction-to-javascript">Codecademy JS Tutorial</a>
-<ul>
-<li>Module 1: Introduction
-<ul>
-<li>Introduction to Javascript</li>
-<li>Variables</li>
-</ul></li>
-<li>Module 2: Conditionals
-<ul>
-<li>Conditional statements</li>
-</ul></li>
-<li>Module 3: Functions
-<ul>
-<li>Functions</li>
-</ul></li>
-</ul></li>
-<li><a href="js/js-class-01.md">JS Basics</a></li>
-<li><a href="js/js-class-02.md">JS Functions</a></li>
-<li><a href="js/js-class-03.md">JS Objects</a></li>
-<li><a href="js/js-class-04.md">JS Flow control</a></li>
-<li><a href="js/js-class-05.md">JS with html</a></li>
-<li><a href="js/js-class-06.md">JS jQuery/Datatables</a></li>
-<li>Quiz in Canvas</li>
-</ul>
-</section>
-<section id="sass" class="level3">
-<h3 class="anchored" data-anchor-id="sass">Sass</h3>
-<p>Better CSS with Sass</p>
-<ul>
-<li><a href="sass/sass-01.md">Setting up, Intro to Node</a></li>
-<li><a href="sass/sass-02.md">Introducing Sass</a></li>
-<li><a href="sass/sass-03.md">Refactoring with Sass</a></li>
-<li><a href="sass/sass-04.md">Publishing to the web</a></li>
-</ul>
-</section>
-<section id="bootstrap" class="level3">
-<h3 class="anchored" data-anchor-id="bootstrap">Bootstrap</h3>
-<ul>
-<li>See Canvas for Tutorial links</li>
-<li><a href="bootstrap/bootstrap-class-01.md">Setup</a></li>
-<li><a href="bootstrap/bootstrap-class-02.md">Bootstrap components</a></li>
-<li><a href="bootstrap/bootstrap-class-03.md">Bootstrap grids</a></li>
-<li><a href="bootstrap/bootstrap-class-04.md">Bootstrap cards</a></li>
-<li><a href="bootstrap/bootstrap-class-05.md">Customizing Bootstrap</a></li>
-<li><a href="bootstrap/bootstrap-class-06.md">Github Pages publishing</a></li>
-<li><a href="bootstrap/bootstrap-assignment.md">Homework</a></li>
-</ul>
-</section>
-<section id="static-apps" class="level3">
-<h3 class="anchored" data-anchor-id="static-apps">Static apps</h3>
-<ul>
-<li><a href="static-apps/static-01-framework.md">Part 1: Framework and setup</a></li>
-<li><a href="static-apps/static-02-templates.md">Part 2: Templates and blocks</a></li>
-<li><a href="static-apps/static-03-loops.md">Part 3: Data and loops</a></li>
-<li><a href="static-apps/static-04-publish.md">Part 4: Publishing</a></li>
-<li><a href="static-apps/static-05-bake-explain.md">Part 5: Bake explanation</a></li>
-<li><a href="static-apps/static-06-bake-blog.md">Part 6: Bake the blog</a></li>
-</ul>
-</section>
-<section id="final-project" class="level3">
-<h3 class="anchored" data-anchor-id="final-project">Final project</h3>
-<ul>
-<li><a href="final/README.md">Requirements, instructions and files</a></li>
-</ul>
-</section>
+<p>But sometimes I forget and put “do” things in an unordered list. Hopefully you can typically tell when it is a direction or not.</p>
+<p>Regular paragraph text such as this one are usually an explanation, background or whatever.</p>
+<p>If <strong>something is in bold</strong> or IN ALL CAPS or <em>in italics for emphasis</em> then there is usually a reason why, so pay attention.</p>
+<blockquote class="blockquote">
+<p>Sometimes I put unimportant but interesting side notes in blockquotes like this.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>IMPORTANT NOTE</strong>: But sometimes I’ll put important notes in these blocktext sections, too. I’ll usually say if they are important in bold at the beginning, like this one.</p>
+</blockquote>
+<p>I try to be consistent, but I’m human so sometimes I’m not.</p>
 </section>
 </section>
 

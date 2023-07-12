@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 18&nbsp; Sass and SCSS</title>
+<title>Intro to Coding for Journalists - Sass Intro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./sass-03-refactor.html" rel="next">
-<link href="./sass-01-node.html" rel="prev">
+<link href="./sass-01-node.html" rel="next">
+<link href="./js-06-datatables.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sass-00-intro.html">Sass Intro</a></li><li class="breadcrumb-item"><a href="./sass-02-scss.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sass-00-intro.html">Sass Intro</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -259,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./sass-00-intro.html" class="sidebar-item-text sidebar-link">
+            <a href="./sass-00-intro.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Sass Intro</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -274,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass-02-scss.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sass-02-scss.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></span></a>
   </div>
 </li>
@@ -427,20 +427,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#sass-features" id="toc-sass-features" class="nav-link active" data-scroll-target="#sass-features"><span class="header-section-number">18.1</span> Sass features</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Sass and SCSS</span></h1>
+<h1 class="title">Sass Intro</h1>
 </div>
 
 
@@ -455,23 +449,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Sass is system that makes writing CSS more efficient. SCSS (Sassy CSS) is the syntax we use, and it has to be processed (or “compiled” in tech speak) into regular CSS before the browser can understand it. Think of it as a translation service. In our case we are using Gulp and some other npm tasks to do that translation, hence all the need for the development environment.</p>
-<p>Some of the benefits/features of Sass/SCSS are:</p>
-<ul>
-<li>Nesting and shorthand styles allow you to write more understandable and efficient code that is easier to maintain.</li>
-<li>Variables allow you to reuse styles and make a single change that affects values all through your code base.</li>
-<li>Partials and importing allow you to organize your style files into smaller, more manageable chunks.</li>
-<li>Sass allows you to do standard math operations within your SCSS.</li>
-<li>“Mixins” let you make groups of CSS declarations that you can reuse throughout your site. You can even pass in values to make your mixin work more like functions.</li>
-</ul>
-<p>The Bootstrap framework that we will use later in this class takes advantage of all of these features. Sass is a required part of Bootstrap.</p>
-<p>^ There are two different ways to write Sass, but we will use the SCSS version.</p>
-<section id="sass-features" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sass-features"><span class="header-section-number">18.1</span> Sass features</h2>
-<p>The <a href="https://sass-lang.com/guide">Sass guide</a> walks through the above features with code examples. You should look through it.</p>
+<p>do I need this?</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -707,15 +687,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sass-01-node.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span>
+      <a href="./js-06-datatables.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sass-03-refactor.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sass-01-node.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Before Sass, let’s talk Node.js</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
