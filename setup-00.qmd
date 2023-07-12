@@ -1,0 +1,3 @@
+# Setting up
+
+- [Setting up your computer](https://github.com/utdata/icj-setting-up)

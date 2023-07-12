@@ -1,0 +1,40 @@
+# JS Objects
+
+When we started with the first lesson, we dove right into writing JavaScript to show concepts like [**variables**](https://www.w3schools.com/Js/js_variables.asp) (our data containers) and [**operations**](https://www.w3schools.com/Js/js_operators.asp) (assigning variables, doing math and concatenating strings).
+
+We then talked about [**functions**](https://www.w3schools.com/Js/js_functions.asp) where we can create reusable code that acts like a manufacturing plant: We feed it things and it spits out new or modified things. We created a function that squared two numbers. You (hopefully) created a function that puts parts of a name together.
+
+Now I want to introduce a new, important concept JavaScript called [Objects](https://www.w3schools.com/js/js_object_definition.asp) which are also variables, but they can have more than one value, called [**properties**](https://www.w3schools.com/js/js_object_properties.asp). I would say these properties _describe_ the object. If our object were a person, it might have these **properties**:
+
+```js
+var person = {
+  firstName: "Christian",
+  lastName: "McDonald",
+  age: "53"
+};
+```
+
+JavaScript Objects can also have [**methods**](https://www.w3schools.com/js/js_object_methods.asp), which are things you _can do to or with_ the object. **Methods** are "simply" functions embedded in the object. In this example, we have a `fullName` method within our "person" object.
+
+```js
+var person = {
+  firstName: "Christian",
+  lastName: "McDonald",
+  age: "53",
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+```
+
+To access a **property** of a JavaScript object, we follow the object with `.` and the name of the property: `person.firstName` gives us "Christian".
+
+To use a **method** of a JavaScript object we also follow the object with a `.` and the method name, but we have to follow the method with parenthesis: `person.fullName()` would give us "Christian McDonald".
+
+## HTML elements are JavaScript Objects
+
+Thanks for something called the [Document Object Model](https://www.w3schools.com/js/js_htmldom.asp) (or DOM, for short) JavaScript considers every HTML element on a web page a JavaScript **Object** and it has some baked-in properties and methods. (The properties and methods vary based on object type: string vs number vs date, etc.) This means can can access the **properties** of each HTML element and we can act on them through **methods**.
+
+We'll use these baked-in properties and methods in our next lesson.
+
+We'll use a **method** to find specific objects on the page to discover it's properties. We'll then make decisions based on those properties and then use another **method** to change that HTML object.

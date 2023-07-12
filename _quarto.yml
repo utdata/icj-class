@@ -1,0 +1,69 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - resources/*
+book:
+  title: "Intro to Coding for Journalists"
+  author: "Christian McDonald"
+  date: "6/26/2023"
+  chapters:
+    - href: index.qmd
+      text: Home
+    - part: bash-00-intro.qmd
+      chapters:
+        - bash-01-terminal.qmd
+        - bash-02-move.qmd
+        - bash-03-view.qmd
+        - bash-04-commands.qmd
+    - part: git-00-intro.qmd
+      chapters:
+        - git-01-clone.qmd
+        - git-02-branch.qmd
+    - part: html-00-intro.qmd
+      chapters:
+        - html-01-class.qmd
+        - html-02-practice.qmd
+    - part: css-00-intro.qmd
+      chapters: 
+        - css-01-class.qmd
+        - css-02-practice.qmd
+    - part: js-00-intro.qmd
+      chapters: 
+        - js-01-basics.qmd
+        - js-02-functions.qmd
+        - js-03-objects.qmd
+        - js-04-flow-control.qmd
+        - js-05-html.qmd
+        - js-06-datatables.qmd
+    - part: sass-00-intro.qmd
+      chapters: 
+        - sass-01-node.qmd
+        - sass-02-scss.qmd
+        - sass-03-refactor.qmd
+        - sass-04-publish.qmd
+    - part: bs-00-intro.qmd
+      chapters: 
+        - bs-01-components.qmd
+        - bs-02-grids.qmd
+        - bs-03-cards.qmd
+        - bs-04-customize.qmd
+        - bs-05-publish.qmd
+        - bs-06-practice.qmd
+    - part: sapp-00-intro.qmd
+      chapters: 
+        - sapp-01-framework.qmd
+        - sapp-02-templates.qmd
+        - sapp-03-loops.qmd
+        - sapp-04-publish.qmd
+        - sapp-05-bake-explain.qmd
+        - sapp-06-bake-blog.qmd
+    - fp-00-intro.qmd
+  appendices:
+    - a-google-fonts.qmd
+    - a-project.qmd
+    - a-macos-shell.qmd
+
+format:
+  html:
+    theme: cosmo
