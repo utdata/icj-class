@@ -67,3 +67,5 @@ book:
 format:
   html:
     theme: cosmo
+    code-overflow: wrap
+

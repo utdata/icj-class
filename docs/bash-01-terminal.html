@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -495,54 +461,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="terminal-vs-shell" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="terminal-vs-shell"><span class="header-section-number">1.1</span> Terminal vs shell</h2>
 <p>Terminal (Mac) and Git Bash (Windows) are programs that can run a <strong>shell</strong>, which is a text-based user interface where you type commands that your computer understands.</p>
-<blockquote class="blockquote">
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
 <p>People (including myself) will use the term <strong>shell</strong> and <strong>terminal</strong> interchangeably. This means when I say “type into your shell” or “in your terminal”, I mean type at the prompt in your Terminal or Git Bash program. (Just to add confusion, I use a different Mac terminal program called iTerm, but Terminal is fine.)</p>
-</blockquote>
+</div>
+</div>
+</div>
 <p>Developers use a shell to issue commands to their computer to do things, like install programs, change what folder their are in, etc. Using a terminal program to use your computer can be confusing at first, but it will become second-nature as you progress through this class.</p>
 <p>The shell programming language we will use for these text-based interactions is called <strong>Bash</strong>.</p>
-<p><strong>Windows</strong> doesn’t understand Bash at all without the help of another program. This is why we installed <strong>Git Bash</strong> so we can all speak the same language. (If you are a Windows user and haven’t yet installed Git, <a href="https://github.com/utdata/icj-setting-up/blob/master/windows-01.md#install-git">do it now</a>.)</p>
+<p><strong>Windows</strong> doesn’t understand Bash at all without the help of another program. This is why we installed <strong>Git Bash</strong> so we can all speak the same language. (If you are a Windows user and haven’t yet installed Git, <a href="./bash-00-intro.html">do it now</a>.)</p>
 <p>For what its worth, Bash is a Unix-based program. Most of the Internet runs on Unix (or Linux) computers.</p>
 <p><strong>Macs</strong> understand Bash natively, but some day they will change to a similar language called zsh. When you launch a shell on newer Macs you might get a message <em>The default interactive shell is now zsh. To update your account to use zsh, please run <code>chsh -s /bin/zsh</code>.</em> <strong>DON’T DO THIS! JUST IGNORE IT.</strong> We will continue to use <strong>Bash</strong>. Later we will add a command to disable this message. If somehow your terminal gets set to use zsh, you can <a href="./a-macos-shell.html">check and/or change it to Bash</a>.</p>
 </section>
 <section id="launch-your-terminal" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="launch-your-terminal"><span class="header-section-number">1.2</span> Launch your terminal</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ol type="1">
 <li>For <strong>Macs</strong> you can use your Launchpad and type in <em>Terminal</em> and launch it. Or you can use the Spotlight search to find it.</li>
 </ol>
 <p>It will look like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../images/terminal-startup.png" class="img-fluid figure-img"></p>
+<p><img src="images/terminal-startup.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Mac Terminal</figcaption>
 </figure>
 </div>
+<p>Though it may have a white screen.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ol type="1">
 <li>For <strong>Windows</strong> you can go to your Start menu and type in <em>Git Bash</em> and launch it.</li>
 </ol>
 <p>It will look like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../images/gitbash-startup.png" class="img-fluid figure-img"></p>
+<p><img src="images/gitbash-startup.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Windows Git Bash</figcaption>
 </figure>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="the-terminal-prompt" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="the-terminal-prompt"><span class="header-section-number">1.3</span> The terminal prompt</h2>
 <p>When I launch my terminal, the commands inside it look like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">COMMA21617:~</span> ccm346$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The first part before the <code>~</code> is my computer name, and the part after is my username.</p>
-<blockquote class="blockquote">
-<p>I actually shorten my prompt name to <code>crit:~$</code> so you’ll see that in my examples. We’ll shorten yours later, too.</p>
-</blockquote>
-<p>Lastly we have the <code>$</code>. This is the “prompt” where you type commands. You type your commands AFTER the $ and then hit <strong>Return</strong> to execute them.</p>
-<p>When I give command instructions for you to type, I sometimes (but not always) include the <code>$</code> at the beginning to indicate this should go at the prompt in your terminal. DON’T TYPE IN THE $. For instance:</p>
-<p><code>$ pwd</code></p>
+<pre><code>COMMA21617:~ ccm346$</code></pre>
+<ul>
+<li>The first part before the <code>~</code> is my computer name</li>
+<li>The part after the <code>~</code> is is my username.</li>
+<li>Lastly we have the <code>$</code>. This is the “prompt” where you type commands. You type your commands AFTER the $ and then hit <strong>Return</strong> to execute them.</li>
+</ul>
+<p>If you see a direction for a command that includes an output, you might see the <code>$</code> before the command. DON’T TYPE IN THE $. For instance:</p>
+<pre><code>$ pwd
+/Users/ccm346/Documents/icj/myproject</code></pre>
 <p>Means you type in just “pwd” and then hit return.</p>
 </section>
 <section id="typing-vs-copypaste" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="typing-vs-copypaste"><span class="header-section-number">1.4</span> Typing vs copy/paste</h2>
-<p>I encourage you to type commands into your terminal instead of copy and pasting them from the lessons. Build muscle <em>and</em> mind memory. Typing a command wrong and then having to figure out why it broke will help you learn it and remember it. If you just copy and paste blindly, then you won’t learn anything other than command-c and command-v.</p>
+<p>I encourage you to type commands into your terminal instead of copy and pasting them from the lessons. Build muscle <em>and</em> mind memory. Typing a command wrong and then having to figure out why it broke will help you learn it and remember it. If you just copy and paste blindly, then you won’t learn anything other than <strong>command-c</strong> and <strong>command-v</strong>.</p>
 
 
 </section>

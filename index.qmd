@@ -23,24 +23,41 @@ You can see the chapter breakdown, but the book is more or less structured like 
 - Bootstrap: OMG, the web solved
 - Static apps: HFS, I can make it
 
-## A word about my lessons
+## Tips on reading this book
+
+I try to write this book so it is clear when you need to **do** something vs **read** something.
+
+### To-do steps
 
 For all my lessons I typically put directions for YOU to do in numbered lists:
 
 1. Do this thing.
 1. Then do that thing.
 
+---
+
 Sometimes there is code after or among the the directions, but it is in a code block with a grey background.
 
-1. Do this thing:
+1. Run this command:
 
 ```bash
-$ command --flag
-This is the output
+ls -al
 ```
 
-1. Then do the next thing.
-1. Sometimes the code will be in the bullet item itself, but still in a code block. Do this: `$ command`.
+---
+
+Sometimes I show a command and also show Terminal output. In this case, I include the `$` on the line with the command. The background is also not highlighted.
+
+```
+$ ls -al
+total 32
+drwxr-xr-x   3 ccm346  Users     96 Jul 12 16:12 .
+drwxr-xr-x@ 22 ccm346  Users    704 Jul 12 16:10 ..
+-rw-r--r--   1 ccm346  Users  15642 Jul 12 16:12 data.csv
+```
+
+### Not to-do things
+
 
 I typically use an unordered bullet list for explanations and other non-"do" things:
 
@@ -51,8 +68,6 @@ Regular paragraph text such as this one are usually an explanation, background o
 
 If **something is in bold** or IN ALL CAPS or _in italics for emphasis_ then there is usually a reason why, so pay attention.
 
-I try to be consistent about such things, but I'm human so sometimes I'm not.
-
 :::callout
 Sometimes I put unimportant but interesting side notes in callouts like this.
 :::
@@ -60,6 +75,8 @@ Sometimes I put unimportant but interesting side notes in callouts like this.
 ::: callout-important
 But sometimes I'll put important notes in these callout sections, too. I'll usually say if they are important in bold at the beginning, like this one.
 :::
+
+I try to be consistent about all such things, but I'm human so sometimes I'm not.
 
 ## Mac vs PC
 
@@ -73,6 +90,6 @@ I use macOS so most directions are from that perspective.
 
 ## PC
 
-Usually you can use **Cntl-whatever** no a PC as an equivalent to **Cmd-whatever** on a Mac. You can also use they Help menu to find they keyboard command no matter what playform you use.
+Usually you can use **Cntl-whatever** as a PC equivalent to **Cmd-whatever** on a Mac.
 
 :::
