@@ -6,7 +6,9 @@ Our goal for this lesson is to become familiar with a terminal and the Bash comm
 
 We'll also create your class folder, which you will use for the rest of the semester.
 
-> I use the terms "folder" and "directory" interchangeably here. They are the same thing.
+::: callout
+I use the terms "folder" and "directory" interchangeably here. They are the same thing.
+:::
 
 ## pwd
 
@@ -14,20 +16,20 @@ One of the hardest things to get a handle on when first working in the terminal 
 
 1. In your Terminal, type and execute:
 
-`$ pwd`
-
-> Remember to NOT type the `$`.
+```bash
+pwd
+```
 
 When I do this on my machine, here is what the command and response look like:
 
-```bash
-crit:~$ pwd
+```
+$ pwd
 /Users/ccm346
 ```
 
 Because I'm using my work computer my user directory is called "ccm346". Yours might be your name or part of your name. This user directory is called your "home directory". All of _your_ computer files are stored inside your home directory.
 
-When you launch a new terminal it usually puts you inside this directory.
+When you launch a new terminal it starts you out inside this directory.
 
 ## List directory
 
@@ -35,60 +37,57 @@ Let's see what is inside our home directory.
 
 1. Do this:
 
-`$ ls`
+```bash
+ls
+```
 
 This will list everything in the directory you are in. Mine looks like this:
 
-``` bash
-crit:~$ ls
-Applications			Music
-Applications (Parallels)	Pictures
-Audio				Public
-Box Sync			VirtualBox VMs
-Desktop				dumps
-Documents			gsutil
-Downloads			pspp.jnl
-Dropbox				trifacta
-Library				waller.csv.sav
-Movies
+```
+$ ls
+Applications		Library			google-cloud-sdk
+Creative Cloud Files	Movies			miniforge3
+Desktop			Music			thingy.html
+Documents		Pictures
+Downloads		Public
 ```
 
 It listed the names of all the folders and files of the directory I'm in. This is similar to opening a folder browser on your computer and then opening your home folder and looking inside of it.
 
-### Flags
+![Home directory](images/home-directory.png)
+
+## Flags
 
 But sometimes, I want to know more information about the files, like their modification date. To do this, we introduce something called **flags**, which add nuance or detail to a terminal command. They start with a dash, and you can pile them on, as I'll demonstrate.
 
 1. First, try this:
 
-`$ ls -l`
+```bash
+ls -l
+```
 
-> (That is dash L, not a number 1. Watch the spaces, too.)
+::: callout-important
+That is dash L, not a number 1. Watch the spaces, too.
+:::
 
 My output looks like this:
 
-``` Bash
+```
 crit:~$ ls -l
-total 15880
-drwxr-xr-x   7 christian  staff      238 Jul 22  2015 Applications
-drwxr-xr-x@  6 christian  staff      204 Feb 14  2014 Applications (Parallels)
-drwxr-xr-x   5 christian  staff      170 Jun 12 14:53 Audio
-drwx------  22 christian  staff      748 Jul  4 10:17 Box Sync
-drwx------+ 24 christian  staff      816 Jul  7 19:01 Desktop
-drwx------+ 27 christian  staff      918 Jul  5 14:53 Documents
-drwx------+ 10 christian  staff      340 Jul  5 15:29 Downloads
-drwx------@ 38 christian  staff     1292 Jul  5 23:17 Dropbox
-drwx------@ 63 christian  staff     2142 Dec 10  2015 Library
-drwx------+  9 christian  staff      306 Jul  1 15:07 Movies
-drwx------+ 10 christian  staff      340 Jul  1 15:07 Music
-drwx------+ 31 christian  staff     1054 Jul  1 15:07 Pictures
-drwxr-xr-x+  4 christian  staff      136 Mar  4  2013 Public
-drwx------   8 christian  staff      272 Jul  8 09:48 VirtualBox VMs
-drwx------   4 christian  staff      136 Mar 26  2014 dumps
-drwxr-xr-x  14 christian  staff      476 Oct  1  2015 gsutil
--rw-r--r--   1 christian  staff    78626 Aug 13  2015 pspp.jnl
-drwxr-xr-x   5 christian  staff      170 Jul  4 20:24 trifacta
--rw-r--r--   1 christian  staff  8046293 Aug 13  2015 waller.csv.sav
+total 0
+drwx------@   5 ccm346  AUSTIN\Domain Users   160 Aug 21  2022 Applications
+drwx------@   4 ccm346  AUSTIN\Domain Users   128 Jul 10 10:54 Creative Cloud Files
+drwx------@  23 ccm346  AUSTIN\Domain Users   736 Jul 11 13:18 Desktop
+drwx------+  23 ccm346  AUSTIN\Domain Users   736 Jul 11 09:29 Documents
+drwx------@   8 ccm346  AUSTIN\Domain Users   256 Jul 12 13:06 Downloads
+drwx------@ 101 ccm346  AUSTIN\Domain Users  3232 Jun 13 14:23 Library
+drwx------+   6 ccm346  AUSTIN\Domain Users   192 Oct  3  2022 Movies
+drwx------+   4 ccm346  AUSTIN\Domain Users   128 Nov  9  2021 Music
+drwx------+   5 ccm346  AUSTIN\Domain Users   160 Jul  2 10:29 Pictures
+drwxr-xr-x+   4 ccm346  AUSTIN\Domain Users   128 Nov  5  2021 Public
+drwxr-xr-x   21 ccm346  AUSTIN\Domain Users   672 Jun 23 09:08 google-cloud-sdk
+drwxr-xr-x   15 ccm346  AUSTIN\Domain Users   480 Mar  3  2022 miniforge3
+-rw-r--r--    1 ccm346  AUSTIN\Domain Users     0 Nov 14  2022 thingy.html
 ```
 
 Well, that's a lot of info, and much of it jibberish. Here is what each part of those lines means ...
@@ -107,107 +106,128 @@ Let's add another flag to your command.
 
 1. Do this:
 
-`$ ls -al`
+```bash
+ls -al
+```
 
-My list got a TON longer:
+My list got a TON longer. I snipped out the middle part here:
 
 ```
 crit:~$ ls -al
-total 16144
-drwxr-xr-x+  71 christian  staff     2414 Jul  8 17:16 .
-drwxr-xr-x    5 root       admin      170 Feb 19 06:56 ..
--r--------    1 christian  staff        7 Nov  2  2014 .CFUserTextEncoding
--rw-r--r--@   1 christian  staff    30724 Jul  7 19:00 .DS_Store
-drwxr-xr-x    3 christian  staff      102 Jul  9  2014 .R
-drwxr-xr-x    3 christian  staff      102 Mar  5  2013 .RSA
--rw-r--r--    1 christian  staff      331 Jul 12  2014 .Rapp.history
--rw-r--r--    1 christian  staff      149 Jul 16  2015 .Rhistory
-drwx------  160 christian  staff     5440 Jul  7 18:59 .Trash
-drwxr-xr-x   14 christian  staff      476 Jan 17 11:46 .atom
--rw-------    1 christian  staff     7589 Jul  8 17:00 .bash_history
--rw-r--r--    1 christian  staff     1130 Oct  1  2015 .bash_profile
-drwxr-xr-x   15 christian  staff      510 Jul  7 19:06 .bash_sessions
--rw-r--r--    1 christian  staff      216 Jul  7 19:15 .bashrc
--rw-------    1 christian  staff    15745 Oct  1  2015 .boto
+total 352
+drwxr-x---+  54 ccm346  AUSTIN\Domain Users   1728 Jul 10 10:50 .
+drwxr-xr-x    7 root    admin                  224 Jun 24 13:21 ..
+srwxr-xr-x    1 ccm346  AUSTIN\Domain Users      0 Jul 10 10:50 .Box_EngineServer
+srwxr-xr-x    1 ccm346  AUSTIN\Domain Users      0 Jul 10 10:50 .Box_StreemToSync
+srwxr-xr-x    1 ccm346  AUSTIN\Domain Users      0 Jul 10 10:50 .Box_SyncToStreem
+srwxr-xr-x    1 ccm346  AUSTIN\Domain Users      0 Jul 10 10:50 .Box_UIServer
+-r--------    1 ccm346  AUSTIN\Domain Users      7 Nov  5  2021 .CFUserTextEncoding
+-rw-r--r--@   1 ccm346  AUSTIN\Domain Users  14340 Jul 11 09:31 .DS_Store
+-rw-r--r--    1 ccm346  AUSTIN\Domain Users     35 May 22 14:09 .Rapp.history
+-rw-r--r--@   1 ccm346  AUSTIN\Domain Users    510 Mar 30 11:45 .Renviron
+-rw-r--r--    1 ccm346  AUSTIN\Domain Users     73 Nov  5  2021 .Rhistory
 <snip>
-drwx------    4 christian  staff      136 Mar 26  2014 dumps
-drwxr-xr-x   14 christian  staff      476 Oct  1  2015 gsutil
--rw-r--r--    1 christian  staff    78626 Aug 13  2015 pspp.jnl
-drwxr-xr-x    3 christian  staff      102 Jul  8 17:20 test
-drwxr-xr-x    5 christian  staff      170 Jul  4 20:24 trifacta
--rw-r--r--    1 christian  staff  8046293 Aug 13  2015 waller.csv.sav
+drwx------@   5 ccm346  AUSTIN\Domain Users    160 Aug 21  2022 Applications
+drwx------@   4 ccm346  AUSTIN\Domain Users    128 Jul 10 10:54 Creative Cloud Files
+drwx------@  23 ccm346  AUSTIN\Domain Users    736 Jul 11 13:18 Desktop
+drwx------+  23 ccm346  AUSTIN\Domain Users    736 Jul 11 09:29 Documents
+drwx------@   8 ccm346  AUSTIN\Domain Users    256 Jul 12 13:06 Downloads
+drwx------@ 101 ccm346  AUSTIN\Domain Users   3232 Jun 13 14:23 Library
+drwx------+   6 ccm346  AUSTIN\Domain Users    192 Oct  3  2022 Movies
+drwx------+   4 ccm346  AUSTIN\Domain Users    128 Nov  9  2021 Music
+drwx------+   5 ccm346  AUSTIN\Domain Users    160 Jul  2 10:29 Pictures
+drwxr-xr-x+   4 ccm346  AUSTIN\Domain Users    128 Nov  5  2021 Public
+drwxr-xr-x   21 ccm346  AUSTIN\Domain Users    672 Jun 23 09:08 google-cloud-sdk
+drwxr-xr-x   15 ccm346  AUSTIN\Domain Users    480 Mar  3  2022 miniforge3
+-rw-r--r--    1 ccm346  AUSTIN\Domain Users      0 Nov 14  2022 thingy.html
 
 ```
 
-The `-a` flag means "all" files and folders, including hidden ones. When you normally open a folder on your computer, it only shows you some of the files and folders available. Hidden folders and files start with a period, and there can be a lot of them ... I have 50 of them in my home folder, far more than regular files and folders.
+The `-a` flag means "all" files and folders, including hidden ones. All the files or folders at the top that start with a dot like `.Box_EngineServer` are on the computer but not visible normally. There can be a lot of hidden them ... I have 40+, far more than regular files and folders.
 
 1. Let's list again with just the `-a` flag:
 
-`$ ls -a`
+```bash
+ls -a
+```
 
 Here is the top of my list:
 
-```bash
-(base) crit:~$ ls -a
+```
+crit:~$ ls -a
 .
 ..
+.Box_EngineServer
+.Box_StreemToSync
+.Box_SyncToStreem
+.Box_UIServer
 .CFUserTextEncoding
 .DS_Store
-.QtWebEngineProcess
-.R
-.Renviron
-.Rhistory
 ```
 
 But let's consider the first two returns:
 
-``` bash
-(base) crit:~$ ls -a
+```
+$ ls -a
 .
 ..
 ```
 
 These are two special designations in the Unix world. A single period `.` designates "this directory" and two periods `..` designates the "parent directory", i.e. the folder "above" this one. Every directory has these, so that's why the `ls -l` always shows two items inside a directory, even if it is "empty" of regular files or folders.
 
-We can use these period designations (there's probably a fancy word for them I don't know) to move around into different directories, and to manage files in our current directories. They become super important when we make "paths" between files in our programs and web pages.
+We can use these "dot" and "dot dot" designations to move around into different directories, and to manage files in our current directories. They become super important when we make "paths" between files in our programs and web pages.
 
 Let's see this "dot" designation in action.
 
 1. Do this command:
 
-`$ open .`
+```bash
+open .
+```
 
 Since you are inside your "home directory", this should open that folder in your Finder.
 
 ## cd
 
-Both Macs and PCs have a `Documents` folder inside each user's home folder. It's typically where you save all your stuff (better than your Desktop!). It's time for us to move in our Terminal to inside this Documents folder.
+Both Macs and PCs have a `Documents` folder inside each user's home folder. It's where you are supposed to save all your stuff. It's time for us to move in our Terminal to inside this Documents folder.
 
-The [cd](https://man.cx/cd) command is **change directory**.
+The [cd](https://man.cx/cd) command lets us **change directory**.
 
 1. Let's change directory into your `Documents`:
 
-`$ cd Documents`
+```bash
+cd Documents
+```
 
-> **AN IMPORTANT WORD** about iCloud, OneDrive an other cloud storage services. If you use one of these services you might regularly save your files in those folders so they are backed up. I WOULD NOT save projects from this class in a cloud drive because our projects can have thousands of tiny files (like 10,000+) that clog up syncing services. Don't worry, your work will be backed up on Github, which accounts for this.
 
 Let's do a review real quick. Where are you? What is your "working directory" now?
 
 1. Do pwd to check:
 
-`$ pwd`
+```bash
+pwd
+```
 
 It should be something like this ...
 
-`/Users/ccm346/Documents`
+```
+$ pwd
+/Users/ccm346/Documents
+```
 
 ... and it should end with _Documents_. If it doesn't, you aren't in the right place.
 
 1. Now use `ls` to list what is in your Documents folder.
 
-`$ ls`
+```bash
+ls
+```
 
 Perhaps you'll recognize some of the folders listed here if you regularly use your Documents folder.
+
+::: callout-important
+An **important** word about iCloud, OneDrive and other cloud storage services. If you have a choice, I WOULD NOT save projects from this class in a cloud drive because our projects can have thousands of tiny files (like 10,000+) that clog up syncing services and slow your computer. We'll back up your class work in other ways (on Github).
+:::
 
 ## mkdir
 
@@ -215,23 +235,29 @@ Next we are going to make a new empty folder to store all our class files using 
 
 1. Do this:
 
-`$ mkdir icj`
+```bash
+mkdir icj
+```
 
-1. Then use `ls` again to see your new directory amongst the others.
+2. Then use `ls` again to see your new directory amongst the others.
 
 Creating a directory like this is exactly the same as opening a desktop window on your Mac creating a new folder. Folders and directories are the same thing.
 
-1. Cool, let's make another directory inside of `icj`.
+3. Cool, let's make another directory inside of `icj`.
 
-`$ mkdir icj/newdirectory`
+```bash
+mkdir icj/newdirectory
+```
 
-1. Now you can do an `ls` on icj folder to see what is inside it.
+4. Now you can do an `ls` on icj folder to see what is inside it.
 
-`$ ls icj`
+```bash
+ls icj
+```
 
 It should show you `newdirectory`. Something like this:
 
-``` bash
+```
 crit:~$ ls icj
 newdirectory
 ```
@@ -244,11 +270,15 @@ If you try to name a directory with a **space** in it, you'll not get what you w
 
 1. Now, let's go inside the `icj` folder:
 
-`$ cd icj`
+```bash
+cd icj
+```
 
-1. Let's see what is inside:
+2. Let's see what is inside:
 
-`$ ls`
+```bash
+ls
+```
 
 That should show you a result with the `newdirectory` that we created earlier.
 
@@ -271,13 +301,21 @@ So to break that down:
 - Now that I'm inside **icj**, I did `ls` to see the contents of my current folder, and it showed me that **newdirectory** was indeed inside.
 - I did `pwd` to show that my current working directory (where I am) is inside the `icj` folder.
 
- Now let's get crazy:
+ Now let's get crazy. Let's list the files "above" where we are.
+ 
+ 1. Type and run this command.
 
-`$ ls ../`
+```bash
+$ ls ../
+```
 
-Remember I said that two periods means the parent directory? This should show you the list of files and folders in your Documents directory. Now, confirm where you are:
+Remember I said that two dots means the parent directory? This should show you the list of files and folders in your Documents directory.
 
-`$ pwd`
+2. Now, confirm where you are:
+
+```bash
+pwd
+```
 
 Which should still be `icj`. So you had listed the files for the folder "above" you.
 
@@ -303,4 +341,6 @@ An absolute path includes the domain or computer name. If I reference `http://ut
 
 ### The home directory shortcut
 
-There is also a path shortcut called `~/` that stands for "the home directory of the logged in person". You might see that referenced in paths like `~/Documents/` but that would really take me to `/Users/ccm346/Documents/` on my computer. But what's cool is the same `~/Documents/` path works on YOUR computer, even though your user directory is different.
+There is also a path shortcut called `~/` that stands for "the home directory of the logged in person". You might see that referenced in paths like `~/Documents/` but that would really take me to `/Users/ccm346/Documents/` on my computer. But what's cool is the same `~/Documents/` path works on YOUR computer, even though your user directory name is different.
+
+

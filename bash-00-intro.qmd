@@ -4,7 +4,7 @@ This lesson is a beginner's guide to using **command-line interface** tools for 
 
 I use a Mac, and there are some differences for Windows users. The first major difference is Windows users have to install Git (and Git Bash, which comes with it) before we can go much further.
 
-::: {.callout-caution collapse="true"}
+::: {.callout-caution}
 ## Windows uses must install Git first
 
 Windows users have to install Git and Git Bash before doing moving forward with this lesson. These next few steps do that.
