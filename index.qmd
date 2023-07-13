@@ -44,6 +44,8 @@ Sometimes there is code after or among the the directions, but it is in a code b
 ls -al
 ```
 
+Note that you can roll your cursor over that highlighted block and use the copy button at the top right to copy all the commands within it. **I encourage you to type commands** unless they are super long. You learn better that way.
+
 ---
 
 Sometimes I show a command and also show Terminal output. In this case, I include the `$` on the line with the command. The background is also not highlighted.
@@ -78,17 +80,17 @@ But sometimes I'll put important notes in these callout sections, too. I'll usua
 
 I try to be consistent about all such things, but I'm human so sometimes I'm not.
 
-## Mac vs PC
+## macOS vs Windows
 
-On some occaisions I may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.
+On some occasions I may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.
 
 ::: {.panel-tabset}
 
-## Mac
+### macOS
 
 I use macOS so most directions are from that perspective.
 
-## PC
+### Windows
 
 Usually you can use **Cntl-whatever** as a PC equivalent to **Cmd-whatever** on a Mac.
 

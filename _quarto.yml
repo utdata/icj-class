@@ -10,16 +10,15 @@ book:
   chapters:
     - href: index.qmd
       text: Home
-    - part: bash-00-intro.qmd
+    - part: start-00-intro.qmd
       chapters:
-        - bash-01-terminal.qmd
-        - bash-02-move.qmd
-        - bash-03-view.qmd
-        - bash-04-commands.qmd
+        - start-01-terminal.qmd
+        - start-02-move.qmd
+        - start-03-setup.qmd
     - part: git-00-intro.qmd
       chapters:
-        - git-01-clone.qmd
-        - git-02-branch.qmd
+        - git-01-project.qmd
+
     - part: html-00-intro.qmd
       chapters:
         - html-01-class.qmd
@@ -63,6 +62,11 @@ book:
     - a-google-fonts.qmd
     - a-project.qmd
     - a-macos-shell.qmd
+    - a-bash-files.qmd
+    - a-bash-commands.qmd
+    - a-bash-profile.qmd
+    - a-git-share.qmd
+    - a-git-branch.qmd
 
 format:
   html:
