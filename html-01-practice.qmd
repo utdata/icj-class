@@ -1,5 +1,13 @@
 # HTML practice
 
+
+::: callout
+- Add signals to save and push git
+- Mid-update. Need to work HTML/CSS together
+:::
+
+
+
 ::: callout-important
 In your Canvas course you'll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material should be mostly the same.
 :::
@@ -29,17 +37,19 @@ The goal of this assignment is to:
 
 ### Envision success
 
-To meet the learning objectives, you'll be "coding up" this recipe page with HTML. When this portion is done, it will look like this in your browser:
+To meet the learning objectives, you'll be "coding up" a recipe with HTML. When this portion is done, it will look like this in your browser:
 
 ![HTML gif](images/html-done.gif)
 
-Since the gif moves all about, here is a [PNG of the rendered HTML](images/html-done.png).
+Don't worry ... we'll make it prettier in the next chapter.
+
+Since that gif moves all about, here is a [PNG of the rendered HTML](images/html-done.png).
 
 You might also look at the recipe that inspired the lesson: [On NYT Cooking](https://cooking.nytimes.com/recipes/1015825-creamy-macaroni-and-cheese) | [Screenshot](images/ny_mc_cut.jpg).
 
 ### Resources
 
-You have the internet at your disposal for help. Here are some resources you might find useful.
+You have the internet at your disposal for help, though I ask that you not use Copilot or any AI tools. Here are some resources you might find useful.
 
 - You can review steps in the [Codecademy Learn HTML](https://www.codecademy.com/learn/learn-html) course.
 - You can look up specific resources in the [W3 Schools HTML](https://www.w3schools.com/html/default.asp) documentation. [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML) also has good docs.
@@ -47,117 +57,199 @@ You have the internet at your disposal for help. Here are some resources you mig
 
 ## Project setup
 
-This is the same project set up we did in our last couple of chapters [Project setup](git-01-project.qmd) and [Using Git](git-02-cycle.qmd) but applied to this new project.
+You need to create a new project folder like you did in our last couple of chapters [Project setup](git-01-project.qmd) and [Using Git](git-02-cycle.qmd) but applied to this new project.
 
 1. Create a project folder and name it `yourname-html-css`.
 1. Add your `README.md` and `.gitignore` files, including the contents.
 1. Initiate your local repo, create your Github repo and connect them.
 
-(Yes, I didn't tell you exactly how to do that, because you need to use documentation and your smarts to figure it out!!!)
-
 ## Build a recipe web page
 
-We're going to build the HTML structure for the recipe page noted above.
+We're going to build the HTML structure for the recipe page noted above. I'll supply the text that you need to turn into HTML markup. While there are AI tools that could do all that work for us, you wouldn't learn chat-shit from that. We're going to code this up with VS Code so we can talk about the elements as we go along.
+
+In our first pass here, we'll mark up the text items for what physically are ... their HTML bone structure. We'll add some semantic tags a little later.
+
+### Create the file
 
 1. Create and save a new HTML document called `recipe.html`. You can use the `touch` command to do this.
 
 Next we need the basic elements required for an HTML 5 document. There is a super easy way to do this thanks to a special thing in VS Code called [Emmet](https://code.visualstudio.com/docs/editor/emmet).
 
-1. At the top of the file, type `html` and you'll see some selections come up. Use the arrow key on your keyboard to choose the one `html:5` and hit return. You _should_ get all the boilerplate elements you need for an HTML page.
+1. At the top of the file, type `html` and you'll see some selections come up. Use the arrow key on your keyboard to choose the option `html:5` and hit return. You _should_ get all the boilerplate elements you need for an HTML page.
 
 ![HTML boilerplate gif](images/html-boilerplate.gif)
 
 ### Collect the text
 
-Now to save time, we'll get the unstyled text for our document.
+Now to save some mindless typing, I've saved a copy of the unstyled text for you.
 
-1. Control-click on [this link](resources/html-practice-text.txt) to open the text we need in a browser, then highlight and copy/paste the contents.
+1. Control-click on [this link](resources/html-practice-text.txt) to open the text we need into a browser window, then highlight and copy/paste the contents.
 2. Place the contents in between the `<body>` tags of your document.
 
-### Download image
+### Headlines
 
-Now we'll download the photo we will need.
+The first line in our text is the headline of the article, and that next needs to be in two places in our HTML document:
+
+1. **Copy** the text "Creamy Baked Macaroni and Cheese" and paste it inside a `<title>` tag in the head of the document. The `<title>` tag are the words that show on the tab of your browser.
+1. Go back to the body of the text and add `<h1>` tags around that line to make a main headline.
+
+When you did this, VS Code likely added both the opening and closing `h1` tags, and you had to cut 'n' paste or delete/retype the closing tag in the correct place. Let's introduce [Emmet](https://docs.emmet.io/), which is a shorthand syntax and tool for programmers to help write code blocks, and it is [baked into VS Code](https://code.visualstudio.com/docs/editor/emmet).
+
+The next line "Brought to you by New York Times Cooking" we'll use as a `h2` headline, and we'll want to use an anchor tag around "New York Times Cooking" to link to the original recipe. We'll use Emmet to do it.
+
+There are two parts to using Emmet to mark up existing code:
+
+- You highlight the text
+- You invoke the Command Pallette in VS code and choose the **Emmet: Wrap with Abbreviation** function
+- Then you choose the tag or tags to apply based on Emmet shorthand. The shorthand isn't hard as it is based on the tags themselves without the angle brackets.
+
+Let's show an example of how it works. I do this in two steps ... I apply the `<h2>` tag to all of the text, and then apply an anchor tag `<a href="">` to just the name of the publication.
+
+Watch what happens to the code (line 11) as I choose which tags to apply.
+
+![Emmet use on headline](images/emmet-wrap-head-a.gif)
+
+Here is how you do the same:
+
+1. Highlight the text "Brought to you by New York Times Cooking".
+2. Do **command-shift-p** to bring up the Command Palette in VS Code. (Control-shift-p for Windows.)
+3. Begin typing in the text "Emmet: Wrap" and you'll see the list of commands filter down. Use your arrow keys to select **Emmet: Wrap with Abbreviation** and hit return. That list of commands will go away but a new box will appear so you can type in the next command.
+4. Type in the text `h2` and hit return. This will wrap your text in both the beginning and ending `<h2>` tags.
+5. Now, do the same thing to apply the anchor tag around the text "New York Times Cooking". The Emmet tag for anchor is just `a`.
+
+### Adding class
+
+The next line of our file is the byline for the recipe article. The byline is a simple text element, so it should be inside a `<p>` tag, but we will add a "class" to this element so we can target it later as CSS.
+
+I'm not going to get into the difference between `id=` and `class=` here, as that is the next lesson, but I do want to show how Emmet allows us to add a class while marking up text. This time I'll give the steps, then show it.
+
+1. Highlight the text "By Eric Kim".
+2. Do **command-shift-p** to bring up the Command Pallette.
+3. The Emmet: Wrap with Abbreviation command is probably at the top since you used it last, so you can just hit **Return**.
+4. For the Emmet shorthand, use `p.byline`.
+
+The `p` part is to add the `<p>` tag. The `.` says to add a "class" designation to the element, and `byline` is the name of the tag. If we wanted to add an `id=` instead, it would be `p#byline`.
+
+![Emmet wrap with class](images/emmet-p-class.gif)
+
+For the last part of the byline here, you need to wrap the authors name with a link to his NYT profile.
+
+5. Use Emmet to create the `a` tag around "Eric Kim" and use the provided URL as the `href`.
+
+### Live server
+
+You will want to occasionally check to see how your code is displaying in a browser to make sure everything is working as expected. One way is to open the html file in Chrome (File > Open File) and the refresh each time you want to see an update. But there is a better way: When we did computer setup you should've installed a VS Code extension called "Live Server".
+
+1. Click on the "Go Live" button at the bottom-right of VS Code
+
+![go live](images/html-go-live.png)
+
+This will create a web server on your computer and then open the current file in your default browser. As you make changes to the HTML and save it, the page _automagically updates_ in your browser.
+
+Your page should look something like this at this point:
+
+![Early look](images/html-before-dl.png)
+
+I would now get in the habit of saving your work after each section we do here, and then check to see how it looks.
+
+### Description lists
+
+This next bit of text we need to put together as a [description list](https://www.w3schools.com/html/html_lists_other.asp), which is a special list construct where you have a "term" and a "description". Look at that W3schools link to see how it works.
+
+The description list is a little different because the list "items" come in two parts, the `<dt>` for the "term" and the `<dd>` for the description for the term. We can use Emmet to get us real close with the text we have, but we'll need to do a little correction at the end.
+
+With this Emmet command we'll introduce nested elements. By using the Emmet shorthand `dl>dt*` I'm saying "Wrap all of this with a `<dl>` tag, then inside of that (the `>`) wrap eleents with `<dt>` and then do it individually for all of them (the `*` part.)
+
+Watch what happens to the text as I add each part of the command. Note I don't quite get exactly what I want since I can't alternate the `<dt>` and `<dl>` tags (or at least I don't know how), so I have to fix those manually.
+
+![Emmet description list](images/emmet-wrap-dl.gif)
+
+Now you need to do the same with your code.
+
+1. Use the emmet shorthand `dl>dt*` to wrap create your description list.
+2. Manually fix the descriptions to use `<dd>` tags.
+
+Your page should look like this when you are done.
+
+![Page after description lists](images/html-after-dl.png)
+
+### Images
+
+In our text we have a caption for a photo, but not the photo itself. We need to download it.
 
 1. Click on the download link below.
 
 ::: {.callout-note appearance="minimal"}
-<i class="bi bi-download"></i> [Download this photo](resources/my_mac_cheese.jpg){download="my_mac_cheese.jpg"}
+<i class="bi bi-download"></i> [Download this photo](resources/nyt_mac_cheese.jpg){download="nyt_mac_cheese.jpg"}
 :::
 
-2. Save the photo into your project folder right next to `recipe.html`.
+2. Save (or move) the photo into your project folder right next to `recipe.html`.
 
-### Marking up text
+#### About figures
 
-We have existing text here that we need to turn into HTML markup. While we could use other tools to do ALL that work for us, you wouldn't learn chat-shit from that. We're going to code this up with VS Code so we can talk about the elements as we go along.
-
-#### Headlines
-
-The first line in our text is the headline of the article, and that next needs to be in two places in our HTML document:
-
-1. **Copy** the text "Grilled Chicken Salad with Romesco Sauce" and paste it into a `<title>` tag in the head of the document. The `<title>` tag are the words that show on the tab of your browser.
-1. Go back to the body of the text and add the open and close `<h1>` tags around that line to make a main headline.
+One of your Codecademy lessons was about Semantic HTML, we we'll apply some of that here. From our lessons, we know that the `<img src="">` tag can display an image, but to make this image accessible and useful to all users of the web, we need to add an `alt=` attribute. It's also best to wrap both the image and caption in a semantic `<figure>` tag.
 
 
+So far, we've used Emmet to wrap existing code, but we can also write shell code using emmet, and then type in the elements, tabbing through different parts to fill them in.
 
-#### Image
+Again, this might be helpful to see before you do it on your own. This is me adding the figure, img and figcaption tags we just talked about, and then filling the values.
 
-1. Below the `<h1>` tag, add an `<img>` tag with the `src=""` going to the photo you just saved in the same folder. Note that you can just type `img` in your editor and then use some [tab completion](https://code.visualstudio.com/docs/editor/intellisense) to fill out the required elements of the tag.
-1. Be sure to also add and ["alt" attribute](https://www.w3schools.com/tags/att_img_alt.asp) to your `img` tag, which allows screen readers (for the blind) to understand what the image is. You might say "recipe photo" for this one.
-1. Put a `<p>` tag around the text that starts with "Source".
-1. Add an `<a href>` tag around the word `Epicurious.com` and add this url:
 
-`https://www.epicurious.com/recipes/food/views/grilled-chicken-salad-with-romesco-sauce`
+![Create figure with Emmet](images/emmet-figure.gif)
 
-1. Add a [target attribute](https://www.w3schools.com/tags/att_a_target.asp) to open the link into a new window. This can come directly after the href url attribute.
-1. Put `<p>` tags around the introductory paragraph that starts with "Purée".
+OK, here are the steps for you:
 
-### Check your work
+1. On a blank line above the caption in your text, add the following emmet shorthand, then use tab to complete it.
 
-**HELPFUL TIP:** You will want to occasionally check to see how your code is displaying in a browser to make sure everything is working as expected. One way is to open the html file in Chrome (File > Open File) and the refresh each time you want to see an update. But there is a better way: When we did computer setup you should've installed a VS Code extension called "Live server". If you click on the "Go Live" button at the bottom-right of VS Code, it will start a web server on your computer and then open the current file in your default browser. As you make changes to the HTML and save it, the page _automagically updates_ in your browser.
-
-![go live](images/html-go-live.png)
-
-### Back to the markup
-
-1. For the section about Yield (about 6 lines), create a `<div>` with an `id` attribute of "yield".
-1. Create a [description list](https://www.w3schools.com/html/html_lists_other.asp) for the following set of information, with the text before the colon used as the `<dt>` term and text after the colon as the `<dd>` description.
-
-``` text
-Yield: 4 servings
-Active Time: 45 minutes
-Total Time: 1 hour
+```html
+figure>img+figcaption
 ```
 
-1. Create a new `<div>` with an `id="ingredients"` that starts before the  "Ingredients" headline, and closes right before "Preparation".
-1. Before we build the `<h2>` tag around the "Ingredients" headline, let's learn more about [Emmet](https://docs.emmet.io/) and how it can help us. Emmet is a shorthand syntax and tool for programmers to help write code blocks, and it is [baked into VS Code](https://code.visualstudio.com/docs/editor/emmet). You won't be wowed at this example, but the next one will bring both shock and awe.
-1. Highlight the "Ingredient" header. Do **command-shift-p** to bring up the Command Palette. (Control-shift-p for Windows.) Begin typing in the text "Emmet: Wrap" and you'll see the list of commands filter down. Use your arrow keys to select **Emmet: Wrap with Abbreviation** and hit return. That list will go away but the box will remain so you cantype in the next command. Type in the text `h2` and hit return. This will wrap your text in both the beginning and ending `<h2>` tags.
+2. Use your tag key to type in the path to the image, then the alt attribute as show in the gif above.
 
-Here is what that more or less looks like:
+### Paragraphs
 
-![emmet h2](images/emmet-h2.gif)
+Our next bit of text in our file is the recipe introduction, which is just text. We want to mark this up as paragraph and class the element as "intro".  You did this before with the byline.
 
-1. Use the same method to wrap the heading "For the chicken:" with an `<h3>` tag.
-1. Now let's really rock some Emmet for the unordered list. Highlight the next five lines from "skinless chicken" to "vegetable oil". Do your **Command-shift-p** for the Command Palette and this time we want a little different command: **Emmet: Wrap Individual Lines with Abbreviation**. Now, type in the text below then hit return:
+1. Code the intro with the emmet shorthand `p.intro`.
 
-`ul>li*`
+If you had multiple paragraphs, you could highlight all the text and use the shorthand `p*` to code each individual paragraph.
 
-1. All the lines of code should've been wrapped in a `<ul>` and `<li>` tags. Wasn't that bad ass? Here is an [Emmet Cheat Sheet](https://docs.emmet.io/cheat-sheet/) for other commands. We'll use a few more before we're done.
-1. Now repeat the process for the `<h3>`'s and unordered lists for the rest of the ingredients section.
-1. For the Preparation section, you'll want to wrap the entire section in a `<div>` with an `id` attribute called "preparation".
-1. Wrap each internal headline (they end with a colon) in an `<h3>` tag.
-1. For each set of steps (except "Do ahead" steps) in the different preparation sections, turn them into ordered lists. Use the **Emmet: Wrap Individual Lines with Abbreviations** again, but change the list style to this:
+### Unordered lists
 
-`ol>li*`
+Our ingredients list needs to coded where the headline is an H3 tag and the actual ingredients are in an unordered list.
 
-1. On the lines that say "Do ahead", make those paragraphs with `<p>` tags instead of of ordered lists. Add a `<strong>` tag around the label "Do ahead".
-1. Code up the Nutrition section in a similar way by putting the whole section in a `<div>` with an `id` of "nutrition", and then set the items as an unordered list.
+1. Code the "Ingredients" subhead as an H3
+2. Use the emmet Wrap with Abbreviation with the shorthand `ul>li*` to code the ingredients list.
+3. Skip to the "Nutrition" section and do the same there.
+
+### Ordered lists
+
+The preparation steps are similar to the ingredients and nutrition, but the items need to be in an "ordered" list to show the step numbers.
+
+1. Code the "Preparation" subhead as an H3
+2. Use Wrap with Abbreviation on the steps, with `ol>li*`
+
+### Semantic blocks
+
+Now, if you check your live server again your page should look like the examples we started with at the beginning of this lesson, but we aren't quite done yet.
+
+In the Semantic HTML lesson you learned that we use some HTML tags to designate parts of pages so screen readers and other enabling software can understand our pages. We can also utilize those tags later when we style pages with CSS.
+
+While we don't have a full website page here with navigation and such, I want you to mark up the parts of the pages that we do have:
+
+1. Add an `<article>` tag that encapsulates everything within our `<body>` thus far. So it should start right after the opening `<body>` tag and close right before the closing `</body>` tag.
+2. Use a `<header>` tag two wrap from before the main headline to past the definition list. In other words, stop it before the `<figure>` tag, which we've already added.
+3. Add separate `<section>` tags around the Ingredients, Preparation and Nutrition sections.
+4. Add a new `<footer>` and child `<p>` tags **after** the closing `</article>` tag. Inside the paragraph tag, add the text "A class project by First Last" but with yoru name.
+
 
 ## Commit and push your code
 
 Save, add, commit and the push your code to your repo in Github. To review, the steps are:
 
-1. Use `git status` to check the status of your files. You probably have two untracked files.
-1. Use `git add .` to add all the untracked files files. (If you didn't want all of them, would would specify them: `git add {file/path} {file/path}`.)
+1. Use `git status` to check the status of your files. You probably have two untracked files, your html and your image.
+1. Use `git add .` to add all the untracked files.
 1. Use `git commit -m "your message here"` to commit your changes. Write your own message that explains what you have done with this commit.
 1. Use `git push origin main` to push them to Github.
 

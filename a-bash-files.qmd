@@ -8,7 +8,7 @@ Let's learn some more command-line juju for working with files. These commands w
 
 ## Set up
 
-Let's make sure we are in our class folder. (This is review from [Moving Around](bash-02-move.qmd)).
+Let's make sure we are in our class folder. (This is review from [Moving Around](start-02-move.qmd)).
 
 1. Make sure you are in your icj project folder:
 
