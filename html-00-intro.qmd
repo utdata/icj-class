@@ -1,9 +1,0 @@
-# HTML
-
-- [Codecademy HTML tutorial](https://www.codecademy.com/learn/learn-html)
-  - Elements and Structure
-    - Introduction to HTML
-    - HTML Document Standards
-- [HTML class](html-01-class.qmd)
-- [HTML practice](html-02-practice.qmd)
-- Quiz in Canvas

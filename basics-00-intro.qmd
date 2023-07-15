@@ -1,0 +1,25 @@
+# The basics
+
+If I had to boil this class into its simplest terms it would be: It's about building web pages.
+
+Along the way we learn about programming tools, best practices and such, but the thing we _do_ is build websites.
+
+And again, in simplest terms, a web page is created using three languages. I like to explain those as if I was explaining a human body. The analogy is actually built into the HTML spec, as you'll see.
+
+The languages go like this:
+
+- **HTML** is the skeleton of a web page. It gives it structure.
+- **CSS** is like the DNA of a web page that describes how it looks. Color, font and things like that.
+- **JavaScript** is the muscle of a web page, controlling all things that move and interact with each other.
+
+Throughout the class we'll tackle each of these languages, build on them and learn tools to help us use them.
+
+When it comes to these languages there are many tutorials you can use to learn the syntax so I'm not going to reinvent them for this class.
+
+So this is how you proceed with the next section of this class:
+
+1. Do the Codecademy tutorials outlined. This is where you learn the code structure.
+2. Do the "in-class" assignment, which is a guided walk through of using the code.
+3. Do the "mastery" assignment, where you use what you've learned in a new project.
+4. Take the quiz.
+
