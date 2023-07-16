@@ -469,37 +469,49 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>For this practice assignment you are coding a story in HTML as indicated below. Points will be taken off for improper syntax and indentation. Make clean code.</p>
-<p>There are some tasks as part of this assignment where we have NOT covered the specific HTML tag in class. That’s on purpose. You will need to Google it, as that is part of the developer process.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Draft is done</p>
+</div>
+</div>
+</div>
+<p>For this mastery assignment you are coding a story in HTML as indicated below. Points will be taken off for improper syntax and indentation. Make clean code.</p>
+<p>There are some tasks within this assignment where we are skills or tags we have not yet covered. That’s on purpose. You will need to Google it, as that is part of the developer process.</p>
 <section id="getting-started" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">7.1</span> Getting started</h2>
+<p>See the <a href="./git-01-project.html">Project setup</a> and <a href="./git-02-cycle.html">Using Git</a> chapters if you need a review on the project setup.</p>
 <ul>
-<li>Inside your <code>icj</code> folder, you’ll need to create a new project folder, called <code>yourname-html-css-practice</code>.</li>
+<li>Inside your <code>icj</code> folder, create a new project folder, called <code>yourname-html-css-mastery</code>.</li>
 <li>Create a <code>README.md</code> file using proper Markdown with a title, the assignment name and the due date.</li>
-<li>Create a <code>.gitignore</code> file like we did in class. Make sure to go to gitignore.io and paste the code from there like we did in class.</li>
-<li>Use the <a href="https://github.com/utdata/icj-class/blob/main/start_a_project.md">git cycle</a> to add and commit the files.</li>
+<li>Create a <code>.gitignore</code> file like we did in practice, using gitignore.io to include VisualStudioCode, macOS and Windows.</li>
+<li>Use the git cycle to add and commit the files.</li>
 <li>Create a new repo in Github with the same name as your local folder. Do NOT check the boxes there for the readme or gitignore since you created them locally.</li>
-<li>After you create the repo you’l get a copule of sets of directions. You want the second set that starts with <code>git remote add ...</code>. It makes the connect, changes your branch name to <code>main</code> (if needed) and pushes the content. If you copy/paste the three commands together, not you might need to press return to run the last command.</li>
+<li>After you create the online repo, connect the two with the <code>git remote add</code> command shown in your Github repo.</li>
+<li>Push your changes from your local machine to Github.</li>
 <li>Refresh our Github page to make sure everything worked.</li>
 </ul>
 </section>
 <section id="the-assignment-requirements" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="the-assignment-requirements"><span class="header-section-number">7.2</span> The assignment requirements</h2>
 <ul>
-<li>In your repo, create a new file named <code>practice-story.html</code>. Use Emmet to put the HTML5 code in that file, and make sure it has all the proper HTML5 tags like doctype, title, head, body, etc.</li>
-<li>Use <a href="html-practice-text.txt">this text file</a> for the starting body text.</li>
+<li>In your repo, create a new file named <code>story.html</code>. Use Emmet to put the HTML5 code in that file, and make sure it has all the proper HTML5 tags like doctype, title, head, body, etc.</li>
+<li>Use <a href="resources/html-mastery-text.txt">this text file</a> for the page content.</li>
 <li>Code the overline (the text “OPEN THREADS”) as an <code>&lt;h4&gt;</code>.</li>
 <li>Code the main headline and the subhead with the proper hierarchy of header tags. (i.e., the main headline should be bigger than the subhead).</li>
-<li>Code the subhead that is in the story “Under the radar” with the proper hierarchy of header tags.</li>
+<li>Code the subhead that is inside the story “Under the radar” as an <code>&lt;h3&gt;</code> tag, which is typically for that display.</li>
 <li>Put the byline in a <code>&lt;p&gt;</code> tag and properly link to the included Twitter handle.</li>
 <li>Put the date in a <code>&lt;span&gt;</code> tag.</li>
-<li>After the byline, add an image tag. Download <a href="https://github.com/utdata/icj-class/blob/main/html/spurs.jpg">this image</a> and save it to your yourname-html-css-practice folder and then use it as the src in your image tag.</li>
-<li>Create a credit line with the text “Soobum Im / USA TODAY Sports” in a <code>&lt;p&gt;</code> tag with a class of “credit” under the image.</li>
-<li>Style all the text in <code>&lt;p&gt;</code> tags. Each paragraph of text should have it’s own beginning <code>&lt;p&gt;</code> and ending <code>&lt;/p&gt;</code> tag.</li>
+<li><a href="resources/spurs.jpg" download="spurs.jpg">Download this photo</a> and save/move it in your project folder.</li>
+<li>After the byline, add an semantically-correct image and caption using the downloaded image above and the “Soobum Im / USA TODAY Sports” text.</li>
+<li>Style all the story text in <code>&lt;p&gt;</code> tags. Each paragraph of text should have it’s own beginning <code>&lt;p&gt;</code> and ending <code>&lt;/p&gt;</code> tag.</li>
 <li>There is a quoted text paragraph that starts with “Granted, not every starting …”. Put that in a <code>blockquote</code> tag. Don’t know that one? Look it up.</li>
-<li>Add a hypertext link to the text “ranking the starting five line-ups” to <a href="https://bleacherreport.com/articles/2789035-ranking-every-nba-teams-projected-starting-5-after-free-agency#slide7">this url</a>, opening in a new window.</li>
-<li>Use an ORDERED list for the ranking list of teams in the middle of the story, but it should start with the Philadelphia 76ers as number 5. Don’t know how to do that? Figure it out.</li>
-<li>The last two paragraphs are not really part of the article, but instead the opening for the comments section. Put the text within their own <code>&lt;p&gt;</code> tags and then wrap them both with a <code>&lt;div&gt;</code> with an <code>id="comment-notes"</code> attribute. That way you can style this section later.</li>
+<li>Add a hypertext link to the text “ranking the starting five line-ups” that links to <a href="https://bleacherreport.com/articles/2789035-ranking-every-nba-teams-projected-starting-5-after-free-agency#slide7">this url</a>, opening in a new window.</li>
+<li>Use an ORDERED list for the ranking list of teams in the middle of the story, but it should start with the Philadelphia 76ers as number 5. Don’t know how to do that? Google it.</li>
+<li>The last two paragraphs are not really part of the article, but instead the opening for the comments section. Make sure that is semantically separate. Put the text within their own <code>&lt;p&gt;</code> tags.</li>
 </ul>
 
 

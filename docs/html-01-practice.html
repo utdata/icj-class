@@ -530,10 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<ul>
-<li>Add signals to save and push git</li>
-<li>Mid-update. Need to work HTML/CSS together</li>
-</ul>
+<p>Draft is done</p>
 </div>
 </div>
 </div>
@@ -547,7 +544,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In your Canvas course you’ll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material should be mostly the same.</p>
+<p>In your Canvas course you’ll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as I follow this book, but just talk out and <em>show</em> the steps.</p>
 </div>
 </div>
 <section id="tutorials" class="level2" data-number="6.1">
@@ -630,24 +627,23 @@ Important
 <h3 data-number="6.4.2" class="anchored" data-anchor-id="collect-the-text"><span class="header-section-number">6.4.2</span> Collect the text</h3>
 <p>Now to save some mindless typing, I’ve saved a copy of the unstyled text for you.</p>
 <ol type="1">
-<li>Control-click on <a href="resources/html-practice-text.txt">this link</a> to open the text we need into a browser window, then highlight and copy/paste the contents.</li>
-<li>Place the contents in between the <code>&lt;body&gt;</code> tags of your document.</li>
+<li>Control-click on <a href="resources/html-practice-text.txt">this link</a> to open the text we need into a browser window, then highlight and copy the contents.</li>
+<li>Paste the contents in between the <code>&lt;body&gt;</code> tags of your <code>recipe.html</code> document.</li>
 </ol>
 </section>
 <section id="headlines" class="level3" data-number="6.4.3">
 <h3 data-number="6.4.3" class="anchored" data-anchor-id="headlines"><span class="header-section-number">6.4.3</span> Headlines</h3>
 <p>The first line in our text is the headline of the article, and that next needs to be in two places in our HTML document:</p>
 <ol type="1">
-<li><strong>Copy</strong> the text “Creamy Baked Macaroni and Cheese” and paste it inside a <code>&lt;title&gt;</code> tag in the head of the document. The <code>&lt;title&gt;</code> tag are the words that show on the tab of your browser.</li>
+<li><strong>Copy</strong> the text “Creamy Baked Macaroni and Cheese” and paste it inside a <code>&lt;title&gt;</code> tag in the head of the document. The <code>&lt;title&gt;</code> tag is what’s displayed in the tab of your browser.</li>
 <li>Go back to the body of the text and add <code>&lt;h1&gt;</code> tags around that line to make a main headline.</li>
 </ol>
-<p>When you did this, VS Code likely added both the opening and closing <code>h1</code> tags, and you had to cut ‘n’ paste or delete/retype the closing tag in the correct place. Let’s introduce <a href="https://docs.emmet.io/">Emmet</a>, which is a shorthand syntax and tool for programmers to help write code blocks, and it is <a href="https://code.visualstudio.com/docs/editor/emmet">baked into VS Code</a>.</p>
-<p>The next line “Brought to you by New York Times Cooking” we’ll use as a <code>h2</code> headline, and we’ll want to use an anchor tag around “New York Times Cooking” to link to the original recipe. We’ll use Emmet to do it.</p>
-<p>There are two parts to using Emmet to mark up existing code:</p>
+<p>When you created the <code>&lt;h1&gt;</code> tag, VS Code likely added both the opening and closing <code>h1</code> tags, and you had to cut ‘n’ paste or delete/retype the closing tag in the correct place. Let’s introduce <a href="https://docs.emmet.io/">Emmet</a>, which is a shorthand syntax and tool for programmers to help write code. It is <a href="https://code.visualstudio.com/docs/editor/emmet">baked into VS Code</a>.</p>
+<p>We’ll use the next line “Brought to you by New York Times Cooking” as a <code>h2</code> headline, and we’ll want to use an anchor tag around “New York Times Cooking” to link to the original recipe. We’ll use Emmet to help use write the code.</p>
+<p>There are two parts to using Emmet to mark up existing code, after highlighting your text:</p>
 <ul>
-<li>You highlight the text</li>
-<li>You invoke the Command Pallette in VS code and choose the <strong>Emmet: Wrap with Abbreviation</strong> function</li>
-<li>Then you choose the tag or tags to apply based on Emmet shorthand. The shorthand isn’t hard as it is based on the tags themselves without the angle brackets.</li>
+<li>You invoke the Command Palette in VS code and choose the <strong>Emmet: Wrap with Abbreviation</strong> function</li>
+<li>Then you type in the tag or tags to apply based on Emmet shorthand. The shorthand isn’t hard as it is based mostly on the tags themselves without the angle brackets.</li>
 </ul>
 <p>Let’s show an example of how it works. I do this in two steps … I apply the <code>&lt;h2&gt;</code> tag to all of the text, and then apply an anchor tag <code>&lt;a href=""&gt;</code> to just the name of the publication.</p>
 <p>Watch what happens to the code (line 11) as I choose which tags to apply.</p>
@@ -665,18 +661,35 @@ Important
 <li>Type in the text <code>h2</code> and hit return. This will wrap your text in both the beginning and ending <code>&lt;h2&gt;</code> tags.</li>
 <li>Now, do the same thing to apply the anchor tag around the text “New York Times Cooking”. The Emmet tag for anchor is just <code>a</code>.</li>
 </ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Emmet</strong> is really cool, but it only helps you write the code you already know you want. In other words, you have to know HTML syntax before you can use Emmet’s shorter syntax to write it. Luckily it’s not hard to figure out. Some useful resources for Emmet:</p>
+<ul>
+<li><a href="https://docs.emmet.io/">Documentation</a></li>
+<li><a href="https://docs.emmet.io/cheat-sheet/">Syntax cheatsheet</a></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="adding-class" class="level3" data-number="6.4.4">
 <h3 data-number="6.4.4" class="anchored" data-anchor-id="adding-class"><span class="header-section-number">6.4.4</span> Adding class</h3>
 <p>The next line of our file is the byline for the recipe article. The byline is a simple text element, so it should be inside a <code>&lt;p&gt;</code> tag, but we will add a “class” to this element so we can target it later as CSS.</p>
-<p>I’m not going to get into the difference between <code>id=</code> and <code>class=</code> here, as that is the next lesson, but I do want to show how Emmet allows us to add a class while marking up text. This time I’ll give the steps, then show it.</p>
+<p>I’m not going to get into what a class is just yet as that is the next lesson, but I do want to show how Emmet allows us to add a class while marking up text. This time I’ll give the steps, then show it.</p>
 <ol type="1">
 <li>Highlight the text “By Eric Kim”.</li>
-<li>Do <strong>command-shift-p</strong> to bring up the Command Pallette.</li>
+<li>Do <strong>command-shift-p</strong> to bring up the Command Palette.</li>
 <li>The Emmet: Wrap with Abbreviation command is probably at the top since you used it last, so you can just hit <strong>Return</strong>.</li>
-<li>For the Emmet shorthand, use <code>p.byline</code>.</li>
+<li>For the Emmet syntax, use <code>p.byline</code>.</li>
 </ol>
-<p>The <code>p</code> part is to add the <code>&lt;p&gt;</code> tag. The <code>.</code> says to add a “class” designation to the element, and <code>byline</code> is the name of the tag. If we wanted to add an <code>id=</code> instead, it would be <code>p#byline</code>.</p>
+<p>The <code>p</code> part is to add the <code>&lt;p&gt;</code> tag. The <code>.</code> says to add a “class” designation to the element, and <code>byline</code> is the class name we are applying. If we wanted to add an <code>id=</code> instead, it would be <code>p#byline</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/emmet-p-class.gif" class="img-fluid figure-img"></p>
@@ -690,14 +703,14 @@ Important
 </section>
 <section id="live-server" class="level3" data-number="6.4.5">
 <h3 data-number="6.4.5" class="anchored" data-anchor-id="live-server"><span class="header-section-number">6.4.5</span> Live server</h3>
-<p>You will want to occasionally check to see how your code is displaying in a browser to make sure everything is working as expected. One way is to open the html file in Chrome (File &gt; Open File) and the refresh each time you want to see an update. But there is a better way: When we did computer setup you should’ve installed a VS Code extension called “Live Server”.</p>
+<p>You will want to occasionally check to see how your code is displaying in a browser to make sure everything is working as expected. One way is to open the html file in Chrome (File &gt; Open File) and the refresh each time you want to see an update. But there is a better way: When we did our computer setup you should’ve installed a VS Code extension called “Live Server”.</p>
 <ol type="1">
 <li>Click on the “Go Live” button at the bottom-right of VS Code</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/html-go-live.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">go live</figcaption>
+<figcaption class="figure-caption">Start live server</figcaption>
 </figure>
 </div>
 <p>This will create a web server on your computer and then open the current file in your default browser. As you make changes to the HTML and save it, the page <em>automagically updates</em> in your browser.</p>
@@ -708,14 +721,14 @@ Important
 <figcaption class="figure-caption">Early look</figcaption>
 </figure>
 </div>
-<p>I would now get in the habit of saving your work after each section we do here, and then check to see how it looks.</p>
+<p>I suggest now get in the habit of saving your work after each section we work through here, and then check your live server to see how it looks.</p>
 </section>
 <section id="description-lists" class="level3" data-number="6.4.6">
 <h3 data-number="6.4.6" class="anchored" data-anchor-id="description-lists"><span class="header-section-number">6.4.6</span> Description lists</h3>
-<p>This next bit of text we need to put together as a <a href="https://www.w3schools.com/html/html_lists_other.asp">description list</a>, which is a special list construct where you have a “term” and a “description”. Look at that W3schools link to see how it works.</p>
-<p>The description list is a little different because the list “items” come in two parts, the <code>&lt;dt&gt;</code> for the “term” and the <code>&lt;dd&gt;</code> for the description for the term. We can use Emmet to get us real close with the text we have, but we’ll need to do a little correction at the end.</p>
-<p>With this Emmet command we’ll introduce nested elements. By using the Emmet shorthand <code>dl&gt;dt*</code> I’m saying “Wrap all of this with a <code>&lt;dl&gt;</code> tag, then inside of that (the <code>&gt;</code>) wrap eleents with <code>&lt;dt&gt;</code> and then do it individually for all of them (the <code>*</code> part.)</p>
-<p>Watch what happens to the text as I add each part of the command. Note I don’t quite get exactly what I want since I can’t alternate the <code>&lt;dt&gt;</code> and <code>&lt;dl&gt;</code> tags (or at least I don’t know how), so I have to fix those manually.</p>
+<p>This next bit of text we need to put together as a description list, which is a special list construct where you have a “term” and a “description”. Look at that this <a href="https://www.w3schools.com/html/html_lists_other.asp">W3schools link</a> to see how it works.</p>
+<p>The description list is a little different because the list “items” come in two parts, the <code>&lt;dt&gt;</code> tag for the “term” and the <code>&lt;dd&gt;</code> tag for the “description” of the term. We can use Emmet to get us real close with the text we have, but we’ll need to do a little correction at the end.</p>
+<p>With this Emmet command we’ll introduce child elements and multiplication. By using the Emmet shorthand <code>dl&gt;dt*</code> I’m saying “Wrap all of this with a <code>&lt;dl&gt;</code> tag, then inside of that (the <code>&gt;</code>) wrap the elements with <code>&lt;dt&gt;</code> tag, multiplying for all the items (the <code>*</code> part.)</p>
+<p>Watch what happens to the text as I add each part of the command. Note I don’t get exactly what I want since I can’t alternate the <code>&lt;dt&gt;</code> and <code>&lt;dl&gt;</code> tags (or at least I don’t know how), so I fix those manually.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/emmet-wrap-dl.gif" class="img-fluid figure-img"></p>
@@ -724,7 +737,7 @@ Important
 </div>
 <p>Now you need to do the same with your code.</p>
 <ol type="1">
-<li>Use the emmet shorthand <code>dl&gt;dt*</code> to wrap create your description list.</li>
+<li>Use the emmet syntax <code>dl&gt;dt*</code> to wrap create your description list.</li>
 <li>Manually fix the descriptions to use <code>&lt;dd&gt;</code> tags.</li>
 </ol>
 <p>Your page should look like this when you are done.</p>
@@ -756,9 +769,9 @@ Important
 </ol>
 <section id="about-figures" class="level4" data-number="6.4.7.1">
 <h4 data-number="6.4.7.1" class="anchored" data-anchor-id="about-figures"><span class="header-section-number">6.4.7.1</span> About figures</h4>
-<p>One of your Codecademy lessons was about Semantic HTML, we we’ll apply some of that here. From our lessons, we know that the <code>&lt;img src=""&gt;</code> tag can display an image, but to make this image accessible and useful to all users of the web, we need to add an <code>alt=</code> attribute. It’s also best to wrap both the image and caption in a semantic <code>&lt;figure&gt;</code> tag.</p>
-<p>So far, we’ve used Emmet to wrap existing code, but we can also write shell code using emmet, and then type in the elements, tabbing through different parts to fill them in.</p>
-<p>Again, this might be helpful to see before you do it on your own. This is me adding the figure, img and figcaption tags we just talked about, and then filling the values.</p>
+<p>One of your Codecademy lessons was about Semantic HTML, and we’ll apply some of that here. From our lessons, we know that the <code>&lt;img src=""&gt;</code> tag can display an image, but to make this image accessible and useful to all users of the web, we need to add an <code>alt=</code> attribute to describe the image with words. It’s also best to wrap both the image and caption in a semantic <code>&lt;figure&gt;</code> tag so screen readers understand what that the image and caption go together.</p>
+<p>So far, we’ve used Emmet to wrap existing code, but we can also write shell code using Emmet. In some cases we can tab through the written parts to fill in context.</p>
+<p>Again, this might be helpful to see before you do it on your own. This is me adding the figure, img and figcaption tags we just talked about, and then filling the values. There is a lot of “tab” keying here you don’t see.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/emmet-figure.gif" class="img-fluid figure-img"></p>
@@ -767,19 +780,20 @@ Important
 </div>
 <p>OK, here are the steps for you:</p>
 <ol type="1">
-<li>On a blank line above the caption in your text, add the following emmet shorthand, then use tab to complete it.</li>
+<li>On a blank line above the caption in your text, add the following Emmet syntax, then use tab to complete it.</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>figure&gt;img+figcaption</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
 <li>Use your tag key to type in the path to the image, then the alt attribute as show in the gif above.</li>
 </ol>
+<p>The new thing we added with that syntax is <code>+</code>, which says we want both an <code>&lt;img&gt;</code> and <code>&lt;figcaption&gt;</code> tag inside the figure.</p>
 </section>
 </section>
 <section id="paragraphs" class="level3" data-number="6.4.8">
 <h3 data-number="6.4.8" class="anchored" data-anchor-id="paragraphs"><span class="header-section-number">6.4.8</span> Paragraphs</h3>
 <p>Our next bit of text in our file is the recipe introduction, which is just text. We want to mark this up as paragraph and class the element as “intro”. You did this before with the byline.</p>
 <ol type="1">
-<li>Code the intro with the emmet shorthand <code>p.intro</code>.</li>
+<li>Code the intro with the Emmet syntax <code>p.intro</code>.</li>
 </ol>
 <p>If you had multiple paragraphs, you could highlight all the text and use the shorthand <code>p*</code> to code each individual paragraph.</p>
 </section>
@@ -788,8 +802,8 @@ Important
 <p>Our ingredients list needs to coded where the headline is an H3 tag and the actual ingredients are in an unordered list.</p>
 <ol type="1">
 <li>Code the “Ingredients” subhead as an H3</li>
-<li>Use the emmet Wrap with Abbreviation with the shorthand <code>ul&gt;li*</code> to code the ingredients list.</li>
-<li>Skip to the “Nutrition” section and do the same there.</li>
+<li>Use the “Emmet: Wrap with Abbreviation” command with the syntax <code>ul&gt;li*</code> to code the ingredients list.</li>
+<li>Soe the same for the “Nutrition” section further down the page.</li>
 </ol>
 </section>
 <section id="ordered-lists" class="level3" data-number="6.4.10">
@@ -802,14 +816,14 @@ Important
 </section>
 <section id="semantic-blocks" class="level3" data-number="6.4.11">
 <h3 data-number="6.4.11" class="anchored" data-anchor-id="semantic-blocks"><span class="header-section-number">6.4.11</span> Semantic blocks</h3>
-<p>Now, if you check your live server again your page should look like the examples we started with at the beginning of this lesson, but we aren’t quite done yet.</p>
+<p>Now, if you check your live server again your page should look like the example shown at the beginning of this lesson, but we aren’t quite done yet.</p>
 <p>In the Semantic HTML lesson you learned that we use some HTML tags to designate parts of pages so screen readers and other enabling software can understand our pages. We can also utilize those tags later when we style pages with CSS.</p>
 <p>While we don’t have a full website page here with navigation and such, I want you to mark up the parts of the pages that we do have:</p>
 <ol type="1">
 <li>Add an <code>&lt;article&gt;</code> tag that encapsulates everything within our <code>&lt;body&gt;</code> thus far. So it should start right after the opening <code>&lt;body&gt;</code> tag and close right before the closing <code>&lt;/body&gt;</code> tag.</li>
-<li>Use a <code>&lt;header&gt;</code> tag two wrap from before the main headline to past the definition list. In other words, stop it before the <code>&lt;figure&gt;</code> tag, which we’ve already added.</li>
-<li>Add separate <code>&lt;section&gt;</code> tags around the Ingredients, Preparation and Nutrition sections.</li>
-<li>Add a new <code>&lt;footer&gt;</code> and child <code>&lt;p&gt;</code> tags <strong>after</strong> the closing <code>&lt;/article&gt;</code> tag. Inside the paragraph tag, add the text “A class project by First Last” but with yoru name.</li>
+<li>Use a <code>&lt;header&gt;</code> tag to wrap the code starting at the main headline and ending after the definition list. In other words, stop it before the <code>&lt;figure&gt;</code> tag, which we’ve already added.</li>
+<li>Add separate <code>&lt;section&gt;</code> tags around the Ingredients, Preparation and Nutrition sections. Each of those sections should be inside their own <code>&lt;section&gt;</code> tag.</li>
+<li>Add a new <code>&lt;footer&gt;</code> tag and child <code>&lt;p&gt;</code> tag <strong>after</strong> the closing <code>&lt;/article&gt;</code> tag. Inside the paragraph tag, add the text “A class project by First Last” but with your name.</li>
 </ol>
 </section>
 </section>
@@ -819,7 +833,7 @@ Important
 <ol type="1">
 <li>Use <code>git status</code> to check the status of your files. You probably have two untracked files, your html and your image.</li>
 <li>Use <code>git add .</code> to add all the untracked files.</li>
-<li>Use <code>git commit -m "your message here"</code> to commit your changes. Write your own message that explains what you have done with this commit.</li>
+<li>Use <code>git commit -m "your message here"</code> to commit your changes, but <strong>write your own short message</strong> that explains what you have done with this commit.</li>
 <li>Use <code>git push origin main</code> to push them to Github.</li>
 </ol>
 </section>
