@@ -1,7 +1,7 @@
 # HTML practice
 
 ::: callout
-Draft is done
+Draft done
 :::
 
 ::: callout-important
@@ -74,6 +74,14 @@ Next we need the basic elements required for an HTML 5 document. There is a supe
 1. At the top of the file, type `html` and you'll see some selections come up. Use the arrow key on your keyboard to choose the option `html:5` and hit return. You _should_ get all the boilerplate elements you need for an HTML page.
 
 ![HTML boilerplate gif](images/html-boilerplate.gif)
+
+### About indenting code
+
+*A quick aside here:* Notice how that boilerplate HTML code is formatted. Tags that are inside of one another are indented to show their relationship. This is shown with the `<meta>` tags inside the `<head>` tag.
+
+As you write code in VS Code it will try to do this for you, and you need to let it help you. This indenting syntax is super helpful as code gets more complicated.
+
+**_Strive to write beautiful code._**
 
 ### Collect the text
 

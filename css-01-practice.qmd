@@ -1,13 +1,18 @@
 # CSS practice
 
-> THIS IS IN A MID-EDIT. IT NEEDS A MAKEOVER BUT SOME THINGS HAVE BEEN UPDATED AS I WORK THROUGH HTML
+::: callout
+Draft done
+:::
 
+The CSS language is the skin and DNA attributes that changes the look of the HTML skeleton. We use the hierarchical rules of CSS (Cascading Style Sheets) to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson and make it pretty.
 
-CSS is the skin and DNA attributes that make one HTML skeleton look different from another. We use CSS to set fonts, colors, positioning and more. In this lesson, we'll take the HTML skeleton we made in our previous lesson and make it pretty.
-
-Similar to the last lesson you need to do a series of tutorials before attempting this practice assignment. The CSS lessons will take longer than the HTML set of lessons.
+::: callout
+This lesson has a companion video that walk through it. Find it in Canvas under Panopto Video. It's called **CSS practice assignment**.
+:::
 
 ## Tutorials
+
+Similar to the last lesson you need to do a series of tutorials before attempting this practice assignment. The CSS lessons **will take longer** than the HTML set of lessons.
 
 Do the [Codecademy CSS tutorial](https://www.codecademy.com/learn/learn-css) lessons described below:
 
@@ -22,89 +27,143 @@ Do the [Codecademy CSS tutorial](https://www.codecademy.com/learn/learn-css) les
 - Display and Positioning
   - CSS Display and Positioning
 
-## Goals
+## Goals of this lesson
 
 - To understand default browser styling and how to handle it.
-- To use CSS styles to give visual appeal to web page, applying the principles you learned in the Codecademy lessons.
+- To use CSS styles to give visual appeal to web pages, applying the principles you learned in the Codecademy lessons.
 
 This will be our finished product:
 
 ![Finished practice page](images/css-done.gif)
 
-Here is a [PNG of the in-class project](images/css-done.png), which might be easier to study.
+Here is a [PNG of the practice project](images/css-done.png), which might be easier to study.
 
 ## Resources
 
-You have the internet at your disposal for help. Here are some resources you might find useful.
-
+You have the internet at your disposal for help, but please avoid AI tools at this time. (We'll explore those later.) Here are some resources you might find useful.
+  
 - You can review steps in the [Codecademy Learn 
 CSS](https://www.codecademy.com/learn/learn-css) course.
 - You can look up specific resources in the [W3 Schools HTML](https://www.w3schools.com/css/default.asp) documentation. [Shay Howe](https://learn.shayhowe.com/html-css/) has a pretty good tutorial. [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/CSS) also has good CSS docs.
 - Google it. Use good search techniques: Include the term "css" and your goal or css property.
 
-::: callout
-This lesson has a companion video that walk through it. Find it in Canvas under Panopto Video. It's called **CSS practice assignment**.
-:::
-
 ## CSS Reset
 
-Go into your repo (yourname-html-css) from the previous HTML class lesson and open in your browser the `recipe.html` file. Your browser will display it just fine, with some default sizing. The problem is, different browsers display defaults just a little bit differently. Here is this page in Chrome, Safari and Firefox. Notice the spacing and bullet sizes are a wee bit different between the versions.
+Let's get our project loaded.
 
-![3-browser-reset-ex](images/3-browser-reset-ex.png)
+1. Go into your repo (yourname-html-css) from the previous HTML class lesson
+2. Open your `recipe.html` file
+3. Use the **Go Live** button to start your Live Server.
 
-There is way to deal with this called CSS reset. The concept is to zero out all margins, paddings and text sizes so you have a zero base to work from before applying new styles. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/).
+With just HTML coding, your browser will display this page in an entirely readable way with some default sizing.
+
+That said, different browsers display defaults just a little bit differently. Here is this page in Chrome, Firefox and Safari.
+
+Notice the (admittedly subtle) difference in vertical spacing. The image starts in different places.
+
+![Browser example 1](images/3-browser-reset-ex01.png)
+
+And a little further down the page, notice the difference in the size of the bullets and the line height between lines.
+
+![Browser example 2](images/3-browser-reset-ex02.png)
+
+There is way to deal with these differences. The concept -- called a CSS Reset -- is to zero out all margins, padding and text sizes so you have a zero base to work from before applying new styles. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/).
 
 So, let's do it:
 
 1. In your yourname-html-css folder, create a new blank file called `reset.css` -- you might use the `touch` command to do this, or File > New File in VS Code -- and then populate it with the contents of the [HTML5resetCSS](https://raw.githubusercontent.com/richclark/HTML5resetCSS/master/reset.css) file.
 2. We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing `</head>` tag.
 
+(If you start typing "link" then Emmet will give you options, where you can choose `link:css`.)
+
 ```html
-  <link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" href="reset.css">
 ```
 
-The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects these files together. I'll be honest ... I never remember how to write it ... I just look it up when I need it.
+The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects these files together. I'll be honest ... I never remember how to write it ... I depend on Emmet or look it up.
 
-Refresh your recipe.html browser page and watch your something-kinda-special turn into muck.
+Save your page and look at you Live Server to watch your something-kinda-special web page turn into muck.
+
+![Page after reset](images/css-after-reset.png)
 
 ### Relative font sizing
 
-If you've worked with any HTML font sizing in the past, you might be familiar with setting the size of things in pixels, or `px`. When you do that it makes is more difficult to adjust elements in relation to others on the page, especially in responsive design, which we are learning. (Responsive design is making web pages that work equally well on phones, tablet and desktops.)
+If you've worked with any HTML font sizing before, you might be familiar with setting the size of things in pixels, or `px`. When you use that type of measurement with fonts it makes it difficult to adjust them for different screen sizes, which is common with responsive design. (Responsive design is making web pages that work equally well on phones, tablet and desktops.)
 
-We'll use a method to manage sizes by setting a base size for fonts, and then making everything else relative to that size. [There is more to it that that](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984), but know our next move is to take the default text size (16px) and set it to 10px, so that we can set every other font size relative to 10. (We do this by resetting the default font size to 62.5% of the original 16.) This allows us to then use a relative measure called a `rem` that are factors of ten, where `2.4rem` is the equivalent of 24px for a normally-sized browser.
+So we'll use a method to build upon our CSS reset that creates a base size for fonts, and then makes any further changes relative to that base size. [There is more to it than that](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984), but we'll skip the why and discuss the how:
 
-### Create a site style file, set body defaults
+- We'll reset the browser default text size from 16px to 10px. We do this by using a percentage: 62.5% of the original 16px.
+- Now every `rem` value we use is based on factors of 10 `1rem` is equal to 10px and `2.4rem` is equal to 24px for a normally-sized browser.
+
+### Create styles file, reset defaults
 
 1. Create a new file and call it `styles.css`.
-1. Now, in your `recipe.html` file, add a different `<link>` tag referring to that css file after the `reset.css` link.
-1. Now we'll add some defaults for the `<body>` tag in the `styles.css` file. Add this to the top, then save both the css and html files.
+1. Now, in your `recipe.html` file, add a new `<link>` tag referring to that css file after the `reset.css` link.
+1. Now we'll add some defaults for the `<html>` tag in the `styles.css` file. Add this to the top, then save both the css and html files.
 
 ```css
-body {
+html {
   font-family: 'Times New Roman', Times, serif;
   font-size: 62.5%;
 }
 ```
 
-If you refresh your page in your browser, you'll see things get worse ... everything is super small now. Don't worry, we'll fix it.
+If you check your live server you'll see things got worse ... everything is super small now. Don't worry, we'll fix it.
 
-## Set article styles
+### Set text sizes
 
-Let's set some boundaries for the article. If you look at the finished example above, the content is a certain width and centered in the page. We're going to add and define an `<article>` tag to include everything we have in the body currently. We'll add a footer later.
+Let's fix up the text sizes. We're going to set a base size for all basic text elements, and then change them later in the places where we need them. Add this to your styles file:
 
-### Add the article tag
+```css
+p, ul, ol, dl {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  margin-bottom: 12px;
+}
+```
 
-1. In `recipe.html`, add a beginning `<article>` on a new line after the beginning `<body>` tag.
-1. Add the closing `</article>` tag before the closing `</body>` tag near the bottom.
-1. Save your html file.
+What this has done is set all text-type elements at what is the equivalent to `16px`, but we've used the `rem` measurement to set it relative to the base size, which was essentially 10px.
 
-In doing this, we have defined the body of our web page to be an "article", which a recipe kinda is in the context of a website about recipes.
+We've set a line-height so lines of type don't sit on top of each other and we've also given all of those elements a bottom margin so the elements have some space between them.
 
-### Add the article styles
+In the definition above, it's important that we have commas between each HTML element. If we don't have those, the browser will think we need all of them together (and) instead of any of them (or). We are setting these rules for p or ul or ol, etc. Not all of them used together.
 
-1. Now, in `styles.css`, add the following styles:
+### Set headline sizes
 
-> I encourage you to type as much of the code as you can so you understand how the code editor can help you write in the styles.
+Now we'll set headlines font and sizes. Add this to your `styles.css` file, save and refresh your browser:
+
+```css
+h1, h2, h3, h4, h5, h6 {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.7rem;
+  line-height: 3.1rem;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 16px 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin: 25px 0 8px 0;
+}
+```
+
+The first rule sets the font to a series of sans serif fonts, and we've done it for all headline sizes.
+
+The other rules set sizes and margins for various sizes of headlines. You'll notice that the margins are set in a single line. You can [review the rules regarding that here](https://www.w3schools.com/css/css_margin.asp).
+
+### Set article width
+
+Having all this smooshed to the left side of the page is annoying. Let's set some boundaries for the article. If you look at the finished example above, the content is a certain width and centered in the page. We're going to do this by writing a style to the `<article>` semantic tag we created in the last lesson.
+
+1. In `styles.css`, add the following styles:
 
 ```css
 article {
@@ -117,157 +176,98 @@ article {
 
 This `margin-<direction>: auto;` style was discussed in the Learn CSS lesson in Codecademy.
 
-If you've done this right, you should be able to refresh your browser and see everything centered.
+If you've done this right, your live server should show that all the content is centered on the page.
 
-## Set text sizes
+![Page after fonts, width set](images/css-after-article.png)
 
-Let's fix up the text sizes. We're going to set a base size for all basic text elements, and then change them later in the places where we need them. Add this to your styles file:
+## Using class and id
 
-```css
-p, ul, ol, dl {
-  font-size: 1.2rem;
-  line-height: 1.7rem;
-  margin-bottom: 12px;
-}
-```
+So far, all of the styles we've created has been written to an "element" tag, like `<p>` or `<h3>`. But what if we want to style two different paragraphs differently?
 
-What this has done is set all text-type elements at what is the equivalent to `12px`, but we've use the `rem` measurement to set it relative to the base size, which was essentially 10px.
+For instance, on our page we have two `<p>` tags that serve different purposes: Our byline and our intro. We want them to look different. This is why we added `class="byline"` and `class="intro"` to those paragraphs.
 
-We've set a line-height so lines of type don't sit on top of each other and we've also given all of those elements a bottom margin so the elements have some space between them.
-
-In the definition above, it's important that we have commas between each HTML element. If we don't have those, the browser will think we need all of them together (and) instead of any of them (or). We are setting these rules for p or ul or ol, etc. Not all of them used together.
-
-## Set headline sizes
-
-Now we'll set headlines font and sizes. Add this to your `styles.css` file, save and refresh your browser:
-
-```css
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-h1 {
-  font-size: 2.75rem;
-  margin: 20px 0;
-}
-
-h2 {
-  font-size: 2rem;
-  margin: 16px 0;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin: 14px 0 8px 0;
-}
-```
-
-The first rule sets the font to a series of sans serif fonts, and we've done it for all headline sizes.
-
-The other rule set sizes and margins for various sizes of headlines. You'll notice that the margins are set in a single line. You can [review the rules regarding that here](https://www.w3schools.com/css/css_margin.asp).
-
-## Set the credit
-
-> we are using a figcaption instead now
-
-
-Our next challenge is to set the credit. Because the credit is in a `<p>` tag, we need to add a class attribute to it so we can target it specifically with CSS. We'll use a "class" because credits may not unique on a web page, and this way we could set them for all the credits on our site.
-
-Here is what we're going for:
-
-![css-source](images/css-source.png)
-
-1. In the html page, add the `class="credit"` attribute to the `<p>` tag around the credit "Source: Epicurious.com" so it looks like this:
-
-```html
-<p class="credit">
-```
-
-Always use lowercase characters in class names and use dashes if they are more than one word. This makes them readable and is considered convention in writing CSS. Having a common convention for things like this help people collaborate on code as it is predictable and readable. Name your classes for what the element is, not what you want it to look like. If you name your class for captions "red" and then decide later to make them blue, that would be confusing.
-
-1. Now that we've defined it, we can add the following styles to your style sheet to target that class:
-
-```css
-.credit {
-  margin-top: 2px;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-```
-
-We've change the font from the default to Arial (with backups) and then set the top and bottom margins.
-
-### Let's talk about tricks of the trade
-
-Sometimes I have trouble knowing if my CSS property is affecting the thing I want, so sometimes I'll set some crazy CSS rule like `color-background: red;` to make sure I'm targeting what I want.
-
-The other thing I might do is use the browser **Inspector** to test styles right on the screen. Once I figure out my style, I can then add it to my styles file.
-
-It's easier to show this than to write it out, but you:
-
-1. Use control-click on the element to get the contextual menu and choose Inspector.
-2. Make sure you are on the correct element in the Element tab on the left pane of the Inspector.
-3. Add/modify rules rules in the Styles tab on the right pane of the Inspector.
-
-Here is an example in a screencast:
-
-![using-inspector](images/using-inspector.gif)
-
-## Set description style
-
-We want the recipe description to be a bit bigger than the other type. First we need to give it an "id", then give the id a style.
-
-1. In the html file, add an `<id>` attribute called "description" to the `<p>` tag around the "Purée grilled bell peppers" paragraph. We use `<id>` because there is always only one per recipe (it will not repeat), and we need to target it specifically.
-1. In the CSS file, add the following style:
-
-```css
-#description {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-```
-
-### Styling elements vs ids vs classes
-
-At this point, you might be confused why sometimes we have a period before a style `.credit` and sometimes a hash `#description` and sometimes nothing `p, ul, li`. Let's define the difference and hopefully it will become clear.
+There is a cascading hierarchy to styles (hence the term Cascading Style Sheets):
 
 - HTML **elements** are the most generic thing you can style. A `<p>` tag or `<h1>`, etc. If you write a style for one, it affects ALL of those elements on your site. The style for a `<p>` tag is: `p {selector: rule;}`
-- But sometimes you have common elements that you re-use often, like photo credit. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="photo-credit"`. Now that it is classified, we can write one style that will affect all the bylines. What you call the class is up to you, but best practice is to choose a name that describes it is. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.photo-credit {font-family: Arial;}`.
-- There are also cases on a page where an element is used only one way. In this case we might "identify" that element with an **id** attribute: `id="unique-whatever"`. An example might be the main headline of a story; there is always only one. When we use an `id` we are indicating to the browser (and our fellow coders, and even Google) that this element only appears once on this page. When we write a style for an id, we precede the name with a hash to indicate the style is for an id: `#unique-whatever {font-family: Times;}`.
+- But sometimes you have common elements that you re-use often, like byline. You always want those to look a certain way on your site, but you want them to look differently than you body text. So, you "classify" that element with a **class** attribute: `class="byline"`. Now that it is classified, we can write one style that will affect all the bylines. When we write a style for one of these classes we indicate that by preceding the class name with a period: `.byline {font-family: Arial;}`.
+- There are also instances when an element is used only one way on a page, so we can "identify" that element with an **id** attribute: `id="unique-whatever"`. An example on our page is our ingredients list; there is always only one of those on a page. When we use an `id` we are indicating to the browser (and our fellow coders, and even Google) that this element only appears once on this page. When we write a style for an id, we precede the name with a hash to indicate the style is for an id: `#unique-whatever {font-family: Times;}`.
 
-## Set the Yield box style
+::: callout-important
+- Always use lowercase characters in class names and use dashes if they have more than one word. Using a common convention to write code helps people collaborate because is predictable and more readable.
+- Name your classes for what the element is, not what you want it to look like. If you used the class name `tahoma` instead of `byline` and then decided later to change your byline font to be "Franklin Gothic", that would be confusing.
+:::
 
-Here's our goal:
+### Setting style by class
 
-<img src="images/css-yield-done.png" width="320px">
+We want our byline to be in a sans-serif font while we want our other paragraphs to maintain the default serif font, so let's write a style to it.
 
-Let's set up the fancy lines above and below the yield values first.
+We add a `.` before the style name to target it, so `.byline`.
 
-1. In your html file, you should have a `<div>` surrounding the whole `<dl>` section, with an `id="yield"`.
-1. In the css file, add the following:
+1. Add the style below for the byline
 
 ```css
-#yield {
+.byline {font-family: Tahoma, Arial, sans-serif;}
+```
+
+We've changed the font from the default to Tahoma, with some backups in case a user doesn't have that font.
+
+About font names ... If you wanted to use Franklin Gothic as as a font it would need to be in quotes because it is multiple words: `font-family: "Franklin Gothic", Arial, sans-serif;`.
+
+We will style to an `id=` attribute a little later in the assignment.
+
+## Tricks of the trade
+
+When writing styles I'll often use the browser **Inspector** to experiment with what they might look like on the screen. Once I figure out my style, I can then add it to my styles file.
+
+It's easier to show this than to write it out, but here are the steps:
+
+1. Use control-click on the element to get the contextual menu and choose Inspector.
+2. Make sure you are on the correct element in the Element tab of the Inspector.
+3. Add/modify rules rules in the Styles tab of the Inspector.
+
+Here is a video example.
+
+{{< video https://vimeo.com/845760554 >}}
+
+I'll drop a couple more tips as we go through the lesson.
+
+## Borders
+
+While there is an HTML element for a horizontal rule `<hr>`, it's best to set such things using CSS. For instance, we need want dotted borders on our recipe stats section:
+
+![Stats box](images/css-stats-example.png){width=300}
+
+
+
+We'll get to the text placement next, but let's set up the fancy lines at the top and bottom of the description list first.
+
+
+1. Add styles for the `dl` element to add dotted lines:
+
+```css
+dl {
   border-bottom: 1px grey dotted;
   border-top: 1px grey dotted;
 }
 ```
 
-Save and refresh to see the lines. We used a [shorthand for the border property](https://www.w3schools.com/cssref/pr_border.asp) that allows us to set the size, color and style in one rule.
+Check your live server to see the borders. We used a [shorthand for the border property](https://www.w3schools.com/cssref/pr_border.asp) that allows us to set the size, color and style in one rule.
 
-## Set the yield text
+![Description list with borders](images/css-stats-lines.png){width=300}
+
+## Float
 
 Another story about tricks of the trade. When I was preparing this lecture, I had trouble getting the `<dt>` and `<dd>` values to show on the same line. So, what do you think I did? I googled it, of course, using the phrase "make css dd dt on same line". I got my answer [here](https://krijnhoetmer.nl/stuff/css/inline-dl/). It wasn't the first answer of my Google search ... I had to poke around on different search results until I found one that worked for me.
 
+But what the answer does is introduce the [float](https://www.w3schools.com/cssref/pr_class_float.php) style for us, which is one of the ways we can position items on a page using CSS. We can use `float` to move our `<dt>` tags to the **left** of our `<dd>` tags so they are on the same line.
+
 1. Add the following styles to your style sheet.
 
-```css
-dl {
-  font-family: 'Franklin Gothic', Arial, sans-serif;
-  font-size: 1.1rem;
-  padding: 12px 0;
-}
+::: callout-tip
+Try adding one rule at a time and saving your styles file so you can see what each one does in your live server. I really encourage you to type out the rules so you can see how VS Code helps you write.
+:::
 
+```css
 dt {
   float: left;
   margin-right: 5px;
@@ -275,19 +275,108 @@ dt {
 }
 ```
 
-The first `<dl>` rule sets the font and size of the text. The next `<dt>` rule floats that part of the description to the left, sets a margin and makes it bold.
+- The first rule moves the `<dt>` elements to the left of any element that follows.
+- The second puts some margin on the right side of hat `<dt>` tag so it isn't smooshed next to the `<dt>` element.
+- The last line makes the `<dt>` text bold.
 
-1. To finish out, go into the html file and add the colon after text inside the `<dt>` tags, like "Yield:".
+We have just a bit more cleanup styling to do to adjust the type styles, margins and padding of the description list.
 
-Could we have done this with paragraphs or divs? Absolutely. But then you wouldn't have learned about description lists ;-).
+2. **EDIT** your rules on the `<dl>` element to add each line below. _Again, try adding them one at a time so you see what each rule does_.
 
-## Unordered list margins
 
-The default unordered list looks crappy. Let's move the bullets so they line up with the other text in the article. We do this with [list-position](https://www.w3schools.com/cssref/pr_list-style-position.asp).
+```css
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 1.4rem;
+  padding: 12px 0px;
+  margin-top: 15px;
+```
 
-Here is our goal:
+Now your recipe stats should look like our example above.
 
-![css-unordered-list](images/css-unordered-list.png)
+## Percentage widths
+
+Another tool to control the position of elements on an page is the [`width`](https://www.w3schools.com/cssref/pr_dim_width.php) style, which we will use to divide our page based on the percentage of our page.
+
+If you look at our finished example at the top of this lesson you'll see that the photo and caption are sitting to the right of the headline, byline and such. We'll use `float` to move the header element to the left of the figure element, but we also need to regulate how wide all these things are so they fit in our story well.
+
+One challenge is that our website will likely have LOTS of figures/photos, so we want to move just this one display as it relates to the main image in a recipe story. Since there is always only ONE main image for each recipe, we can use an `id` to target this and manipulate it.
+
+So there are two steps here: Edit our HTML to add the `id`, then write styles to manipulate it.
+
+
+1. In your `recipe.html` file, find your `<figure>` tag and add the id called "main-recipe-photo": `<figure id="main-recipe-photo">`. Save the HTML file.
+1. Go into your `styles.css` file and add the following rules:
+
+::: callout-tip
+Again, try adding these three rules one at time so you see how each one affects the layout.
+:::
+
+```css
+header {
+  float: left;
+  width: 48%;
+}
+
+figure#main-recipe-photo {
+  float: right;
+  width: 48%;
+}
+
+figure#main-recipe-photo img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+```
+
+This is a lot to break down.
+
+- In the `header`, we set the whole element (which includes the two headlines, byline and stats box) to float to the left and only take up `48%` of the page.
+- Then we take the `figure` and float it to the right and make it only `48%` the page. It moves it, but the photo is too big to fit in that space. Note we are targeting only figures with an `id` of "main-recipe-photo" so this would not affect other photos on the page.
+- So in the last rule we target images inside figures with an id of "main-recipe-photo" and set the width to be `100%` of the available space, which is that 48% segment within the figure. We add a margin so it starts about even the main headline.
+
+### Style our figcaption
+
+Let's pretty up our figure caption. There is nothing new here, but we need to add a style for the `figcaption` element. We are setting this to the element because we want this style for all our captions across our page and website.
+
+```css
+figcaption {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+```
+
+We're just setting font styles and giving a little space between stuff.
+
+### Breaking a float
+
+We've made progress, but we're not quite there.
+
+![After setting figure floats](images/css-figure-floats.png)
+
+As you can see here, the intro is creeping up under the photo, but we want it to go all the way across the page. It's getting pulled there because of the floats on the elements above. We can fix this by adding a `clear` style on our intro text. The `clear` tag cancels out floats, and you can set it to clear `left`, `right` or `both` directions.
+
+When we coded our HTML file we had added a class called "intro" to that paragraph, so we will target that with this next rule:
+
+```css
+.intro {
+  margin-bottom: 20px;
+  clear: both;
+}
+```
+
+This pushes the intro down so it flows across the page. There is a little space under the photos, but that is OK because that main photo might not always be that shape.
+
+## List styles
+
+The default unordered list looks crappy. We want to do two things here:
+
+- Let's move the bullets so they line up with the other text in the article. We do this with [list-position](https://www.w3schools.com/cssref/pr_list-style-position.asp).
+- Let's change the style of the bullets to add a little style flare with [list-style-type](https://www.w3schools.com/cssref/pr_list-style-type.php).
+
+We are setting these as our default unordered list styles for the site.
 
 1. Add to your css file:
 
@@ -298,29 +387,33 @@ ul {
 }
 ```
 
-We did two things here: The position rule moves the list so it starts with the text instead of being indented. The `list-style-type` changed the bullet from a circle to a square. There are [other list-style-types as well](https://www.w3schools.com/cssref/pr_list-style-type.asp), and you can even use an image, though we won't get into that here.
+If you are living right, your list should look like this now:
 
-## Set the ordered list style
+![Unordered lists](images/css-unordered-list.png){width=300}
 
-We need to do the same here for ordered lists.
+### Set the ordered list style
+
+We need to do the same here for ordered lists. We'll also add a little margin under each list item so they can breathe.
 
 ```css
 ol {
   list-style-position: inside;
 }
+
+ol li {
+  margin-bottom: 8px;
+}
 ```
 
-It works the same way the unordered list did.
+## Alternating styles
 
-## Set the nutrition styles
+Our nutrition information is our last challenging piece and we get to learn some more advanced CSS fu. This is our goal:
 
-This is our last challenging piece and we get to learn some more advanced CSS fu. This is our goal:
+![Nutrition list example](images/nutrition-list-example.png)
 
-![nutrition-list-example](images/nutrition-list-example.png)
+But we have one list, which is a vertical structure. We could separate these items into two sections and float them, but if they were generated from an application or CMS of some kind, we might not know when to separate the left section from the right.
 
-But we have lists, which are a vertical structure. We could separate these into to sections and float them, but if they were generated from an application or CMS of some kind, we might not know when to separate the left section from the right.
-
-What we'll do instead is use special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) to adjust every other list item.
+What we'll do instead is use a combination of float and a special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) to adjust every other list item.
 
 Let's do this in incremental steps so you can see the magic happen.
 
@@ -330,133 +423,88 @@ Let's do this in incremental steps so you can see the magic happen.
 #nutrition li {
   list-style-type: none;
   border-bottom: grey dotted 1px;
+}
+```
+
+Since we only want to change only the list items that are within the nutrition div, we used both the `#nutrition` id and the `li` element selectors.
+
+- The first rule we choose a "none" list style to remove the bullets
+- Then we add the grey dotted line.
+
+Now let's use some of the same techniques we used with the header and figure to get these side-by-side.
+
+2. **Edit** that style rule to add these two rules:
+
+```css
+  float: left;
+  width: 48%
+
+```
+
+That starts putting these side-by-side, but there is no gutter between them.
+
+
+![List items floated](images/css-nutri-float.png)
+
+Now the fun part ... we need to apply styles to just every other list item (those that now fall into the left column). Our first challenge is to make sure we are targeting the right element. Another trick of the trade: I sometimes write a temporary style to an element, like turning the background red, just to make sure I'm getting the right thing. Let's do that here.
+
+3. Add this rule with the [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) designation for "odd" elements.
+
+```css
+#nutrition li:nth-child(odd) {
   background-color: red;
 }
 ```
 
-Since we only want to change the list items that are within the nutrition div, we used both the `#nutrition` id and the `li` element selectors.
+This shows us that our style is getting the alternating rows:
 
-For the first rule we choose a "none" list style to remove the bullets, then on the next style we added the grey dotted line. Lastly, we added a red background color so you can see the outline of each `li` tag on the page. We'll take this rule out later. Save and refresh to see your lines.
+![Alternating rows](images/css-alt-rows.png)
 
-1. Next, in the same rule, let's float all of the list items the left, so add this as a new line in that #nutrition li rule:
+Let's pause here to break down that rule of the [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp). The `nth-child` rule lets us apply a style to a specific list item. Where we have used `(odd)` you could also put in a number, like `(4)` and it would apply to the fourth item in the list. Or `(even)`. Try it!
 
-```css
-  float: left;
-```
+OK, now that we know we have targeted the right items, we can add styles to add a right margin to push those even numbered items over a bit. We'll also add a `clear` to those so the footer won't keep crawling up.
 
-Save and refresh, and then you'll see all of the list items try to fit on the same space. Well, what we really want is for each line to take up half of the space.
+4. **Edit** the style rule to add these lines:
 
-1. Add another value to the same rule. We're using a little less than 50% to give us some wiggle room with margins later:
+(Again, you might do them one at a time to see what they do.)
 
 ```css
-  width: 48%
-```
-
-Save and refresh. Bamm ... we have two on each line. Now we need some space between them. If we add a margin-right call to all the li's, then it would put a margin far to the right as well. This is where the [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) comes in. We can add a rule to every ODD numbered list item:
-
-```css
-#nutrition li:nth-child(odd) {
-  clear: both;
   margin-right: 10px;
-}
 ```
 
-OK, we are looking pretty good, but this would look tons better if we could make the grams value flush right in every line. We can do this by putting the two parts of the list items into spans. This is kind of our alternative to the description list that we used for yield.
+5. And now you can remove the `background-color` rule.
 
-So, to do this we have to rewrite all the list items to have spans, and then to class those spans so we can target them with css. In order to save time, just copy/paste to replace them.
-
-1. In the html file, replace all the li's under "Nutrition Information" with this (make sure to nest it inside the ul tag, which should still be there):
-
-```html
-        <li>
-            <span class="nutri-item">Calories</span>
-            <span class="nutri-value">541</span>
-        </li>
-        <li>
-          <span class="nutri-item">Carbohydrates</span>
-          <span class="nutri-value">13g (4%)</span>
-        </li>
-        <li>
-          <span class="nutri-item">Fat</span>
-          <span class="nutri-value">44g (68%)</span>
-        </li>
-        <li>
-          <span class="nutri-item">Protein</span>
-          <span class="nutri-value">23g (46%)</span>
-        </li>
-        <li>
-          <span class="nutri-item">Saturated Fat</span>
-          <span class="nutri-value">8g (38%)</span>
-        </li>
-        <li>
-          <span class="nutri-item">Sodium</span>
-          <span class="nutri-value">902mg (38%)</span>
-        </li>
-        <li>
-          <span class="nutri-item">Polyunsaturated Fat</span>
-          <span class="nutri-value">8g</span>
-        </li>
-        <li>
-          <span class="nutri-item">Fiber</span>
-          <span class="nutri-value">4g (18%)</span>
-        </li>
-        <li>
-          <span class="nutri-item">Monounsaturated Fat</span>
-          <span class="nutri-value">25g</span>
-        </li>
-        <li>
-          <span class="nutri-item">Cholesterol</span>
-          <span class="nutri-value">111mg (37%)</span>
-        </li>
-```
-
-1. Next, add the CSS to make the `nutri-value` spans move to the right:
-
-```css
-#nutrition .nutri-value {
-  float: right;
-}
-```
-
-1. Once everything is good, you can comment out the red background color, if you haven't already.
 
 ## Lets add a footer
 
-You may have noticed that this nutrition div is hugging the bottom of the page. Let's add a footer to close of the page nicely.
-
-1. Add this to the html file, after the closing `<article>` tag.
-
-```html
-  <footer>
-    <p>A class project by Your Name</p>
-  </footer>
-```
-
-If you hit refresh, you'll notice that the footer ends up being way off to the right. This is because of all the floats in the nutrition section. There is a css property called [clear](https://www.w3schools.com/cssref/pr_class_clear.asp) that can help us here.
+If you followed the HTML assignment, you should have a `<footer>` section in your html, and right now it is probably floating off to the right of the nutrition list. This is because of all the floats in the nutrition section. We can use  [clear](https://www.w3schools.com/cssref/pr_class_clear.asp) again to help us, but we have couple of other issues.
 
 1. Add these values to the css file:
 
 ```css
 footer {
-    clear: both;
-    text-align: center;
-    margin-top: 200px;
-    margin-bottom: 30px;
+  clear: both;
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 30px;
 }
-  
+
 footer p {
-    font: 1rem Arial;
+  font: 1.2rem Arial;
 }
 ```
 
-We used `clear: both` to make sure there are no floats affecting the footer. Still, because of floats, margins are acting super funky here, and the CSS doesn't understand how deep that nutrition section is, and that is why we have the crazy `200px` value on the margin.
+We used `clear: both` to make sure there are no floats affecting the footer. Still, because of floats in the nutrition section above it the margins are acting super funky here. The CSS doesn't understand how deep that nutrition section is, and that is why we have the crazy `140px` value on the top margin.
 
-Tricks of the trade lesson #32: If it works, especially if you check that it works in all the browsers (Chrome, Safari, Firefox, Edge), then maybe it is good enough.
+Tricks of the trade #32?: If it works, especially if you check that it works in all the browsers (Chrome, Safari, Firefox, Edge), then maybe it is good enough.
+
 
 ## Save and push to Github
+
+You've done it! Compare your page to [the example](images/css-done.png) and make sure you have everything.
 
 Use the git cycle to push all your code to Github.
 
 ## Turn in the assignment
 
-Turn in this Github URL to the Canvas assignment for CSS in-class.
+Turn in this Github URL to the CSS practice assignment in Canvas.
