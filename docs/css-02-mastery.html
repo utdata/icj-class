@@ -471,32 +471,54 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>For this practice assignment, you will be picking up from the last HTML practice assignment in your yourname-html-css-practice folder and enhancing it with your own CSS, with the directions provided below.</p>
-<p>We did many of these things with our in-class assignment. You’ll also have to figure out some new things, but that is part of coding.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Draft is done</p>
+</div>
+</div>
+</div>
+<p>For this mastery assignment, you will be picking up from the last HTML mastery assignment in your yourname-html-css-mastery folder and enhancing it with your own CSS based on the directions provided below.</p>
+<p>We did many of these things with our practice assignment. You’ll also have to figure out some new things on your own, as that is part of coding.</p>
 <section id="goal" class="level1" data-number="10">
 <h1 data-number="10"><span class="header-section-number">10</span> Goal</h1>
-<p>To make a news story, something like this:</p>
+<p>You’ll make a news story, something like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/css-practice-example.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">css-practice-examples</figcaption>
+<p><img src="images/css-mastery-example.gif" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Finished mastery page</figcaption>
 </figure>
 </div>
 <section id="requirements" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">10.1</span> Requirements</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will likely find it useful to refer to the <a href="./css-01-practice.html">CSS practice chapter</a> as you work through this.</p>
+</div>
+</div>
 <ul>
-<li>Make sure you update your <code>practice-story.html</code> file with any of the feedback I gave you when I graded.</li>
-<li>Create a reset.css file. You can use the same one we used with the in-class assignment, and you need to populate it with the contents of the <a href="https://github.com/richclark/HTML5resetCSS/blob/master/reset.css">HTMLDocter reset</a> file as we did in class.</li>
-<li>Now that you have a reset css file, you’ll need to create another separate css file for all your other styles (name it practice-story.css) and link it to your html file.</li>
-<li>(For the next few steps, it may be helpful to you to refer to the <a href="https://github.com/utdata/icj-class/blob/master/css/css-class.md">directions</a> for the CSS file we made in class.)</li>
-<li>Set the base (body) font as “Times New Roman” with acceptable backups. Reset the font-size for easier relative sizing by setting the body font size to 62.5%, which is the equivalent of 10px, like we did with the in-class recipe.</li>
+<li>Make sure you update your <code>story.html</code> file with any of the feedback you received in grading.</li>
+<li>Create a reset.css file. You can use the same one we used with the practice assignment, and you need to populate it with the contents of the <a href="https://github.com/richclark/HTML5resetCSS/blob/master/reset.css">HTMLDocter reset</a> file.</li>
+<li>Now that you have a reset css file, you’ll need to create another separate css file for all your other styles (name it styles.css) and link it to your html file.</li>
+<li>Set the base (html) font as “Times New Roman” with acceptable backups. Reset the font-size for easier relative sizing by setting the body font size to 62.5%, which is the equivalent of 10px, like we did with the recipe.</li>
 <li>Now set a standard font size for text elements like <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;dl&gt;</code> tags. (Make the base font larger.) You’ll also want to set a bottom margin on those elements so they don’t run up against each other.</li>
 <li>Add an <code>&lt;article&gt;</code> tag after the <code>&lt;body&gt;</code>tag in your HTML file if you need to, then in your CSS file make the max-width of the article 620px and center it.</li>
 <li>In the HTML, set the width of the photo to 620px using a “width” attribute (you can put it after the src attribute).</li>
-<li>Use <a href="https://fonts.google.com/">Google Fonts</a> to find and use a font called “Ubuntu” and add that to your page. You’ll need to figure out how to do that, but you can figure it out if you read the directions.</li>
+<li>Use <a href="https://fonts.google.com/">Google Fonts</a> to find and use a font called “Ubuntu” and add that to your page. You can review the chapter <a href="./a-google-fonts.html">Using Google Fonts</a> for tips on how.</li>
 <li>Set all your headlines to use that Ubuntu font (with backups) and set headline sizes that make visual sense, but follow convention. (i.e., make sure h1 is the biggest and is used for the article headline.) Make sure you also include the <code>&lt;h4&gt;</code> label above the headline.</li>
 <li>Set the byline and photo credit lines to use the font Arial with an appropriate backup. Adjust sizes so they are visually appealing.</li>
-<li>Use a <code>&lt;span&gt;</code> tag around the date in the byline, and set it to font-style of italic.</li>
+<li>Use a <code>&lt;span&gt;</code> tag around the date in the byline, and set it to font-style of italic. <a href="https://www.w3schools.com/tags/tag_span.asp">This page</a> explains a span, but PLEASE don’t style the span directly like that. Write in the styles file instead.</li>
 <li>Make the photo credit text right-aligned and nudge up the margin so it sits close but not upon the photo so readers know that is what it goes with.</li>
 <li>For the blockquote, set a solid left border that is grey and 4px thick. Add some padding (20px) between this border and the text, and some left margin (30px) to inset into the article.</li>
 <li>For the ordered list style, the numbers should line up with the text in the article. <code>list-style-position</code> should help you with this.</li>
