@@ -1,16 +1,16 @@
 # JS with html
 
-As we have worked on JavaScript in class, it has been a bit academic ... there has been no action on our web page. Let's change that, and marry our JavaScript to our HTML and make our our page do something.
+As we have worked on JavaScript so far, it has been a bit academic ... there has been no action on our web page. Let's change that, and marry our JavaScript to our HTML and make our our page do something.
 
 ## The Document Object Model
 
-JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript **object**. This concept, called the Document Object Model -- or DOM, for short -- is a standard for how to get, change, add, or delete HTML elements using JavaScript.
+JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript **object**. This concept, called the Document Object Model — or DOM, for short — is a standard for how to get, change, add, or delete HTML elements using JavaScript.
 
 The DOM allows us to connect our JavaScript functions to HTML or CSS on the page.
 
 ## Our goal
 
-We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. And overview of steps:
+We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. An overview of steps:
 
 - Create a new html page.
 - Introduce form elements through text boxes and a button.
@@ -20,14 +20,14 @@ We will create an HTML form that allows a user to enter their first, middle and 
 
 It will end up working like this:
 
-![js-form](images/js-form.gif)
+![Our js-form](images/js-form.gif)
 
 Now let's get down to the detail.
 
 ## Create our page
 
 1. Inside the same `yourname-javascript` repo we have been working in, create a new file called `form.html` and open it in VS Code.
-1. Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`. Don't capitalize `html`. 
+1. Enter the HTML5 boilerplate code. Remember that you can use Emmet to create this by typing `html` and then use the dropdown to choose `html:5`. Don't capitalize `html`. 
 1. In between the <body> tags of the document, add the following HTML code. I'll explain afterward:
 
 ```html
@@ -41,7 +41,7 @@ Now let's get down to the detail.
 <h3 id="nameHead">Name will go here</h3>
 ```
 
-1. Save your file and open that page in a browser.
+1. Save your file and use **Go Live** to start a live server.
 
 We've introduced several new HTML elements here that we haven't used before.
 
@@ -82,7 +82,10 @@ Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elemen
 
 The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
 
-(If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`).
+::: callout
+If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`.
+:::
+
 
 1. In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
 1. Add the following three lines inside the function before the IF in your `makeBetterName` function:
@@ -95,7 +98,7 @@ let lName = document.getElementById("nameForm").last.value;
 
 What we are doing here is instead of feeding our names into the function through arguments, we are using `document.getElementByID` to find and get the "nameForm" element, and then we are accessing each input by its "name" property (i.e. `.first`). The property `.value` gives us the text of that is inside that input.
 
-1. Now, after the function, add a console.log that calls the function, but don't feed it names like we did before:
+3. Now, after the function, add a console.log that calls the function, but don't feed it names like we did before:
 
 ```js
 console.log(makeBetterName());
@@ -115,7 +118,7 @@ We can not only pluck the value of a field with `getElementByID`, but we can als
 document.getElementById("nameHead").innerHTML = fullName;
 ```
 
-1. Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
+2. Save your file and refresh yor page, and now the `<h3>` tag (which has `id="nameHead"`) that used to say  "Name will go here" should now have our default form text: "Aragorn Elessar Telcontar".
 
 This new line of code uses the same DOM method `getElementByID` to identify the HTML element we wanted, but this time we used the `.innterHMTL` property to shove content into it. What content was that? It's the contents of the `fullName` which now comes from our text boxes on the page.
 
@@ -139,4 +142,4 @@ What we've done here is used the [onclick Event](https://www.w3schools.com/jsref
 
 ## Commit your change to Github
 
-Make sure you save, commit and push your changes to Github.
+Make sure you save and commit your changes to git.

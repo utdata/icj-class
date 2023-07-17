@@ -19,7 +19,7 @@ book:
       chapters:
         - git-01-project.qmd
         - git-02-cycle.qmd
-    - part: basics-00-intro.qmd
+    - part: html-css-00-intro.qmd
       chapters:
         - html-01-practice.qmd
         - html-02-mastery.qmd

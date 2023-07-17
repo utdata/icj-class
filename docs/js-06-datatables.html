@@ -194,8 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The basics</span></a>
+            <a href="./html-css-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML &amp; CSS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -484,9 +484,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#goals-of-this-lesson" id="toc-goals-of-this-lesson" class="nav-link" data-scroll-target="#goals-of-this-lesson"><span class="header-section-number">16.2</span> Goals of this lesson</a></li>
   <li><a href="#the-steps" id="toc-the-steps" class="nav-link" data-scroll-target="#the-steps"><span class="header-section-number">16.3</span> The steps</a>
   <ul class="collapse">
-  <li><a href="#zero-configuration" id="toc-zero-configuration" class="nav-link" data-scroll-target="#zero-configuration"><span class="header-section-number">16.3.1</span> #1: “Zero configuration”</a></li>
+  <li><a href="#v1-zero-configuration" id="toc-v1-zero-configuration" class="nav-link" data-scroll-target="#v1-zero-configuration"><span class="header-section-number">16.3.1</span> v1: “Zero configuration”</a></li>
   <li><a href="#recap-of-how-this-works" id="toc-recap-of-how-this-works" class="nav-link" data-scroll-target="#recap-of-how-this-works"><span class="header-section-number">16.3.2</span> Recap of how this works</a></li>
-  <li><a href="#scroll-vertical" id="toc-scroll-vertical" class="nav-link" data-scroll-target="#scroll-vertical"><span class="header-section-number">16.3.3</span> #2: “Scroll Vertical”</a></li>
+  <li><a href="#v2-scroll-vertical" id="toc-v2-scroll-vertical" class="nav-link" data-scroll-target="#v2-scroll-vertical"><span class="header-section-number">16.3.3</span> v2: “Scroll Vertical”</a></li>
   </ul></li>
   <li><a href="#commit-to-github-and-turn-in" id="toc-commit-to-github-and-turn-in" class="nav-link" data-scroll-target="#commit-to-github-and-turn-in"><span class="header-section-number">16.4</span> Commit to Github and turn in</a></li>
   </ul></li>
@@ -541,26 +541,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-steps" class="level2" data-number="16.3">
 <h2 data-number="16.3" class="anchored" data-anchor-id="the-steps"><span class="header-section-number">16.3</span> The steps</h2>
 <p>The steps below will walk you through using the DataTables plug-in to make an interactive table. If at any point you get an error in your Console, stop before moving on to the next step. Each step is dependent on the step before.</p>
-<section id="zero-configuration" class="level3" data-number="16.3.1">
-<h3 data-number="16.3.1" class="anchored" data-anchor-id="zero-configuration"><span class="header-section-number">16.3.1</span> #1: “Zero configuration”</h3>
+<section id="v1-zero-configuration" class="level3" data-number="16.3.1">
+<h3 data-number="16.3.1" class="anchored" data-anchor-id="v1-zero-configuration"><span class="header-section-number">16.3.1</span> v1: “Zero configuration”</h3>
 <ol type="1">
 <li>Create a new file in your javascript-practice project folder called <code>datatable.html</code> and add the basic HTML5 boilerplate using Emmet.</li>
-<li>Go to the DataTables home page (https://www.datatables.net/) and click the link for “Examples”.</li>
+<li>Go to the <a href="https://www.datatables.net/">DataTables home page</a> and click the link for “Examples”.</li>
 <li>On the Examples page, choose the “Zero configuration” example under “Basic initialisation”.</li>
 <li>On the page with the example you’ll see tabs below the table for “JavaScript”, “HTML” and “CSS” with the code you need. However, there are some assumptions in the instructions, so listen up:
 <ul>
-<li>Start with the <strong>HTML</strong> tab and copy the code in the box. Take the contents of that box and put it in your <code>datatable.html</code> HTML page between the <code>&lt;body&gt;</code> tags. Go ahead and look at your page in a browser, so you will see how it changes later.</li>
-<li>Go back to the <strong>JavaScript</strong> tab. The contents of that box should go inside a <code>&lt;script&gt;&lt;/script&gt;</code> tag at the bottom of your <code>datatable.html</code> HTML page before the close of the <code>&lt;/body&gt;</code> tag.</li>
+<li>Start with the <strong>HTML</strong> tab and copy the code in the box. Take the contents of that box and put it in your <code>datatable.html</code> HTML page between the <code>&lt;body&gt;</code> tags. Save the file and go look at your page in a browser, so you will see how it changes.</li>
+<li>Go back to the <strong>JavaScript</strong> tab on the DataTables site. The contents of that box should go inside a <code>&lt;script&gt;&lt;/script&gt;</code> tag at the bottom of your <code>datatable.html</code> HTML page before the close of the <code>&lt;/body&gt;</code> tag.</li>
 </ul></li>
 </ol>
-<p>The parts of this exercise to add the Datatables JavaScript and CSS files assumes some knowledge and is not explained well in the directions.</p>
-<ol type="1">
+<p>The parts of this exercise to add the Datatables JavaScript and CSS files assumes some knowledge and is not explained well in the directions. Do this instead:</p>
+<ol start="5" type="1">
 <li>Copy the three links below and add them to the bottom of your <code>&lt;head&gt;</code> tag just before the closing <code>&lt;/head&gt;</code>.</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://code.jquery.com/jquery-3.3.1.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol type="1">
+<ol start="6" type="1">
 <li>Save your page and look at it in your browser. You should have a working table.</li>
 </ol>
 </section>
@@ -572,8 +572,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>At the bottom you have a <code>&lt;script&gt;</code> tag that tells the page to apply the Datatables javascript to our specific table (based on the <code>id</code> of the table.)</li>
 </ul>
 </section>
-<section id="scroll-vertical" class="level3" data-number="16.3.3">
-<h3 data-number="16.3.3" class="anchored" data-anchor-id="scroll-vertical"><span class="header-section-number">16.3.3</span> #2: “Scroll Vertical”</h3>
+<section id="v2-scroll-vertical" class="level3" data-number="16.3.3">
+<h3 data-number="16.3.3" class="anchored" data-anchor-id="v2-scroll-vertical"><span class="header-section-number">16.3.3</span> v2: “Scroll Vertical”</h3>
 <ol type="1">
 <li>Create a copy of the HTML file you created above and call it <code>scrolling.html</code>.</li>
 <li>Go to the “Scroll Vertical” example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in your
@@ -587,7 +587,7 @@ tags in the new HTML file you just created (<em>scrolling.html</em>) with the Ja
 <h2 data-number="16.4" class="anchored" data-anchor-id="commit-to-github-and-turn-in"><span class="header-section-number">16.4</span> Commit to Github and turn in</h2>
 <p>That is our last JavaScript lesson!</p>
 <ol type="1">
-<li>Commit the new files to your repository and push ot Github.</li>
+<li>Commit the new files to your repository and push everything to Github.</li>
 <li>Post the link to your repository to the Canvas assignment.</li>
 </ol>
 

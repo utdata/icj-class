@@ -44,14 +44,14 @@ So we've made yet another name machine like your last homework. It's OK if you'v
 
 OK, now we need to use the function so we can see the return. We need test for both true and false conditions, so we really need two tests. This time we're going to call the `makeBetterName` function right inside of some `console.log`s instead of creating variables first.
 
-1. After your function closes (the last `}`), add these console.log tests:
+5. After your function closes (the last `}`), add these console.log tests:
 
 ```js
 console.log(makeBetterName("Joan", "Marie", "Larkin"));
 console.log(makeBetterName("John", "F", "Kennedy"));
 ```
 
-1. Save your code and refresh your page so you can see the name. "John F Kennedy" needs the period after the initial, which we'll tackle with an `if` statement.
+6. Save your code and refresh your page so you can see the name. "John F Kennedy" needs the period after the initial, which we'll tackle with an `if` statement.
 
 ### Make middle initial test
 
@@ -136,9 +136,9 @@ Let's walk through this line by line:
 
 That is all well and good if the game doesn't end in a tie, but I'm a soccer fan and games often end in a tie. So here is your charge:
 
-1. Review the W3Schools tutorial on [if, else and else if](https://www.w3schools.com/js/js_if_else.asp) or any other source you like and improve the function above to handle ties. Make it print "It was a tie" if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an `else if` to the function.
-2. Make sure you add a new console log with the same home/away values to test your work.
+2. Review the W3Schools tutorial on [if, else and else if](https://www.w3schools.com/js/js_if_else.asp) or any other source you like and improve the function above to handle ties. Make it print "It was a tie" if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an `else if` to the function.
+1. Make sure you add a new console log with the same home/away values to test your work.
 
-## Commit your work to Github
+## Commit your work
 
-Go ahead and save and commit your work and push it to Github so I can see your progress at this point.
+Save and commit your work to git. You might go ahead and push to Github, as well, so you have a cloud record.

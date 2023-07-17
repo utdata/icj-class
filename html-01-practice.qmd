@@ -71,7 +71,7 @@ In our first pass here, we'll mark up the text items for what physically are ...
 
 Next we need the basic elements required for an HTML 5 document. There is a super easy way to do this thanks to a special thing in VS Code called [Emmet](https://code.visualstudio.com/docs/editor/emmet).
 
-1. At the top of the file, type `html` and you'll see some selections come up. Use the arrow key on your keyboard to choose the option `html:5` and hit return. You _should_ get all the boilerplate elements you need for an HTML page.
+2. At the top of the file, type `html` and you'll see some selections come up. Use the arrow key on your keyboard to choose the option `html:5` and hit return. You _should_ get all the boilerplate elements you need for an HTML page.
 
 ![HTML boilerplate gif](images/html-boilerplate.gif)
 

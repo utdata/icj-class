@@ -194,8 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The basics</span></a>
+            <a href="./html-css-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML &amp; CSS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -502,9 +502,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>When we started with the first lesson, we dove right into writing JavaScript to show concepts like <a href="https://www.w3schools.com/Js/js_variables.asp"><strong>variables</strong></a> (our data containers) and <a href="https://www.w3schools.com/Js/js_operators.asp"><strong>operations</strong></a> (assigning variables, doing math and concatenating strings).</p>
-<p>We then talked about <a href="https://www.w3schools.com/Js/js_functions.asp"><strong>functions</strong></a> where we can create reusable code that acts like a manufacturing plant: We feed it things and it spits out new or modified things. We created a function that squared two numbers. You (hopefully) created a function that puts parts of a name together.</p>
-<p>Now I want to introduce a new, important concept JavaScript called <a href="https://www.w3schools.com/js/js_object_definition.asp">Objects</a> which are also variables, but they can have more than one value, called <a href="https://www.w3schools.com/js/js_object_properties.asp"><strong>properties</strong></a>. I would say these properties <em>describe</em> the object. If our object were a person, it might have these <strong>properties</strong>:</p>
+<p>When we started with JavaScript, we dove right into writing code to show concepts like <a href="https://www.w3schools.com/Js/js_variables.asp">variables</a> (our data containers) and <a href="https://www.w3schools.com/Js/js_operators.asp">operations</a> (assigning variables, doing math and concatenating strings).</p>
+<p>We then talked about <a href="https://www.w3schools.com/Js/js_functions.asp">functions</a> where we can create reusable code that acts like a manufacturing plant: We feed it things and it spits out new or modified things. We created a function that squared two numbers. You (hopefully) created a function that puts parts of a name together.</p>
+<p>Now I want to introduce a new, important concept JavaScript called <a href="https://www.w3schools.com/js/js_object_definition.asp"><strong>Objects</strong></a> which are also variables, but they can have more than one value, called <a href="https://www.w3schools.com/js/js_object_properties.asp"><strong>properties</strong></a>. I would say these properties <em>describe</em> the object. If our object were a person, it might have these <strong>properties</strong>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> person <span class="op">=</span> {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">firstName</span><span class="op">:</span> <span class="st">"Christian"</span><span class="op">,</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">lastName</span><span class="op">:</span> <span class="st">"McDonald"</span><span class="op">,</span></span>
@@ -523,7 +523,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To use a <strong>method</strong> of a JavaScript object we also follow the object with a <code>.</code> and the method name, but we have to follow the method with parenthesis: <code>person.fullName()</code> would give us “Christian McDonald”.</p>
 <section id="html-elements-are-javascript-objects" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="html-elements-are-javascript-objects"><span class="header-section-number">12.1</span> HTML elements are JavaScript Objects</h2>
-<p>Thanks for something called the <a href="https://www.w3schools.com/js/js_htmldom.asp">Document Object Model</a> (or DOM, for short) JavaScript considers every HTML element on a web page a JavaScript <strong>Object</strong> and it has some baked-in properties and methods. (The properties and methods vary based on object type: string vs number vs date, etc.) This means can can access the <strong>properties</strong> of each HTML element and we can act on them through <strong>methods</strong>.</p>
+<p>Thanks to something called the <a href="https://www.w3schools.com/js/js_htmldom.asp">Document Object Model</a> (or DOM, for short) JavaScript considers every HTML element on a web page a JavaScript <strong>Object</strong> and it has some baked-in properties and methods. (The properties and methods vary based on object type: string vs number vs date, etc.) This means we can access the <strong>properties</strong> of each HTML element and we can act on them through <strong>methods</strong>.</p>
 <p>We’ll use these baked-in properties and methods in our next lesson.</p>
 <p>We’ll use a <strong>method</strong> to find specific objects on the page to discover it’s properties. We’ll then make decisions based on those properties and then use another <strong>method</strong> to change that HTML object.</p>
 

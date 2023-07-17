@@ -194,8 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The basics</span></a>
+            <a href="./html-css-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML &amp; CSS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -485,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#add-period-if-true" id="toc-add-period-if-true" class="nav-link" data-scroll-target="#add-period-if-true"><span class="header-section-number">13.2.2</span> Add period if true</a></li>
   </ul></li>
   <li><a href="#using-else-and-if-else" id="toc-using-else-and-if-else" class="nav-link" data-scroll-target="#using-else-and-if-else"><span class="header-section-number">13.3</span> Using else and if else</a></li>
-  <li><a href="#commit-your-work-to-github" id="toc-commit-your-work-to-github" class="nav-link" data-scroll-target="#commit-your-work-to-github"><span class="header-section-number">13.4</span> Commit your work to Github</a></li>
+  <li><a href="#commit-your-work" id="toc-commit-your-work" class="nav-link" data-scroll-target="#commit-your-work"><span class="header-section-number">13.4</span> Commit your work</a></li>
   </ul>
 </nav>
     </div>
@@ -543,12 +543,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>So we’ve made yet another name machine like your last homework. It’s OK if you’ve already used these variable names in your other code because these are only used <em>inside</em> of this function, another example of Scope.</p>
 <p>OK, now we need to use the function so we can see the return. We need test for both true and false conditions, so we really need two tests. This time we’re going to call the <code>makeBetterName</code> function right inside of some <code>console.log</code>s instead of creating variables first.</p>
-<ol type="1">
+<ol start="5" type="1">
 <li>After your function closes (the last <code>}</code>), add these console.log tests:</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">makeBetterName</span>(<span class="st">"Joan"</span><span class="op">,</span> <span class="st">"Marie"</span><span class="op">,</span> <span class="st">"Larkin"</span>))<span class="op">;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">makeBetterName</span>(<span class="st">"John"</span><span class="op">,</span> <span class="st">"F"</span><span class="op">,</span> <span class="st">"Kennedy"</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol type="1">
+<ol start="6" type="1">
 <li>Save your code and refresh your page so you can see the name. “John F Kennedy” needs the period after the initial, which we’ll tackle with an <code>if</code> statement.</li>
 </ol>
 <section id="make-middle-initial-test" class="level3" data-number="13.2.1">
@@ -623,14 +623,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The two console logs at the bottom call the function with differing values.</li>
 </ul>
 <p>That is all well and good if the game doesn’t end in a tie, but I’m a soccer fan and games often end in a tie. So here is your charge:</p>
-<ol type="1">
+<ol start="2" type="1">
 <li>Review the W3Schools tutorial on <a href="https://www.w3schools.com/js/js_if_else.asp">if, else and else if</a> or any other source you like and improve the function above to handle ties. Make it print “It was a tie” if the home and away scores are the same. Your big hint here is you have to do two tests, so you need to add an <code>else if</code> to the function.</li>
 <li>Make sure you add a new console log with the same home/away values to test your work.</li>
 </ol>
 </section>
-<section id="commit-your-work-to-github" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="commit-your-work-to-github"><span class="header-section-number">13.4</span> Commit your work to Github</h2>
-<p>Go ahead and save and commit your work and push it to Github so I can see your progress at this point.</p>
+<section id="commit-your-work" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="commit-your-work"><span class="header-section-number">13.4</span> Commit your work</h2>
+<p>Save and commit your work to git. You might go ahead and push to Github, as well, so you have a cloud record.</p>
 
 
 </section>

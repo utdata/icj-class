@@ -194,8 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The basics</span></a>
+            <a href="./html-css-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML &amp; CSS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -512,15 +512,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>As we have worked on JavaScript in class, it has been a bit academic … there has been no action on our web page. Let’s change that, and marry our JavaScript to our HTML and make our our page do something.</p>
+<p>As we have worked on JavaScript so far, it has been a bit academic … there has been no action on our web page. Let’s change that, and marry our JavaScript to our HTML and make our our page do something.</p>
 <section id="the-document-object-model" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="the-document-object-model"><span class="header-section-number">14.1</span> The Document Object Model</h2>
-<p>JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript <strong>object</strong>. This concept, called the Document Object Model – or DOM, for short – is a standard for how to get, change, add, or delete HTML elements using JavaScript.</p>
+<p>JavaScript is aware of all the HTML on your web page, and each element becomes a JavaScript <strong>object</strong>. This concept, called the Document Object Model — or DOM, for short — is a standard for how to get, change, add, or delete HTML elements using JavaScript.</p>
 <p>The DOM allows us to connect our JavaScript functions to HTML or CSS on the page.</p>
 </section>
 <section id="our-goal" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="our-goal"><span class="header-section-number">14.2</span> Our goal</h2>
-<p>We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. And overview of steps:</p>
+<p>We will create an HTML form that allows a user to enter their first, middle and last name, and when they press a button it will display the full name elsewhere on the webpage. An overview of steps:</p>
 <ul>
 <li>Create a new html page.</li>
 <li>Introduce form elements through text boxes and a button.</li>
@@ -532,7 +532,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/js-form.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">js-form</figcaption>
+<figcaption class="figure-caption">Our js-form</figcaption>
 </figure>
 </div>
 <p>Now let’s get down to the detail.</p>
@@ -541,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="14.3" class="anchored" data-anchor-id="create-our-page"><span class="header-section-number">14.3</span> Create our page</h2>
 <ol type="1">
 <li>Inside the same <code>yourname-javascript</code> repo we have been working in, create a new file called <code>form.html</code> and open it in VS Code.</li>
-<li>Enter the HTML5 boilerplate code. Remember that you an use Emmet to create this by typing <code>html</code> and then use the dropdown to choose <code>html:5</code>. Don’t capitalize <code>html</code>.</li>
+<li>Enter the HTML5 boilerplate code. Remember that you can use Emmet to create this by typing <code>html</code> and then use the dropdown to choose <code>html:5</code>. Don’t capitalize <code>html</code>.</li>
 <li>In between the
 
 tags of the document, add the following HTML code. I’ll explain afterward:</li>
@@ -555,7 +555,7 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h3</span> <span class="er">id</span><span class="ot">=</span><span class="st">"nameHead"</span><span class="kw">&gt;</span>Name will go here<span class="kw">&lt;/h3&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
-<li>Save your file and open that page in a browser.</li>
+<li>Save your file and use <strong>Go Live</strong> to start a live server.</li>
 </ol>
 <p>We’ve introduced several new HTML elements here that we haven’t used before.</p>
 <ul>
@@ -592,7 +592,16 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <h3 data-number="14.5.1" class="anchored" data-anchor-id="getelementbyid"><span class="header-section-number">14.5.1</span> getElementById</h3>
 <p>Using the <a href="https://www.w3schools.com/js/js_htmldom_elements.asp">Document Object Model</a>, we can find any named element on our HTML page. Once we “have” that object, we can find its various properties, like how long it is, or the contents of the tag, etc.</p>
 <p>The easiest way to do this is with <code>document.getElementByID("id_name_here")</code>. Once we “have” the element, we can access its properties and methods. Using this, we can “get” the contents of the forms and put them into variables in our function.</p>
-<p>(If time: It might be worth showing in class how to use the Console to test how to access the DOM using <code>document.getElementById("nameForm").first.value</code>).</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>If time: It might be worth showing in class how to use the Console to test how to access the DOM using <code>document.getElementById("nameForm").first.value</code>.</p>
+</div>
+</div>
+</div>
 <ol type="1">
 <li>In our <code>makeBetterName()</code> function, remove the three arguments inside the parenthesis.</li>
 <li>Add the following three lines inside the function before the IF in your <code>makeBetterName</code> function:</li>
@@ -601,7 +610,7 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> mName <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"nameForm"</span>)<span class="op">.</span><span class="at">middle</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> lName <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"nameForm"</span>)<span class="op">.</span><span class="at">last</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>What we are doing here is instead of feeding our names into the function through arguments, we are using <code>document.getElementByID</code> to find and get the “nameForm” element, and then we are accessing each input by its “name” property (i.e.&nbsp;<code>.first</code>). The property <code>.value</code> gives us the text of that is inside that input.</p>
-<ol type="1">
+<ol start="3" type="1">
 <li>Now, after the function, add a console.log that calls the function, but don’t feed it names like we did before:</li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">makeBetterName</span>())<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -615,7 +624,7 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <li>In our function, replace the line <code>return fullName;</code> with this:</li>
 </ol>
 <div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"nameHead"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> fullName<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol type="1">
+<ol start="2" type="1">
 <li>Save your file and refresh yor page, and now the <code>&lt;h3&gt;</code> tag (which has <code>id="nameHead"</code>) that used to say “Name will go here” should now have our default form text: “Aragorn Elessar Telcontar”.</li>
 </ol>
 <p>This new line of code uses the same DOM method <code>getElementByID</code> to identify the HTML element we wanted, but this time we used the <code>.innterHMTL</code> property to shove content into it. What content was that? It’s the contents of the <code>fullName</code> which now comes from our text boxes on the page.</p>
@@ -639,7 +648,7 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 </section>
 <section id="commit-your-change-to-github" class="level2" data-number="14.6">
 <h2 data-number="14.6" class="anchored" data-anchor-id="commit-your-change-to-github"><span class="header-section-number">14.6</span> Commit your change to Github</h2>
-<p>Make sure you save, commit and push your changes to Github.</p>
+<p>Make sure you save and commit your changes to git.</p>
 
 
 </section>
