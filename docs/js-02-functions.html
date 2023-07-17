@@ -194,8 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./basics-00-intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The basics</span></a>
+            <a href="./html-css-00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HTML &amp; CSS</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -478,10 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lets-do-it" id="toc-lets-do-it" class="nav-link active" data-scroll-target="#lets-do-it"><span class="header-section-number">11.1</span> Let’s do it</a>
-  <ul class="collapse">
-  <li><a href="#ok-so-a-wee-bit-on-scope" id="toc-ok-so-a-wee-bit-on-scope" class="nav-link" data-scroll-target="#ok-so-a-wee-bit-on-scope"><span class="header-section-number">11.1.1</span> OK, so a wee bit on scope</a></li>
-  </ul></li>
+  <li><a href="#how-functions-work" id="toc-how-functions-work" class="nav-link active" data-scroll-target="#how-functions-work"><span class="header-section-number">11.1</span> How functions work</a></li>
   <li><a href="#functions-on-your-own" id="toc-functions-on-your-own" class="nav-link" data-scroll-target="#functions-on-your-own"><span class="header-section-number">11.2</span> Functions on your own</a></li>
   <li><a href="#save-it" id="toc-save-it" class="nav-link" data-scroll-target="#save-it"><span class="header-section-number">11.3</span> Save it</a></li>
   </ul>
@@ -531,14 +528,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(difference)<span class="op">;</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">/*</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">If I didn't want to create a variable firs, I can </span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">log the "return"ed value directly:</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">If I didn't want to create a variable first, I can </span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">log the returned value directly:</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">subtractionMachine</span>(<span class="dv">5</span><span class="op">,</span> <span class="dv">3</span>))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="lets-do-it" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="lets-do-it"><span class="header-section-number">11.1</span> Let’s do it</h2>
+<section id="how-functions-work" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="how-functions-work"><span class="header-section-number">11.1</span> How functions work</h2>
 <p>You can use the same <code>yourname-javascript</code> repo and files for this lesson that that we used for our first JavaScript lesson. We’ll just keep writing in the same file and script tag.</p>
-<p>Let’s write a function that takes a single argument - a number - and squares it, then uses <code>return</code> to give us back the squared number.</p>
+<p>Let’s write a function that takes a single argument — a number — and squares it, then uses <code>return</code> to give us back the squared number.</p>
 <ol type="1">
 <li>Add a console.log with the text “Using functions:”.</li>
 <li>Add a comment with the intent of your function <code>// function to make square numbers</code>. You should always comment a function with its purpose so others and your future self will know what it does.</li>
@@ -556,7 +553,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Return the value of the new variable.</li>
 </ul>
 <p>So, inside your function:</p>
-<ol type="1">
+<ol start="4" type="1">
 <li>Create a variable (name it what you want) and assign it “theNumb * theNumb”.</li>
 <li>return your new variable.</li>
 </ol>
@@ -564,19 +561,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> squared <span class="op">=</span> theNumb <span class="op">*</span> theNumb<span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> squared<span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol type="1">
+<ol start="6" type="1">
 <li>In your code, call your function to make sure it works, logging the returned value to the console. For example:</li>
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> try01 <span class="op">=</span> <span class="fu">makeSquare</span>(<span class="dv">3</span>)<span class="op">;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(try01)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol type="1">
+<ol start="7" type="1">
 <li>Call the function two more times with a different value.</li>
 </ol>
 <p>BONUS: Update your function to use <a href="https://www.w3schools.com/Js/js_math.asp">JavaScript’s Math Object</a> to perform the squaring.</p>
-<section id="ok-so-a-wee-bit-on-scope" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="ok-so-a-wee-bit-on-scope"><span class="header-section-number">11.1.1</span> OK, so a wee bit on scope</h3>
-<p>One thing of note … the variable that was declared inside the function, <code>squared</code>, cannot be referenced outside the scope of the function. If we try to add <code>console.log(squared)</code> outside the function, we would get an error. Again, <a href="https://wesbos.com/javascript-scoping/">read more about variables and scope here</a>.</p>
-</section>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the code above, the variable that was declared inside the function, <code>squared</code>, cannot be referenced outside the scope of the function. If we try to add <code>console.log(squared)</code> outside the function, we would get an error. You can <a href="https://wesbos.com/javascript-scoping/">read more about variables and scope here</a>.</p>
+</div>
+</div>
 </section>
 <section id="functions-on-your-own" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="functions-on-your-own"><span class="header-section-number">11.2</span> Functions on your own</h2>
@@ -590,7 +596,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="save-it" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="save-it"><span class="header-section-number">11.3</span> Save it</h2>
 <ol type="1">
-<li>Commit your changes to Github. It’s important to commit and push to Github so I can see your changes at this point.</li>
+<li>Commit your changes to git. It’s important to add and commit and your changes so I can see your history at this point.</li>
 </ol>
 
 

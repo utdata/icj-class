@@ -28,17 +28,17 @@ You can the log the function's value by logging the variable ...
 console.log(difference);
 
 /*
-If I didn't want to create a variable firs, I can 
-log the "return"ed value directly:
+If I didn't want to create a variable first, I can 
+log the returned value directly:
 */
 console.log(subtractionMachine(5, 3));
 ```
 
-## Let's do it
+## How functions work
 
 You can use the same `yourname-javascript` repo and files for this lesson that that we used for our first JavaScript lesson. We'll just keep writing in the same file and script tag.
 
-Let's write a function that takes a single argument - a number - and squares it, then uses `return` to give us back the squared number.
+Let's write a function that takes a single argument — a number — and squares it, then uses `return` to give us back the squared number.
 
 1. Add a console.log with the text "Using functions:".
 1. Add a comment with the intent of your function `// function to make square numbers`. You should always comment a function with its purpose so others and your future self will know what it does.
@@ -60,7 +60,7 @@ OK, we want our function to do two things:
 
 So, inside your function:
 
-1. Create a variable (name it what you want) and assign it "theNumb * theNumb".
+4. Create a variable (name it what you want) and assign it "theNumb * theNumb".
 1. return your new variable.
 
 ```js
@@ -70,20 +70,21 @@ function makeSquare(theNumb) {
 }
 ```
 
-1. In your code, call your function to make sure it works, logging the returned value to the console. For example:
+6. In your code, call your function to make sure it works, logging the returned value to the console. For example:
 
 ```js
   let try01 = makeSquare(3);
   console.log(try01);
 ```
 
-1. Call the function two more times with a different value.
+7. Call the function two more times with a different value.
 
 BONUS: Update your function to use [JavaScript's Math Object](https://www.w3schools.com/Js/js_math.asp) to perform the squaring.
 
-### OK, so a wee bit on scope
 
-One thing of note ... the variable that was declared inside the function, `squared`, cannot be referenced outside the scope of the function. If we try to add `console.log(squared)` outside the function, we would get an error. Again, [read more about variables and scope here](https://wesbos.com/javascript-scoping/).
+::: callout-note
+In the code above, the variable that was declared inside the function, `squared`, cannot be referenced outside the scope of the function. If we try to add `console.log(squared)` outside the function, we would get an error. You can [read more about variables and scope here](https://wesbos.com/javascript-scoping/).
+:::
 
 ## Functions on your own
 
@@ -94,4 +95,4 @@ One thing of note ... the variable that was declared inside the function, `squar
 
 ## Save it
 
-1. Commit your changes to Github. It's important to commit and push to Github so I can see your changes at this point.
+1. Commit your changes to git. It's important to add and commit and your changes so I can see your history at this point.

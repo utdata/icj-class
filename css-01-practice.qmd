@@ -67,6 +67,8 @@ And a little further down the page, notice the difference in the size of the bul
 
 ![Browser example 2](images/3-browser-reset-ex02.png)
 
+### Add the reset file
+
 There is way to deal with these differences. The concept -- called a CSS Reset -- is to zero out all margins, padding and text sizes so you have a zero base to work from before applying new styles. The version that we will use is from HTML5Doctor, and you can [read about it here](http://html5doctor.com/html-5-reset-stylesheet/).
 
 So, let's do it:
@@ -215,7 +217,7 @@ About font names ... If you wanted to use Franklin Gothic as as a font it would 
 
 We will style to an `id=` attribute a little later in the assignment.
 
-## Tricks of the trade
+### Tricks of the trade
 
 When writing styles I'll often use the browser **Inspector** to experiment with what they might look like on the screen. Once I figure out my style, I can then add it to my styles file.
 
@@ -393,7 +395,9 @@ If you are living right, your list should look like this now:
 
 ### Set the ordered list style
 
-We need to do the same here for ordered lists. We'll also add a little margin under each list item so they can breathe.
+We need to do the same here for ordered lists.
+
+1. Add these styles to add little margin under each list item so they can breathe.
 
 ```css
 ol {
@@ -475,7 +479,7 @@ OK, now that we know we have targeted the right items, we can add styles to add 
 5. And now you can remove the `background-color` rule.
 
 
-## Lets add a footer
+## Good enough sometimes
 
 If you followed the HTML assignment, you should have a `<footer>` section in your html, and right now it is probably floating off to the right of the nutrition list. This is because of all the floats in the nutrition section. We can use  [clear](https://www.w3schools.com/cssref/pr_class_clear.asp) again to help us, but we have couple of other issues.
 

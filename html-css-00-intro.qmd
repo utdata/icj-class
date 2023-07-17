@@ -1,4 +1,4 @@
-# The basics
+# HTML & CSS
 
 If I had to boil this class into its simplest terms it would be: It's about building web pages.
 
