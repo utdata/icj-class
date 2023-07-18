@@ -1,3 +1,45 @@
-# Sass Intro
+# Sass
 
-do I need this?
+::: callout
+Drafts done for this section.
+:::
+
+::: callout-important
+Before starting this lesson, make sure you've done [part two of setting up](https://github.com/utdata/icj-setting-up/blob/main/README.md).
+:::
+
+## Goals of this section
+
+- To learn about the Node.js-based development environments.
+- To set up a project based on a template repo saved in Github.
+- To learn about Sass/SCSS and to practice writing it.
+
+## Node
+**Node.js** is an open-source server environment built using JavaScript. Many programmers like it because it allows them 
+to write JavaScript not just for “front-end” browser tasks, but also for server-based or “back-end” tasks.
+
+For our purposes, consider Node as a development environment and ecosystem that allows us to use code written by other people so we don't have to write it ourselves. Developers will create mini-programs — known as packages — and share them through Node Package Manager, or **npm** for short. Think of npm as the App Store for Node.js. When we need to do something like convert a Google Spreadsheet into data usable in our project, we don't have to write the code ourselves because someone else has already done so and published it to the npm "app store".
+
+We will need a number of these apps to convert our fancy Sass SCSS into vanilla CSS that our browser will understand.
+
+# Sass and SCSS
+
+Sass (or Syntactically Awesome Style Sheets) is system that makes writing CSS more efficient. SCSS (Sassy CSS) is the syntax we use, and it has to be processed (or "compiled" in tech speak) into regular CSS before the browser can understand it. Think of it as a translation service. In our case we are using Gulp and some other npm tasks to do that translation, hence all the need for the development environment.
+
+Some of the benefits/features of Sass/SCSS are:
+
+- Nesting and shorthand styles allow you to write more understandable and efficient code that is easier to maintain.
+- Variables allow you to reuse styles and make a single change that affects values all through your code base.
+- Partials and importing allow you to organize your style files into smaller, more manageable chunks.
+- Sass allows you to do standard math operations within your SCSS.
+- "Mixins" let you make groups of CSS declarations that you can reuse throughout your site. You can even pass in values to make your mixin work more like functions.
+
+The Bootstrap framework that we will use later in this class takes advantage of all of these features. Sass is a required part of Bootstrap.
+
+^ There are two different ways to write Sass, but we will use the SCSS version.
+
+## Sass features
+
+The [Sass guide](https://sass-lang.com/guide) walks through the above features with code examples. You should look through it.
+
+

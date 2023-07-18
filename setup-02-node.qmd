@@ -1,0 +1,5 @@
+# Setup: Part 2 {.unnumbered}
+
+Before we can move on to the rest of the book, we need to do some more computer setup. This is handled in separate documentation.
+
+Go to [ICJ Setting Up: Part 2](https://utdata.github.io/icj-setting-up/setup-part-2.html) do those installations and then return here to the next chapter.

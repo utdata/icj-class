@@ -14,7 +14,7 @@ book:
       chapters:
         - start-01-terminal.qmd
         - start-02-move.qmd
-        - start-03-setup.qmd
+    - setup-01-git.qmd
     - part: git-00-intro.qmd
       chapters:
         - git-01-project.qmd
@@ -33,12 +33,12 @@ book:
         - js-04-flow-control.qmd
         - js-05-html.qmd
         - js-06-datatables.qmd
+    - setup-02-node.qmd
     - part: sass-00-intro.qmd
       chapters: 
-        - sass-01-node.qmd
-        - sass-02-scss.qmd
-        - sass-03-refactor.qmd
-        - sass-04-publish.qmd
+        - sass-01-project.qmd
+        - sass-02-refactor.qmd
+        - sass-03-publish.qmd
     - part: bs-00-intro.qmd
       chapters: 
         - bs-01-components.qmd
