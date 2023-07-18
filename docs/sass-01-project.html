@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 6&nbsp; HTML mastery</title>
+<title>Intro to Coding for Journalists - 15&nbsp; Projects from degit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./css-01-practice.html" rel="next">
-<link href="./html-01-practice.html" rel="prev">
+<link href="./sass-02-refactor.html" rel="next">
+<link href="./sass-00-intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./html-css-00-intro.html">HTML &amp; CSS</a></li><li class="breadcrumb-item"><a href="./html-02-mastery.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">HTML mastery</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sass-00-intro.html">Sass</a></li><li class="breadcrumb-item"><a href="./sass-01-project.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Projects from degit</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-02-mastery.html" class="sidebar-item-text sidebar-link active">
+  <a href="./html-02-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">HTML mastery</span></span></a>
   </div>
 </li>
@@ -257,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="./sass-01-project.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Projects from degit</span></span></a>
   </div>
 </li>
@@ -444,8 +444,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started"><span class="header-section-number">6.1</span> Getting started</a></li>
-  <li><a href="#the-assignment-requirements" id="toc-the-assignment-requirements" class="nav-link" data-scroll-target="#the-assignment-requirements"><span class="header-section-number">6.2</span> The assignment requirements</a></li>
+  <li><a href="#the-structure-of-the-project" id="toc-the-structure-of-the-project" class="nav-link active" data-scroll-target="#the-structure-of-the-project"><span class="header-section-number">15.1</span> The structure of the project</a>
+  <ul class="collapse">
+  <li><a href="#src" id="toc-src" class="nav-link" data-scroll-target="#src"><span class="header-section-number">15.1.1</span> src</a></li>
+  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"><span class="header-section-number">15.1.2</span> docs</a></li>
+  </ul></li>
+  <li><a href="#how-development-environment-works" id="toc-how-development-environment-works" class="nav-link" data-scroll-target="#how-development-environment-works"><span class="header-section-number">15.2</span> How development environment works</a>
+  <ul class="collapse">
+  <li><a href="#configurations-files" id="toc-configurations-files" class="nav-link" data-scroll-target="#configurations-files"><span class="header-section-number">15.2.1</span> Configurations files</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -454,7 +461,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">HTML mastery</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Projects from degit</span></h1>
 </div>
 
 
@@ -469,52 +476,95 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Draft is done</p>
-</div>
-</div>
-</div>
-<p>For this mastery assignment you are coding a story in HTML as indicated below. Points will be taken off for improper syntax and indentation. Make clean code.</p>
-<p>There are some tasks within this assignment where we are skills or tags we have not yet covered. That’s on purpose. You will need to Google it, as that is part of the developer process.</p>
-<section id="getting-started" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="getting-started"><span class="header-section-number">6.1</span> Getting started</h2>
-<p>See the <a href="./git-01-project.html">Project setup</a> and <a href="./git-02-cycle.html">Using Git</a> chapters if you need a review on the project setup.</p>
+<p>As usual, we’ll learn by doing. So let’s jump in with a project.</p>
+<p>For this project, we are starting from a template saved in a repo. We’ll use a special npm package called <a href="https://www.npmjs.com/package/degit">degit</a> to start our project. You should have already installed it globally when we did our computer setup.</p>
+<p>As such, we won’t need to create a README or .gitignore file because they will be part of the template. But you will need to create a project folder:</p>
+<ol type="1">
+<li>Create a new project folder called <code>yourname-sass</code> inside your <code>icj</code> folder.</li>
+<li>Open that folder in VS Code and open your terminal.</li>
+<li>In your terminal, run <code>degit utdata/icj-sass-template</code>. This should download all the template files into your folder.</li>
+<li>Run <code>npm install</code>. This will install all the packages we need from the npm “app store”. It will take a couple of minutes.</li>
+<li>Run <code>gulp dev</code>.</li>
+</ol>
+<p>When you run <code>gulp dev</code> from your Terminal, a <em>bunch of cool stuff happens</em>. The process creates our “development environment”:</p>
 <ul>
-<li>Inside your <code>icj</code> folder, create a new project folder, called <code>yourname-html-css-mastery</code>.</li>
-<li>Create a <code>README.md</code> file using proper Markdown with a title, the assignment name and the due date.</li>
-<li>Create a <code>.gitignore</code> file like we did in practice, using gitignore.io to include VisualStudioCode, macOS and Windows.</li>
-<li>Use the git cycle to add and commit the files.</li>
-<li>Create a new repo in Github with the same name as your local folder. Do NOT check the boxes there for the readme or gitignore since you created them locally.</li>
-<li>After you create the online repo, connect the two with the <code>git remote add</code> command shown in your Github repo.</li>
-<li>Push your changes from your local machine to Github.</li>
-<li>Refresh our Github page to make sure everything worked.</li>
+<li>All HTML and image files are copied from a <code>src</code> directory into the <code>docs</code> directory, which is where our publishable code will live.</li>
+<li>A task compiles all the fancy SCSS files into regular CSS files that your browser can read.</li>
+<li>A program called Browsersync launches a web browser window and displays your web page .</li>
+<li>Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.</li>
 </ul>
+<p>(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run <code>$ gulp dev</code>.)</p>
+<section id="the-structure-of-the-project" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="the-structure-of-the-project"><span class="header-section-number">15.1</span> The structure of the project</h2>
+<p>The template you pulled already as the Node.js development environment defined with a specific (and common) folder structure.</p>
+<p>Let’s talk about how the folder system is structured:</p>
+<section id="src" class="level3" data-number="15.1.1">
+<h3 data-number="15.1.1" class="anchored" data-anchor-id="src"><span class="header-section-number">15.1.1</span> src</h3>
+<p>You will only work with the files in the <code>src</code> folder. There are a series of “tasks” in the development system that will process and move files to the <code>docs</code> folder, which is our “publishable” website.</p>
+<pre><code>src
+├── html (files here are moved to the root of `docs`.)
+│   ├── index.html
+│   ├── shows.css
+├── scss (files here get complied into a folder called `docs/css`.)
+│   ├── new-styles.css
+│   ├── old-styles.css
+├── img (files here are moved into a similar folder called `docs/img`.)
+│   ├── harvey-dale.jpg</code></pre>
 </section>
-<section id="the-assignment-requirements" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="the-assignment-requirements"><span class="header-section-number">6.2</span> The assignment requirements</h2>
+<section id="docs" class="level3" data-number="15.1.2">
+<h3 data-number="15.1.2" class="anchored" data-anchor-id="docs"><span class="header-section-number">15.1.2</span> docs</h3>
+<p>The <code>docs</code> folder is our publishing folder, where our website lives. These are the files that will be published to the web as a working website. Everything outside the <code>docs</code> folder just supports the creation of the files inside <code>docs</code>. <strong>DON’T EDIT ANY FILES IN THE <code>docs</code> FOLDER.</strong> If you do, the changes will just be overwritten.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We use the <code>docs</code> folder for our publishable code to take advantage of a special feature in Github that will give us free publishing to the Internet. Other common folder names for publishing you might come across are <code>dist</code> and <code>public</code>.</p>
+</div>
+</div>
+<pre><code>docs (don't edit anything in here)
+├── css
+│   ├── (files from `src/scss` end up here)
+├── img
+│   ├── (files from `src/img` end up here)
+├── index.html
+├── shows.html
+</code></pre>
+</section>
+</section>
+<section id="how-development-environment-works" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="how-development-environment-works"><span class="header-section-number">15.2</span> How development environment works</h2>
+<p>As mentioned, files from the <code>src</code> folder get processed into <code>docs</code>. However, the published structure isn’t exactly the same as <code>src</code> so pay attention.</p>
+<p>The <code>docs</code> folder ends up being the “root” or base level of our site. All other files in the project need to need to be referenced relative to where they live inside <code>docs</code>.</p>
 <ul>
-<li>In your repo, create a new file named <code>story.html</code>. Use Emmet to put the HTML5 code in that file, and make sure it has all the proper HTML5 tags like doctype, title, head, body, etc.</li>
-<li>Use <a href="resources/html-mastery-text.txt">this text file</a> for the page content.</li>
-<li>Code the overline (the text “OPEN THREADS”) as an <code>&lt;h4&gt;</code>.</li>
-<li>Code the main headline and the subhead with the proper hierarchy of header tags. (i.e., the main headline should be bigger than the subhead).</li>
-<li>Code the subhead that is inside the story “Under the radar” as an <code>&lt;h3&gt;</code> tag, which is typically for that display.</li>
-<li>Put the byline in a <code>&lt;p&gt;</code> tag and properly link to the included Twitter handle.</li>
-<li>Put the date in a <code>&lt;span&gt;</code> tag.</li>
-<li><a href="resources/spurs.jpg" download="spurs.jpg">Download this photo</a> and save/move it in your project folder.</li>
-<li>After the byline, add an semantically-correct image and caption using the downloaded image above and the “Soobum Im / USA TODAY Sports” text.</li>
-<li>Style all the story text in <code>&lt;p&gt;</code> tags. Each paragraph of text should have it’s own beginning <code>&lt;p&gt;</code> and ending <code>&lt;/p&gt;</code> tag.</li>
-<li>There is a quoted text paragraph that starts with “Granted, not every starting …”. Put that in a <code>blockquote</code> tag. Don’t know that one? Look it up.</li>
-<li>Add a hypertext link to the text “ranking the starting five line-ups” that links to <a href="https://bleacherreport.com/articles/2789035-ranking-every-nba-teams-projected-starting-5-after-free-agency#slide7">this url</a>, opening in a new window.</li>
-<li>Use an ORDERED list for the ranking list of teams in the middle of the story, but it should start with the Philadelphia 76ers as number 5. Don’t know how to do that? Google it.</li>
-<li>The last two paragraphs are not really part of the article, but instead the opening for the comments section. Make sure that is semantically separate. Put the text within their own <code>&lt;p&gt;</code> tags.</li>
+<li>Files in the <code>src/html</code> get moved to the root level of <code>docs</code>. <strong>It’s important to realize where these files get published in relation to your <code>css</code> and <code>img</code> folders.</strong></li>
+<li>Sass files in the <code>src/scss</code> folder get compiled/rewritten into the <code>docs/css</code> folder. <strong>There are two important implications of this:</strong>
+<ul>
+<li>While the filename you edit ends in <code>.scss</code>, the compiled file in <code>docs/css</code> a <code>.css</code> extension.</li>
+<li>This means your HTML files that end up at the root of <code>docs</code> will need to link to a compiled css file of the same name, but inside the css folder and with a <code>.css</code> extension, like <code>href="css/filename.css"</code>.</li>
+</ul></li>
+<li>Files in the <code>src/img</code> folder are moved into <code>docs/img</code>. Since your <code>index.html</code> file ends up in <code>docs</code>, then your img link needs to be <code>img src="img/filename.jpg"</code>.</li>
+</ul>
+<section id="configurations-files" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="configurations-files"><span class="header-section-number">15.2.1</span> Configurations files</h3>
+<p>The remaining files and folders in the root folder are part of the development ecosystem. We don’t mess with this files much in our lessons, but here is a description of what they do:</p>
+<ul>
+<li><code>.gitignore</code> tells Git which files to ignore sending to Github.</li>
+<li><code>README.md</code> describes what the repo is about. It has our installation instructions.</li>
+<li><code>.gulpfile.js</code> is the file that controls our task manager. This is where we tell the <strong>Gulp</strong> program where to find our Sass SCSS files and then where to place the compiled new CSS files. We won’t edit this file, but know it is necessary.</li>
+<li>The files inside <code>tasks</code> are the workhorse of Gulp. Like the gulpfile, we won’t get into how they work. Just know this is the guts of the development ecosystem.</li>
+<li><code>package.json</code> is the file that tells the Node.js ecosystem which packages to download from npm. It is pre-configured for you.</li>
+<li><code>package-lock.json</code> is created by the <code>npm install</code> command based on the <code>package.json</code> file. It contains a bunch of details about dependencies that we don’t need to worry much about. Again, it is created by npm.</li>
+<li>A <code>node_modules</code> folder is generated from <code>package.json</code> when you run <code>$ npm install</code>. It will contain all the mini-programs, and it SHOULD NOT be pushed to Github ’cause it is huge. It’s been excluded in the <code>.gitignore</code> file.</li>
 </ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -753,13 +803,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./html-01-practice.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">HTML practice</span></span>
+      <a href="./sass-00-intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sass</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./css-01-practice.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">CSS practice</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sass-02-refactor.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

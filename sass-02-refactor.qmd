@@ -62,7 +62,14 @@ There are two colors defined in our styles for our Harvey Dale and the Cements b
 
 You should see your background color change on _both_ the "home" page and the "shows" page. Be sure to check both of them.
 
-If you don't see a change, then make sure that your `gulp dev` task is running in your Terminal so your Sass is getting compiled. If that is working but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `new-styles.css` file.
+#### Troubleshooting
+
+If you don't see a change, there are a couple of things to check:
+
+- Make sure that your `gulp dev` task is running in your Terminal so your Sass is getting compiled. If that is crashed with an error, you might try to *Control-c* in your Terminal to clear it.
+    - You can try `gulp dev` again, but you probably have to fix the error first. Read the error output for clues and line number references. Also look in your VS Code `new-styles.css` files for red error indicators that say something is wrong codes.
+- If Sass is still compiling but you still don't see a change, make sure your `index.html` and `shows.html` files are pointing to the correct `new-styles.css` file and that those pages have been saved.
+- Unlikelyy to help, bu you can try holding down your *Shift* key while also refreshing your browser to clear the browser cache for that page.
 
 ## Nesting
 
@@ -72,7 +79,7 @@ CSS doesn't have the same hierarchy. If we want to target a style to an `<h3>` t
 
 Sass allows us to write this as a visual hierarchy that is both easier to understand and often (but not always) in fewer lines of code.
 
-While this is useful, we do need to be careful not to nest too much or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html hierarchy because then small changes in the HTML might break our styles.
+While this is useful, we do need to be careful not to nest too much (three levels?) or our CSS will end up over-qualified and bloated. In addition, we don't want to completely mimic our html hierarchy because then small changes in the HTML might break our styles.
 
 Here is an example of traditional CSS where the styles for the `ul` and `li` tags will _only_ be applied if they are inside a `<nav>` element.
 
@@ -159,11 +166,11 @@ There's a shorthand CSS selector for applying a property to all "child" elements
 
 1. Inside the `.content` rule, before the other nested rules, add this one. Make sure it is indented properly like other nested rules:
 
-```scss
- > * {
-   padding-left: 30px;
- }
-```
+    ```scss
+     > * {
+       padding-left: 30px;
+     }
+    ```
 
 1. Now that you've done this you can remove all the other `padding-left: 30px;` everywhere else. In some cases, you no longer even need the style at all for that element because the padding was the only rule.
 
@@ -184,11 +191,11 @@ We first need to change the name of the file so it starts with an underscore `_`
 1. In your Explorer list find the file `reset.css` file (it's in `src/scss/`) and rename it to `_reset.scss`.
 1. Go into the `new-styles.scss` file and at the top of the file but **below** your color variables, add the following:
 
-```scss
-@import 'reset';
-```
-
-Note that you don't need to include the underscore or the file extension to the import call, as Sass will understand that automatically. (Though I don't think it would break if you had them.)
+    ```scss
+    @import 'reset';
+    ```
+    
+    Note that you don't need to include the underscore or the file extension to the import call, as Sass will understand that automatically. (Though I don't think it would break if you had them.)
 
 1. Now go into both `index.html` and `shows.html` and remove the line of code that links to the old reset file.
 1. Make sure that your Gulp process is still working and your page is still working OK.
@@ -207,9 +214,9 @@ OK, so that you've seen how that works, I want you to create three new partials 
 1. Do the same for all the `.content` calls into the `_content.scss` file.
 1. Lastly, after your variable rules, add @import calls into `new-styles.scss` for our new partials _AFTER_ the import for reset.
 
-```scss
-@import 'base';
-```
+    ```scss
+    @import 'base';
+    ```
 
 Remember that you don't need to add the underscore or the `.scss` with these import designations, as Sass assumes them already.
 
@@ -219,7 +226,9 @@ Make sure these @imports come _AFTER_ your variables, because this CSS still cas
 
 Now I'd like you to write some new SCSS to modify and/or fix a couple of things in our project.
 
-> **PRO TIP:** I find that sometimes when I make style changes, especially to font sizes, they are not reflected when the page refreshes because the browser has "cached" the style file. Before driving yourself too crazy if a change isn't happening, try holding down the shift key and refresh your browser. This forces the browser to reload linked files instead of caching them.
+::: callout-tip
+I find that sometimes when I make style changes, especially to font sizes, they are not reflected when the page refreshes because the browser has "cached" the style file. Before driving yourself too crazy if a change isn't happening, try holding down the shift key and refresh your browser. This forces the browser to reload linked files instead of caching them.
+:::
 
 ### Text sizes
 
@@ -230,7 +239,7 @@ Now I'd like you to write some new SCSS to modify and/or fix a couple of things 
 
 Add styles that will give navigation links the primary color and behave like those in the body, where the underline only shows on hover.
 
-<img src="images/sass-hover.gif" width="320">
+![Hover lines in navigation](images/sass-hover.gif){width="320"}
 
 Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) are all separate properties and each one needs to be specified individually with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property, like this:
 
@@ -255,12 +264,14 @@ For the content, I want hrefs to _have_ the underline, and that the color of the
 
 The list of shows on the `shows.html` is hard to read. Make some changes to make it look better:
 
-![sass-bullet-list.png](images/sass-bullet-list.png)
+![Good bullet list](images/sass-bullet-list.png)
 
 1. Make the list of shows a bulleted list. (Style of your choice.)
 1. Make sure the bullets line up vertically with the video on the page.
 
-**Of note:** Make sure you don't _add_ bullets to the list items in the nav.
+::: callout-warning
+Make sure you don't _add_ bullets to the list items in the nav.
+:::
 
 ## File names and paths
 
@@ -272,9 +283,9 @@ So, the index is the "home page" of a directory.
 
 Take a look at the `docs` folder in your VS Code Explorer.
 
-![docs](images/sass-docs.png)
+![Docs folder structure](images/sass-docs.png)
 
-It is this folder were all our processed pages are sent to ... it is our "real" website, even though we edit from the `src` folder. It is the "root" of our site and where our `index.html` page lives. Everything else is relative to that folder. When we launch our environment, it goes to `http://localhost:3000/` but it displays the `index.html` page. Once you click through to the `shows.html` page, it url changes to `http://localhost:3000/shows.html`. If you click on the Home link it takes you to `http://localhost:3000/index.html`, which is the same exact page as `http://localhost:3000/`.
+It is this folder where all our processed pages are sent to ... it is our "real" website, even though we edit from the `src` folder. It is the "root" of our site and where our `index.html` page lives. Everything else is relative to that folder. When we launch our environment, it goes to `http://localhost:3000/` but it displays the `index.html` page. Once you click through to the `shows.html` page, it url changes to `http://localhost:3000/shows.html`. If you click on the Home link it takes you to `http://localhost:3000/index.html`, which is the same exact page as `http://localhost:3000/`.
 
 If you look inside `index.html` in the nav element you'll see this:
 
