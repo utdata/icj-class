@@ -1,30 +1,32 @@
 # Bootstrap
 
-## Goals
+::: callout
+Draft done
+:::
+
+[Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable.  Its "mobile-first, responsive design" framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.
+
+With the lesson we return to the teaching method of Tutorial > Practice > Mastery.
+
+## Tutorials
+
+- Throughout this lesson, we will extensively refer to the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). 
+- You should also go through the first part of the Tutorial Republic's [Tutorial Republic's Bootstrap 5 tutorial](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/) starting with "Bootstrap Introduction" through "Bootstrap Responsive Layout" -- before jumping into this week's Practice lesson.  You are free to go through the rest, or come back to specific tutorial pages as needed.
+- There are other tutorials if you are interested, like [W3 Schools' Bootstrap 5 Tutorial](https://www.w3schools.com/bootstrap5/) or the video-based Net Ninja [Bootstrap 5 Crash Course Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR).
+
+
+## Goals for this section
 
 We will:
 
-- Download and discuss using a Node development environment.
 - Discuss the benefits of using a mobile-first framework.
 - Add pre-built components like navigation, etc.
 - Use Bootstrap's grid-system to create a responsive website.
 - Introduce Sass/SCSS for customization.
 
-**NOTE**: Before doing this lesson in class, you should have gone through any Bootstrap tutorials as outlined in Canvas. This walkthrough assumes you have some knowledge based on those.
-
-**ALSO NOTE**: Before starting this lesson, you should have Node and npm installed, as covered in [Part 2: Node setup](https://github.com/utdata/icj-setting-up/blob/main/README.md) and have tested that it works.
-
-**FINAL NOTE**: There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap in-class lesson**.
-
-## About Bootstrap
-
-[Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable.  Its "mobile-first, responsive design" framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.
-
-Throughout this lesson, we will extensively refer to:
-
-- [Bootstrap documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
-
-This is a very basic walkthrough of Bootstrap 5. There are plenty of tutorials on the web, including [Tutorial Republic's Bootstrap 5 tutorial](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/), [W3 Schools' Bootstrap 5 Tutorial](https://www.w3schools.com/bootstrap5/) and Net Ninja's videos [Bootstrap 5 Crash Course Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR).
+::: callout-tip
+There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap practice lesson**.
+:::
 
 ## Create your project and Github repo
 
@@ -38,32 +40,29 @@ We'll take some leaps of faith and create our project and get all our files, so 
     - Run `git init` to intilize git.
     - Run `git add .` to add the files.
     - Run `git commit -m "first commit"` to commit the files.
-1. Go to Github and create a repository of the same name.
-1. Use the "or push an existing repository from the command line" commands from Github to sync the repos.
+1. Go to Github and create a repository of the same name. Use the `git remote add` command to connect your repos.
 
-The project already has README.md and .gitignore files, but you should update the README with information specific to your project.
+The project already has README.md and .gitignore files, but you should update the README with information specific to this assignment.
 
 1. Edit the README file by adding a new section at the top with your name and the date you started the project. Note it is a Bootstrap 5 class project.
 
-> OF NOTE: When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**.
+::: callout-important
+When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**.
+:::
 
-### A quick note about Node.js and npm
+## Review the template files
 
-**Node.js** is an open-source programming framework built using JavaScript. Many programmers like it because it allows them to write JavaScript not just in their browser for “front-end” tasks, but also in the terminal or on a server for “back-end” tasks.
-
-For our purposes, Node is really an ecosystem to use a bunch of mini-programs built in JavaScript. Developers will create these mini-programs -- known as packages -- in that ecosystem and then share them with the world through **npm**. Node Package Manager, or npm for short, is like the App Store for these packages. When someone creates a package to do something -- say a photo slide-show for the web -- and then shares it on npm, then we don't have to reinvent that wheel.
-
-Bootstrap is available through npm, and the project template we are using has been configured to utilize it. While this method is a bit more complicated than just including the Bootstrap CSS and Javascript links in an HTML page, it is also infinitely more powerful, as you will see in future lessons.
-
-## Let's review the project files
+This project is similar to the Sass template in that it uses the Node development environment. There are a couple of differences so we'll review the files.
 
 ### The docs folder
 
 The `docs/` folder is where all our finished site files go. It is the folder that will be read by the web server.
 
-> **SUPER IMPORTANT:** DO NOT EDIT FILES IN THE DOCS FOLDER!!! You will lose your edits if you do.
+::: callout-warning
+**DO NOT EDIT FILES IN THE DOCS FOLDER!!!** All the files in `docs/` get regenerated when you are running `gulp dev`.
+:::
 
-Most web apps like this will use a different folder name, like `dist/` or `public/`, but we are using `docs/` to take advantage of some free web serving services offered by Github.
+Most web apps like this will use a folder called `dist/` or `public/` for their published files, but we are using `docs/` to take advantage of some free web serving services offered by Github.
 
 Inside our docs folder, you will eventually see the following:
 
@@ -75,17 +74,17 @@ Inside our docs folder, you will eventually see the following:
 
 **This is where we edit our files.** Any change we make here gets compiled or copied into the `docs/` folder by our Node.js server.
 
-- The `html` folder has the `index.html` file that we will be adding all our HTML code.
-- the `img` folder is for our original image files. They get "minified" and placed in `docs/img/`.
+- Our `.html` files sit loose in the `src/` folder (or put into subfolders). These get copied into `docs/` in the same _**relative**_ location.
+- The `img` folder is for our original image files. They get "minified" and placed in `docs/img/`.
 - The `scss` folder has `styles.scss` file were we will add all our Sassy css.
 
-As you'll soon see, when our server is running, each time we save a file in either of these folders, the scss will be compiled and our HTML copied into the `docs/` folder.
+When we run `gulp dev` we also launch a live server that will rebuild our project when we save our source files.
 
 #### Inspect the html file
 
 While we are in our src folder, let's look at our HTML.
 
-1. Open `src/html/index.html` and take a look at it.
+1. Open `src/index.html` and take a look at it.
 
 There are several things going on here with this file beyond the base HTML. In the `<head>` we are pulling in css file that will be generated through Sass, including for the Bootstrap framework. At the bottom we are pulling in the JavaScript file that we need for Bootstrap, which will also be copied there by our development environment.
 
@@ -93,7 +92,7 @@ There are several things going on here with this file beyond the base HTML. In t
 
 1. Open the `src/scss/styles.scss` file
 
-You'll see an `@import` here that pulls in all the Bootstrap css from our `node_modules` folder that we downloaded when we ran `npm install`. You don't see the result yet on our index page, but you will soon. There are also some comments to guide you.
+You'll see a lot of comments in this file to explain some things. There is an `@import` command here that pulls in all the Bootstrap css from our `node_modules` folder that we downloaded when we ran `npm install`. You don't see the result yet on our index page, but you will soon. There are also some comments to guide you.
 
 ### Inspect the configuration files
 
@@ -123,10 +122,10 @@ Let's run it and see if it works.
 
 1. In your VS Code Terminal, do this:
 
-```bash
-gulp dev
-```
+    ```bash
+    gulp dev
+    ```
 
-With any luck <http://localhost:3000> will load up in the browser and you'll see some testing text on your screen. This means everything should be good to go.
+With any luck <http://localhost:3000> will load up in the browser and you'll see some dummy text "Testing: 1, 2, 3, 4" on your screen. This means everything should be good to go.
 
 Congrats! You are now ready to get down to business and build a website.

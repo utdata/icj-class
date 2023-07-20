@@ -10,7 +10,12 @@ As such, we won't need to create a README or .gitignore file because they will b
 1. Open that folder in VS Code and open your terminal.
 1. In your terminal, run `degit utdata/icj-sass-template`. This should download all the template files into your folder.
 1. Run `npm install`. This will install all the packages we need from the npm "app store". It will take a couple of minutes.
-1. Run `gulp dev`.
+
+::: callout-important
+When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**.
+:::
+    
+5. Run `gulp dev`.
 
 When you run `gulp dev` from your Terminal, a _bunch of cool stuff happens_. The process creates our "development environment":
 
@@ -31,16 +36,16 @@ Let's talk about how the folder system is structured:
 
 You will only work with the files in the `src` folder. There are a series of "tasks" in the development system that will process and move files to the `docs` folder, which is our "publishable" website.
 
-```
+```text
 src
-├── html (files here are moved to the root of `docs`.)
-│   ├── index.html
-│   ├── shows.css
-├── scss (files here get complied into a folder called `docs/css`.)
+├── img (files will get moved to `docs/img`.)
+│   ├── harvey-dale.jpg
+├── scss (files here get complied into `docs/css`.)
 │   ├── new-styles.css
 │   ├── old-styles.css
-├── img (files here are moved into a similar folder called `docs/img`.)
-│   ├── harvey-dale.jpg
+│   ├── reset.css
+├── index.html
+├── shows.html
 ```
 
 ### docs
@@ -64,15 +69,15 @@ docs (don't edit anything in here)
 
 ## How development environment works
 
-As mentioned, files from the `src` folder get processed into `docs`. However, the published structure isn't exactly the same as `src` so pay attention.
+This setup of having a `src` folder is pretty common in development. We work with the files in the `src` directory as there are background processes that run on those files, do cool stuff, and then compile the result into our publishing directory, in our case `docs/`.
 
-The `docs` folder ends up being the "root" or base level of our site. All other files in the project need to need to be referenced relative to where they live inside `docs`.
+The `docs` folder ends up being the "root" or base level of our site. All other files in the project need to need to be referenced relative to where they end up inside `docs`.
 
-- Files in the `src/html` get moved to the root level of `docs`. **It's important to realize where these files get published in relation to your `css` and `img` folders.**
-- Sass files in the `src/scss` folder get compiled/rewritten into the `docs/css` folder. **There are two important implications of this:**
-  - While the filename you edit ends in `.scss`, the compiled file in `docs/css` a `.css` extension.
+- Any `.html` file in `src/` gets moved to a similar place in `docs/`.
+- Sass files in the `src/scss/` folder get compiled/rewritten into the `docs/css/` folder. **There are two important implications of this:**
+  - While the file name you edit ends in `.scss`, the compiled file in `docs/css/` a `.css` extension.
   - This means your HTML files that end up at the root of `docs` will need to link to a compiled css file of the same name, but inside the css folder and with a `.css` extension, like `href="css/filename.css"`.
-- Files in the `src/img` folder are moved into `docs/img`. Since your `index.html` file ends up in `docs`, then your img link needs to be `img src="img/filename.jpg"`.
+- Files in the `src/img/` folder are moved into `docs/img/`. Since your `index.html` file ends up in `docs`, then your img link needs to be `img src="img/filename.jpg"`.
 
 ### Configurations files
 

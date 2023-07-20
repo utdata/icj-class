@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 20&nbsp; The card component</title>
+<title>Intro to Coding for Journalists - 20&nbsp; Cards</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Bootstrap</a></li><li class="breadcrumb-item"><a href="./bs-03-cards.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Bootstrap</a></li><li class="breadcrumb-item"><a href="./bs-03-cards.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -287,25 +287,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -316,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="./bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
@@ -454,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></h1>
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></h1>
 </div>
 
 
@@ -469,10 +469,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<blockquote class="blockquote">
-<p>This is a continuation of the Bootstrap tutorial.</p>
-</blockquote>
-<p>Here we will introduce <a href="https://getbootstrap.com/docs/5.1/components/card/">Bootstrap cards</a>, a content component that has a ton of options to display a wide variety of content.</p>
+<p>Here we will introduce <a href="https://getbootstrap.com/docs/5.3/components/card/">Bootstrap cards</a>, a content component that has a ton of options to display a wide variety of content.</p>
 <p>Our goal here is to build this part of our page:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -483,14 +480,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-ever-versatile-card" class="level2" data-number="20.1">
 <h2 data-number="20.1" class="anchored" data-anchor-id="the-ever-versatile-card"><span class="header-section-number">20.1</span> The ever-versatile card</h2>
 <ol type="1">
-<li>Scan through the <a href="https://getbootstrap.com/docs/5.1/components/card/">Bootstrap cards</a> documentation and note all the different types of cards you can make. Compare the different styles and note which classes are used.</li>
+<li>Scan through the <a href="https://getbootstrap.com/docs/5.3/components/card/">Bootstrap cards</a> documentation and note all the different types of cards you can make. Compare the different styles and note which classes are used.</li>
 </ol>
-<blockquote class="blockquote">
-<p>IMPORTANT: In a lot of these examples you’ll see <code>style="width: 18rem;"</code>. Bootstrap uses it here so the card doesn’t stretch across the column in their examples. <strong>Most of the time you don’t want this style and should delete it.</strong> We’ll use other ways to control width.</p>
-</blockquote>
-<ol type="1">
-<li>In your index page after the <code>highlight</code> container div, add a new container div.</li>
-<li>In the docs, find the <a href="https://getbootstrap.com/docs/5.1/components/card/#grid-cards">Grid cards</a> example. Copy the first grid example there and put that inside your container div.</li>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In a lot of these examples you’ll see <code>style="width: 18rem;"</code>. Bootstrap uses it in their documentation here so the card won’t stretch across their page in their examples. <strong>Most of the time you don’t want this style and should delete it.</strong> We’ll use other ways to control width.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>In your index page after our “highlight” section, add a new div with the class “container”.</li>
+<li>In the docs, find the <a href="https://getbootstrap.com/docs/5.3/components/card/#grid-cards">Grid cards</a> example. Copy the first grid example there and put that inside your container div.</li>
 <li>Save and look at it. Because we are pulling from the template and there are parts we don’t need, we need to make some edits.
 <ul>
 <li>Delete one of the four cards so there are only three. You should be able to figure out where they start and end by looking at the patterns in the code.</li>
@@ -500,12 +507,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="adjusting-grid-cards" class="level2" data-number="20.2">
 <h2 data-number="20.2" class="anchored" data-anchor-id="adjusting-grid-cards"><span class="header-section-number">20.2</span> Adjusting grid cards</h2>
-<p>With this setup, each card is inside a Bootstrap column. We can use a special <a href="https://getbootstrap.com/docs/5.1/layout/grid/#row-columns">Row columns</a> class to set how many columns (and therefore how many cards) should show in a row before the columns/cards wrap into a new row.</p>
+<p>With this setup, each card is inside a Bootstrap column. We can use a special <a href="https://getbootstrap.com/docs/5.3/layout/grid/#row-columns">Row columns</a> class to set how many columns (and therefore how many cards) should show in a row before the columns/cards wrap into a new row.</p>
 <p>The <code>row-cols</code> setting in the template says to display 1 card per row <code>row-cols-1</code> until the medium width, which is changes to 2 cols per row with <code>row-cols-md-2</code>. The last style there <code>g-4</code> sets the gutter width between the columns.</p>
 <ol type="1">
 <li>Edit the row div to change the <code>md</code> row setting to “3” instead of “2”.</li>
 <li>Save and look how the page changes.</li>
-<li>Add one more class: <code>my-4</code>. This utility class adds a margin at the top and bottom of the row.</li>
 </ol>
 <p>With this method, you can have any number of cards but you can set how many cards/columns you want at each width. It is very useful.</p>
 <p>This is how your page should look now:</p>
@@ -757,12 +763,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./bs-02-grids.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./bs-04-customize.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

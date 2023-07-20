@@ -46,7 +46,7 @@ book:
         - bs-03-cards.qmd
         - bs-04-customize.qmd
         - bs-05-publish.qmd
-        - bs-06-practice.qmd
+        - bs-06-mastery.qmd
     - part: sapp-00-intro.qmd
       chapters: 
         - sapp-01-framework.qmd

@@ -303,24 +303,9 @@ But look a little further into the page and you'll see this:
 
 If you look at our `docs` folder structure above, you'll see that the `harvey-dale.jpg` photo is inside a folder called `img`. Because of this our `src=` path has to include that folder name in the path. This path is **relative** to where the `index.html` page lives.
 
-We have `img/` and `css/` folders. The folders are there just for organization ... those files could technically live anywhere within `docs` if paths are written correctly, but that would be messy.
+We have `img/` and `css/` folders. The folders are there just for organization ... those files could technically live anywhere within `docs` if paths are written correctly, but that would be messy. Again, it's pretty common to store files of the same time like images the same directory.
 
-I might be overgeneralizing, but most websites organize directory structures following two philosophies:
-
-- Folder organization as site structure: A news site might have a `sports/` directory to put all the sports-related files here.
-- Folders based on file type, like images, scripts, etc.
-
-That all said, it is up to the developer to decide.
-
-## How files are generated into docs
-
-Now, remember we've been talking about the `docs` folder structure where files are processed to and not `src` where you actually edit files. Probably the most confusing thing about this setup is this:
-
-- The folder `src/img/` and all its contents gets copied into `docs/img/`. It's a straight copy and that makes sense.
-- Files in `src/scss/` get processed to `docs/css/`. Different folder names, but at least it is folder to folder.
-- But with HTML files it is different: Files inside `src/html/` get sent directly to the root level of `docs/`, not inside another folder like they are in `src`. I guess think of it like this ... we store our editing files in `src/html` so we can tell what kind of files they are, even though they are sent to the root level.
-
-When we write paths between HTML, style or image files, we have to think about how the path works in `docs`, not src.
+It's just important to remember the relative path between files in `src/` should be the same as in `docs/`.
 
 ### Create a new page, update nav
 
