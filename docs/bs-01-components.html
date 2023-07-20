@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 18&nbsp; Bootstrap Components</title>
+<title>Intro to Coding for Journalists - 18&nbsp; Components</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Bootstrap</a></li><li class="breadcrumb-item"><a href="./bs-01-components.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Bootstrap</a></li><li class="breadcrumb-item"><a href="./bs-01-components.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -321,25 +321,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="./bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
@@ -500,7 +500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></h1>
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></h1>
 </div>
 
 
@@ -515,26 +515,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<blockquote class="blockquote">
-<p>This is a continuation of the Bootstrap tuorial.</p>
-</blockquote>
 <p>We’re going to explore many parts of the Bootstrap documentation, using <strong>Components</strong>, <strong>Content</strong> and <strong>Utilities</strong> classes to build a <em>very generic</em> single-page website.</p>
 <p>Here is our goal, a page like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/bs-class-index.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">bs-class-index</figcaption>
+<p><img src="images/bs-practice-done.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Our goal: a finished bootstrap page</figcaption>
 </figure>
 </div>
-<p>We’ll be pulling code from Bootstrap <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">documentation</a> and <a href="https://getbootstrap.com/docs/5.1/examples/">examples</a> to build these pages. In some cases we aren’t even updating the example text, we’re just getting the components on our pages.</p>
+<p>We’ll be pulling code from Bootstrap <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">documentation</a> and <a href="https://getbootstrap.com/docs/5.3/examples/">examples</a> to build these pages. In some cases we aren’t even updating the example text, we’re just getting the components on our pages.</p>
 <p>We’ll start at the top of the page with a very common element to almost every website: Navigation.</p>
 <section id="navs-and-navbars" class="level2" data-number="18.1">
 <h2 data-number="18.1" class="anchored" data-anchor-id="navs-and-navbars"><span class="header-section-number">18.1</span> Navs and navbars</h2>
-<p>Navigation is separated into two parts in Bootstrap <a href="https://getbootstrap.com/docs/5.1/components/navs-tabs/">Navs and tabs</a> and <a href="https://getbootstrap.com/docs/5.1/components/navbar/">Navbars</a>. Navs are the links, and navbars are the containers that can hold them.</p>
+<p>Navigation is separated into two parts in Bootstrap <a href="https://getbootstrap.com/docs/5.3/components/navs-tabs/">Navs and tabs</a> and <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Navbars</a>. Navs are the links, and navbars are the containers that can hold them.</p>
 <p>To build a navigation bar for our site we’ll poke around the Bootstrap documentation until we find something close to what we want and then copy that code and change it for our needs.</p>
-<p>In our case we want the <a href="https://getbootstrap.com/docs/5.1/components/navbar/">Navbars</a> documentation. We want something with dropdows just so you can see that code for later.</p>
+<p>In our case we want the <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Navbars</a> documentation. We want something with dropdows just so you can see that code for later.</p>
 <ol type="1">
-<li>Go to the <a href="https://getbootstrap.com/docs/5.1/components/navbar/">Navbars</a> docs.</li>
+<li>Go to the <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Navbars</a> docs.</li>
 <li>Scroll through the examples until you find the one that has dropdown links but not a search bar. The text right before the code starts with “You can also use dropdowns in your navbar.” It is right before the “Forms” section.</li>
 <li>Use the <strong>Copy</strong> link to get the code.</li>
 <li>Paste this code right after the opening <code>&lt;body&gt;</code> tag in our index.</li>
@@ -543,17 +540,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bs-navbar-01.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">navbar</figcaption>
+<figcaption class="figure-caption">Navbar example</figcaption>
 </figure>
 </div>
-<blockquote class="blockquote">
-<p>NOTE: As you copy and paste code into your index.html file, you may have to adjust the indents of some rows. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You’ll thank me later when you are trying to figure out what goes with what. That, <strong>and it is part of your grade</strong>, because I want to build good habits.</p>
-</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As you copy and paste code into your index.html file, you may have to adjust the indents of some rows. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You’ll thank me later when you are trying to figure out what goes with what. That, <strong>and it is part of your grade</strong>, because I want to build good habits.</p>
+</div>
+</div>
 <section id="adjust-the-navbar-color" class="level3" data-number="18.1.1">
 <h3 data-number="18.1.1" class="anchored" data-anchor-id="adjust-the-navbar-color"><span class="header-section-number">18.1.1</span> Adjust the navbar color</h3>
 <p>There are a bajillion ways to customize both navs (the links) and navbars (the container). We’ll explore the docs just a bit more to change some colors and set up themeing for later.</p>
 <ol type="1">
-<li>Scroll a little further through the navbar docs and you’ll get to a section about <a href="https://getbootstrap.com/docs/5.1/components/navbar/#color-schemes">color schemes</a>. Study how they work.</li>
+<li>Scroll a little further through the navbar docs and you’ll get to a section about <a href="https://getbootstrap.com/docs/5.3/components/navbar/#color-schemes">color schemes</a>. Study how they work.</li>
 <li>Update your navbar classes to use <code>navbar-dark</code> and <code>bg-primary</code> combo.</li>
 <li>Save and check your page.</li>
 </ol>
@@ -569,7 +576,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bs-navbar-test.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">bs-navbar-test</figcaption>
+<figcaption class="figure-caption">Test your mobile navbar</figcaption>
 </figure>
 </div>
 <p>You should look over the other code within the navs, especially the list items classed as <code>nav-item</code> and the <code>a</code> tags within them classed as <code>nav-link</code>. These are your actual links. Where they have <code>href="#"</code> you’ll update <code>#</code> to the path to your HTML pages.</p>
@@ -583,60 +590,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="a-jumbotron-site-header" class="level2" data-number="18.2">
 <h2 data-number="18.2" class="anchored" data-anchor-id="a-jumbotron-site-header"><span class="header-section-number">18.2</span> A Jumbotron site header</h2>
-<p>Once upon a time (like 2021) Bootstrap had a special header component called a <a href="https://getbootstrap.com/docs/5.1/examples/jumbotron/">Jumbotron</a>. With Bootstrap 5’s release in May 2021 they got rid of it because you can build a similar display with their existing utility classes, which allows us to introduce Bootstrap examples along with content and utilites classes.</p>
+<p>Once upon a time (like 2021) Bootstrap had a special header component called a <a href="https://getbootstrap.com/docs/5.3/examples/jumbotron/">Jumbotron</a>. With Bootstrap 5’s release in May 2021 they got rid of it because you can build a similar display with their existing utility classes, which allows us to introduce Bootstrap examples along with content and utilites classes.</p>
 <p>First let’s take a look at what we are talking about.</p>
 <ol type="1">
-<li>Go to the <a href="https://getbootstrap.com/docs/5.1/examples/">Bootstrap Examples</a> page. You can get this from any Bootstrap Docs page in the navigation item called <strong>Examples</strong>.</li>
+<li>Go to the <a href="https://getbootstrap.com/docs/5.3/examples/">Bootstrap Examples</a> page. You can get this from any Bootstrap Docs page in the navigation item called <strong>Examples</strong>.</li>
 </ol>
 <p>Now, these examples aren’t quite as easy to use as the Component documentation. To see how they work you have to either download the examples (which gets you all of them) or view the source code of each page (In Chrome, View &gt; Developer &gt; View Source.)</p>
 <p>Instead, we are just going to build this bit-by-bit. But I did want you to see the examples so you know our goal.</p>
 <ol type="1">
 <li>After your nav, add a new <code>div</code> with a <code>class="container"</code>.</li>
-<li>Inside that div, add another <code>div</code> with <code>id="header"</code>.</li>
-<li>Inside the header div add an <code>h1</code> tag and a <code>p</code> tag and put some text in both. You can use <a href="https://www.youtube.com/watch?v=txf-PS96NHo">VS Code lorem</a> or maybe try a little <a href="http://www.cheeseipsum.co.uk/">cheese ipsum</a>.</li>
+<li>Inside that a semantic <code>&lt;header&gt;</code> element.</li>
+<li>Inside the header add an <code>h1</code> tag and a <code>p</code> tag and put some text in both. You can use <a href="https://www.youtube.com/watch?v=txf-PS96NHo">VS Code lorem</a> or maybe try a little <a href="http://www.cheeseipsum.co.uk/">cheese ipsum</a>.</li>
 </ol>
 <p>It should be something like this:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"container"</span><span class="kw">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"header"</span><span class="kw">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;header&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>Header headline is here<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p&gt;</span>Danish fontina when the cheese comes out everybody's happy ricotta. Gouda red leicester parmesan cottage cheese everyone loves monterey jack who moved my cheese cut the cheese.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;header&gt;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Let’s talk about that <strong>container</strong>. In Bootstrap, a container div applies some margins and puts the content in the center of the browser. It’s an important building block with responsive design because those margins expand/contract depending on your device width.</p>
+<p>Let’s talk about that <strong>container</strong>. In Bootstrap, the class “container” applies some margins and centers content in the browser. It’s an important building block with responsive design because those margins expand/contract depending on your device width.</p>
 <p>The rest of that:</p>
 <ul>
-<li>We created a div with an id of <code>header</code> because it will be a unique item on the page. Giving it an id let’s us target CSS styles to that part of the page if needed.</li>
+<li>We use the semantic <code>&lt;header&gt;</code> tag so it describes this part of the page. We can target that element with CSS.</li>
 <li>The <code>h1</code> and <code>p</code> tags are standard. For now. We’re about to gussy ’em up.</li>
 </ul>
 <p>We will be doing a tour of Bootstrap content and utilites class as we go along.</p>
 <section id="typography-classes" class="level3" data-number="18.2.1">
 <h3 data-number="18.2.1" class="anchored" data-anchor-id="typography-classes"><span class="header-section-number">18.2.1</span> Typography classes</h3>
-<p>Let’s gander at Bootstrap’s <a href="https://getbootstrap.com/docs/5.1/content/typography/">Typography</a> documentation. These are a set of classes that can be applied to elements that give them a certain look. Because Bootstrap is customizable, it is possible to set these classes and then update them later with Sass. We’re going to stick with default styles for now.</p>
+<p>Let’s gander at Bootstrap’s <a href="https://getbootstrap.com/docs/5.3/content/typography/">Typography</a> documentation. These are a set of classes that can be applied to elements that give them a certain look. Because Bootstrap is customizable, it is possible to set these classes and then update them later with Sass. We’re going to stick with default styles for now.</p>
 <ol type="1">
-<li>Look through the <a href="https://getbootstrap.com/docs/5.1/content/typography/#display-headings">Display headings</a> section to see how to apply the <code>display-4</code> class and add that to your <code>h1</code> within your header.</li>
-<li>Look at the <a href="https://getbootstrap.com/docs/5.1/content/typography/#lead">Lead</a> section and then add that class to your <code>p</code> tag within the header.</li>
+<li>Look through the <a href="https://getbootstrap.com/docs/5.3/content/typography/#display-headings">Display headings</a> section to see how to apply the <code>display-4</code> class and add that to your <code>h1</code> within your header.</li>
+<li>Look at the <a href="https://getbootstrap.com/docs/5.3/content/typography/#lead">Lead</a> section and then add that class to your <code>p</code> tag within the header.</li>
 </ol>
-<p>At this point your index should be looking something like this:</p>
+<p>Your code should look like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;h1</span> <span class="er">class</span><span class="ot">=</span><span class="st">"display-4"</span><span class="kw">&gt;</span>Header headline is here<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"lead"</span><span class="kw">&gt;</span>Danish fontina when the cheese comes out everybody's happy ricotta. Gouda red leicester parmesan cottage cheese everyone loves monterey jack who moved my cheese cut the cheese.<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And your page should should be looking something like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bs-index-typography.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">bs-index-typography</figcaption>
+<figcaption class="figure-caption">Typography classes</figcaption>
 </figure>
 </div>
 </section>
 <section id="backgrounds" class="level3" data-number="18.2.2">
 <h3 data-number="18.2.2" class="anchored" data-anchor-id="backgrounds"><span class="header-section-number">18.2.2</span> Backgrounds</h3>
-<p>We’re going to add some color to our Jumbotron-like header using a background color. The <a href="https://getbootstrap.com/docs/5.1/utilities/background/">Background</a> classes are found in the <strong>Utilities</strong> part of the documentation.</p>
+<p>We’re going to add some color to our Jumbotron-like header using a background color. The <a href="https://getbootstrap.com/docs/5.3/utilities/background/">Background</a> classes are found in the <strong>Utilities</strong> part of the documentation.</p>
 <ol type="1">
-<li>Browse through the <a href="https://getbootstrap.com/docs/5.1/utilities/background/">Backgrounds</a> docs so you can see how they are used.</li>
+<li>Browse through the <a href="https://getbootstrap.com/docs/5.3/utilities/background/">Backgrounds</a> docs so you can see how they are used.</li>
 <li>On the header div, add the class attribute to make the background our “secondary” color (the default whis is a dark gray color).</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"header"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bg-secondary"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bg-secondary"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>That should yield a result like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bs-background.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">bs-background</figcaption>
+<figcaption class="figure-caption">Background color added</figcaption>
 </figure>
 </div>
 <p>Still ugly, but we are getting there.</p>
@@ -645,17 +655,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="18.2.3" class="anchored" data-anchor-id="colors"><span class="header-section-number">18.2.3</span> Colors</h3>
 <p>Next on the tour are utility classes to control text colors.</p>
 <ol type="1">
-<li>Look through the <a href="https://getbootstrap.com/docs/5.1/utilities/colors/">color</a> documentation and figure out how to make white text.</li>
+<li>Look through the <a href="https://getbootstrap.com/docs/5.3/utilities/colors/">color</a> documentation and figure out how to make white text.</li>
 <li>Add that class to the same div that you added the background color, so it look like this:</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"header"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bg-secondary text-white"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bg-secondary text-white"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Still ugly, but you should have white text on the dark gray background.</p>
 </section>
 <section id="spacing-classes" class="level3" data-number="18.2.4">
 <h3 data-number="18.2.4" class="anchored" data-anchor-id="spacing-classes"><span class="header-section-number">18.2.4</span> Spacing classes</h3>
 <p>Next we’ll give our text some room to breathe using utility classes to control spacing between elements like margins and padding.</p>
 <ol type="1">
-<li>Go to the <a href="https://getbootstrap.com/docs/5.1/utilities/spacing/">Spacing</a> documentation and look it over, especially the <a href="https://getbootstrap.com/docs/5.1/utilities/spacing/#notation">notation</a> section.</li>
+<li>Go to the <a href="https://getbootstrap.com/docs/5.3/utilities/spacing/">Spacing</a> documentation and look it over, especially the <a href="https://getbootstrap.com/docs/5.3/utilities/spacing/#notation">notation</a> section.</li>
 </ol>
 <p>Basically this shorthand to build space around items (margin) and inside items (padding). While I can’t explain it better than they have, here is an abbreviated version of the shorthand:</p>
 <ul>
@@ -665,29 +675,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>So, <code>pt-4</code> would be <em>padding</em> on the <em>top</em> at a value of <em>4</em>.</p>
 <p>We’ll use this on our header. Let’s add the code first then I’ll explain.</p>
-<ol type="1">
-<li>Add these as a <code>class=""</code> to the header div. (If you do this one at a time you can see what each does):
+<ol start="2" type="1">
+<li>Add these as a <code>class=""</code> to the header element (If you do this one at a time you can see what each does):
 <ul>
-<li><code>my-4</code> adds a margin to top and bottom of the div, basically moving it off the navigation.</li>
-<li><code>p-5</code> adds padding, the space “inside” the div between the border and the text.</li>
+<li><code>my-4</code> adds a margin to top and bottom of the element, basically moving it off the navigation.</li>
+<li><code>p-5</code> adds padding, the space “inside” the element between the border and the text.</li>
 </ul></li>
 </ol>
+<p>Your header should look like this now:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bg-secondary text-white my-4 p-5"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="borders" class="level3" data-number="18.2.5">
 <h3 data-number="18.2.5" class="anchored" data-anchor-id="borders"><span class="header-section-number">18.2.5</span> Borders</h3>
 <p>You set the color, width, style and radius of borders with various <a href="">border</a> classes. Let’s use those to add a slight radius to our header corners.</p>
 <ol type="1">
-<li>Review the <a href="https://getbootstrap.com/docs/5.1/utilities/borders/#border-radius">border-radius</a> docs and add the class to your header div to make the corners of the box rounded. It’s a pretty slight visual change.</li>
+<li>Review the <a href="https://getbootstrap.com/docs/5.3/utilities/borders/#border-radius">border-radius</a> docs and add the class to your header to make the corners of the box rounded. It’s a pretty slight visual change.</li>
 </ol>
 </section>
 <section id="button-component" class="level3" data-number="18.2.6">
 <h3 data-number="18.2.6" class="anchored" data-anchor-id="button-component"><span class="header-section-number">18.2.6</span> Button component</h3>
 <p>Here we’ll dive back into the components section of the docs to get a <strong>button</strong> to add to our Jumbotron-like header. But let’s use the <strong>Search docs</strong> to find it.</p>
 <ol type="1">
-<li>Go to any page in the <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap docs</a>.</li>
+<li>Go to any page in the <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap docs</a>.</li>
 <li>In the search bar at top left, type in “button”. As you do, you’ll see options pop up under the search. Choose the “Buttons / Buttons” option to get to the main Buttons page.</li>
-<li>If your browser window is set wide enough, you should see an additional “One this page” navigation on the right side. Click on the <strong>Sizes</strong> link there. If you don’t have that navigation, just scroll down the page until you find Sizes.</li>
-<li>In the <strong>Large button</strong> example, copy the first line that has <code>btn-primary</code> as part of the classes. 1.. Add this code on a new line after the closing <code>p</code> tag in the header.</li>
+<li>If your browser window is set wide enough, you should see an additional “On this page” navigation on the right side. Click on the <strong>Sizes</strong> link there. If you don’t have that navigation, just scroll down the page until you find Sizes.</li>
+<li>In the <strong>Large button</strong> example, copy the first line that has <code>btn-primary</code> as part of the classes.</li>
+<li>Add this code on a new line after the closing <code>p</code> tag in the header.</li>
 </ol>
 <p>With this, we have our “Jumbotron”-like header. At this point, you page should be looking like this:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -696,6 +709,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">Button added</figcaption>
 </figure>
 </div>
+<p>And your header code should look like this:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header</span> <span class="er">class</span><span class="ot">=</span><span class="st">"bg-secondary text-white my-4 p-5 rounded"</span><span class="kw">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;h1</span> <span class="er">class</span><span class="ot">=</span><span class="st">"display-4"</span><span class="kw">&gt;</span>Header headline is here<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"lead"</span><span class="kw">&gt;</span>Danish fontina when the cheese comes out everybody's happy ricotta. Gouda red leicester parmesan cottage cheese everyone loves monterey jack who moved my cheese cut the cheese.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"btn btn-primary btn-lg"</span><span class="kw">&gt;</span>Large button<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/header&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This might be a good time to use the git cycle to save and push your efforts to Github.</p>
 
 
@@ -944,7 +963,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./bs-02-grids.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -2,19 +2,40 @@
 
 You are going to build a three-page project using a Bootstrap development rig. There are screenshots of what I'm looking for at the bottom of this document. (You might peek at it real quick before moving on.)
 
+::: {.panel-tabset}
+
+## Indes
+
+![](images/bs-page-index.png)
+
+Index [full page link](images/bs-page-index.png).
+
+## Article page
+
+![](images/bs-page-article.png)
+
+Article [full page link](bs-page-article.png)
+
+## Carosel page
+
+![](images/bs-page-photos.png)
+
+Carosel [full page link](bs-page-photos.png)
+
+:::
+
 ## Resources
 
-While you are building this from scratch, you do have the icj-bootstrap-template development environment to set up Sass, etc. You also have your in-class repo to look at for guidance.
+While you are building this from scratch, you do have the icj-bootstrap-template development environment to set up Sass, etc. You also have your practice repo to look at for guidance.
 
 You'll want to use the Bootstrap documentation for your code and styles.
 
 - Go to [Bootstrap site](https://getbootstrap.com/) and click on the **Docs** link. Most of what you need is under **Components** on the left-hand navigation. **Utilities** has some useful information as well. Use the **search bar** there to help you.
-- The are many Bootstrap 5 tutorials on the web, including [Tutorial Republic](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/) and [W3 Schools](https://www.w3schools.com/bootstrap5/).
-- If you prefer video tutorials, [Net Ninja's Bootstrap 5 Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR) is pretty good.
+- The are many Bootstrap 5 tutorials on the web, including [Tutorial Republic](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/) and [W3 Schools](https://www.w3schools.com/bootstrap5/). If you prefer video tutorials, [Net Ninja's Bootstrap 5 Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR) is pretty good.
 
-## Getting the project started
+## Project template
 
-- Create a new, empty folder in your `icj/` folder called `yourname-bootstrap-practice`.
+- Create a new, empty folder in your `icj/` folder called `yourname-bootstrap-mastery`.
 - In VS Code, open a new window and open your new folder.
 - Open the Integrated Terminal.
 - Run `$ degit utdata/icj-bootstrap-template` to download the files.
@@ -25,21 +46,19 @@ You'll want to use the Bootstrap documentation for your code and styles.
 - Go to Github and create a repository of the same name.
 - Use the "or push an existing repository from the command line" commands from Github to sync the repos.
 
-When you are ready to work, run `gulp dev` to start up the development environment.
-
 ### Adding the images
 
 I have images for you to use for this assignment, but  you have to set them a specific way for them to work in the development environment:
 
-- Got to this page [pirate-photos.zip](pirate-photos.zip) and then click on **Download** link.
+- Download this compressed folder of images: <i class="bi bi-download"></i> [pirate-photos.zip](resources/pirate-photos.zip){download="pirate-photos.zip"}.
 - Find the zip on your hard drive and uncompress it.
 - Move the contents (the photos only) into the `src/img` folder in your project. The photos should be loose inside that folder.
-- If your `gulp dev` is running, quite it hitting CTRL + C and then restart it again so the photos will be processed and copied into `docs`.
+- Run `gulp dev` to process the photos and run your development server. (If you had `gulp dev` running already, quit it with *CTRL + C* and then restart `gulp dev` again so the photos will be processed and copied into `docs`.)
 
 ## Strategy
 
 - Build the framework of the index page first. Get the main components built and figure out your content before you worry about styles.
-- Once the structure is sset, move onto styles and other details for the index page.
+- Once the structure is set, move onto styles and other details for the index page.
 - I recommend finishing the index page before moving onto the other article and photo carousel page. (This minimizes the number of adjustments you have to make on multiple pages, though you'll need to make some adjustments to navigation.)
 
 See the example pages at the bottom to get an idea of what you are building.
@@ -73,7 +92,7 @@ All your pages should have the following structural components:
 Below the jumbotron you should have three "cards" that highlight different Kraken.
 
 - The cards should work with a responsive grid so they stack on mobile but are three across at md and larger.
-- Make up your own names and details about the monsters. Or use ipsum type.
+- Make up your own names and details about the monsters. Or use ipsum type, perhaps [pirate ipsum](https://pirateipsum.me/).
 
 ### Article page
 
@@ -82,7 +101,7 @@ The article page should be a two-column responsive layout.
 - The columns should stack on mobile, and be side-by-side at medium and larger. There should be different col settings for md and lg so the pirate mugshot doesn't get too wide.
 - The **left** column should have the pirate mugshot photo and be responsive to fit the width of the column at different sizes.
   - There should be a text byline and the name and source should be different in style or font.
-- The **right** column should a headline and "story" text in multiple paragraphs. (Text can be [pirate ipsum](https://pirateipsum.me/) or similar).
+- The **right** column should a headline and "story" text in multiple paragraphs. (Text can be [pirate ipsum](https://pirateipsum.me/) or similar.)
 
 ### Photos page
 
@@ -100,18 +119,3 @@ On the photos page you will build a [photo carousel](https://getbootstrap.com/do
 
 Publish your site using Github pages using the "main branch/docs folder" method. Add your link to the Github repo description so it is easy for me to find. Turn in your github repo link to the assignment.
 
-## Examples
-
-Here is generally what the pages should look like:
-
-### Index page example
-
-![bs-page-index](images/bs-page-index.png)
-
-### Article page example
-
-![bs-page-article](images/bs-page-article.png)
-
-### Photo carousel page example
-
-![bs-page-photos](images/bs-page-photos.png)

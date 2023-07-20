@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 19&nbsp; Introducing Grids</title>
+<title>Intro to Coding for Journalists - 19&nbsp; Grids</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Bootstrap</a></li><li class="breadcrumb-item"><a href="./bs-02-grids.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bs-00-intro.html">Bootstrap</a></li><li class="breadcrumb-item"><a href="./bs-02-grids.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -321,25 +321,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="./bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
@@ -478,20 +478,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-grid" id="toc-the-grid" class="nav-link active" data-scroll-target="#the-grid"><span class="header-section-number">19.1</span> The grid</a></li>
-  <li><a href="#the-responsive-grid" id="toc-the-responsive-grid" class="nav-link" data-scroll-target="#the-responsive-grid"><span class="header-section-number">19.2</span> The responsive grid</a>
+  <li><a href="#the-responsive-grid" id="toc-the-responsive-grid" class="nav-link active" data-scroll-target="#the-responsive-grid"><span class="header-section-number">19.1</span> The responsive grid</a>
   <ul class="collapse">
-  <li><a href="#the-sizes" id="toc-the-sizes" class="nav-link" data-scroll-target="#the-sizes"><span class="header-section-number">19.2.1</span> The sizes</a></li>
-  <li><a href="#xs" id="toc-xs" class="nav-link" data-scroll-target="#xs"><span class="header-section-number">19.2.2</span> xs</a></li>
-  <li><a href="#sm" id="toc-sm" class="nav-link" data-scroll-target="#sm"><span class="header-section-number">19.2.3</span> sm</a></li>
-  <li><a href="#md" id="toc-md" class="nav-link" data-scroll-target="#md"><span class="header-section-number">19.2.4</span> md</a></li>
+  <li><a href="#the-sizes" id="toc-the-sizes" class="nav-link" data-scroll-target="#the-sizes"><span class="header-section-number">19.1.1</span> The sizes</a></li>
+  <li><a href="#xs" id="toc-xs" class="nav-link" data-scroll-target="#xs"><span class="header-section-number">19.1.2</span> xs</a></li>
+  <li><a href="#sm" id="toc-sm" class="nav-link" data-scroll-target="#sm"><span class="header-section-number">19.1.3</span> sm</a></li>
+  <li><a href="#md" id="toc-md" class="nav-link" data-scroll-target="#md"><span class="header-section-number">19.1.4</span> md</a></li>
   </ul></li>
-  <li><a href="#using-our-grid-system" id="toc-using-our-grid-system" class="nav-link" data-scroll-target="#using-our-grid-system"><span class="header-section-number">19.3</span> Using our grid system</a>
+  <li><a href="#using-our-grid-system" id="toc-using-our-grid-system" class="nav-link" data-scroll-target="#using-our-grid-system"><span class="header-section-number">19.2</span> Using our grid system</a>
   <ul class="collapse">
-  <li><a href="#add-your-content" id="toc-add-your-content" class="nav-link" data-scroll-target="#add-your-content"><span class="header-section-number">19.3.1</span> Add your content</a></li>
-  <li><a href="#apply-md-column-sizes" id="toc-apply-md-column-sizes" class="nav-link" data-scroll-target="#apply-md-column-sizes"><span class="header-section-number">19.3.2</span> Apply md column sizes</a></li>
-  <li><a href="#responsive-images" id="toc-responsive-images" class="nav-link" data-scroll-target="#responsive-images"><span class="header-section-number">19.3.3</span> Responsive images</a></li>
-  <li><a href="#add-large-size" id="toc-add-large-size" class="nav-link" data-scroll-target="#add-large-size"><span class="header-section-number">19.3.4</span> Add large size</a></li>
+  <li><a href="#processing-photos" id="toc-processing-photos" class="nav-link" data-scroll-target="#processing-photos"><span class="header-section-number">19.2.1</span> Processing photos</a></li>
+  <li><a href="#fluid-images" id="toc-fluid-images" class="nav-link" data-scroll-target="#fluid-images"><span class="header-section-number">19.2.2</span> Fluid images</a></li>
+  <li><a href="#add-a-breakpoint" id="toc-add-a-breakpoint" class="nav-link" data-scroll-target="#add-a-breakpoint"><span class="header-section-number">19.2.3</span> Add a breakpoint</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -501,7 +499,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></h1>
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></h1>
 </div>
 
 
@@ -516,15 +514,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<blockquote class="blockquote">
-<p>This is a continuation of the Bootstrap tuorial.</p>
-</blockquote>
-<section id="the-grid" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="the-grid"><span class="header-section-number">19.1</span> The grid</h2>
-<p>One of the main features that Bootstrap brings us is a <a href="https://getbootstrap.com/docs/5.1/layout/grid/">Grid system</a> to build “layouts” for your pages. The grid allows you to define column widths for different viewport widths through a series of class names. It uses a core CSS feature called “flexbox” to do this.</p>
+<p>One of the main features that Bootstrap brings us is a <a href="https://getbootstrap.com/docs/5.3/layout/grid/">Grid system</a> to build “layouts” for your pages. The grid allows you to define column widths for different viewport widths through a series of class names. It uses a core CSS feature called “flexbox” to do this.</p>
 <ol type="1">
-<li>Go to the <a href="https://getbootstrap.com/docs/5.1/layout/grid/">Grid system</a> documentation and look through it.</li>
-<li>Come back to the first <a href="https://getbootstrap.com/docs/5.1/layout/grid/#example">example</a> and copy the code and add it into your page after the closing of your header container.</li>
+<li>Go to the <a href="https://getbootstrap.com/docs/5.3/layout/grid/">Grid system</a> documentation and look through it.</li>
+<li>Come back to the first <a href="https://getbootstrap.com/docs/5.3/layout/grid/#example">example</a> and copy the code and add it into your page after the closing of your header container.</li>
 <li>Save your page and you should see the three columns in your project.</li>
 </ol>
 <p>We’re going to enhance this a bit by adding some background colors to each column so we can see each of the more easily.</p>
@@ -552,13 +545,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">Cols added</figcaption>
 </figure>
 </div>
-</section>
-<section id="the-responsive-grid" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="the-responsive-grid"><span class="header-section-number">19.2</span> The responsive grid</h2>
+<section id="the-responsive-grid" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="the-responsive-grid"><span class="header-section-number">19.1</span> The responsive grid</h2>
 <p>These three columns are evenly distributed across the container space. Adjust your browser width smaller and wider (or use the DevTools Inspect) and you’ll see they stay that way at every width.</p>
 <p>Our goal here is to be able to adjust how wide those columns are at different browser widths. We do this so we can control how the content displays on different devices like phones, tablets and computers.</p>
-<section id="the-sizes" class="level3" data-number="19.2.1">
-<h3 data-number="19.2.1" class="anchored" data-anchor-id="the-sizes"><span class="header-section-number">19.2.1</span> The sizes</h3>
+<section id="the-sizes" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="the-sizes"><span class="header-section-number">19.1.1</span> The sizes</h3>
 <p>There are five “breakpoints” for Bootstrap, meaning changes can happen at 5 different widths: default (extra small), sm, md, lg, xl and xxl. They <em>kinda</em> work out like this:</p>
 <ul>
 <li>the default <code>col</code> is for a vertical phone</li>
@@ -576,12 +568,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Now that you’ve added a “small” <code>sm</code> breakpoint, the divs stack on top of each other at the default “extra small” breakpoint, as they are supposed to, but then display evenly across at small or greater widths.</p>
 <p>Bootstrap works from smallest to largest, so once you set a grid width for <code>col-sm</code>, they will stay that way for wider widths unless you set another one. You can set the same div to a different number of columns at different widths. <strong>However, within a row, the columns need to add up to increments of 12 for each breakpoint</strong> if you want them to work properly.</p>
-<ol type="1">
+<ol start="3" type="1">
 <li>Adjust the three columns to be <code>col-sm-3</code>, <code>col-sm-6</code> and <code>col-sm-3</code>, respectively.</li>
 </ol>
 <p>This makes the middle column wider when viewed at the “small” breakpoint or wider, but they each still show over all 12 columns when at the extra-small default breakpoint. <strong>Note that those column numbers add up to 12</strong>. If the total is greater than 12, it breaks into a new column.</p>
 <p>Now we will make these columns all the same width for the medium breakpoint, without changing the small breakpoint.</p>
-<ol type="1">
+<ol start="4" type="1">
 <li>After the col-sm designations in the class, add a space and then this designation for the medium breakpoint: <code>col-md-4</code>. Do this for all three columns.</li>
 </ol>
 <p>Now adjust your browser width and see them change between the three breakpoints. Again, note that the <strong>column numbers for each size add to a factor of 12 for each breakpoint</strong>. i.e, the <code>sm</code> numbers total to 12, and then the <code>md</code> numbers total to 12.</p>
@@ -601,29 +593,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This is how your page should behave at the default <code>xs</code>, the <code>sm</code> and <code>md</code> breakpoints:</p>
 </section>
-<section id="xs" class="level3" data-number="19.2.2">
-<h3 data-number="19.2.2" class="anchored" data-anchor-id="xs"><span class="header-section-number">19.2.2</span> xs</h3>
-<p>Columns are stacked.</p>
+<section id="xs" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="xs"><span class="header-section-number">19.1.2</span> xs</h3>
+<p>At the default size (xs), the columns are stacked.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/bs-look-xs.png" class="img-fluid figure-img"></p>
+<p><img src="images/bs-look-xs.png" class="img-fluid figure-img" width="320"></p>
 <figcaption class="figure-caption">xs look</figcaption>
 </figure>
 </div>
 </section>
-<section id="sm" class="level3" data-number="19.2.3">
-<h3 data-number="19.2.3" class="anchored" data-anchor-id="sm"><span class="header-section-number">19.2.3</span> sm</h3>
-<p>Middle column is wider.</p>
+<section id="sm" class="level3" data-number="19.1.3">
+<h3 data-number="19.1.3" class="anchored" data-anchor-id="sm"><span class="header-section-number">19.1.3</span> sm</h3>
+<p>At the <strong>sm</strong> size, the middle column is wider.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/bs-look-sm.png" class="img-fluid figure-img"></p>
+<p><img src="images/bs-look-sm.png" class="img-fluid figure-img" width="450"></p>
 <figcaption class="figure-caption">sm look</figcaption>
 </figure>
 </div>
 </section>
-<section id="md" class="level3" data-number="19.2.4">
-<h3 data-number="19.2.4" class="anchored" data-anchor-id="md"><span class="header-section-number">19.2.4</span> md</h3>
-<p>Columns are even.</p>
+<section id="md" class="level3" data-number="19.1.4">
+<h3 data-number="19.1.4" class="anchored" data-anchor-id="md"><span class="header-section-number">19.1.4</span> md</h3>
+<p>At the <strong>md</strong> size, the columns are even.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bs-look-md.png" class="img-fluid figure-img"></p>
@@ -633,69 +625,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now that we’ve learned a little about columns, we’ll tear this apart and build something useful.</p>
 </section>
 </section>
-<section id="using-our-grid-system" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="using-our-grid-system"><span class="header-section-number">19.3</span> Using our grid system</h2>
+<section id="using-our-grid-system" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="using-our-grid-system"><span class="header-section-number">19.2</span> Using our grid system</h2>
 <p>Now we’ll work on the part of our site that will look like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bs-col-goal.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Column goal</figcaption>
+<figcaption class="figure-caption">Our goal working with columns</figcaption>
 </figure>
 </div>
-<p>We’ll reuse the first two columns of our exercise code to make this.</p>
+<p>We’ll call this our “highlight” section. We’ll delete the container we just made and replace it with the highlight section below.</p>
 <ol type="1">
-<li>On the container div, also add a class called <code>highlight</code>. (We’ll build on the <code>highlight</code> class later.)</li>
-<li>Delete one of the three column divs.</li>
-<li>Remove the column class names (but leave the tag, because we will replace them.)</li>
+<li>Remove the last container div and content that we added.</li>
+<li>Add the code below in its place. Save your page and make sure it isn’t broken.</li>
 </ol>
-<p>Your code should look like this:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"container highlight"</span><span class="kw">&gt;</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;section</span> <span class="er">class</span><span class="ot">=</span><span class="st">"container"</span><span class="kw">&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"row"</span><span class="kw">&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">""</span><span class="kw">&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      Column</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">""</span><span class="kw">&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      Column</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="add-your-content" class="level3" data-number="19.3.1">
-<h3 data-number="19.3.1" class="anchored" data-anchor-id="add-your-content"><span class="header-section-number">19.3.1</span> Add your content</h3>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"col-md-6"</span><span class="kw">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;h2&gt;</span>An important heading<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"lead"</span><span class="kw">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nostrum deleniti quo excepturi expedita enim veniam.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p&gt;</span>Dolorem nisi quia nostrum laudantium obcaecati eveniet cupiditate tempora dolorum a. Nisi nulla nesciunt saepe eligendi vel natus ex odit ut exercitationem.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p&gt;</span>Inventore, quo similique modi doloribus sed voluptas incidunt excepturi molestiae ea impedit cupiditate ut nobis commodi.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p&gt;</span>– By Johannes Gutenberg in Mainz<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"col-md-6"</span><span class="kw">&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      Column 2</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/section&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Instead of using <code>&lt;div class="container"&gt;</code>, we used the semantic <code>&lt;section&gt;</code> element. It works just like a div so we can apply the same bootstrap classes to it.</p>
+<section id="processing-photos" class="level3" data-number="19.2.1">
+<h3 data-number="19.2.1" class="anchored" data-anchor-id="processing-photos"><span class="header-section-number">19.2.1</span> Processing photos</h3>
+<p>We want to add a photo and caption in the next column, but we don’t have one to use yet. This allows us to talk about an important feature of this project template rig.</p>
+<p>When we run <code>gulp</code> or <code>gulp dev</code> a script runs takes all the photos inside the <code>src/img/</code> folder and processes them for the web, reducing the dpi and compression, before it moves the copy into <code>src/docs/</code>. So, if we use a 2MB jpeg photo in our source folder, it ends up being less than 100k when it is used for our site.</p>
+<p>This makes our site much faster since the browser doesn’t have to download that huge image. It doesn’t hurt to size down your original source photos anyway, just make sure they are large enough for the widest measure (usually 1200px at 72 dpi is fine unless it’s for a huge display.)</p>
+<p>The sizing process doesn’t run continuously so we have to launch <code>gulp</code> or <code>gulp dev</code> to process new photos. This is all to say we need to download a photo for our project and restart gulp:</p>
 <ol type="1">
-<li>Replace the word “Column” in the first column with an <code>h2</code> headline tag and a few <code>p</code> tags with some lorem ipsum text.</li>
-<li>Next we need a photo to use in our project. You can use your own jpeg photo or you can download this one of the <a href="images/gutenberg.jpeg">Gutenberg Bible at the Harry Ransom Center</a>.</li>
-<li>Put your photo inside your <code>src/img</code> folder.</li>
-<li>Stop the gulp dev watch process (Cntl+C in your Terminal window) and then retart it using <code>gulp dev</code>. This will process the photo and make it available in the docs <code>img</code> folder. It’s an important step as photos are only processed when <code>gulp dev</code> starts up.</li>
-<li>Replace the word “Column” in the second column with an <code>&lt;img&gt;</code> tag that pulls in your photo.</li>
-<li>After the <code>&lt;img&gt;</code> tag, add a <code>&lt;p&gt;</code> and some text that will become your photo caption.</li>
+<li>Download this <i class="bi bi-download"></i> <a href="images/gutenberg.jpeg" download="gutenberg.jpeg">Gutenberg Bible at the Harry Ransom Center</a> photo and put it inside your <code>src/img</code> folder.</li>
+<li>Stop the gulp dev watch process (<em>Cntl+C</em> in your Terminal window) and then restart it using <code>gulp dev</code>. This will process the photo and make it available in the docs <code>img</code> folder. It’s an important step as photos are only processed when <code>gulp dev</code> starts up.</li>
 </ol>
 </section>
-<section id="apply-md-column-sizes" class="level3" data-number="19.3.2">
-<h3 data-number="19.3.2" class="anchored" data-anchor-id="apply-md-column-sizes"><span class="header-section-number">19.3.2</span> Apply md column sizes</h3>
-<p>For this display we want to stack the columns (text above photo) for both the default xs and the sm sizes. This means our first column change will be at the medium <code>md</code> size. We want them both to take up half with space at six columns.</p>
+<section id="fluid-images" class="level3" data-number="19.2.2">
+<h3 data-number="19.2.2" class="anchored" data-anchor-id="fluid-images"><span class="header-section-number">19.2.2</span> Fluid images</h3>
+<p>We’re going to put <a href="https://getbootstrap.com/docs/5.3/content/figures/">Figure</a> code into the second column here to get us a photo and caption, but I don’t want you to pull the example code from Bootstrap Documentation because I need to explain how some of it works and that is easier if we build it up ourselves.</p>
 <ol type="1">
-<li>Add <code>col-md-6</code> to both of the columns.</li>
-<li>Save and view the result.</li>
+<li><p>Replace the text “Column 2” with the following code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure</span> <span class="er">class</span><span class="ot">=</span><span class="st">"figure"</span><span class="kw">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"img/gutenberg.jpeg"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"figure-img"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"Guetenberg Bible"</span><span class="kw">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;figcaption</span> <span class="er">class</span><span class="ot">=</span><span class="st">"figure-caption"</span><span class="kw">&gt;</span>A caption for the above image.<span class="kw">&lt;/figcaption&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Now save your HTML page and look at the result in your browser.</p>
+<img src="images/bs-photo-added.png" class="img-fluid" alt="Photo blows container">
+<p>The photo blows out of the second column because it is “bigger” than the column it is inside. If you change the width of browser window the photo will always stay that size, which doesn’t work well for us. There is a cool feature to fix this.</p></li>
+<li><p><strong>Update</strong> your code to add the class <code>img-fluid</code> to the image element, so it says <code>class="figure-img img-fluid"</code>.</p>
+<p>What this <code>img-fluid</code> class does is adjust the width of the photo to the width of its parent element. Your page should look like this now:</p>
+<img src="images/bs-image-reponsive.png" class="img-fluid" alt="Responsive image with img-fluid"></li>
 </ol>
-<p>When you look at the result, the first column with the headline and text will be fine, but the column with the photo will be too wide because the photo is bigger than the column. We can fix that.</p>
+<p>This gives us great flexibility in building our responsive website because the photo will shrink and grow to fit the right space!</p>
 </section>
-<section id="responsive-images" class="level3" data-number="19.3.3">
-<h3 data-number="19.3.3" class="anchored" data-anchor-id="responsive-images"><span class="header-section-number">19.3.3</span> Responsive images</h3>
-<p>There is a magical “responsive image” class in Bootstrap <code>img-fluid</code> that changes the width of a photo to be the width of the item that holds it. By setting this, the photo will grow and shrink to fit the column.</p>
-<ol type="1">
-<li>Add a class to your image tag and set it to <code>class="img-fluid"</code>.</li>
-</ol>
-<p>This will shrink the photo to fit within the second column, set at 6 cols.</p>
-<p>This part should look like this now:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/bs-image-reponsive.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">bs-image-reponsive</figcaption>
-</figure>
-</div>
-</section>
-<section id="add-large-size" class="level3" data-number="19.3.4">
-<h3 data-number="19.3.4" class="anchored" data-anchor-id="add-large-size"><span class="header-section-number">19.3.4</span> Add large size</h3>
+<section id="add-a-breakpoint" class="level3" data-number="19.2.3">
+<h3 data-number="19.2.3" class="anchored" data-anchor-id="add-a-breakpoint"><span class="header-section-number">19.2.3</span> Add a breakpoint</h3>
 <p>As the page gets a little wider, we want give the text a little more space than the photo.</p>
 <ol type="1">
 <li>Add <code>lg</code> sizes to your two columns. Set the first one at 8 columns and the second one at 4 columns.</li>
@@ -944,12 +933,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./bs-01-components.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./bs-03-cards.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

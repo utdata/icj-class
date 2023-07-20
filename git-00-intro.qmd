@@ -1,6 +1,6 @@
 # Git
 
-Make sure you've [installed VS Code, Git, and have configured it and have a Github account with SSH keys](start-03-setup.qmd) before continuing here.
+Make sure you've installed VS Code, Git, and have configured as outlined in [ICJ Setting Up Part 1](https://utdata.github.io/icj-setting-up/setup-part-1.html) before continuing here.
 
 ## Defining version control
 

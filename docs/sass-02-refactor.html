@@ -321,25 +321,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="./bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
@@ -502,12 +502,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#content-link-colors" id="toc-content-link-colors" class="nav-link" data-scroll-target="#content-link-colors"><span class="header-section-number">16.6.3</span> Content link colors</a></li>
   <li><a href="#set-bullet-style-for-shows" id="toc-set-bullet-style-for-shows" class="nav-link" data-scroll-target="#set-bullet-style-for-shows"><span class="header-section-number">16.6.4</span> Set bullet style for shows</a></li>
   </ul></li>
-  <li><a href="#file-names-and-paths" id="toc-file-names-and-paths" class="nav-link" data-scroll-target="#file-names-and-paths"><span class="header-section-number">16.7</span> File names and paths</a></li>
-  <li><a href="#how-files-are-generated-into-docs" id="toc-how-files-are-generated-into-docs" class="nav-link" data-scroll-target="#how-files-are-generated-into-docs"><span class="header-section-number">16.8</span> How files are generated into docs</a>
+  <li><a href="#file-names-and-paths" id="toc-file-names-and-paths" class="nav-link" data-scroll-target="#file-names-and-paths"><span class="header-section-number">16.7</span> File names and paths</a>
   <ul class="collapse">
-  <li><a href="#create-a-new-page-update-nav" id="toc-create-a-new-page-update-nav" class="nav-link" data-scroll-target="#create-a-new-page-update-nav"><span class="header-section-number">16.8.1</span> Create a new page, update nav</a></li>
+  <li><a href="#create-a-new-page-update-nav" id="toc-create-a-new-page-update-nav" class="nav-link" data-scroll-target="#create-a-new-page-update-nav"><span class="header-section-number">16.7.1</span> Create a new page, update nav</a></li>
   </ul></li>
-  <li><a href="#push-to-github" id="toc-push-to-github" class="nav-link" data-scroll-target="#push-to-github"><span class="header-section-number">16.9</span> Push to Github</a></li>
+  <li><a href="#push-to-github" id="toc-push-to-github" class="nav-link" data-scroll-target="#push-to-github"><span class="header-section-number">16.8</span> Push to Github</a></li>
   </ul>
 </nav>
     </div>
@@ -815,25 +814,10 @@ Warning
 <p>But look a little further into the page and you’ll see this:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"img/harvey-dale.jpg"</span><span class="kw">/&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you look at our <code>docs</code> folder structure above, you’ll see that the <code>harvey-dale.jpg</code> photo is inside a folder called <code>img</code>. Because of this our <code>src=</code> path has to include that folder name in the path. This path is <strong>relative</strong> to where the <code>index.html</code> page lives.</p>
-<p>We have <code>img/</code> and <code>css/</code> folders. The folders are there just for organization … those files could technically live anywhere within <code>docs</code> if paths are written correctly, but that would be messy.</p>
-<p>I might be overgeneralizing, but most websites organize directory structures following two philosophies:</p>
-<ul>
-<li>Folder organization as site structure: A news site might have a <code>sports/</code> directory to put all the sports-related files here.</li>
-<li>Folders based on file type, like images, scripts, etc.</li>
-</ul>
-<p>That all said, it is up to the developer to decide.</p>
-</section>
-<section id="how-files-are-generated-into-docs" class="level2" data-number="16.8">
-<h2 data-number="16.8" class="anchored" data-anchor-id="how-files-are-generated-into-docs"><span class="header-section-number">16.8</span> How files are generated into docs</h2>
-<p>Now, remember we’ve been talking about the <code>docs</code> folder structure where files are processed to and not <code>src</code> where you actually edit files. Probably the most confusing thing about this setup is this:</p>
-<ul>
-<li>The folder <code>src/img/</code> and all its contents gets copied into <code>docs/img/</code>. It’s a straight copy and that makes sense.</li>
-<li>Files in <code>src/scss/</code> get processed to <code>docs/css/</code>. Different folder names, but at least it is folder to folder.</li>
-<li>But with HTML files it is different: Files inside <code>src/html/</code> get sent directly to the root level of <code>docs/</code>, not inside another folder like they are in <code>src</code>. I guess think of it like this … we store our editing files in <code>src/html</code> so we can tell what kind of files they are, even though they are sent to the root level.</li>
-</ul>
-<p>When we write paths between HTML, style or image files, we have to think about how the path works in <code>docs</code>, not src.</p>
-<section id="create-a-new-page-update-nav" class="level3" data-number="16.8.1">
-<h3 data-number="16.8.1" class="anchored" data-anchor-id="create-a-new-page-update-nav"><span class="header-section-number">16.8.1</span> Create a new page, update nav</h3>
+<p>We have <code>img/</code> and <code>css/</code> folders. The folders are there just for organization … those files could technically live anywhere within <code>docs</code> if paths are written correctly, but that would be messy. Again, it’s pretty common to store files of the same time like images the same directory.</p>
+<p>It’s just important to remember the relative path between files in <code>src/</code> should be the same as in <code>docs/</code>.</p>
+<section id="create-a-new-page-update-nav" class="level3" data-number="16.7.1">
+<h3 data-number="16.7.1" class="anchored" data-anchor-id="create-a-new-page-update-nav"><span class="header-section-number">16.7.1</span> Create a new page, update nav</h3>
 <p>To make sure you have an understanding about how files work together, I want you to create a new HTML page that will have “bios” for this trio in Harvey Dale and the Cements:</p>
 <ol type="1">
 <li>Create a single new html page that will publish next to <code>index.html</code> and <code>shows.html</code>. You can choose the filename (though it should make sense). You can use a copy of one of the existing pages to get started.</li>
@@ -843,8 +827,8 @@ Warning
 </ol>
 </section>
 </section>
-<section id="push-to-github" class="level2" data-number="16.9">
-<h2 data-number="16.9" class="anchored" data-anchor-id="push-to-github"><span class="header-section-number">16.9</span> Push to Github</h2>
+<section id="push-to-github" class="level2" data-number="16.8">
+<h2 data-number="16.8" class="anchored" data-anchor-id="push-to-github"><span class="header-section-number">16.8</span> Push to Github</h2>
 <p>If you haven’t already, you should run <code>git init</code>, <code>git add .</code> and <code>git commit -m "message"</code> for this repo, and then create your Github repo and connect them.</p>
 <p>Push all your changes to this point to Github.</p>
 

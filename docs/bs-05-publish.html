@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./bs-06-practice.html" rel="next">
+<link href="./bs-06-mastery.html" rel="next">
 <link href="./bs-04-customize.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -287,25 +287,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-01-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Bootstrap Components</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-02-grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Introducing Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-03-cards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The card component</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./bs-04-customize.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -316,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bs-06-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="./bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span></a>
   </div>
 </li>
@@ -444,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#publishing-through-the-docs-folder" id="toc-publishing-through-the-docs-folder" class="nav-link active" data-scroll-target="#publishing-through-the-docs-folder"><span class="header-section-number">22.1</span> Publishing through the /docs/ folder</a></li>
+  <li><a href="#publishing-through-the-docs-folder" id="toc-publishing-through-the-docs-folder" class="nav-link active" data-scroll-target="#publishing-through-the-docs-folder"><span class="header-section-number">22.1</span> Publishing through the docs folder</a></li>
   <li><a href="#more-github-pages" id="toc-more-github-pages" class="nav-link" data-scroll-target="#more-github-pages"><span class="header-section-number">22.2</span> More Github pages</a></li>
   </ul>
 </nav>
@@ -469,13 +469,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<blockquote class="blockquote">
-<p>This is a continuation of the Bootstrap tutorial.</p>
-</blockquote>
-<p>Github has a way that we can publish static web pages to the web, for free, using <a href="https://pages.github.com/">Github Pages</a>. While it is not intended for commercial use, it is sufficient and appropriate for our class. There is a <em>soft</em> 100GB limit per month. If you exceed that, you’ll get a polite email from Github suggesting better ways to handle your traffic. Consider that a lovely problem to have because 100GB is quite a lot.</p>
-<p>There are <a href="https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github tutorials</a> on setting up Github pages. We’ll go through one of the many methods here.</p>
+<p>As we covered in our last chapter, Github has a way that we can publish static web pages to the web, for free, using <a href="https://pages.github.com/">Github Pages</a>. While it is not intended for commercial use, it is sufficient and appropriate for our class. There is a <em>soft</em> 100GB limit per month. If you exceed that, you’ll get a polite email from Github suggesting better ways to handle your traffic. Consider that a lovely problem to have because 100GB is quite a lot.</p>
+<p>There are <a href="https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github tutorials</a> on setting up Github pages. We’ll review how we cover it here</p>
 <section id="publishing-through-the-docs-folder" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="publishing-through-the-docs-folder"><span class="header-section-number">22.1</span> Publishing through the /docs/ folder</h2>
+<h2 data-number="22.1" class="anchored" data-anchor-id="publishing-through-the-docs-folder"><span class="header-section-number">22.1</span> Publishing through the docs folder</h2>
 <p>Github pages allows us to use a folder called <code>docs/</code> as our distribution folder, and the template we are using is built to use that feature.</p>
 <ul>
 <li>Go to your Github repo for this project and select <strong>Settings</strong>.</li>
@@ -487,7 +484,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Click the <strong>Save</strong> button.</li>
 </ul></li>
 </ul>
-<p>Your page will refresh and after a few minutes, your website will be available on the web at a url based on your username and project repo name:</p>
+<p>After a few minutes, refresh your page and your website URL based on your username and project repo name will appear at the top. The structure works like this:</p>
 <p><code>https://{githubusername}.github.io/{project-name}/</code></p>
 <p>Please take that URL and add it to your Github repo in the About section like this:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -743,11 +740,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./bs-04-customize.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing Bootstrap</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Customizing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./bs-06-practice.html" class="pagination-link">
+      <a href="./bs-06-mastery.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap homework assignment</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
