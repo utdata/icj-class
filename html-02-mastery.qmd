@@ -1,9 +1,5 @@
 # HTML mastery
 
-::: callout
-Draft is done
-:::
-
 For this mastery assignment you are coding a story in HTML as indicated below. Points will be taken off for improper syntax and indentation. Make clean code.
 
 There are some tasks within this assignment where we are skills or tags we have not yet covered. That's on purpose. You will need to Google it, as that is part of the developer process.

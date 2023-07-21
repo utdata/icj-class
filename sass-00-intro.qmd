@@ -1,9 +1,5 @@
 # Sass
 
-::: callout
-Drafts done for this section.
-:::
-
 ::: callout-important
 Before starting this lesson, make sure you've done [part two of setting up](https://github.com/utdata/icj-setting-up/blob/main/README.md).
 :::

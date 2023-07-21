@@ -1,9 +1,5 @@
 # CSS mastery
 
-::: callout
-Draft is done
-:::
-
 For this mastery assignment, you will be picking up from the last HTML mastery assignment in your yourname-html-css-mastery folder and enhancing it with your own CSS based on the directions provided below.
 
 We did many of these things with our practice assignment. You'll also have to figure out some new things on your own, as that is part of coding.

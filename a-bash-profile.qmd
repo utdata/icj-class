@@ -1,4 +1,4 @@
-# Editing the Bash profile
+# Bash profile
 
 There is a hidden file on your computer that is the profile for your bash terminal. If you have VS Code installed and configured as your text editor, you can open it with this:
 

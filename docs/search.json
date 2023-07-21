@@ -11,7 +11,7 @@
     "href": "index.html#the-structure-of-the-class",
     "title": "Intro to Coding for Journalists",
     "section": "The structure of the class",
-    "text": "The structure of the class\nYou can see the chapter breakdown, but the book is more or less structured like this:\n\nUsing command-line tools\nComputer setup\nHTML: The skeleton of the web\nCSS: The skin of the web\nJavaScript: The muscles of the web\nSASS: Better web skins\nBootstrap: OMG, the web solved\nStatic apps: HFS, I can make it"
+    "text": "The structure of the class\nYou can see the chapter breakdown, but the book is more or less structured like this:\n\nUsing command-line tools\nComputer setup\nHTML: The skeleton of the web\nCSS: The skin of the web\nJavaScript: The muscles of the web\nSASS: Better web skins\nBootstrap: OMG, the web solved\nStatic apps: HFS, I can make it\n\n\n\n\n\n\n\nImportant\n\n\n\nMany of the chapters in this book have video screencasts where I walk through the practice lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as in this book, but I just talk out and show the steps. You’ll find those links in Canvas."
   },
   {
     "objectID": "index.html#tips-on-reading-this-book",
@@ -32,7 +32,7 @@
     "href": "start-00-intro.html",
     "title": "Getting started",
     "section": "",
-    "text": "We’re going to start here by learning about command-line interface tools that allow us to work with your computer through text commands, which is essential in programming.\nI use a Mac, and there are some differences for Windows users. The first major difference is Windows users have to install Git (and Git Bash, which comes with it) before we can go much further.\n\n\n\n\n\n\nWindows uses must install Git first\n\n\n\nWindows users have to install Git and Git Bash before doing moving forward with this lesson. These next few steps do that.\n\nGo to Git Downloads, and download the latest version of git.\nRun the installer and follow the prompts as you normally would, choosing the defaults (except for this):\n\nWhen you get the screen below (or something like it) you need to choose “Use Git from Git Bash only”.\n\n\n\ngit setup\n\n\n\nUse the default settings for everything else.\nYou should now be able to find the program Git Bash from your Windows Start menu. Go ahead and launch it."
+    "text": "These first couple of chapters deal with learning about command-line interface tools that allow us to work with our computer through text commands, which is essential in programming.\nOn Macintosh computers, the program to use is called Terminal and it is already installed.\nWindows computers are built a little differently, and for us to work within the same environment Windows users have to install Git (and Git Bash, which comes with it) before we can go much further.\n\n\n\n\n\n\nWindows uses must install Git first\n\n\n\nWindows users have to install Git and Git Bash before doing moving forward with this lesson. These next few steps do that.\n\nGo to Git Downloads, and download the latest version of git.\nRun the installer and follow the prompts as you normally would, choosing the defaults (except for this):\n\nWhen you get the screen below (or something like it) you need to choose “Use Git from Git Bash only”.\n\n\n\ngit setup\n\n\n\nUse the default settings for everything else.\nYou should now be able to find the program Git Bash from your Windows Start menu. Go ahead and launch it."
   },
   {
     "objectID": "start-01-terminal.html#launch-your-terminal",
@@ -144,7 +144,7 @@
     "href": "git-01-project.html#the-readme",
     "title": "3  Project setup",
     "section": "3.2 The README",
-    "text": "3.2 The README\nEvery coding project should have a special file called a README file which outlines what the project is and how to use it. It is often written in Markdown, which is a text-based syntax that Github turns into pretty HTML when it is published, but is completely readable as text. It also has great support to show code, tables, lists and such. Here is a cheatsheet of the syntax and 10-minute tutorial you may find useful. For what it is worth, this book is written using Markdown.\nI want you to always have a README file with your projects, and it should always be called README.md. Yes, with capital letters for README and lower-case letters for .md. It breaks typical file naming conventions because it is special.\n(I have a gif showing these steps below.)\n\nCreate the file first. I would recommend using the Terminal inside VS Code to use the touch command. (There are other ways, but let’s get used to using touch.)\n\ntouch README.md\nThe file now appears in the file explorer in VS Code on the left.\n\nClick on the file name to open it.\nNow add a title, your name, the assignment name and when it is due. Like this:\n\n# [YOURNAME]'s git practice\n\nBy [YOURNAME], Intro Coding for Journalists class\n\nThis repo is a class assignment to learn git. It is due [Month] [Day], [Year].\n\n\n\nMake readme\n\n\n\nSave and close the README file.\n\nI want something like that on every project you make in this class: title, your name, the assignment and when it is due. Your projects early in the class won’t have an extensive README like some others, but I want you to be in the habit of using them."
+    "text": "3.2 The README\nEvery coding project should have a special file called a README file which outlines what the project is and how to use it. It is often written in Markdown, which is a text-based syntax that Github turns into pretty HTML when it is published, but is completely readable as text. It also has great support to show code, tables, lists and such. Here is a cheatsheet of the syntax and 10-minute tutorial you may find useful. For what it is worth, this book is written using Markdown.\nI want you to always have a README file with your projects, and it should always be called README.md. Yes, with capital letters for README and lower-case letters for .md. It breaks typical file naming conventions because it is special.\n(There is a gif below showing these steps.)\n\nCreate the file first. I would recommend using the Terminal inside VS Code to use the touch command. (There are other ways, but let’s get used to using touch.)\n\ntouch README.md\nThe file now appears in the file explorer in VS Code on the left.\n\nClick on the file name to open it.\nNow add a title, your name, the assignment name and when it is due. Like this:\n\n# [YOURNAME]'s git practice\n\nBy [YOURNAME], Intro Coding for Journalists class\n\nThis repo is a class assignment to learn git. It is due [Month] [Day], [Year].\n\n\n\nMake readme\n\n\n\nSave and close the README file.\n\nI want something like that on every project you make in this class: title, your name, the assignment and when it is due. Your projects early in the class won’t have an extensive README like some others, but I want you to be in the habit of using them."
   },
   {
     "objectID": "git-01-project.html#using-gitignore",
@@ -833,11 +833,11 @@
     "text": "23.6 Publishing\nPublish your site using Github pages using the “main branch/docs folder” method. Add your link to the Github repo description so it is easy for me to find. Turn in your github repo link to the assignment."
   },
   {
-    "objectID": "sapp-00-intro.html",
-    "href": "sapp-00-intro.html",
+    "objectID": "sapp-00-intro.html#building-up-to-the-static-generator-app",
+    "href": "sapp-00-intro.html#building-up-to-the-static-generator-app",
     "title": "Static apps intro",
-    "section": "",
-    "text": "Do I need this?"
+    "section": "Building up to the static-generator app",
+    "text": "Building up to the static-generator app\nThroughout this semester we’ve been building your coding skills, adding a new language or tool each week. For each of the three core technologies, HTML, CSS and JavaScript, we’ve enhanced the base language with tools or systems to make them more efficient to use.\nWhen you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on every page. Imagine if your site had hundreds of pages. That’s too labor intensive in the age of computers. With this lesson we’ll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.\nStatic-Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be published to a web server without the need of a live database.\nThere are many tools to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.\nFor our class, I have provided you a project framework in a repo that uses Node.js and Nunjucks create a static-app environment.\n\nNunjucks\nFor this lesson, we’ll introduce the JavaScript template language Nunjucks and a couple of other tools. We’ll take the “Pirate Cove” Bootstrap project that you built previously, and “extrapolate” it so you can build similar projects with more pages much faster."
   },
   {
     "objectID": "sapp-01-framework.html#goals-for-this-lesson",
@@ -847,32 +847,25 @@
     "text": "24.1 Goals for this lesson\nWe will learn the features of this project rig in steps:\n\n24.1.1 Templates\n\nWe’ll learn about static-site generators and templates.\nWe’ll build a new page using the base template.\n\n\n\n24.1.2 Loops and Google Sheets data\n\nWe’ll learn about using Google Sheets to manage data in our project.\nWe’ll introduce loops to process data on our pages.\n\n\n\n24.1.3 Google Docs, ArchieML and baking pages\n\nWe’ll learn about using Google Docs/ArchieML for content.\nWe’ll learn about the bake command in the project.\nWe’ll create blog pages based on Google Doc source.\nWe’ll update our index page to build links to the blog pages."
   },
   {
-    "objectID": "sapp-01-framework.html#building-up-to-the-static-generator-app",
-    "href": "sapp-01-framework.html#building-up-to-the-static-generator-app",
-    "title": "24  The static app framework",
-    "section": "24.2 Building up to the static-generator app",
-    "text": "24.2 Building up to the static-generator app\nThroughout this semester we’ve been building your coding skills, adding a new language or tool each week. For each of the three core technologies, HTML, CSS and JavaScript, we’ve enhanced the base language with tools or systems to make them more efficient to use.\nWhen you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on every page. Imagine if your site had hundreds of pages. That’s too labor intensive in the age of computers. With this lesson we’ll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.\nStatic-Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be published to a web server without the need of a live database.\nThere are many tools to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.\nFor our class, I have provided you a project framework in a repo that uses Node.js and Nunjucks create a static-app environment.\n\n24.2.1 Nunjucks\nFor this lesson, we’ll introduce the JavaScript template language Nunjucks and a couple of other tools. We’ll take the “Pirate Cove” Bootstrap project that you built previously, and “extrapolate” it so you can build similar projects with more pages much faster."
-  },
-  {
     "objectID": "sapp-01-framework.html#set-up-development",
     "href": "sapp-01-framework.html#set-up-development",
     "title": "24  The static app framework",
-    "section": "24.3 Set up development",
-    "text": "24.3 Set up development\nThe best way to set up your project template is to use degit to download the template from the icj-project-rig repo.\n\nCreate your project folder, called yourname-staticapp.\nOpen VS Code into that folder and open the Terminal.\nRun degit utdata/icj-project-rig.\nCreate your Github repo and connect them.\nrun npm install to install all the Node software\nrun gulp dev to process all the files and start the server."
+    "section": "24.2 Set up development",
+    "text": "24.2 Set up development\nThe best way to set up your project template is to use degit to download the template from the icj-project-rig repo.\n\nCreate your project folder, called yourname-staticapp.\nOpen VS Code into that folder and open the Terminal.\nRun degit utdata/icj-project-rig.\nCreate your Github repo and connect them.\nrun npm install to install all the Node software\nrun gulp dev to process all the files and start the server."
   },
   {
     "objectID": "sapp-01-framework.html#review-the-example-site",
     "href": "sapp-01-framework.html#review-the-example-site",
     "title": "24  The static app framework",
-    "section": "24.4 Review the example site",
-    "text": "24.4 Review the example site\nBefore we talk about how the project architecture is structured, let’s tour the example pages that are included. As we do so, we’ll just touch on how the example code applies to specific project features.\n\nAll the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don’t have to duplicate code for each new page.\nThe index also has a bookstores list down the page a bit, which is a loop over some data. As we explore the code later you’ll see there is only code for one entry, but we repeat that code for every row in data file. In this case the data was downloaded from a Google Sheets spreadsheet, an optional feature of the project. Sometimes having a structured data source like a spreadsheet is helpful.\nThe index also has a listing of three books. This is also built within a “loop” that allows us to repeat the same code over and over. In this case our book data was downloaded from a Google Docs file written in a special structure called ArchieML, developed by The New York Times.\nLastly, there are individual pages for each book listed, which serve as an example of detail pages built from the same template. Only the text and image content is different for each page, but the structure for each page comes from the same template.\nThese specific book pages were created using another feature of the project where we can “bake” pages from data. Instead of a human creating a new file for each library book, they were generated automagically based on data from the Google Doc. If there were 100 books in the data, it would’ve built 100 pages.\n\nStoring our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code. It’s super powerful, and used by newsrooms like NYT, NPR and The Texas Tribune."
+    "section": "24.3 Review the example site",
+    "text": "24.3 Review the example site\nBefore we talk about how the project architecture is structured, let’s tour the example pages that are included. As we do so, we’ll just touch on how the example code applies to specific project features.\n\nAll the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don’t have to duplicate code for each new page.\nThe index also has a bookstores list down the page a bit, which is a loop over some data. As we explore the code later you’ll see there is only code for one entry, but we repeat that code for every row in data file. In this case the data was downloaded from a Google Sheets spreadsheet, an optional feature of the project. Sometimes having a structured data source like a spreadsheet is helpful.\nThe index also has a listing of three books. This is also built within a “loop” that allows us to repeat the same code over and over. In this case our book data was downloaded from a Google Docs file written in a special structure called ArchieML, developed by The New York Times.\nLastly, there are individual pages for each book listed, which serve as an example of detail pages built from the same template. Only the text and image content is different for each page, but the structure for each page comes from the same template.\nThese specific book pages were created using another feature of the project where we can “bake” pages from data. Instead of a human creating a new file for each library book, they were generated automagically based on data from the Google Doc. If there were 100 books in the data, it would’ve built 100 pages.\n\nStoring our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code. It’s super powerful, and used by newsrooms like NYT, NPR and The Texas Tribune."
   },
   {
     "objectID": "sapp-01-framework.html#understand-the-project-structure",
     "href": "sapp-01-framework.html#understand-the-project-structure",
     "title": "24  The static app framework",
-    "section": "24.5 Understand the project structure",
-    "text": "24.5 Understand the project structure\nThe README.md in the project template has details about how different features work. READ THE README. While the README file is in your project, you might find it easier to read the README online. We will also go over it in class (or through video)."
+    "section": "24.4 Understand the project structure",
+    "text": "24.4 Understand the project structure\nThe README.md in the project template has details about how different features work. READ THE README. While the README file is in your project, you might find it easier to read the README online. We will also go over it in class (or through video)."
   },
   {
     "objectID": "sapp-02-templates.html#install-the-assets",
@@ -1115,168 +1108,168 @@
   {
     "objectID": "a-bash-files.html#goal",
     "href": "a-bash-files.html#goal",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.1 Goal",
     "text": "D.1 Goal\nLet’s learn some more command-line juju for working with files. These commands will help look at code files on your computer."
   },
   {
     "objectID": "a-bash-files.html#set-up",
     "href": "a-bash-files.html#set-up",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.2 Set up",
     "text": "D.2 Set up\nLet’s make sure we are in our class folder. (This is review from Moving Around).\n\nMake sure you are in your icj project folder:\n\ncd ~/Documents/icj\n\nCreate a new folder called myproject:\n\nmkdir myproject\n\nUse cd to move inside the myproject folder then use pwd to make sure you are in the right place. The result should be something like this:\n\n$ cd\nUsers/ccm346/Documents/icj/myproject"
   },
   {
     "objectID": "a-bash-files.html#curl",
     "href": "a-bash-files.html#curl",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.3 curl",
     "text": "D.3 curl\nWe need some text to work with, so we’re going to pull down some text from Github. I might as well explain what we are doing.\ncurl is a command to transfer files. I think of it as “Capture URL”. We need to give curl a couple of flags (or options) for this job:\n\n-L stands for “Location”. It allows curl to follow a URL if it is redirected.\n-o for “output”. So we can write this to a file (which we are calling data.csv) instead of our terminal window. (We could use -O instead to just use the current file name.)\n\n\n\n\n\n\n\nWarning\n\n\n\nThis URL below needs to be updated\n\n\ncurl -L -o data.csv https://raw.githubusercontent.com/utdata/icj-class/main/resources/data_example.csv\nOK, now we should be able to ls and see our file is there. My output looks like this:\n$ ls\ndata.csv"
   },
   {
     "objectID": "a-bash-files.html#head",
     "href": "a-bash-files.html#head",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.4 head",
     "text": "D.4 head\nhead allows you to print the top of a file to your screen so you can see what it is. It will default to show you the first 10 lines of a file. When you type this in, hit tab after you type “head da” to let tab completion help you.\nhead data.csv\nwill give you this:\n$ head data.csv\nQuarter,Taxpayer Number,Taxpayer Name,Taxpayer Address,Taxpayer City,Taxpayer State,Taxpayer Zip Code,Taxpayer County,Outlet Number,Location Name,Location Address,Location City,Location State,Location Zip Code,Location County,Location Room Capacity,Location Tot Room Receipts,Location Taxable Receipts\nQ1,32051871906,DSN HOSPITALITY LLC,4710 S LAMAR BLVD,AUSTIN,TX,78745,227,00001,DSN HOSPITALITY LLC,3110 STATE HIGHWAY 71 EAST,AUSTIN,TX,78745,011,37,91205.03,90870.01\nQ1,32054409241,JEANETTE WELSHE,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,00001,BED AND BREAKFAST,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,4,5417.92,5417.92\nQ1,32047098168,AMY MARIE CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,00001,FLORA PROPERTIES/AMY M. CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,4,7280.23,7280.23\nQ1,32055460730,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,00001,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,1,4735.0,4735.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00001,NUTTY BROWN CABIN,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,1030.0,1030.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00003,NUTTY BROWN MANOR,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,2100.0,2100.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00004,\"ROADRUNNER'S BUNGALOQ\",12932 NUTTY BROWN RD,AUSTIN,TX,78737,105,1,0.0,0.0\nQ1,32020638758,LESLIE K RENFRO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,00002,THISTLE HILL STUDIO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,1,871.0,871.0\nQ1,32050668345,\"TIPPING T, LLC\",4405 MANZANILLO DR,AUSTIN,TX,78749,227,00001,TIPPING T,13127 FITZHUGH RD,AUSTIN,TX,78736,105,1,9427.0,9427.0\nIt might look like more than 10 lines on your screen because they wrap.\nIf you want to specify how many lines to display, use the flag -n for number of lines:\nhead -n 2 data.csv\nThat will give you two lines, the first which is the header of that file."
   },
   {
     "objectID": "a-bash-files.html#tail",
     "href": "a-bash-files.html#tail",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.5 tail",
     "text": "D.5 tail\ntail shows you the bottom of the file. It takes the same -n flags.\ntail data.csv\nThat result won’t show you the header, because you are looking at the last 10 lines of the file."
   },
   {
     "objectID": "a-bash-files.html#wc",
     "href": "a-bash-files.html#wc",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.6 wc",
     "text": "D.6 wc\nwc I think of as “word count”, but it can also count lines and bytes.\nwc data.csv\ngives you this output:\n$ wc data.csv\n     100    1136   15642 data.csv\nThe first column is number of lines, then the number of words, then bytes.\nIf you want just the number of lines, us -l.\nwc -l data.csv"
   },
   {
     "objectID": "a-bash-files.html#cat",
     "href": "a-bash-files.html#cat",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.7 cat",
     "text": "D.7 cat\ncat means to concatenate and print a file to your window. If you feed it two file names, it will give you the first, then the other. Do this:\ncat data.csv\nThis will print the contents of data.csv to your screen. It’s showing all 100 lines.\nBut what you can do is redirect that output into a file by using &gt;. Do this.\ncat data.csv &gt; file01.csv\nWhat you’ve done is take the contents of data.csv, printed the contents and then redirected that content into another file called file01.csv. Since that didn’t exist already, it was created on the fly.\nIf I wanted to take two files, file01.csv and file02.csv, and then combine them into a single file on your computer, it would look like this. (You don’t have to do these commands, just understand them.):\ncat file01.csv file02.csv &gt; combined.csv\nNow, combined.csv would be the combination of both files."
   },
   {
     "objectID": "a-bash-files.html#grep",
     "href": "a-bash-files.html#grep",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.8 grep",
     "text": "D.8 grep\ngrep is for using regular expressions to find patterns within a file. It takes a regular expression input and the file name and gives in return the lines of the file that match that regular expression.\ngrep 'ATX INVESTMENTS' data.csv\n… will print out just the lines in data.csv that have ‘ATX INVESTMENTS’ somewhere in them. Note that the name in the field is ‘ATX INVESTMENTS LLC’ but it found it with just part of that.\nIf you want to just know how many lines there are with ‘ATX INVESTMENTS’, use the -c flag for count:\n$ grep -c 'ATX INVESTMENTS' data.csv\nThe answer should be 4."
   },
   {
     "objectID": "a-bash-files.html#piping-commands",
     "href": "a-bash-files.html#piping-commands",
-    "title": "Appendix D — Looking at files",
+    "title": "Appendix D — Bash files",
     "section": "D.9 Piping commands",
     "text": "D.9 Piping commands\nYou can “pipe” the results of one command into another command with the | character, which you’ll find as the shift of your backslash key. You can string commands together with that, so if I just wanted to see the first lines that has ‘ATX INVESTMENTS’, I can do this:\ngrep 'ATX INVESTMENTS' data.csv | head -n 1"
   },
   {
     "objectID": "a-bash-commands.html#man",
     "href": "a-bash-commands.html#man",
-    "title": "Appendix E — Commands in bash",
+    "title": "Appendix E — Bash commands",
     "section": "E.1 man",
     "text": "E.1 man\nIf you are unsure about how any of these terminal commands work, there are manual pages for each one already on your computer. Now, I’m not saying they are extremely well-written and intuitive, but they are there.\n$ man cd\nWill open the manual page for cd and tell you have to change directory.\nBut man pages, as they are called, are a special program themselves, and have a different commands to negotiate around them, as you’ll discover quickly if you try to scroll to see more.\n\nhit f or space to advance one page through the file\nhit j to go down one line\nhit k to go up one line\nhit g to go the the top\nhit q to quit\n\nMoving around the man pages is frustrating at first. There are online versions of these, but the man command doesn’t need the internet. These files are already on your computer.\nMan pages are useful to figure out the options or flags for commands, so you can learn that ls -lt will give you that long list sorted in order of time, most-recently modified at top."
   },
   {
     "objectID": "a-bash-commands.html#h-for-help",
     "href": "a-bash-commands.html#h-for-help",
-    "title": "Appendix E — Commands in bash",
+    "title": "Appendix E — Bash commands",
     "section": "E.2 -h for help",
     "text": "E.2 -h for help\nSometimes there isn’t a man page for a command, but there is help file. If we wanted to look at a list of all the flags for the curl program, we would can get “help with the -h flag. I would type:\n$ curl -h\nThis gives you a list of the flags and arguments for that command, along with other information."
   },
   {
     "objectID": "a-bash-profile.html#shorten-your-terminal-name",
     "href": "a-bash-profile.html#shorten-your-terminal-name",
-    "title": "Appendix F — Editing the Bash profile",
+    "title": "Appendix F — Bash profile",
     "section": "F.1 Shorten your terminal name",
     "text": "F.1 Shorten your terminal name\nMy prompt line in my terminal is really long. It looks like this:\nCHRISTIANs-MacBook-Air-2:~ christian$\nYou can shorten it to just your login name by adding this line to your .bash_profile file, which is found in your home directory: code ~/.bash_profile should open it in VS Code so you can edit it.\n# shortens prompt name\nPS1='\\u:\\W\\$ '\nNow close your Terminal window and open a new one, and the prompt should be shorter, with just your username."
   },
   {
     "objectID": "a-bash-profile.html#hide-the-zsh-message",
     "href": "a-bash-profile.html#hide-the-zsh-message",
-    "title": "Appendix F — Editing the Bash profile",
+    "title": "Appendix F — Bash profile",
     "section": "F.2 Hide the zsh message",
     "text": "F.2 Hide the zsh message\nAdding this to your bash_profile hides the message about changing to zsh.\n# hides zsh prompt\nexport BASH_SILENCE_DEPRECATION_WARNING=1"
   },
   {
     "objectID": "a-bash-profile.html#list-all-long-including-hidden",
     "href": "a-bash-profile.html#list-all-long-including-hidden",
-    "title": "Appendix F — Editing the Bash profile",
+    "title": "Appendix F — Bash profile",
     "section": "F.3 List all long including hidden",
     "text": "F.3 List all long including hidden\nWhen I want to see everything in a directory, including all the hidden files and the other details like size, date, etc., then the command is ls -al. But I put in a alias so all I have to type is ll to get that long list. Add this to your .bash_profile:\nalias ll=\"ls -al\""
   },
   {
     "objectID": "a-git-share.html#goals",
     "href": "a-git-share.html#goals",
-    "title": "Appendix G — Cloning repos, sharing code",
+    "title": "Appendix G — Git: Sharing code",
     "section": "G.1 Goals",
     "text": "G.1 Goals\nWe’ll now see how you can collaborate in code with a classmate. Our goals are this:\n\nTo pick a partner\nTo clone their repo to your machine.\nTo edit the file and use the git cycle to commit the changes.\nTo go to your own repo and pull the changes made by your partner.\nWe’ll then introduce a code conflict and learn how to resolve it."
   },
   {
     "objectID": "a-git-share.html#clone-a-repo",
     "href": "a-git-share.html#clone-a-repo",
-    "title": "Appendix G — Cloning repos, sharing code",
+    "title": "Appendix G — Git: Sharing code",
     "section": "G.2 Clone a repo",
     "text": "G.2 Clone a repo\n\nIn your browser, go to your partner’s Github profile and click on Repositories if necessary, then on their repo.\nLook for the button Clone or download. You want to copy the URL for cloning, like this:\n\n\n\n\nclone\n\n\n\nGo into your regular Terminal app and cd into ~/Documents/icj/.\nDo git clone URL but paste the URL you copied. This is the same as you did with your own repo, but now you have downloaded your partner’s repo.\n\nIf you wanted the repo to be a different name on your computer, you would add the name you want after the url. I tend to keep the same name unless there is a good reason not to."
   },
   {
     "objectID": "a-git-share.html#make-your-edits",
     "href": "a-git-share.html#make-your-edits",
-    "title": "Appendix G — Cloning repos, sharing code",
+    "title": "Appendix G — Git: Sharing code",
     "section": "G.3 Make your edits",
     "text": "G.3 Make your edits\n\nLaunch VS Code if it isn’t already.\nGo to File &gt; New Window.\nUse the VS Code Explorer on the left to find your partner’s folder and open it.\nAdd a new sentence praising your partner’s command of git and Github thus far. Save and close the file.\nAdd a new file to the repo called newfile.md. There are a bunch of different ways you can do this … just choose one method:\n\nYou use your terminal (even in VS Code) and type touch newfile.md.\nYou can use the File &gt; New file menu and name it.\nYou can use the little buttons in the Explorer and name it.\n\nAdd a title and a paragraph of text, using proper Markdown syntax. Save and close your work. (Depending on time, we might talk about and load the Markdown Syntax Linter.)\nOpen the Integrated Terminal and go through the steps to check status, add files, commit files (with message), and push to origin master.\n\n\nBefore you can push, your partner probably needs to go into their Github repo and add you as a collaborator."
   },
   {
     "objectID": "a-git-share.html#pull-your-partners-edits",
     "href": "a-git-share.html#pull-your-partners-edits",
-    "title": "Appendix G — Cloning repos, sharing code",
+    "title": "Appendix G — Git: Sharing code",
     "section": "G.4 Pull your partner’s edits",
     "text": "G.4 Pull your partner’s edits\n\nGo back to the VS Code window that is your own repo.\nUse the Integrated Terminal to do $ git pull origin master, which will download the changes made by your partner. Yes, pull is the opposite of push."
   },
   {
     "objectID": "a-git-share.html#dealing-with-conflicts",
     "href": "a-git-share.html#dealing-with-conflicts",
-    "title": "Appendix G — Cloning repos, sharing code",
+    "title": "Appendix G — Git: Sharing code",
     "section": "G.5 Dealing with conflicts",
     "text": "G.5 Dealing with conflicts\nYou might ask yourself … what’s to keep two people from changing the same line of code? Well, they can, and you will. It creates a code conflict that must then be resolved.\nWe’re going to create such a conflict so you can see that this looks like.\n\nG.5.1 Your original change\n\nFind your VS Code window with your own repo and make a change within the first sentence.\nAdd, commit and push your changes to Github.\n\nSo now, in your partner’s copy of your repo, there is a change that they do not have.\n\n\nG.5.2 Change your partner’s repo\n\nGo back into your partner’s repo in VS Code and change that same first sentence, but do it in some different way.\nAdd, commit and try to push your changes. When you try to push, you won’t be able do. You’ll get a message something like this:\n\n$ git push origin master\nTo github.com:critmcdonald/christian-git-practice.git\n ! [rejected]        master -&gt; master (non-fast-forward)\nerror: failed to push some refs to 'github.com:critmcdonald/christian-git-practice.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n(base) ✘-1 ~/Documents/icj/christian-git-practice [master ↓·1↑·1|✔] \nYou can see from the hints in the error message, that there are changes on the remote repo that you don’t have. Git won’t let you push new changes unless you have the current remote copy from the server. That keeps you from screwing up something that is already there (which is kinda what we are doing).\nSo, you have to pull the remote changes first.\n\nDo $ git pull origin master to update your repo. It will work, but you’ll get message about the conflict.\n\n$ git pull origin master\nFrom github.com:critmcdonald/christian-git-practice.git\n * branch            master     -&gt; FETCH_HEAD\nAuto-merging newfile.md\nCONFLICT (content): Merge conflict in newfile.md\nAutomatic merge failed; fix conflicts and then commit the result.\n(base) ✘-1 ~/Documents/icj/christian-git-practice [master|MERGING ↓·1↑·1|✖ 1] \nNow look at the file in VS Code, and it will look pretty crazy. Here is mine:\n\n\n\nclone\n\n\nLet’s break this down:\n\nThe highlighted line with HEAD is the beginning of the conflict.\nThe other highlighted line is the end of the conflict.\nIt’s up to you to choose what should be inbetween those notes. You would of course want to discuss this with your collaborator and come to an agreement on what this should be. Fix up the file the way you have agreed and then remove all the notes and the line between the two pieces.\nOnce you have it the way you like it, save, add, commit and push.\n\n\n\nG.5.3 Get your own repo right\n\nGo back to your own repo in VS Code and do git pull origin master. Depending on how you resolved the conflict together, you might have to go through the process again. You might go look at the repo on Github and copy/paste the line to ensure you have it the same. Add, commit and push as necessary."
   },
   {
     "objectID": "a-git-share.html#good-coding-practices-syntax",
     "href": "a-git-share.html#good-coding-practices-syntax",
-    "title": "Appendix G — Cloning repos, sharing code",
+    "title": "Appendix G — Git: Sharing code",
     "section": "G.6 Good coding practices: Syntax",
     "text": "G.6 Good coding practices: Syntax\nOne tactic to being a good collaborator with code is to follow syntax, meaning you write code to a shared standard. Each programming language has its own standard, including how many spaces to indent, how you capitialize, etc.\nWe’ve been writing in Markdown, and here are two resources about that syntax:\n\nMarkdown tutorial\nMarkdown syntax"
   },
   {
     "objectID": "a-git-branch.html#feature-branch-workflow",
     "href": "a-git-branch.html#feature-branch-workflow",
-    "title": "Appendix H — Git branches and pull requests",
+    "title": "Appendix H — Git: Branches",
     "section": "H.1 Feature branch workflow",
     "text": "H.1 Feature branch workflow\nThe workflow I typically use is git feature branch workflow, and I use this even when I’m working solo on a project. Review the link above, but this is typically how it works:\n\nmaster is the branch in production or ready for production. It should always “work” with no bugs.\nCreate a feature branch to start on new work. Make your changes and push the branch to the repo.\nCreate a pull request to review changes. This allows you or others to see the changes within Github you are proposing to merge into master. There are tools in Github that allow for official reviews, comments and such. You will also see potential code conflicts.\nMake any changes necessary and push them to the feature branch.\nOnce ready, merge into master. All the history of your commits are added to master, and your newbranch has been deleted on Github.\n\nThere can be more to it in some shops, like rebasing and squashing, but we won’t get into that here."
   },
   {
     "objectID": "a-git-branch.html#lets-do-it",
     "href": "a-git-branch.html#lets-do-it",
-    "title": "Appendix H — Git branches and pull requests",
+    "title": "Appendix H — Git: Branches",
     "section": "H.2 Let’s do it",
     "text": "H.2 Let’s do it\n\nGo into your “myproject-name” repo in VS code and open your Integrated Terminal.\nCreate your branch: $ git checkout -b newbranch.\n\nIf you have the git-bash-prompt installed, you’ll notice the name of the branch has changed in the square brackets.\n\nAdd a new file and call it branchfile.md. Add a title and some text using proper Markdown syntax.\nSave and add and commit your file, but when you push, you need to change that to $ git commit origin newbranch to ensure you are adding to your new branch. (It will give you an error if you try to push to master.) This is the result:\n\n$ git push origin featurebranch\nEnumerating objects: 4, done.\nCounting objects: 100% (4/4), done.\nDelta compression using up to 8 threads.\nCompressing objects: 100% (2/2), done.\nWriting objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.\nTotal 3 (delta 0), reused 0 (delta 0)\nTo github.com:critmcdonald/myproject-christian.git\n * [new branch]      featurebranch -&gt; featurebranch\n✔ ~/Documents/icj/myproject-christian [featurebranch L|✔]\n\nGo to your repo on Github, and you’ll notice your branchfile.md is not listed. This is because you are looking at your master branch.\nYou can click on branches to see all the branches, or use the branch dropdown to switch to your new branch on Github."
   },
   {
     "objectID": "a-git-branch.html#create-a-pull-request",
     "href": "a-git-branch.html#create-a-pull-request",
-    "title": "Appendix H — Git branches and pull requests",
+    "title": "Appendix H — Git: Branches",
     "section": "H.3 Create a pull request",
     "text": "H.3 Create a pull request\n\nSince we just pushed a new branch, you might notice a yellow alert box that has a button where you can Compare & pull requet. If you have that, go ahead and click on it.\nIf you didn’t have that, you could click on the Pull requests tab at the top, and then choose a New pull request.\n\nThis is what you get:\n\n\n\npull reqeust\n\n\nYou can see from this page that you are merging the branch on the right, newbranch, into the branch on the left, which is master.\n\nHere you can give your pull request a title and a description. Your description might outline what is being changed, how to test it locally and whatever information your collaborators our your future self might want to know.\nClick the Create pull request button to create the pull request.\nThe next screen gives you summary of all the commits that are different from the master. It will list multiple files if there are differences.\n\n\n\n\npull reqeust\n\n\n\nThis process also outlines any conflicts there might be between the feature branch and master. You’ll have to fix them before you can merge.\nThe pull request also allows yourself and collaborators review all your changes and make comments.\nGo ahead and click Merge pull request and then Confirm merge to merge the branches.\n\nAt this point, you can delete the newbranch in Github, as indicated with a button. You don’t have to since all the commit history is now in master, but it’s a good idea to keep everything clean.\nNow let’s clean up our local repo.\n\nGo back to VS Code and into the Integrated Terminal, and switch back to master using git checkout master. It will look like this:\n\n$ git checkout master\nSwitched to branch 'master'\nYour branch is up-to-date with 'origin/master'.\n(base) ✔ ~/Documents/icj/myproject-christian [master|✔]\nYou might notice this says you “branch is up-to-date with ‘origin/master’, and that is confusing, because we know we merged changes that are on Github. This message is referring to your LOCAL branch, not the one on Github. We still need to pull in those changes:\n$ git pull origin master\nFrom github.com:critmcdonald/myproject-christian\n * branch            master     -&gt; FETCH_HEAD\nUpdating b36328f..c85740d\nFast-forward\n branchfile.md | 3 +++\n 1 file changed, 3 insertions(+)\n create mode 100644 branchfile.md\n✔ ~/Documents/icj/myproject-christian [master|✔]\nThis will pull the files from Github and bring them local.\nYou can always check what branches you have locally with $ git branch. Try it.\n16:13 $ git branch\n* master\n  newbranch\nThe newbranch on Github went away when we merged it, but now we can delete it locally:\n$ git branch -D newbranch\nDeleted branch newbranch (was 1345054).\n✔ ~/Documents/icj/myproject-christian [master|✔] \nThe capitalization of -D flag matters."
   },
   {
     "objectID": "a-git-branch.html#git-commands",
     "href": "a-git-branch.html#git-commands",
-    "title": "Appendix H — Git branches and pull requests",
+    "title": "Appendix H — Git: Branches",
     "section": "H.4 Git commands",
     "text": "H.4 Git commands\nWe used a ton of git commands, and it was only a fraction. It’s a complex program. There are tons of cheet sheets out there on the googles, but this one is pretty clean."
   }

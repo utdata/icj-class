@@ -1,4 +1,4 @@
-# Looking at files
+# Bash files
 
 This is an extended lesson on bash that is not always assigned, but is still useful.
 

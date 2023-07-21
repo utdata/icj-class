@@ -6,4 +6,4 @@ This is a guide for the UT-Austin School of Journalism and Media course "Intro C
 
 This book is written using [Quarto](https://quarto.org/).
 
-The online version of the book is [link TK].
+The online version of the book is [available here](https://utdata.github.io/icj-class/).
