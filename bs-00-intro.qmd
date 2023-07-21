@@ -1,9 +1,5 @@
 # Bootstrap
 
-::: callout
-Draft done
-:::
-
 [Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable.  Its "mobile-first, responsive design" framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.
 
 With the lesson we return to the teaching method of Tutorial > Practice > Mastery.

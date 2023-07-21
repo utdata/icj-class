@@ -1,4 +1,4 @@
-# Git branches and pull requests
+# Git: Branches
 
 > This has never been used in class and probably needs edits.
 

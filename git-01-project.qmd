@@ -1,5 +1,10 @@
 # Project setup
 
+::: callout-important
+In your Canvas course you'll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as I follow this book, but I just talk out and _show_ the steps.
+:::
+
+
 This is something we'll do time and again. Don't just follow the steps blindly ... learn and understand what you are doing so you can do this without thinking much about it.
 
 In this section we'll create a folder to hold all of our stuff, and some maintenance files we'll need with every project.
@@ -22,7 +27,7 @@ Every coding project should have a special file called a [README file](https://w
 
 I want you to _always_ have a README file with your projects, and it should _always_ be called `README.md`. Yes, with capital letters for `README` and lower-case letters for `.md`. It breaks typical file naming conventions because it is special.
 
-(I have a gif showing these steps below.)
+(There is a gif below showing these steps.)
 
 1. Create the file first. I would recommend using the Terminal inside VS Code to use the `touch` command. (There are other ways, but let's get used to using `touch`.)
 

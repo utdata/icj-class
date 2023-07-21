@@ -405,31 +405,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./a-bash-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Looking at files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Bash files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./a-bash-commands.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Commands in bash</span></span></a>
+ <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Bash commands</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./a-bash-profile.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Editing the Bash profile</span></span></a>
+ <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Bash profile</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./a-git-share.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">Cloning repos, sharing code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">Git: Sharing code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./a-git-branch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">Git branches and pull requests</span></span></a>
+ <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">Git: Branches</span></span></a>
   </div>
 </li>
       </ul>
@@ -450,13 +450,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#loops-and-google-sheets-data" id="toc-loops-and-google-sheets-data" class="nav-link" data-scroll-target="#loops-and-google-sheets-data"><span class="header-section-number">24.1.2</span> Loops and Google Sheets data</a></li>
   <li><a href="#google-docs-archieml-and-baking-pages" id="toc-google-docs-archieml-and-baking-pages" class="nav-link" data-scroll-target="#google-docs-archieml-and-baking-pages"><span class="header-section-number">24.1.3</span> Google Docs, ArchieML and baking pages</a></li>
   </ul></li>
-  <li><a href="#building-up-to-the-static-generator-app" id="toc-building-up-to-the-static-generator-app" class="nav-link" data-scroll-target="#building-up-to-the-static-generator-app"><span class="header-section-number">24.2</span> Building up to the static-generator app</a>
-  <ul class="collapse">
-  <li><a href="#nunjucks" id="toc-nunjucks" class="nav-link" data-scroll-target="#nunjucks"><span class="header-section-number">24.2.1</span> Nunjucks</a></li>
-  </ul></li>
-  <li><a href="#set-up-development" id="toc-set-up-development" class="nav-link" data-scroll-target="#set-up-development"><span class="header-section-number">24.3</span> Set up development</a></li>
-  <li><a href="#review-the-example-site" id="toc-review-the-example-site" class="nav-link" data-scroll-target="#review-the-example-site"><span class="header-section-number">24.4</span> Review the example site</a></li>
-  <li><a href="#understand-the-project-structure" id="toc-understand-the-project-structure" class="nav-link" data-scroll-target="#understand-the-project-structure"><span class="header-section-number">24.5</span> Understand the project structure</a></li>
+  <li><a href="#set-up-development" id="toc-set-up-development" class="nav-link" data-scroll-target="#set-up-development"><span class="header-section-number">24.2</span> Set up development</a></li>
+  <li><a href="#review-the-example-site" id="toc-review-the-example-site" class="nav-link" data-scroll-target="#review-the-example-site"><span class="header-section-number">24.3</span> Review the example site</a></li>
+  <li><a href="#understand-the-project-structure" id="toc-understand-the-project-structure" class="nav-link" data-scroll-target="#understand-the-project-structure"><span class="header-section-number">24.4</span> Understand the project structure</a></li>
   </ul>
 </nav>
     </div>
@@ -507,20 +503,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="building-up-to-the-static-generator-app" class="level2" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="building-up-to-the-static-generator-app"><span class="header-section-number">24.2</span> Building up to the static-generator app</h2>
-<p>Throughout this semester we’ve been building your coding skills, adding a new language or tool each week. For each of the three core technologies, HTML, CSS and JavaScript, we’ve enhanced the base language with tools or systems to make them more efficient to use.</p>
-<p>When you built your Bootstrap practice project, you had to completely finish one page before you copied it to create your second page, which means you had lots of duplicate code. If you needed to change something in the Jumbotron, you had to change it on every page. Imagine if your site had hundreds of pages. That’s too labor intensive in the age of computers. With this lesson we’ll introduce a system that allows you to create a template framework that can be used to generate a number of pages with minimal extra effort.</p>
-<p>Static-Site Generators are an approach to web development that allow you to build a powerful, server-based website locally on your computer, but then compile the pages into a single directory that can be published to a web server without the need of a live database.</p>
-<p>There are <a href="https://www.staticgen.com/">many tools</a> to build static sites using a myriad of programming languages. Some of them have support for themes and other significant customization. Many are built to serve as blogs, but usually they can be coerced into other purposes.</p>
-<p>For our class, I have provided you a project framework in a repo that uses Node.js and Nunjucks create a static-app environment.</p>
-<section id="nunjucks" class="level3" data-number="24.2.1">
-<h3 data-number="24.2.1" class="anchored" data-anchor-id="nunjucks"><span class="header-section-number">24.2.1</span> Nunjucks</h3>
-<p>For this lesson, we’ll introduce the JavaScript template language <a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks</a> and a couple of other tools. We’ll take the “Pirate Cove” Bootstrap project that you built previously, and “extrapolate” it so you can build similar projects with more pages much faster.</p>
-</section>
-</section>
-<section id="set-up-development" class="level2" data-number="24.3">
-<h2 data-number="24.3" class="anchored" data-anchor-id="set-up-development"><span class="header-section-number">24.3</span> Set up development</h2>
+<section id="set-up-development" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="set-up-development"><span class="header-section-number">24.2</span> Set up development</h2>
 <p>The best way to set up your project template is to use <a href="https://www.npmjs.com/package/degit">degit</a> to download the template from the <code>icj-project-rig</code> repo.</p>
 <ul>
 <li>Create your project folder, called <code>yourname-staticapp</code>.</li>
@@ -531,8 +515,8 @@ ul.task-list li input[type="checkbox"] {
 <li>run <code>gulp dev</code> to process all the files and start the server.</li>
 </ul>
 </section>
-<section id="review-the-example-site" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="review-the-example-site"><span class="header-section-number">24.4</span> Review the example site</h2>
+<section id="review-the-example-site" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="review-the-example-site"><span class="header-section-number">24.3</span> Review the example site</h2>
 <p>Before we talk about how the project architecture is structured, let’s tour the example pages that are included. As we do so, we’ll just touch on how the example code applies to specific project features.</p>
 <ul>
 <li>All the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don’t have to duplicate code for each new page.</li>
@@ -543,8 +527,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Storing our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code. It’s super powerful, and used by newsrooms like NYT, NPR and The Texas Tribune.</p>
 </section>
-<section id="understand-the-project-structure" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="understand-the-project-structure"><span class="header-section-number">24.5</span> Understand the project structure</h2>
+<section id="understand-the-project-structure" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="understand-the-project-structure"><span class="header-section-number">24.4</span> Understand the project structure</h2>
 <p>The README.md in the project template has details about how different features work. <strong>READ THE README</strong>. While the README file is in your project, you might find it easier <a href="https://github.com/utdata/icj-project-rig">to read the README online</a>. We will also go over it in class (or through video).</p>
 
 

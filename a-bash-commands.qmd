@@ -1,4 +1,4 @@
-# Commands in bash
+# Bash commands
 
 These are some common commands used in bash.
 

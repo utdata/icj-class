@@ -1,4 +1,4 @@
-# Cloning repos, sharing code
+# Git: Sharing code
 
 > We'll probably skip this ... and it probably needs edits.
 

@@ -1,13 +1,5 @@
 # HTML practice
 
-::: callout
-Draft done
-:::
-
-::: callout-important
-In your Canvas course you'll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as I follow this book, but just talk out and _show_ the steps.
-:::
-
 ## Tutorials
 
 Do the tutorials noted below before you start on this project. Codecademy is a freemium platform were some lessons are free and others are paid. These modules outlined below should be free and you don't _need_ to do any paid modules, though you are welcome to do so. All the quiz material will come from free modules or our practice and mastery assignments.

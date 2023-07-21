@@ -1,8 +1,10 @@
 # Getting started
 
-We're going to start here by learning about **command-line interface** tools that allow us to work with your computer through text commands, which is essential in programming.
+These first couple of chapters deal with learning about **command-line interface** tools that allow us to work with our computer through text commands, which is essential in programming.
 
-I use a Mac, and there are some differences for Windows users. The first major difference is Windows users have to install Git (and Git Bash, which comes with it) before we can go much further.
+On Macintosh computers, the program to use is called Terminal and it is already installed.
+
+Windows computers are built a little differently, and for us to work within the same environment Windows users have to install Git (and Git Bash, which comes with it) before we can go much further.
 
 ::: {.callout-caution}
 ## Windows uses must install Git first
