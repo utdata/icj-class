@@ -153,7 +153,7 @@ The first rule sets the font to a series of sans serif fonts, and we've done it 
 
 The other rules set sizes and margins for various sizes of headlines. You'll notice that the margins are set in a single line. You can [review the rules regarding that here](https://www.w3schools.com/css/css_margin.asp).
 
-### Set article width
+## Set article width
 
 Having all this smooshed to the left side of the page is annoying. Let's set some boundaries for the article. If you look at the finished example above, the content is a certain width and centered in the page. We're going to do this by writing a style to the `<article>` semantic tag we created in the last lesson.
 
@@ -282,7 +282,7 @@ We have just a bit more cleanup styling to do to adjust the type styles, margins
   font-family: Tahoma, Arial, sans-serif;
   font-size: 1.4rem;
   padding: 12px 0px;
-  margin-top: 15px;
+  margin-top: 16px;
 ```
 
 Now your recipe stats should look like our example above.
@@ -397,7 +397,7 @@ ol {
 }
 
 ol li {
-  margin-bottom: 8px;
+  margin-top: 8px;
 }
 ```
 
@@ -407,7 +407,12 @@ Our nutrition information is our last challenging piece and we get to learn some
 
 ![Nutrition list example](images/nutrition-list-example.png)
 
-But we have one list, which is a vertical structure. We could separate these items into two sections and float them, but if they were generated from an application or CMS of some kind, we might not know when to separate the left section from the right.
+Before we can apply styles to this unordered list, we need to identify it in some way so we don't also make changes to the ingredients list. To do that, you'll go in and add an to the `<section>` element:
+
+1. Go into your `recipe.html` page and find the semantic HTML tag `<section>` for the Nutrition section.
+2. Edit that tag to add `id="nutrition"`.
+
+Our nutrition list currently has a vertical structure. We could separate these items into two sections and float the two sections, but if they were generated from an application or CMS of some kind, we might not know when to separate the left section from the right.
 
 What we'll do instead is use a combination of float and a special CSS selector called [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp) to adjust every other list item.
 
@@ -434,7 +439,6 @@ Now let's use some of the same techniques we used with the header and figure to 
 ```css
   float: left;
   width: 48%
-
 ```
 
 That starts putting these side-by-side, but there is no gutter between them.
