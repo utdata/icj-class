@@ -28,13 +28,9 @@ In this section, we will ...
 - Apply learned Javascript as a working example in a browser.
 - Use pre-written Javascript to build more advanced functionality.
 
-::: callout
-Like with our other modules, there is a screencast video of this lesson, which you can find in Canvas.
-:::
-
 ## Set up your project
 
-We need to create a new project to do this work in, the same way you have all your other projects.=
+We need to create a new project to do this work in, the same way you have all your other projects.
 
 1. Create a new project folder called `yourname-javascript`. Create and connect with a new Github repo of the same name. Include a README and .gitignore file.
 1. You'll need to create a new HTML file (call it `js-practice.html`) with the HTML5 boilerplate.

@@ -18,9 +18,11 @@ Let's take our `makeName` function we made before and make it mo betta.
 
 As you recall, our previous function would take three names and put them together and return a full name. What if our user only gave us their middle initial? Then we would have returns like "Arthur C Clarke".
 
-How might we test if the middle name is an initial? And then what might we do if that test is true?
+How might we test if the middle name is an initial? And then what might we do if that test is true? If our middle name is only one character, then it would be an initial, right?
 
-Well, we know we can find out how long a string is with the property `.length`. If our middle name is only one character, then it would be an initial, right?
+JavaScript strings have a special property called `.length`. We'll learn more about properties (and methods) in our next chapter, but know that we can get the number of characters in a string by appending the `.length` property, so `middleName.length` will return the number of characters in `middleName`.
+
+We'll use this special property to test if our middle name has only one character, and then add a period if it does.
 
 We'll start by building our base function, then we'll build on it to make it better.
 
@@ -55,9 +57,7 @@ console.log(makeBetterName("John", "F", "Kennedy"));
 
 ### Make middle initial test
 
-To figure out if our `middleName` object is a single letter we can test its `.length` property. You might [look up the length property](https://www.google.com/search?q=javascript+length+property&oq=javascript+length+prop) to get a further explanation of it, but basically it counts the characters of the object.
-
-We'll use an `if` to do this test. Let's talk about how those work in JavaScript. Written in one line, the logic works like this:
+To figure out if our `middleName` object is a single letter we can test its `.length` property. We'll use an `if` to do this test. Let's talk about how those work in JavaScript. Written in one line, the logic works like this:
 
 `if (perform the test) {do this if true}`
 
@@ -103,7 +103,7 @@ function makeBetterName(firstName, middleName, lastName) {
 }
 ```
 
-Add another console.log with another name that uses a middle initial and make sure that works, too.
+4. Add another console.log with another name that uses a middle initial and make sure that works, too.
 
 ## Using else and if else
 

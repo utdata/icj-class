@@ -10,9 +10,7 @@ The purpose of this exercise is to show that you can use many of the tools quick
 
 ## Let's talk about tables
 
-Before we jump into this, take some time to look at [HTML Tables](https://www.w3schools.com/html/html_tables.asp) by comparing the [first "Try it" example](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table) on the W3 Tutorial site to [this "Try it" example](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_headings_left).
-
-Like other elements we have dealt with there is an HTML structure that is the skeleton of the table, and then the display of that element can be enhanced using CSS.
+Before we jump into this, take some time to look at [HTML Tables](https://www.w3schools.com/html/html_tables.asp) tutorial to learn about the HTML tags that make a table. Like other elements we have dealt with there is an HTML structure that is the skeleton of the table, and then the display of that element can be enhanced using CSS.
 
 Tables are great for displaying tabular data (hence the word table). But often those tables can get really long, and we can help make them more useful to readers by adding JavaScript to make them sortable and filterable, sort of like a spreadsheet.
 
@@ -23,7 +21,7 @@ Tables are great for displaying tabular data (hence the word table). But often t
 
 It will look similar to this:
 
-![js-datatables](images/js-datatable.gif)
+![Datatable example](images/js-datatable.gif)
 
 ## The steps
 
