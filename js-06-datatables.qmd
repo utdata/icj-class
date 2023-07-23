@@ -41,9 +41,9 @@ The parts of this exercise to add the Datatables JavaScript and CSS files assume
 5. Copy the three links below and add them to the bottom of your `<head>` tag just before the closing `</head>`.
 
 ```html
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
 ```
 
 6. Save your page and look at it in your browser. You should have a working table.
@@ -57,7 +57,7 @@ The parts of this exercise to add the Datatables JavaScript and CSS files assume
 ### v2: "Scroll Vertical"
 
 1. Create a copy of the HTML file you created above and call it `scrolling.html`. 
-2. Go to the "Scroll Vertical" example: https://www.datatables.net/examples/basic_init/scroll_y.html. Replace your JavaScript in your <script></script> tags in the new HTML file you just created (_scrolling.html_) with the JavaScript on the "Scroll Vertical" example page.
+2. Go to the ["Scroll Vertical" example](https://www.datatables.net/examples/basic_init/scroll_y.html). Replace your JavaScript in your <script></script> tags in the new HTML file you just created (_scrolling.html_) with the JavaScript on the "Scroll Vertical" example page.
 3. You should now have a table that isn't paginated and instead can be scrolled through, just like the example on the DataTables website.
 
 ## Commit to Github and turn in
