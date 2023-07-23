@@ -478,8 +478,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#conditional-statements" id="toc-conditional-statements" class="nav-link active" data-scroll-target="#conditional-statements"><span class="header-section-number">11.1</span> Conditional statements</a></li>
-  <li><a href="#lets-create-a-better-name-function" id="toc-lets-create-a-better-name-function" class="nav-link" data-scroll-target="#lets-create-a-better-name-function"><span class="header-section-number">11.2</span> Let’s create a better name function</a>
+  <li><a href="#lets-create-a-better-name-function" id="toc-lets-create-a-better-name-function" class="nav-link active" data-scroll-target="#lets-create-a-better-name-function"><span class="header-section-number">11.1</span> Let’s create a better name function</a></li>
+  <li><a href="#conditional-statements" id="toc-conditional-statements" class="nav-link" data-scroll-target="#conditional-statements"><span class="header-section-number">11.2</span> Conditional statements</a>
   <ul class="collapse">
   <li><a href="#make-middle-initial-test" id="toc-make-middle-initial-test" class="nav-link" data-scroll-target="#make-middle-initial-test"><span class="header-section-number">11.2.1</span> Make middle initial test</a></li>
   <li><a href="#add-period-if-true" id="toc-add-period-if-true" class="nav-link" data-scroll-target="#add-period-if-true"><span class="header-section-number">11.2.2</span> Add period if true</a></li>
@@ -510,21 +510,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p>Now that we have a handle on how functions can work, we’re going to have our functions make decisions based on values we’ve given it.</p>
-<section id="conditional-statements" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="conditional-statements"><span class="header-section-number">11.1</span> Conditional statements</h2>
-<p>With JavaScript we can perform tests and make decisions based on the results of the test. There are <a href="https://www.w3schools.com/js/js_if_else.asp">three types</a>, in order of complexity:</p>
-<ul>
-<li>An <code>if</code> statement allows us to perform an action if the test is true.</li>
-<li>An <code>else</code> statement allows us to add an action if the test is false.</li>
-<li>An <code>else if</code> statement allow us to perform a new test if the first <code>if</code> is false.</li>
-</ul>
-<p>There is also <code>switch</code>, but we’re not going to cover that here.</p>
-</section>
-<section id="lets-create-a-better-name-function" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="lets-create-a-better-name-function"><span class="header-section-number">11.2</span> Let’s create a better name function</h2>
+<section id="lets-create-a-better-name-function" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="lets-create-a-better-name-function"><span class="header-section-number">11.1</span> Let’s create a better name function</h2>
 <p>Let’s take our <code>makeName</code> function we made before and make it mo betta.</p>
 <p>As you recall, our previous function would take three names and put them together and return a full name. What if our user only gave us their middle initial? Then we would have returns like “Arthur C Clarke”.</p>
-<p>How might we test if the middle name is an initial? And then what might we do if that test is true? If our middle name is only one character, then it would be an initial, right?</p>
+<p>How might we test if the middle name is an initial? And then what might we do if that test is true? If our middle name is only one character, then it would be an initial, right? And if we know it is an initial, then we can add a period to it.</p>
 <p>JavaScript strings have a special property called <code>.length</code>. We’ll learn more about properties (and methods) in our next chapter, but know that we can get the number of characters in a string by appending the <code>.length</code> property, so <code>middleName.length</code> will return the number of characters in <code>middleName</code>.</p>
 <p>We’ll use this special property to test if our middle name has only one character, and then add a period if it does.</p>
 <p>We’ll start by building our base function, then we’ll build on it to make it better.</p>
@@ -552,6 +542,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol start="6" type="1">
 <li>Save your code and refresh your page so you can see the name. “John F Kennedy” needs the period after the initial, which we’ll tackle with an <code>if</code> statement.</li>
 </ol>
+</section>
+<section id="conditional-statements" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="conditional-statements"><span class="header-section-number">11.2</span> Conditional statements</h2>
+<p>With JavaScript we can perform tests and make decisions based on the results of the test. There are <a href="https://www.w3schools.com/js/js_if_else.asp">three types</a>, in order of complexity:</p>
+<ul>
+<li>An <code>if</code> statement allows us to perform an action if the test is true.</li>
+<li>An <code>else</code> statement allows us to add an action if the test is false.</li>
+<li>An <code>else if</code> statement allow us to perform a new test if the first <code>if</code> is false.</li>
+</ul>
+<p>There is also <code>switch</code>, but we’re not going to cover that here.</p>
 <section id="make-middle-initial-test" class="level3" data-number="11.2.1">
 <h3 data-number="11.2.1" class="anchored" data-anchor-id="make-middle-initial-test"><span class="header-section-number">11.2.1</span> Make middle initial test</h3>
 <p>To figure out if our <code>middleName</code> object is a single letter we can test its <code>.length</code> property. We’ll use an <code>if</code> to do this test. Let’s talk about how those work in JavaScript. Written in one line, the logic works like this:</p>
