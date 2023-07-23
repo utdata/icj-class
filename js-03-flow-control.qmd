@@ -2,23 +2,13 @@
 
 Now that we have a handle on how functions can work, we're going to have our functions make decisions based on values we've given it.
 
-## Conditional statements
-
-With JavaScript we can perform tests and make decisions based on the results of the test. There are [three types](https://www.w3schools.com/js/js_if_else.asp), in order of complexity:
-
-- An `if` statement allows us to perform an action if the test is true.
-- An `else` statement allows us to add an action if the test is false.
-- An `else if` statement allow us to perform a new test if the first `if` is false.
-
-There is also `switch`, but we're not going to cover that here.
-
 ## Let's create a better name function
 
 Let's take our `makeName` function we made before and make it mo betta.
 
 As you recall, our previous function would take three names and put them together and return a full name. What if our user only gave us their middle initial? Then we would have returns like "Arthur C Clarke".
 
-How might we test if the middle name is an initial? And then what might we do if that test is true? If our middle name is only one character, then it would be an initial, right?
+How might we test if the middle name is an initial? And then what might we do if that test is true? If our middle name is only one character, then it would be an initial, right? And if we know it is an initial, then we can add a period to it.
 
 JavaScript strings have a special property called `.length`. We'll learn more about properties (and methods) in our next chapter, but know that we can get the number of characters in a string by appending the `.length` property, so `middleName.length` will return the number of characters in `middleName`.
 
@@ -54,6 +44,17 @@ console.log(makeBetterName("John", "F", "Kennedy"));
 ```
 
 6. Save your code and refresh your page so you can see the name. "John F Kennedy" needs the period after the initial, which we'll tackle with an `if` statement.
+
+## Conditional statements
+
+With JavaScript we can perform tests and make decisions based on the results of the test. There are [three types](https://www.w3schools.com/js/js_if_else.asp), in order of complexity:
+
+- An `if` statement allows us to perform an action if the test is true.
+- An `else` statement allows us to add an action if the test is false.
+- An `else if` statement allow us to perform a new test if the first `if` is false.
+
+There is also `switch`, but we're not going to cover that here.
+
 
 ### Make middle initial test
 
