@@ -20,7 +20,7 @@ JavaScript Objects can also have [**methods**](https://www.w3schools.com/js/js_o
 var person = {
   firstName: "Christian",
   lastName: "McDonald",
-  age: "53",
+  age: "56",
   fullName : function() {
     return this.firstName + " " + this.lastName;
   }

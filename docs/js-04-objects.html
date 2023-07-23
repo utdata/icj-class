@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Coding for Journalists - 11&nbsp; JS Objects</title>
+<title>Intro to Coding for Journalists - 12&nbsp; JS Objects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./js-04-flow-control.html" rel="next">
-<link href="./js-02-functions.html" rel="prev">
+<link href="./js-05-html.html" rel="next">
+<link href="./js-03-flow-control.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -109,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-03-objects.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Objects</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-04-objects.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Objects</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -250,14 +250,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-03-objects.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
+  <a href="./js-03-flow-control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-04-flow-control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
+  <a href="./js-04-objects.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -478,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#html-elements-are-javascript-objects" id="toc-html-elements-are-javascript-objects" class="nav-link active" data-scroll-target="#html-elements-are-javascript-objects"><span class="header-section-number">11.1</span> HTML elements are JavaScript Objects</a></li>
+  <li><a href="#html-elements-are-javascript-objects" id="toc-html-elements-are-javascript-objects" class="nav-link active" data-scroll-target="#html-elements-are-javascript-objects"><span class="header-section-number">12.1</span> HTML elements are JavaScript Objects</a></li>
   </ul>
 </nav>
     </div>
@@ -487,7 +487,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Objects</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Objects</span></h1>
 </div>
 
 
@@ -514,15 +514,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> person <span class="op">=</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">firstName</span><span class="op">:</span> <span class="st">"Christian"</span><span class="op">,</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">lastName</span><span class="op">:</span> <span class="st">"McDonald"</span><span class="op">,</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">age</span><span class="op">:</span> <span class="st">"53"</span><span class="op">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">age</span><span class="op">:</span> <span class="st">"56"</span><span class="op">,</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">fullName</span> <span class="op">:</span> <span class="kw">function</span>() {</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">firstName</span> <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> <span class="kw">this</span><span class="op">.</span><span class="at">lastName</span><span class="op">;</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>To access a <strong>property</strong> of a JavaScript object, we follow the object with <code>.</code> and the name of the property: <code>person.firstName</code> gives us “Christian”.</p>
 <p>To use a <strong>method</strong> of a JavaScript object we also follow the object with a <code>.</code> and the method name, but we have to follow the method with parenthesis: <code>person.fullName()</code> would give us “Christian McDonald”.</p>
-<section id="html-elements-are-javascript-objects" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="html-elements-are-javascript-objects"><span class="header-section-number">11.1</span> HTML elements are JavaScript Objects</h2>
+<section id="html-elements-are-javascript-objects" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="html-elements-are-javascript-objects"><span class="header-section-number">12.1</span> HTML elements are JavaScript Objects</h2>
 <p>Thanks to something called the <a href="https://www.w3schools.com/js/js_htmldom.asp">Document Object Model</a> (or DOM, for short) JavaScript considers every HTML element on a web page a JavaScript <strong>Object</strong> and it has some baked-in properties and methods. (The properties and methods vary based on object type: string vs number vs date, etc.) This means we can access the <strong>properties</strong> of each HTML element and we can act on them through <strong>methods</strong>.</p>
 <p>We’ll use these baked-in properties and methods in our next lesson.</p>
 <p>We’ll use a <strong>method</strong> to find specific objects on the page to discover it’s properties. We’ll then make decisions based on those properties and then use another <strong>method</strong> to change that HTML object.</p>
@@ -766,13 +766,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./js-02-functions.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">JS Functions</span></span>
+      <a href="./js-03-flow-control.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Flow control</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./js-04-flow-control.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Flow control</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./js-05-html.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS with html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

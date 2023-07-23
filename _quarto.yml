@@ -29,8 +29,8 @@ book:
       chapters: 
         - js-01-basics.qmd
         - js-02-functions.qmd
-        - js-03-objects.qmd
-        - js-04-flow-control.qmd
+        - js-03-flow-control.qmd
+        - js-04-objects.qmd
         - js-05-html.qmd
         - js-06-datatables.qmd
     - setup-02-node.qmd

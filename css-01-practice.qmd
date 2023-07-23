@@ -469,7 +469,7 @@ OK, now that we know we have targeted the right items, we can add styles to add 
 (Again, you might do them one at a time to see what they do.)
 
 ```css
-  margin-right: 10px;
+  margin-right: 20px;
 ```
 
 5. And now you can remove the `background-color` rule.
@@ -486,7 +486,6 @@ footer {
   clear: both;
   text-align: center;
   margin-top: 140px;
-  margin-bottom: 30px;
 }
 
 footer p {

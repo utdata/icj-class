@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./js-06-datatables.html" rel="next">
-<link href="./js-04-flow-control.html" rel="prev">
+<link href="./js-04-objects.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -250,14 +250,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-03-objects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
+  <a href="./js-03-flow-control.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./js-04-flow-control.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
+  <a href="./js-04-objects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -592,16 +592,11 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <h3 data-number="13.5.1" class="anchored" data-anchor-id="getelementbyid"><span class="header-section-number">13.5.1</span> getElementById</h3>
 <p>Using the <a href="https://www.w3schools.com/js/js_htmldom_elements.asp">Document Object Model</a>, we can find any named element on our HTML page. Once we “have” that object, we can find its various properties, like how long it is, or the contents of the tag, etc.</p>
 <p>The easiest way to do this is with <code>document.getElementByID("id_name_here")</code>. Once we “have” the element, we can access its properties and methods. Using this, we can “get” the contents of the forms and put them into variables in our function.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>If time: It might be worth showing in class how to use the Console to test how to access the DOM using <code>document.getElementById("nameForm").first.value</code>.</p>
-</div>
-</div>
-</div>
+<!-- 
+::: callout
+If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`.
+:::
+-->
 <ol type="1">
 <li>In our <code>makeBetterName()</code> function, remove the three arguments inside the parenthesis.</li>
 <li>Add the following three lines inside the function before the IF in your <code>makeBetterName</code> function:</li>
@@ -890,8 +885,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./js-04-flow-control.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Flow control</span></span>
+      <a href="./js-04-objects.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Objects</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

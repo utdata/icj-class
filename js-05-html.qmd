@@ -82,10 +82,11 @@ Using the [Document Object Model](https://www.w3schools.com/js/js_htmldom_elemen
 
 The easiest way to do this is with `document.getElementByID("id_name_here")`. Once we "have" the element, we can access its properties and methods. Using this, we can "get" the contents of the forms and put them into variables in our function.
 
+<!-- 
 ::: callout
 If time: It might be worth showing in class how to use the Console to test how to access the DOM using `document.getElementById("nameForm").first.value`.
 :::
-
+-->
 
 1. In our `makeBetterName()` function, remove the three arguments inside the parenthesis.
 1. Add the following three lines inside the function before the IF in your `makeBetterName` function:
