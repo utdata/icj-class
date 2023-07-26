@@ -19,7 +19,7 @@ You can see the chapter breakdown, but the book is more or less structured like 
 - HTML: The skeleton of the web
 - CSS: The skin of the web
 - JavaScript: The muscles of the web
-- SASS: Better web skins
+- Sass: Better web skins
 - Bootstrap: OMG, the web solved
 - Static apps: HFS, I can make it
 
