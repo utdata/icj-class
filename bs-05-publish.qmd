@@ -1,4 +1,4 @@
-# Publishing to Github Pages
+# Publishing
 
 As we covered in our last chapter, Github has a way that we can publish static web pages to the web, for free, using [Github Pages](https://pages.github.com/). While it is not intended for commercial use, it is sufficient and appropriate for our class. There is a _soft_ 100GB limit per month. If you exceed that, you'll get a polite email from Github suggesting better ways to handle your traffic. Consider that a lovely problem to have because 100GB is quite a lot.
 

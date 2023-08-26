@@ -59,6 +59,7 @@ book:
   appendices:
     - a-google-fonts.qmd
     - a-project.qmd
+    - a-fetch-problems.qmd
     - a-macos-shell.qmd
     - a-bash-files.qmd
     - a-bash-commands.qmd

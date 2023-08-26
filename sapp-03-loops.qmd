@@ -4,8 +4,8 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 
 ## Create a new page
 
-- Create a new page inside `src/njk/` called `pirate-ships.njk`.
-- Add the following code:
+1. Create a new page inside `src/` called `pirate-ships.njk`.
+2. Add the following code:
 
 ```html
 {% extends '_templates/base.njk' %}
@@ -18,7 +18,7 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 {% endblock %}
 ```
 
-- Save the file and then test your navigation link to make sure it works. If it doesn't, make sure you created the new file in the right folder. It should be right next to `index.njk`.
+3. Save the file and then test your navigation link to make sure it works. If it doesn't, make sure you created the new file in the right folder. It should be right next to `index.njk`.
 
 ## Let's add some data
 
@@ -32,8 +32,8 @@ Our next trick is to tell our project here to download that data and format it i
 
 Here we will "tell" this project about the Google Sheet.
 
-- Open the file in your project called `project.config.json`.
-- After the closing `}` on line 12, we are going to add the following code:
+1. Open the file in your project called `project.config.json`.
+2. After the closing `}` on line 12, we are going to add the following code:
 
 ```json
 ,
@@ -52,13 +52,16 @@ What we've done here is add to a "files" array in this JSON config file. This is
 
 Before we can download the data we have to stop our browsersync process and run a new one to fetch our data.
 
-- Go to your Terminal and do Control-C to stop the browsersync.
-- Run `gulp fetch`. "gulp" is our command and "fetch" is our task.
-- The result of the command should download three files. (Two were already in the config  -- library & bookstores -- and we just added the new one "pirates".)
+3. Go to your Terminal and do Control-C to stop the browsersync.
+4. Run `gulp fetch`. "gulp" is our command and "fetch" is our task.
 
-This downloaded all the files to the `src/data/` folder.
+The result of the command should download three files. (Two were already in the config  -- library & bookstores -- and we just added the new one "pirates".)
 
-> If you have a problem with `gulp fetch` and get an error, you can use [these steps](a-fetch-problems.qmd) to download the data. Do that and then move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
+This downloaded all the files to the `src/_data/` folder.
+
+::: callout-tip
+If you have a problem with `gulp fetch` and get an error, you can use [these steps](a-fetch-problems.qmd) to download the data. Do that and then move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
+:::
 
 Go ahead and open the files at `src/data/pirates.json` and peek at it. Here is just a snippet:
 
@@ -87,9 +90,9 @@ The key here is that we have downloaded this data, once we restart our dev envir
 
 It's probably easier to do it than explain it.
 
-- Restart `gulp dev`.
-- Go into your `src/njk/pirate-ships.njk` file.
-- After our `<p>` tag in the intro, add a new line and add this:
+5. Restart `gulp dev`.
+7. Go into your `src/pirate-ships.njk` file.
+8. After our `<p>` tag in the intro, add a new line and add this:
 
 ```html
 <h3>{{ pirates.ships[0].ship_name }}</h3>
@@ -105,12 +108,12 @@ So now we have a list of pirate ships in our project "context" and can build a c
 
 ## Loops with data
 
-Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.1/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/5.1/components/card/#using-grid-markup).
+Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup).
 
-- Go to the [Using grid markup](https://getbootstrap.com/docs/5.1/components/card/#using-grid-markup) section in the docs and copy the code provided there.
-- After the closing `</p>` tag for the intro, add a new line.
-- Paste your code. This already has the row and columns we need.
-- Save your file and look at your page.
+1. Go to the [Using grid markup](https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup) section in the docs and copy the code provided there.
+2. After the closing `</p>` tag for the intro, add a new line.
+3. Paste your code. This already has the row and columns we need.
+4. Save your file and look at your page.
 
 It should look like this:
 
@@ -124,17 +127,18 @@ Our Nunjucks templating system allows for loops like this because it is written 
 
 We're going to remove one of our new column/cards, but then set the remaining one to draw for each new ship in our data.
 
-- In the cards code, remove the one of the col/cards. It starts with `<div class="col-sm-6">` and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.
-- Add a new line _after_ the closing of the `<div class="row">` line.
-- Add the following to the new line: `{% for ship in pirates.ships %}`
-- Add a new line right _above_ the closing `</div>` for the row.
-- Add the following to the new line: `{% endfor %}`
+5. In the cards code, remove the one of the col/cards. It starts with `<div class="col-sm-6">` and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.
+1. Add a new line _after_ the closing of the `<div class="row">` line.
+1. Add the following to the new line: `{% for ship in pirates.ships %}`
+1. Add a new line right _above_ the closing `</div>` for the row.
+1. Add the following to the new line: `{% endfor %}`
+1. Save your file and go look at your page.
 
-That code should look like this:
+That code should look like this, and descriptions follow:
 
 ```html
   <div class="row">
-    {% for ship in pirates.ships %}
+    {% for ship in pirates.ships %} # <1>
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
@@ -148,8 +152,6 @@ That code should look like this:
   </div>
 ```
 
-- Save your file and go look at your page.
-
 Now you have eight cards! Let's break down what we've done here.
 
 Let's take this line: `{% for ship in pirates.ships %}`
@@ -158,30 +160,27 @@ Let's take this line: `{% for ship in pirates.ships %}`
 - `for` means we are starting the loop.
 - `ship` is what we are calling a single pass through the data. We are "naming" that single item as a "ship" so we can refer later to key values in that row of data. We can use any word we want, but I always use a term logical to the data. We are looping through a bunch of ships, so a single one of those is a single "ship".
 - `in pirates.ships` is defining which array we are looping through. The "pirates" part is the file we are looking in, and "ships" is the name of the array inside that file.
-
-Everything after that will get repeated until we reach:
-
-`(% endfor %)`
-
-which says STOP REPEATING.
+- Everything after that will get repeated until we reach `(% endfor %)` which says STOP REPEATING.
 
 ### Update the headline
 
 At this point you are thinking "That's cool, Prof, but they are all the same." Well, remember when I showed above that we can call data from an array? We'll do that next, except we don't have to specify the order from the array since we've named the current pass as a "ship". We are now going to call that data in our loop.
 
-- For the headline in the `<h5>` text, replace "Special title treatment" with this: `{{ ship.ship_name }}`
-- Save your file and go look at your page. Now you have a new ship name in each card.
+1. For the headline in the `<h5>` text, replace "Special title treatment" with this: `{{ ship.ship_name }}`
+2. Save your file and go look at your page. Now you have a new ship name in each card.
 
 To call a variable from our data, we use the double curly-brace: `{{ }}`. (This is opposed to `{% %}` which does other things).
 
 Since we named a single item a "ship" we use that, and then use the dot notation to call the object key : `{{ ship.ship_name }}`. I like to put spaces around the names for readability, but it is not required.
 
+OK, now admit that's kinda cool, right?
+
 ### Update the blurb
 
 If we look at our example JSON, we see the key for the description of the ship is called a `blurb`. So we can use the same style to replace the text in our code with the new value.
 
-- Go into the code and replace the text inside the `<p>` tag with: `{{ ship.blurb }}`
-- Save and check your page.
+1. Go into the code and replace the text inside the `<p>` tag with: `{{ ship.blurb }}`
+2. Save and check your page.
 
 Now you should be showing the description of each ship after the name of the ship.
 
@@ -189,19 +188,19 @@ Now you should be showing the description of each ship after the name of the shi
 
 We have these big buttons that look like they could be a link to somewhere, which would be perfect to use to link to the webpage with more information about our ship. We'll modify those next to add the URL, change the text and change the button display to a simple link.
 
-- Go into the `href` of the button and replace the `#` with: `{{ ship.source }}`. This is the URL in our data that is the website where we got the info. We are inserting it into an href.
-- Remove the `class="btn btn-primary"` as that is what make the link into a button. (Which is cool, but we don't need to draw that much attention to our source link.)
-- Replace the text "Go somewhere" with simply "Source".
-- Inside the `href` element, and an attribute to open the link in a new page: `target="_blank"`.
-- Save your file and go check your page and make sure the links work properly.
+1. Go into the `href` of the button and replace the `#` with: `{{ ship.source }}`. This is the URL in our data that is the website where we got the info. We are inserting it into an href.
+1. Remove the `class="btn btn-primary"` as that is what make the link into a button. (Which is cool, but we don't need to draw that much attention to our source link.)
+1. Replace the text "Go somewhere" with simply "Source".
+1. Inside the `href` element, and an attribute to open the link in a new page: `target="_blank"`.
+1. Save your file and go check your page and make sure the links work properly.
 
 ### Adding the captain
 
 The last thing we need is to add our captain into the card. We don't have an HTML element to update from our Bootstrap code, so we'll just add our own.
 
-- Add a new line after the `<h5>` line.
-- Add an `<h6>` and fill it with the code necessary to display the captain's name. Refer to the JSON example above to figure out what the key value is.
-- Save and check.
+1. After the  `<h5>` line, add a new blank line.
+2. In that new line, add an `<h6>` and fill it with the code necessary to display the captain's name. Refer to the JSON example above to figure out what the key value is.
+3. Save and check.
 
 ### Adjusting columns for breakpoints
 
@@ -209,14 +208,14 @@ The cards example we pulled from the Bootstrap docs has just one column breakpoi
 
 Remember, we are working with a 12 column grid. When we set `col-sm-6` that means that each card takes up six columns, which gives us the two cards. If at the large size we want three to a row, then we would want each card to take **four** columns. (12 / 3 = 4).
 
-- On the line that has `<div class="col-sm-6">`, add another class `col-lg-4` so it looks like this: `<div class="col-sm-6 col-lg-4">`
-- Save your file and look at your page.
-- Change the width of your browser from wide to very small and watch the columns change.
-  - Remember another way to do this is to use the Inspector. Get the inspector, then click the little "mobile" icon and controls to show different types of mobile devices.
+1. On the line that has `<div class="col-sm-6">`, add another class `col-lg-4` so it looks like this: `<div class="col-sm-6 col-lg-4">`
+2. Save your file and look at your page.
+3. Change the width of your browser from wide to very small and watch the columns change.
+    - Remember another way to do this is to use the Inspector. Get the inspector, then click the little "mobile" icon and controls to show different types of mobile devices.
 
 ## Fix some display nits
 
-We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/5.1/utilities/spacing/).
+We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/5.3/utilities/spacing/).
 
-- On the `class="card"` div, add another class so it is `class="card mb-4"`. We did the same thing in our Bootstrap lesson. `m` is margin, `b` is bottom and `4` is a value between 1-5.
-- Save and check that you have vertical space between the cards.
+1. On the `class="card"` div, add another class so it is `class="card mb-4"`. We did the same thing in our Bootstrap lesson. `m` is margin, `b` is bottom and `4` is a value between 1-5.
+1. Save and check that you have vertical space between the cards.

@@ -1,4 +1,4 @@
-# Bootstrap homework assignment
+# Bootstrap mastery
 
 You are going to build a three-page project using a Bootstrap development rig. There are screenshots of what I'm looking for at the bottom of this document. (You might peek at it real quick before moving on.)
 
