@@ -1,9 +1,5 @@
 # Static apps intro
 
-::: callout
-In middle of rewrite.
-:::
-
 ## Building up to the static-generator app
 
 Throughout this semester we've been building your coding skills, adding a new language or tool each week. For each of the three core technologies, HTML, CSS and JavaScript, we've enhanced the base language with tools or systems to make them more efficient to use.

@@ -24,13 +24,17 @@ Here's how it works. We'll work through it one step at at time:
 
 There is a [Library books data Google Doc](https://docs.google.com/document/d/1RgMhjtkXlbbf9uzSzy_xPRKwxcVZIZqVytgM_JoU4E4/edit?usp=sharing) that is viewable to the public.
 
-Take a look at how that doc is structured. It uses a "language" called [ArchieML](http://archieml.org/) developed by the New York Times. It allows authors to create structured text in a Google Doc and for that content to be converted into JSON for projects like this. It's not particularly hard to use (it was created for reporters, after all) but it takes some getting used to.
+Take a look at how that doc is structured. It uses a "language" called [ArchieML](http://archieml.org/) developed by the New York Times. It allows authors to create structured text in a Google Doc and for that content to be converted into JSON, which is the "data format" for JavaScript. It's not particularly hard to use (it was created for reporters, after all) but it takes some getting used to.
 
-At the top we have `[books]`, which is naming our array.
+![ArchieML example](images/sapp-archiml-example.png)
 
-Then each group of stuff is a new entry in our data. Each line starts with a `key:` and then is followed by a value. The values even support links that get converted to hrefs in our final product.
+- At the top we have `[books]`, which is names our array. (An "array" is a collection of data.)
+- Then each group of lines listed here becomes new entry in our data. Each line starts with a `key:` and then is followed by a value. The values even support links that get converted to hrefs in our final product.
 
-> The second page of the Google Doc has some others examples of structured data, but we'll skip those for now. Just know they are there.
+
+::: callout-note
+The second page of the Google Doc has some others examples of structured data, but we'll skip those for now. Just know they are there.
+::: 
 
 This document is downloaded as data into our project when we run `gulp fetch`. It is "configured" in the `project.config.json` file where we earlier added our pirate ships Google Sheets data.
 
@@ -38,11 +42,17 @@ In the `project.config.json` the only difference in using a sheet vs doc is `"ty
 
 ### Peek at the data
 
-- Go ahead and open `src/data/library.json`.
+1. Go ahead and open `src/data/library.json`.
 
 You'll see the `books` array near the top. That's the only one we are worried about here, but you'll also see the other example arrays there.
 
-> As an aside: You can use any properly-formatted `.json` file in a project as long as it is in the `src/data` folder; it doesn't have to come from a Google Doc or Sheet. It's just a nice convenience because of the shared editing features that Google gives you.
+![Data example](images/sapp-json-example.png)
+
+Note how the key names and values match the ArchieML document example above.
+
+::: callout-note
+You can use any properly-formatted `.json` file in this project template as long as it is in the `src/_data` folder; it doesn't have to come from a Google Doc or Sheet. Those Google services just give us an easier way to share and edit our data.
+:::
 
 ### The bake template
 
@@ -50,7 +60,7 @@ OK, so we understand the data, but how are we using it?
 
 The baking feature in the project needs three things: The data (got it!), a template to build the pages from, and a configuration to match the data to the template.
 
-- Open up our example template in `src/njk/_templates/bake-book.njk`.
+1. Open up our example template in `src/_templates/bake-book.njk` so you can review it.
 
 The first line `{% extends '_templates/base.njk' %}` gives us the structure of our site. We've seen that before.
 
@@ -78,7 +88,7 @@ If you open our `project.config.json` back up and look at the array called `"to_
   ]
 ```
 
-- **`template`** is the name of the template file stored in `src/njk/_templates` that will be used to build the pages. Note you don't need the extension in name.
+- **`template`** is the name of the template file stored in `src/_templates` that will be used to build the pages. Note you don't need the extension in name.
 - **`data`** is the name of the data file to build from. You don't need `.json` in the name.
 - **`array`** is the name of the array you are using from the JSON file.
 - **`slug`** is a key required from the data that will become the filename of each file created. The field used in the data needs to be in a URL-friendly format with all lowercase letters with dashes instead of spaces.
