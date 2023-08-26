@@ -2,11 +2,15 @@
 
 Your goal with this final project is to create a multi-page website using the [icj-project-rig](https://github.com/utdata/icj-project-rig) that has an index and multiple detail pages. It will be published through Github Pages.
 
-I am supplying you with two ideas to choose from, each with its own collection of assets. (Or you may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material. Talk with me if you want to go this route.)
+You can choose your own project and content as long as you meet the assignment requirements and all the photos and content you use are public domain material. Talk with me if you want to go this route.
+
+Or, there are two pre-set projects you can choose from, each with its own collection of assets. Going this route saves you the time and hassle of finding photos and making your own data.
 
 Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.
 
-> Read all the directions completely before you start coding anything. Here are also the [slides from the design and tips lecture](https://docs.google.com/presentation/d/1hZqA9K4fYotAJFZi5T8ZXie_9eUW0odbYtKZwsxCImw/edit?usp=sharing).
+::: callout-warning
+Read all the directions completely before you start coding anything. Here are also the [slides from the design and tips lecture](https://docs.google.com/presentation/d/1hZqA9K4fYotAJFZi5T8ZXie_9eUW0odbYtKZwsxCImw/edit?usp=sharing).
+:::
 
 ## Requirements
 
@@ -16,22 +20,20 @@ The project should include:
 - A base layout that is extended throughout the project.
 - At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer includes already present.
 - The project must use the following Bootstrap components and concepts:
-  - Responsive design and [images](https://getbootstrap.com/docs/5.1/content/images/) used throughout.
+  - Responsive design and [images](https://getbootstrap.com/docs/5.3/content/images/) used throughout.
   - A hero display header that includes a background image. (At least on the index.)
-  - A [Navbar](https://getbootstrap.com/docs/5.1/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
+  - A [Navbar](https://getbootstrap.com/docs/5.3/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
 - You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the examples already in the project.
 - You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](a-google-fonts.qmd).)
-- **Remove any unused files** related to the example book and bookstore pages.
+- **Remove any unused files** related to the example book pages.
 - This project should be in its own repo with the site published through Github Pages.
-
-Everything should look beautiful and be functional. You should not need any additional content beyond that provided in the assets collection. If you choose to use additional content, it should be public domain and include a link to the source.
 
 ### Index page
 
 In addition to the basic site structure, the index should have:
 
 - A short description of the website. You can write this yourself or pull from public domain content and link back to the source.
-- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do use Bootstrap [Cards](https://getbootstrap.com/docs/5.1/components/card/) or your own HTML design as long as you use the images and data in a Nunjucks loop.
+- A "tease" to each of the "baked" detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page.  You could do use Bootstrap [Cards](https://getbootstrap.com/docs/5.3/components/card/) or your own HTML design as long as you use the images and data in a Nunjucks loop.
 
 ### "Baked" detail pages
 
@@ -46,14 +48,16 @@ You can otherwise design the above however you wish.
 
 ### Additional content loop
 
-In addition to data for the "baked" detail pages, there is at least one other data set available for each project. You must build a display (either a stand-alone page or an include inserted into the index) that uses all the elements from the additional data.
+In addition to data for the "baked" detail pages, there should be at least one other data used in each project. You must build a display (either a stand-alone page or an include inserted into the index) that uses all the elements from the additional data.
 
-You are required to use a Nunjucks loop in the construction of the page or include.
+You are required to use a Nunjucks loop in the construction of this page or include.
 
 ### Extra credit options
 
-- Each asset collection includes data for use in a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/). You can build the table on a stand-alone page or pull into another through an include.
+- The pre-set projects include data that coudl be used in a [responsive table](https://www.w3schools.com/bootstrap/bootstrap_tables.asp) or a [data table](https://datatables.net/). You can build the table on a stand-alone page or pull into another through an include.
 - Some asset collections have an option for an interactive chart or feature. Details in the collections descriptions.
+
+If you are doing your own project and have a similar type idea for extra credit, talk to your instructor.
 
 ## Available assets collections
 
@@ -61,7 +65,7 @@ You are required to use a Nunjucks loop in the construction of the page or inclu
 
 This idea is to build a website for the band Queen using the original members and studio albums.
 
-- A collection of photos in the [img-queen.zip](img-queen.zip) file. Go to that page and download the zip file, expand it and put the images inside your `src/img/` folder. There are three collections of photos:
+- A collection of photos in the <i class="bi bi-download"></i> [img-queen.zip](img-queen.zip){download="img-queen.zip"} archive. There are three collections of photos you'll want to put in the `src/img` folder:
   - Band photos
   - Band members
   - Album covers
@@ -77,7 +81,7 @@ This idea is to build a website for the band Queen using the original members an
 
 This idea is to build a tourism microsite similar to what a local news organization might do.
 
-- A collection of photos in [img-austin.zip](img-austin.zip). Open that link and then download the zip file, expand it and put the images inside your `src/img/` folder. There are three sets of photos:
+- A collection of photos in <i class="bi bi-download"></i> [img-austin.zip](img-austin.zip){download="img-austin.zip"} archive. There are three collections of photos you'll want to put in the `src/img` folder:
   - Austin wallpaper photos and logos
   - Landmarks
   - Restaurants
@@ -94,8 +98,6 @@ This idea is to build a tourism microsite similar to what a local news organizat
 ### Downloading data from Google Drive
 
 See the [icj-project-rig README](https://github.com/utdata/icj-project-rig#using-data-from-google-drive) section on "Using data from Google Drive" to see how to configure and download the data from the Google Sheets or Docs.
-
-> Remember to restart gulp after installing the photos or data.
 
 ## Strategies on how to tackle a project
 
@@ -125,7 +127,7 @@ Canvas is the final word on deadlines, but in general they are in this order:
 
 On your index, you should use a Nunjucks `{% for thing in file_name.array_name %}` loop like the books example to create your teases to your detail pages. You should use a similar loop for "additional content" loop.
 
-A strategy to use is to figure how you want the multiple elements to look, then figure out the part of that code that repeats over and over. Your loop should go around that part, then use the data variables to fill in the content.
+A strategy to use is this: Before you add loop logic, figure how you want the multiple elements to look, then figure out the part of that code that repeats over and over. Your loop should go around that part, then use the data variables to fill in the content.
 
 ### Creating the "baked" pages
 

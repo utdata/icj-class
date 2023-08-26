@@ -495,11 +495,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Your goal with this final project is to create a multi-page website using the <a href="https://github.com/utdata/icj-project-rig">icj-project-rig</a> that has an index and multiple detail pages. It will be published through Github Pages.</p>
-<p>I am supplying you with two ideas to choose from, each with its own collection of assets. (Or you may choose a different subject as long as you meet the assignment requirements and all the photos and content you use are public domain material. Talk with me if you want to go this route.)</p>
+<p>You can choose your own project and content as long as you meet the assignment requirements and all the photos and content you use are public domain material. Talk with me if you want to go this route.</p>
+<p>Or, there are two pre-set projects you can choose from, each with its own collection of assets. Going this route saves you the time and hassle of finding photos and making your own data.</p>
 <p>Your site should be pretty and well-designed. Your code should also be clean, with proper indenting for parent-child related items. Believe me, you will thank me later.</p>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Read all the directions completely before you start coding anything. Here are also the <a href="https://docs.google.com/presentation/d/1hZqA9K4fYotAJFZi5T8ZXie_9eUW0odbYtKZwsxCImw/edit?usp=sharing">slides from the design and tips lecture</a>.</p>
-</blockquote>
+</div>
+</div>
 <section id="requirements" class="level2" data-number="30.1">
 <h2 data-number="30.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">30.1</span> Requirements</h2>
 <p>The project should include:</p>
@@ -509,22 +520,21 @@ ul.task-list li input[type="checkbox"] {
 <li>At least one new Nunjucks include that is used in another layout. (A good project will have several.) This is beyond the nav and footer includes already present.</li>
 <li>The project must use the following Bootstrap components and concepts:
 <ul>
-<li>Responsive design and <a href="https://getbootstrap.com/docs/5.1/content/images/">images</a> used throughout.</li>
+<li>Responsive design and <a href="https://getbootstrap.com/docs/5.3/content/images/">images</a> used throughout.</li>
 <li>A hero display header that includes a background image. (At least on the index.)</li>
-<li>A <a href="https://getbootstrap.com/docs/5.1/components/navbar/">Navbar</a> that links to detail pages based on a loop from the data, in addition to any other pages you might have.</li>
+<li>A <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Navbar</a> that links to detail pages based on a loop from the data, in addition to any other pages you might have.</li>
 </ul></li>
 <li>You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the examples already in the project.</li>
 <li>You must use at least one <a href="https://fonts.google.com/">Google Font</a> somewhere. (<a href="./a-google-fonts.html">Here is help on how</a>.)</li>
-<li><strong>Remove any unused files</strong> related to the example book and bookstore pages.</li>
+<li><strong>Remove any unused files</strong> related to the example book pages.</li>
 <li>This project should be in its own repo with the site published through Github Pages.</li>
 </ul>
-<p>Everything should look beautiful and be functional. You should not need any additional content beyond that provided in the assets collection. If you choose to use additional content, it should be public domain and include a link to the source.</p>
 <section id="index-page" class="level3" data-number="30.1.1">
 <h3 data-number="30.1.1" class="anchored" data-anchor-id="index-page"><span class="header-section-number">30.1.1</span> Index page</h3>
 <p>In addition to the basic site structure, the index should have:</p>
 <ul>
 <li>A short description of the website. You can write this yourself or pull from public domain content and link back to the source.</li>
-<li>A “tease” to each of the “baked” detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page. You could do use Bootstrap <a href="https://getbootstrap.com/docs/5.1/components/card/">Cards</a> or your own HTML design as long as you use the images and data in a Nunjucks loop.</li>
+<li>A “tease” to each of the “baked” detail pages outlined below, built from data using a Nunjucks loop. The tease should include at least an image and link to the detail page. You could do use Bootstrap <a href="https://getbootstrap.com/docs/5.3/components/card/">Cards</a> or your own HTML design as long as you use the images and data in a Nunjucks loop.</li>
 </ul>
 </section>
 <section id="baked-detail-pages" class="level3" data-number="30.1.2">
@@ -539,15 +549,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="additional-content-loop" class="level3" data-number="30.1.3">
 <h3 data-number="30.1.3" class="anchored" data-anchor-id="additional-content-loop"><span class="header-section-number">30.1.3</span> Additional content loop</h3>
-<p>In addition to data for the “baked” detail pages, there is at least one other data set available for each project. You must build a display (either a stand-alone page or an include inserted into the index) that uses all the elements from the additional data.</p>
-<p>You are required to use a Nunjucks loop in the construction of the page or include.</p>
+<p>In addition to data for the “baked” detail pages, there should be at least one other data used in each project. You must build a display (either a stand-alone page or an include inserted into the index) that uses all the elements from the additional data.</p>
+<p>You are required to use a Nunjucks loop in the construction of this page or include.</p>
 </section>
 <section id="extra-credit-options" class="level3" data-number="30.1.4">
 <h3 data-number="30.1.4" class="anchored" data-anchor-id="extra-credit-options"><span class="header-section-number">30.1.4</span> Extra credit options</h3>
 <ul>
-<li>Each asset collection includes data for use in a <a href="https://www.w3schools.com/bootstrap/bootstrap_tables.asp">responsive table</a> or a <a href="https://datatables.net/">data table</a>. You can build the table on a stand-alone page or pull into another through an include.</li>
+<li>The pre-set projects include data that coudl be used in a <a href="https://www.w3schools.com/bootstrap/bootstrap_tables.asp">responsive table</a> or a <a href="https://datatables.net/">data table</a>. You can build the table on a stand-alone page or pull into another through an include.</li>
 <li>Some asset collections have an option for an interactive chart or feature. Details in the collections descriptions.</li>
 </ul>
+<p>If you are doing your own project and have a similar type idea for extra credit, talk to your instructor.</p>
 </section>
 </section>
 <section id="available-assets-collections" class="level2" data-number="30.2">
@@ -556,7 +567,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="30.2.1" class="anchored" data-anchor-id="queen-band-website"><span class="header-section-number">30.2.1</span> Queen band website</h3>
 <p>This idea is to build a website for the band Queen using the original members and studio albums.</p>
 <ul>
-<li>A collection of photos in the <a href="img-queen.zip">img-queen.zip</a> file. Go to that page and download the zip file, expand it and put the images inside your <code>src/img/</code> folder. There are three collections of photos:
+<li>A collection of photos in the <i class="bi bi-download"></i> <a href="img-queen.zip" download="img-queen.zip">img-queen.zip</a> archive. There are three collections of photos you’ll want to put in the <code>src/img</code> folder:
 <ul>
 <li>Band photos</li>
 <li>Band members</li>
@@ -579,7 +590,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="30.2.2" class="anchored" data-anchor-id="austin-tourism-site"><span class="header-section-number">30.2.2</span> Austin tourism site</h3>
 <p>This idea is to build a tourism microsite similar to what a local news organization might do.</p>
 <ul>
-<li>A collection of photos in <a href="img-austin.zip">img-austin.zip</a>. Open that link and then download the zip file, expand it and put the images inside your <code>src/img/</code> folder. There are three sets of photos:
+<li>A collection of photos in <i class="bi bi-download"></i> <a href="img-austin.zip" download="img-austin.zip">img-austin.zip</a> archive. There are three collections of photos you’ll want to put in the <code>src/img</code> folder:
 <ul>
 <li>Austin wallpaper photos and logos</li>
 <li>Landmarks</li>
@@ -605,9 +616,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="downloading-data-from-google-drive" class="level3" data-number="30.2.3">
 <h3 data-number="30.2.3" class="anchored" data-anchor-id="downloading-data-from-google-drive"><span class="header-section-number">30.2.3</span> Downloading data from Google Drive</h3>
 <p>See the <a href="https://github.com/utdata/icj-project-rig#using-data-from-google-drive">icj-project-rig README</a> section on “Using data from Google Drive” to see how to configure and download the data from the Google Sheets or Docs.</p>
-<blockquote class="blockquote">
-<p>Remember to restart gulp after installing the photos or data.</p>
-</blockquote>
 </section>
 </section>
 <section id="strategies-on-how-to-tackle-a-project" class="level2" data-number="30.3">
@@ -639,7 +647,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="loops" class="level3" data-number="30.5.1">
 <h3 data-number="30.5.1" class="anchored" data-anchor-id="loops"><span class="header-section-number">30.5.1</span> Loops</h3>
 <p>On your index, you should use a Nunjucks <code>{% for thing in file_name.array_name %}</code> loop like the books example to create your teases to your detail pages. You should use a similar loop for “additional content” loop.</p>
-<p>A strategy to use is to figure how you want the multiple elements to look, then figure out the part of that code that repeats over and over. Your loop should go around that part, then use the data variables to fill in the content.</p>
+<p>A strategy to use is this: Before you add loop logic, figure how you want the multiple elements to look, then figure out the part of that code that repeats over and over. Your loop should go around that part, then use the data variables to fill in the content.</p>
 </section>
 <section id="creating-the-baked-pages" class="level3" data-number="30.5.2">
 <h3 data-number="30.5.2" class="anchored" data-anchor-id="creating-the-baked-pages"><span class="header-section-number">30.5.2</span> Creating the “baked” pages</h3>
