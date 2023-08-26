@@ -875,6 +875,13 @@
     "text": "24.4 Understand the project structure\nThe README.md in the project template has details about how different features work. READ THE README. While the README file is in your project, you might find it easier to read the README online. We will also go over it in class (or through video)."
   },
   {
+    "objectID": "sapp-02-templates.html#page-previews",
+    "href": "sapp-02-templates.html#page-previews",
+    "title": "25  Templates and blocks",
+    "section": "25.1 Page previews",
+    "text": "25.1 Page previews\nHere are some screen shots of the finished product you are working toward.\n\nI’ll need to update these images!!\n\n\n\n\nIndex page\n\n\n\n\n\nPirate ship page\n\n\n\n\n\nEntry page example"
+  },
+  {
     "objectID": "sapp-02-templates.html#install-the-assets",
     "href": "sapp-02-templates.html#install-the-assets",
     "title": "25  Templates and blocks",
@@ -1071,221 +1078,39 @@
     "text": "30.6 Working around Gulp Fetch\nFor my students on PCs with OneDrive who can’t fetch data, I want you to set up the Google Docs files and project.config.json files all as if it will work."
   },
   {
-    "objectID": "a-google-fonts.html",
-    "href": "a-google-fonts.html",
-    "title": "Appendix A — Using Google Fonts",
-    "section": "",
-    "text": "Using Google Fonts used to be more intuitive than it seems to be now. This is a super quick primer on how do to it.\n\nGo to Google Fonts.\nBrowse or search for a font you want.\nClick on the font page so you can see all the styles available.\nClick on the + Select this style link to add the font to your selections.\n\n\n\n\nfonts-select\n\n\nRepeat this for all the font and font styles you want, but be selective. Don’t choose fonts you won’t use, and don’t use too many. (Each font increases your page size, slowing down your site.)\nOnce you have selected all your fonts, if the tray on the right is not open already, click on the box-like icon at the top right to open it.\n\n\n\nfonts-tray\n\n\nAll your selected fonts will be rolled together into one &lt;link&gt; line.\n\nCopy the &lt;link&gt; line and put it on each HTML page (or template) that will use the fonts.\nIn your CSS, write rules that specify the font as needed.\n\nThe “CSS rules to specify families” example in Google Fonts shows you how to write each individual font as part of a style rule. Realize this is just part of the style rule. If you want to apply this Roboto font to all H1 elements, you would write in your CSS like this:\nh1 {\n  font-family: 'Roboto', sans-serif;\n}"
-  },
-  {
     "objectID": "a-project.html#overview-of-the-steps",
     "href": "a-project.html#overview-of-the-steps",
-    "title": "Appendix B — How to start a project",
-    "section": "B.1 Overview of the steps",
-    "text": "B.1 Overview of the steps\nThese are the overall steps in case you just need reminders of the order. A more detailed breakdown follows.\n\nCreate a new folder for your project inside your icj folder. (You can use your regular computer operating system to do this.)\nLaunch VS Code.\nUse File &gt; Open folder to then find and choose the folder you created.\nCreate a README.md file.\n\nUsing Markdown, add a headline with the project name. Add text with your name and the due date of the project.\nSave the file.\n\nCreate a .gitignore file.\n\nUse gitignore.io to create the contents of your gitignore file. Use the values “macOS”, “Windows” and “VisualStudioCode” and Create. Copy the contents into the file you created.\nSave the file.\n\nCommit your local files. In your Terminal do the following:\n\ngit init to initialize git.\ngit add . to add all the files to stage.\ngit commit -m \"initial commit\" to commit the files.\n\nGo to Github.com and add a New Repository.\n\nName it the same as your local folder.\nDO NOT include the README or .gitignore files.\n\nOnce created, review the lines of code Github suggests:\n\nMake sure under “Quick setup — if you’ve done this kind of thing before” that the SSH button is selected (that the SSH button is grey and that the line of code next to is starts with git@github and NOT https.)\nFind the second block of code options “…or push an existing repository from the command line” and copy the first line of code show there that starts with git remote add.\n\nBack in VS Code:\n\nIn your Terminal in VS Code, paste in the line of code and run it.\nType and run the commenad git push origin main.\n\n\nYou are now ready to complete the rest of the assignment. You can use the git cycle to commit any further changes."
+    "title": "Appendix A — How to start a project",
+    "section": "A.1 Overview of the steps",
+    "text": "A.1 Overview of the steps\nThese are the overall steps in case you just need reminders of the order. A more detailed breakdown follows.\n\nCreate a new folder for your project inside your icj folder. (You can use your regular computer operating system to do this.)\nLaunch VS Code.\nUse File &gt; Open folder to then find and choose the folder you created.\nCreate a README.md file.\n\nUsing Markdown, add a headline with the project name. Add text with your name and the due date of the project.\nSave the file.\n\nCreate a .gitignore file.\n\nUse gitignore.io to create the contents of your gitignore file. Use the values “macOS”, “Windows” and “VisualStudioCode” and Create. Copy the contents into the file you created.\nSave the file.\n\nCommit your local files. In your Terminal do the following:\n\ngit init to initialize git.\ngit add . to add all the files to stage.\ngit commit -m \"initial commit\" to commit the files.\n\nGo to Github.com and add a New Repository.\n\nName it the same as your local folder.\nDO NOT include the README or .gitignore files.\n\nOnce created, review the lines of code Github suggests:\n\nMake sure under “Quick setup — if you’ve done this kind of thing before” that the SSH button is selected (that the SSH button is grey and that the line of code next to is starts with git@github and NOT https.)\nFind the second block of code options “…or push an existing repository from the command line” and copy the first line of code show there that starts with git remote add.\n\nBack in VS Code:\n\nIn your Terminal in VS Code, paste in the line of code and run it.\nType and run the commenad git push origin main.\n\n\nYou are now ready to complete the rest of the assignment. You can use the git cycle to commit any further changes."
   },
   {
     "objectID": "a-project.html#the-git-cycle",
     "href": "a-project.html#the-git-cycle",
-    "title": "Appendix B — How to start a project",
-    "section": "B.2 The git cycle",
-    "text": "B.2 The git cycle\nAs you work through the project, use the git cycle to save your code to your local machine, then push those changes to Github.\n\ngit status tells you where you are in the it cycle.\ngit add . adds all changed files into your stage\ngit commit -m \"Your message\" commits your changes to your computer.\ngit push origin main pushes your local changes to Github."
+    "title": "Appendix A — How to start a project",
+    "section": "A.2 The git cycle",
+    "text": "A.2 The git cycle\nAs you work through the project, use the git cycle to save your code to your local machine, then push those changes to Github.\n\ngit status tells you where you are in the it cycle.\ngit add . adds all changed files into your stage\ngit commit -m \"Your message\" commits your changes to your computer.\ngit push origin main pushes your local changes to Github."
   },
   {
     "objectID": "a-project.html#a-very-detailed-version-of-starting-a-new-project",
     "href": "a-project.html#a-very-detailed-version-of-starting-a-new-project",
-    "title": "Appendix B — How to start a project",
-    "section": "B.3 A very detailed version of starting a new project",
-    "text": "B.3 A very detailed version of starting a new project\nThis is the same as above, but with more detail, description and visuals.\nThere is also this screencast of the complete project setup for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.\n\nB.3.1 Create your project folder\nI find it easiest to create the folder using your computer’s operating system: macOS | Windows.\nCreate this folder inside you Documents/icj so you always know where your code is for this class.\n\nThe assignment will guide you on how to name the folder.\nAlways start the folder name with your own name.\nUse all lowercase letters. It’s just helpful.\nUse dashes instead of spaces in the name. It’s helpful, and depending on the project the folder name can end up being part of a URL.\n\nA good example:\nchristian-project-name\n\n\nB.3.2 Open the folder in VS Code\nOpening the folder in VS Code will make sure that your computer knows where all the files are relative to that folder.\n\nLaunch VS Code\nYou might close any windows that might still be open.\nGo to File &gt; Open Folder, find your folder and select it, then click Open.\nOnce the folder opens, the document tray should show the folder name.\n\n\n\n\nFolder name\n\n\n\n\nB.3.3 Create your README\nHere is a reminder of why we make a README file.\nI find the easiest way to create a new file is to use the Terminal. There are many other ways, but touch is the best all-around way.\n\nIf your Terminal isn’t open already, go to Terminal &gt; New Terminal.\nDo touch README.md\n\nThis will create the file and you’ll see it in the Document tray.\nFor this class, I want to to at least include this information in your README, adjusted based on the project, of course.\n\n# The project name\n\nBy Your Name\n\nThe project is due on Month Day Year.\n\n\nB.3.4 Create the .gitignore file\nThe .gitigore tells git to ignore certain files your computer will create but don’t need to be committed to the repository.\n\ntouch .gitignore will create the file.\nIn a browser, go to gitignore.io\nInsert the following values: macOS, Windows, VisualStudioCode.\n\n\n\n\ngitignore values\n\n\n\nHit Create.\nCopy all the text from the resulting window.\nPaste it into your .gitignore file in VS Code. Save the file.\n\n\n\nB.3.5 Commit your local files\nIt’s now time to use the parts of the git cycle to commit your files to your local machine, but first we have to tell git that we want to by initializing it.\n\ngit init to initialize the project.\ngit add . to add all the files to stage.\ngit commit -m \"First commit\" to save the files.\n\nWe have to create and connect to Github before we can push them.\n\n\nB.3.6 Create your Github repo\nNow we create the repo in Github so we can connect to it.\n\nGo to Github.com in a browser and log in if you aren’t already.\nAt the top right of the page is a big + sign. Click on that and choose New repository.\nFor the repository name, I recommend you use the same name as you used for your local folder. Like christian-project-name.\nThe Description is optional.\nKeep it Public.\nDO NOT use the README or gitignore options.\nClick the Create repository button.\n\nOnce you create the repo, you’ll get a page back with a lot of code.\n\nMake sure the SSH button is selected in the top box.\nGo to the second block “…or push an existing repository from the command line” copy the first line of code there and then run it in your VS Code Terminal.\n\n\n\n\nConnect to Github\n\n\nUse git push origin main to push your code.\nIf you want to make sure it worked, go back to your browser and refresh the page and you should see your files there.\nYou should now be ready to continue with the assignment."
+    "title": "Appendix A — How to start a project",
+    "section": "A.3 A very detailed version of starting a new project",
+    "text": "A.3 A very detailed version of starting a new project\nThis is the same as above, but with more detail, description and visuals.\nThere is also this screencast of the complete project setup for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.\n\nA.3.1 Create your project folder\nI find it easiest to create the folder using your computer’s operating system: macOS | Windows.\nCreate this folder inside you Documents/icj so you always know where your code is for this class.\n\nThe assignment will guide you on how to name the folder.\nAlways start the folder name with your own name.\nUse all lowercase letters. It’s just helpful.\nUse dashes instead of spaces in the name. It’s helpful, and depending on the project the folder name can end up being part of a URL.\n\nA good example:\nchristian-project-name\n\n\nA.3.2 Open the folder in VS Code\nOpening the folder in VS Code will make sure that your computer knows where all the files are relative to that folder.\n\nLaunch VS Code\nYou might close any windows that might still be open.\nGo to File &gt; Open Folder, find your folder and select it, then click Open.\nOnce the folder opens, the document tray should show the folder name.\n\n\n\n\nFolder name\n\n\n\n\nA.3.3 Create your README\nHere is a reminder of why we make a README file.\nI find the easiest way to create a new file is to use the Terminal. There are many other ways, but touch is the best all-around way.\n\nIf your Terminal isn’t open already, go to Terminal &gt; New Terminal.\nDo touch README.md\n\nThis will create the file and you’ll see it in the Document tray.\nFor this class, I want to to at least include this information in your README, adjusted based on the project, of course.\n\n# The project name\n\nBy Your Name\n\nThe project is due on Month Day Year.\n\n\nA.3.4 Create the .gitignore file\nThe .gitigore tells git to ignore certain files your computer will create but don’t need to be committed to the repository.\n\ntouch .gitignore will create the file.\nIn a browser, go to gitignore.io\nInsert the following values: macOS, Windows, VisualStudioCode.\n\n\n\n\ngitignore values\n\n\n\nHit Create.\nCopy all the text from the resulting window.\nPaste it into your .gitignore file in VS Code. Save the file.\n\n\n\nA.3.5 Commit your local files\nIt’s now time to use the parts of the git cycle to commit your files to your local machine, but first we have to tell git that we want to by initializing it.\n\ngit init to initialize the project.\ngit add . to add all the files to stage.\ngit commit -m \"First commit\" to save the files.\n\nWe have to create and connect to Github before we can push them.\n\n\nA.3.6 Create your Github repo\nNow we create the repo in Github so we can connect to it.\n\nGo to Github.com in a browser and log in if you aren’t already.\nAt the top right of the page is a big + sign. Click on that and choose New repository.\nFor the repository name, I recommend you use the same name as you used for your local folder. Like christian-project-name.\nThe Description is optional.\nKeep it Public.\nDO NOT use the README or gitignore options.\nClick the Create repository button.\n\nOnce you create the repo, you’ll get a page back with a lot of code.\n\nMake sure the SSH button is selected in the top box.\nGo to the second block “…or push an existing repository from the command line” copy the first line of code there and then run it in your VS Code Terminal.\n\n\n\n\nConnect to Github\n\n\nUse git push origin main to push your code.\nIf you want to make sure it worked, go back to your browser and refresh the page and you should see your files there.\nYou should now be ready to continue with the assignment."
   },
   {
     "objectID": "a-project.html#using-degit",
     "href": "a-project.html#using-degit",
-    "title": "Appendix B — How to start a project",
-    "section": "B.4 Using degit",
-    "text": "B.4 Using degit\nSome class projects begin with a set of template files that already include a README and gitignore file. In this case, we create the folder on our hard drive, but use the degit command to download all our needed files.\n\nCreate your project folder inside the icj folder.\nLaunch VS Code and open the folder.\ndegit utdata/template-name will download all the files into your folder. BUT YOU’LL WANT TO USE THE CORRECT TEMPLATE NAME.\ngit init will initialize the repo\ngit add . to add the files\ngit commit -m \"first commit to save the files.\nCreate your repo in Github.com.\nCopy the first line within the second block and run it.\nUse git push origin main to push your changes.\n\nYou should be ready to continue with the assignment."
+    "title": "Appendix A — How to start a project",
+    "section": "A.4 Using degit",
+    "text": "A.4 Using degit\nSome class projects begin with a set of template files that already include a README and gitignore file. In this case, we create the folder on our hard drive, but use the degit command to download all our needed files.\n\nCreate your project folder inside the icj folder.\nLaunch VS Code and open the folder.\ndegit utdata/template-name will download all the files into your folder. BUT YOU’LL WANT TO USE THE CORRECT TEMPLATE NAME.\ngit init will initialize the repo\ngit add . to add the files\ngit commit -m \"first commit to save the files.\nCreate your repo in Github.com.\nCopy the first line within the second block and run it.\nUse git push origin main to push your changes.\n\nYou should be ready to continue with the assignment."
   },
   {
-    "objectID": "a-macos-shell.html",
-    "href": "a-macos-shell.html",
-    "title": "Appendix C — Change Mac shell to bash",
+    "objectID": "a-google-fonts.html",
+    "href": "a-google-fonts.html",
+    "title": "Appendix B — Using Google Fonts",
     "section": "",
-    "text": "Mac Catalina changes the default shell program from Bash to zsh. While zsh is probably fine, let’s change the default shell program to Bash for consistency. This is how to do it:\n\nChoose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them."
-  },
-  {
-    "objectID": "a-bash-files.html#goal",
-    "href": "a-bash-files.html#goal",
-    "title": "Appendix D — Bash files",
-    "section": "D.1 Goal",
-    "text": "D.1 Goal\nLet’s learn some more command-line juju for working with files. These commands will help look at code files on your computer."
-  },
-  {
-    "objectID": "a-bash-files.html#set-up",
-    "href": "a-bash-files.html#set-up",
-    "title": "Appendix D — Bash files",
-    "section": "D.2 Set up",
-    "text": "D.2 Set up\nLet’s make sure we are in our class folder. (This is review from Moving Around).\n\nMake sure you are in your icj project folder:\n\ncd ~/Documents/icj\n\nCreate a new folder called myproject:\n\nmkdir myproject\n\nUse cd to move inside the myproject folder then use pwd to make sure you are in the right place. The result should be something like this:\n\n$ cd\nUsers/ccm346/Documents/icj/myproject"
-  },
-  {
-    "objectID": "a-bash-files.html#curl",
-    "href": "a-bash-files.html#curl",
-    "title": "Appendix D — Bash files",
-    "section": "D.3 curl",
-    "text": "D.3 curl\nWe need some text to work with, so we’re going to pull down some text from Github. I might as well explain what we are doing.\ncurl is a command to transfer files. I think of it as “Capture URL”. We need to give curl a couple of flags (or options) for this job:\n\n-L stands for “Location”. It allows curl to follow a URL if it is redirected.\n-o for “output”. So we can write this to a file (which we are calling data.csv) instead of our terminal window. (We could use -O instead to just use the current file name.)\n\n\n\n\n\n\n\nWarning\n\n\n\nThis URL below needs to be updated\n\n\ncurl -L -o data.csv https://raw.githubusercontent.com/utdata/icj-class/main/resources/data_example.csv\nOK, now we should be able to ls and see our file is there. My output looks like this:\n$ ls\ndata.csv"
-  },
-  {
-    "objectID": "a-bash-files.html#head",
-    "href": "a-bash-files.html#head",
-    "title": "Appendix D — Bash files",
-    "section": "D.4 head",
-    "text": "D.4 head\nhead allows you to print the top of a file to your screen so you can see what it is. It will default to show you the first 10 lines of a file. When you type this in, hit tab after you type “head da” to let tab completion help you.\nhead data.csv\nwill give you this:\n$ head data.csv\nQuarter,Taxpayer Number,Taxpayer Name,Taxpayer Address,Taxpayer City,Taxpayer State,Taxpayer Zip Code,Taxpayer County,Outlet Number,Location Name,Location Address,Location City,Location State,Location Zip Code,Location County,Location Room Capacity,Location Tot Room Receipts,Location Taxable Receipts\nQ1,32051871906,DSN HOSPITALITY LLC,4710 S LAMAR BLVD,AUSTIN,TX,78745,227,00001,DSN HOSPITALITY LLC,3110 STATE HIGHWAY 71 EAST,AUSTIN,TX,78745,011,37,91205.03,90870.01\nQ1,32054409241,JEANETTE WELSHE,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,00001,BED AND BREAKFAST,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,4,5417.92,5417.92\nQ1,32047098168,AMY MARIE CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,00001,FLORA PROPERTIES/AMY M. CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,4,7280.23,7280.23\nQ1,32055460730,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,00001,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,1,4735.0,4735.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00001,NUTTY BROWN CABIN,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,1030.0,1030.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00003,NUTTY BROWN MANOR,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,2100.0,2100.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00004,\"ROADRUNNER'S BUNGALOQ\",12932 NUTTY BROWN RD,AUSTIN,TX,78737,105,1,0.0,0.0\nQ1,32020638758,LESLIE K RENFRO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,00002,THISTLE HILL STUDIO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,1,871.0,871.0\nQ1,32050668345,\"TIPPING T, LLC\",4405 MANZANILLO DR,AUSTIN,TX,78749,227,00001,TIPPING T,13127 FITZHUGH RD,AUSTIN,TX,78736,105,1,9427.0,9427.0\nIt might look like more than 10 lines on your screen because they wrap.\nIf you want to specify how many lines to display, use the flag -n for number of lines:\nhead -n 2 data.csv\nThat will give you two lines, the first which is the header of that file."
-  },
-  {
-    "objectID": "a-bash-files.html#tail",
-    "href": "a-bash-files.html#tail",
-    "title": "Appendix D — Bash files",
-    "section": "D.5 tail",
-    "text": "D.5 tail\ntail shows you the bottom of the file. It takes the same -n flags.\ntail data.csv\nThat result won’t show you the header, because you are looking at the last 10 lines of the file."
-  },
-  {
-    "objectID": "a-bash-files.html#wc",
-    "href": "a-bash-files.html#wc",
-    "title": "Appendix D — Bash files",
-    "section": "D.6 wc",
-    "text": "D.6 wc\nwc I think of as “word count”, but it can also count lines and bytes.\nwc data.csv\ngives you this output:\n$ wc data.csv\n     100    1136   15642 data.csv\nThe first column is number of lines, then the number of words, then bytes.\nIf you want just the number of lines, us -l.\nwc -l data.csv"
-  },
-  {
-    "objectID": "a-bash-files.html#cat",
-    "href": "a-bash-files.html#cat",
-    "title": "Appendix D — Bash files",
-    "section": "D.7 cat",
-    "text": "D.7 cat\ncat means to concatenate and print a file to your window. If you feed it two file names, it will give you the first, then the other. Do this:\ncat data.csv\nThis will print the contents of data.csv to your screen. It’s showing all 100 lines.\nBut what you can do is redirect that output into a file by using &gt;. Do this.\ncat data.csv &gt; file01.csv\nWhat you’ve done is take the contents of data.csv, printed the contents and then redirected that content into another file called file01.csv. Since that didn’t exist already, it was created on the fly.\nIf I wanted to take two files, file01.csv and file02.csv, and then combine them into a single file on your computer, it would look like this. (You don’t have to do these commands, just understand them.):\ncat file01.csv file02.csv &gt; combined.csv\nNow, combined.csv would be the combination of both files."
-  },
-  {
-    "objectID": "a-bash-files.html#grep",
-    "href": "a-bash-files.html#grep",
-    "title": "Appendix D — Bash files",
-    "section": "D.8 grep",
-    "text": "D.8 grep\ngrep is for using regular expressions to find patterns within a file. It takes a regular expression input and the file name and gives in return the lines of the file that match that regular expression.\ngrep 'ATX INVESTMENTS' data.csv\n… will print out just the lines in data.csv that have ‘ATX INVESTMENTS’ somewhere in them. Note that the name in the field is ‘ATX INVESTMENTS LLC’ but it found it with just part of that.\nIf you want to just know how many lines there are with ‘ATX INVESTMENTS’, use the -c flag for count:\n$ grep -c 'ATX INVESTMENTS' data.csv\nThe answer should be 4."
-  },
-  {
-    "objectID": "a-bash-files.html#piping-commands",
-    "href": "a-bash-files.html#piping-commands",
-    "title": "Appendix D — Bash files",
-    "section": "D.9 Piping commands",
-    "text": "D.9 Piping commands\nYou can “pipe” the results of one command into another command with the | character, which you’ll find as the shift of your backslash key. You can string commands together with that, so if I just wanted to see the first lines that has ‘ATX INVESTMENTS’, I can do this:\ngrep 'ATX INVESTMENTS' data.csv | head -n 1"
-  },
-  {
-    "objectID": "a-bash-commands.html#man",
-    "href": "a-bash-commands.html#man",
-    "title": "Appendix E — Bash commands",
-    "section": "E.1 man",
-    "text": "E.1 man\nIf you are unsure about how any of these terminal commands work, there are manual pages for each one already on your computer. Now, I’m not saying they are extremely well-written and intuitive, but they are there.\n$ man cd\nWill open the manual page for cd and tell you have to change directory.\nBut man pages, as they are called, are a special program themselves, and have a different commands to negotiate around them, as you’ll discover quickly if you try to scroll to see more.\n\nhit f or space to advance one page through the file\nhit j to go down one line\nhit k to go up one line\nhit g to go the the top\nhit q to quit\n\nMoving around the man pages is frustrating at first. There are online versions of these, but the man command doesn’t need the internet. These files are already on your computer.\nMan pages are useful to figure out the options or flags for commands, so you can learn that ls -lt will give you that long list sorted in order of time, most-recently modified at top."
-  },
-  {
-    "objectID": "a-bash-commands.html#h-for-help",
-    "href": "a-bash-commands.html#h-for-help",
-    "title": "Appendix E — Bash commands",
-    "section": "E.2 -h for help",
-    "text": "E.2 -h for help\nSometimes there isn’t a man page for a command, but there is help file. If we wanted to look at a list of all the flags for the curl program, we would can get “help with the -h flag. I would type:\n$ curl -h\nThis gives you a list of the flags and arguments for that command, along with other information."
-  },
-  {
-    "objectID": "a-bash-profile.html#shorten-your-terminal-name",
-    "href": "a-bash-profile.html#shorten-your-terminal-name",
-    "title": "Appendix F — Bash profile",
-    "section": "F.1 Shorten your terminal name",
-    "text": "F.1 Shorten your terminal name\nMy prompt line in my terminal is really long. It looks like this:\nCHRISTIANs-MacBook-Air-2:~ christian$\nYou can shorten it to just your login name by adding this line to your .bash_profile file, which is found in your home directory: code ~/.bash_profile should open it in VS Code so you can edit it.\n# shortens prompt name\nPS1='\\u:\\W\\$ '\nNow close your Terminal window and open a new one, and the prompt should be shorter, with just your username."
-  },
-  {
-    "objectID": "a-bash-profile.html#hide-the-zsh-message",
-    "href": "a-bash-profile.html#hide-the-zsh-message",
-    "title": "Appendix F — Bash profile",
-    "section": "F.2 Hide the zsh message",
-    "text": "F.2 Hide the zsh message\nAdding this to your bash_profile hides the message about changing to zsh.\n# hides zsh prompt\nexport BASH_SILENCE_DEPRECATION_WARNING=1"
-  },
-  {
-    "objectID": "a-bash-profile.html#list-all-long-including-hidden",
-    "href": "a-bash-profile.html#list-all-long-including-hidden",
-    "title": "Appendix F — Bash profile",
-    "section": "F.3 List all long including hidden",
-    "text": "F.3 List all long including hidden\nWhen I want to see everything in a directory, including all the hidden files and the other details like size, date, etc., then the command is ls -al. But I put in a alias so all I have to type is ll to get that long list. Add this to your .bash_profile:\nalias ll=\"ls -al\""
-  },
-  {
-    "objectID": "a-git-share.html#goals",
-    "href": "a-git-share.html#goals",
-    "title": "Appendix G — Git: Sharing code",
-    "section": "G.1 Goals",
-    "text": "G.1 Goals\nWe’ll now see how you can collaborate in code with a classmate. Our goals are this:\n\nTo pick a partner\nTo clone their repo to your machine.\nTo edit the file and use the git cycle to commit the changes.\nTo go to your own repo and pull the changes made by your partner.\nWe’ll then introduce a code conflict and learn how to resolve it."
-  },
-  {
-    "objectID": "a-git-share.html#clone-a-repo",
-    "href": "a-git-share.html#clone-a-repo",
-    "title": "Appendix G — Git: Sharing code",
-    "section": "G.2 Clone a repo",
-    "text": "G.2 Clone a repo\n\nIn your browser, go to your partner’s Github profile and click on Repositories if necessary, then on their repo.\nLook for the button Clone or download. You want to copy the URL for cloning, like this:\n\n\n\n\nclone\n\n\n\nGo into your regular Terminal app and cd into ~/Documents/icj/.\nDo git clone URL but paste the URL you copied. This is the same as you did with your own repo, but now you have downloaded your partner’s repo.\n\nIf you wanted the repo to be a different name on your computer, you would add the name you want after the url. I tend to keep the same name unless there is a good reason not to."
-  },
-  {
-    "objectID": "a-git-share.html#make-your-edits",
-    "href": "a-git-share.html#make-your-edits",
-    "title": "Appendix G — Git: Sharing code",
-    "section": "G.3 Make your edits",
-    "text": "G.3 Make your edits\n\nLaunch VS Code if it isn’t already.\nGo to File &gt; New Window.\nUse the VS Code Explorer on the left to find your partner’s folder and open it.\nAdd a new sentence praising your partner’s command of git and Github thus far. Save and close the file.\nAdd a new file to the repo called newfile.md. There are a bunch of different ways you can do this … just choose one method:\n\nYou use your terminal (even in VS Code) and type touch newfile.md.\nYou can use the File &gt; New file menu and name it.\nYou can use the little buttons in the Explorer and name it.\n\nAdd a title and a paragraph of text, using proper Markdown syntax. Save and close your work. (Depending on time, we might talk about and load the Markdown Syntax Linter.)\nOpen the Integrated Terminal and go through the steps to check status, add files, commit files (with message), and push to origin master.\n\n\nBefore you can push, your partner probably needs to go into their Github repo and add you as a collaborator."
-  },
-  {
-    "objectID": "a-git-share.html#pull-your-partners-edits",
-    "href": "a-git-share.html#pull-your-partners-edits",
-    "title": "Appendix G — Git: Sharing code",
-    "section": "G.4 Pull your partner’s edits",
-    "text": "G.4 Pull your partner’s edits\n\nGo back to the VS Code window that is your own repo.\nUse the Integrated Terminal to do $ git pull origin master, which will download the changes made by your partner. Yes, pull is the opposite of push."
-  },
-  {
-    "objectID": "a-git-share.html#dealing-with-conflicts",
-    "href": "a-git-share.html#dealing-with-conflicts",
-    "title": "Appendix G — Git: Sharing code",
-    "section": "G.5 Dealing with conflicts",
-    "text": "G.5 Dealing with conflicts\nYou might ask yourself … what’s to keep two people from changing the same line of code? Well, they can, and you will. It creates a code conflict that must then be resolved.\nWe’re going to create such a conflict so you can see that this looks like.\n\nG.5.1 Your original change\n\nFind your VS Code window with your own repo and make a change within the first sentence.\nAdd, commit and push your changes to Github.\n\nSo now, in your partner’s copy of your repo, there is a change that they do not have.\n\n\nG.5.2 Change your partner’s repo\n\nGo back into your partner’s repo in VS Code and change that same first sentence, but do it in some different way.\nAdd, commit and try to push your changes. When you try to push, you won’t be able do. You’ll get a message something like this:\n\n$ git push origin master\nTo github.com:critmcdonald/christian-git-practice.git\n ! [rejected]        master -&gt; master (non-fast-forward)\nerror: failed to push some refs to 'github.com:critmcdonald/christian-git-practice.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n(base) ✘-1 ~/Documents/icj/christian-git-practice [master ↓·1↑·1|✔] \nYou can see from the hints in the error message, that there are changes on the remote repo that you don’t have. Git won’t let you push new changes unless you have the current remote copy from the server. That keeps you from screwing up something that is already there (which is kinda what we are doing).\nSo, you have to pull the remote changes first.\n\nDo $ git pull origin master to update your repo. It will work, but you’ll get message about the conflict.\n\n$ git pull origin master\nFrom github.com:critmcdonald/christian-git-practice.git\n * branch            master     -&gt; FETCH_HEAD\nAuto-merging newfile.md\nCONFLICT (content): Merge conflict in newfile.md\nAutomatic merge failed; fix conflicts and then commit the result.\n(base) ✘-1 ~/Documents/icj/christian-git-practice [master|MERGING ↓·1↑·1|✖ 1] \nNow look at the file in VS Code, and it will look pretty crazy. Here is mine:\n\n\n\nclone\n\n\nLet’s break this down:\n\nThe highlighted line with HEAD is the beginning of the conflict.\nThe other highlighted line is the end of the conflict.\nIt’s up to you to choose what should be inbetween those notes. You would of course want to discuss this with your collaborator and come to an agreement on what this should be. Fix up the file the way you have agreed and then remove all the notes and the line between the two pieces.\nOnce you have it the way you like it, save, add, commit and push.\n\n\n\nG.5.3 Get your own repo right\n\nGo back to your own repo in VS Code and do git pull origin master. Depending on how you resolved the conflict together, you might have to go through the process again. You might go look at the repo on Github and copy/paste the line to ensure you have it the same. Add, commit and push as necessary."
-  },
-  {
-    "objectID": "a-git-share.html#good-coding-practices-syntax",
-    "href": "a-git-share.html#good-coding-practices-syntax",
-    "title": "Appendix G — Git: Sharing code",
-    "section": "G.6 Good coding practices: Syntax",
-    "text": "G.6 Good coding practices: Syntax\nOne tactic to being a good collaborator with code is to follow syntax, meaning you write code to a shared standard. Each programming language has its own standard, including how many spaces to indent, how you capitialize, etc.\nWe’ve been writing in Markdown, and here are two resources about that syntax:\n\nMarkdown tutorial\nMarkdown syntax"
-  },
-  {
-    "objectID": "a-git-branch.html#feature-branch-workflow",
-    "href": "a-git-branch.html#feature-branch-workflow",
-    "title": "Appendix H — Git: Branches",
-    "section": "H.1 Feature branch workflow",
-    "text": "H.1 Feature branch workflow\nThe workflow I typically use is git feature branch workflow, and I use this even when I’m working solo on a project. Review the link above, but this is typically how it works:\n\nmaster is the branch in production or ready for production. It should always “work” with no bugs.\nCreate a feature branch to start on new work. Make your changes and push the branch to the repo.\nCreate a pull request to review changes. This allows you or others to see the changes within Github you are proposing to merge into master. There are tools in Github that allow for official reviews, comments and such. You will also see potential code conflicts.\nMake any changes necessary and push them to the feature branch.\nOnce ready, merge into master. All the history of your commits are added to master, and your newbranch has been deleted on Github.\n\nThere can be more to it in some shops, like rebasing and squashing, but we won’t get into that here."
-  },
-  {
-    "objectID": "a-git-branch.html#lets-do-it",
-    "href": "a-git-branch.html#lets-do-it",
-    "title": "Appendix H — Git: Branches",
-    "section": "H.2 Let’s do it",
-    "text": "H.2 Let’s do it\n\nGo into your “myproject-name” repo in VS code and open your Integrated Terminal.\nCreate your branch: $ git checkout -b newbranch.\n\nIf you have the git-bash-prompt installed, you’ll notice the name of the branch has changed in the square brackets.\n\nAdd a new file and call it branchfile.md. Add a title and some text using proper Markdown syntax.\nSave and add and commit your file, but when you push, you need to change that to $ git commit origin newbranch to ensure you are adding to your new branch. (It will give you an error if you try to push to master.) This is the result:\n\n$ git push origin featurebranch\nEnumerating objects: 4, done.\nCounting objects: 100% (4/4), done.\nDelta compression using up to 8 threads.\nCompressing objects: 100% (2/2), done.\nWriting objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.\nTotal 3 (delta 0), reused 0 (delta 0)\nTo github.com:critmcdonald/myproject-christian.git\n * [new branch]      featurebranch -&gt; featurebranch\n✔ ~/Documents/icj/myproject-christian [featurebranch L|✔]\n\nGo to your repo on Github, and you’ll notice your branchfile.md is not listed. This is because you are looking at your master branch.\nYou can click on branches to see all the branches, or use the branch dropdown to switch to your new branch on Github."
-  },
-  {
-    "objectID": "a-git-branch.html#create-a-pull-request",
-    "href": "a-git-branch.html#create-a-pull-request",
-    "title": "Appendix H — Git: Branches",
-    "section": "H.3 Create a pull request",
-    "text": "H.3 Create a pull request\n\nSince we just pushed a new branch, you might notice a yellow alert box that has a button where you can Compare & pull requet. If you have that, go ahead and click on it.\nIf you didn’t have that, you could click on the Pull requests tab at the top, and then choose a New pull request.\n\nThis is what you get:\n\n\n\npull reqeust\n\n\nYou can see from this page that you are merging the branch on the right, newbranch, into the branch on the left, which is master.\n\nHere you can give your pull request a title and a description. Your description might outline what is being changed, how to test it locally and whatever information your collaborators our your future self might want to know.\nClick the Create pull request button to create the pull request.\nThe next screen gives you summary of all the commits that are different from the master. It will list multiple files if there are differences.\n\n\n\n\npull reqeust\n\n\n\nThis process also outlines any conflicts there might be between the feature branch and master. You’ll have to fix them before you can merge.\nThe pull request also allows yourself and collaborators review all your changes and make comments.\nGo ahead and click Merge pull request and then Confirm merge to merge the branches.\n\nAt this point, you can delete the newbranch in Github, as indicated with a button. You don’t have to since all the commit history is now in master, but it’s a good idea to keep everything clean.\nNow let’s clean up our local repo.\n\nGo back to VS Code and into the Integrated Terminal, and switch back to master using git checkout master. It will look like this:\n\n$ git checkout master\nSwitched to branch 'master'\nYour branch is up-to-date with 'origin/master'.\n(base) ✔ ~/Documents/icj/myproject-christian [master|✔]\nYou might notice this says you “branch is up-to-date with ‘origin/master’, and that is confusing, because we know we merged changes that are on Github. This message is referring to your LOCAL branch, not the one on Github. We still need to pull in those changes:\n$ git pull origin master\nFrom github.com:critmcdonald/myproject-christian\n * branch            master     -&gt; FETCH_HEAD\nUpdating b36328f..c85740d\nFast-forward\n branchfile.md | 3 +++\n 1 file changed, 3 insertions(+)\n create mode 100644 branchfile.md\n✔ ~/Documents/icj/myproject-christian [master|✔]\nThis will pull the files from Github and bring them local.\nYou can always check what branches you have locally with $ git branch. Try it.\n16:13 $ git branch\n* master\n  newbranch\nThe newbranch on Github went away when we merged it, but now we can delete it locally:\n$ git branch -D newbranch\nDeleted branch newbranch (was 1345054).\n✔ ~/Documents/icj/myproject-christian [master|✔] \nThe capitalization of -D flag matters."
-  },
-  {
-    "objectID": "a-git-branch.html#git-commands",
-    "href": "a-git-branch.html#git-commands",
-    "title": "Appendix H — Git: Branches",
-    "section": "H.4 Git commands",
-    "text": "H.4 Git commands\nWe used a ton of git commands, and it was only a fraction. It’s a complex program. There are tons of cheet sheets out there on the googles, but this one is pretty clean."
-  },
-  {
-    "objectID": "sapp-02-templates.html#page-previews",
-    "href": "sapp-02-templates.html#page-previews",
-    "title": "25  Templates and blocks",
-    "section": "25.1 Page previews",
-    "text": "25.1 Page previews\nHere are some screen shots of the finished product you are working toward.\n\nI’ll need to update these images!!\n\n\n\n\nIndex page\n\n\n\n\n\nPirate ship page\n\n\n\n\n\nEntry page example"
+    "text": "Using Google Fonts used to be more intuitive than it seems to be now. This is a super quick primer on how do to it.\n\nGo to Google Fonts.\nBrowse or search for a font you want.\nClick on the font page so you can see all the styles available.\nClick on the + Select this style link to add the font to your selections.\n\n\n\n\nfonts-select\n\n\nRepeat this for all the font and font styles you want, but be selective. Don’t choose fonts you won’t use, and don’t use too many. (Each font increases your page size, slowing down your site.)\nOnce you have selected all your fonts, if the tray on the right is not open already, click on the box-like icon at the top right to open it.\n\n\n\nfonts-tray\n\n\nAll your selected fonts will be rolled together into one &lt;link&gt; line.\n\nCopy the &lt;link&gt; line and put it on each HTML page (or template) that will use the fonts.\nIn your CSS, write rules that specify the font as needed.\n\nThe “CSS rules to specify families” example in Google Fonts shows you how to write each individual font as part of a style rule. Realize this is just part of the style rule. If you want to apply this Roboto font to all H1 elements, you would write in your CSS like this:\nh1 {\n  font-family: 'Roboto', sans-serif;\n}"
   },
   {
     "objectID": "a-fetch-problems.html",
@@ -1293,5 +1118,180 @@
     "title": "Appendix C — If you have gulp fetch problems",
     "section": "",
     "text": "Part of the static-apps lesson uses an API to talk to Google Drive to download some files. If you have trouble with gulp fetch command and it doesn’t work, then you can manually download the data.\n\nIn your Terminal, use Cntl-C to quit the Browsersync session.\nClick on this link to download the data:  data.zip\nExpand the zip file and put the four files inside the src/_data folder.\nRestart gulp dev.\n\nThis will make the data available in your project."
+  },
+  {
+    "objectID": "a-macos-shell.html",
+    "href": "a-macos-shell.html",
+    "title": "Appendix D — Change Mac shell to bash",
+    "section": "",
+    "text": "Mac Catalina changes the default shell program from Bash to zsh. While zsh is probably fine, let’s change the default shell program to Bash for consistency. This is how to do it:\n\nChoose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them."
+  },
+  {
+    "objectID": "a-bash-files.html#goal",
+    "href": "a-bash-files.html#goal",
+    "title": "Appendix E — Bash files",
+    "section": "E.1 Goal",
+    "text": "E.1 Goal\nLet’s learn some more command-line juju for working with files. These commands will help look at code files on your computer."
+  },
+  {
+    "objectID": "a-bash-files.html#set-up",
+    "href": "a-bash-files.html#set-up",
+    "title": "Appendix E — Bash files",
+    "section": "E.2 Set up",
+    "text": "E.2 Set up\nLet’s make sure we are in our class folder. (This is review from Moving Around).\n\nMake sure you are in your icj project folder:\n\ncd ~/Documents/icj\n\nCreate a new folder called myproject:\n\nmkdir myproject\n\nUse cd to move inside the myproject folder then use pwd to make sure you are in the right place. The result should be something like this:\n\n$ cd\nUsers/ccm346/Documents/icj/myproject"
+  },
+  {
+    "objectID": "a-bash-files.html#curl",
+    "href": "a-bash-files.html#curl",
+    "title": "Appendix E — Bash files",
+    "section": "E.3 curl",
+    "text": "E.3 curl\nWe need some text to work with, so we’re going to pull down some text from Github. I might as well explain what we are doing.\ncurl is a command to transfer files. I think of it as “Capture URL”. We need to give curl a couple of flags (or options) for this job:\n\n-L stands for “Location”. It allows curl to follow a URL if it is redirected.\n-o for “output”. So we can write this to a file (which we are calling data.csv) instead of our terminal window. (We could use -O instead to just use the current file name.)\n\n\n\n\n\n\n\nWarning\n\n\n\nThis URL below needs to be updated\n\n\ncurl -L -o data.csv https://raw.githubusercontent.com/utdata/icj-class/main/resources/data_example.csv\nOK, now we should be able to ls and see our file is there. My output looks like this:\n$ ls\ndata.csv"
+  },
+  {
+    "objectID": "a-bash-files.html#head",
+    "href": "a-bash-files.html#head",
+    "title": "Appendix E — Bash files",
+    "section": "E.4 head",
+    "text": "E.4 head\nhead allows you to print the top of a file to your screen so you can see what it is. It will default to show you the first 10 lines of a file. When you type this in, hit tab after you type “head da” to let tab completion help you.\nhead data.csv\nwill give you this:\n$ head data.csv\nQuarter,Taxpayer Number,Taxpayer Name,Taxpayer Address,Taxpayer City,Taxpayer State,Taxpayer Zip Code,Taxpayer County,Outlet Number,Location Name,Location Address,Location City,Location State,Location Zip Code,Location County,Location Room Capacity,Location Tot Room Receipts,Location Taxable Receipts\nQ1,32051871906,DSN HOSPITALITY LLC,4710 S LAMAR BLVD,AUSTIN,TX,78745,227,00001,DSN HOSPITALITY LLC,3110 STATE HIGHWAY 71 EAST,AUSTIN,TX,78745,011,37,91205.03,90870.01\nQ1,32054409241,JEANETTE WELSHE,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,00001,BED AND BREAKFAST,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,4,5417.92,5417.92\nQ1,32047098168,AMY MARIE CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,00001,FLORA PROPERTIES/AMY M. CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,4,7280.23,7280.23\nQ1,32055460730,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,00001,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,1,4735.0,4735.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00001,NUTTY BROWN CABIN,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,1030.0,1030.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00003,NUTTY BROWN MANOR,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,2100.0,2100.0\nQ1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00004,\"ROADRUNNER'S BUNGALOQ\",12932 NUTTY BROWN RD,AUSTIN,TX,78737,105,1,0.0,0.0\nQ1,32020638758,LESLIE K RENFRO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,00002,THISTLE HILL STUDIO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,1,871.0,871.0\nQ1,32050668345,\"TIPPING T, LLC\",4405 MANZANILLO DR,AUSTIN,TX,78749,227,00001,TIPPING T,13127 FITZHUGH RD,AUSTIN,TX,78736,105,1,9427.0,9427.0\nIt might look like more than 10 lines on your screen because they wrap.\nIf you want to specify how many lines to display, use the flag -n for number of lines:\nhead -n 2 data.csv\nThat will give you two lines, the first which is the header of that file."
+  },
+  {
+    "objectID": "a-bash-files.html#tail",
+    "href": "a-bash-files.html#tail",
+    "title": "Appendix E — Bash files",
+    "section": "E.5 tail",
+    "text": "E.5 tail\ntail shows you the bottom of the file. It takes the same -n flags.\ntail data.csv\nThat result won’t show you the header, because you are looking at the last 10 lines of the file."
+  },
+  {
+    "objectID": "a-bash-files.html#wc",
+    "href": "a-bash-files.html#wc",
+    "title": "Appendix E — Bash files",
+    "section": "E.6 wc",
+    "text": "E.6 wc\nwc I think of as “word count”, but it can also count lines and bytes.\nwc data.csv\ngives you this output:\n$ wc data.csv\n     100    1136   15642 data.csv\nThe first column is number of lines, then the number of words, then bytes.\nIf you want just the number of lines, us -l.\nwc -l data.csv"
+  },
+  {
+    "objectID": "a-bash-files.html#cat",
+    "href": "a-bash-files.html#cat",
+    "title": "Appendix E — Bash files",
+    "section": "E.7 cat",
+    "text": "E.7 cat\ncat means to concatenate and print a file to your window. If you feed it two file names, it will give you the first, then the other. Do this:\ncat data.csv\nThis will print the contents of data.csv to your screen. It’s showing all 100 lines.\nBut what you can do is redirect that output into a file by using &gt;. Do this.\ncat data.csv &gt; file01.csv\nWhat you’ve done is take the contents of data.csv, printed the contents and then redirected that content into another file called file01.csv. Since that didn’t exist already, it was created on the fly.\nIf I wanted to take two files, file01.csv and file02.csv, and then combine them into a single file on your computer, it would look like this. (You don’t have to do these commands, just understand them.):\ncat file01.csv file02.csv &gt; combined.csv\nNow, combined.csv would be the combination of both files."
+  },
+  {
+    "objectID": "a-bash-files.html#grep",
+    "href": "a-bash-files.html#grep",
+    "title": "Appendix E — Bash files",
+    "section": "E.8 grep",
+    "text": "E.8 grep\ngrep is for using regular expressions to find patterns within a file. It takes a regular expression input and the file name and gives in return the lines of the file that match that regular expression.\ngrep 'ATX INVESTMENTS' data.csv\n… will print out just the lines in data.csv that have ‘ATX INVESTMENTS’ somewhere in them. Note that the name in the field is ‘ATX INVESTMENTS LLC’ but it found it with just part of that.\nIf you want to just know how many lines there are with ‘ATX INVESTMENTS’, use the -c flag for count:\n$ grep -c 'ATX INVESTMENTS' data.csv\nThe answer should be 4."
+  },
+  {
+    "objectID": "a-bash-files.html#piping-commands",
+    "href": "a-bash-files.html#piping-commands",
+    "title": "Appendix E — Bash files",
+    "section": "E.9 Piping commands",
+    "text": "E.9 Piping commands\nYou can “pipe” the results of one command into another command with the | character, which you’ll find as the shift of your backslash key. You can string commands together with that, so if I just wanted to see the first lines that has ‘ATX INVESTMENTS’, I can do this:\ngrep 'ATX INVESTMENTS' data.csv | head -n 1"
+  },
+  {
+    "objectID": "a-bash-commands.html#man",
+    "href": "a-bash-commands.html#man",
+    "title": "Appendix F — Bash commands",
+    "section": "F.1 man",
+    "text": "F.1 man\nIf you are unsure about how any of these terminal commands work, there are manual pages for each one already on your computer. Now, I’m not saying they are extremely well-written and intuitive, but they are there.\n$ man cd\nWill open the manual page for cd and tell you have to change directory.\nBut man pages, as they are called, are a special program themselves, and have a different commands to negotiate around them, as you’ll discover quickly if you try to scroll to see more.\n\nhit f or space to advance one page through the file\nhit j to go down one line\nhit k to go up one line\nhit g to go the the top\nhit q to quit\n\nMoving around the man pages is frustrating at first. There are online versions of these, but the man command doesn’t need the internet. These files are already on your computer.\nMan pages are useful to figure out the options or flags for commands, so you can learn that ls -lt will give you that long list sorted in order of time, most-recently modified at top."
+  },
+  {
+    "objectID": "a-bash-commands.html#h-for-help",
+    "href": "a-bash-commands.html#h-for-help",
+    "title": "Appendix F — Bash commands",
+    "section": "F.2 -h for help",
+    "text": "F.2 -h for help\nSometimes there isn’t a man page for a command, but there is help file. If we wanted to look at a list of all the flags for the curl program, we would can get “help with the -h flag. I would type:\n$ curl -h\nThis gives you a list of the flags and arguments for that command, along with other information."
+  },
+  {
+    "objectID": "a-bash-profile.html#shorten-your-terminal-name",
+    "href": "a-bash-profile.html#shorten-your-terminal-name",
+    "title": "Appendix G — Bash profile",
+    "section": "G.1 Shorten your terminal name",
+    "text": "G.1 Shorten your terminal name\nMy prompt line in my terminal is really long. It looks like this:\nCHRISTIANs-MacBook-Air-2:~ christian$\nYou can shorten it to just your login name by adding this line to your .bash_profile file, which is found in your home directory: code ~/.bash_profile should open it in VS Code so you can edit it.\n# shortens prompt name\nPS1='\\u:\\W\\$ '\nNow close your Terminal window and open a new one, and the prompt should be shorter, with just your username."
+  },
+  {
+    "objectID": "a-bash-profile.html#hide-the-zsh-message",
+    "href": "a-bash-profile.html#hide-the-zsh-message",
+    "title": "Appendix G — Bash profile",
+    "section": "G.2 Hide the zsh message",
+    "text": "G.2 Hide the zsh message\nAdding this to your bash_profile hides the message about changing to zsh.\n# hides zsh prompt\nexport BASH_SILENCE_DEPRECATION_WARNING=1"
+  },
+  {
+    "objectID": "a-bash-profile.html#list-all-long-including-hidden",
+    "href": "a-bash-profile.html#list-all-long-including-hidden",
+    "title": "Appendix G — Bash profile",
+    "section": "G.3 List all long including hidden",
+    "text": "G.3 List all long including hidden\nWhen I want to see everything in a directory, including all the hidden files and the other details like size, date, etc., then the command is ls -al. But I put in a alias so all I have to type is ll to get that long list. Add this to your .bash_profile:\nalias ll=\"ls -al\""
+  },
+  {
+    "objectID": "a-git-share.html#goals",
+    "href": "a-git-share.html#goals",
+    "title": "Appendix H — Git: Sharing code",
+    "section": "H.1 Goals",
+    "text": "H.1 Goals\nWe’ll now see how you can collaborate in code with a classmate. Our goals are this:\n\nTo pick a partner\nTo clone their repo to your machine.\nTo edit the file and use the git cycle to commit the changes.\nTo go to your own repo and pull the changes made by your partner.\nWe’ll then introduce a code conflict and learn how to resolve it."
+  },
+  {
+    "objectID": "a-git-share.html#clone-a-repo",
+    "href": "a-git-share.html#clone-a-repo",
+    "title": "Appendix H — Git: Sharing code",
+    "section": "H.2 Clone a repo",
+    "text": "H.2 Clone a repo\n\nIn your browser, go to your partner’s Github profile and click on Repositories if necessary, then on their repo.\nLook for the button Clone or download. You want to copy the URL for cloning, like this:\n\n\n\n\nclone\n\n\n\nGo into your regular Terminal app and cd into ~/Documents/icj/.\nDo git clone URL but paste the URL you copied. This is the same as you did with your own repo, but now you have downloaded your partner’s repo.\n\nIf you wanted the repo to be a different name on your computer, you would add the name you want after the url. I tend to keep the same name unless there is a good reason not to."
+  },
+  {
+    "objectID": "a-git-share.html#make-your-edits",
+    "href": "a-git-share.html#make-your-edits",
+    "title": "Appendix H — Git: Sharing code",
+    "section": "H.3 Make your edits",
+    "text": "H.3 Make your edits\n\nLaunch VS Code if it isn’t already.\nGo to File &gt; New Window.\nUse the VS Code Explorer on the left to find your partner’s folder and open it.\nAdd a new sentence praising your partner’s command of git and Github thus far. Save and close the file.\nAdd a new file to the repo called newfile.md. There are a bunch of different ways you can do this … just choose one method:\n\nYou use your terminal (even in VS Code) and type touch newfile.md.\nYou can use the File &gt; New file menu and name it.\nYou can use the little buttons in the Explorer and name it.\n\nAdd a title and a paragraph of text, using proper Markdown syntax. Save and close your work. (Depending on time, we might talk about and load the Markdown Syntax Linter.)\nOpen the Integrated Terminal and go through the steps to check status, add files, commit files (with message), and push to origin master.\n\n\nBefore you can push, your partner probably needs to go into their Github repo and add you as a collaborator."
+  },
+  {
+    "objectID": "a-git-share.html#pull-your-partners-edits",
+    "href": "a-git-share.html#pull-your-partners-edits",
+    "title": "Appendix H — Git: Sharing code",
+    "section": "H.4 Pull your partner’s edits",
+    "text": "H.4 Pull your partner’s edits\n\nGo back to the VS Code window that is your own repo.\nUse the Integrated Terminal to do $ git pull origin master, which will download the changes made by your partner. Yes, pull is the opposite of push."
+  },
+  {
+    "objectID": "a-git-share.html#dealing-with-conflicts",
+    "href": "a-git-share.html#dealing-with-conflicts",
+    "title": "Appendix H — Git: Sharing code",
+    "section": "H.5 Dealing with conflicts",
+    "text": "H.5 Dealing with conflicts\nYou might ask yourself … what’s to keep two people from changing the same line of code? Well, they can, and you will. It creates a code conflict that must then be resolved.\nWe’re going to create such a conflict so you can see that this looks like.\n\nH.5.1 Your original change\n\nFind your VS Code window with your own repo and make a change within the first sentence.\nAdd, commit and push your changes to Github.\n\nSo now, in your partner’s copy of your repo, there is a change that they do not have.\n\n\nH.5.2 Change your partner’s repo\n\nGo back into your partner’s repo in VS Code and change that same first sentence, but do it in some different way.\nAdd, commit and try to push your changes. When you try to push, you won’t be able do. You’ll get a message something like this:\n\n$ git push origin master\nTo github.com:critmcdonald/christian-git-practice.git\n ! [rejected]        master -&gt; master (non-fast-forward)\nerror: failed to push some refs to 'github.com:critmcdonald/christian-git-practice.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n(base) ✘-1 ~/Documents/icj/christian-git-practice [master ↓·1↑·1|✔] \nYou can see from the hints in the error message, that there are changes on the remote repo that you don’t have. Git won’t let you push new changes unless you have the current remote copy from the server. That keeps you from screwing up something that is already there (which is kinda what we are doing).\nSo, you have to pull the remote changes first.\n\nDo $ git pull origin master to update your repo. It will work, but you’ll get message about the conflict.\n\n$ git pull origin master\nFrom github.com:critmcdonald/christian-git-practice.git\n * branch            master     -&gt; FETCH_HEAD\nAuto-merging newfile.md\nCONFLICT (content): Merge conflict in newfile.md\nAutomatic merge failed; fix conflicts and then commit the result.\n(base) ✘-1 ~/Documents/icj/christian-git-practice [master|MERGING ↓·1↑·1|✖ 1] \nNow look at the file in VS Code, and it will look pretty crazy. Here is mine:\n\n\n\nclone\n\n\nLet’s break this down:\n\nThe highlighted line with HEAD is the beginning of the conflict.\nThe other highlighted line is the end of the conflict.\nIt’s up to you to choose what should be inbetween those notes. You would of course want to discuss this with your collaborator and come to an agreement on what this should be. Fix up the file the way you have agreed and then remove all the notes and the line between the two pieces.\nOnce you have it the way you like it, save, add, commit and push.\n\n\n\nH.5.3 Get your own repo right\n\nGo back to your own repo in VS Code and do git pull origin master. Depending on how you resolved the conflict together, you might have to go through the process again. You might go look at the repo on Github and copy/paste the line to ensure you have it the same. Add, commit and push as necessary."
+  },
+  {
+    "objectID": "a-git-share.html#good-coding-practices-syntax",
+    "href": "a-git-share.html#good-coding-practices-syntax",
+    "title": "Appendix H — Git: Sharing code",
+    "section": "H.6 Good coding practices: Syntax",
+    "text": "H.6 Good coding practices: Syntax\nOne tactic to being a good collaborator with code is to follow syntax, meaning you write code to a shared standard. Each programming language has its own standard, including how many spaces to indent, how you capitialize, etc.\nWe’ve been writing in Markdown, and here are two resources about that syntax:\n\nMarkdown tutorial\nMarkdown syntax"
+  },
+  {
+    "objectID": "a-git-branch.html#feature-branch-workflow",
+    "href": "a-git-branch.html#feature-branch-workflow",
+    "title": "Appendix I — Git: Branches",
+    "section": "I.1 Feature branch workflow",
+    "text": "I.1 Feature branch workflow\nThe workflow I typically use is git feature branch workflow, and I use this even when I’m working solo on a project. Review the link above, but this is typically how it works:\n\nmaster is the branch in production or ready for production. It should always “work” with no bugs.\nCreate a feature branch to start on new work. Make your changes and push the branch to the repo.\nCreate a pull request to review changes. This allows you or others to see the changes within Github you are proposing to merge into master. There are tools in Github that allow for official reviews, comments and such. You will also see potential code conflicts.\nMake any changes necessary and push them to the feature branch.\nOnce ready, merge into master. All the history of your commits are added to master, and your newbranch has been deleted on Github.\n\nThere can be more to it in some shops, like rebasing and squashing, but we won’t get into that here."
+  },
+  {
+    "objectID": "a-git-branch.html#lets-do-it",
+    "href": "a-git-branch.html#lets-do-it",
+    "title": "Appendix I — Git: Branches",
+    "section": "I.2 Let’s do it",
+    "text": "I.2 Let’s do it\n\nGo into your “myproject-name” repo in VS code and open your Integrated Terminal.\nCreate your branch: $ git checkout -b newbranch.\n\nIf you have the git-bash-prompt installed, you’ll notice the name of the branch has changed in the square brackets.\n\nAdd a new file and call it branchfile.md. Add a title and some text using proper Markdown syntax.\nSave and add and commit your file, but when you push, you need to change that to $ git commit origin newbranch to ensure you are adding to your new branch. (It will give you an error if you try to push to master.) This is the result:\n\n$ git push origin featurebranch\nEnumerating objects: 4, done.\nCounting objects: 100% (4/4), done.\nDelta compression using up to 8 threads.\nCompressing objects: 100% (2/2), done.\nWriting objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.\nTotal 3 (delta 0), reused 0 (delta 0)\nTo github.com:critmcdonald/myproject-christian.git\n * [new branch]      featurebranch -&gt; featurebranch\n✔ ~/Documents/icj/myproject-christian [featurebranch L|✔]\n\nGo to your repo on Github, and you’ll notice your branchfile.md is not listed. This is because you are looking at your master branch.\nYou can click on branches to see all the branches, or use the branch dropdown to switch to your new branch on Github."
+  },
+  {
+    "objectID": "a-git-branch.html#create-a-pull-request",
+    "href": "a-git-branch.html#create-a-pull-request",
+    "title": "Appendix I — Git: Branches",
+    "section": "I.3 Create a pull request",
+    "text": "I.3 Create a pull request\n\nSince we just pushed a new branch, you might notice a yellow alert box that has a button where you can Compare & pull requet. If you have that, go ahead and click on it.\nIf you didn’t have that, you could click on the Pull requests tab at the top, and then choose a New pull request.\n\nThis is what you get:\n\n\n\npull reqeust\n\n\nYou can see from this page that you are merging the branch on the right, newbranch, into the branch on the left, which is master.\n\nHere you can give your pull request a title and a description. Your description might outline what is being changed, how to test it locally and whatever information your collaborators our your future self might want to know.\nClick the Create pull request button to create the pull request.\nThe next screen gives you summary of all the commits that are different from the master. It will list multiple files if there are differences.\n\n\n\n\npull reqeust\n\n\n\nThis process also outlines any conflicts there might be between the feature branch and master. You’ll have to fix them before you can merge.\nThe pull request also allows yourself and collaborators review all your changes and make comments.\nGo ahead and click Merge pull request and then Confirm merge to merge the branches.\n\nAt this point, you can delete the newbranch in Github, as indicated with a button. You don’t have to since all the commit history is now in master, but it’s a good idea to keep everything clean.\nNow let’s clean up our local repo.\n\nGo back to VS Code and into the Integrated Terminal, and switch back to master using git checkout master. It will look like this:\n\n$ git checkout master\nSwitched to branch 'master'\nYour branch is up-to-date with 'origin/master'.\n(base) ✔ ~/Documents/icj/myproject-christian [master|✔]\nYou might notice this says you “branch is up-to-date with ‘origin/master’, and that is confusing, because we know we merged changes that are on Github. This message is referring to your LOCAL branch, not the one on Github. We still need to pull in those changes:\n$ git pull origin master\nFrom github.com:critmcdonald/myproject-christian\n * branch            master     -&gt; FETCH_HEAD\nUpdating b36328f..c85740d\nFast-forward\n branchfile.md | 3 +++\n 1 file changed, 3 insertions(+)\n create mode 100644 branchfile.md\n✔ ~/Documents/icj/myproject-christian [master|✔]\nThis will pull the files from Github and bring them local.\nYou can always check what branches you have locally with $ git branch. Try it.\n16:13 $ git branch\n* master\n  newbranch\nThe newbranch on Github went away when we merged it, but now we can delete it locally:\n$ git branch -D newbranch\nDeleted branch newbranch (was 1345054).\n✔ ~/Documents/icj/myproject-christian [master|✔] \nThe capitalization of -D flag matters."
+  },
+  {
+    "objectID": "a-git-branch.html#git-commands",
+    "href": "a-git-branch.html#git-commands",
+    "title": "Appendix I — Git: Branches",
+    "section": "I.4 Git commands",
+    "text": "I.4 Git commands\nWe used a ton of git commands, and it was only a fraction. It’s a complex program. There are tons of cheet sheets out there on the googles, but this one is pretty clean."
   }
 ]

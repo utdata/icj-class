@@ -57,8 +57,8 @@ book:
         - sapp-06-bake-blog.qmd
     - fp-00-intro.qmd
   appendices:
-    - a-google-fonts.qmd
     - a-project.qmd
+    - a-google-fonts.qmd
     - a-fetch-problems.qmd
     - a-macos-shell.qmd
     - a-bash-files.qmd
