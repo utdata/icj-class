@@ -1,14 +1,12 @@
 # How to start a project
 
-::: callout
-Needs edit check
-:::
-
-A cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
+This is a cheatsheet and lesson on how to start a new project from scratch for Intro to Coding for Journalists. Students may use this in the early weeks of the class to create projects.
 
 Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#using-degit).
 
-~~Here is a [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.~~
+::: callout-tip
+There is a screencast video of this chapter in the class Canvas course under Pages > Screencast Appendix: Project Setup.
+:::
 
 ## Overview of the steps
 
@@ -51,8 +49,6 @@ As you work through the project, use the git cycle to save your code to your loc
 ## A very detailed version of starting a new project
 
 This is the same as above, but with more detail, description and visuals. 
-
-~~There is also this [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.~~
 
 ### Create your project folder
 
