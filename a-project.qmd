@@ -8,18 +8,15 @@ A cheatsheet and lesson on how to start a new project from scratch for Intro to 
 
 Starting a new project with `degit`, which we use later in the semester, is at the [bottom](#using-degit).
 
-> This is updated to use `main` instead of `master` as the default branch in Git/Github.
-
-> Here is a [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.
+~~Here is a [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.~~
 
 ## Overview of the steps
 
-These are the overall steps in case you just need reminders of the order. A more detailed breakdown is [below](#a-very-detailed-version-of-starting-a-new-project).
+These are the overall steps in case you just need reminders of the order. A more detailed breakdown  [follows](#a-very-detailed-version-of-starting-a-new-project).
 
 - Create a new folder for your project inside your `icj` folder. (You can use your regular computer operating system to do this.)
 - Launch VS Code.
-- Use **File > New Window** to open a fresh window.
-- Use **Open folder** to then find and choose your new folder.
+- Use **File > Open folder** to then find and choose the folder you created.
 - Create a `README.md` file.
   - Using [Markdown](#create-your-README), add a headline with the project name. Add text with your name and the due date of the project.
   - Save the file.
@@ -35,10 +32,10 @@ These are the overall steps in case you just need reminders of the order. A more
   - DO NOT include the README or .gitignore files.
 - Once created, review the lines of code Github suggests:
   - Make sure under "Quick setup — if you’ve done this kind of thing before" that the **SSH** button is selected (that the SSH button is grey and that the line of code next to is starts with **git@github** and NOT https.)
-  - Find the second block of code options "…or push an existing repository from the command line" and copy those multiple lines of code.
+  - Find the second block of code options "…or push an existing repository from the command line" and copy the first line of code show there that starts with `git remote add`.
 - Back in VS Code:
-  - In your Terminal in VS Code, paste in the lines of code from Github to run them.
-  - **You might have to hit return again** to run `git push origin main`.
+  - In your Terminal in VS Code, paste in the line of code and run it.
+  - Type and run the commenad `git push origin main`.
 
 You are now ready to complete the rest of the assignment. You can use the git cycle to commit any further changes.
 
@@ -53,7 +50,9 @@ As you work through the project, use the git cycle to save your code to your loc
 
 ## A very detailed version of starting a new project
 
-This is the same as above, but with more detail, description and visuals. There is also this [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.
+This is the same as above, but with more detail, description and visuals. 
+
+~~There is also this [screencast of the complete project setup](https://drive.google.com/file/d/1qdL7BS6wtk14Rise5YO9MTW9FLvyRw-k/view?usp=sharing) for a local project including README, gitignore, initializing git, creating a Github repo and connecting it to your local project.~~
 
 ### Create your project folder
 
@@ -76,9 +75,7 @@ Opening the folder in VS Code will make sure that your computer knows where all 
 
 - Launch VS Code
 - You might close any windows that might still be open.
-- Choose **File > New Window**.
-  - If your document tray is open, you might see a big button for **Open Folder**. Click it.
-  - Or, you can go to **File > Open** (Or use the keyboard command: _Command-O_).
+- Go to **File > Open Folder**, find your folder and select it, then click **Open**.
 - Once the folder opens, the document tray should show the folder name.
 
 ![Folder name](images/00-folder-open.png)
@@ -144,13 +141,11 @@ Now we create the repo in Github so we can connect to it.
 Once you create the repo, you'll get a page back with a lot of code.
 
 - Make sure the `SSH` button is selected in the top box.
-- Go to the second block "…or push an existing repository from the command line" and copy the code there to get the three lines.
+- Go to the second block "…or push an existing repository from the command line" copy the first line of code there and then run it in your VS Code Terminal.
 
 ![Connect to Github](images/00-connect-github.png)
 
-- Paste those into your terminal. You _might_ have to press return again to run the last line.
-
-From now on, you'll use `git push origin main` to push your code.
+Use `git push origin main` to push your code.
 
 If you want to make sure it worked, go back to your browser and refresh the page and you should see your files there.
 
@@ -167,6 +162,7 @@ Some class projects begin with a set of template files that already include a RE
 - `git add .` to add the files
 - `git commit -m "first commit` to save the files.
 - Create your repo in Github.com.
-- Copy the second block and run it. You might need to hit return again to run the last line, `git push origin main`.
+- Copy the first line within the second block and run it.
+- Use `git push origin main` to push your changes.
 
 You should be ready to continue with the assignment.
