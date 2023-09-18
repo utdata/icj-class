@@ -66,6 +66,8 @@ To get started:
   <title>JavaScript practice</title>
 </head>
 <body>
+  <h1>Your JavaScript page</h1>
+  <p>Use your Inspector to view your console.</p>
   <script>
     // Your code will go here
 
