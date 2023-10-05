@@ -564,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let’s describe what that does:</p>
 <ul>
-<li>The first line that starts with <code>//</code> is a comment we can use in Sass. This let’s up leave notes as developers, but they will be removed when the code is compiled.</li>
+<li>The first line that starts with <code>//</code> is a comment we can use in Sass. This let’s us leave notes as developers, but they will be removed when the code is compiled.</li>
 <li>We use the Sass syntax to start with <code>header</code> to capture that element, and then nest within that to write a style on the <code>lead</code> class.</li>
 <li>The two rules are the <code>font-weight: lighter;</code> and the color red.</li>
 </ul>
@@ -577,7 +577,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Next we’ll create our own style in CSS just like any normal HTML page.</p>
 <p>Within the middle section with the photo, let’s add a tagline as a final paragraph. We want it to be italic and flush right, and we want to build this as a new style so we can reuse in other places on our (fake) website.</p>
 <ol type="1">
-<li>On the <code>&lt;p&gt;</code> tag with the text “By Johannes Gutenberg”, add a call called “tagline”.</li>
+<li>On the <code>&lt;p&gt;</code> tag with the text “By Johannes Gutenberg”, add a class called “tagline”.</li>
 <li>Go into your <code>styles.scss</code> file and add a style rule for <code>.tagline</code> that sets the font-style to “italic” and text-align to “right”. This is just like writing any css style to a class, so I’ll let you figure it out.</li>
 </ol>
 <p>It should end up looking like this:</p>
