@@ -61,7 +61,7 @@ header {
 
 Let's describe what that does:
 
-- The first line that starts with `//` is a comment we can use in Sass. This let's up leave notes as developers, but they will be removed when the code is compiled.
+- The first line that starts with `//` is a comment we can use in Sass. This let's us leave notes as developers, but they will be removed when the code is compiled.
 - We use the Sass syntax to start with `header` to capture that element, and then nest within that to write a style on the `lead` class.
 - The two rules are the `font-weight: lighter;` and the color red.
 
@@ -73,7 +73,7 @@ Next we'll create our own style in CSS just like any normal HTML page.
 
 Within the middle section with the photo, let's add a tagline as a final paragraph. We want it to be italic and flush right, and we want to build this as a new style so we can reuse in other places on our (fake) website.
 
-1. On the `<p>` tag with the text "By Johannes Gutenberg", add a call called "tagline".
+1. On the `<p>` tag with the text "By Johannes Gutenberg", add a class called "tagline".
 1. Go into your `styles.scss` file and add a style rule for `.tagline` that sets the font-style to "italic" and text-align to "right". This is just like writing any css style to a class, so I'll let you figure it out.
 
 It should end up looking like this:
