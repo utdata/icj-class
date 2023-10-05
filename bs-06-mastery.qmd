@@ -4,7 +4,7 @@ You are going to build a three-page project using a Bootstrap development rig. T
 
 ::: {.panel-tabset}
 
-## Indes
+## Index
 
 ![](images/bs-page-index.png)
 
@@ -14,13 +14,13 @@ Index [full page link](images/bs-page-index.png).
 
 ![](images/bs-page-article.png)
 
-Article [full page link](bs-page-article.png)
+Article [full page link](images/bs-page-article.png)
 
 ## Carosel page
 
 ![](images/bs-page-photos.png)
 
-Carosel [full page link](bs-page-photos.png)
+Carosel [full page link](images/bs-page-photos.png)
 
 :::
 
