@@ -35,15 +35,18 @@ As you copy and paste code into your index.html file, you may have to adjust the
 
 There are a bajillion ways to customize both navs (the links) and navbars (the container). We'll explore the docs just a bit more to change some colors and set up themeing for later.
 
-1. Scroll a little further through the navbar docs and you'll get to a section about [color schemes](https://getbootstrap.com/docs/5.3/components/navbar/#color-schemes). Study how they work.
-1. Update your navbar classes to use `navbar-dark` and `bg-primary` combo.
+1. Scroll a little further through the navbar docs and you'll get to a section about [color schemes](https://getbootstrap.com/docs/5.3/components/navbar/#color-schemes). Study how they work. **We are going for this second one listed with the blue background.**
+1. Change the navbar style `bg-body-tertiary` to `bg-primary`. This changes the backgroud of the navbar to blue.
+1. Add the attribute `data-bs-theme="dark"` after the class, as shown in the example. This changes the text of the navbar to a light color to work against the darker background.
 1. Save and check your page.
 
-Your nav should turn blue with white type. Later we'll change the primary color to something different.
+::: callout-note
+We are glossing over that `data-bs-theme="dark"` attribute a bit, but this is a new option in Bootstrap that allows you to create a "dark mode" for your website, including a toggle to switch back and forth with "light mode". We won't get into that here, but you can [explore the documentation](https://getbootstrap.com/docs/5.3/customize/color-modes/) if you are interested.
+:::
 
 ### Review how nav works on mobile
 
-This navbar code includes some special classes and html that allows the menu items to collapse when viewed on small screens where they would knock into each other or wrap. We won't get into how it works (it's in the docs if you are interested) but I do want you to see and test it, especially the dropdown menus. Those dropdowns take JavaScript to work properly, so it is a good way to make sure Bootstrap is set up properly.
+This navbar code includes CSS and JavaScript that collapse links into a menu. By adding the `navbar-expand-lg` class here we control when those links expand to show across the page. Since that menu and the link dropdowns take JavaScript to work properly, testing those features is a good way to make sure Bootstrap is set up properly.
 
 1. Use your DevTools Inspector or change your window width to mobile to see the menu button.
 2. Click on it to make sure it works!
