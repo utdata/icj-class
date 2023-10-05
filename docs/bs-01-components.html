@@ -566,15 +566,28 @@ Note
 <h3 data-number="18.1.1" class="anchored" data-anchor-id="adjust-the-navbar-color"><span class="header-section-number">18.1.1</span> Adjust the navbar color</h3>
 <p>There are a bajillion ways to customize both navs (the links) and navbars (the container). We’ll explore the docs just a bit more to change some colors and set up themeing for later.</p>
 <ol type="1">
-<li>Scroll a little further through the navbar docs and you’ll get to a section about <a href="https://getbootstrap.com/docs/5.3/components/navbar/#color-schemes">color schemes</a>. Study how they work.</li>
-<li>Update your navbar classes to use <code>navbar-dark</code> and <code>bg-primary</code> combo.</li>
+<li>Scroll a little further through the navbar docs and you’ll get to a section about <a href="https://getbootstrap.com/docs/5.3/components/navbar/#color-schemes">color schemes</a>. Study how they work. <strong>We are going for this second one listed with the blue background.</strong></li>
+<li>Change the navbar style <code>bg-body-tertiary</code> to <code>bg-primary</code>. This changes the backgroud of the navbar to blue.</li>
+<li>Add the attribute <code>data-bs-theme="dark"</code> after the class, as shown in the example. This changes the text of the navbar to a light color to work against the darker background.</li>
 <li>Save and check your page.</li>
 </ol>
-<p>Your nav should turn blue with white type. Later we’ll change the primary color to something different.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We are glossing over that <code>data-bs-theme="dark"</code> attribute a bit, but this is a new option in Bootstrap that allows you to create a “dark mode” for your website, including a toggle to switch back and forth with “light mode”. We won’t get into that here, but you can <a href="https://getbootstrap.com/docs/5.3/customize/color-modes/">explore the documentation</a> if you are interested.</p>
+</div>
+</div>
 </section>
 <section id="review-how-nav-works-on-mobile" class="level3" data-number="18.1.2">
 <h3 data-number="18.1.2" class="anchored" data-anchor-id="review-how-nav-works-on-mobile"><span class="header-section-number">18.1.2</span> Review how nav works on mobile</h3>
-<p>This navbar code includes some special classes and html that allows the menu items to collapse when viewed on small screens where they would knock into each other or wrap. We won’t get into how it works (it’s in the docs if you are interested) but I do want you to see and test it, especially the dropdown menus. Those dropdowns take JavaScript to work properly, so it is a good way to make sure Bootstrap is set up properly.</p>
+<p>This navbar code includes CSS and JavaScript that collapse links into a menu. By adding the <code>navbar-expand-lg</code> class here we control when those links expand to show across the page. Since that menu and the link dropdowns take JavaScript to work properly, testing those features is a good way to make sure Bootstrap is set up properly.</p>
 <ol type="1">
 <li>Use your DevTools Inspector or change your window width to mobile to see the menu button.</li>
 <li>Click on it to make sure it works!</li>
