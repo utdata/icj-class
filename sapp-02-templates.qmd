@@ -16,8 +16,8 @@ Here are some screen shots of the finished product you are working toward.
 
 We need to add our project image files to our `src/img` folder in the app.
 
-1. Download the <i class="bi bi-download"></i> [ pirate-photos.zip](pirate-photos.zip){download="pirate-photos.zip"} file.
-2. Expand the folder and take the images inside and put them inside your `src/img/` folder.
+1. Download the <i class="bi bi-download"></i> [pirate-photos.zip](resources/pirate-photos.zip){download="pirate-photos.zip"} file.
+2. Expand the folder and take the images that are inside and move them to inside your `src/img/` folder.
 3. The browserSyncReload watch task should kick off and process the photos. If not, quit gulp (*Cntl-C*) and restart with `gulp dev`.
 
 ## Copy and rename the index

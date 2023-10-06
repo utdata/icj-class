@@ -10,6 +10,10 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 ```html
 {% extends '_templates/base.njk' %}
 
+{% block page_title %}Pirate ships{% endblock %}
+
+{% block page_description %}A list of pirate ships of lore from fact and fiction.{% endblock %}
+
 {% block content %}
 <article class="container">
   <h1>Ships of the Golden Age of pirates</h1>
@@ -88,28 +92,13 @@ I'll try to keep all of these terms straight, but I admit I mix them up.
 
 The key here is that we have downloaded this data, once we restart our dev environment the data will be "in context", meaning our program will allow us to access it.
 
-It's probably easier to do it than explain it.
-
-5. Restart `gulp dev`.
-7. Go into your `src/pirate-ships.njk` file.
-8. After our `<p>` tag in the intro, add a new line and add this:
-
-```html
-<h3>{{ pirates.ships[0].ship_name }}</h3>
-```
-
-When the page refreshes you should see "Queen Anne's Revenge" show up.
-
-`pirates` is the name of the file. `ships` is the name of the array. `[0]` is the order of the item, and we want the first one. Remember JavaScript starts counting at zero. `ship_name` is the object we are pulling from the item.
-
-Now go back into your ships page and change the number to `[1]` instead of `[0]` and save it. What do you think the result will be? Go back look at the page and see. After you've seen the change, you can go ahead and remove the H3 and contents, as we don't need it here. I just wanted to show how it works.
-
-So now we have a list of pirate ships in our project "context" and can build a cool list of them. That is next.
+We need to build something to hold the data before we can explain how to use it.
 
 ## Loops with data
 
 Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup).
 
+1. Make sure `gulp dev` is running.
 1. Go to the [Using grid markup](https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup) section in the docs and copy the code provided there.
 2. After the closing `</p>` tag for the intro, add a new line.
 3. Paste your code. This already has the row and columns we need.
@@ -152,7 +141,7 @@ That code should look like this, and descriptions follow:
   </div>
 ```
 
-Now you have eight cards! Let's break down what we've done here.
+Now you have eight cards! But how did it know we have eight ships? Let's break down what we've done here.
 
 Let's take this line: `{% for ship in pirates.ships %}`
 
@@ -164,14 +153,14 @@ Let's take this line: `{% for ship in pirates.ships %}`
 
 ### Update the headline
 
-At this point you are thinking "That's cool, Prof, but they are all the same." Well, remember when I showed above that we can call data from an array? We'll do that next, except we don't have to specify the order from the array since we've named the current pass as a "ship". We are now going to call that data in our loop.
+At this point you are thinking "That's cool, Prof, but they are all the same." Well, we can pull specific values from the data based on its key.
 
 1. For the headline in the `<h5>` text, replace "Special title treatment" with this: `{{ ship.ship_name }}`
 2. Save your file and go look at your page. Now you have a new ship name in each card.
 
 To call a variable from our data, we use the double curly-brace: `{{ }}`. (This is opposed to `{% %}` which does other things).
 
-Since we named a single item a "ship" we use that, and then use the dot notation to call the object key : `{{ ship.ship_name }}`. I like to put spaces around the names for readability, but it is not required.
+Since we named a single item a "ship" in our loop we use that, and then use the dot notation to call the object key : `{{ ship.ship_name }}`. I like to put spaces around the names for readability, but it is not required.
 
 OK, now admit that's kinda cool, right?
 
