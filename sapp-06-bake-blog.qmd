@@ -109,7 +109,7 @@ Now it's time to include a list of our blog entries on the index page. You'll us
 I'd like you to build a list of blog entries on the home page, and include the date of the entry, the headline and link to the blog entry. Here are some hints and things to think about.
 
 1. You have the blog data in context to use in a "for" loop. You are pulling `from blog.blogs`.
-2. You can build the HTML within the loop and use the data variables to get the headline, date and slug. The slug can be used to build the href to the blog entry. Just think about the path of where the blogs posts are relative to the index. The pages end in `.html`.
+2. You can build the HTML within the loop and use the data variables to get the `headline`, `date` and `slug`. The `slug` can be used to build the href to the blog entry. Just think about the path of where the blogs posts are relative to the index. The pages end in `.html`.
 3. If you build the loop in the same row/col as your intro text, then it will be the same width as that and look pretty decent.
 
 The "look" of these are up to you. You might keep it simple.
