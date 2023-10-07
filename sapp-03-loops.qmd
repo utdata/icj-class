@@ -127,7 +127,7 @@ That code should look like this, and descriptions follow:
 
 ```html
   <div class="row">
-    {% for ship in pirates.ships %} # <1>
+    {% for ship in pirates.ships %}
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
