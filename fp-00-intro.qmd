@@ -65,7 +65,7 @@ If you are doing your own project and have a similar type idea for extra credit,
 
 This idea is to build a website for the band Queen using the original members and studio albums.
 
-- A collection of photos in the <i class="bi bi-download"></i> [img-queen.zip](img-queen.zip){download="img-queen.zip"} archive. There are three collections of photos you'll want to put in the `src/img` folder:
+- A collection of photos in the <i class="bi bi-download"></i> [img-queen.zip](resources/img-queen.zip){download="img-queen.zip"} archive. There are three collections of photos you'll want to put in the `src/img` folder:
   - Band photos
   - Band members
   - Album covers
@@ -81,7 +81,7 @@ This idea is to build a website for the band Queen using the original members an
 
 This idea is to build a tourism microsite similar to what a local news organization might do.
 
-- A collection of photos in <i class="bi bi-download"></i> [img-austin.zip](img-austin.zip){download="img-austin.zip"} archive. There are three collections of photos you'll want to put in the `src/img` folder:
+- A collection of photos in <i class="bi bi-download"></i> [img-austin.zip](resources/img-austin.zip){download="img-austin.zip"} archive. There are three collections of photos you'll want to put in the `src/img` folder:
   - Austin wallpaper photos and logos
   - Landmarks
   - Restaurants

@@ -1,6 +1,6 @@
 # Bootstrap mastery
 
-You are going to build a three-page project using a Bootstrap development rig. There are screenshots of what I'm looking for at the bottom of this document. (You might peek at it real quick before moving on.)
+You are going to build a three-page project using a Bootstrap development rig. There are screenshots of what I'm looking for below.
 
 ::: {.panel-tabset}
 
@@ -61,7 +61,7 @@ I have images for you to use for this assignment, but  you have to set them a sp
 - Once the structure is set, move onto styles and other details for the index page.
 - I recommend finishing the index page before moving onto the other article and photo carousel page. (This minimizes the number of adjustments you have to make on multiple pages, though you'll need to make some adjustments to navigation.)
 
-See the example pages at the bottom to get an idea of what you are building.
+Again, see example screenshots at the top to get an idea of what you are building.
 
 ## The assignment
 

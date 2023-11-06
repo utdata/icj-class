@@ -816,7 +816,7 @@
     "href": "bs-06-mastery.html#strategy",
     "title": "23  Bootstrap mastery",
     "section": "23.3 Strategy",
-    "text": "23.3 Strategy\n\nBuild the framework of the index page first. Get the main components built and figure out your content before you worry about styles.\nOnce the structure is set, move onto styles and other details for the index page.\nI recommend finishing the index page before moving onto the other article and photo carousel page. (This minimizes the number of adjustments you have to make on multiple pages, though you’ll need to make some adjustments to navigation.)\n\nSee the example pages at the bottom to get an idea of what you are building."
+    "text": "23.3 Strategy\n\nBuild the framework of the index page first. Get the main components built and figure out your content before you worry about styles.\nOnce the structure is set, move onto styles and other details for the index page.\nI recommend finishing the index page before moving onto the other article and photo carousel page. (This minimizes the number of adjustments you have to make on multiple pages, though you’ll need to make some adjustments to navigation.)\n\nAgain, see example screenshots at the top to get an idea of what you are building."
   },
   {
     "objectID": "bs-06-mastery.html#the-assignment",
