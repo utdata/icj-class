@@ -242,7 +242,6 @@ In the Semantic HTML lesson you learned that we use some HTML tags to designate 
 While we don't have a full website page here with navigation and such, I want you to mark up the parts of the pages that we do have:
 
 1. Add an `<article>` tag that encapsulates everything within our `<body>` thus far. So it should start right after the opening `<body>` tag and close right before the closing `</body>` tag.
-2. Use a `<header>` tag to wrap the code starting at the main headline and ending after the definition list. In other words, stop it before the `<figure>` tag, which we've already added.
 3. Add separate `<section>` tags around the Ingredients, Preparation and Nutrition sections. Each of those sections should be inside their own `<section>` tag.
 4. Add a new `<footer>` tag and child `<p>` tag **after** the closing `</article>` tag. Inside the paragraph tag, add the text "A class project by First Last" but with your name.
 

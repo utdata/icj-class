@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.542">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -101,17 +108,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <body class="nav-sidebar floating">
 
-
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sapp-00-intro.html">Static apps intro</a></li><li class="breadcrumb-item"><a href="./sapp-02-templates.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Templates and blocks</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sapp-00-intro.html">Static apps intro</a></li><li class="breadcrumb-item"><a href="./sapp-02-templates.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Templates and blocks</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -121,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Intro to Coding for Journalists</a> 
@@ -477,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -501,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sapp-00-intro.html">Static apps intro</a></li><li class="breadcrumb-item"><a href="./sapp-02-templates.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Templates and blocks</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Templates and blocks</span></h1>
 </div>
@@ -516,7 +522,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>We’re going to rebuild the framework of the Pirate Cove site you built in the Bootstrap assignment using this new structure to improve code efficiency and site maintainability. We’ll build the index, a new page listing pirate ships and multiple blog entries.</p>
 <section id="page-previews" class="level2" data-number="25.1">
@@ -525,19 +533,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-done-index.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Index page</figcaption>
+<figcaption>Index page</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-done-pirate-ships.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Pirate ship page</figcaption>
+<figcaption>Pirate ship page</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-done-entry-page.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Entry page example</figcaption>
+<figcaption>Entry page example</figcaption>
 </figure>
 </div>
 </section>
@@ -560,9 +568,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{% extends '_templates/base.njk' %}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>{% block content %}</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"container"</span><span class="kw">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>Content goes here<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"container"</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Content goes here<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>{% endblock %}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Your browserSyncReload should’ve kicked off as you renamed and added files. If you look at your index page now it just has the navigation, footer and the text “Content goes here”. If that isn’t happening, run <code>gulp dev</code>.</p>
 <p>Now, it’s likely you are looking at this <code>index.njk</code> file and wondering how these few lines of code displays more than just one line of text in the browser? Where is the navigation coming from? Or the footer? This is the magic of Nunjucks.</p>
@@ -583,14 +591,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-default-title.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Default title</figcaption>
+<figcaption>Default title</figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
 <li>Now open the file <code>src/_templates/base.njk</code></li>
 <li>Take a look at the <code>&lt;title&gt;</code> tag here:</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>{% block page_title %}Default title{% endblock %}<span class="kw">&lt;/title&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>{% block page_title %}Default title{% endblock %}<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This is an example of the Nunjucks <em>block</em> tag, and this one is called “page_title”. Some notes about this:</p>
 <ul>
 <li>Nunjucks block tags start with <code>{% block tag_name %}</code> and end with <code>{% endblock %}</code>.</li>
@@ -613,14 +621,14 @@ Tip
 <ol start="4" type="1">
 <li>In you <code>src/_templates/base.njk</code> file. On the line that looks like this: <code>&lt;title&gt;{% block page_title %}Default title{% endblock %}&lt;/title&gt;</code>, add “Pirate Cove |” right after the <code>&lt;title&gt;</code> tag so it looks like this:</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;title&gt;</span>Pirate Cove | {% block page_title %}Default title{% endblock %}<span class="kw">&lt;/title&gt;</span>`</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Pirate Cove | {% block page_title %}Default title{% endblock %}<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span>`</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="5" type="1">
 <li>Save the file and go look at your index page in your browser. Now you title should look like this:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-title-pirate-cove.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">title-pirate-cove</figcaption>
+<figcaption>title-pirate-cove</figcaption>
 </figure>
 </div>
 <p>Because we changed this on <code>base.njk</code> it will apply to <em>EVERY</em> page on our site.</p>
@@ -633,7 +641,7 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-default-title-edit.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Default title edited</figcaption>
+<figcaption>Default title edited</figcaption>
 </figure>
 </div>
 <p>So, we have “Pirate Cove |” on every page, and on this specific page we have replaced “Default title” with new title text in the <code>{% block page_title %}</code> block.</p>
@@ -650,15 +658,15 @@ Tip
 <li>Find the <code>navbar-brand</code> segment and update the text “Navbar” to “Pirate Cove”.</li>
 <li>AFTER the line that has <code>&lt;ul class="navbar-nav"&gt;</code> (about line 8), add the following:</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;li</span> <span class="er">class</span><span class="ot">=</span><span class="st">"nav-item"</span><span class="kw">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;a</span> <span class="er">class</span><span class="ot">=</span><span class="st">"nav-link"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"{{ relative_path }}pirate-ships.html"</span><span class="kw">&gt;</span>Pirate ships<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/li&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;li</span> <span class="er">class</span><span class="ot">=</span><span class="st">"nav-item"</span><span class="kw">&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>         <span class="kw">&lt;a</span> <span class="er">class</span><span class="ot">=</span><span class="st">"nav-link"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"{{ relative_path }}index-example.html"</span><span class="kw">&gt;</span>Index example<span class="kw">&lt;/a&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/li&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"nav-item"</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>         <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"nav-link"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ relative_path }}pirate-ships.html"</span><span class="dt">&gt;</span>Pirate ships<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">li</span><span class="ot"> class</span><span class="op">=</span><span class="st">"nav-item"</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>         <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> class</span><span class="op">=</span><span class="st">"nav-link"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ relative_path }}index-example.html"</span><span class="dt">&gt;</span>Index example<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You might have to fix in indenting in some of the code block so it lines up with the <code>&lt;/li&gt;</code> that follows it.</p>
 <p>Now, if you look at your index in your browser, you’ll see we’ve added two new navigation links. One is to the original index example (so we can see it later), and the other is a new page that we will create later.</p>
-<p>You might notice that we have this <code>{{ relative_path }}</code> in front of our URLs here in the nav. Not to get too far into it, but we will need that later when we create new web pages inside folders on our site. Those pages will need to understand where they are in relation to the index.</p>
+<p>You might notice that we have this <code>{ relative_path }</code> in front of our URLs here in the nav. Not to get too far into it, but we will need that later when we create new web pages inside folders on our site. Those pages will need to understand where they are in relation to the index.</p>
 </section>
 <section id="the-jumbotron" class="level2" data-number="25.6">
 <h2 data-number="25.6" class="anchored" data-anchor-id="the-jumbotron"><span class="header-section-number">25.6</span> The jumbotron</h2>
@@ -669,12 +677,12 @@ Tip
 <li>Create a new file <code>src/_includes/jumbotron.njk</code>.</li>
 <li>Insert into it the following code:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"jumbo"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"p-5 mb-4 bg-light"</span><span class="kw">&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"container-fluid py-5 text-center"</span><span class="kw">&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1</span> <span class="er">class</span><span class="ot">=</span><span class="st">"display-5 fw-bold"</span><span class="kw">&gt;</span>Ship's Log<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p&gt;</span>A diary by Capt. Crit 'Red Beard' McGillicutty<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"jumbo"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"p-5 mb-4 bg-light"</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"container-fluid py-5 text-center"</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> class</span><span class="op">=</span><span class="st">"display-5 fw-bold"</span><span class="dt">&gt;</span>Ship's Log<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>A diary by Capt. Crit 'Red Beard' McGillicutty<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now that we have the include built, we can add it to the <code>base.njk</code> on a new line after the nav include:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>{% include "_includes/jumbotron.njk" %}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you look at your browser now you should see the beginnings of a jumbotron, though it doesn’t quite look right with our photo and such as we haven’t added CSS to make it so. That is next.</p>
@@ -718,12 +726,12 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/static-emmet-div.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">static-emmet-gif</figcaption>
+<figcaption>static-emmet-gif</figcaption>
 </figure>
 </div>
 <p>OK, now inside this we are going to add an H1 and some text that would be the introduction to the site, but we’ll use lorem ipsum (fake text) just to get it done.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h1&gt;</span>A pirate's life is for me<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>A pirate's life is for me<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="3" type="1">
 <li>Add the code inside the col div. Make sure all your indents are clean.</li>
 </ol>
@@ -812,10 +820,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -825,8 +832,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -839,6 +855,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -882,6 +1012,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -907,6 +1038,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -968,17 +1125,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./sapp-01-framework.html" class="pagination-link">
+      <a href="./sapp-01-framework.html" class="pagination-link  aria-label=" &lt;span="" static="" app="" framework&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The static app framework</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./sapp-03-loops.html" class="pagination-link">
+      <a href="./sapp-03-loops.html" class="pagination-link" aria-label="<span class='chapter-number'>26</span>&nbsp; <span class='chapter-title'>Data and loops</span>">
         <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Data and loops</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

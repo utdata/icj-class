@@ -291,14 +291,15 @@ Now your recipe stats should look like our example above.
 
 Another tool to control the position of elements on an page is the [`width`](https://www.w3schools.com/cssref/pr_dim_width.php) style, which we will use to divide our page based on the percentage of our page.
 
-If you look at our finished example at the top of this lesson you'll see that the photo and caption are sitting to the right of the headline, byline and such. We'll use `float` to move the header element to the left of the figure element, but we also need to regulate how wide all these things are so they fit in our story well.
+If you look at our finished example at the top of this lesson you'll see that the photo and caption are sitting to the right of the headline, byline and such. We'll use `float` to move the several elements to the left of the figure element, but we also need to regulate how wide all these things are so they fit in our story well.
 
 One challenge is that our website will likely have LOTS of figures/photos, so we want to move just this one display as it relates to the main image in a recipe story. Since there is always only ONE main image for each recipe, we can use an `id` to target this and manipulate it.
 
-So there are two steps here: Edit our HTML to add the `id`, then write styles to manipulate it.
+We have to edit our HTML in a couple of ways so we can write styles to manipulate it.
 
 
-1. In your `recipe.html` file, find your `<figure>` tag and add the id called "main-recipe-photo": `<figure id="main-recipe-photo">`. Save the HTML file.
+1. In your `recipe.html` file, add a `<div id="head-section">` that starts before your `<h1>` tag and ends just before the `<figure>` tag. 
+1. Next, find your `<figure>` tag and add the id called "main-recipe-photo": `<figure id="main-recipe-photo">`. Save the HTML file.
 1. Go into your `styles.css` file and add the following rules:
 
 ::: callout-tip
@@ -306,7 +307,7 @@ Again, try adding these three rules one at time so you see how each one affects 
 :::
 
 ```css
-header {
+div#head-section {
   float: left;
   width: 48%;
 }
@@ -325,7 +326,7 @@ figure#main-recipe-photo img {
 
 This is a lot to break down.
 
-- In the `header`, we set the whole element (which includes the two headlines, byline and stats box) to float to the left and only take up `48%` of the page.
+- In the `<div id="head-section>` tag we set the whole element (which includes the two headlines, byline and stats box) to float to the left and only take up `48%` of the page. Note this style targets only divs with an `id` of "head-section".
 - Then we take the `figure` and float it to the right and make it only `48%` the page. It moves it, but the photo is too big to fit in that space. Note we are targeting only figures with an `id` of "main-recipe-photo" so this would not affect other photos on the page.
 - So in the last rule we target images inside figures with an id of "main-recipe-photo" and set the width to be `100%` of the available space, which is that 48% segment within the figure. We add a margin so it starts about even the main headline.
 

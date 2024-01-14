@@ -10,6 +10,8 @@ You'll make a news story, something like this:
 
 ![Finished mastery page](images/css-mastery-example.gif)
 
+Here is a [PNG of the mastery project](images/css-mastery-done.png), which might be easier to study.
+
 ## Requirements
 
 ::: callout-tip

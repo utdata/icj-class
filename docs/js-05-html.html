@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.542">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -101,17 +108,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <body class="nav-sidebar floating">
 
-
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-05-html.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS with html</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-05-html.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS with html</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -121,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Intro to Coding for Journalists</a> 
@@ -477,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -501,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="./js-05-html.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS with html</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JS with html</span></h1>
 </div>
@@ -516,7 +522,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>As we have worked on JavaScript so far, it has been a bit academic … there has been no action on our web page. Let’s change that, and marry our JavaScript to our HTML and make our our page do something.</p>
 <section id="the-document-object-model" class="level2" data-number="13.1">
@@ -538,7 +546,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/js-form.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Our js-form</figcaption>
+<figcaption>Our js-form</figcaption>
 </figure>
 </div>
 <p>Now let’s get down to the detail.</p>
@@ -552,14 +560,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 tags of the document, add the following HTML code. I’ll explain afterward:</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;form</span> <span class="er">id</span><span class="ot">=</span><span class="st">"nameForm"</span><span class="kw">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>First name: <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"first"</span> <span class="er">value</span><span class="ot">=</span><span class="st">"Aragorn"</span><span class="kw">&gt;&lt;/p&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>Middle name: <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"middle"</span> <span class="er">value</span><span class="ot">=</span><span class="st">"Elessar"</span><span class="kw">&gt;&lt;/p&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>Last name: <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text"</span> <span class="er">name</span><span class="ot">=</span><span class="st">"last"</span> <span class="er">value</span><span class="ot">=</span><span class="st">"Telcontar"</span><span class="kw">&gt;&lt;/p&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">value</span><span class="ot">=</span><span class="st">"Make name"</span><span class="kw">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/form&gt;</span> </span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span><span class="ot"> id</span><span class="op">=</span><span class="st">"nameForm"</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>First name: <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"first"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Aragorn"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Middle name: <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"middle"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Elessar"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Last name: <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"text"</span><span class="ot"> name</span><span class="op">=</span><span class="st">"last"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Telcontar"</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"button"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Make name"</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span> </span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;h3</span> <span class="er">id</span><span class="ot">=</span><span class="st">"nameHead"</span><span class="kw">&gt;</span>Name will go here<span class="kw">&lt;/h3&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">h3</span><span class="ot"> id</span><span class="op">=</span><span class="st">"nameHead"</span><span class="dt">&gt;</span>Name will go here<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
 <li>Save your file and use <strong>Go Live</strong> to start a live server.</li>
 </ol>
@@ -576,7 +584,7 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <li>Copy the <code>&lt;script&gt;</code> tag below and place it between our form element and the closing <code>&lt;/body&gt;</code> tag on the page.</li>
 </ol>
 <p>Here is the code:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">makeBetterName</span>(fName<span class="op">,</span> mName<span class="op">,</span> lName) {</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (mName<span class="op">.</span><span class="at">length</span> <span class="op">===</span> <span class="dv">1</span>) {</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    mName <span class="op">=</span> mName <span class="op">+</span> <span class="st">"."</span><span class="op">;</span></span>
@@ -584,7 +592,7 @@ tags of the document, add the following HTML code. I’ll explain afterward:</li
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> fullName <span class="op">=</span> fName <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> mName <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> lName<span class="op">;</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> fullName<span class="op">;</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This is a copy of our makeBetterName function from the last exercise. We’ll now refactor it to meet our needs here.</p>
 </section>
 <section id="modify-our-function" class="level2" data-number="13.5">
@@ -637,7 +645,7 @@ If time: It might be worth showing in class how to use the Console to test how t
 <li>Remove the <code>console.log(makeBetterName())</code> line that we added earlier to test the function.</li>
 <li>In form in the HTML body, update the input button to the following:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">value</span><span class="ot">=</span><span class="st">"Make name"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">"makeBetterName()"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">input</span><span class="ot"> type</span><span class="op">=</span><span class="st">"button"</span><span class="ot"> value</span><span class="op">=</span><span class="st">"Make name"</span><span class="ot"> onclick</span><span class="op">=</span><span class="st">"makeBetterName()"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>What we’ve done here is used the <a href="https://www.w3schools.com/jsref/event_onclick.asp">onclick Event</a> to add interactivity to our button. Until now it was just an element on the page that didn’t do anything, but now when we click on the button it fires the <code>makeBetterName</code> function, which uses our “name machine” to insert our text inside the <code>&lt;h3&gt;</code> we’ve specified through its id.</p>
 <ol type="1">
 <li>Save your file and refresh the page.</li>
@@ -734,10 +742,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -747,8 +754,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -761,6 +777,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -804,6 +934,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -829,6 +960,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -888,20 +1045,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./js-04-objects.html" class="pagination-link">
+      <a href="./js-04-objects.html" class="pagination-link  aria-label=" &lt;span="" objects&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JS Objects</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./js-06-datatables.html" class="pagination-link">
+      <a href="./js-06-datatables.html" class="pagination-link" aria-label="<span class='chapter-number'>14</span>&nbsp; <span class='chapter-title'>JS jQuery/Datatables</span>">
         <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

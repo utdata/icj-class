@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.542">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -81,7 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -90,6 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -101,17 +108,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <body class="nav-sidebar floating">
 
-
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./html-css-00-intro.html">HTML &amp; CSS</a></li><li class="breadcrumb-item"><a href="./css-01-practice.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">CSS practice</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./html-css-00-intro.html">HTML &amp; CSS</a></li><li class="breadcrumb-item"><a href="./css-01-practice.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">CSS practice</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -121,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Intro to Coding for Journalists</a> 
@@ -477,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -522,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./html-css-00-intro.html">HTML &amp; CSS</a></li><li class="breadcrumb-item"><a href="./css-01-practice.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">CSS practice</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">CSS practice</span></h1>
 </div>
@@ -537,7 +543,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>The CSS language is the skin and DNA attributes that changes the look of the HTML skeleton. We use the hierarchical rules of CSS (Cascading Style Sheets) to set fonts, colors, positioning and more. In this lesson, we’ll take the HTML skeleton we made in our previous lesson and make it pretty.</p>
 <section id="tutorials" class="level2" data-number="7.1">
@@ -575,7 +583,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-done.gif" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Finished practice page</figcaption>
+<figcaption>Finished practice page</figcaption>
 </figure>
 </div>
 <p>Here is a <a href="images/css-done.png">PNG of the practice project</a>, which might be easier to study.</p>
@@ -603,14 +611,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/3-browser-reset-ex01.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Browser example 1</figcaption>
+<figcaption>Browser example 1</figcaption>
 </figure>
 </div>
 <p>And a little further down the page, notice the difference in the size of the bullets and the line height between lines.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/3-browser-reset-ex02.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Browser example 2</figcaption>
+<figcaption>Browser example 2</figcaption>
 </figure>
 </div>
 <section id="add-the-reset-file" class="level3" data-number="7.4.1">
@@ -622,13 +630,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>We need to add a link in our HTML stylesheet to the reset CSS stylesheet. Put this before the closing <code>&lt;/head&gt;</code> tag.</li>
 </ol>
 <p>(If you start typing “link” then Emmet will give you options, where you can choose <code>link:css</code>.)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"reset.css"</span><span class="kw">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"reset.css"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <a href="https://www.w3schools.com/tags/tag_link.asp">link</a> tag basically connects these files together. I’ll be honest … I never remember how to write it … I depend on Emmet or look it up.</p>
 <p>Save your page and look at you Live Server to watch your something-kinda-special web page turn into muck.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-after-reset.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Page after reset</figcaption>
+<figcaption>Page after reset</figcaption>
 </figure>
 </div>
 </section>
@@ -649,8 +657,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Now we’ll add some defaults for the <code>&lt;html&gt;</code> tag in the <code>styles.css</code> file. Add this to the top, then save both the css and html files.</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>html {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">'Times New Roman'</span><span class="op">,</span> Times<span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">62.5</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">'Times New Roman'</span><span class="op">,</span> <span class="dv">Times</span><span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">62.5</span><span class="dt">%</span><span class="op">;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you check your live server you’ll see things got worse … everything is super small now. Don’t worry, we’ll fix it.</p>
 </section>
@@ -658,9 +666,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="set-text-sizes"><span class="header-section-number">7.4.4</span> Set text sizes</h3>
 <p>Let’s fix up the text sizes. We’re going to set a base size for all basic text elements, and then change them later in the places where we need them. Add this to your styles file:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p<span class="op">,</span> ul<span class="op">,</span> ol<span class="op">,</span> dl {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">1.6</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">line-height</span>: <span class="dv">1.8</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.6</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">1.8</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>What this has done is set all text-type elements at what is the equivalent to <code>16px</code>, but we’ve used the <code>rem</code> measurement to set it relative to the base size, which was essentially 10px.</p>
 <p>We’ve set a line-height so lines of type don’t sit on top of each other and we’ve also given all of those elements a bottom margin so the elements have some space between them.</p>
@@ -670,24 +678,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="7.4.5" class="anchored" data-anchor-id="set-headline-sizes"><span class="header-section-number">7.4.5</span> Set headline sizes</h3>
 <p>Now we’ll set headlines font and sizes. Add this to your <code>styles.css</code> file, save and refresh your browser:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3<span class="op">,</span> h4<span class="op">,</span> h5<span class="op">,</span> h6 {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: Tahoma<span class="op">,</span> Arial<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="dv">Tahoma</span><span class="op">,</span> <span class="dv">Arial</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>h1 {</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">2.7</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">line-height</span>: <span class="dv">3.1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">20</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">2.7</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">3.1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>h2 {</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">line-height</span>: <span class="dv">2.4</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">16</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">2.4</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">16</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>h3 {</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">1.75</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">25</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.75</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span><span class="ch">:</span> <span class="dv">25</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The first rule sets the font to a series of sans serif fonts, and we’ve done it for all headline sizes.</p>
 <p>The other rules set sizes and margins for various sizes of headlines. You’ll notice that the margins are set in a single line. You can <a href="https://www.w3schools.com/css/css_margin.asp">review the rules regarding that here</a>.</p>
@@ -700,17 +708,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>In <code>styles.css</code>, add the following styles:</li>
 </ol>
 <div class="sourceCode" id="cb5"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>article {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-width</span>: <span class="dv">620</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-width</span><span class="ch">:</span> <span class="dv">620</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-right</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This <code>margin-&lt;direction&gt;: auto;</code> style was discussed in the Learn CSS lesson in Codecademy.</p>
 <p>If you’ve done this right, your live server should show that all the content is centered on the page.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-after-article.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Page after fonts, width set</figcaption>
+<figcaption>Page after fonts, width set</figcaption>
 </figure>
 </div>
 </section>
@@ -747,7 +755,7 @@ Important
 <ol type="1">
 <li>Add the style below for the byline</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.byline</span> {<span class="kw">font-family</span>: Tahoma<span class="op">,</span> Arial<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.byline</span> {<span class="kw">font-family</span><span class="ch">:</span> <span class="dv">Tahoma</span><span class="op">,</span> <span class="dv">Arial</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We’ve changed the font from the default to Tahoma, with some backups in case a user doesn’t have that font.</p>
 <p>About font names … If you wanted to use Franklin Gothic as as a font it would need to be in quotes because it is multiple words: <code>font-family: "Franklin Gothic", Arial, sans-serif;</code>.</p>
 <p>We will style to an <code>id=</code> attribute a little later in the assignment.</p>
@@ -762,7 +770,7 @@ Important
 <li>Add/modify rules rules in the Styles tab of the Inspector.</li>
 </ol>
 <p>Here is a video example.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/845760554" frameborder="0" allow="autoplay; title=" "="" fullscreen;="" picture-in-picture"="" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://player.vimeo.com/video/845760554" frameborder="0" title="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>I’ll drop a couple more tips as we go through the lesson.</p>
 </section>
 </section>
@@ -772,7 +780,7 @@ Important
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-stats-example.png" class="img-fluid figure-img" width="300"></p>
-<figcaption class="figure-caption">Stats box</figcaption>
+<figcaption>Stats box</figcaption>
 </figure>
 </div>
 <p>We’ll get to the text placement next, but let’s set up the fancy lines at the top and bottom of the description list first.</p>
@@ -780,14 +788,14 @@ Important
 <li>Add styles for the <code>dl</code> element to add dotted lines:</li>
 </ol>
 <div class="sourceCode" id="cb7"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dl {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-bottom</span>: <span class="dv">1</span><span class="dt">px</span> <span class="cn">grey</span> <span class="dv">dotted</span><span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-top</span>: <span class="dv">1</span><span class="dt">px</span> <span class="cn">grey</span> <span class="dv">dotted</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="cn">grey</span> <span class="dv">dotted</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-top</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="cn">grey</span> <span class="dv">dotted</span><span class="op">;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Check your live server to see the borders. We used a <a href="https://www.w3schools.com/cssref/pr_border.asp">shorthand for the border property</a> that allows us to set the size, color and style in one rule.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-stats-lines.png" class="img-fluid figure-img" width="300"></p>
-<figcaption class="figure-caption">Description list with borders</figcaption>
+<figcaption>Description list with borders</figcaption>
 </figure>
 </div>
 </section>
@@ -812,9 +820,9 @@ Tip
 </div>
 </div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dt {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-right</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span>: <span class="dv">bold</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span><span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-right</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">bold</span><span class="op">;</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>The first rule moves the <code>&lt;dt&gt;</code> elements to the left of any element that follows.</li>
@@ -825,20 +833,21 @@ Tip
 <ol start="2" type="1">
 <li><strong>EDIT</strong> your rules on the <code>&lt;dl&gt;</code> element to add each line below. <em>Again, try adding them one at a time so you see what each rule does</em>.</li>
 </ol>
-<div class="sourceCode" id="cb9"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  font-family<span class="in">: Tahoma</span><span class="op">,</span> Arial<span class="op">,</span> sans-serif;</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  font-size<span class="in">: 1.4rem;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  padding<span class="in">: 12px 0px;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  margin-top<span class="in">: 16px;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  font-family<span class="in">:</span> Tahoma<span class="op">,</span> Arial<span class="op">,</span> sans-serif;</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  font-size<span class="in">:</span> 1<span class="fu">.4rem</span>;</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  padding<span class="in">:</span> 12px 0px;</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  margin-top<span class="in">:</span> 16px;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Now your recipe stats should look like our example above.</p>
 </section>
 <section id="percentage-widths" class="level2" data-number="7.9">
 <h2 data-number="7.9" class="anchored" data-anchor-id="percentage-widths"><span class="header-section-number">7.9</span> Percentage widths</h2>
 <p>Another tool to control the position of elements on an page is the <a href="https://www.w3schools.com/cssref/pr_dim_width.php"><code>width</code></a> style, which we will use to divide our page based on the percentage of our page.</p>
-<p>If you look at our finished example at the top of this lesson you’ll see that the photo and caption are sitting to the right of the headline, byline and such. We’ll use <code>float</code> to move the header element to the left of the figure element, but we also need to regulate how wide all these things are so they fit in our story well.</p>
+<p>If you look at our finished example at the top of this lesson you’ll see that the photo and caption are sitting to the right of the headline, byline and such. We’ll use <code>float</code> to move the several elements to the left of the figure element, but we also need to regulate how wide all these things are so they fit in our story well.</p>
 <p>One challenge is that our website will likely have LOTS of figures/photos, so we want to move just this one display as it relates to the main image in a recipe story. Since there is always only ONE main image for each recipe, we can use an <code>id</code> to target this and manipulate it.</p>
-<p>So there are two steps here: Edit our HTML to add the <code>id</code>, then write styles to manipulate it.</p>
+<p>We have to edit our HTML in a couple of ways so we can write styles to manipulate it.</p>
 <ol type="1">
-<li>In your <code>recipe.html</code> file, find your <code>&lt;figure&gt;</code> tag and add the id called “main-recipe-photo”: <code>&lt;figure id="main-recipe-photo"&gt;</code>. Save the HTML file.</li>
+<li>In your <code>recipe.html</code> file, add a <code>&lt;div id="head-section"&gt;</code> that starts before your <code>&lt;h1&gt;</code> tag and ends just before the <code>&lt;figure&gt;</code> tag.</li>
+<li>Next, find your <code>&lt;figure&gt;</code> tag and add the id called “main-recipe-photo”: <code>&lt;figure id="main-recipe-photo"&gt;</code>. Save the HTML file.</li>
 <li>Go into your <code>styles.css</code> file and add the following rules:</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -854,23 +863,23 @@ Tip
 <p>Again, try adding these three rules one at time so you see how each one affects the layout.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>header {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">48</span><span class="dt">%</span><span class="op">;</span></span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>div<span class="pp">#head-section</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span><span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">48</span><span class="dt">%</span><span class="op">;</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>figure<span class="pp">#main-recipe-photo</span> {</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">48</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">48</span><span class="dt">%</span><span class="op">;</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>figure<span class="pp">#main-recipe-photo</span> img {</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This is a lot to break down.</p>
 <ul>
-<li>In the <code>header</code>, we set the whole element (which includes the two headlines, byline and stats box) to float to the left and only take up <code>48%</code> of the page.</li>
+<li>In the <code>&lt;div id="head-section&gt;</code> tag we set the whole element (which includes the two headlines, byline and stats box) to float to the left and only take up <code>48%</code> of the page. Note this style targets only divs with an <code>id</code> of “head-section”.</li>
 <li>Then we take the <code>figure</code> and float it to the right and make it only <code>48%</code> the page. It moves it, but the photo is too big to fit in that space. Note we are targeting only figures with an <code>id</code> of “main-recipe-photo” so this would not affect other photos on the page.</li>
 <li>So in the last rule we target images inside figures with an id of “main-recipe-photo” and set the width to be <code>100%</code> of the available space, which is that 48% segment within the figure. We add a margin so it starts about even the main headline.</li>
 </ul>
@@ -878,10 +887,10 @@ Tip
 <h3 data-number="7.9.1" class="anchored" data-anchor-id="style-our-figcaption"><span class="header-section-number">7.9.1</span> Style our figcaption</h3>
 <p>Let’s pretty up our figure caption. There is nothing new here, but we need to add a style for the <code>figcaption</code> element. We are setting this to the element because we want this style for all our captions across our page and website.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>figcaption {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: Tahoma<span class="op">,</span> Arial<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">1.2</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="dv">Tahoma</span><span class="op">,</span> <span class="dv">Arial</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.2</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We’re just setting font styles and giving a little space between stuff.</p>
 </section>
@@ -891,14 +900,14 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-figure-floats.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">After setting figure floats</figcaption>
+<figcaption>After setting figure floats</figcaption>
 </figure>
 </div>
 <p>As you can see here, the intro is creeping up under the photo, but we want it to go all the way across the page. It’s getting pulled there because of the floats on the elements above. We can fix this by adding a <code>clear</code> style on our intro text. The <code>clear</code> tag cancels out floats, and you can set it to clear <code>left</code>, <code>right</code> or <code>both</code> directions.</p>
 <p>When we coded our HTML file we had added a class called “intro” to that paragraph, so we will target that with this next rule:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.intro</span> {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span><span class="ch">:</span> <span class="dv">both</span><span class="op">;</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This pushes the intro down so it flows across the page. There is a little space under the photos, but that is OK because that main photo might not always be that shape.</p>
 </section>
@@ -915,14 +924,14 @@ Tip
 <li>Add to your css file:</li>
 </ol>
 <div class="sourceCode" id="cb13"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ul {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-position</span>: <span class="dv">inside</span><span class="op">;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-type</span>: <span class="dv">square</span><span class="op">;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-position</span><span class="ch">:</span> <span class="dv">inside</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-type</span><span class="ch">:</span> <span class="dv">square</span><span class="op">;</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you are living right, your list should look like this now:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-unordered-list.png" class="img-fluid figure-img" width="300"></p>
-<figcaption class="figure-caption">Unordered lists</figcaption>
+<figcaption>Unordered lists</figcaption>
 </figure>
 </div>
 <section id="set-the-ordered-list-style" class="level3" data-number="7.10.1">
@@ -932,11 +941,11 @@ Tip
 <li>Add these styles to add little margin under each list item so they can breathe.</li>
 </ol>
 <div class="sourceCode" id="cb14"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ol {</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-position</span>: <span class="dv">inside</span><span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-position</span><span class="ch">:</span> <span class="dv">inside</span><span class="op">;</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>ol li {</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
@@ -946,7 +955,7 @@ Tip
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/nutrition-list-example.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Nutrition list example</figcaption>
+<figcaption>Nutrition list example</figcaption>
 </figure>
 </div>
 <p>Before we can apply styles to this unordered list, we need to identify it in some way so we don’t also make changes to the ingredients list. To do that, you’ll go in and add an to the <code>&lt;section&gt;</code> element:</p>
@@ -961,8 +970,8 @@ Tip
 <li>Set the dotted border on the li tags with this:</li>
 </ol>
 <div class="sourceCode" id="cb15"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#nutrition</span> li {</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-type</span>: <span class="dv">none</span><span class="op">;</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-bottom</span>: <span class="cn">grey</span> <span class="dv">dotted</span> <span class="dv">1</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">list-style-type</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-bottom</span><span class="ch">:</span> <span class="cn">grey</span> <span class="dv">dotted</span> <span class="dv">1</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Since we only want to change only the list items that are within the nutrition div, we used both the <code>#nutrition</code> id and the <code>li</code> element selectors.</p>
 <ul>
@@ -973,27 +982,27 @@ Tip
 <ol start="2" type="1">
 <li><strong>Edit</strong> that style rule to add these two rules:</li>
 </ol>
-<div class="sourceCode" id="cb16"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>  float<span class="in">: left</span>;</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  width<span class="in">: 48%</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>  float<span class="in">:</span> left;</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  width<span class="in">:</span> 48%</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>That starts putting these side-by-side, but there is no gutter between them.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-nutri-float.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">List items floated</figcaption>
+<figcaption>List items floated</figcaption>
 </figure>
 </div>
 <p>Now the fun part … we need to apply styles to just every other list item (those that now fall into the left column). Our first challenge is to make sure we are targeting the right element. Another trick of the trade: I sometimes write a temporary style to an element, like turning the background red, just to make sure I’m getting the right thing. Let’s do that here.</p>
 <ol start="3" type="1">
 <li>Add this rule with the <a href="https://www.w3schools.com/cssref/sel_nth-child.asp">nth-child</a> designation for “odd” elements.</li>
 </ol>
-<div class="sourceCode" id="cb17"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#nutrition</span> li<span class="in">:nth-child(odd)</span> {</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#nutrition</span> li<span class="in">:nth-child(</span><span class="dv">odd</span><span class="in">)</span> {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This shows us that our style is getting the alternating rows:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/css-alt-rows.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Alternating rows</figcaption>
+<figcaption>Alternating rows</figcaption>
 </figure>
 </div>
 <p>Let’s pause here to break down that rule of the <a href="https://www.w3schools.com/cssref/sel_nth-child.asp">nth-child</a>. The <code>nth-child</code> rule lets us apply a style to a specific list item. Where we have used <code>(odd)</code> you could also put in a number, like <code>(4)</code> and it would apply to the fourth item in the list. Or <code>(even)</code>. Try it!</p>
@@ -1002,7 +1011,7 @@ Tip
 <li><strong>Edit</strong> the style rule to add these lines:</li>
 </ol>
 <p>(Again, you might do them one at a time to see what they do.)</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  margin-right<span class="in">: 20px;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>  margin-right<span class="in">:</span> 20px;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="5" type="1">
 <li>And now you can remove the <code>background-color</code> rule.</li>
 </ol>
@@ -1014,13 +1023,13 @@ Tip
 <li>Add these values to the css file:</li>
 </ol>
 <div class="sourceCode" id="cb19"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>footer {</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">140</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span><span class="ch">:</span> <span class="dv">both</span><span class="op">;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">140</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>footer p {</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">1.2</span><span class="dt">rem</span> Arial<span class="op">;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span><span class="ch">:</span> <span class="dv">1.2</span><span class="dt">rem</span> <span class="dv">Arial</span><span class="op">;</span></span>
 <span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We used <code>clear: both</code> to make sure there are no floats affecting the footer. Still, because of floats in the nutrition section above it the margins are acting super funky here. The CSS doesn’t understand how deep that nutrition section is, and that is why we have the crazy <code>140px</code> value on the top margin.</p>
 <p>Tricks of the trade #32?: If it works, especially if you check that it works in all the browsers (Chrome, Safari, Firefox, Edge), then maybe it is good enough.</p>
@@ -1117,10 +1126,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1130,8 +1138,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1144,6 +1161,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1187,6 +1318,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1212,6 +1344,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1273,17 +1431,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./html-02-mastery.html" class="pagination-link">
+      <a href="./html-02-mastery.html" class="pagination-link  aria-label=" &lt;span="" mastery&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">HTML mastery</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./css-02-mastery.html" class="pagination-link">
+      <a href="./css-02-mastery.html" class="pagination-link" aria-label="<span class='chapter-number'>8</span>&nbsp; <span class='chapter-title'>CSS mastery</span>">
         <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">CSS mastery</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
