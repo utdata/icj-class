@@ -2050,7 +2050,7 @@
     "href": "a-macos-shell.html",
     "title": "Appendix D — Change Mac shell to bash",
     "section": "",
-    "text": "Mac Catalina changes the default shell program from Bash to zsh. While zsh is probably fine, let’s change the default shell program to Bash for consistency. This is how to do it:\n\nChoose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them.",
+    "text": "D.1 Alternative method\nIf for some reason that doesn’t work, there is this way, too:",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>D</span>  <span class='chapter-title'>Change Mac shell to bash</span>"
@@ -2362,6 +2362,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>I</span>  <span class='chapter-title'>Git: Branches</span>"
+    ]
+  },
+  {
+    "objectID": "a-macos-shell.html#alternative-method",
+    "href": "a-macos-shell.html#alternative-method",
+    "title": "Appendix D — Change Mac shell to bash",
+    "section": "",
+    "text": "Choose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Change Mac shell to bash</span>"
     ]
   }
 ]

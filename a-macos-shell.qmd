@@ -1,6 +1,18 @@
 # Change Mac shell to bash
 
-Mac Catalina changes the default shell program from **Bash** to **zsh**. While zsh is probably fine, let's change the default shell program to Bash for consistency. This is how to do it:
+Mac Catalina changes the default shell program from **Bash** to **zsh**. While zsh is probably fine, we are using Bash for consistency.
+
+1. Open a Terminal
+2. Type and run this command:
+
+    ```bash
+    chsh -s /bin/bas
+    ```
+3. Close your terminal and reopen it.
+
+## Alternative method
+
+If for some reason that doesn't work, there is this way, too:
 
 1. Choose Apple menu  > System Settings, then click Users & Groups.
 2. Click the lock, then enter your account name and password.
