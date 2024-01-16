@@ -6,8 +6,6 @@ This class is under a major rewrite for Fall 2023. It pulls together a bunch sep
 
 This is the course material for the UT-Austin School of Journalism and Media course "Intro Coding for Journalists". The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.
 
-The online version of the book is [here](utdata.github.io/icj-class/).
-
 The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.
 
 ## The structure of the class
