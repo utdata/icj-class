@@ -28,6 +28,7 @@ Once you launch it will look like this:
 
 Though it may have a white screen.
 
+1. Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it instead says `zsh`, then go to the [this appendix chapter](a-macos-shell.qmd) to change it.
 
 ### Windows
 

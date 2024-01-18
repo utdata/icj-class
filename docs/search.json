@@ -65,7 +65,7 @@
     "href": "start-01-terminal.html#launch-your-terminal",
     "title": "1  Terminal",
     "section": "",
-    "text": "macOSWindows\n\n\n\nFor Macs you can use your Launchpad and type in Terminal and launch it. Or you can use the Spotlight search to find it.\n\nOnce you launch it will look like this:\n\n\n\nMac Terminal\n\n\nThough it may have a white screen.\n\n\n\nFor Windows you can go to your Start menu and type in Git Bash and launch it.\n\nIt will look like this:\n\n\n\nWindows Git Bash",
+    "text": "macOSWindows\n\n\n\nFor Macs you can use your Launchpad and type in Terminal and launch it. Or you can use the Spotlight search to find it.\n\nOnce you launch it will look like this:\n\n\n\nMac Terminal\n\n\nThough it may have a white screen.\n\nLook at the very top line to see if the term in the middle of the title bar is bash like above. If it instead says zsh, then go to the this appendix chapter to change it.\n\n\n\n\nFor Windows you can go to your Start menu and type in Git Bash and launch it.\n\nIt will look like this:\n\n\n\nWindows Git Bash",
     "crumbs": [
       "Getting started",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Terminal</span>"
