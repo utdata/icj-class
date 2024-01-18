@@ -65,7 +65,7 @@
     "href": "start-01-terminal.html#launch-your-terminal",
     "title": "1  Terminal",
     "section": "",
-    "text": "macOSWindows\n\n\n\nFor Macs you can use your Launchpad and type in Terminal and launch it. Or you can use the Spotlight search to find it.\n\nOnce you launch it will look like this:\n\n\n\nMac Terminal\n\n\nThough it may have a white screen.\n\n\n\nFor Windows you can go to your Start menu and type in Git Bash and launch it.\n\nIt will look like this:\n\n\n\nWindows Git Bash",
+    "text": "macOSWindows\n\n\n\nFor Macs you can use your Launchpad and type in Terminal and launch it. Or you can use the Spotlight search to find it.\n\nOnce you launch it will look like this:\n\n\n\nMac Terminal\n\n\nThough it may have a white screen.\n\nLook at the very top line to see if the term in the middle of the title bar is bash like above. If it instead says zsh, then go to the this appendix chapter to change it.\n\n\n\n\nFor Windows you can go to your Start menu and type in Git Bash and launch it.\n\nIt will look like this:\n\n\n\nWindows Git Bash",
     "crumbs": [
       "Getting started",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Terminal</span>"
@@ -153,7 +153,7 @@
     "href": "start-02-move.html#change-directory",
     "title": "2  Moving around",
     "section": "2.5 Change directory",
-    "text": "2.5 Change directory\nMacs and PCs usually a Documents folder inside each user’s home folder. It’s where you are supposed to save all your stuff. It’s time for us to move in our Terminal to inside this Documents folder.\nThe cd command lets us change directory.\n\nLet’s change directory into your Documents:\n\ncd Documents\nLet’s do a review real quick. Where are you? What is your “working directory” now?\n\nDo pwd to check:\n\npwd\nIt should respond with something like this …\n$ pwd\n/Users/ccm346/Documents\n… and it should end with Documents. If it doesn’t, you aren’t in the right place.\n\nNow use ls to list what is in your Documents folder.\n\nls\nPerhaps you’ll recognize some of the folders listed here if you regularly use your Documents folder.\n\n\n\n\n\n\nImportant\n\n\n\nAn word about iCloud, OneDrive and other cloud storage services. If you have a choice, I WOULD NOT save projects from this class in a cloud drive because our projects can have thousands of tiny files (like 10,000+) that clog up syncing services and slow your computer. We’ll back up your class work in other ways (on Github).",
+    "text": "2.5 Change directory\n\n\n\n\n\n\niCloud and One Drive\n\n\n\nI may take a minute here in class to talk about iCloud and One Drive and how files are dealt with by cloud-based servers. I’m still working out the best way to write about it and talking to students will help me figure that out. We’ll do it here because it may impact where we create the icj/ folder.\n\n\nMacs and PCs usually a Documents folder inside each user’s home folder. It’s where you are supposed to save all your stuff. It’s time for us to move in our Terminal to inside this Documents folder.\nThe cd command lets us change directory.\n\nLet’s change directory into your Documents:\n\ncd Documents\nLet’s do a review real quick. Where are you? What is your “working directory” now?\n\nDo pwd to check:\n\npwd\nIt should respond with something like this …\n$ pwd\n/Users/ccm346/Documents\n… and it should end with Documents. If it doesn’t, you aren’t in the right place.\n\nNow use ls to list what is in your Documents folder.\n\nls\nPerhaps you’ll recognize some of the folders listed here if you regularly use your Documents folder.\n\n\n\n\n\n\nImportant\n\n\n\nAn word about iCloud, OneDrive and other cloud storage services. If you have a choice, I WOULD NOT save projects from this class in a cloud drive because our projects can have thousands of tiny files (like 10,000+) that clog up syncing services and slow your computer. We’ll back up your class work in other ways (on Github).",
     "crumbs": [
       "Getting started",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around</span>"
@@ -2057,6 +2057,17 @@
     ]
   },
   {
+    "objectID": "a-macos-shell.html#alternative-method",
+    "href": "a-macos-shell.html#alternative-method",
+    "title": "Appendix D — Change Mac shell to bash",
+    "section": "",
+    "text": "Choose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Change Mac shell to bash</span>"
+    ]
+  },
+  {
     "objectID": "a-bash-files.html",
     "href": "a-bash-files.html",
     "title": "Appendix E — Bash files",
@@ -2362,17 +2373,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>I</span>  <span class='chapter-title'>Git: Branches</span>"
-    ]
-  },
-  {
-    "objectID": "a-macos-shell.html#alternative-method",
-    "href": "a-macos-shell.html#alternative-method",
-    "title": "Appendix D — Change Mac shell to bash",
-    "section": "",
-    "text": "Choose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Change Mac shell to bash</span>"
     ]
   }
 ]

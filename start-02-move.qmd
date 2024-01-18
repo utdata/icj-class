@@ -205,6 +205,12 @@ Since you are inside your "home directory", this should open that folder in your
 
 ## Change directory
 
+::: callout
+## iCloud and One Drive
+
+I may take a minute here in class to talk about iCloud and One Drive and how files are dealt with by cloud-based servers. I'm still working out the best way to write about it and talking to students will help me figure that out. We'll do it here because it may impact where we create the `icj/` folder.
+::: 
+
 Macs and PCs usually a `Documents` folder inside each user's home folder. It's where you are supposed to save all your stuff. It's time for us to move in our Terminal to inside this Documents folder.
 
 The [cd](https://man.cx/cd) command lets us **change directory**.
