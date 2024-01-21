@@ -57,7 +57,7 @@ In this book you might see examples of a command that includes an output. That f
 
 ```
 $ pwd
-/Users/ccm346/Documents/icj/myproject
+/Users/ccm346/icj/myproject
 ```
 
 Means you type in just `pwd` and then hit return.

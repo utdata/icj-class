@@ -22,7 +22,7 @@ In response you'll get something like ...
 
 ```
 $ git init
-Initialized empty Git repository in /Users/ccm346/Documents/icj/christian-git-practice/.git/
+Initialized empty Git repository in /Users/ccm346/icj/christian-git-practice/.git/
 ```
 
 ... with your repo path at the end.
@@ -200,7 +200,7 @@ Here is the command and response:
 
 ```
 $ git add christian.md 
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|●1]
+(base) ✔ ~/icj/christian-git-practice [main L|●1]
 ```
 
 There wasn't really a response back because it "worked", but because I have the git-bash-prompt extension  (which we installed earlier), I have some feedback. We haven't talked about that yet, but that part `[main L|●1]` tells me we are on the `main` branch (more on that later) and that I have one staged file. Just watch how those signals change as we go through the cycle.
@@ -218,7 +218,7 @@ $ git commit -m "adding my new file"
 [main eda683e] adding my new file
  1 file changed, 3 insertions(+)
  create mode 100644 christian.md
- (base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] 
+ (base) ✔ ~/icj/christian-git-practice [main L|✔] 
 ```
 
 ::: callout-warning
@@ -247,7 +247,7 @@ Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To github.com:critmcdonald/christian-git-practice.git
    75090ef..eda683e  main -> main
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] 
+(base) ✔ ~/icj/christian-git-practice [main L|✔] 
 ```
 
 That's a lot of mumbo jumbo that we don't have to understand details of, we just have to recognize that it did "Writing" and you didn't get an error.
@@ -272,7 +272,7 @@ Changes not staged for commit:
         modified:   christian.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✚ 1] 
+(base) ✔ ~/icj/christian-git-practice [main L|✚ 1] 
 ```
 
 The return says we have one modified file, `christian.md`. Note the git-bash-prompt also shows `✚ 1` at the end, which means there is one file with changes.
@@ -283,7 +283,7 @@ Since I want to stage all the tracked files (even though it is only one here), w
 
 ```
 $ git add .
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|●1]
+(base) ✔ ~/icj/christian-git-practice [main L|●1]
 ```
 
 There isn't really a response for staging a file if it is successful, except for the git-bash-prompt changing to a red `●1`.
@@ -294,7 +294,7 @@ There isn't really a response for staging a file if it is successful, except for
 $ git commit -m "adding changes"
 [main 3c4dbe4] adding changes
  1 file changed, 2 insertions(+)
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] 
+(base) ✔ ~/icj/christian-git-practice [main L|✔] 
 ```
 
 1. And then push the changes to Github:
@@ -310,7 +310,7 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:critmcdonald/christian-git-practice.git
    eda683e..3c4dbe4  main -> main
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] 
+(base) ✔ ~/icj/christian-git-practice [main L|✔] 
 ```
 
 Well done! You've learned the basic git cycle and pushed code to Github.

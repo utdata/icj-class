@@ -498,15 +498,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#hidden-files" id="toc-hidden-files" class="nav-link" data-scroll-target="#hidden-files"><span class="header-section-number">2.4.1</span> Hidden files</a></li>
   <li><a href="#dot-directories" id="toc-dot-directories" class="nav-link" data-scroll-target="#dot-directories"><span class="header-section-number">2.4.2</span> Dot directories</a></li>
   </ul></li>
-  <li><a href="#change-directory" id="toc-change-directory" class="nav-link" data-scroll-target="#change-directory"><span class="header-section-number">2.5</span> Change directory</a></li>
-  <li><a href="#make-directory" id="toc-make-directory" class="nav-link" data-scroll-target="#make-directory"><span class="header-section-number">2.6</span> Make directory</a></li>
-  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">2.7</span> Tab completion</a></li>
-  <li><a href="#on-the-right-path" id="toc-on-the-right-path" class="nav-link" data-scroll-target="#on-the-right-path"><span class="header-section-number">2.8</span> On the right path</a>
+  <li><a href="#make-directory" id="toc-make-directory" class="nav-link" data-scroll-target="#make-directory"><span class="header-section-number">2.5</span> Make directory</a></li>
+  <li><a href="#change-directory" id="toc-change-directory" class="nav-link" data-scroll-target="#change-directory"><span class="header-section-number">2.6</span> Change directory</a></li>
+  <li><a href="#parent-directories" id="toc-parent-directories" class="nav-link" data-scroll-target="#parent-directories"><span class="header-section-number">2.7</span> Parent directories</a></li>
+  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">2.8</span> Tab completion</a></li>
+  <li><a href="#on-the-right-path" id="toc-on-the-right-path" class="nav-link" data-scroll-target="#on-the-right-path"><span class="header-section-number">2.9</span> On the right path</a>
   <ul class="collapse">
-  <li><a href="#relative-paths" id="toc-relative-paths" class="nav-link" data-scroll-target="#relative-paths"><span class="header-section-number">2.8.1</span> Relative paths</a></li>
-  <li><a href="#root-relative-paths" id="toc-root-relative-paths" class="nav-link" data-scroll-target="#root-relative-paths"><span class="header-section-number">2.8.2</span> Root-relative paths</a></li>
-  <li><a href="#absolute-paths" id="toc-absolute-paths" class="nav-link" data-scroll-target="#absolute-paths"><span class="header-section-number">2.8.3</span> Absolute paths</a></li>
-  <li><a href="#the-home-directory-shortcut" id="toc-the-home-directory-shortcut" class="nav-link" data-scroll-target="#the-home-directory-shortcut"><span class="header-section-number">2.8.4</span> The home directory shortcut</a></li>
+  <li><a href="#relative-paths" id="toc-relative-paths" class="nav-link" data-scroll-target="#relative-paths"><span class="header-section-number">2.9.1</span> Relative paths</a></li>
+  <li><a href="#root-relative-paths" id="toc-root-relative-paths" class="nav-link" data-scroll-target="#root-relative-paths"><span class="header-section-number">2.9.2</span> Root-relative paths</a></li>
+  <li><a href="#absolute-paths" id="toc-absolute-paths" class="nav-link" data-scroll-target="#absolute-paths"><span class="header-section-number">2.9.3</span> Absolute paths</a></li>
+  <li><a href="#the-home-directory-shortcut" id="toc-the-home-directory-shortcut" class="nav-link" data-scroll-target="#the-home-directory-shortcut"><span class="header-section-number">2.9.4</span> The home directory shortcut</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -708,64 +709,33 @@ drwxr-xr-x   15 ccm346  AUSTIN\Domain Users    480 Mar  3  2022 miniforge3
 </div>
 </div>
 <p>Since you are inside your “home directory”, this should open that folder in your Finder.</p>
-</section>
-</section>
-<section id="change-directory" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="change-directory"><span class="header-section-number">2.5</span> Change directory</h2>
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-iCloud and One Drive
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I may take a minute here in class to talk about iCloud and One Drive and how files are dealt with by cloud-based servers. I’m still working out the best way to write about it and talking to students will help me figure that out. We’ll do it here because it may impact where we create the <code>icj/</code> folder.</p>
-</div>
-</div>
-<p>Macs and PCs usually a <code>Documents</code> folder inside each user’s home folder. It’s where you are supposed to save all your stuff. It’s time for us to move in our Terminal to inside this Documents folder.</p>
-<p>The <a href="https://man.cx/cd">cd</a> command lets us <strong>change directory</strong>.</p>
-<ol type="1">
-<li>Let’s change directory into your <code>Documents</code>:</li>
-</ol>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Let’s do a review real quick. Where are you? What is your “working directory” now?</p>
-<ol type="1">
-<li>Do pwd to check:</li>
-</ol>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It should respond with something like this …</p>
-<pre><code>$ pwd
-/Users/ccm346/Documents</code></pre>
-<p>… and it should end with <em>Documents</em>. If it doesn’t, you aren’t in the right place.</p>
-<ol type="1">
-<li>Now use <code>ls</code> to list what is in your Documents folder.</li>
-</ol>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Perhaps you’ll recognize some of the folders listed here if you regularly use your Documents folder.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+iCloud and One Drive
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An word about iCloud, OneDrive and other <strong>cloud storage services</strong>. If you have a choice, I WOULD NOT save projects from this class in a cloud drive because our projects can have thousands of tiny files (like 10,000+) that clog up syncing services and slow your computer. We’ll back up your class work in other ways (on Github).</p>
+<p>A word about cloud services like iCloud and OneDrive. We are going set up a place to store our projects so they are NOT backedup to cloud services. We do this for a couple of reasons:</p>
+<ul>
+<li>Later projects in this class will include thousands of tiny files. The process of writing them back forth to the cloud service can affect computer performance.</li>
+<li>Our projects use these files in order to function, and when they get off-loaded to the cloud then our code has problems working.</li>
+</ul>
+<p>Don’t worry … we’ll back up your class work through Github.</p>
 </div>
 </div>
 </section>
-<section id="make-directory" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="make-directory"><span class="header-section-number">2.6</span> Make directory</h2>
+</section>
+<section id="make-directory" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="make-directory"><span class="header-section-number">2.5</span> Make directory</h2>
 <p>Next we are going to make a new empty folder to store all our class files using the <a href="https://man.cx/mkdir">mkdir</a> command.</p>
 <ol type="1">
 <li>Do this:</li>
 </ol>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
 <li>Then use <code>ls</code> again to see your new directory amongst the others.</li>
 </ol>
@@ -773,55 +743,47 @@ Important
 <ol start="3" type="1">
 <li>Cool, let’s make another directory inside of <code>icj</code>.</li>
 </ol>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> icj/newdirectory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> icj/newdirectory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="4" type="1">
 <li>Now you can do an <code>ls</code> on the “icj” folder to see what is inside it.</li>
 </ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>It should show you <code>newdirectory</code>. Something like this:</p>
 <pre><code>$ ls icj
 newdirectory</code></pre>
 <p>A couple of things about this:</p>
 <p>You have listed the contents of the <code>icj</code> directory without being inside of it. You can list the contents of any folder on your computer if you know the path to it. In fact, you can do any command on any file or folder on your computer if you know its <em>path</em>. The <strong>path</strong> is the folder structure between where you “are” in the terminal to where the new file/folder is.</p>
 <p>If you name a directory with a <strong>space</strong> in it, you’ll not get what you want unless you put quotes around it. Because of this, I avoid using spaces in files and folders and use <code>-</code> or <code>_</code> instead. I avoid capitalization, too, because our folders become url names and sometimes caps mess it up, especially on PCs.</p>
+</section>
+<section id="change-directory" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="change-directory"><span class="header-section-number">2.6</span> Change directory</h2>
+<p>It’s time to move into different folders within our terminal. The <a href="https://man.cx/cd">cd</a> command lets us <strong>change directory</strong>.</p>
 <ol type="1">
 <li>Now, let’s go inside the <code>icj</code> folder:</li>
 </ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="2" type="1">
 <li>Let’s see what is inside:</li>
 </ol>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>That should show you a result with the <code>newdirectory</code> that we created earlier.</p>
-<p>Here are the commands and results of these last few commands in my terminal. I started with a <code>pwd</code> so you can see where I started from:</p>
-<pre><code>crit:~$ pwd
-/Users/ccm346
-crit:~$ cd icj
-crit:icj$ ls
-newdirectory
-crit:icj$ pwd
-/Users/ccm346/icj</code></pre>
-<p>So to break that down:</p>
-<ul>
-<li>I printed my working directory, which showed me I was in my Users folder.</li>
-<li>I did <code>cd</code> into <strong>icj</strong> which moved me to inside that directory.</li>
-<li>Now that I’m inside <strong>icj</strong>, I did <code>ls</code> to see the contents of my current folder, and it showed me that <strong>newdirectory</strong> was indeed inside.</li>
-<li>I did <code>pwd</code> to show that my current working directory (where I am) is inside the <code>icj</code> folder.</li>
-</ul>
+</section>
+<section id="parent-directories" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="parent-directories"><span class="header-section-number">2.7</span> Parent directories</h2>
 <p>Now let’s get crazy. Let’s list the files “above” where we are.</p>
 <ol type="1">
 <li>Type and run this command.</li>
 </ol>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls ../</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Remember I said that two dots means the parent directory? This should show you the list of files and folders in your Documents directory.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls ../</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Remember I said that two dots means the parent directory? This should show you the list of files and folders in your home directory.</p>
 <ol start="2" type="1">
 <li>Now, confirm where you are:</li>
 </ol>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Which should still be <code>icj</code>. So you had listed the files for the folder “above” you.</p>
 </section>
-<section id="tab-completion" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">2.7</span> Tab completion</h2>
+<section id="tab-completion" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">2.8</span> Tab completion</h2>
 <p>If you are doing <code>ls</code> or <code>cd</code> or otherwise referencing a path in the terminal, you don’t have to type the whole word for each directory. If you are trying to list the contents of “newdirectory”, then start with <code>ls newd</code> and then hit tab, and it will finish out the path as <code>ls newdirectory</code>. This is SUPER handy and you should use it often. Like all the time.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -837,23 +799,23 @@ Important
 </div>
 </div>
 </section>
-<section id="on-the-right-path" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="on-the-right-path"><span class="header-section-number">2.8</span> On the right path</h2>
-<section id="relative-paths" class="level3" data-number="2.8.1">
-<h3 data-number="2.8.1" class="anchored" data-anchor-id="relative-paths"><span class="header-section-number">2.8.1</span> Relative paths</h3>
+<section id="on-the-right-path" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="on-the-right-path"><span class="header-section-number">2.9</span> On the right path</h2>
+<section id="relative-paths" class="level3" data-number="2.9.1">
+<h3 data-number="2.9.1" class="anchored" data-anchor-id="relative-paths"><span class="header-section-number">2.9.1</span> Relative paths</h3>
 <p>You can <code>ls</code> files or <code>cd</code> into any directory relative to your current working directory using <code>../</code> to move “up” the folder structure and then use the name of the new directory to move inside it. So a path like this: <code>ls ../../Users/Cory</code> is to travel up two folders, then into <code>Users</code> then into <code>Cory</code> and then list all the files there.</p>
 <p>This is very powerful in programming, because you might be writing and testing code on your own computer, but then run the program on another computer, so if <code>file01.py</code> needs to talk to <code>file02.py</code>, you don’t want to hard-code a path like <code>http://utdata.cmcdonald.com/scripts/file02.py</code>, because you might not always be on utdata.cmcdonald.com. If it’s in the same folder, you could use <code>file02.py</code> or <code>./file02.py</code>.</p>
 </section>
-<section id="root-relative-paths" class="level3" data-number="2.8.2">
-<h3 data-number="2.8.2" class="anchored" data-anchor-id="root-relative-paths"><span class="header-section-number">2.8.2</span> Root-relative paths</h3>
+<section id="root-relative-paths" class="level3" data-number="2.9.2">
+<h3 data-number="2.9.2" class="anchored" data-anchor-id="root-relative-paths"><span class="header-section-number">2.9.2</span> Root-relative paths</h3>
 <p>You can reference the “root” or the top level of whatever server or machine you are on even if you don’t know the name of it, by starting your path with a slash like this: <code>/scripts/file01.py</code>. That’s called a <strong>root-relative</strong> path. If you know the root-relative path to a file or folder, you can always find it no matter what directory you are currently in. We won’t use this much in this class.</p>
 </section>
-<section id="absolute-paths" class="level3" data-number="2.8.3">
-<h3 data-number="2.8.3" class="anchored" data-anchor-id="absolute-paths"><span class="header-section-number">2.8.3</span> Absolute paths</h3>
+<section id="absolute-paths" class="level3" data-number="2.9.3">
+<h3 data-number="2.9.3" class="anchored" data-anchor-id="absolute-paths"><span class="header-section-number">2.9.3</span> Absolute paths</h3>
 <p>An absolute path includes the domain or computer name. If I reference <code>http://utdata.cmcdonald.com/scripts/file01.py</code> in my code or script, it will only work if I’m on <code>utdata.cmcdonald.com</code>. If I move that script to another computer or server, it will still try to pull from <code>utdata.cmcdonald.com</code> instead of the version on the new computer. We avoid using absolute paths in this class for this reason.</p>
 </section>
-<section id="the-home-directory-shortcut" class="level3" data-number="2.8.4">
-<h3 data-number="2.8.4" class="anchored" data-anchor-id="the-home-directory-shortcut"><span class="header-section-number">2.8.4</span> The home directory shortcut</h3>
+<section id="the-home-directory-shortcut" class="level3" data-number="2.9.4">
+<h3 data-number="2.9.4" class="anchored" data-anchor-id="the-home-directory-shortcut"><span class="header-section-number">2.9.4</span> The home directory shortcut</h3>
 <p>There is also a path shortcut called <code>~/</code> that stands for “the home directory of the logged in person”. You might see that referenced in paths like <code>~/Documents/</code> but that would really take me to <code>/Users/ccm346/Documents/</code> on my computer. But what’s cool is the same <code>~/Documents/</code> path works on YOUR computer, even though your user directory name is different.</p>
 
 
