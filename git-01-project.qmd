@@ -1,9 +1,10 @@
 # Project setup
 
 ::: callout-important
-In your Canvas course you'll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as I follow this book, but I just talk out and _show_ the steps.
-:::
+In your Canvas course you'll find video screencasts where I walk through this lesson and explain steps along the way. If you are a visual learner, you might try that. The material is generally the same as I follow this book, but I just talk out and _show_ the steps.
 
+In some cases there may be updates in the book that are not in videos. In all such cases, this book takes precedence. 
+:::
 
 This is something we'll do time and again. Don't just follow the steps blindly ... learn and understand what you are doing so you can do this without thinking much about it.
 
@@ -11,13 +12,13 @@ In this section we'll create a folder to hold all of our stuff, and some mainten
 
 ## Folders and files
 
-1. Use the Finder on your computer to locate your `Documents/icj` folder and inside of it create a new project folder called `yourname-git-practice`. Always use all lower-case letters and dashes instead of space. It's just good practice.
+1. Use the Finder on your computer to locate your `icj/` folder and inside of it create a new project folder called `yourname-git-practice`. Always use all lower-case letters and dashes instead of space. It's just good practice.
 2. Launch Visual Studio Code and start a **New window**. (You can find it under the File menu, or use *Command-option-n*.)
 3. On the Welcome screen, you will see a link called **Open folder**. (If you don't see this, click on the page icon at top-left, which is the Explorer menu.) Click on that Open Folder button and negotiate your way to your project folder, select it and click the **Open** button.
 
 ![Open Folder](images/open-folder.png)
 
-4. Go to the Terminal menu and choose New Terminal. This will open a terminal window inside of VS Code, which is super handy. The top line of the terminal should give you the path to inside your project folder, like `~/Documents/icj/christian-git-practice`. If it doesn't then you didn't open the folder first.
+4. Go to the Terminal menu and choose New Terminal. This will open a terminal window inside of VS Code, which is super handy. The top line of the terminal should give you the path to inside your project folder, like `~/icj/christian-git-practice`. If it doesn't then you didn't open the folder first.
 
 ![VS Code](images/vs-code-start.png)
 

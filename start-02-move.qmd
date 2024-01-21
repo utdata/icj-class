@@ -203,52 +203,16 @@ start .
 
 Since you are inside your "home directory", this should open that folder in your Finder.
 
-## Change directory
-
-::: callout
-## iCloud and One Drive
-
-I may take a minute here in class to talk about iCloud and One Drive and how files are dealt with by cloud-based servers. I'm still working out the best way to write about it and talking to students will help me figure that out. We'll do it here because it may impact where we create the `icj/` folder.
-::: 
-
-Macs and PCs usually a `Documents` folder inside each user's home folder. It's where you are supposed to save all your stuff. It's time for us to move in our Terminal to inside this Documents folder.
-
-The [cd](https://man.cx/cd) command lets us **change directory**.
-
-1. Let's change directory into your `Documents`:
-
-```bash
-cd Documents
-```
-
-
-Let's do a review real quick. Where are you? What is your "working directory" now?
-
-1. Do pwd to check:
-
-```bash
-pwd
-```
-
-It should respond with something like this ...
-
-```
-$ pwd
-/Users/ccm346/Documents
-```
-
-... and it should end with _Documents_. If it doesn't, you aren't in the right place.
-
-1. Now use `ls` to list what is in your Documents folder.
-
-```bash
-ls
-```
-
-Perhaps you'll recognize some of the folders listed here if you regularly use your Documents folder.
 
 ::: callout-important
-An word about iCloud, OneDrive and other **cloud storage services**. If you have a choice, I WOULD NOT save projects from this class in a cloud drive because our projects can have thousands of tiny files (like 10,000+) that clog up syncing services and slow your computer. We'll back up your class work in other ways (on Github).
+## iCloud and One Drive
+
+A word about cloud services like iCloud and OneDrive. We are going set up a place to store our projects so they are NOT backedup to cloud services. We do this for a couple of reasons:
+
+- Later projects in this class will include thousands of tiny files. The process of writing them back forth to the cloud service can affect computer performance.
+- Our projects use these files in order to function, and when they get off-loaded to the cloud then our code has problems working.
+
+Don't worry ... we'll back up your class work through Github.
 :::
 
 ## Make directory
@@ -290,6 +254,10 @@ You have listed the contents of the `icj` directory without being inside of it. 
 
 If you name a directory with a **space** in it, you'll not get what you want unless you put quotes around it. Because of this, I avoid using spaces in files and folders and use `-` or `_` instead. I avoid capitalization, too, because our folders become url names and sometimes caps mess it up, especially on PCs.
 
+## Change directory
+
+It's time to move into different folders within our terminal. The [cd](https://man.cx/cd) command lets us **change directory**.
+
 1. Now, let's go inside the `icj` folder:
 
 ```bash
@@ -304,26 +272,9 @@ ls
 
 That should show you a result with the `newdirectory` that we created earlier.
 
-Here are the commands and results of these last few commands in my terminal. I started with a `pwd` so you can see where I started from:
+## Parent directories
 
-```
-crit:~$ pwd
-/Users/ccm346
-crit:~$ cd icj
-crit:icj$ ls
-newdirectory
-crit:icj$ pwd
-/Users/ccm346/icj
-```
-
-So to break that down:
-
-- I printed my working directory, which showed me I was in my Users folder.
-- I did `cd` into **icj** which moved me to inside that directory.
-- Now that I'm inside **icj**, I did `ls` to see the contents of my current folder, and it showed me that **newdirectory** was indeed inside.
-- I did `pwd` to show that my current working directory (where I am) is inside the `icj` folder.
-
- Now let's get crazy. Let's list the files "above" where we are.
+Now let's get crazy. Let's list the files "above" where we are.
  
  1. Type and run this command.
 
@@ -331,7 +282,7 @@ So to break that down:
 $ ls ../
 ```
 
-Remember I said that two dots means the parent directory? This should show you the list of files and folders in your Documents directory.
+Remember I said that two dots means the parent directory? This should show you the list of files and folders in your home directory.
 
 2. Now, confirm where you are:
 

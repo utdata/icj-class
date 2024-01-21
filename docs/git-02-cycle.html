@@ -545,7 +545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In response you’ll get something like …</p>
 <pre><code>$ git init
-Initialized empty Git repository in /Users/ccm346/Documents/icj/christian-git-practice/.git/</code></pre>
+Initialized empty Git repository in /Users/ccm346/icj/christian-git-practice/.git/</code></pre>
 <p>… with your repo path at the end.</p>
 </section>
 <section id="check-status" class="level3" data-number="4.1.2">
@@ -694,7 +694,7 @@ nothing added to commit but untracked files present (use "git add" to track)</co
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add christian.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Here is the command and response:</p>
 <pre><code>$ git add christian.md 
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|●1]</code></pre>
+(base) ✔ ~/icj/christian-git-practice [main L|●1]</code></pre>
 <p>There wasn’t really a response back because it “worked”, but because I have the git-bash-prompt extension (which we installed earlier), I have some feedback. We haven’t talked about that yet, but that part <code>[main L|●1]</code> tells me we are on the <code>main</code> branch (more on that later) and that I have one staged file. Just watch how those signals change as we go through the cycle.</p>
 <ol start="3" type="1">
 <li>Now let’s commit the file. We will also add a “message” to the commit using the flag <code>-m</code>, which you should ALWAYS do.</li>
@@ -705,7 +705,7 @@ nothing added to commit but untracked files present (use "git add" to track)</co
 [main eda683e] adding my new file
  1 file changed, 3 insertions(+)
  create mode 100644 christian.md
- (base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] </code></pre>
+ (base) ✔ ~/icj/christian-git-practice [main L|✔] </code></pre>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -735,7 +735,7 @@ Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To github.com:critmcdonald/christian-git-practice.git
    75090ef..eda683e  main -&gt; main
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] </code></pre>
+(base) ✔ ~/icj/christian-git-practice [main L|✔] </code></pre>
 <p>That’s a lot of mumbo jumbo that we don’t have to understand details of, we just have to recognize that it did “Writing” and you didn’t get an error.</p>
 <p>Why <code>origin main</code>? This is the part that sends this to our Github repo to share with the world. The <code>main</code> part is the branch name, and that is something we may get into later in the semester.</p>
 <ol start="5" type="1">
@@ -757,14 +757,14 @@ Changes not staged for commit:
         modified:   christian.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✚ 1] </code></pre>
+(base) ✔ ~/icj/christian-git-practice [main L|✚ 1] </code></pre>
 <p>The return says we have one modified file, <code>christian.md</code>. Note the git-bash-prompt also shows <code>✚ 1</code> at the end, which means there is one file with changes.</p>
 <p>Since I want to stage all the tracked files (even though it is only one here), we’ll use a fancy command to add “all” the modified files so we don’t have to name it. The period means “all changed files”.</p>
 <ol type="1">
 <li>Do <code>git add .</code> as noted below and you’ll get this response:</li>
 </ol>
 <pre><code>$ git add .
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|●1]</code></pre>
+(base) ✔ ~/icj/christian-git-practice [main L|●1]</code></pre>
 <p>There isn’t really a response for staging a file if it is successful, except for the git-bash-prompt changing to a red <code>●1</code>.</p>
 <ol type="1">
 <li>Now finish it out by adding a commit and message as noted below:</li>
@@ -772,7 +772,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <pre><code>$ git commit -m "adding changes"
 [main 3c4dbe4] adding changes
  1 file changed, 2 insertions(+)
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] </code></pre>
+(base) ✔ ~/icj/christian-git-practice [main L|✔] </code></pre>
 <ol type="1">
 <li>And then push the changes to Github:</li>
 </ol>
@@ -786,7 +786,7 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:critmcdonald/christian-git-practice.git
    eda683e..3c4dbe4  main -&gt; main
-(base) ✔ ~/Documents/icj/christian-git-practice [main L|✔] </code></pre>
+(base) ✔ ~/icj/christian-git-practice [main L|✔] </code></pre>
 <p>Well done! You’ve learned the basic git cycle and pushed code to Github.</p>
 </section>
 </section>
