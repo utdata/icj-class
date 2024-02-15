@@ -510,9 +510,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#style-writing-practice" id="toc-style-writing-practice" class="nav-link" data-scroll-target="#style-writing-practice"><span class="header-section-number">16.6</span> Style-writing practice</a>
   <ul class="collapse">
   <li><a href="#text-sizes" id="toc-text-sizes" class="nav-link" data-scroll-target="#text-sizes"><span class="header-section-number">16.6.1</span> Text sizes</a></li>
-  <li><a href="#nav-link-updates" id="toc-nav-link-updates" class="nav-link" data-scroll-target="#nav-link-updates"><span class="header-section-number">16.6.2</span> Nav link updates</a></li>
-  <li><a href="#content-link-colors" id="toc-content-link-colors" class="nav-link" data-scroll-target="#content-link-colors"><span class="header-section-number">16.6.3</span> Content link colors</a></li>
-  <li><a href="#set-bullet-style-for-shows" id="toc-set-bullet-style-for-shows" class="nav-link" data-scroll-target="#set-bullet-style-for-shows"><span class="header-section-number">16.6.4</span> Set bullet style for shows</a></li>
+  <li><a href="#remove-the-bullets-in-the-nav" id="toc-remove-the-bullets-in-the-nav" class="nav-link" data-scroll-target="#remove-the-bullets-in-the-nav"><span class="header-section-number">16.6.2</span> Remove the bullets in the nav</a></li>
+  <li><a href="#set-bullet-style-for-shows" id="toc-set-bullet-style-for-shows" class="nav-link" data-scroll-target="#set-bullet-style-for-shows"><span class="header-section-number">16.6.3</span> Set bullet style for shows</a></li>
+  <li><a href="#set-anchor-underlines" id="toc-set-anchor-underlines" class="nav-link" data-scroll-target="#set-anchor-underlines"><span class="header-section-number">16.6.4</span> Set anchor underlines</a></li>
+  <li><a href="#content-link-colors" id="toc-content-link-colors" class="nav-link" data-scroll-target="#content-link-colors"><span class="header-section-number">16.6.5</span> Content link colors</a></li>
   </ul></li>
   <li><a href="#file-names-and-paths" id="toc-file-names-and-paths" class="nav-link" data-scroll-target="#file-names-and-paths"><span class="header-section-number">16.7</span> File names and paths</a>
   <ul class="collapse">
@@ -755,34 +756,24 @@ Tip
 <ol type="1">
 <li>Increase the size of all paragraphs and lists that are in the <strong>content</strong> div without affecting the size of items in the nav div. (Headlines should remain larger than <code>1rem</code>.)</li>
 <li>Also set a <code>line-height</code> rule within those same paragraphs to give some space between lines of text.</li>
+<li>Add a comment in the sass file above the lines where you make these changes so I can find them!</li>
 </ol>
 </section>
-<section id="nav-link-updates" class="level3" data-number="16.6.2">
-<h3 data-number="16.6.2" class="anchored" data-anchor-id="nav-link-updates"><span class="header-section-number">16.6.2</span> Nav link updates</h3>
-<p>Add styles that will give navigation links the primary color and behave like those in the body, where the underline only shows on hover.</p>
+<section id="remove-the-bullets-in-the-nav" class="level3" data-number="16.6.2">
+<h3 data-number="16.6.2" class="anchored" data-anchor-id="remove-the-bullets-in-the-nav"><span class="header-section-number">16.6.2</span> Remove the bullets in the nav</h3>
+<p>You’ll see in the image below that there are list item bullets in the navigation and in on the Shows page that list the show. We don’t want those bullets in the navigation.</p>
+<ol type="1">
+<li>Write a style that removes the bullets for the list in the navigation section, while retaining the bullets on the shows page.</li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/sass-hover.gif" class="img-fluid figure-img" width="320"></p>
-<figcaption>Hover lines in navigation</figcaption>
+<p><img src="images/bullet-modification.png" class="img-fluid figure-img"></p>
+<figcaption>Navigation bullets</figcaption>
 </figure>
 </div>
-<p>Selecting these are a bit tricky. <a href="https://www.w3schools.com/cssref/sel_link.asp">link</a>, <a href="https://www.w3schools.com/cssref/sel_hover.asp">hover</a>, <a href="https://www.w3schools.com/cssref/sel_visited.asp">visited</a> are all separate properties and each one needs to be specified individually with a <a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp">text-decoration</a> property, like this:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a<span class="in">:hover</span> {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-decoration</span>: <span class="dv">underline</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You’ll want to set these styles in the <code>_nav.scss</code> file.</p>
-<ol type="1">
-<li>Set both the link and visited values to have the primary color, and the text-decoration to none.</li>
-<li>Set hover color to the primary color, and text-decoration to underline.</li>
-</ol>
-<p>Remember, you want these styles to only apply in the navigation.</p>
 </section>
-<section id="content-link-colors" class="level3" data-number="16.6.3">
-<h3 data-number="16.6.3" class="anchored" data-anchor-id="content-link-colors"><span class="header-section-number">16.6.3</span> Content link colors</h3>
-<p>For the content, I want hrefs to <em>have</em> the underline, and that the color of the links be something other than the browser default blue/purple color. Choose a color that makes sense given the primary color you use (which might be your secondary color).</p>
-</section>
-<section id="set-bullet-style-for-shows" class="level3" data-number="16.6.4">
-<h3 data-number="16.6.4" class="anchored" data-anchor-id="set-bullet-style-for-shows"><span class="header-section-number">16.6.4</span> Set bullet style for shows</h3>
+<section id="set-bullet-style-for-shows" class="level3" data-number="16.6.3">
+<h3 data-number="16.6.3" class="anchored" data-anchor-id="set-bullet-style-for-shows"><span class="header-section-number">16.6.3</span> Set bullet style for shows</h3>
 <p>The list of shows on the <code>shows.html</code> is hard to read. Make some changes to make it look better:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -804,9 +795,33 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure you don’t <em>add</em> bullets to the list items in the nav.</p>
+<p>Make sure you don’t <em>add</em> bullets back to the list items in the nav!</p>
 </div>
 </div>
+</section>
+<section id="set-anchor-underlines" class="level3" data-number="16.6.4">
+<h3 data-number="16.6.4" class="anchored" data-anchor-id="set-anchor-underlines"><span class="header-section-number">16.6.4</span> Set anchor underlines</h3>
+<p>Add styles that will give navigation links the primary color and behave like those in the body, where the underline only shows on hover.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sass-hover.gif" class="img-fluid figure-img" width="320"></p>
+<figcaption>Hover lines in navigation</figcaption>
+</figure>
+</div>
+<p>Selecting these are a bit tricky. <a href="https://www.w3schools.com/cssref/sel_link.asp">link</a>, <a href="https://www.w3schools.com/cssref/sel_hover.asp">hover</a>, <a href="https://www.w3schools.com/cssref/sel_visited.asp">visited</a> are all separate properties and each one needs to be specified individually with a <a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp">text-decoration</a> property, like this:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a<span class="in">:hover</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-decoration</span>: <span class="dv">underline</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’ll want to set these styles in the <code>_nav.scss</code> file.</p>
+<ol type="1">
+<li>Set both the link and visited values to have the primary color, and the text-decoration to none.</li>
+<li>Set hover color to the primary color, and text-decoration to underline.</li>
+</ol>
+<p>Remember, you want these styles to only apply in the navigation.</p>
+</section>
+<section id="content-link-colors" class="level3" data-number="16.6.5">
+<h3 data-number="16.6.5" class="anchored" data-anchor-id="content-link-colors"><span class="header-section-number">16.6.5</span> Content link colors</h3>
+<p>In the “content” parts of pages, I want hrefs to <em>have</em> the underline, and that the color of the links be something other than the browser default blue/purple color. Choose a color that makes sense given the primary color you use (which might be your secondary color).</p>
 </section>
 </section>
 <section id="file-names-and-paths" class="level2" data-number="16.7">

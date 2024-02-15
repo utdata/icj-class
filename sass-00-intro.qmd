@@ -11,6 +11,7 @@ Before starting this lesson, make sure you've done [part two of setting up](http
 - To learn about Sass/SCSS and to practice writing it.
 
 ## Node
+
 **Node.js** is an open-source server environment built using JavaScript. Many programmers like it because it allows them 
 to write JavaScript not just for “front-end” browser tasks, but also for server-based or “back-end” tasks.
 

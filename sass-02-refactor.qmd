@@ -234,8 +234,31 @@ I find that sometimes when I make style changes, especially to font sizes, they 
 
 1. Increase the size of all paragraphs and lists that are in the **content** div without affecting the size of items in the nav div. (Headlines should remain larger than `1rem`.)
 1. Also set a `line-height` rule within those same paragraphs to give some space between lines of text.
+1. Add a comment in the sass file above the lines where you make these changes so I can find them!
 
-### Nav link updates
+
+### Remove the bullets in the nav
+
+You'll see in the image below that there are list item bullets in the navigation and in on the Shows page that list the show. We don't want those bullets in the navigation.
+
+1. Write a style that removes the bullets for the list in the navigation section, while retaining the bullets on the shows page.
+
+![Navigation bullets](images/bullet-modification.png)
+
+### Set bullet style for shows
+
+The list of shows on the `shows.html` is hard to read. Make some changes to make it look better:
+
+![Good bullet list](images/sass-bullet-list.png)
+
+1. Make the list of shows a bulleted list. (Style of your choice.)
+1. Make sure the bullets line up vertically with the video on the page.
+
+::: callout-warning
+Make sure you don't _add_ bullets back to the list items in the nav!
+:::
+
+### Set anchor underlines
 
 Add styles that will give navigation links the primary color and behave like those in the body, where the underline only shows on hover.
 
@@ -258,20 +281,7 @@ Remember, you want these styles to only apply in the navigation.
 
 ### Content link colors
 
-For the content, I want hrefs to _have_ the underline, and that the color of the links be something other than the browser default blue/purple color. Choose a color that makes sense given the primary color you use (which might be your secondary color).
-
-### Set bullet style for shows
-
-The list of shows on the `shows.html` is hard to read. Make some changes to make it look better:
-
-![Good bullet list](images/sass-bullet-list.png)
-
-1. Make the list of shows a bulleted list. (Style of your choice.)
-1. Make sure the bullets line up vertically with the video on the page.
-
-::: callout-warning
-Make sure you don't _add_ bullets to the list items in the nav.
-:::
+In the "content" parts of pages, I want hrefs to _have_ the underline, and that the color of the links be something other than the browser default blue/purple color. Choose a color that makes sense given the primary color you use (which might be your secondary color).
 
 ## File names and paths
 
