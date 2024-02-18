@@ -497,13 +497,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#loops-with-data" id="toc-loops-with-data" class="nav-link" data-scroll-target="#loops-with-data"><span class="header-section-number">26.3</span> Loops with data</a>
   <ul class="collapse">
-  <li><a href="#update-the-headline" id="toc-update-the-headline" class="nav-link" data-scroll-target="#update-the-headline"><span class="header-section-number">26.3.1</span> Update the headline</a></li>
-  <li><a href="#update-the-blurb" id="toc-update-the-blurb" class="nav-link" data-scroll-target="#update-the-blurb"><span class="header-section-number">26.3.2</span> Update the blurb</a></li>
-  <li><a href="#update-the-source-link" id="toc-update-the-source-link" class="nav-link" data-scroll-target="#update-the-source-link"><span class="header-section-number">26.3.3</span> Update the source link</a></li>
-  <li><a href="#adding-the-captain" id="toc-adding-the-captain" class="nav-link" data-scroll-target="#adding-the-captain"><span class="header-section-number">26.3.4</span> Adding the captain</a></li>
-  <li><a href="#adjusting-columns-for-breakpoints" id="toc-adjusting-columns-for-breakpoints" class="nav-link" data-scroll-target="#adjusting-columns-for-breakpoints"><span class="header-section-number">26.3.5</span> Adjusting columns for breakpoints</a></li>
+  <li><a href="#remove-the-broken-image-link" id="toc-remove-the-broken-image-link" class="nav-link" data-scroll-target="#remove-the-broken-image-link"><span class="header-section-number">26.3.1</span> Remove the broken image link</a></li>
+  <li><a href="#update-the-headline" id="toc-update-the-headline" class="nav-link" data-scroll-target="#update-the-headline"><span class="header-section-number">26.3.2</span> Update the headline</a></li>
+  <li><a href="#update-the-blurb" id="toc-update-the-blurb" class="nav-link" data-scroll-target="#update-the-blurb"><span class="header-section-number">26.3.3</span> Update the blurb</a></li>
+  <li><a href="#add-a-footer-link" id="toc-add-a-footer-link" class="nav-link" data-scroll-target="#add-a-footer-link"><span class="header-section-number">26.3.4</span> Add a footer link</a></li>
+  <li><a href="#adding-the-captain" id="toc-adding-the-captain" class="nav-link" data-scroll-target="#adding-the-captain"><span class="header-section-number">26.3.5</span> Adding the captain</a></li>
+  <li><a href="#adjusting-columns-for-breakpoints" id="toc-adjusting-columns-for-breakpoints" class="nav-link" data-scroll-target="#adjusting-columns-for-breakpoints"><span class="header-section-number">26.3.6</span> Adjusting columns for breakpoints</a></li>
+  <li><a href="#fix-some-display-nits" id="toc-fix-some-display-nits" class="nav-link" data-scroll-target="#fix-some-display-nits"><span class="header-section-number">26.3.7</span> Fix some display nits</a></li>
   </ul></li>
-  <li><a href="#fix-some-display-nits" id="toc-fix-some-display-nits" class="nav-link" data-scroll-target="#fix-some-display-nits"><span class="header-section-number">26.4</span> Fix some display nits</a></li>
+  <li><a href="#card-check" id="toc-card-check" class="nav-link" data-scroll-target="#card-check"><span class="header-section-number">26.4</span> Card check</a></li>
   </ul>
 </nav>
     </div>
@@ -614,10 +616,10 @@ Tip
 </section>
 <section id="loops-with-data" class="level2" data-number="26.3">
 <h2 data-number="26.3" class="anchored" data-anchor-id="loops-with-data"><span class="header-section-number">26.3</span> Loops with data</h2>
-<p>Our aim here next is to use <a href="https://getbootstrap.com/docs/5.3/components/card/">Bootstrap cards</a> to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you’ll see there are many different options and configurations. The one we are going to start with is <a href="https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup">Using grid markup</a>.</p>
+<p>Our aim here next is to use <a href="https://getbootstrap.com/docs/5.3/components/card/">Bootstrap cards</a> to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you’ll see there are many different options and configurations. The one we are going to start with is <a href="https://getbootstrap.com/docs/5.3/components/card/#grid-cards">Grid cards</a>.</p>
 <ol type="1">
 <li>Make sure <code>gulp dev</code> is running.</li>
-<li>Go to the <a href="https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup">Using grid markup</a> section in the docs and copy the code provided there.</li>
+<li>Go to the <a href="https://getbootstrap.com/docs/5.3/components/card/#grid-cards">Grid cards</a> section in the Bootstrap docs and copy the first code selection provided there.</li>
 <li>After the closing <code>&lt;/p&gt;</code> tag for the intro, add a new line.</li>
 <li>Paste your code. This already has the row and columns we need.</li>
 <li>Save your file and look at your page.</li>
@@ -629,27 +631,27 @@ Tip
 <figcaption>Grid cards added</figcaption>
 </figure>
 </div>
-<p>We now have two cards on our page. Each card is in a column set at <code>col-sm-6</code>, so they show over six columns at small or larger. If you view on a phone, they will stack. By putting each card in a column like this, we can use the <code>cols-</code> controls to decide how many should display next to each other at each breakpoint.</p>
-<p>Our plan here is to have a card for each ship in our data. We could create eight columns/cards and use our data inside each card, but what if we add more ships to our data source later? Instead, we’ll create a <strong>loop</strong> that writes a new column/card for each ship in our data.</p>
+<p>We now have four cards on our page with some issues, like our images are broken. We’ll fix those in a minute as we make other adjustments.</p>
+<p>Our plan here is to have a card for each ship in our data. We could create eight cards and use our data inside each card, but what if we add more ships to our data source later? Instead, we’ll create a <strong>loop</strong> that writes a new card for each ship in our data.</p>
 <p>Our Nunjucks templating system allows for loops like this because it is written in JavaScript. It might help to reference the <a href="https://mozilla.github.io/nunjucks/templating.html#for">Nunjucks documentation on “for” loops</a> to see how they work.</p>
-<p>We’re going to remove one of our new column/cards, but then set the remaining one to draw for each new ship in our data.</p>
+<p>We’re going to cut our template code down to a single working card, then set this up to repeat for each ship in our data.</p>
 <ol start="5" type="1">
-<li>In the cards code, remove the one of the col/cards. It starts with <code>&lt;div class="col-sm-6"&gt;</code> and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.</li>
-<li>Add a new line <em>after</em> the closing of the <code>&lt;div class="row"&gt;</code> line.</li>
+<li>In the cards code, remove all but one of the col/cards. It starts with <code>&lt;div class="col"&gt;</code> and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.</li>
+<li>Add a new line <em>after</em> the closing of the <code>&lt;div class="row row-cols-1 row-cols-md-2 g-4"&gt;</code> line.</li>
 <li>Add the following to the new line: <code>{% for ship in pirates.ships %}</code></li>
 <li>Add a new line right <em>above</em> the closing <code>&lt;/div&gt;</code> for the row.</li>
 <li>Add the following to the new line: <code>{% endfor %}</code></li>
 <li>Save your file and go look at your page.</li>
 </ol>
 <p>That code should look like this, and descriptions follow:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"row"</span><span class="dt">&gt;</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"row row-cols-1 row-cols-md-2 g-4"</span><span class="dt">&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    {% for ship in pirates.ships %}</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"col-sm-6"</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"col"</span><span class="dt">&gt;</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card"</span><span class="dt">&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-body"</span><span class="dt">&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">h5</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-title"</span><span class="dt">&gt;</span>Special title treatment<span class="dt">&lt;/</span><span class="kw">h5</span><span class="dt">&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-text"</span><span class="dt">&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"btn btn-primary"</span><span class="dt">&gt;</span>Go somewhere<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"..."</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-img-top"</span><span class="ot"> alt</span><span class="op">=</span><span class="st">"..."</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-body"</span><span class="dt">&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">h5</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-title"</span><span class="dt">&gt;</span>Card title<span class="dt">&lt;/</span><span class="kw">h5</span><span class="dt">&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>          <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-text"</span><span class="dt">&gt;</span>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
@@ -664,39 +666,54 @@ Tip
 <li><code>in pirates.ships</code> is defining which array we are looping through. The “pirates” part is the file we are looking in, and “ships” is the name of the array inside that file.</li>
 <li>Everything after that will get repeated until we reach <code>(% endfor %)</code> which says STOP REPEATING.</li>
 </ul>
-<section id="update-the-headline" class="level3" data-number="26.3.1">
-<h3 data-number="26.3.1" class="anchored" data-anchor-id="update-the-headline"><span class="header-section-number">26.3.1</span> Update the headline</h3>
+<section id="remove-the-broken-image-link" class="level3" data-number="26.3.1">
+<h3 data-number="26.3.1" class="anchored" data-anchor-id="remove-the-broken-image-link"><span class="header-section-number">26.3.1</span> Remove the broken image link</h3>
+<p>While it would be cool if we had a photo of each ship to show here, we don’t, so we need to remove the image tag from the template code.</p>
+<ol type="1">
+<li>Remove the line with the code: <code>&lt;img src="..." class="card-img-top" alt="..."&gt;</code></li>
+</ol>
+<p>That should remove that broken link from all the cards.</p>
+</section>
+<section id="update-the-headline" class="level3" data-number="26.3.2">
+<h3 data-number="26.3.2" class="anchored" data-anchor-id="update-the-headline"><span class="header-section-number">26.3.2</span> Update the headline</h3>
 <p>At this point you are thinking “That’s cool, Prof, but they are all the same.” Well, we can pull specific values from the data based on its key.</p>
 <ol type="1">
-<li>For the headline in the <code>&lt;h5&gt;</code> text, replace “Special title treatment” with this: <code>{ ship.ship_name }</code></li>
-<li>Save your file and go look at your page. Now you have a new ship name in each card.</li>
+<li><p>For the headline in the <code>&lt;h5 class="card-title"&gt;</code> tag, replace the text “Card title” with this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>{{ ship.ship_name }}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Save your file and go look at your page. Now you have a new ship name in each card.</p></li>
 </ol>
-<p>To call a variable from our data, we use the double curly-brace: <code>{ }</code>. (This is opposed to <code>{% %}</code> which does other things).</p>
-<p>Since we named a single item a “ship” in our loop we use that, and then use the dot notation to call the object key : <code>{ ship.ship_name }</code>. I like to put spaces around the names for readability, but it is not required.</p>
+<p>To call a variable from our data, we use the double curly-brace:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>{{ }}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is opposed to <code>{% %}</code> which does other things.</p>
+<p>Since we named a single item a “ship” in our loop we use that, and then use the dot notation to call the object key:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>{{ ship.ship_name }}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I like to put spaces around the names for readability, but it is not required.</p>
 <p>OK, now admit that’s kinda cool, right?</p>
 </section>
-<section id="update-the-blurb" class="level3" data-number="26.3.2">
-<h3 data-number="26.3.2" class="anchored" data-anchor-id="update-the-blurb"><span class="header-section-number">26.3.2</span> Update the blurb</h3>
+<section id="update-the-blurb" class="level3" data-number="26.3.3">
+<h3 data-number="26.3.3" class="anchored" data-anchor-id="update-the-blurb"><span class="header-section-number">26.3.3</span> Update the blurb</h3>
 <p>If we look at our example JSON, we see the key for the description of the ship is called a <code>blurb</code>. So we can use the same style to replace the text in our code with the new value.</p>
 <ol type="1">
-<li>Go into the code and replace the text inside the <code>&lt;p&gt;</code> tag with: <code>{ ship.blurb }</code></li>
-<li>Save and check your page.</li>
+<li><p>Go into the code and replace the text inside the <code>&lt;p class="card-text"&gt;</code> tag with:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>{{ ship.blurb }}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Save and check your page.</p></li>
 </ol>
 <p>Now you should be showing the description of each ship after the name of the ship.</p>
 </section>
-<section id="update-the-source-link" class="level3" data-number="26.3.3">
-<h3 data-number="26.3.3" class="anchored" data-anchor-id="update-the-source-link"><span class="header-section-number">26.3.3</span> Update the source link</h3>
-<p>We have these big buttons that look like they could be a link to somewhere, which would be perfect to use to link to the webpage with more information about our ship. We’ll modify those next to add the URL, change the text and change the button display to a simple link.</p>
+<section id="add-a-footer-link" class="level3" data-number="26.3.4">
+<h3 data-number="26.3.4" class="anchored" data-anchor-id="add-a-footer-link"><span class="header-section-number">26.3.4</span> Add a footer link</h3>
+<p>In some of the other Card examples in the Bootstrap documentation there is a card-footer option which would be perfect to use as a link to the webpage with more information about each of our ships. We’ll modify our cards to add this footer and href.</p>
 <ol type="1">
-<li>Go into the <code>href</code> of the button and replace the <code>#</code> with: <code>{ ship.source }</code>. This is the URL in our data that is the website where we got the info. We are inserting it into an href.</li>
-<li>Remove the <code>class="btn btn-primary"</code> as that is what make the link into a button. (Which is cool, but we don’t need to draw that much attention to our source link.)</li>
-<li>Replace the text “Go somewhere” with simply “Source”.</li>
-<li>Inside the <code>href</code> element, and an attribute to open the link in a new page: <code>target="_blank"</code>.</li>
-<li>Save your file and go check your page and make sure the links work properly.</li>
+<li><p>Inside the card loop but after <code>card-body</code> closing div, add a blank line.</p></li>
+<li><p>Add the following code:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-footer"</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"{{ ship.source }}"</span><span class="ot"> class</span><span class="op">=</span><span class="st">"card-link"</span><span class="dt">&gt;</span>More about the ship<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
+<p>This code already configured to include the url to the source page found in our data as <code>ship.source</code>.</p>
 </section>
-<section id="adding-the-captain" class="level3" data-number="26.3.4">
-<h3 data-number="26.3.4" class="anchored" data-anchor-id="adding-the-captain"><span class="header-section-number">26.3.4</span> Adding the captain</h3>
+<section id="adding-the-captain" class="level3" data-number="26.3.5">
+<h3 data-number="26.3.5" class="anchored" data-anchor-id="adding-the-captain"><span class="header-section-number">26.3.5</span> Adding the captain</h3>
 <p>The last thing we need is to add our captain into the card. We don’t have an HTML element to update from our Bootstrap code, so we’ll just add our own.</p>
 <ol type="1">
 <li>After the <code>&lt;h5&gt;</code> line, add a new blank line.</li>
@@ -704,27 +721,33 @@ Tip
 <li>Save and check.</li>
 </ol>
 </section>
-<section id="adjusting-columns-for-breakpoints" class="level3" data-number="26.3.5">
-<h3 data-number="26.3.5" class="anchored" data-anchor-id="adjusting-columns-for-breakpoints"><span class="header-section-number">26.3.5</span> Adjusting columns for breakpoints</h3>
-<p>The cards example we pulled from the Bootstrap docs has just one column breakpoint set at <code>col-sm-6</code> which gives us two cards per row. Let’s adjust that for larger screens to show three cards per row.</p>
-<p>Remember, we are working with a 12 column grid. When we set <code>col-sm-6</code> that means that each card takes up six columns, which gives us the two cards. If at the large size we want three to a row, then we would want each card to take <strong>four</strong> columns. (12 / 3 = 4).</p>
+<section id="adjusting-columns-for-breakpoints" class="level3" data-number="26.3.6">
+<h3 data-number="26.3.6" class="anchored" data-anchor-id="adjusting-columns-for-breakpoints"><span class="header-section-number">26.3.6</span> Adjusting columns for breakpoints</h3>
+<p>The Grid cards example we pulled from the Bootstrap docs is set to show a single row of cards by default, then two cards per row at the <code>md</code> size and larger. Try making your browser smaller and larger so you can see the change.</p>
+<p>On wider pages, we could show three cards next to each other, so let’s set that up.</p>
 <ol type="1">
-<li>On the line that has <code>&lt;div class="col-sm-6"&gt;</code>, add another class <code>col-lg-4</code> so it looks like this: <code>&lt;div class="col-sm-6 col-lg-4"&gt;</code></li>
-<li>Save your file and look at your page.</li>
-<li>Change the width of your browser from wide to very small and watch the columns change.
-<ul>
-<li>Remember another way to do this is to use the Inspector. Get the inspector, then click the little “mobile” icon and controls to show different types of mobile devices.</li>
-</ul></li>
+<li>On the <code>class="row"</code> line just above where the loop starts, add a new class to the ones already there that is <code>row-cols-lg-3</code>.</li>
+<li>Save and check how the cards behave now.</li>
 </ol>
 </section>
-</section>
-<section id="fix-some-display-nits" class="level2" data-number="26.4">
-<h2 data-number="26.4" class="anchored" data-anchor-id="fix-some-display-nits"><span class="header-section-number">26.4</span> Fix some display nits</h2>
-<p>We have all our content here, but let’s make it a bit nicer. The cards sit on top of each other and are different sizes. Let’s fix that with some <a href="https://getbootstrap.com/docs/5.3/utilities/spacing/">Bootstrap spacing utilties</a>.</p>
+<section id="fix-some-display-nits" class="level3" data-number="26.3.7">
+<h3 data-number="26.3.7" class="anchored" data-anchor-id="fix-some-display-nits"><span class="header-section-number">26.3.7</span> Fix some display nits</h3>
+<p>The cards are different heights depending on the content. We can adjust that by adding a class to the <code>&lt;div class="card"&gt;</code> element.</p>
 <ol type="1">
-<li>On the <code>class="card"</code> div, add another class so it is <code>class="card mb-4"</code>. We did the same thing in our Bootstrap lesson. <code>m</code> is margin, <code>b</code> is bottom and <code>4</code> is a value between 1-5.</li>
-<li>Save and check that you have vertical space between the cards.</li>
+<li>Find that “card” element and add this class: <code>h-100</code></li>
 </ol>
+<p>This sets the card height at 100% across each row. If you review the documentation, there are other little fixes like that you can make depending on your needs.</p>
+</section>
+</section>
+<section id="card-check" class="level2" data-number="26.4">
+<h2 data-number="26.4" class="anchored" data-anchor-id="card-check"><span class="header-section-number">26.4</span> Card check</h2>
+<p>Your cards should now look like this at a “lg” window size:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pirate-ship-cards-done.png" class="img-fluid figure-img"></p>
+<figcaption>Pirate ship cards done</figcaption>
+</figure>
+</div>
 
 
 </section>
