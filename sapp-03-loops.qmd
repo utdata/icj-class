@@ -96,10 +96,10 @@ We need to build something to hold the data before we can explain how to use it.
 
 ## Loops with data
 
-Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Using grid markup](https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup).
+Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.3/components/card/) to create a list of pirate ships and their descriptions from our new data. If you open up those docs and peruse them you'll see there are many different options and configurations. The one we are going to start with is [Grid cards](https://getbootstrap.com/docs/5.3/components/card/#grid-cards).
 
 1. Make sure `gulp dev` is running.
-1. Go to the [Using grid markup](https://getbootstrap.com/docs/5.3/components/card/#using-grid-markup) section in the docs and copy the code provided there.
+1. Go to the [Grid cards](https://getbootstrap.com/docs/5.3/components/card/#grid-cards) section in the Bootstrap docs and copy the first code selection provided there.
 2. After the closing `</p>` tag for the intro, add a new line.
 3. Paste your code. This already has the row and columns we need.
 4. Save your file and look at your page.
@@ -108,16 +108,16 @@ It should look like this:
 
 ![Grid cards added](images/static-grid-cards-added.png)
 
-We now have two cards on our page. Each card is in a column set at `col-sm-6`, so they show over six columns at small or larger. If you view on a phone, they will stack. By putting each card in a column like this, we can use the `cols-` controls to decide how many should display next to each other at each breakpoint.
+We now have four cards on our page with some issues, like our images are broken. We'll fix those in a minute as we make other adjustments.
 
-Our plan here is to have a card for each ship in our data. We could create eight columns/cards and use our data inside each card, but what if we add more ships to our data source later? Instead, we'll create a **loop** that writes a new column/card for each ship in our data.
+Our plan here is to have a card for each ship in our data. We could create eight cards and use our data inside each card, but what if we add more ships to our data source later? Instead, we'll create a **loop** that writes a new card for each ship in our data.
 
 Our Nunjucks templating system allows for loops like this because it is written in JavaScript. It might help to reference the [Nunjucks documentation on "for" loops](https://mozilla.github.io/nunjucks/templating.html#for) to see how they work.
 
-We're going to remove one of our new column/cards, but then set the remaining one to draw for each new ship in our data.
+We're going to cut our template code down to a single working card, then set this up to repeat for each ship in our data.
 
-5. In the cards code, remove the one of the col/cards. It starts with `<div class="col-sm-6">` and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.
-1. Add a new line _after_ the closing of the `<div class="row">` line.
+5. In the cards code, remove all but one of the col/cards. It starts with `<div class="col">` and totals 9 lines of code. You want to make sure you still have even opening and closing divs for everything. If you save at this point and look at your page, it should have only one card but otherwise be the same.
+1. Add a new line _after_ the closing of the `<div class="row row-cols-1 row-cols-md-2 g-4">` line.
 1. Add the following to the new line: `{% for ship in pirates.ships %}`
 1. Add a new line right _above_ the closing `</div>` for the row.
 1. Add the following to the new line: `{% endfor %}`
@@ -126,14 +126,14 @@ We're going to remove one of our new column/cards, but then set the remaining on
 That code should look like this, and descriptions follow:
 
 ```html
-  <div class="row">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for ship in pirates.ships %}
-    <div class="col-sm-6">
+    <div class="col">
       <div class="card">
+        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
       </div>
     </div>
@@ -151,16 +151,42 @@ Let's take this line: `{% for ship in pirates.ships %}`
 - `in pirates.ships` is defining which array we are looping through. The "pirates" part is the file we are looking in, and "ships" is the name of the array inside that file.
 - Everything after that will get repeated until we reach `(% endfor %)` which says STOP REPEATING.
 
+### Remove the broken image link
+
+While it would be cool if we had a photo of each ship to show here, we don't, so we need to remove the image tag from the template code.
+
+1. Remove the line with the code: `<img src="..." class="card-img-top" alt="...">`
+
+That should remove that broken link from all the cards.
+
 ### Update the headline
 
 At this point you are thinking "That's cool, Prof, but they are all the same." Well, we can pull specific values from the data based on its key.
 
-1. For the headline in the `<h5>` text, replace "Special title treatment" with this: `{{ ship.ship_name }}`
+1. For the headline in the `<h5 class="card-title">` tag, replace the text "Card title" with this:
+
+    ```html
+    {{ ship.ship_name }}
+    ```
+
 2. Save your file and go look at your page. Now you have a new ship name in each card.
 
-To call a variable from our data, we use the double curly-brace: `{{ }}`. (This is opposed to `{% %}` which does other things).
+To call a variable from our data, we use the double curly-brace:
 
-Since we named a single item a "ship" in our loop we use that, and then use the dot notation to call the object key : `{{ ship.ship_name }}`. I like to put spaces around the names for readability, but it is not required.
+```html
+{{ }}
+```
+
+This is opposed to `{% %}` which does other things.
+
+Since we named a single item a "ship" in our loop we use that, and then use the dot notation to call the object key:
+
+```html
+{{ ship.ship_name }}
+```
+
+
+I like to put spaces around the names for readability, but it is not required.
 
 OK, now admit that's kinda cool, right?
 
@@ -168,20 +194,30 @@ OK, now admit that's kinda cool, right?
 
 If we look at our example JSON, we see the key for the description of the ship is called a `blurb`. So we can use the same style to replace the text in our code with the new value.
 
-1. Go into the code and replace the text inside the `<p>` tag with: `{{ ship.blurb }}`
+1. Go into the code and replace the text inside the `<p class="card-text">` tag with:
+
+    ```html
+    {{ ship.blurb }}
+    ```
+
 2. Save and check your page.
 
 Now you should be showing the description of each ship after the name of the ship.
 
-### Update the source link
+### Add a footer link
 
-We have these big buttons that look like they could be a link to somewhere, which would be perfect to use to link to the webpage with more information about our ship. We'll modify those next to add the URL, change the text and change the button display to a simple link.
+In some of the other Card examples in the Bootstrap documentation there is a card-footer option which would be perfect to use as a link to the webpage with more information about each of our ships. We'll modify our cards to add this footer and href. 
 
-1. Go into the `href` of the button and replace the `#` with: `{{ ship.source }}`. This is the URL in our data that is the website where we got the info. We are inserting it into an href.
-1. Remove the `class="btn btn-primary"` as that is what make the link into a button. (Which is cool, but we don't need to draw that much attention to our source link.)
-1. Replace the text "Go somewhere" with simply "Source".
-1. Inside the `href` element, and an attribute to open the link in a new page: `target="_blank"`.
-1. Save your file and go check your page and make sure the links work properly.
+1. Inside the card loop but after `card-body` closing div, add a blank line.
+2. Add the following code:
+
+    ```html
+    <div class="card-footer">
+      <a href="{{ ship.source }}" class="card-link">More about the ship</a>
+    </div>
+    ```
+
+This code already configured to include the url to the source page found in our data as `ship.source`.
 
 ### Adding the captain
 
@@ -193,18 +229,24 @@ The last thing we need is to add our captain into the card. We don't have an HTM
 
 ### Adjusting columns for breakpoints
 
-The cards example we pulled from the Bootstrap docs has just one column breakpoint set at `col-sm-6` which gives us two cards per row. Let's adjust that for larger screens to show three cards per row.
+The Grid cards example we pulled from the Bootstrap docs is set to show a single row of cards by default, then two cards per row at the `md` size and larger. Try making your browser smaller and larger so you can see the change.
 
-Remember, we are working with a 12 column grid. When we set `col-sm-6` that means that each card takes up six columns, which gives us the two cards. If at the large size we want three to a row, then we would want each card to take **four** columns. (12 / 3 = 4).
+On wider pages, we could show three cards next to each other, so let's set that up.
 
-1. On the line that has `<div class="col-sm-6">`, add another class `col-lg-4` so it looks like this: `<div class="col-sm-6 col-lg-4">`
-2. Save your file and look at your page.
-3. Change the width of your browser from wide to very small and watch the columns change.
-    - Remember another way to do this is to use the Inspector. Get the inspector, then click the little "mobile" icon and controls to show different types of mobile devices.
+1. On the `class="row"` line just above where the loop starts, add a new class to the ones already there that is `row-cols-lg-3`.
+2. Save and check how the cards behave now.
 
-## Fix some display nits
+### Fix some display nits
 
-We have all our content here, but let's make it a bit nicer. The cards sit on top of each other and are different sizes. Let's fix that with some [Bootstrap spacing utilties](https://getbootstrap.com/docs/5.3/utilities/spacing/).
+The cards are different heights depending on the content. We can adjust that by adding a class to the `<div class="card">` element.
 
-1. On the `class="card"` div, add another class so it is `class="card mb-4"`. We did the same thing in our Bootstrap lesson. `m` is margin, `b` is bottom and `4` is a value between 1-5.
-1. Save and check that you have vertical space between the cards.
+1. Find that "card" element and add this class: `h-100`
+
+This sets the card height at 100% across each row. If you review the documentation, there are other little fixes like that you can make depending on your needs.
+
+## Card check
+
+Your cards should now look like this at a "lg" window size:
+
+![Pirate ship cards done](images/pirate-ship-cards-done.png)
+
