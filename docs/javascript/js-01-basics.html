@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Christian McDonald">
-<meta name="dcterms.date" content="2024-12-30">
 
-<title>Intro to Coding for Journalists</title>
+<title>13&nbsp; JavaScript basics – Intro to Coding for Journalists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,23 +57,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./start/start-00-intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a08d9001fe0711adfabc365c1b400f34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../javascript/js-02-functions.html" rel="next">
+<link href="../javascript/js-00-intro.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a08d9001fe0711adfabc365c1b400f34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../javascript/js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="../javascript/js-01-basics.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JavaScript basics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intro to Coding for Journalists</a> 
+      <a href="../">Intro to Coding for Journalists</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -158,19 +157,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-01-terminal.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-01-terminal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-02-move.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-02-move.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around</span></span></a>
   </div>
 </li>
@@ -187,19 +186,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Git</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-01-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Project setup</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-02-cycle.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-02-cycle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Using Git</span></span></a>
   </div>
 </li>
@@ -216,31 +215,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML &amp; CSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/01-html-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/01-html-practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML practice</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/02-html-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/02-html-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">HTML mastery</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/03-css-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/03-css-practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CSS practice</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/04-css-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/04-css-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">CSS mastery</span></span></a>
   </div>
 </li>
@@ -257,43 +256,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-01-basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-01-basics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-02-functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-02-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-03-flow-control.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-03-flow-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-04-objects.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-04-objects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-05-html.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-05-html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -301,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup/setup-02-node.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup/setup-02-node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup: Part 2</span></a>
   </div>
 </li>
@@ -316,25 +315,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-01-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Projects from degit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-02-refactor.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-02-refactor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-03-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-03-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Github Pages</span></span></a>
   </div>
 </li>
@@ -351,43 +350,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-01-components.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-01-components.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-02-grids.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-02-grids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-03-cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-03-cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-04-customize.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-04-customize.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-05-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-05-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-06-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Bootstrap mastery</span></span></a>
   </div>
 </li>
@@ -404,43 +403,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Static apps intro</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-01-framework.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-01-framework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-03-loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-03-loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-04-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-04-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
@@ -448,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/fp-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/fp-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
@@ -463,55 +462,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">How to start a project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-google-fonts.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-google-fonts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Using Google Fonts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-fetch-problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-fetch-problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">If you have gulp fetch problems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-macos-shell.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-macos-shell.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Change Mac shell to bash</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-files.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Bash files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Bash commands</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-profile.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-profile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">Bash profile</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-git-share.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-git-share.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">Git: Sharing code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-git-branch.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-git-branch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Git: Branches</span></span></a>
   </div>
 </li>
@@ -527,15 +526,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <li><a href="#the-console" id="toc-the-console" class="nav-link active" data-scroll-target="#the-console"><span class="header-section-number">13.1</span> The console</a></li>
+  <li><a href="#writing-to-the-console" id="toc-writing-to-the-console" class="nav-link" data-scroll-target="#writing-to-the-console"><span class="header-section-number">13.2</span> Writing to the console</a>
   <ul class="collapse">
-  <li><a href="#the-structure-of-the-class" id="toc-the-structure-of-the-class" class="nav-link" data-scroll-target="#the-structure-of-the-class">The structure of the class</a></li>
-  <li><a href="#tips-on-reading-this-book" id="toc-tips-on-reading-this-book" class="nav-link" data-scroll-target="#tips-on-reading-this-book">Tips on reading this book</a>
-  <ul class="collapse">
-  <li><a href="#to-do-steps" id="toc-to-do-steps" class="nav-link" data-scroll-target="#to-do-steps">To-do steps</a></li>
-  <li><a href="#not-to-do-things" id="toc-not-to-do-things" class="nav-link" data-scroll-target="#not-to-do-things">Not to-do things</a></li>
+  <li><a href="#var-vs.-let-vs.-const" id="toc-var-vs.-let-vs.-const" class="nav-link" data-scroll-target="#var-vs.-let-vs.-const"><span class="header-section-number">13.2.1</span> var vs.&nbsp;let vs.&nbsp;const</a></li>
   </ul></li>
-  <li><a href="#macos-vs-windows" id="toc-macos-vs-windows" class="nav-link" data-scroll-target="#macos-vs-windows">macOS vs Windows</a></li>
+  <li><a href="#lets-do-some-math" id="toc-lets-do-some-math" class="nav-link" data-scroll-target="#lets-do-some-math"><span class="header-section-number">13.3</span> Let’s do some math</a>
+  <ul class="collapse">
+  <li><a href="#math-on-your-own" id="toc-math-on-your-own" class="nav-link" data-scroll-target="#math-on-your-own"><span class="header-section-number">13.3.1</span> Math on your own</a></li>
+  </ul></li>
+  <li><a href="#working-with-strings" id="toc-working-with-strings" class="nav-link" data-scroll-target="#working-with-strings"><span class="header-section-number">13.4</span> Working with strings</a>
+  <ul class="collapse">
+  <li><a href="#strings-on-your-own" id="toc-strings-on-your-own" class="nav-link" data-scroll-target="#strings-on-your-own"><span class="header-section-number">13.4.1</span> Strings on your own</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -543,28 +545,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../javascript/js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="../javascript/js-01-basics.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JavaScript basics</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Coding for Journalists</h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JavaScript basics</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 30, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -574,124 +564,101 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This class is being rewritten for Spring 2025 and will likely update throughout the semester.</p>
-</div>
-</div>
-<p>This is the course material for the UT-Austin School of Journalism and Media course <em>Intro Coding for Journalists</em>. The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.</p>
-<p>The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.</p>
-<section id="the-structure-of-the-class" class="level2">
-<h2 class="anchored" data-anchor-id="the-structure-of-the-class">The structure of the class</h2>
-<p>You can see the chapter breakdown, but the book is more or less structured like this:</p>
-<ul>
-<li>Using command-line tools</li>
-<li>Computer setup</li>
-<li>HTML: The skeleton of the web</li>
-<li>CSS: The skin of the web</li>
-<li>JavaScript: The muscles of the web</li>
-<li>Sass: Better web skins</li>
-<li>Bootstrap: OMG, the web solved</li>
-<li>Static apps: HFS, I can make it</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Many of the chapters in this book have video screencasts where I walk through the practice lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as in this book, but I just <em>show</em> the steps as I walk though the book. You’ll find those links in Canvas.</p>
-</div>
-</div>
-</section>
-<section id="tips-on-reading-this-book" class="level2">
-<h2 class="anchored" data-anchor-id="tips-on-reading-this-book">Tips on reading this book</h2>
-<p>I try to write this book so it is clear when you need to <strong>do</strong> something vs <strong>read</strong> something.</p>
-<section id="to-do-steps" class="level3">
-<h3 class="anchored" data-anchor-id="to-do-steps">To-do steps</h3>
-<p>For all my lessons I typically put directions for YOU to do in numbered lists:</p>
+<p>While JavaScript was developed for web browsers, it’s a full-blown big-boy programming language that can do lots of things. As such, we’ll be doing some basic programming things, but using our browser console to view them.</p>
+<section id="the-console" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="the-console"><span class="header-section-number">13.1</span> The console</h2>
+<p>Let’s log some text to the Console so you can see it work.</p>
 <ol type="1">
-<li>Do this thing.</li>
-<li>Then do that thing.</li>
+<li>In your HTML file between the script tags, on a line by itself, add this:</li>
 </ol>
-<hr>
-<p>Sometimes there is code after or among the the directions, but it is in a code block with a grey background.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"Let's do math:"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Save your <code>js-practice.html</code> file.</li>
+<li>Go back to your browser where you should already have the Inspector up and the Console tab chosen.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/js-console-log.png" class="img-fluid figure-img"></p>
+<figcaption>js-console-log</figcaption>
+</figure>
+</div>
+<p>Note we used double-quotes to signify our string. Just so you know, we could use single quotation marks if we are consistent, but then we would’ve needed to escape the single quote in the text as <code>Let\'s</code>.</p>
+</section>
+<section id="writing-to-the-console" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="writing-to-the-console"><span class="header-section-number">13.2</span> Writing to the console</h2>
 <ol type="1">
-<li>Run this command:</li>
+<li>Under your first console.log, use <code>let</code> to create a new variable <code>x</code> and set it to <code>5</code>. Log <code>x</code>’s value to the console. (We’ll talk about <code>let</code> and what a variable is below.)</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that you can roll your cursor over that highlighted block and use the copy button at the top right to copy all the commands within it. <strong>I encourage you to type commands</strong> unless they are super long. You learn better that way.</p>
-<hr>
-<p>Sometimes I show a command and also show Terminal output. In this case, I include the <code>$</code> on the line with the command. The background is also not highlighted.</p>
-<pre><code>$ ls -al
-total 32
-drwxr-xr-x   3 ccm346  Users     96 Jul 12 16:12 .
-drwxr-xr-x@ 22 ccm346  Users    704 Jul 12 16:10 ..
--rw-r--r--   1 ccm346  Users  15642 Jul 12 16:12 data.csv</code></pre>
-</section>
-<section id="not-to-do-things" class="level3">
-<h3 class="anchored" data-anchor-id="not-to-do-things">Not to-do things</h3>
-<p>I typically use an unordered bullet list for explanations and other non-“do” things:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> x <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(x)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Save your html page, then refresh your browser and you should see your console update to include the “5” in the log.</li>
+</ol>
+<p>The browser will act on all our code written in JavaScript, in the order that we write it. You don’t actually see it happen, unless there is some result for you to see. We are using <code>console.log</code> to see that result.</p>
+<p>We could actually type those commands into the browser Console, but anything we do would not be saved when the browser is refreshed.</p>
+<section id="var-vs.-let-vs.-const" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="var-vs.-let-vs.-const"><span class="header-section-number">13.2.1</span> var vs.&nbsp;let vs.&nbsp;const</h3>
+<p>Think of <strong>variables</strong> as containers that hold information. Their purpose is to label and store data that can then be used in your program. By providing a variable with a descriptive name, our programs can be understood more clearly by others and our future selves.</p>
+<p>Until recently, the way to create (or declare) a variable in JavaScript was to use <code>var variableName</code>. In 2015 with the update to ES6, <code>let</code> and <code>const</code> were introduced as better ways of declaring variables. While the old term <code>var</code> still workds, we should use these new terms.</p>
+<p>Here are the very simplified differences between these three ways of declaring a variable:</p>
 <ul>
-<li>This is just a note about something</li>
-<li>And this is another</li>
+<li>If you declare a variable with <code>var</code>, you can re-declare it later and in doing so you will change its value.</li>
+<li>If you declare a variable with <code>let</code>, you can change its value later, but you can’t re-declare it. If you try, you will get an error. This is usually good, because it tells you the variable was already in use.</li>
+<li>If you declare a variable with <code>const</code>, you can’t change its value or re-declare it later.</li>
 </ul>
-<p>Regular paragraph text such as this one are usually an explanation, background or whatever.</p>
-<p>If <strong>something is in bold</strong> or IN ALL CAPS or <em>in italics for emphasis</em> then there is usually a reason why, so pay attention.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Sometimes I put unimportant but interesting side notes in callouts like this.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>But sometimes I’ll put important notes in these callout sections, too. I’ll usually say if they are important in bold at the beginning, like this one.</p>
-</div>
-</div>
-<p>I try to be consistent about all such things, but I’m human so sometimes I’m not.</p>
+<p>Note that you can also declare a variable without using any of those by just assigning a value to term. <code>x = 5</code>. DON’T DO IT. It is not good practice, as you can overwrite global variables already in play, no matter where it is called. You can <a href="https://wesbos.com/javascript-scoping/">read more about calling variables in scope</a>, but I don’t want to get bogged down with it here.</p>
+<p>In our example above, we used <code>let</code> to declare a variable that we called “x”, and then we assigned that variable to the value “5”.</p>
+<p>When we used <code>console.log</code> to print log our variable “x” to the screen, it returned our value: 5.</p>
 </section>
 </section>
-<section id="macos-vs-windows" class="level2">
-<h2 class="anchored" data-anchor-id="macos-vs-windows">macOS vs Windows</h2>
-<p>On some occasions I may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>I use macOS so most directions are from that perspective.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Usually you can use <strong>Cntl-whatever</strong> as a PC equivalent to <strong>Cmd-whatever</strong> on a Mac.</p>
-</div>
-</div>
-</div>
+<section id="lets-do-some-math" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="lets-do-some-math"><span class="header-section-number">13.3</span> Let’s do some math</h2>
+<ol type="1">
+<li>Use <code>let</code> to create a new variable <code>y</code> and set it to <code>3</code>. Log <code>y</code>’s value to the console.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> y <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(y)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Save your file and refresh your browser to make sure it worked.</li>
+<li>Create a new variable <code>z</code> and set it to <code>x</code> multiplied <code>y</code>, using the <code>x</code> and <code>y</code> variables (don’t just use the numbers 3 and 5). Log <code>z</code>’s value to the Console. The character <code>*</code> is our your multiplication tool.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> z <span class="op">=</span> x <span class="op">*</span> y<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(z)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="math-on-your-own" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="math-on-your-own"><span class="header-section-number">13.3.1</span> Math on your own</h3>
+<ol type="1">
+<li>Add a JavaScript comment called “Math on my own”.</li>
+<li>Repeat those last steps, but demonstrate addition (<code>+</code>), subtraction (<code>-</code>) and division (<code>/</code>) using <strong>new</strong> variable names (not <code>z</code>) and values. These are three different new things, each logged to the Console.</li>
+<li>Make sure they worked in your browser.</li>
+<li>Commit your changes to git. (You don’t have to push yet … just add and commit. I want a history.)</li>
+</ol>
+</section>
+</section>
+<section id="working-with-strings" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="working-with-strings"><span class="header-section-number">13.4</span> Working with strings</h2>
+<ol type="1">
+<li>Add a new console log with the text “Working with strings:”.</li>
+<li>Create separate variables for your first, middle and last name. Log each of them to the console.</li>
+</ol>
+<p>(While any combination of letters <em>could</em> be used to create a variable name, note that convention is to use camelCase if your variable has more than one word, meaning the first letter of the variable name is lowercase, but you would uppercase the first character of other words in the variable name.)</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"Working with strings:"</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> firstName <span class="op">=</span> <span class="st">'Christian'</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> middleName <span class="op">=</span> <span class="st">'Clay'</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> lastName <span class="op">=</span> <span class="st">'McDonald'</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Use string concatenation (<code>+</code>) to join the variables you just created into a new variable called <code>name</code>. Make sure to include spaces in quotation marks between each name part. Log it to the console.</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> name <span class="op">=</span> firstName <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> middleName <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> lastName<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>OK, we now have created a variable that has your entire name, built from other variables. Holler if you see that it doesn’t work in your browser.</p>
+<section id="strings-on-your-own" class="level3" data-number="13.4.1">
+<h3 data-number="13.4.1" class="anchored" data-anchor-id="strings-on-your-own"><span class="header-section-number">13.4.1</span> Strings on your own</h3>
+<ol type="1">
+<li>Add a JavaScript comment with the text “Strings on my own”.</li>
+<li>Create a new variable, <code>greeting</code>, and in it, join the string <code>'My name is'</code> together with <code>name</code> so its new value is <em>My name is YOUR NAME</em>. Log that new value to the console.</li>
+<li>Commit your changes to git so we have a record.</li>
+</ol>
 
 
 </section>
@@ -1117,10 +1084,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../javascript/js-00-intro.html" class="pagination-link" aria-label="JavaScript">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start/start-00-intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../javascript/js-02-functions.html" class="pagination-link" aria-label="JS Functions">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
