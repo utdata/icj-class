@@ -15,7 +15,7 @@ console.log("Let's do math:");
 2. Save your `js-practice.html` file.
 1. Go back to your browser where you should already have the Inspector up and the Console tab chosen.
 
-![js-console-log](images/js-console-log.png)
+![js-console-log](../images/js-console-log.png)
 
 Note we used double-quotes to signify our string. Just so you know, we could use single quotation marks if we are consistent, but then we would've needed to escape the single quote in the text as `Let\'s`.
 

@@ -33,9 +33,9 @@ The best way to set up your project template is to use [degit](https://www.npmjs
 Before we talk about how the project architecture is structured, let's tour the example pages that are included. As we do so, we'll just touch on how the example code applies to specific project features.
 
 ::: {layout-ncol=2}
-![Sample index](images/sapp-example-index.png)
+![Sample index](../images/sapp-example-index.png)
 
-![Sample detail](images/sapp-example-detail.png)
+![Sample detail](../images/sapp-example-detail.png)
 :::
 
 

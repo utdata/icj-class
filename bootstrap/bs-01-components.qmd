@@ -4,7 +4,7 @@ We're going to explore many parts of the Bootstrap documentation, using **Compon
 
 Here is our goal, a page like this:
 
-![Our goal: a finished bootstrap page](images/bs-practice-done.png)
+![Our goal: a finished bootstrap page](../images/bs-practice-done.png)
 
 We'll be pulling code from Bootstrap [documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and [examples](https://getbootstrap.com/docs/5.3/examples/) to build these pages. In some cases we aren't even updating the example text, we're just getting the components on our pages.
 
@@ -25,7 +25,7 @@ In our case we want the [Navbars](https://getbootstrap.com/docs/5.3/components/n
 
 This will add a nice navigation bar to our site:
 
-![Navbar example](images/bs-navbar-01.png)
+![Navbar example](../images/bs-navbar-01.png)
 
 ::: callout-note
 As you copy and paste code into your index.html file, you may have to adjust the indents of some rows. Make your indents so your code is nice and pretty and shows properly the parent-child relationships of items. You'll thank me later when you are trying to figure out what goes with what. That, **and it is part of your grade**, because I want to build good habits.
@@ -51,7 +51,7 @@ This navbar code includes CSS and JavaScript that collapse links into a menu. By
 1. Use your DevTools Inspector or change your window width to mobile to see the menu button.
 2. Click on it to make sure it works!
 
-![Test your mobile navbar](images/bs-navbar-test.gif)
+![Test your mobile navbar](../images/bs-navbar-test.gif)
 
 You should look over the other code within the navs, especially the list items classed as `nav-item` and the `a` tags within them classed as `nav-link`. These are your actual links. Where they have `href="#"` you'll update `#` to the path to your HTML pages.
 
@@ -115,7 +115,7 @@ Your code should look like this:
 
 And your page should should be looking something like this:
 
-![Typography classes](images/bs-index-typography.png)
+![Typography classes](../images/bs-index-typography.png)
 
 ### Backgrounds
 
@@ -130,7 +130,7 @@ We're going to add some color to our Jumbotron-like header using a background co
 
 That should yield a result like this:
 
-![Background color added](images/bs-background.png)
+![Background color added](../images/bs-background.png)
 
 Still ugly, but we are getting there.
 
@@ -192,7 +192,7 @@ Here we'll dive back into the components section of the docs to get a **button**
 
 With this, we have our "Jumbotron"-like header. At this point, you page should be looking like this:
 
-![Button added](images/bs-button-added.png)
+![Button added](../images/bs-button-added.png)
 
 And your header code should look like this:
 

@@ -12,7 +12,7 @@ The shell programming language we will use for these text-based interactions is 
 
 **Windows** doesn't understand Bash at all without the help of another program. This is why we installed **Git and Git Bash** so we can all speak the same language. (If you are a Windows user and haven't yet installed Git, [do it now](start-00-intro.qmd).)
 
-**Macs** understand Bash natively, but some day they will change to a similar language called zsh. When you launch a shell on newer Macs you might get a message _The default interactive shell is now zsh. To update your account to use zsh, please run `chsh -s /bin/zsh`._ **DON'T DO THIS! JUST IGNORE IT.** We will continue to use **Bash**. Later we will add a command to disable this message. If somehow your terminal gets set to use zsh, you can [check and/or change it to Bash](/appendices/a-macos-shell.qmd).
+**Macs** understand Bash natively, but some day they will change to a similar language called zsh. When you launch a shell on newer Macs you might get a message _The default interactive shell is now zsh. To update your account to use zsh, please run `chsh -s /bin/zsh`._ **DON'T DO THIS! JUST IGNORE IT.** We will continue to use **Bash**. Later we will add a command to disable this message. If somehow your terminal gets set to use zsh, you can [check and/or change it to Bash](../appendices/a-macos-shell.qmd).
 
 ## Launch your terminal
 
@@ -28,7 +28,7 @@ Once you launch it will look like this:
 
 Though it may have a white screen.
 
-1. Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it instead says `zsh`, then go to the [this appendix chapter](a-macos-shell.qmd) to change it.
+1. Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it instead says `zsh`, then go to the [this appendix chapter](../appendices/a-macos-shell.qmd) to change it.
 
 ### Windows
 

@@ -243,13 +243,13 @@ You'll see in the image below that there are list item bullets in the navigation
 
 1. Write a style that removes the bullets for the list in the navigation section, while retaining the bullets on the shows page.
 
-![Navigation bullets](images/bullet-modification.png)
+![Navigation bullets](../images/bullet-modification.png)
 
 ### Set bullet style for shows
 
 The list of shows on the `shows.html` is hard to read. Make some changes to make it look better:
 
-![Good bullet list](images/sass-bullet-list.png)
+![Good bullet list](../images/sass-bullet-list.png)
 
 1. Make the list of shows a bulleted list. (Style of your choice.)
 1. Make sure the bullets line up vertically with the video on the page.
@@ -262,7 +262,7 @@ Make sure you don't _add_ bullets back to the list items in the nav!
 
 Add styles that will give navigation links the primary color and behave like those in the body, where the underline only shows on hover.
 
-![Hover lines in navigation](images/sass-hover.gif){width="320"}
+![Hover lines in navigation](../images/sass-hover.gif){width="320"}
 
 Selecting these are a bit tricky. [link](https://www.w3schools.com/cssref/sel_link.asp), [hover](https://www.w3schools.com/cssref/sel_hover.asp), [visited](https://www.w3schools.com/cssref/sel_visited.asp) are all separate properties and each one needs to be specified individually with a [text-decoration](https://www.w3schools.com/cssref/pr_text_text-decoration.asp) property, like this:
 
@@ -293,7 +293,7 @@ So, the index is the "home page" of a directory.
 
 Take a look at the `docs` folder in your VS Code Explorer.
 
-![Docs folder structure](images/sass-docs.png)
+![Docs folder structure](../images/sass-docs.png)
 
 It is this folder where all our processed pages are sent to ... it is our "real" website, even though we edit from the `src` folder. It is the "root" of our site and where our `index.html` page lives. Everything else is relative to that folder. When we launch our environment, it goes to `http://localhost:3000/` but it displays the `index.html` page. Once you click through to the `shows.html` page, it url changes to `http://localhost:3000/shows.html`. If you click on the Home link it takes you to `http://localhost:3000/index.html`, which is the same exact page as `http://localhost:3000/`.
 

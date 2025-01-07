@@ -21,7 +21,7 @@ After a few minutes, refresh your page and your website URL based on your userna
 
 Please take that URL and add it to your Github repo in the About section like this:
 
-![bs-save-url.gif](images/bs-save-url.gif)
+![bs-save-url.gif](../images/bs-save-url.gif)
 
 ## More Github pages
 

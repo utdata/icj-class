@@ -82,7 +82,7 @@ To get started:
 1. When then Inspector loads, click on the **Console** tab.
 1. You can close any other little windows that pop up.
 
-![js-console](images/js-console.gif)
+![js-console](../images/js-console.gif)
 
 OK, let's start writing some javascript in the next chapter.
 

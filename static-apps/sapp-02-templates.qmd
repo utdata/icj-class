@@ -6,11 +6,11 @@ We're going to rebuild the framework of the Pirate Cove site you built in the Bo
 
 Here are some screen shots of the finished product you are working toward.
 
-![Index page](images/static-done-index.png)
+![Index page](../images/static-done-index.png)
 
-![Pirate ship page](images/static-done-pirate-ships.png)
+![Pirate ship page](../images/static-done-pirate-ships.png)
 
-![Entry page example](images/static-done-entry-page.png)
+![Entry page example](../images/static-done-entry-page.png)
 
 ## Install the assets
 
@@ -57,7 +57,7 @@ We'll make a some changes in both our base template and our index so we can see 
 
 1. First, take a look at the title of your page in your browser. Note it says "Default title":
 
-![Default title](images/static-default-title.png)
+![Default title](../images/static-default-title.png)
 
 2. Now open the file `src/_templates/base.njk`
 3. Take a look at the `<title>` tag here:
@@ -85,7 +85,7 @@ We want our site name to be at the beginning of every page title of our site, bu
 
 5. Save the file and go look at your index page in your browser. Now you title should look like this:
 
-![title-pirate-cove](images/static-title-pirate-cove.png)
+![title-pirate-cove](../images/static-title-pirate-cove.png)
 
 Because we changed this on `base.njk` it will apply to _EVERY_ page on our site.
 
@@ -99,7 +99,7 @@ Now we'll update the `{% block page_title %}` on our index page so we can give i
 
 Now your title looks like this:
 
-![Default title edited](images/static-default-title-edit.png)
+![Default title edited](../images/static-default-title-edit.png)
 
 So, we have "Pirate Cove | " on every page, and on this specific page we have replaced "Default title" with new title text in the `{% block page_title %}` block.
 
@@ -202,7 +202,7 @@ Here I want you to use Emmet to add a bootstrap row and column. This is a review
 
 Here is a gif of what this looks like:
 
-![static-emmet-gif](images/static-emmet-div.gif)
+![static-emmet-gif](../images/static-emmet-div.gif)
 
 OK, now inside this we are going to add an H1 and some text that would be the introduction to the site, but we'll use lorem ipsum (fake text) just to get it done.
 

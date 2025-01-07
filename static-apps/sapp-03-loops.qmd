@@ -64,7 +64,7 @@ The result of the command should download three files. (Two were already in the 
 This downloaded all the files to the `src/_data/` folder.
 
 ::: callout-tip
-If you have a problem with `gulp fetch` and get an error, you can use [these steps](a-fetch-problems.qmd) to download the data. Do that and then move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
+If you have a problem with `gulp fetch` and get an error, you can use [these steps](../appendices/a-fetch-problems.qmd) to download the data. Do that and then move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
 :::
 
 Go ahead and open the files at `src/data/pirates.json` and peek at it. Here is just a snippet:
@@ -106,7 +106,7 @@ Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.3/
 
 It should look like this:
 
-![Grid cards added](images/static-grid-cards-added.png)
+![Grid cards added](../images/static-grid-cards-added.png)
 
 We now have four cards on our page with some issues, like our images are broken. We'll fix those in a minute as we make other adjustments.
 
@@ -248,5 +248,5 @@ This sets the card height at 100% across each row. If you review the documentati
 
 Your cards should now look like this at a "lg" window size:
 
-![Pirate ship cards done](images/pirate-ship-cards-done.png)
+![Pirate ship cards done](../images/pirate-ship-cards-done.png)
 

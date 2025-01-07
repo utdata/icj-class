@@ -74,7 +74,7 @@ Opening the folder in VS Code will make sure that your computer knows where all 
 - Go to **File > Open Folder**, find your folder and select it, then click **Open**.
 - Once the folder opens, the document tray should show the folder name.
 
-![Folder name](images/00-folder-open.png)
+![Folder name](../images/00-folder-open.png)
 
 ### Create your README
 
@@ -106,7 +106,7 @@ The `.gitigore` tells git to ignore certain files your computer will create but 
 - In a browser, go to [gitignore.io](https://gitignore.io)
 - Insert the following values: macOS, Windows, VisualStudioCode.
 
-![gitignore values](images/00-gitignore-values.png)
+![gitignore values](../images/00-gitignore-values.png)
 
 - Hit **Create**.
 - Copy all the text from the resulting window.
@@ -139,7 +139,7 @@ Once you create the repo, you'll get a page back with a lot of code.
 - Make sure the `SSH` button is selected in the top box.
 - Go to the second block "…or push an existing repository from the command line" copy the first line of code there and then run it in your VS Code Terminal.
 
-![Connect to Github](images/00-connect-github.png)
+![Connect to Github](../images/00-connect-github.png)
 
 Use `git push origin main` to push your code.
 

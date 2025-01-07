@@ -78,7 +78,7 @@ Within the middle section with the photo, let's add a tagline as a final paragra
 
 It should end up looking like this:
 
-![Tagline added](images/bs-after-tagline.png)
+![Tagline added](../images/bs-after-tagline.png)
 
 
 ## Add a footer
@@ -97,4 +97,4 @@ Lastly, I want you to add a footer element with the following specs (which you c
 
 We are done with our site and it should look like this:
 
-![Bootstrap page done](images/bs-practice-done.png)
+![Bootstrap page done](../images/bs-practice-done.png)

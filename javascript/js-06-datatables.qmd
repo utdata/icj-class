@@ -21,7 +21,7 @@ Tables are great for displaying tabular data (hence the word table). But often t
 
 It will look similar to this:
 
-![Datatable example](images/js-datatable.gif)
+![Datatable example](../images/js-datatable.gif)
 
 ## The steps
 

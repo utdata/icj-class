@@ -10,7 +10,7 @@ Go back to your site and click on the "Index example" link we added to the nav. 
 
 This is a screen shot of one of those pages. (It's a good book. Read it.)
 
-![static page example](images/static-detail-page-example.png)
+![static page example](../images/static-detail-page-example.png)
 
 All of the individual book pages have the same structure: A book photo on the left, and on the right a headline and blurb about the book.
 
@@ -26,7 +26,7 @@ There is a [Library books data Google Doc](https://docs.google.com/document/d/1R
 
 Take a look at how that doc is structured. It uses a "language" called [ArchieML](http://archieml.org/) developed by the New York Times. It allows authors to create structured text in a Google Doc and for that content to be converted into JSON, which is the "data format" for JavaScript. It's not particularly hard to use (it was created for reporters, after all) but it takes some getting used to.
 
-![ArchieML example](images/sapp-archiml-example.png)
+![ArchieML example](../images/sapp-archiml-example.png)
 
 - At the top we have `[books]`, which is names our array. (An "array" is a collection of data.)
 - Then each group of lines listed here becomes new entry in our data. Each line starts with a `key:` and then is followed by a value. The values even support links that get converted to hrefs in our final product.
@@ -46,7 +46,7 @@ In the `project.config.json` the only difference in using a sheet vs doc is `"ty
 
 You'll see the `books` array near the top. That's the only one we are worried about here, but you'll also see the other example arrays there.
 
-![Data example](images/sapp-json-example.png)
+![Data example](../images/sapp-json-example.png)
 
 Note how the key names and values match the ArchieML document example above.
 

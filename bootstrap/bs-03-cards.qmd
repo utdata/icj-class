@@ -4,7 +4,7 @@ Here we will introduce [Bootstrap cards](https://getbootstrap.com/docs/5.3/compo
 
 Our goal here is to build this part of our page:
 
-![Cards goal](images/bs-cards-goal.png)
+![Cards goal](../images/bs-cards-goal.png)
 
 ## The ever-versatile card
 
@@ -34,6 +34,6 @@ With this method, you can have any number of cards but you can set how many card
 
 This is how your page should look now:
 
-![Cards added](images/bs-cards-added.png)
+![Cards added](../images/bs-cards-added.png)
 
 Next we'll explore some customizations.

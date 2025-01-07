@@ -26,9 +26,9 @@ Do the [Codecademy CSS tutorial](https://www.codecademy.com/learn/learn-css) les
 
 This will be our finished product:
 
-![Finished practice page](images/css-done.gif)
+![Finished practice page](../images/css-done.gif)
 
-Here is a [PNG of the practice project](images/css-done.png), which might be easier to study.
+Here is a [PNG of the practice project](../images/css-done.png), which might be easier to study.
 
 ## Resources
 
@@ -53,11 +53,11 @@ That said, different browsers display defaults just a little bit differently. He
 
 Notice the (admittedly subtle) difference in vertical spacing. The image starts in different places.
 
-![Browser example 1](images/3-browser-reset-ex01.png)
+![Browser example 1](../images/3-browser-reset-ex01.png)
 
 And a little further down the page, notice the difference in the size of the bullets and the line height between lines.
 
-![Browser example 2](images/3-browser-reset-ex02.png)
+![Browser example 2](../images/3-browser-reset-ex02.png)
 
 ### Add the reset file
 
@@ -78,7 +78,7 @@ The [link](https://www.w3schools.com/tags/tag_link.asp) tag basically connects t
 
 Save your page and look at you Live Server to watch your something-kinda-special web page turn into muck.
 
-![Page after reset](images/css-after-reset.png)
+![Page after reset](../images/css-after-reset.png)
 
 ### Relative font sizing
 
@@ -172,7 +172,7 @@ This `margin-<direction>: auto;` style was discussed in the Learn CSS lesson in 
 
 If you've done this right, your live server should show that all the content is centered on the page.
 
-![Page after fonts, width set](images/css-after-article.png)
+![Page after fonts, width set](../images/css-after-article.png)
 
 ## Using class and id
 
@@ -229,7 +229,7 @@ I'll drop a couple more tips as we go through the lesson.
 
 While there is an HTML element for a horizontal rule `<hr>`, it's best to set such things using CSS. For instance, we need want dotted borders on our recipe stats section:
 
-![Stats box](images/css-stats-example.png){width=300}
+![Stats box](../images/css-stats-example.png){width=300}
 
 
 
@@ -247,7 +247,7 @@ dl {
 
 Check your live server to see the borders. We used a [shorthand for the border property](https://www.w3schools.com/cssref/pr_border.asp) that allows us to set the size, color and style in one rule.
 
-![Description list with borders](images/css-stats-lines.png){width=300}
+![Description list with borders](../images/css-stats-lines.png){width=300}
 
 ## Float
 
@@ -349,7 +349,7 @@ We're just setting font styles and giving a little space between stuff.
 
 We've made progress, but we're not quite there.
 
-![After setting figure floats](images/css-figure-floats.png)
+![After setting figure floats](../images/css-figure-floats.png)
 
 As you can see here, the intro is creeping up under the photo, but we want it to go all the way across the page. It's getting pulled there because of the floats on the elements above. We can fix this by adding a `clear` style on our intro text. The `clear` tag cancels out floats, and you can set it to clear `left`, `right` or `both` directions.
 
@@ -384,7 +384,7 @@ ul {
 
 If you are living right, your list should look like this now:
 
-![Unordered lists](images/css-unordered-list.png){width=300}
+![Unordered lists](../images/css-unordered-list.png){width=300}
 
 ### Set the ordered list style
 
@@ -406,7 +406,7 @@ ol li {
 
 Our nutrition information is our last challenging piece and we get to learn some more advanced CSS fu. This is our goal:
 
-![Nutrition list example](images/nutrition-list-example.png)
+![Nutrition list example](../images/nutrition-list-example.png)
 
 Before we can apply styles to this unordered list, we need to identify it in some way so we don't also make changes to the ingredients list. To do that, you'll go in and add an to the `<section>` element:
 
@@ -445,7 +445,7 @@ Now let's use some of the same techniques we used with the header and figure to 
 That starts putting these side-by-side, but there is no gutter between them.
 
 
-![List items floated](images/css-nutri-float.png)
+![List items floated](../images/css-nutri-float.png)
 
 Now the fun part ... we need to apply styles to just every other list item (those that now fall into the left column). Our first challenge is to make sure we are targeting the right element. Another trick of the trade: I sometimes write a temporary style to an element, like turning the background red, just to make sure I'm getting the right thing. Let's do that here.
 
@@ -459,7 +459,7 @@ Now the fun part ... we need to apply styles to just every other list item (thos
 
 This shows us that our style is getting the alternating rows:
 
-![Alternating rows](images/css-alt-rows.png)
+![Alternating rows](../images/css-alt-rows.png)
 
 Let's pause here to break down that rule of the [nth-child](https://www.w3schools.com/cssref/sel_nth-child.asp). The `nth-child` rule lets us apply a style to a specific list item. Where we have used `(odd)` you could also put in a number, like `(4)` and it would apply to the fourth item in the list. Or `(even)`. Try it!
 
@@ -501,7 +501,7 @@ Tricks of the trade #32?: If it works, especially if you check that it works in 
 
 ## Save and push to Github
 
-You've done it! Compare your page to [the example](images/css-done.png) and make sure you have everything.
+You've done it! Compare your page to [the example](../images/css-done.png) and make sure you have everything.
 
 Use the git cycle to push all your code to Github.
 

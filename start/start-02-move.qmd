@@ -54,7 +54,7 @@ Downloads		Public
 
 It listed the names of all the folders and files of the directory I'm in. This is similar to opening a folder browser on your computer and then opening your home folder and looking inside of it.
 
-![Home directory](images/home-directory.png)
+![Home directory](../images/home-directory.png)
 
 ## Flags
 

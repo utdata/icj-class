@@ -87,7 +87,7 @@ $ git commit -m "my first commit"
 
 Here is a gif of the whole process, though I have `git status` mixed in there.
 
-![first commit](images/first-commit.gif)
+![first commit](../images/first-commit.gif)
 
 Congratulations ... you have now saved a snapshot in time of all these files.
 
@@ -107,7 +107,7 @@ Once you create the repo, you'll get a page back with a lot of code.
 1. Go to the second block **"… or push an existing repository from the command line"** and copy the first line there that starts with **`git remote add origin`**. Pro Tip: Triple-click on the line to highlight it.
 1. Paste that line into your Terminal and run it.
 
-![Connect to Github](images/00-connect-github.png)
+![Connect to Github](../images/00-connect-github.png)
 
 We shouldn't need that second line there because our branch should already be named `main`.
 
@@ -325,7 +325,7 @@ In Canvas, find "Version control assignment" and submit the URL of your Github r
 
 If you are committing files with `git commit` and you forget to add the `-m` flag or the message in quotes after it, you will get thrown into an odd program called VIM. It will look something like this:
 
-![vim commit](images/vim-commit.png)
+![vim commit](../images/vim-commit.png)
 
 If this happens:
 
@@ -341,7 +341,7 @@ I don't want to get into what the VIM commands are, but basically `:wq` means "w
 
 This GIF shows the process, but not the keystrokes, so use the directions above. Best yet, DON'T FORGET `-m`!
 
-![commit-vim](images/commit-vim.gif)
+![commit-vim](../images/commit-vim.gif)
 
 ---
 

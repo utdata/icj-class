@@ -16,11 +16,11 @@ In this section we'll create a folder to hold all of our stuff, and some mainten
 2. Launch Visual Studio Code and start a **New window**. (You can find it under the File menu, or use *Command-option-n*.)
 3. On the Welcome screen, you will see a link called **Open folder**. (If you don't see this, click on the page icon at top-left, which is the Explorer menu.) Click on that Open Folder button and negotiate your way to your project folder, select it and click the **Open** button.
 
-![Open Folder](images/open-folder.png)
+![Open Folder](../images/open-folder.png)
 
 4. Go to the Terminal menu and choose New Terminal. This will open a terminal window inside of VS Code, which is super handy. The top line of the terminal should give you the path to inside your project folder, like `~/icj/christian-git-practice`. If it doesn't then you didn't open the folder first.
 
-![VS Code](images/vs-code-start.png)
+![VS Code](../images/vs-code-start.png)
 
 ## The README
 
@@ -49,7 +49,7 @@ By [YOURNAME], Intro Coding for Journalists class
 This repo is a class assignment to learn git. It is due [Month] [Day], [Year].
 ```
 
-![Make readme](images/make-readme.gif)
+![Make readme](../images/make-readme.gif)
 
 4. Save and close the README file.
 

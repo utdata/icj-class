@@ -20,7 +20,7 @@ We will create an HTML form that allows a user to enter their first, middle and 
 
 It will end up working like this:
 
-![Our js-form](images/js-form.gif)
+![Our js-form](../images/js-form.gif)
 
 Now let's get down to the detail.
 

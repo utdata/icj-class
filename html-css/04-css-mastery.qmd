@@ -8,14 +8,14 @@ We did many of these things with our practice assignment. You'll also have to fi
 
 You'll make a news story, something like this:
 
-![Finished mastery page](images/css-mastery-example.gif)
+![Finished mastery page](../images/css-mastery-example.gif)
 
-Here is a [PNG of the mastery project](images/css-mastery-done.png), which might be easier to study.
+Here is a [PNG of the mastery project](../images/css-mastery-done.png), which might be easier to study.
 
 ## Requirements
 
 ::: callout-tip
-You will likely find it useful to refer to the [CSS practice chapter](css-01-practice.qmd) as you work through this. 
+You will likely find it useful to refer to the [CSS practice chapter](03-css-practice.qmd) as you work through this. 
 :::
 
 - Make sure you update your `story.html` file with any of the feedback you received in grading.
@@ -25,7 +25,7 @@ You will likely find it useful to refer to the [CSS practice chapter](css-01-pra
 - Now set a standard font size for text elements like `<p>`, `<ul>`, `<ol>` and `<dl>` tags. (Make the base font larger.) You'll also want to set a bottom margin on those elements so they don't run up against each other.
 - Add an `<article>` tag after the `<body>`tag in your HTML file if you need to, then in your CSS file make the max-width of the article 620px and center it.
 - In the HTML, set the width of the photo to 620px using a "width" attribute (you can put it after the src attribute).
-- Use [Google Fonts](https://fonts.google.com/) to find and use a font called "Ubuntu" and add that to your page. You can review the chapter [Using Google Fonts](a-google-fonts.qmd) for tips on how.
+- Use [Google Fonts](https://fonts.google.com/) to find and use a font called "Ubuntu" and add that to your page. You can review the chapter [Using Google Fonts](../appendices/a-google-fonts.qmd) for tips on how.
 - Set all your headlines to use that Ubuntu font (with backups) and set headline sizes that make visual sense, but follow convention. (i.e., make sure h1 is the biggest and is used for the article headline.) Make sure you also include the `<h4>` label above the headline.
 - Set the byline and photo credit lines to use the font Arial with an appropriate backup. Adjust sizes so they are visually appealing.
 - Use a `<span>` tag around the date in the byline, and set it to font-style of italic. [This page](https://www.w3schools.com/tags/tag_span.asp) explains a span, but PLEASE don't style the span directly like that. Write in the styles file instead.

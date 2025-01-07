@@ -24,7 +24,7 @@ The project should include:
   - A hero display header that includes a background image. (At least on the index.)
   - A [Navbar](https://getbootstrap.com/docs/5.3/components/navbar/) that links to detail pages based on a loop from the data, in addition to any other pages you might have.
 - You must add at least one scss partial with your Sass code. (A good project would have several.) Again, beyond the examples already in the project.
-- You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](a-google-fonts.qmd).)
+- You must use at least one [Google Font](https://fonts.google.com/) somewhere. ([Here is help on how](../appendices/a-google-fonts.qmd).)
 - **Remove any unused files** related to the example book pages.
 - This project should be in its own repo with the site published through Github Pages.
 
@@ -37,7 +37,7 @@ In addition to the basic site structure, the index should have:
 
 ### "Baked" detail pages
 
-Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-rig README](https://github.com/utdata/icj-project-rig#bake-pages-from-data-and-a-template) page and covered in the [static-apps lesson](sapp-00-intro.qmd).
+Each collection includes assets to "bake" a set of detail pages from a data source. The concept is explained in the [icj-project-rig README](https://github.com/utdata/icj-project-rig#bake-pages-from-data-and-a-template) page and covered in the [static-apps lesson](../static-apps/sapp-00-intro.qmd).
 
 The layout for these detail pages should include:
 
