@@ -26,6 +26,14 @@ There is a screencast of this lesson with explanations in Canvas under Panopto V
 
 ## Create your project and Github repo
 
+::: callout-warning
+
+### Codespaces
+
+If we are using Codespaces, we'll make the necessary adjustments here. 
+
+:::
+
 We'll take some leaps of faith and create our project and get all our files, so we have something to talk about within the lesson.
 
 1. Create a new folder in your `icj/` folder called `yourname-bootstrap`.

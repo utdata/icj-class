@@ -1,5 +1,15 @@
 # Projects from degit
 
+## Creating your project
+
+::: callout-warning
+
+### Codespaces
+
+It's possible we will diverge from this script to use Codespaces, the virtual machine option offered by Github. If so, the project setup that we start with here would be different. We'll figure that out together. (In short, we would go to the [icj-sass-template](https://github.com/utdata/icj-sass-template) repo, use *Use this template > Create a new repository* option to create your copy, then open in Codespaces.)
+
+:::
+
 As usual, we'll learn by doing. So let's jump in with a project.
 
 For this project, we are starting from a template saved in a repo. We'll use a special npm package called [degit](https://www.npmjs.com/package/degit) to start our project. You should have already installed it globally when we did our computer setup.

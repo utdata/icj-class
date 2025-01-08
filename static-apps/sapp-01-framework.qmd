@@ -19,6 +19,15 @@ We will learn the features of this project rig in steps:
 
 ## Set up development
 
+::: callout-warning
+
+### Codespaces
+
+If we are using Codespaces, we'll make adjustments here.
+
+:::
+
+
 The best way to set up your project template is to use [degit](https://www.npmjs.com/package/degit) to download the template from the `icj-project-rig` repo.
 
 1. Create your project folder, called `yourname-staticapp`.
