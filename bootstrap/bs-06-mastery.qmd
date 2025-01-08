@@ -50,7 +50,7 @@ You'll want to use the Bootstrap documentation for your code and styles.
 
 I have images for you to use for this assignment, but  you have to set them a specific way for them to work in the development environment:
 
-- Download this compressed folder of images: <i class="bi bi-download"></i> [pirate-photos.zip](resources/pirate-photos.zip){download="pirate-photos.zip"}.
+- Download this compressed folder of images: <i class="bi bi-download"></i> [pirate-photos.zip](../resources/pirate-photos.zip){download="pirate-photos.zip"}.
 - Find the zip on your hard drive and uncompress it.
 - Move the contents (the photos only) into the `src/img` folder in your project. The photos should be loose inside that folder.
 - Run `gulp dev` to process the photos and run your development server. (If you had `gulp dev` running already, quit it with *CTRL + C* and then restart `gulp dev` again so the photos will be processed and copied into `docs`.)

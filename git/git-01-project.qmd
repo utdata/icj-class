@@ -53,7 +53,7 @@ This repo is a class assignment to learn git. It is due [Month] [Day], [Year].
 
 4. Save and close the README file.
 
-I want something like that on every project you make in this class: **title, your name, the assignment and when it is due**. Your projects early in the class won't have an extensive README [like some others](https://github.com/utdata/jedr-academy#readme), but I want you to be in the habit of using them.
+I want something like that on every project you make in this class: **title, your name, the assignment and when it is due**. Your projects early in the class won't have an extensive README [like some others](https://github.com/utdata/icj-project-rig?tab=readme-ov-file#icj-project-rig), but I want you to be in the habit of using them.
 
 ## Using gitignore
 

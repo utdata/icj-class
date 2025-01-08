@@ -15,7 +15,7 @@ book:
         - start/start-00-intro.qmd
         - start/start-01-terminal.qmd
         - start/start-02-move.qmd
-    # - setup-01-git.qmd
+    - setup/setup-01-git.qmd
     - part: "Git" 
       chapters:
         - git/git-00-intro.qmd

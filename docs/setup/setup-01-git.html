@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>18&nbsp; JS jQuery/Datatables – Intro to Coding for Journalists</title>
+<title>Setup: Part 1 – Intro to Coding for Journalists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../setup/setup-02-node.html" rel="next">
-<link href="../javascript/js-05-html.html" rel="prev">
+<link href="../git/git-00-intro.html" rel="next">
+<link href="../start/start-02-move.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../javascript/js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="../javascript/js-06-datatables.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../setup/setup-01-git.html">Setup: Part 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../setup/setup-01-git.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup/setup-01-git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Setup: Part 1</span></a>
   </div>
 </li>
@@ -298,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -527,32 +493,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#using-datatables" id="toc-using-datatables" class="nav-link active" data-scroll-target="#using-datatables"><span class="header-section-number">19</span> Using DataTables</a>
-  <ul class="collapse">
-  <li><a href="#lets-talk-about-tables" id="toc-lets-talk-about-tables" class="nav-link" data-scroll-target="#lets-talk-about-tables"><span class="header-section-number">19.1</span> Let’s talk about tables</a></li>
-  <li><a href="#goals-of-this-lesson" id="toc-goals-of-this-lesson" class="nav-link" data-scroll-target="#goals-of-this-lesson"><span class="header-section-number">19.2</span> Goals of this lesson</a></li>
-  <li><a href="#the-steps" id="toc-the-steps" class="nav-link" data-scroll-target="#the-steps"><span class="header-section-number">19.3</span> The steps</a>
-  <ul class="collapse">
-  <li><a href="#v1-zero-configuration" id="toc-v1-zero-configuration" class="nav-link" data-scroll-target="#v1-zero-configuration"><span class="header-section-number">19.3.1</span> v1: “Zero configuration”</a></li>
-  <li><a href="#recap-of-how-this-works" id="toc-recap-of-how-this-works" class="nav-link" data-scroll-target="#recap-of-how-this-works"><span class="header-section-number">19.3.2</span> Recap of how this works</a></li>
-  <li><a href="#v2-scroll-vertical" id="toc-v2-scroll-vertical" class="nav-link" data-scroll-target="#v2-scroll-vertical"><span class="header-section-number">19.3.3</span> v2: “Scroll Vertical”</a></li>
-  </ul></li>
-  <li><a href="#commit-to-github-and-turn-in" id="toc-commit-to-github-and-turn-in" class="nav-link" data-scroll-target="#commit-to-github-and-turn-in"><span class="header-section-number">19.4</span> Commit to Github and turn in</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../javascript/js-00-intro.html">JavaScript</a></li><li class="breadcrumb-item"><a href="../javascript/js-06-datatables.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></h1>
+<h1 class="title">Setup: Part 1</h1>
 </div>
 
 
@@ -569,86 +518,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="using-datatables" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Using DataTables</h1>
-<p>For this lesson, you’re going to use the DataTables jQuery plug-in to take an HTML table and make it interactive. The HTML page below has a table on it that you can use as a starting point.</p>
-<p>jQuery is a framework that makes it easier to use JavaScript. It’s particularly useful for simply traversing the DOM in an HTML page. Because of this, there are a number of tools and plug-ins written in jQuery.</p>
-<p>The purpose of this exercise is to show that you can use many of the tools quickly with just a little JavaScript knowledge.</p>
-<section id="lets-talk-about-tables" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="lets-talk-about-tables"><span class="header-section-number">19.1</span> Let’s talk about tables</h2>
-<p>Before we jump into this, take some time to look at <a href="https://www.w3schools.com/html/html_tables.asp">HTML Tables</a> tutorial to learn about the HTML tags that make a table. Like other elements we have dealt with there is an HTML structure that is the skeleton of the table, and then the display of that element can be enhanced using CSS.</p>
-<p>Tables are great for displaying tabular data (hence the word table). But often those tables can get really long, and we can help make them more useful to readers by adding JavaScript to make them sortable and filterable, sort of like a spreadsheet.</p>
-</section>
-<section id="goals-of-this-lesson" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="goals-of-this-lesson"><span class="header-section-number">19.2</span> Goals of this lesson</h2>
-<ul>
-<li>Add the required DataTables files to an HTML page (there’s a CSS file and a JavaScript file, which we’ll handle in the first problem below.)</li>
-<li>Call DataTables on your table using the example JavaScript provided on the DataTables website.</li>
-</ul>
-<p>It will look similar to this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/js-datatable.gif" class="img-fluid figure-img"></p>
-<figcaption>Datatable example</figcaption>
-</figure>
-</div>
-</section>
-<section id="the-steps" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="the-steps"><span class="header-section-number">19.3</span> The steps</h2>
-<p>The steps below will walk you through using the DataTables plug-in to make an interactive table. If at any point you get an error in your Console, stop before moving on to the next step. Each step is dependent on the step before.</p>
-<section id="v1-zero-configuration" class="level3" data-number="19.3.1">
-<h3 data-number="19.3.1" class="anchored" data-anchor-id="v1-zero-configuration"><span class="header-section-number">19.3.1</span> v1: “Zero configuration”</h3>
-<ol type="1">
-<li>Create a new file in your javascript-practice project folder called <code>datatable.html</code> and add the basic HTML5 boilerplate using Emmet.</li>
-<li>Go to the <a href="https://www.datatables.net/">DataTables home page</a> and click the link for “Examples”.</li>
-<li>On the Examples page, choose the “Zero configuration” example under “Basic initialisation”.</li>
-<li>On the page with the example you’ll see tabs below the table for “JavaScript”, “HTML” and “CSS” with the code you need. However, there are some assumptions in the instructions, so listen up:
-<ul>
-<li>Start with the <strong>HTML</strong> tab and copy the code in the box. Take the contents of that box and put it in your <code>datatable.html</code> HTML page between the <code>&lt;body&gt;</code> tags. Save the file and go look at your page in a browser, so you will see how it changes.</li>
-<li>Go back to the <strong>JavaScript</strong> tab on the DataTables site. The contents of that box should go inside a <code>&lt;script&gt;&lt;/script&gt;</code> tag at the bottom of your <code>datatable.html</code> HTML page before the close of the <code>&lt;/body&gt;</code> tag.</li>
-</ul></li>
-</ol>
-<p>The parts of this exercise to add the Datatables JavaScript and CSS files assumes some knowledge and is not explained well in the directions. Do this instead:</p>
-<ol start="5" type="1">
-<li>Copy the three links below and add them to the bottom of your <code>&lt;head&gt;</code> tag just before the closing <code>&lt;/head&gt;</code>.</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://code.jquery.com/jquery-3.7.0.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css"</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="6" type="1">
-<li>Save your page and look at it in your browser. You should have a working table.</li>
-</ol>
-</section>
-<section id="recap-of-how-this-works" class="level3" data-number="19.3.2">
-<h3 data-number="19.3.2" class="anchored" data-anchor-id="recap-of-how-this-works"><span class="header-section-number">19.3.2</span> Recap of how this works</h3>
-<ul>
-<li>In our <code>&lt;head&gt;</code> tag we have links to the JQuery JavaScript plugin, the Datatables-specific Javascript files and the Datatables CSS to make it look pretty.</li>
-<li>In the <code>&lt;body&gt;</code> tag you have your HTML table.</li>
-<li>At the bottom you have a <code>&lt;script&gt;</code> tag that tells the page to apply the Datatables javascript to our specific table (based on the <code>id</code> of the table.)</li>
-</ul>
-</section>
-<section id="v2-scroll-vertical" class="level3" data-number="19.3.3">
-<h3 data-number="19.3.3" class="anchored" data-anchor-id="v2-scroll-vertical"><span class="header-section-number">19.3.3</span> v2: “Scroll Vertical”</h3>
-<ol type="1">
-<li>Create a copy of the HTML file you created above and call it <code>scrolling.html</code>.</li>
-<li>Go to the <a href="https://www.datatables.net/examples/basic_init/scroll_y.html">“Scroll Vertical” example</a>. Replace your JavaScript in your
-<script></script>
-tags in the new HTML file you just created (<em>scrolling.html</em>) with the JavaScript on the “Scroll Vertical” example page.</li>
-<li>You should now have a table that isn’t paginated and instead can be scrolled through, just like the example on the DataTables website.</li>
-</ol>
-</section>
-</section>
-<section id="commit-to-github-and-turn-in" class="level2" data-number="19.4">
-<h2 data-number="19.4" class="anchored" data-anchor-id="commit-to-github-and-turn-in"><span class="header-section-number">19.4</span> Commit to Github and turn in</h2>
-<p>That is our last JavaScript lesson!</p>
-<ol type="1">
-<li>Commit the new files to your repository and push everything to Github.</li>
-<li>Post the link to your repository to the Canvas assignment.</li>
-</ol>
+<p>In order to proceed with this class, you need to do some computer setup. This is handled in separate documentation.</p>
+<p>Go to <a href="https://utdata.github.io/icj-setting-up/setup-part-1.html">ICJ Setting Up: Part 1</a> do those installations and then return here to the next chapter.</p>
+<p>We’ll do Part 2 at a later time.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1070,13 +944,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../javascript/js-05-html.html" class="pagination-link" aria-label="JS with html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS with html</span></span>
+      <a href="../start/start-02-move.html" class="pagination-link" aria-label="Moving around">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../setup/setup-02-node.html" class="pagination-link" aria-label="Setup: Part 2">
-        <span class="nav-page-text">Setup: Part 2</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../git/git-00-intro.html" class="pagination-link" aria-label="Git">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Git</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -60,7 +60,7 @@ $ pwd
 /Users/ccm346/icj/myproject
 ```
 
-Means you type in just `pwd` and then hit return.
+The first line means you type in just `pwd` and then hit return. The second line is the expected reply from the computer.
 
 ## Typing vs copy/paste
 

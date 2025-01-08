@@ -143,7 +143,7 @@ drwxr-xr-x   15 ccm346  AUSTIN\Domain Users    480 Mar  3  2022 miniforge3
 
 ```
 
-The `-a` flag means "all" files and folders, including hidden ones. All the files or folders at the top that start with a dot like `.Box_EngineServer` are on the computer but not visible normally. There can be a lot of hidden them ... I have 40+, far more than regular files and folders.
+The `-a` flag means "all" files and folders, including hidden ones. All the files or folders at the top that start with a dot like `.Box_EngineServer` are on the computer but not visible normally. There can be a lot of hidden files and folders ... I have 40+ in my home folder, far more than regular files and folders.
 
 1. Let's list again with just the `-a` flag:
 
@@ -207,7 +207,7 @@ Since you are inside your "home directory", this should open that folder in your
 ::: callout-important
 ## iCloud and One Drive
 
-A word about cloud services like iCloud and OneDrive. We are going set up a place to store our projects so they are NOT backedup to cloud services. We do this for a couple of reasons:
+A word about cloud services like iCloud and OneDrive. We are going set up a place to store our projects so they are NOT backed up to cloud services. We do this for a couple of reasons:
 
 - Later projects in this class will include thousands of tiny files. The process of writing them back forth to the cloud service can affect computer performance.
 - Our projects use these files in order to function, and when they get off-loaded to the cloud then our code has problems working.
@@ -297,7 +297,7 @@ Which should still be `icj`. So you had listed the files for the folder "above" 
 If you are doing `ls` or `cd` or otherwise referencing a path in the terminal, you don't have to type the whole word for each directory. If you are trying to list the contents of "newdirectory", then start with `ls newd` and then hit tab, and it will finish out the path as `ls newdirectory`. This is SUPER handy and you should use it often. Like all the time.
 
 ::: callout-important
-Tab completion makes your programming live so much easier, and it works in more places than in our terminal. Use this skill.
+Tab completion makes your programming life so much easier, and it works in more places than in our terminal. Use this skill.
 :::
 
 ## On the right path

@@ -20,13 +20,13 @@ See the [Project setup](../git/git-01-project.qmd) and [Using Git](../git/git-02
 ## The assignment requirements
 
 - In your repo, create a new file named `story.html`. Use Emmet to put the HTML5 code in that file, and make sure it has all the proper HTML5 tags like doctype, title, head, body, etc.
-- Use [this text file](resources/html-mastery-text.txt) for the page content.
+- Use [this text file](../resources/html-mastery-text.txt) for the page content.
 - Code the overline (the text "OPEN THREADS") as an `<h4>`.
 - Code the main headline and the subhead with the proper hierarchy of header tags. (i.e., the main headline should be bigger than the subhead).
 - Code the subhead that is inside the story "Under the radar" as an `<h3>` tag, which is typically for that display.
 - Put the byline in a `<p>` tag and properly link to the included Twitter handle.
 - Put the date in a `<span>` tag.
-- [Download this photo](resources/spurs.jpg){download="spurs.jpg"} and save/move it in your project folder.
+- [Download this photo](../resources/spurs.jpg){download="spurs.jpg"} and save/move it in your project folder.
 - After the byline, add an semantically-correct image and caption using the downloaded image above and the "Soobum Im / USA TODAY Sports" text.
 - Style all the story text in `<p>` tags. Each paragraph of text should have it's own beginning `<p>` and ending `</p>` tag.
 - There is a quoted text paragraph that starts with "Granted, not every starting ...". Put that in a `blockquote` tag. Don't know that one? Look it up.

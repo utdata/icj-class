@@ -79,7 +79,7 @@ As you write code in VS Code it will try to do this for you, and you need to let
 
 Now to save some mindless typing, I've saved a copy of the unstyled text for you.
 
-1. Control-click on [this link](resources/html-practice-text.txt) to open the text we need into a browser window, then highlight and copy the contents.
+1. Control-click on [this link](../resources/html-practice-text.txt) to open the text we need into a browser window, then highlight and copy the contents.
 2. Paste the contents in between the `<body>` tags of your `recipe.html` document.
 
 ### Headlines
@@ -182,7 +182,7 @@ In our text we have a caption for a photo, but not the photo itself. We need to 
 1. Click on the download link below.
 
 ::: {.callout-note appearance="minimal"}
-<i class="bi bi-download"></i> [Download this photo](resources/nyt_mac_cheese.jpg){download="nyt_mac_cheese.jpg"}
+<i class="bi bi-download"></i> [Download this photo](../resources/nyt_mac_cheese.jpg){download="nyt_mac_cheese.jpg"}
 :::
 
 2. Save (or move) the photo into your project folder right next to `recipe.html`.
