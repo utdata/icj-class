@@ -1,0 +1,32 @@
+# Publishing
+
+As we covered in our last chapter, Github has a way that we can publish static web pages to the web, for free, using [Github Pages](https://pages.github.com/). While it is not intended for commercial use, it is sufficient and appropriate for our class. There is a _soft_ 100GB limit per month. If you exceed that, you'll get a polite email from Github suggesting better ways to handle your traffic. Consider that a lovely problem to have because 100GB is quite a lot.
+
+There are [Github tutorials](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) on setting up Github pages. We'll review how we cover it here
+
+## Publishing through the docs folder
+
+Github pages allows us to use a folder called `docs/` as our distribution folder, and the template we are using is built to use that feature.
+
+- Go to your Github repo for this project and select **Settings**.
+- On the left navigation, look for **Pages**.
+- Where is has the dropdown for **Source**:
+  - Choose the **main** branch.
+  - For the next dropdown, choose `/docs`.
+  - Click the **Save** button.
+
+After a few minutes, refresh your page and your website URL based on your username and project repo name will appear at the top. The structure works like this:
+
+`https://{githubusername}.github.io/{project-name}/`
+
+Please take that URL and add it to your Github repo in the About section like this:
+
+![bs-save-url.gif](../images/bs-save-url.gif)
+
+## More Github pages
+
+There are other ways to publish [Github Pages](https://docs.github.com/en/github/working-with-github-pages/about-github-pages), depending on your needs.
+
+---
+
+We'll stop here. Turn in your Github link to the Canvas assignment.

@@ -1,10 +1,10 @@
 # Preface {.unnumbered}
 
 ::: callout-warning
-This class is under a major rewrite for Fall 2023. It pulls together a bunch separate lessons and repos.
+This class is being rewritten for Spring 2025 and will likely update throughout the semester.
 :::
 
-This is the course material for the UT-Austin School of Journalism and Media course "Intro Coding for Journalists". The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.
+This is the course material for the UT-Austin School of Journalism and Media course *Intro to Coding for Journalists*. The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.
 
 The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.
 
@@ -22,7 +22,7 @@ You can see the chapter breakdown, but the book is more or less structured like 
 - Static apps: HFS, I can make it
 
 ::: callout-important
-Many of the chapters in this book have video screencasts where I walk through the practice lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as in this book, but I just talk out and _show_ the steps. You'll find those links in Canvas.
+Many of the chapters in this book have video screencasts where I walk through the practice lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as in this book, but I just _show_ the steps as I walk though the book. You'll find those links in Canvas.
 :::
 
 ## Tips on reading this book

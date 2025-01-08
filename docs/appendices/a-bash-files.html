@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Christian McDonald">
-<meta name="dcterms.date" content="2025-01-08">
 
-<title>Intro to Coding for Journalists</title>
+<title>Appendix E — Bash files – Intro to Coding for Journalists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,23 +57,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./start/start-00-intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a08d9001fe0711adfabc365c1b400f34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/a-bash-commands.html" rel="next">
+<link href="../appendices/a-macos-shell.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a08d9001fe0711adfabc365c1b400f34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/a-project.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/a-bash-files.html"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Bash files</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intro to Coding for Journalists</a> 
+      <a href="../">Intro to Coding for Journalists</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -158,19 +157,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-01-terminal.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-01-terminal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-02-move.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-02-move.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around</span></span></a>
   </div>
 </li>
@@ -178,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup/setup-01-git.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup/setup-01-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup: Part 1</span></a>
   </div>
 </li>
@@ -193,19 +192,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Git</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-01-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Project setup</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-02-cycle.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-02-cycle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Using Git</span></span></a>
   </div>
 </li>
@@ -222,31 +221,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML &amp; CSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/01-html-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/01-html-practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML practice</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/02-html-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/02-html-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">HTML mastery</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/03-css-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/03-css-practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CSS practice</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/04-css-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/04-css-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">CSS mastery</span></span></a>
   </div>
 </li>
@@ -263,43 +262,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-01-basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-01-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-02-functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-02-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-03-flow-control.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-03-flow-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-04-objects.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-04-objects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-05-html.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-05-html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -307,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup/setup-02-node.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup/setup-02-node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup: Part 2</span></a>
   </div>
 </li>
@@ -322,25 +321,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-01-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Projects from degit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-02-refactor.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-02-refactor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-03-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-03-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Github Pages</span></span></a>
   </div>
 </li>
@@ -357,43 +356,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-01-components.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-01-components.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-02-grids.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-02-grids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-03-cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-03-cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-04-customize.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-04-customize.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-05-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-05-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-06-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Bootstrap mastery</span></span></a>
   </div>
 </li>
@@ -410,43 +409,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Static apps intro</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-01-framework.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-01-framework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-03-loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-03-loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-04-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-04-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
@@ -454,7 +453,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/fp-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/fp-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
@@ -469,55 +468,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">How to start a project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-google-fonts.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-google-fonts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Using Google Fonts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-fetch-problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-fetch-problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">If you have gulp fetch problems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-macos-shell.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-macos-shell.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Change Mac shell to bash</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-files.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-files.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Bash files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Bash commands</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-profile.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-profile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">Bash profile</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-git-share.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-git-share.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">Git: Sharing code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-git-branch.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-git-branch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Git: Branches</span></span></a>
   </div>
 </li>
@@ -533,44 +532,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#the-structure-of-the-class" id="toc-the-structure-of-the-class" class="nav-link" data-scroll-target="#the-structure-of-the-class">The structure of the class</a></li>
-  <li><a href="#tips-on-reading-this-book" id="toc-tips-on-reading-this-book" class="nav-link" data-scroll-target="#tips-on-reading-this-book">Tips on reading this book</a>
-  <ul class="collapse">
-  <li><a href="#to-do-steps" id="toc-to-do-steps" class="nav-link" data-scroll-target="#to-do-steps">To-do steps</a></li>
-  <li><a href="#not-to-do-things" id="toc-not-to-do-things" class="nav-link" data-scroll-target="#not-to-do-things">Not to-do things</a></li>
-  </ul></li>
-  <li><a href="#macos-vs-windows" id="toc-macos-vs-windows" class="nav-link" data-scroll-target="#macos-vs-windows">macOS vs Windows</a></li>
-  </ul></li>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal"><span class="header-section-number">E.1</span> Goal</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up"><span class="header-section-number">E.2</span> Set up</a></li>
+  <li><a href="#curl" id="toc-curl" class="nav-link" data-scroll-target="#curl"><span class="header-section-number">E.3</span> curl</a></li>
+  <li><a href="#head" id="toc-head" class="nav-link" data-scroll-target="#head"><span class="header-section-number">E.4</span> head</a></li>
+  <li><a href="#tail" id="toc-tail" class="nav-link" data-scroll-target="#tail"><span class="header-section-number">E.5</span> tail</a></li>
+  <li><a href="#wc" id="toc-wc" class="nav-link" data-scroll-target="#wc"><span class="header-section-number">E.6</span> wc</a></li>
+  <li><a href="#cat" id="toc-cat" class="nav-link" data-scroll-target="#cat"><span class="header-section-number">E.7</span> cat</a></li>
+  <li><a href="#grep" id="toc-grep" class="nav-link" data-scroll-target="#grep"><span class="header-section-number">E.8</span> grep</a></li>
+  <li><a href="#piping-commands" id="toc-piping-commands" class="nav-link" data-scroll-target="#piping-commands"><span class="header-section-number">E.9</span> Piping commands</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/a-project.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/a-bash-files.html"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Bash files</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Coding for Journalists</h1>
+<h1 class="title">Appendix E — Bash files</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -580,8 +566,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
+<p>This is an extended lesson on bash that is not always assigned, but is still useful.</p>
+<section id="goal" class="level2" data-number="E.1">
+<h2 data-number="E.1" class="anchored" data-anchor-id="goal"><span class="header-section-number">E.1</span> Goal</h2>
+<p>Let’s learn some more command-line juju for working with files. These commands will help look at code files on your computer.</p>
+</section>
+<section id="set-up" class="level2" data-number="E.2">
+<h2 data-number="E.2" class="anchored" data-anchor-id="set-up"><span class="header-section-number">E.2</span> Set up</h2>
+<p>Let’s make sure we are in our class folder. (This is review from <a href="../start/start-02-move.html">Moving Around</a>).</p>
+<ol type="1">
+<li>Make sure you are in your icj project folder:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Documents/icj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Create a new folder called <code>myproject</code>:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> myproject</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Use <code>cd</code> to move inside the myproject folder then use <code>pwd</code> to make sure you are in the right place. The result should be something like this:</li>
+</ol>
+<pre><code>$ cd
+Users/ccm346/Documents/icj/myproject</code></pre>
+</section>
+<section id="curl" class="level2" data-number="E.3">
+<h2 data-number="E.3" class="anchored" data-anchor-id="curl"><span class="header-section-number">E.3</span> curl</h2>
+<p>We need some text to work with, so we’re going to pull down some text from Github. I might as well explain what we are doing.</p>
+<p><a href="http://man.cx/curl">curl</a> is a command to transfer files. I think of it as “Capture URL”. We need to give <code>curl</code> a couple of flags (or options) for this job:</p>
+<ul>
+<li><strong>-L</strong> stands for “Location”. It allows <code>curl</code> to follow a URL if it is redirected.</li>
+<li><code>-o</code> for “output”. So we can write this to a file (which we are calling <code>data.csv</code>) instead of our terminal window. (We could use <code>-O</code> instead to just use the current file name.)</li>
+</ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -592,115 +606,79 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This class is being rewritten for Spring 2025 and will likely update throughout the semester.</p>
+<p>This URL below needs to be updated</p>
 </div>
 </div>
-<p>This is the course material for the UT-Austin School of Journalism and Media course <em>Intro to Coding for Journalists</em>. The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.</p>
-<p>The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.</p>
-<section id="the-structure-of-the-class" class="level2">
-<h2 class="anchored" data-anchor-id="the-structure-of-the-class">The structure of the class</h2>
-<p>You can see the chapter breakdown, but the book is more or less structured like this:</p>
-<ul>
-<li>Using command-line tools</li>
-<li>Computer setup</li>
-<li>HTML: The skeleton of the web</li>
-<li>CSS: The skin of the web</li>
-<li>JavaScript: The muscles of the web</li>
-<li>Sass: Better web skins</li>
-<li>Bootstrap: OMG, the web solved</li>
-<li>Static apps: HFS, I can make it</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Many of the chapters in this book have video screencasts where I walk through the practice lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as in this book, but I just <em>show</em> the steps as I walk though the book. You’ll find those links in Canvas.</p>
-</div>
-</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="at">-o</span> data.csv https://raw.githubusercontent.com/utdata/icj-class/main/resources/data_example.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>OK, now we should be able to <code>ls</code> and see our file is there. My output looks like this:</p>
+<pre><code>$ ls
+data.csv</code></pre>
 </section>
-<section id="tips-on-reading-this-book" class="level2">
-<h2 class="anchored" data-anchor-id="tips-on-reading-this-book">Tips on reading this book</h2>
-<p>I try to write this book so it is clear when you need to <strong>do</strong> something vs <strong>read</strong> something.</p>
-<section id="to-do-steps" class="level3">
-<h3 class="anchored" data-anchor-id="to-do-steps">To-do steps</h3>
-<p>For all my lessons I typically put directions for YOU to do in numbered lists:</p>
-<ol type="1">
-<li>Do this thing.</li>
-<li>Then do that thing.</li>
-</ol>
-<hr>
-<p>Sometimes there is code after or among the the directions, but it is in a code block with a grey background.</p>
-<ol type="1">
-<li>Run this command:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that you can roll your cursor over that highlighted block and use the copy button at the top right to copy all the commands within it. <strong>I encourage you to type commands</strong> unless they are super long. You learn better that way.</p>
-<hr>
-<p>Sometimes I show a command and also show Terminal output. In this case, I include the <code>$</code> on the line with the command. The background is also not highlighted.</p>
-<pre><code>$ ls -al
-total 32
-drwxr-xr-x   3 ccm346  Users     96 Jul 12 16:12 .
-drwxr-xr-x@ 22 ccm346  Users    704 Jul 12 16:10 ..
--rw-r--r--   1 ccm346  Users  15642 Jul 12 16:12 data.csv</code></pre>
+<section id="head" class="level2" data-number="E.4">
+<h2 data-number="E.4" class="anchored" data-anchor-id="head"><span class="header-section-number">E.4</span> head</h2>
+<p><a href="http://man.cx/head">head</a> allows you to print the top of a file to your screen so you can see what it is. It will default to show you the first 10 lines of a file. When you type this in, hit tab after you type “head da” to let tab completion help you.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>will give you this:</p>
+<pre><code>$ head data.csv
+Quarter,Taxpayer Number,Taxpayer Name,Taxpayer Address,Taxpayer City,Taxpayer State,Taxpayer Zip Code,Taxpayer County,Outlet Number,Location Name,Location Address,Location City,Location State,Location Zip Code,Location County,Location Room Capacity,Location Tot Room Receipts,Location Taxable Receipts
+Q1,32051871906,DSN HOSPITALITY LLC,4710 S LAMAR BLVD,AUSTIN,TX,78745,227,00001,DSN HOSPITALITY LLC,3110 STATE HIGHWAY 71 EAST,AUSTIN,TX,78745,011,37,91205.03,90870.01
+Q1,32054409241,JEANETTE WELSHE,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,00001,BED AND BREAKFAST,13801 EVERGREEN WAY,AUSTIN,TX,78737,105,4,5417.92,5417.92
+Q1,32047098168,AMY MARIE CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,00001,FLORA PROPERTIES/AMY M. CAPUTO,13601 PAISANO CIR,AUSTIN,TX,78737,105,4,7280.23,7280.23
+Q1,32055460730,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,00001,NATHANIEL R BAUERNFEIND,163 KINLOCH CT,AUSTIN,TX,78737,105,1,4735.0,4735.0
+Q1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00001,NUTTY BROWN CABIN,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,1030.0,1030.0
+Q1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00003,NUTTY BROWN MANOR,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,1,2100.0,2100.0
+Q1,32049290466,SHARON K FOSTER,12932 NUTTY BROWN RD APT C,AUSTIN,TX,78737,105,00004,"ROADRUNNER'S BUNGALOQ",12932 NUTTY BROWN RD,AUSTIN,TX,78737,105,1,0.0,0.0
+Q1,32020638758,LESLIE K RENFRO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,00002,THISTLE HILL STUDIO,12803 SHOSHONI TRL,AUSTIN,TX,78737,105,1,871.0,871.0
+Q1,32050668345,"TIPPING T, LLC",4405 MANZANILLO DR,AUSTIN,TX,78749,227,00001,TIPPING T,13127 FITZHUGH RD,AUSTIN,TX,78736,105,1,9427.0,9427.0</code></pre>
+<p>It might look like more than 10 lines on your screen because they wrap.</p>
+<p>If you want to specify how many lines to display, use the flag <strong>-n</strong> for number of lines:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 2 data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That will give you two lines, the first which is the header of that file.</p>
 </section>
-<section id="not-to-do-things" class="level3">
-<h3 class="anchored" data-anchor-id="not-to-do-things">Not to-do things</h3>
-<p>I typically use an unordered bullet list for explanations and other non-“do” things:</p>
-<ul>
-<li>This is just a note about something</li>
-<li>And this is another</li>
-</ul>
-<p>Regular paragraph text such as this one are usually an explanation, background or whatever.</p>
-<p>If <strong>something is in bold</strong> or IN ALL CAPS or <em>in italics for emphasis</em> then there is usually a reason why, so pay attention.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Sometimes I put unimportant but interesting side notes in callouts like this.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>But sometimes I’ll put important notes in these callout sections, too. I’ll usually say if they are important in bold at the beginning, like this one.</p>
-</div>
-</div>
-<p>I try to be consistent about all such things, but I’m human so sometimes I’m not.</p>
+<section id="tail" class="level2" data-number="E.5">
+<h2 data-number="E.5" class="anchored" data-anchor-id="tail"><span class="header-section-number">E.5</span> tail</h2>
+<p><a href="http://man.cx/tail">tail</a> shows you the bottom of the file. It takes the same <strong>-n</strong> flags.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>That result won’t show you the header, because you are looking at the last 10 lines of the file.</p>
 </section>
+<section id="wc" class="level2" data-number="E.6">
+<h2 data-number="E.6" class="anchored" data-anchor-id="wc"><span class="header-section-number">E.6</span> wc</h2>
+<p><a href="http://man.cx/wc">wc</a> I think of as “word count”, but it can also count lines and bytes.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>gives you this output:</p>
+<pre><code>$ wc data.csv
+     100    1136   15642 data.csv</code></pre>
+<p>The first column is number of lines, then the number of words, then bytes.</p>
+<p>If you want just the number of lines, us <strong>-l</strong>.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="macos-vs-windows" class="level2">
-<h2 class="anchored" data-anchor-id="macos-vs-windows">macOS vs Windows</h2>
-<p>On some occasions I may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>I use macOS so most directions are from that perspective.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Usually you can use <strong>Cntl-whatever</strong> as a PC equivalent to <strong>Cmd-whatever</strong> on a Mac.</p>
-</div>
-</div>
-</div>
+<section id="cat" class="level2" data-number="E.7">
+<h2 data-number="E.7" class="anchored" data-anchor-id="cat"><span class="header-section-number">E.7</span> cat</h2>
+<p><a href="http://man.cx/cat">cat</a> means to concatenate and print a file to your window. If you feed it two file names, it will give you the first, then the other. Do this:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will print the contents of <code>data.csv</code> to your screen. It’s showing all 100 lines.</p>
+<p>But what you can do is redirect that output into a file by using <code>&gt;</code>. Do this.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.csv <span class="op">&gt;</span> file01.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What you’ve done is take the contents of data.csv, printed the contents and then redirected that content into another file called file01.csv. Since that didn’t exist already, it was created on the fly.</p>
+<p>If I wanted to take two files, <code>file01.csv</code> and <code>file02.csv</code>, and then combine them into a single file on your computer, it would look like this. (You don’t have to do these commands, just understand them.):</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file01.csv file02.csv <span class="op">&gt;</span> combined.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, <code>combined.csv</code> would be the combination of both files.</p>
+</section>
+<section id="grep" class="level2" data-number="E.8">
+<h2 data-number="E.8" class="anchored" data-anchor-id="grep"><span class="header-section-number">E.8</span> grep</h2>
+<p><a href="http://man.cx/grep">grep</a> is for using regular expressions to find patterns within a file. It takes a regular expression input and the file name and gives in return the lines of the file that match that regular expression.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">'ATX INVESTMENTS'</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>… will print out just the lines in <code>data.csv</code> that have ‘ATX INVESTMENTS’ somewhere in them. Note that the name in the field is ‘ATX INVESTMENTS LLC’ but it found it with just part of that.</p>
+<p>If you want to just know how many lines there are with ‘ATX INVESTMENTS’, use the <strong>-c</strong> flag for count:</p>
+<p><code>$ grep -c 'ATX INVESTMENTS' data.csv</code></p>
+<p>The answer should be 4.</p>
+</section>
+<section id="piping-commands" class="level2" data-number="E.9">
+<h2 data-number="E.9" class="anchored" data-anchor-id="piping-commands"><span class="header-section-number">E.9</span> Piping commands</h2>
+<p>You can “pipe” the results of one command into another command with the <code>|</code> character, which you’ll find as the shift of your backslash key. You can string commands together with that, so if I just wanted to see the first lines that has ‘ATX INVESTMENTS’, I can do this:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">'ATX INVESTMENTS'</span> data.csv <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1123,10 +1101,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../appendices/a-macos-shell.html" class="pagination-link" aria-label="Change Mac shell to bash">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Change Mac shell to bash</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start/start-00-intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendices/a-bash-commands.html" class="pagination-link" aria-label="Bash commands">
+        <span class="nav-page-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Bash commands</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

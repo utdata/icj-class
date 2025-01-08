@@ -1,0 +1,35 @@
+# HTML mastery
+
+For this mastery assignment you are coding a story in HTML as indicated below. Points will be taken off for improper syntax and indentation. Make clean code.
+
+There are some tasks within this assignment where we are skills or tags we have not yet covered. That's on purpose. You will need to Google it, as that is part of the developer process.
+
+## Getting started
+
+See the [Project setup](../git/git-01-project.qmd) and [Using Git](../git/git-02-cycle.qmd) chapters if you need a review on the project setup.
+
+- Inside your `icj` folder, create a new project folder, called `yourname-html-css-mastery`.
+- Create a `README.md` file using proper Markdown with a title, the assignment name and the due date.
+- Create a `.gitignore` file like we did in practice, using gitignore.io to include VisualStudioCode, macOS and Windows. 
+- Use the git cycle to add and commit the files.
+- Create a new repo in Github with the same name as your local folder. Do NOT check the boxes there for the readme or gitignore since you created them locally.
+- After you create the online repo, connect the two with the `git remote add` command shown in your Github repo.
+- Push your changes from your local machine to Github.
+- Refresh our Github page to make sure everything worked.
+
+## The assignment requirements
+
+- In your repo, create a new file named `story.html`. Use Emmet to put the HTML5 code in that file, and make sure it has all the proper HTML5 tags like doctype, title, head, body, etc.
+- Use [this text file](../resources/html-mastery-text.txt) for the page content.
+- Code the overline (the text "OPEN THREADS") as an `<h4>`.
+- Code the main headline and the subhead with the proper hierarchy of header tags. (i.e., the main headline should be bigger than the subhead).
+- Code the subhead that is inside the story "Under the radar" as an `<h3>` tag, which is typically for that display.
+- Put the byline in a `<p>` tag and properly link to the included Twitter handle.
+- Put the date in a `<span>` tag.
+- [Download this photo](../resources/spurs.jpg){download="spurs.jpg"} and save/move it in your project folder.
+- After the byline, add an semantically-correct image and caption using the downloaded image above and the "Soobum Im / USA TODAY Sports" text.
+- Style all the story text in `<p>` tags. Each paragraph of text should have it's own beginning `<p>` and ending `</p>` tag.
+- There is a quoted text paragraph that starts with "Granted, not every starting ...". Put that in a `blockquote` tag. Don't know that one? Look it up.
+- Add a hypertext link to the text "ranking the starting five line-ups" that links to [this url](https://bleacherreport.com/articles/2789035-ranking-every-nba-teams-projected-starting-5-after-free-agency#slide7), opening in a new window.
+- Use an ORDERED list for the ranking list of teams in the middle of the story, but it should start with the Philadelphia 76ers as number 5. Don't know how to do that? Google it.
+- The last two paragraphs are not really part of the article, but instead the opening for the comments section. Make sure that is semantically separate. Put the text within their own `<p>` tags.

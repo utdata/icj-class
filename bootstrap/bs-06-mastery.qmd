@@ -1,0 +1,121 @@
+# Bootstrap mastery
+
+You are going to build a three-page project using a Bootstrap development rig. There are screenshots of what I'm looking for below.
+
+::: {.panel-tabset}
+
+## Index
+
+![](../images/bs-page-index.png)
+
+Index [full page link](../images/bs-page-index.png).
+
+## Article page
+
+![](../images/bs-page-article.png)
+
+Article [full page link](../images/bs-page-article.png)
+
+## Carosel page
+
+![](../images/bs-page-photos.png)
+
+Carosel [full page link](../images/bs-page-photos.png)
+
+:::
+
+## Resources
+
+While you are building this from scratch, you do have the icj-bootstrap-template development environment to set up Sass, etc. You also have your practice repo to look at for guidance.
+
+You'll want to use the Bootstrap documentation for your code and styles.
+
+- Go to [Bootstrap site](https://getbootstrap.com/) and click on the **Docs** link. Most of what you need is under **Components** on the left-hand navigation. **Utilities** has some useful information as well. Use the **search bar** there to help you.
+- The are many Bootstrap 5 tutorials on the web, including [Tutorial Republic](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/) and [W3 Schools](https://www.w3schools.com/bootstrap5/). If you prefer video tutorials, [Net Ninja's Bootstrap 5 Crash Course](https://www.youtube.com/playlist?list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR) is pretty good.
+
+## Project template
+
+- Create a new, empty folder in your `icj/` folder called `yourname-bootstrap-mastery`.
+- In VS Code, open a new window and open your new folder.
+- Open the Integrated Terminal.
+- Run `$ degit utdata/icj-bootstrap-template` to download the files.
+- Run `$ npm install` to install the node packages.
+- Run `$ git init` to intilize git.
+- Run `$ git add .` to add the files.
+- Run `$ git commit -m "first commit"` to commit the files.
+- Go to Github and create a repository of the same name.
+- Use the "or push an existing repository from the command line" commands from Github to sync the repos.
+
+### Adding the images
+
+I have images for you to use for this assignment, but  you have to set them a specific way for them to work in the development environment:
+
+- Download this compressed folder of images: <i class="bi bi-download"></i> [pirate-photos.zip](../resources/pirate-photos.zip){download="pirate-photos.zip"}.
+- Find the zip on your hard drive and uncompress it.
+- Move the contents (the photos only) into the `src/img` folder in your project. The photos should be loose inside that folder.
+- Run `gulp dev` to process the photos and run your development server. (If you had `gulp dev` running already, quit it with *CTRL + C* and then restart `gulp dev` again so the photos will be processed and copied into `docs`.)
+
+## Strategy
+
+- Build the framework of the index page first. Get the main components built and figure out your content before you worry about styles.
+- Once the structure is set, move onto styles and other details for the index page.
+- I recommend finishing the index page before moving onto the other article and photo carousel page. (This minimizes the number of adjustments you have to make on multiple pages, though you'll need to make some adjustments to navigation.)
+
+Again, see example screenshots at the top to get an idea of what you are building.
+
+## The assignment
+
+You will build three pages:
+
+- An index page
+- An article page
+- A photo page using a photo carousel
+
+The details are noted below.
+
+### All pages
+
+All your pages should have the following structural components:
+
+- A navbar with a brand (Pirate Cove) and three nav-links: Home, Article and Photos.
+  - The nav links should have an underline on hover only. You'll need to write CSS to make this happen.
+  - The nav link for the active page (i.e., the one you are viewing) should be bold. There is a [special class](https://getbootstrap.com/docs/5.1/components/navbar/#nav) for this that you can find in the Bootstrap documentation in the Navbar section.
+- A [jumbotron](https://getbootstrap.com/docs/5.1/examples/jumbotron/) treatment at the top of the site.
+  - The jumbotron should have a background image that works reasonably well at all sizes. This is must be done through SCSS using the [background shorthand property](https://www.w3schools.com/css/css_background_shorthand.asp). You will need to set the image (the url), repeat (no-repeat) and position (center). You'll need one more style ["background-size: cover;"](https://www.w3schools.com/cssref/css3_pr_background-size.asp) to make it work right.
+  - For the background image for the jumbotron, you'll have to reference it from the scss file. The path for this has to be relative from the compiled css file to the image, so it will be `url(../img/filename.jpg)`. Note the beginning `../` on that path is different than when you call images directly into the `index.html` page. **(In contrast, all your other images referenced in HTML will be `src="img/filename.jpg"` without the `../` part.)**
+  - Set the main text in the jumbotron to use a Google font of your choice.
+- A footer with your name in the text.
+  - The footer should have a background color and the text should be centered with adequate padding.
+
+### Index page
+
+Below the jumbotron you should have three "cards" that highlight different Kraken.
+
+- The cards should work with a responsive grid so they stack on mobile but are three across at md and larger.
+- Make up your own names and details about the monsters. Or use ipsum type, perhaps [pirate ipsum](https://pirateipsum.me/).
+
+### Article page
+
+The article page should be a two-column responsive layout.
+
+- The columns should stack on mobile, and be side-by-side at medium and larger. There should be different col settings for md and lg so the pirate mugshot doesn't get too wide.
+- The **left** column should have the pirate mugshot photo and be responsive to fit the width of the column at different sizes.
+  - There should be a text byline and the name and source should be different in style or font.
+- The **right** column should a headline and "story" text in multiple paragraphs. (Text can be [pirate ipsum](https://pirateipsum.me/) or similar.)
+
+### Photos page
+
+On the photos page you will build a [photo carousel](https://getbootstrap.com/docs/5.1/components/carousel/) from the three kraken photos.
+
+- Use one of the carousel options that has controls to advance the slides.
+- Add some kind of caption for each photo, either under or on top of photo (as long as it is readable).
+- Set up the slideshow to use only 8 centered columns at the medium size or greater. (You can search the docs for "offset" on how to reorder columns to skip the first two.)
+
+## Extra credit
+
+- FOR EXTRA CREDIT: Pick one other Bootstrap component to add to the site somewhere that makes sense. This is your chance to explore Bootstrap and be creative. When you turn this in, tell me your component-of-choice so I don't have to guess.
+
+## Publishing
+
+Publish your site using Github pages using the "main branch/docs folder" method. Add your link to the Github repo description so it is easy for me to find. Turn in your github repo link to the assignment.
+

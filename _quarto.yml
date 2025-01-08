@@ -6,66 +6,73 @@ project:
 book:
   title: "Intro to Coding for Journalists"
   author: "Christian McDonald"
-  date: "6/26/2023"
+  date: last-modified
   chapters:
     - href: index.qmd
       text: Home
-    - part: start-00-intro.qmd
+    - part: "Getting Started"
       chapters:
-        - start-01-terminal.qmd
-        - start-02-move.qmd
-    - setup-01-git.qmd
-    - part: git-00-intro.qmd
+        - start/start-00-intro.qmd
+        - start/start-01-terminal.qmd
+        - start/start-02-move.qmd
+    - setup/setup-01-git.qmd
+    - part: "Git" 
       chapters:
-        - git-01-project.qmd
-        - git-02-cycle.qmd
-    - part: html-css-00-intro.qmd
+        - git/git-00-intro.qmd
+        - git/git-01-project.qmd
+        - git/git-02-cycle.qmd
+    - part: "HTML & CSS"
       chapters:
-        - html-01-practice.qmd
-        - html-02-mastery.qmd
-        - css-01-practice.qmd
-        - css-02-mastery.qmd
-    - part: js-00-intro.qmd
-      chapters: 
-        - js-01-basics.qmd
-        - js-02-functions.qmd
-        - js-03-flow-control.qmd
-        - js-04-objects.qmd
-        - js-05-html.qmd
-        - js-06-datatables.qmd
-    - setup-02-node.qmd
-    - part: sass-00-intro.qmd
-      chapters: 
-        - sass-01-project.qmd
-        - sass-02-refactor.qmd
-        - sass-03-publish.qmd
-    - part: bs-00-intro.qmd
-      chapters: 
-        - bs-01-components.qmd
-        - bs-02-grids.qmd
-        - bs-03-cards.qmd
-        - bs-04-customize.qmd
-        - bs-05-publish.qmd
-        - bs-06-mastery.qmd
-    - part: sapp-00-intro.qmd
-      chapters: 
-        - sapp-01-framework.qmd
-        - sapp-02-templates.qmd
-        - sapp-03-loops.qmd
-        - sapp-04-publish.qmd
-        - sapp-05-bake-explain.qmd
-        - sapp-06-bake-blog.qmd
-    - fp-00-intro.qmd
+        - html-css/00-intro.qmd
+        - html-css/01-html-practice.qmd
+        - html-css/02-html-mastery.qmd
+        - html-css/03-css-practice.qmd
+        - html-css/04-css-mastery.qmd
+    - part: "JavaScript"
+      chapters:
+        - javascript/js-00-intro.qmd
+        - javascript/js-01-basics.qmd
+        - javascript/js-02-functions.qmd
+        - javascript/js-03-flow-control.qmd
+        - javascript/js-04-objects.qmd
+        - javascript/js-05-html.qmd
+        - javascript/js-06-datatables.qmd
+    - setup/setup-02-node.qmd
+    - part: "SASS"
+      chapters:
+        - sass/sass-00-intro.qmd
+        - sass/sass-01-project.qmd
+        - sass/sass-02-refactor.qmd
+        - sass/sass-03-publish.qmd
+    - part: "Bootstrap"
+      chapters:
+        - bootstrap/bs-00-intro.qmd
+        - bootstrap/bs-01-components.qmd
+        - bootstrap/bs-02-grids.qmd
+        - bootstrap/bs-03-cards.qmd
+        - bootstrap/bs-04-customize.qmd
+        - bootstrap/bs-05-publish.qmd
+        - bootstrap/bs-06-mastery.qmd
+    - part: "Static App"
+      chapters:
+        - static-apps/sapp-00-intro.qmd
+        - static-apps/sapp-01-framework.qmd
+        - static-apps/sapp-02-templates.qmd
+        - static-apps/sapp-03-loops.qmd
+        - static-apps/sapp-04-publish.qmd
+        - static-apps/sapp-05-bake-explain.qmd
+        - static-apps/sapp-06-bake-blog.qmd
+    - project/fp-00-intro.qmd
   appendices:
-    - a-project.qmd
-    - a-google-fonts.qmd
-    - a-fetch-problems.qmd
-    - a-macos-shell.qmd
-    - a-bash-files.qmd
-    - a-bash-commands.qmd
-    - a-bash-profile.qmd
-    - a-git-share.qmd
-    - a-git-branch.qmd
+    - appendices/a-project.qmd
+    - appendices/a-google-fonts.qmd
+    - appendices/a-fetch-problems.qmd
+    - appendices/a-macos-shell.qmd
+    - appendices/a-bash-files.qmd
+    - appendices/a-bash-commands.qmd
+    - appendices/a-bash-profile.qmd
+    - appendices/a-git-share.qmd
+    - appendices/a-git-branch.qmd
 
 format:
   html:

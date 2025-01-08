@@ -1,0 +1,30 @@
+# Github Pages
+
+Because we put our web site files inside a `docs` folder, we can take advantage of a special feature in Github called [Github Pages](https://pages.github.com/). It will allow us to publish our site to the Internet.
+
+1. Go into your Github repo for this project.
+1. Click on the Settings link.
+
+    ![Settings menu](../images/sass-ghpages-settings.png)
+
+1. On the left rail, the **Pages** tab.
+1. Under *Branch* change the setting from "None" to **main**, and then change the appearing menu from "/root" to **/docs**.
+
+    ![Github Page branch](../images/sass-ghpages-docs.png)
+1. Click **Save**.
+1. Wait a couple of minutes. Like maybe two.
+1. Refresh the page and a box should appear at the top with a link to your live webpage.
+
+The links always works like this:
+
+`https://YOUR-USER-NAME.github.io/YOUR-REPO-NAME/index.html`
+
+It might take a couple of minutes for your site to publish, and if you first view the site and it isn't there, you may have to break your browser cache (hold down command while you refresh the browser) or use a private browser to see your changes. If that doesn't work, make a change to your html, commit and push the changes to Github again.
+
+Please take that URL and add it to your Github repo in the About section like this:
+
+![Set the about link](../images/sass-set-about.gif)
+
+This concludes the Sass section! We'll use these skills in our text section on Bootstrap.
+
+

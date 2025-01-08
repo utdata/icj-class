@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Christian McDonald">
-<meta name="dcterms.date" content="2025-01-08">
 
-<title>Intro to Coding for Journalists</title>
+<title>Appendix I — Git: Branches – Intro to Coding for Journalists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,23 +57,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./start/start-00-intro.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a08d9001fe0711adfabc365c1b400f34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendices/a-git-share.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a08d9001fe0711adfabc365c1b400f34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/a-project.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/a-git-branch.html"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Git: Branches</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intro to Coding for Journalists</a> 
+      <a href="../">Intro to Coding for Journalists</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -143,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -158,19 +156,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-01-terminal.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-01-terminal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./start/start-02-move.html" class="sidebar-item-text sidebar-link">
+  <a href="../start/start-02-move.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around</span></span></a>
   </div>
 </li>
@@ -178,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup/setup-01-git.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup/setup-01-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup: Part 1</span></a>
   </div>
 </li>
@@ -193,19 +191,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Git</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-01-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Project setup</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git/git-02-cycle.html" class="sidebar-item-text sidebar-link">
+  <a href="../git/git-02-cycle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Using Git</span></span></a>
   </div>
 </li>
@@ -222,31 +220,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">HTML &amp; CSS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/01-html-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/01-html-practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">HTML practice</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/02-html-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/02-html-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">HTML mastery</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/03-css-practice.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/03-css-practice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CSS practice</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./html-css/04-css-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../html-css/04-css-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">CSS mastery</span></span></a>
   </div>
 </li>
@@ -263,43 +261,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">JavaScript</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-01-basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-01-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">JavaScript basics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-02-functions.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-02-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">JS Functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-03-flow-control.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-03-flow-control.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">JS Flow control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-04-objects.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-04-objects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">JS Objects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-05-html.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-05-html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">JS with html</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
+  <a href="../javascript/js-06-datatables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">JS jQuery/Datatables</span></span></a>
   </div>
 </li>
@@ -307,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup/setup-02-node.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup/setup-02-node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup: Part 2</span></a>
   </div>
 </li>
@@ -322,25 +320,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-01-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-01-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Projects from degit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-02-refactor.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-02-refactor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Refactoring our Sass</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sass/sass-03-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../sass/sass-03-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Github Pages</span></span></a>
   </div>
 </li>
@@ -357,43 +355,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Bootstrap</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-01-components.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-01-components.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Components</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-02-grids.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-02-grids.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Grids</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-03-cards.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-03-cards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Cards</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-04-customize.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-04-customize.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Customizing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-05-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-05-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Publishing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bootstrap/bs-06-mastery.html" class="sidebar-item-text sidebar-link">
+  <a href="../bootstrap/bs-06-mastery.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Bootstrap mastery</span></span></a>
   </div>
 </li>
@@ -410,43 +408,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Static apps intro</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-01-framework.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-01-framework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">The static app framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-03-loops.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-03-loops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Data and loops</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-04-publish.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-04-publish.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Make it pretty and publish</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-05-bake-explain.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Baking detail pages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./static-apps/sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
+  <a href="../static-apps/sapp-06-bake-blog.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Building our Ship’s log blog</span></span></a>
   </div>
 </li>
@@ -454,7 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./project/fp-00-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../project/fp-00-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Your final project</span></span></a>
   </div>
 </li>
@@ -469,55 +467,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-project.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">How to start a project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-google-fonts.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-google-fonts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Using Google Fonts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-fetch-problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-fetch-problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">If you have gulp fetch problems</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-macos-shell.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-macos-shell.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Change Mac shell to bash</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-files.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-files.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Bash files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Bash commands</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-bash-profile.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-bash-profile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title">Bash profile</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-git-share.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-git-share.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">Git: Sharing code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendices/a-git-branch.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/a-git-branch.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Git: Branches</span></span></a>
   </div>
 </li>
@@ -533,44 +531,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#the-structure-of-the-class" id="toc-the-structure-of-the-class" class="nav-link" data-scroll-target="#the-structure-of-the-class">The structure of the class</a></li>
-  <li><a href="#tips-on-reading-this-book" id="toc-tips-on-reading-this-book" class="nav-link" data-scroll-target="#tips-on-reading-this-book">Tips on reading this book</a>
-  <ul class="collapse">
-  <li><a href="#to-do-steps" id="toc-to-do-steps" class="nav-link" data-scroll-target="#to-do-steps">To-do steps</a></li>
-  <li><a href="#not-to-do-things" id="toc-not-to-do-things" class="nav-link" data-scroll-target="#not-to-do-things">Not to-do things</a></li>
-  </ul></li>
-  <li><a href="#macos-vs-windows" id="toc-macos-vs-windows" class="nav-link" data-scroll-target="#macos-vs-windows">macOS vs Windows</a></li>
-  </ul></li>
+  <li><a href="#feature-branch-workflow" id="toc-feature-branch-workflow" class="nav-link active" data-scroll-target="#feature-branch-workflow"><span class="header-section-number">I.1</span> Feature branch workflow</a></li>
+  <li><a href="#lets-do-it" id="toc-lets-do-it" class="nav-link" data-scroll-target="#lets-do-it"><span class="header-section-number">I.2</span> Let’s do it</a></li>
+  <li><a href="#create-a-pull-request" id="toc-create-a-pull-request" class="nav-link" data-scroll-target="#create-a-pull-request"><span class="header-section-number">I.3</span> Create a pull request</a></li>
+  <li><a href="#git-commands" id="toc-git-commands" class="nav-link" data-scroll-target="#git-commands"><span class="header-section-number">I.4</span> Git commands</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices/a-project.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/a-git-branch.html"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Git: Branches</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Coding for Journalists</h1>
+<h1 class="title">Appendix I — Git: Branches</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -580,127 +560,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This class is being rewritten for Spring 2025 and will likely update throughout the semester.</p>
-</div>
-</div>
-<p>This is the course material for the UT-Austin School of Journalism and Media course <em>Intro to Coding for Journalists</em>. The class teaches basic HTML, CSS and JavaScript skills, culminating in a static-page generator app from data.</p>
-<p>The Canvas course is your official word on assignment due dates and such, but most lectures, assignment details and files are found here.</p>
-<section id="the-structure-of-the-class" class="level2">
-<h2 class="anchored" data-anchor-id="the-structure-of-the-class">The structure of the class</h2>
-<p>You can see the chapter breakdown, but the book is more or less structured like this:</p>
+<blockquote class="blockquote">
+<p>This has never been used in class and probably needs edits.</p>
+</blockquote>
+<p>One of the features of Git is to “branch” code into a copy so you can make changes while the original “master” branch lives on. This is useful in the coding world when you want to add a feature or make changes that you don’t want to yet add to the master.</p>
+<p>There are different ways to manage this process, including <a href="https://nvie.com/posts/a-successful-git-branching-model/">git flow</a>, <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">git feature branch flow</a>, <a href="https://guides.github.com/introduction/flow/">Github flow</a> and probably others. Some systems are more appropriate for different environments, depending on the size of the project and the number of people involved. The most important thing to know is that everyone working on a project should be on the same page, using the same method.</p>
+<section id="feature-branch-workflow" class="level2" data-number="I.1">
+<h2 data-number="I.1" class="anchored" data-anchor-id="feature-branch-workflow"><span class="header-section-number">I.1</span> Feature branch workflow</h2>
+<p>The workflow I typically use is <a href="https://confluence.atlassian.com/Github/workflow-for-git-feature-branching-814201830.html">git feature branch workflow</a>, and I use this even when I’m working solo on a project. Review the link above, but this is typically how it works:</p>
 <ul>
-<li>Using command-line tools</li>
-<li>Computer setup</li>
-<li>HTML: The skeleton of the web</li>
-<li>CSS: The skin of the web</li>
-<li>JavaScript: The muscles of the web</li>
-<li>Sass: Better web skins</li>
-<li>Bootstrap: OMG, the web solved</li>
-<li>Static apps: HFS, I can make it</li>
+<li><code>master</code> is the branch in production or ready for production. It should always “work” with no bugs.</li>
+<li>Create a <strong>feature branch</strong> to start on new work. Make your changes and push the branch to the repo.</li>
+<li>Create a <strong>pull request</strong> to review changes. This allows you or others to see the changes within Github you are proposing to merge into master. There are tools in Github that allow for official reviews, comments and such. You will also see potential code conflicts.</li>
+<li>Make any changes necessary and push them to the feature branch.</li>
+<li>Once ready, merge into <code>master</code>. All the history of your commits are added to master, and your <code>newbranch</code> has been deleted on Github.</li>
 </ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Many of the chapters in this book have video screencasts where I walk through the practice lesson and explain steps along the way. If you are a visual learner, you might try that. The material is the same as in this book, but I just <em>show</em> the steps as I walk though the book. You’ll find those links in Canvas.</p>
-</div>
-</div>
+<p>There can be more to it in some shops, like rebasing and squashing, but we won’t get into that here.</p>
 </section>
-<section id="tips-on-reading-this-book" class="level2">
-<h2 class="anchored" data-anchor-id="tips-on-reading-this-book">Tips on reading this book</h2>
-<p>I try to write this book so it is clear when you need to <strong>do</strong> something vs <strong>read</strong> something.</p>
-<section id="to-do-steps" class="level3">
-<h3 class="anchored" data-anchor-id="to-do-steps">To-do steps</h3>
-<p>For all my lessons I typically put directions for YOU to do in numbered lists:</p>
-<ol type="1">
-<li>Do this thing.</li>
-<li>Then do that thing.</li>
-</ol>
-<hr>
-<p>Sometimes there is code after or among the the directions, but it is in a code block with a grey background.</p>
-<ol type="1">
-<li>Run this command:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-al</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that you can roll your cursor over that highlighted block and use the copy button at the top right to copy all the commands within it. <strong>I encourage you to type commands</strong> unless they are super long. You learn better that way.</p>
-<hr>
-<p>Sometimes I show a command and also show Terminal output. In this case, I include the <code>$</code> on the line with the command. The background is also not highlighted.</p>
-<pre><code>$ ls -al
-total 32
-drwxr-xr-x   3 ccm346  Users     96 Jul 12 16:12 .
-drwxr-xr-x@ 22 ccm346  Users    704 Jul 12 16:10 ..
--rw-r--r--   1 ccm346  Users  15642 Jul 12 16:12 data.csv</code></pre>
-</section>
-<section id="not-to-do-things" class="level3">
-<h3 class="anchored" data-anchor-id="not-to-do-things">Not to-do things</h3>
-<p>I typically use an unordered bullet list for explanations and other non-“do” things:</p>
+<section id="lets-do-it" class="level2" data-number="I.2">
+<h2 data-number="I.2" class="anchored" data-anchor-id="lets-do-it"><span class="header-section-number">I.2</span> Let’s do it</h2>
 <ul>
-<li>This is just a note about something</li>
-<li>And this is another</li>
+<li>Go into your “myproject-name” repo in VS code and open your Integrated Terminal.</li>
+<li>Create your branch: <code>$ git checkout -b newbranch</code>.
+<ul>
+<li>If you have the git-bash-prompt installed, you’ll notice the name of the branch has changed in the square brackets.</li>
+</ul></li>
+<li>Add a new file and call it <code>branchfile.md</code>. Add a title and some text using proper Markdown syntax.</li>
+<li>Save and add and commit your file, but when you push, you need to change that to <code>$ git commit origin newbranch</code> to ensure you are adding to your new branch. (It will give you an error if you try to push to master.) This is the result:</li>
 </ul>
-<p>Regular paragraph text such as this one are usually an explanation, background or whatever.</p>
-<p>If <strong>something is in bold</strong> or IN ALL CAPS or <em>in italics for emphasis</em> then there is usually a reason why, so pay attention.</p>
-<div class="callout callout-style-simple callout-none no-icon">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Sometimes I put unimportant but interesting side notes in callouts like this.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>But sometimes I’ll put important notes in these callout sections, too. I’ll usually say if they are important in bold at the beginning, like this one.</p>
-</div>
-</div>
-<p>I try to be consistent about all such things, but I’m human so sometimes I’m not.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin featurebranch</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Enumerating</span> objects: 4, done.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Counting</span> objects: 100% <span class="er">(</span><span class="ex">4/4</span><span class="kw">)</span><span class="ex">,</span> done.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Delta</span> compression using up to 8 threads.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Compressing</span> objects: 100% <span class="er">(</span><span class="ex">2/2</span><span class="kw">)</span><span class="ex">,</span> done.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Writing</span> objects: 100% <span class="er">(</span><span class="ex">3/3</span><span class="kw">)</span><span class="ex">,</span> 354 bytes <span class="kw">|</span> <span class="ex">354.00</span> KiB/s, done.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Total</span> 3 <span class="er">(</span><span class="ex">delta</span> 0<span class="kw">)</span><span class="ex">,</span> reused 0 <span class="er">(</span><span class="ex">delta</span> 0<span class="kw">)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> github.com:critmcdonald/myproject-christian.git</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a> <span class="ex">*</span> [new branch]      featurebranch <span class="at">-</span><span class="op">&gt;</span> featurebranch</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">✔</span> ~/Documents/icj/myproject-christian [featurebranch L<span class="kw">|</span><span class="ex">✔]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Go to your repo on Github, and you’ll notice your <code>branchfile.md</code> is not listed. This is because you are looking at your <code>master</code> branch.</li>
+<li>You can click on <strong>branches</strong> to see all the branches, or use the <strong>branch dropdown</strong> to switch to your new branch on Github.</li>
+</ul>
 </section>
+<section id="create-a-pull-request" class="level2" data-number="I.3">
+<h2 data-number="I.3" class="anchored" data-anchor-id="create-a-pull-request"><span class="header-section-number">I.3</span> Create a pull request</h2>
+<ul>
+<li>Since we just pushed a new branch, you might notice a yellow alert box that has a button where you can <strong>Compare &amp; pull requet</strong>. If you have that, go ahead and click on it.</li>
+<li>If you didn’t have that, you could click on the <strong>Pull requests</strong> tab at the top, and then choose a <strong>New pull request</strong>.</li>
+</ul>
+<p>This is what you get:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/github-create-pr.png" class="img-fluid figure-img"></p>
+<figcaption>pull reqeust</figcaption>
+</figure>
+</div>
+<p>You can see from this page that you are merging the branch on the right, <code>newbranch</code>, into the branch on the left, which is <code>master</code>.</p>
+<ul>
+<li>Here you can give your pull request a title and a description. Your description might outline what is being changed, how to test it locally and whatever information your collaborators our your future self might want to know.</li>
+<li>Click the <strong>Create pull request</strong> button to create the pull request.</li>
+<li>The next screen gives you summary of all the commits that are different from the master. It will list multiple files if there are differences.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/github-pull-request.png" class="img-fluid figure-img"></p>
+<figcaption>pull reqeust</figcaption>
+</figure>
+</div>
+<ul>
+<li>This process also outlines any conflicts there might be between the feature branch and master. You’ll have to fix them before you can merge.</li>
+<li>The pull request also allows yourself and collaborators review all your changes and make comments.</li>
+<li>Go ahead and click <strong>Merge pull request</strong> and then <strong>Confirm merge</strong> to merge the branches.</li>
+</ul>
+<p>At this point, you can delete the <code>newbranch</code> in Github, as indicated with a button. You don’t have to since all the commit history is now in master, but it’s a good idea to keep everything clean.</p>
+<p>Now let’s clean up our local repo.</p>
+<ul>
+<li>Go back to VS Code and into the Integrated Terminal, and switch back to master using <code>git checkout master</code>. It will look like this:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git checkout master</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Switched</span> to branch <span class="st">'master'</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch is up-to-date with <span class="st">'origin/master'</span>.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">✔</span> ~/Documents/icj/myproject-christian [master<span class="kw">|</span><span class="ex">✔]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You might notice this says you “branch is up-to-date with ‘origin/master’, and that is confusing, because we know we merged changes that are on Github. This message is referring to your LOCAL branch, not the one on Github. We still need to pull in those changes:</p>
+<pre><code>$ git pull origin master
+From github.com:critmcdonald/myproject-christian
+ * branch            master     -&gt; FETCH_HEAD
+Updating b36328f..c85740d
+Fast-forward
+ branchfile.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 branchfile.md
+✔ ~/Documents/icj/myproject-christian [master|✔]</code></pre>
+<p>This will pull the files from Github and bring them local.</p>
+<p>You can always check what branches you have locally with <code>$ git branch</code>. Try it.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">16:13</span> $ git branch</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">*</span> master</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">newbranch</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The newbranch on Github went away when we merged it, but now we can delete it locally:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git branch <span class="at">-D</span> newbranch</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Deleted</span> branch newbranch <span class="er">(</span><span class="ex">was</span> 1345054<span class="kw">)</span><span class="bu">.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">✔</span> ~/Documents/icj/myproject-christian [master<span class="kw">|</span><span class="ex">✔]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The capitalization of <code>-D</code> flag matters.</p>
 </section>
-<section id="macos-vs-windows" class="level2">
-<h2 class="anchored" data-anchor-id="macos-vs-windows">macOS vs Windows</h2>
-<p>On some occasions I may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Windows</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>I use macOS so most directions are from that perspective.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Usually you can use <strong>Cntl-whatever</strong> as a PC equivalent to <strong>Cmd-whatever</strong> on a Mac.</p>
-</div>
-</div>
-</div>
+<section id="git-commands" class="level2" data-number="I.4">
+<h2 data-number="I.4" class="anchored" data-anchor-id="git-commands"><span class="header-section-number">I.4</span> Git commands</h2>
+<p>We used a ton of git commands, and it was only a fraction. It’s a complex program. There are tons of cheet sheets out there on the googles, but <a href="https://www.git-tower.com/blog/git-cheat-sheet">this one</a> is pretty clean.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1123,11 +1090,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../appendices/a-git-share.html" class="pagination-link" aria-label="Git: Sharing code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title">Git: Sharing code</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./start/start-00-intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
