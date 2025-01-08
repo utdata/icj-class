@@ -498,14 +498,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-structure-of-the-project" id="toc-the-structure-of-the-project" class="nav-link active" data-scroll-target="#the-structure-of-the-project"><span class="header-section-number">20.1</span> The structure of the project</a>
+  <li><a href="#creating-your-project" id="toc-creating-your-project" class="nav-link active" data-scroll-target="#creating-your-project"><span class="header-section-number">20.1</span> Creating your project</a></li>
+  <li><a href="#the-structure-of-the-project" id="toc-the-structure-of-the-project" class="nav-link" data-scroll-target="#the-structure-of-the-project"><span class="header-section-number">20.2</span> The structure of the project</a>
   <ul class="collapse">
-  <li><a href="#src" id="toc-src" class="nav-link" data-scroll-target="#src"><span class="header-section-number">20.1.1</span> src</a></li>
-  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"><span class="header-section-number">20.1.2</span> docs</a></li>
+  <li><a href="#src" id="toc-src" class="nav-link" data-scroll-target="#src"><span class="header-section-number">20.2.1</span> src</a></li>
+  <li><a href="#docs" id="toc-docs" class="nav-link" data-scroll-target="#docs"><span class="header-section-number">20.2.2</span> docs</a></li>
   </ul></li>
-  <li><a href="#how-development-environment-works" id="toc-how-development-environment-works" class="nav-link" data-scroll-target="#how-development-environment-works"><span class="header-section-number">20.2</span> How development environment works</a>
+  <li><a href="#how-development-environment-works" id="toc-how-development-environment-works" class="nav-link" data-scroll-target="#how-development-environment-works"><span class="header-section-number">20.3</span> How development environment works</a>
   <ul class="collapse">
-  <li><a href="#configurations-files" id="toc-configurations-files" class="nav-link" data-scroll-target="#configurations-files"><span class="header-section-number">20.2.1</span> Configurations files</a></li>
+  <li><a href="#configurations-files" id="toc-configurations-files" class="nav-link" data-scroll-target="#configurations-files"><span class="header-section-number">20.3.1</span> Configurations files</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -532,6 +533,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="creating-your-project" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="creating-your-project"><span class="header-section-number">20.1</span> Creating your project</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Codespaces
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s possible we will diverge from this script to use Codespaces, the virtual machine option offered by Github. If so, the project setup that we start with here would be different. We’ll figure that out together. (In short, we would go to the <a href="https://github.com/utdata/icj-sass-template">icj-sass-template</a> repo, use <em>Use this template &gt; Create a new repository</em> option to create your copy, then open in Codespaces.)</p>
+</div>
+</div>
 <p>As usual, we’ll learn by doing. So let’s jump in with a project.</p>
 <p>For this project, we are starting from a template saved in a repo. We’ll use a special npm package called <a href="https://www.npmjs.com/package/degit">degit</a> to start our project. You should have already installed it globally when we did our computer setup.</p>
 <p>As such, we won’t need to create a README or .gitignore file because they will be part of the template. But you will need to create a project folder:</p>
@@ -565,12 +581,13 @@ Important
 <li>Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.</li>
 </ul>
 <p>(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run <code>$ gulp dev</code>.)</p>
-<section id="the-structure-of-the-project" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="the-structure-of-the-project"><span class="header-section-number">20.1</span> The structure of the project</h2>
+</section>
+<section id="the-structure-of-the-project" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="the-structure-of-the-project"><span class="header-section-number">20.2</span> The structure of the project</h2>
 <p>The template you pulled already as the Node.js development environment defined with a specific (and common) folder structure.</p>
 <p>Let’s talk about how the folder system is structured:</p>
-<section id="src" class="level3" data-number="20.1.1">
-<h3 data-number="20.1.1" class="anchored" data-anchor-id="src"><span class="header-section-number">20.1.1</span> src</h3>
+<section id="src" class="level3" data-number="20.2.1">
+<h3 data-number="20.2.1" class="anchored" data-anchor-id="src"><span class="header-section-number">20.2.1</span> src</h3>
 <p>You will only work with the files in the <code>src</code> folder. There are a series of “tasks” in the development system that will process and move files to the <code>docs</code> folder, which is our “publishable” website.</p>
 <pre class="text"><code>src
 ├── img (files will get moved to `docs/img`.)
@@ -582,8 +599,8 @@ Important
 ├── index.html
 ├── shows.html</code></pre>
 </section>
-<section id="docs" class="level3" data-number="20.1.2">
-<h3 data-number="20.1.2" class="anchored" data-anchor-id="docs"><span class="header-section-number">20.1.2</span> docs</h3>
+<section id="docs" class="level3" data-number="20.2.2">
+<h3 data-number="20.2.2" class="anchored" data-anchor-id="docs"><span class="header-section-number">20.2.2</span> docs</h3>
 <p>The <code>docs</code> folder is our publishing folder, where our website lives. These are the files that will be published to the web as a working website. Everything outside the <code>docs</code> folder just supports the creation of the files inside <code>docs</code>. <strong>DON’T EDIT ANY FILES IN THE <code>docs</code> FOLDER.</strong> If you do, the changes will just be overwritten.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -608,8 +625,8 @@ Note
 </code></pre>
 </section>
 </section>
-<section id="how-development-environment-works" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="how-development-environment-works"><span class="header-section-number">20.2</span> How development environment works</h2>
+<section id="how-development-environment-works" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="how-development-environment-works"><span class="header-section-number">20.3</span> How development environment works</h2>
 <p>This setup of having a <code>src</code> folder is pretty common in development. We work with the files in the <code>src</code> directory as there are background processes that run on those files, do cool stuff, and then compile the result into our publishing directory, in our case <code>docs/</code>.</p>
 <p>The <code>docs</code> folder ends up being the “root” or base level of our site. All other files in the project need to need to be referenced relative to where they end up inside <code>docs</code>.</p>
 <ul>
@@ -621,8 +638,8 @@ Note
 </ul></li>
 <li>Files in the <code>src/img/</code> folder are moved into <code>docs/img/</code>. Since your <code>index.html</code> file ends up in <code>docs</code>, then your img link needs to be <code>img src="img/filename.jpg"</code>.</li>
 </ul>
-<section id="configurations-files" class="level3" data-number="20.2.1">
-<h3 data-number="20.2.1" class="anchored" data-anchor-id="configurations-files"><span class="header-section-number">20.2.1</span> Configurations files</h3>
+<section id="configurations-files" class="level3" data-number="20.3.1">
+<h3 data-number="20.3.1" class="anchored" data-anchor-id="configurations-files"><span class="header-section-number">20.3.1</span> Configurations files</h3>
 <p>The remaining files and folders in the root folder are part of the development ecosystem. We don’t mess with this files much in our lessons, but here is a description of what they do:</p>
 <ul>
 <li><code>.gitignore</code> tells Git which files to ignore sending to Github.</li>
