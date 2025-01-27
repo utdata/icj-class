@@ -65,6 +65,7 @@ book:
     - project/fp-00-intro.qmd
   appendices:
     - appendices/a-project.qmd
+    - appendices/a-using-codespaces.qmd
     - appendices/a-google-fonts.qmd
     - appendices/a-fetch-problems.qmd
     - appendices/a-macos-shell.qmd

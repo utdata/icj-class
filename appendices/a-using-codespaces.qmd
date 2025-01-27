@@ -1,0 +1,5 @@
+# Using Github Codespaces
+
+I need to write some documentation about using codes spaces, but until then I recorded a short five-minute video that walks through starting a new project uing Github and Codespaces.
+
+<iframe src="https://utexas.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=47e37e13-eba9-42f3-af8e-b27101695c81&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Starting from Github" ></iframe>
