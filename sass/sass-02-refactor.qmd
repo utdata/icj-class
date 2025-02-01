@@ -1,5 +1,7 @@
 # Refactoring our Sass
 
+{{< include _codespace.qmd >}}
+
 ## Overview and goals for this lesson
 
 We are starting with a project template that is a two-page website for a band. It has been coded rather simply with regular, vanilla CSS. It works just fine, but as sites grow with more code, having "Sassy CSS" helps with maintainability. So, our goals for this project assignment are to:
@@ -12,7 +14,7 @@ We are starting with a project template that is a two-page website for a band. I
   - Rewrite style rules for efficiency and reusability.
 - We'll write new style rules in the Sassy way.
 
-If you don't already have your project open in VS Code, go ahead and open it. Run `$ gulp dev` in your terminal to start the development environment.
+If you don't already have your project open in you Codespace VS Code, go ahead and open it. If you haven't already, run `$ gulp dev` in your terminal to start the development environment.
 
 When the browser starts up, you'll have a working multi-page website that uses traditional CSS. We are going to improve this code -- or "refactor" it, as developers call it. It is a very common practice to go through old code and make it mo betta.
 
@@ -152,7 +154,7 @@ We want to the `.content ul` rule to be nested inside the `.content` rule above 
 
 ### On your own
 
-1. After you making the change above, make sure the styles are still building correctly and nothing broke on your page.
+1. After you make the change above, make sure the styles are still building correctly and nothing broke on your page.
 1. Refactor the rest of the `.content` rules to fit like we did the one above.
 1. Again, make sure nothing is broken on the page display.
 

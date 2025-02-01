@@ -1,0 +1,60 @@
+---
+title: "Using Codespaces"
+format: html
+---
+
+Up to this point, we've saved our projects in folders on our computer and used Visual Studio Code and our web browser to edit and view them.
+
+Going forward we will bring some more complexity to our development environment, meaning more software is involved.  Since personal computers can run different versions of operating systems and we are working mainly with web technologies, there can be benefits to working on "virtual" computers where everyone's workspace is built in exactly the same way. Many programmers will do this because they can develop software on machines that are exactly the same as those that run the software in production. While our needs are not that keen, we can still take advantage of this concept.
+
+Github has a commercial virtual machine platform called "Codespaces", where you can do all your work in a browser, and it is directly linked to your Github repository. There is nothing to install on your personal computer to make this work. In the situations we will be using it, this service is free.
+
+Spring 2025 will be my first time to use this service as a primary way of working, so there may be hiccups along the way. Be patient, ask questions and we'll muddle through.
+
+## Your first codespace
+
+To get you familiar with Github Codespaces, we're going to do our first "git-practice" project again, but use one of these virtual machines.
+
+1. Go to Github.com, make sure you are logged in, and use the **+** menu at the top-right for a **New Repository**.
+1. Give your new repo a name, like `yourname-codespace`.
+1. Leave the other defaults as they are, and click green ***Create repository** button.
+    - You'll get to the usual page we get after creating a new repository. However, notice no the big box on that page that says **Start coding with Codespaces**.
+    - Click on the button **Create a codespace**.
+1. You'll get yet another screen noting a README will be created when the codespace is created. Click on the **Create new codespace** button.
+
+At this point the virtual computer will be created and your browser will end up in a window that looks like Visual Studio Code. Your virtual machine will have a cute name made up of random words, like `ideal guacamole`, and you might be able to see that in the folder name in your document tray and in the Codespaces menu at the bottom left of your browser.
+
+### Edit the README
+
+1. Find your README.md file in your document tray and double-click on it to open, just like you would in Visual Studio Code.
+1. Update the headline of your readme and add a few sentences.
+    - As you type and add files and such, VS Code will save your files automatically.
+1. In the Terminal, use the git cycle to add, commit and **push your changes**.
+1. Leave this window open, but open a new browser tab and go to your repo on Github, where you should see the changed files.
+
+The virtual codespace works just like your local computer. While the browser is saving your files as your type, you still have to use the git cycle to push your code to your Github repo.
+
+### Shutting down your codespace
+
+While a codespace will pause after a bit of inactivity, it is best to shut it down when you are finished working.
+
+1. At the bottom left of the codespace browser window is the _Codespaces_ menu. Click on this, which opens the VS Code command prompt with **Stop current codespace**, which you should choose.
+
+You can also use Cmd-Shift-P to open the command prompt and type in **Stop current codespace** to shut it down.
+
+After it is done, you can close your browser window.
+
+### Restarting codespaces
+
+If you still have the window open, you can click on the **Restart codespace** button.
+
+Otherwise go to your Github repo, click on the big green **<> Code** button and highlight the _Codespaces_ tab. You should see your codespace listed, which you can click on to launch.
+
+## Tips about codespaces
+
+- While your files are automatically saved in the codespace as you work, **you must still commit and push your code to Github** to save it for posterity (and for grading!) I can't see your codespace.
+- Your codespace will go dormant if left alone for a period of time. If the window is still open, there will be a button to resume it.
+- If you close your browser window, the codespace will go dormant. Your work there is still saved where you left off and you can go to your Github repo to restart the codespace.
+- If a codespace is not opened for a month or so, it will be deleted. **So always push your completed code to Github** so it is safe. You will get emails warning you about the deleting.
+- If your codespace is deleted for inactivity, you lose any unpushed changes. **Commit and push your code!** That said, you can always create a new codespace based on your most Github repo code.
+- It's possible to create more than one codespace for a repo, but that will just confuse you. Just use one.

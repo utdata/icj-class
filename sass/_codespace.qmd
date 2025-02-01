@@ -1,0 +1,5 @@
+::: callout-important
+
+This chapter is being rewritten to utilize [Github Codespaces](https://github.com/features/codespaces) as the primary development platform, which is a recent change. Please bring to my attention anything that doesn't make sense.
+
+:::

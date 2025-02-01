@@ -1,31 +1,38 @@
-# Projects from degit
+# Codespaces projects
 
 ## Creating your project
 
-::: callout-warning
-
-### Codespaces
-
-It's possible we will diverge from this script to use Codespaces, the virtual machine option offered by Github. If so, the project setup that we start with here would be different. We'll figure that out together. (In short, we would go to the [icj-sass-template](https://github.com/utdata/icj-sass-template) repo, use *Use this template > Create a new repository* option to create your copy, then open in Codespaces.)
-
-:::
+{{< include _codespace.qmd >}}
 
 As usual, we'll learn by doing. So let's jump in with a project.
 
-For this project, we are starting from a template saved in a repo. We'll use a special npm package called [degit](https://www.npmjs.com/package/degit) to start our project. You should have already installed it globally when we did our computer setup.
+Instead of first creating a folder on our computer to store all our code, we'll make a copy of an existing Github repository, and then work from a virtual computer attached to that repo.
 
-As such, we won't need to create a README or .gitignore file because they will be part of the template. But you will need to create a project folder:
+1. Go to the [icj-sass-template](https://github.com/utdata/icj-sass-template) repo.
+1. Click on the green **Use this template** button and choose _Create a new repository_.
+    - This should allow you to create new repo based on icj-sass-template. Call this new repo **yourname-sass**.
+    - Leave all the other settings the same and click **Create repository**.
+    - It takes several seconds to create your repo.
+1. Click on the green **<> Code** button and then choose the **Codespaces** tab.
+    - Click **Create codespace on main**.
+    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say "Detected Node.js" and let it finish that setup.
+    - Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!
 
-1. Create a new project folder called `yourname-sass` inside your `icj` folder.
-1. Open that folder in VS Code and open your terminal.
-1. In your terminal, run `degit utdata/icj-sass-template`. This should download all the template files into your folder.
-1. Run `npm install`. This will install all the packages we need from the npm "app store". It will take a couple of minutes.
+A virtual machine will be created and you'll see the name in the folder listing, and again at the very bottom left of your browser. It's usually a word mashup like `glorious winner`. You'll want to continue to use this same virtual codespace as you work on this project.
+
+We need to install a piece of software onto this new virtual machine, and we might as well do it now so we don't forget. I'll explain more about `npm` and `gulp` below.
+
+4. In the codespace's VS Code Terminal, run:
+    
+    ```bash
+    npm install -g gulp
+    ```
 
 ::: callout-important
-When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**.
+When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**. You can ignore them.
 :::
     
-5. Run `gulp dev`.
+5. In the Terminal, run `gulp dev`.
 
 When you run `gulp dev` from your Terminal, a _bunch of cool stuff happens_. The process creates our "development environment":
 
@@ -77,9 +84,9 @@ docs (don't edit anything in here)
 
 ```
 
-## How development environment works
+## How a development environment works
 
-This setup of having a `src` folder is pretty common in development. We work with the files in the `src` directory as there are background processes that run on those files, do cool stuff, and then compile the result into our publishing directory, in our case `docs/`.
+This setup of having a `src` folder is pretty common in software development. We work with the files in the `src` directory as there are background processes that run on those files, do cool stuff, and then compile the result into our publishing directory, in our case `docs/`.
 
 The `docs` folder ends up being the "root" or base level of our site. All other files in the project need to need to be referenced relative to where they end up inside `docs`.
 
@@ -91,7 +98,7 @@ The `docs` folder ends up being the "root" or base level of our site. All other 
 
 ### Configurations files
 
-The remaining files and folders in the root folder are part of the development ecosystem. We don't mess with this files much in our lessons, but here is a description of what they do:
+The remaining files and folders in the root folder are part of the development ecosystem. We don't mess with these files much in our lessons, but here is a description of what they do:
 
 - `.gitignore` tells Git which files to ignore sending to Github.
 - `README.md` describes what the repo is about. It has our installation instructions.
