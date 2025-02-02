@@ -37,7 +37,7 @@ book:
         - javascript/js-04-objects.qmd
         - javascript/js-05-html.qmd
         - javascript/js-06-datatables.qmd
-    - setup/setup-02-node.qmd
+    - setup/setup-02-codespaces.qmd
     - part: "SASS"
       chapters:
         - sass/sass-00-intro.qmd
