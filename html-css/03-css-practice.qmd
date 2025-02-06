@@ -439,7 +439,7 @@ Now let's use some of the same techniques we used with the header and figure to 
 
 ```css
   float: left;
-  width: 48%
+  width: 48%;
 ```
 
 That starts putting these side-by-side, but there is no gutter between them.
