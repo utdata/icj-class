@@ -16,11 +16,11 @@ Spring 2025 will be my first time to use this service as a primary way of workin
 To get you familiar with Github Codespaces, we're going to do our first "git-practice" project again, but use one of these virtual machines.
 
 1. Go to Github.com, make sure you are logged in, and use the **+** menu at the top-right for a **New Repository**.
-1. Give your new repo a name, like `yourname-codespace`.
-1. Leave the other defaults as they are, and click green ***Create repository** button.
-    - You'll get to the usual page we get after creating a new repository. However, notice no the big box on that page that says **Start coding with Codespaces**.
-    - Click on the button **Create a codespace**.
-1. You'll get yet another screen noting a README will be created when the codespace is created. Click on the **Create new codespace** button.
+    - Give your new repo a name, like `yourname-codespace`.
+    - ALSO this time check the box that will **Add a README file**.
+    - Leave the other defaults as they are, and click green ***Create repository** button.
+2. You'll get to the usual page we get after creating a new repository. However, When you click on the green **Code** button, there will be a tab called **Codespaces**.
+    - Click on the **Codespaces** tab, then on the green **Create a codespace on main** button.
 
 At this point the virtual computer will be created and your browser will end up in a window that looks like Visual Studio Code. Your virtual machine will have a cute name made up of random words, like `ideal guacamole`, and you might be able to see that in the folder name in your document tray and in the Codespaces menu at the bottom left of your browser.
 
