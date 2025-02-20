@@ -541,13 +541,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tutorials" id="toc-tutorials" class="nav-link active" data-scroll-target="#tutorials"><span class="header-section-number">24.1</span> Tutorials</a></li>
   <li><a href="#goals-for-this-section" id="toc-goals-for-this-section" class="nav-link" data-scroll-target="#goals-for-this-section"><span class="header-section-number">24.2</span> Goals for this section</a></li>
   <li><a href="#create-your-project-and-github-repo" id="toc-create-your-project-and-github-repo" class="nav-link" data-scroll-target="#create-your-project-and-github-repo"><span class="header-section-number">24.3</span> Create your project and Github repo</a></li>
-  <li><a href="#review-the-template-files" id="toc-review-the-template-files" class="nav-link" data-scroll-target="#review-the-template-files"><span class="header-section-number">24.4</span> Review the template files</a>
+  <li><a href="#repo-from-a-template" id="toc-repo-from-a-template" class="nav-link" data-scroll-target="#repo-from-a-template"><span class="header-section-number">24.4</span> Repo from a template</a></li>
+  <li><a href="#review-the-template-files" id="toc-review-the-template-files" class="nav-link" data-scroll-target="#review-the-template-files"><span class="header-section-number">24.5</span> Review the template files</a>
   <ul class="collapse">
-  <li><a href="#the-docs-folder" id="toc-the-docs-folder" class="nav-link" data-scroll-target="#the-docs-folder"><span class="header-section-number">24.4.1</span> The docs folder</a></li>
-  <li><a href="#the-src-folder" id="toc-the-src-folder" class="nav-link" data-scroll-target="#the-src-folder"><span class="header-section-number">24.4.2</span> The src folder</a></li>
-  <li><a href="#inspect-the-configuration-files" id="toc-inspect-the-configuration-files" class="nav-link" data-scroll-target="#inspect-the-configuration-files"><span class="header-section-number">24.4.3</span> Inspect the configuration files</a></li>
+  <li><a href="#the-docs-folder" id="toc-the-docs-folder" class="nav-link" data-scroll-target="#the-docs-folder"><span class="header-section-number">24.5.1</span> The docs folder</a></li>
+  <li><a href="#the-src-folder" id="toc-the-src-folder" class="nav-link" data-scroll-target="#the-src-folder"><span class="header-section-number">24.5.2</span> The src folder</a></li>
+  <li><a href="#inspect-the-configuration-files" id="toc-inspect-the-configuration-files" class="nav-link" data-scroll-target="#inspect-the-configuration-files"><span class="header-section-number">24.5.3</span> Inspect the configuration files</a></li>
   </ul></li>
-  <li><a href="#launch" id="toc-launch" class="nav-link" data-scroll-target="#launch"><span class="header-section-number">24.5</span> Launch</a></li>
+  <li><a href="#launch" id="toc-launch" class="nav-link" data-scroll-target="#launch"><span class="header-section-number">24.6</span> Launch</a></li>
   </ul>
 </nav>
     </div>
@@ -573,8 +574,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter is being rewritten to utilize <a href="https://github.com/features/codespaces">Github Codespaces</a> as the primary development platform, which is a recent change. Please bring to my attention anything that doesn’t make sense.</p>
+</div>
+</div>
 <p><a href="https://getbootstrap.com/">Bootstrap</a> is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site – navigation, buttons, colors, boxes, grids – are all pre-built, but also customizable. Its “mobile-first, responsive design” framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.</p>
 <p>With the lesson we return to the teaching method of Tutorial &gt; Practice &gt; Mastery.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for <strong>Bootstrap practice lesson</strong>.</p>
+</div>
+</div>
 <section id="tutorials" class="level2" data-number="24.1">
 <h2 data-number="24.1" class="anchored" data-anchor-id="tutorials"><span class="header-section-number">24.1</span> Tutorials</h2>
 <ul>
@@ -592,22 +619,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Use Bootstrap’s grid-system to create a responsive website.</li>
 <li>Introduce Sass/SCSS for customization.</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for <strong>Bootstrap practice lesson</strong>.</p>
-</div>
-</div>
 </section>
 <section id="create-your-project-and-github-repo" class="level2" data-number="24.3">
 <h2 data-number="24.3" class="anchored" data-anchor-id="create-your-project-and-github-repo"><span class="header-section-number">24.3</span> Create your project and Github repo</h2>
+<p>We’ll take some leaps of faith and create our project and get all our files, so we have something to talk about within the lesson.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -618,46 +633,38 @@ Codespaces
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If we are using Codespaces, we’ll make the necessary adjustments here.</p>
-</div>
-</div>
-<p>We’ll take some leaps of faith and create our project and get all our files, so we have something to talk about within the lesson.</p>
-<ol type="1">
-<li>Create a new folder in your <code>icj/</code> folder called <code>yourname-bootstrap</code>.</li>
-<li>In VS Code, open a new window and open your new folder.</li>
-<li>Open the Integrated Terminal.
-<ul>
-<li>Run <code>degit utdata/icj-bootstrap-template</code> to download the files.</li>
-<li>Run <code>npm install</code> to install the node packages.</li>
-<li>Run <code>git init</code> to intilize git.</li>
-<li>Run <code>git add .</code> to add the files.</li>
-<li>Run <code>git commit -m "first commit"</code> to commit the files.</li>
-</ul></li>
-<li>Go to Github and create a repository of the same name. Use the <code>git remote add</code> command to connect your repos.</li>
-</ol>
-<p>The project already has README.md and .gitignore files, but you should update the README with information specific to this assignment.</p>
-<ol type="1">
-<li>Edit the README file by adding a new section at the top with your name and the date you started the project. Note it is a Bootstrap 5 class project.</li>
-</ol>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When running <code>npm install</code> or when viewing your project on Github, you will see warnings about outdated packages and dependencies. <strong>These will not affect our work on this project</strong>.</p>
+<p>These directions assume you are using Github codespaces. If you want to run this rig on your own machine there is move involved. Look to the repo’s README file for some tips on that.</p>
 </div>
 </div>
 </section>
-<section id="review-the-template-files" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="review-the-template-files"><span class="header-section-number">24.4</span> Review the template files</h2>
+<section id="repo-from-a-template" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="repo-from-a-template"><span class="header-section-number">24.4</span> Repo from a template</h2>
+<p>Like our last Sass chapter, we are going to start our project by copying a Github repo and then using a Codespace from your new repo.</p>
+<ol type="1">
+<li><p>Go to <a href="https://github.com/utdata/icj-bootstrap-template">github.com/utdata/icj-bootstrap-template</a>.</p></li>
+<li><p>Click on the green <strong>Use this template</strong> button and choose <em>Create a new repository</em>.</p>
+<ul>
+<li>This should allow you to create new repo based on icj-bootstrap-template. Call this new repo <strong>yourname-bootstrap</strong>.</li>
+<li>Leave all the other settings the same and click <strong>Create repository</strong>.</li>
+<li>It takes several seconds to create your repo.</li>
+</ul></li>
+<li><p>Click on the green <strong>&lt;&gt; Code</strong> button and then choose the <strong>Codespaces</strong> tab.</p>
+<ul>
+<li>Click <strong>Create codespace on main</strong>.</li>
+<li>This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say “Detected Node.js” and let it finish that setup.</li>
+<li>Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!</li>
+</ul></li>
+<li><p>In the codespace’s VS Code Terminal, run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> gulp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>In the Terminal, run <code>gulp dev</code>.</p></li>
+</ol>
+<p>If you get errors, you might have to try <code>npm install</code> and then run <code>gulp dev</code> again.</p>
+</section>
+<section id="review-the-template-files" class="level2" data-number="24.5">
+<h2 data-number="24.5" class="anchored" data-anchor-id="review-the-template-files"><span class="header-section-number">24.5</span> Review the template files</h2>
 <p>This project is similar to the Sass template in that it uses the Node development environment. There are a couple of differences so we’ll review the files.</p>
-<section id="the-docs-folder" class="level3" data-number="24.4.1">
-<h3 data-number="24.4.1" class="anchored" data-anchor-id="the-docs-folder"><span class="header-section-number">24.4.1</span> The docs folder</h3>
+<section id="the-docs-folder" class="level3" data-number="24.5.1">
+<h3 data-number="24.5.1" class="anchored" data-anchor-id="the-docs-folder"><span class="header-section-number">24.5.1</span> The docs folder</h3>
 <p>The <code>docs/</code> folder is where all our finished site files go. It is the folder that will be read by the web server.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -680,8 +687,8 @@ Warning
 <li>An <code>index.html</code> file. This is the HTML page we will be building, but we will will be editing it from the <code>src/</code> folder.</li>
 </ul>
 </section>
-<section id="the-src-folder" class="level3" data-number="24.4.2">
-<h3 data-number="24.4.2" class="anchored" data-anchor-id="the-src-folder"><span class="header-section-number">24.4.2</span> The src folder</h3>
+<section id="the-src-folder" class="level3" data-number="24.5.2">
+<h3 data-number="24.5.2" class="anchored" data-anchor-id="the-src-folder"><span class="header-section-number">24.5.2</span> The src folder</h3>
 <p><strong>This is where we edit our files.</strong> Any change we make here gets compiled or copied into the <code>docs/</code> folder by our Node.js server.</p>
 <ul>
 <li>Our <code>.html</code> files sit loose in the <code>src/</code> folder (or put into subfolders). These get copied into <code>docs/</code> in the same <em><strong>relative</strong></em> location.</li>
@@ -689,24 +696,24 @@ Warning
 <li>The <code>scss</code> folder has <code>styles.scss</code> file were we will add all our Sassy css.</li>
 </ul>
 <p>When we run <code>gulp dev</code> we also launch a live server that will rebuild our project when we save our source files.</p>
-<section id="inspect-the-html-file" class="level4" data-number="24.4.2.1">
-<h4 data-number="24.4.2.1" class="anchored" data-anchor-id="inspect-the-html-file"><span class="header-section-number">24.4.2.1</span> Inspect the html file</h4>
+<section id="inspect-the-html-file" class="level4" data-number="24.5.2.1">
+<h4 data-number="24.5.2.1" class="anchored" data-anchor-id="inspect-the-html-file"><span class="header-section-number">24.5.2.1</span> Inspect the html file</h4>
 <p>While we are in our src folder, let’s look at our HTML.</p>
 <ol type="1">
 <li>Open <code>src/index.html</code> and take a look at it.</li>
 </ol>
 <p>There are several things going on here with this file beyond the base HTML. In the <code>&lt;head&gt;</code> we are pulling in css file that will be generated through Sass, including for the Bootstrap framework. At the bottom we are pulling in the JavaScript file that we need for Bootstrap, which will also be copied there by our development environment.</p>
 </section>
-<section id="inspect-the-scss-file" class="level4" data-number="24.4.2.2">
-<h4 data-number="24.4.2.2" class="anchored" data-anchor-id="inspect-the-scss-file"><span class="header-section-number">24.4.2.2</span> Inspect the scss file</h4>
+<section id="inspect-the-scss-file" class="level4" data-number="24.5.2.2">
+<h4 data-number="24.5.2.2" class="anchored" data-anchor-id="inspect-the-scss-file"><span class="header-section-number">24.5.2.2</span> Inspect the scss file</h4>
 <ol type="1">
 <li>Open the <code>src/scss/styles.scss</code> file</li>
 </ol>
 <p>You’ll see a lot of comments in this file to explain some things. There is an <code>@import</code> command here that pulls in all the Bootstrap css from our <code>node_modules</code> folder that we downloaded when we ran <code>npm install</code>. You don’t see the result yet on our index page, but you will soon. There are also some comments to guide you.</p>
 </section>
 </section>
-<section id="inspect-the-configuration-files" class="level3" data-number="24.4.3">
-<h3 data-number="24.4.3" class="anchored" data-anchor-id="inspect-the-configuration-files"><span class="header-section-number">24.4.3</span> Inspect the configuration files</h3>
+<section id="inspect-the-configuration-files" class="level3" data-number="24.5.3">
+<h3 data-number="24.5.3" class="anchored" data-anchor-id="inspect-the-configuration-files"><span class="header-section-number">24.5.3</span> Inspect the configuration files</h3>
 <p>The remaining files in the root level of the project are configuration files that help make this development ecosystem run.</p>
 <ul>
 <li>The <code>.gitignore</code> file. It’s configured for a Node.js based web app.</li>
@@ -714,8 +721,8 @@ Warning
 <li>The <code>gulpfile.js</code> is our magic task runner. More on that below.</li>
 <li>The <code>package.json</code> and <code>package-lock.json</code> files keep track of all the npm packages we are using. When you run <code>$ npm install</code>, it downloads all the software into the <code>node_modules</code> folder, which is <em>NOT</em> saved into Github because it contains thousands of files.</li>
 </ul>
-<section id="more-about-the-gulpfile" class="level4" data-number="24.4.3.1">
-<h4 data-number="24.4.3.1" class="anchored" data-anchor-id="more-about-the-gulpfile"><span class="header-section-number">24.4.3.1</span> More about the gulpfile</h4>
+<section id="more-about-the-gulpfile" class="level4" data-number="24.5.3.1">
+<h4 data-number="24.5.3.1" class="anchored" data-anchor-id="more-about-the-gulpfile"><span class="header-section-number">24.5.3.1</span> More about the gulpfile</h4>
 <p><a href="https://www.npmjs.com/package/gulp">Gulp</a> is our task runner that creates our server, compiles our CSS and copies files where we need them. The <code>gulpfile.js</code> is the main controller file works works with a series of files in the <code>tasks</code> folder.</p>
 <p>Each task file does a single thing, like clean out folders, copy files to different directories, or run the Sass CSS compiler. Each task uses one or more node packages to do its work, and the names of the file indicates more or less what that is. We might review some of these in class and you are free to poke around there, but I’d be careful in editing these files at this point.</p>
 <p>This setup gives us the two commands that we will use the most:</p>
@@ -723,18 +730,18 @@ Warning
 <li><code>gulp</code> will compile our CSS and copy all our files into the <code>docs/</code> folder.</li>
 <li><code>gulp dev</code> will do all of the above, plus start our web server so we can see our page.</li>
 </ul>
-<p>I can tell you I did not write all this JavaScript. I found examples on the web that were close to what I needed and I used those, along with documentation, to configure them for my needs.</p>
+<p>I can tell you I did not write all this JavaScript. I found examples on the web that were close to what I needed and I used those, along with documentation, to configure them for my needs. In some cases I had to reach out to other developers to help me.</p>
 </section>
 </section>
 </section>
-<section id="launch" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="launch"><span class="header-section-number">24.5</span> Launch</h2>
+<section id="launch" class="level2" data-number="24.6">
+<h2 data-number="24.6" class="anchored" data-anchor-id="launch"><span class="header-section-number">24.6</span> Launch</h2>
 <p>Let’s run it and see if it works.</p>
 <ol type="1">
 <li><p>In your VS Code Terminal, do this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gulp</span> dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gulp</span> dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
-<p>With any luck <a href="http://localhost:3000" class="uri">http://localhost:3000</a> will load up in the browser and you’ll see some dummy text “Testing: 1, 2, 3, 4” on your screen. This means everything should be good to go.</p>
+<p>With any luck a browser will launch and you’ll see some dummy text “Testing: 1, 2, 3, 4” on your screen. This means everything should be good to go.</p>
 <p>Congrats! You are now ready to get down to business and build a website.</p>
 
 

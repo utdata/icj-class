@@ -28,20 +28,26 @@ We need to install a piece of software onto this new virtual machine, and we mig
     npm install -g gulp
     ```
 
-::: callout-important
-When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**. You can ignore them.
-:::
-    
 5. In the Terminal, run `gulp dev`.
 
 When you run `gulp dev` from your Terminal, a _bunch of cool stuff happens_. The process creates our "development environment":
 
 - All HTML and image files are copied from a `src` directory into the `docs` directory, which is where our publishable code will live.
 - A task compiles all the fancy SCSS files into regular CSS files that your browser can read.
-- A program called Browsersync launches a web browser window and displays your web page                              .
+- A program called Browsersync launches a web browser window and displays your web page.
 - Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.
 
-(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run `$ gulp dev`.)
+::: callout-important
+
+## If you get an error after running `gulp dev` ...
+
+There is a base command the virtual machine is supposed to run when it launches to install all the node packages. If you run `gulp dev` and it say it can't find packags, you might need to run `npm install` first, and then try `gulp dev` again.
+
+When `npm install` does run you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**. You can ignore them.
+
+One last thing here ... Sometimes when you are writing your SCSS code it might crash Gulp. You can read the error message for help finding and fixing the problem, and then you can re-run `$ gulp dev`.
+
+:::
 
 ## The structure of the project
 

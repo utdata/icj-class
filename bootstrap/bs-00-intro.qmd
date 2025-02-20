@@ -1,8 +1,15 @@
 # Bootstrap
 
+{{< include ../sass/_codespace.qmd >}}
+
 [Bootstrap](https://getbootstrap.com/) is a HTML/CSS/Javascript framework for designing websites and web applications. Using Bootstrap saves time and effort because common parts of a web site -- navigation, buttons, colors, boxes, grids -- are all pre-built, but also customizable.  Its "mobile-first, responsive design" framework allows you to make websites or web applications that look great on a phone, tablet or desktop. While Bootstrap is only one of many frameworks available, it is very popular one.
 
 With the lesson we return to the teaching method of Tutorial > Practice > Mastery.
+
+::: callout-tip
+There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap practice lesson**.
+:::
+
 
 ## Tutorials
 
@@ -20,39 +27,41 @@ We will:
 - Use Bootstrap's grid-system to create a responsive website.
 - Introduce Sass/SCSS for customization.
 
-::: callout-tip
-There is a screencast of this lesson with explanations in Canvas under Panopto Video. Look for **Bootstrap practice lesson**.
-:::
-
 ## Create your project and Github repo
+
+
+We'll take some leaps of faith and create our project and get all our files, so we have something to talk about within the lesson.
 
 ::: callout-warning
 
 ### Codespaces
 
-If we are using Codespaces, we'll make the necessary adjustments here. 
+These directions assume you are using Github codespaces. If you want to run this rig on your own machine there is move involved. Look to the repo's README file for some tips on that.
 
 :::
 
-We'll take some leaps of faith and create our project and get all our files, so we have something to talk about within the lesson.
+## Repo from a template
 
-1. Create a new folder in your `icj/` folder called `yourname-bootstrap`.
-1. In VS Code, open a new window and open your new folder.
-1. Open the Integrated Terminal.
-    - Run `degit utdata/icj-bootstrap-template` to download the files.
-    - Run `npm install` to install the node packages.
-    - Run `git init` to intilize git.
-    - Run `git add .` to add the files.
-    - Run `git commit -m "first commit"` to commit the files.
-1. Go to Github and create a repository of the same name. Use the `git remote add` command to connect your repos.
+Like our last Sass chapter, we are going to start our project by copying a Github repo and then using a Codespace from your new repo.
 
-The project already has README.md and .gitignore files, but you should update the README with information specific to this assignment.
+1. Go to [github.com/utdata/icj-bootstrap-template](https://github.com/utdata/icj-bootstrap-template).
+1. Click on the green **Use this template** button and choose _Create a new repository_.
+    - This should allow you to create new repo based on icj-bootstrap-template. Call this new repo **yourname-bootstrap**.
+    - Leave all the other settings the same and click **Create repository**.
+    - It takes several seconds to create your repo.
+1. Click on the green **<> Code** button and then choose the **Codespaces** tab.
+    - Click **Create codespace on main**.
+    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say "Detected Node.js" and let it finish that setup.
+    - Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!
+1. In the codespace's VS Code Terminal, run:
+    
+    ```bash
+    npm install -g gulp
+    ```
 
-1. Edit the README file by adding a new section at the top with your name and the date you started the project. Note it is a Bootstrap 5 class project.
+1. In the Terminal, run `gulp dev`.
 
-::: callout-important
-When running `npm install` or when viewing your project on Github, you will see warnings about outdated packages and dependencies. **These will not affect our work on this project**.
-:::
+If you get errors, you might have to try `npm install` and then run `gulp dev` again.
 
 ## Review the template files
 
@@ -118,7 +127,7 @@ This setup gives us the two commands that we will use the most:
 - `gulp` will compile our CSS and copy all our files into the `docs/` folder.
 - `gulp dev` will do all of the above, plus start our web server so we can see our page.
 
-I can tell you I did not write all this JavaScript. I found examples on the web that were close to what I needed and I used those, along with documentation, to configure them for my needs.
+I can tell you I did not write all this JavaScript. I found examples on the web that were close to what I needed and I used those, along with documentation, to configure them for my needs. In some cases I had to reach out to other developers to help me.
 
 ## Launch
 
@@ -130,6 +139,6 @@ Let's run it and see if it works.
     gulp dev
     ```
 
-With any luck <http://localhost:3000> will load up in the browser and you'll see some dummy text "Testing: 1, 2, 3, 4" on your screen. This means everything should be good to go.
+With any luck a browser will launch and you'll see some dummy text "Testing: 1, 2, 3, 4" on your screen. This means everything should be good to go.
 
 Congrats! You are now ready to get down to business and build a website.

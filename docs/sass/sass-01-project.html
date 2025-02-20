@@ -610,31 +610,30 @@ Important
 <ol start="4" type="1">
 <li><p>In the codespace’s VS Code Terminal, run:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> gulp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>In the Terminal, run <code>gulp dev</code>.</p></li>
 </ol>
+<p>When you run <code>gulp dev</code> from your Terminal, a <em>bunch of cool stuff happens</em>. The process creates our “development environment”:</p>
+<ul>
+<li>All HTML and image files are copied from a <code>src</code> directory into the <code>docs</code> directory, which is where our publishable code will live.</li>
+<li>A task compiles all the fancy SCSS files into regular CSS files that your browser can read.</li>
+<li>A program called Browsersync launches a web browser window and displays your web page.</li>
+<li>Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.</li>
+</ul>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+If you get an error after running <code>gulp dev</code> …
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When running <code>npm install</code> or when viewing your project on Github, you will see warnings about outdated packages and dependencies. <strong>These will not affect our work on this project</strong>. You can ignore them.</p>
+<p>There is a base command the virtual machine is supposed to run when it launches to install all the node packages. If you run <code>gulp dev</code> and it say it can’t find packags, you might need to run <code>npm install</code> first, and then try <code>gulp dev</code> again.</p>
+<p>When <code>npm install</code> does run you will see warnings about outdated packages and dependencies. <strong>These will not affect our work on this project</strong>. You can ignore them.</p>
+<p>One last thing here … Sometimes when you are writing your SCSS code it might crash Gulp. You can read the error message for help finding and fixing the problem, and then you can re-run <code>$ gulp dev</code>.</p>
 </div>
 </div>
-<ol start="5" type="1">
-<li>In the Terminal, run <code>gulp dev</code>.</li>
-</ol>
-<p>When you run <code>gulp dev</code> from your Terminal, a <em>bunch of cool stuff happens</em>. The process creates our “development environment”:</p>
-<ul>
-<li>All HTML and image files are copied from a <code>src</code> directory into the <code>docs</code> directory, which is where our publishable code will live.</li>
-<li>A task compiles all the fancy SCSS files into regular CSS files that your browser can read.</li>
-<li>A program called Browsersync launches a web browser window and displays your web page .</li>
-<li>Browsersync also watches your HTML and SCSS file for any future changes and then reruns tasks and refreshes your browser so you can see your changes.</li>
-</ul>
-<p>(Sometimes errors in your SCSS might crash Gulp. Sometimes the error message will help you find and fix the problem, and then you can re-run <code>$ gulp dev</code>.)</p>
 </section>
 <section id="the-structure-of-the-project" class="level2" data-number="21.2">
 <h2 data-number="21.2" class="anchored" data-anchor-id="the-structure-of-the-project"><span class="header-section-number">21.2</span> The structure of the project</h2>
