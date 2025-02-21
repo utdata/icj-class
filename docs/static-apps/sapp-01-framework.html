@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -506,8 +540,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#goals-for-this-lesson" id="toc-goals-for-this-lesson" class="nav-link active" data-scroll-target="#goals-for-this-lesson"><span class="header-section-number">32.1</span> Goals for this lesson</a></li>
   <li><a href="#set-up-development" id="toc-set-up-development" class="nav-link" data-scroll-target="#set-up-development"><span class="header-section-number">32.2</span> Set up development</a></li>
-  <li><a href="#review-the-example-site" id="toc-review-the-example-site" class="nav-link" data-scroll-target="#review-the-example-site"><span class="header-section-number">32.3</span> Review the example site</a></li>
-  <li><a href="#understand-the-project-structure" id="toc-understand-the-project-structure" class="nav-link" data-scroll-target="#understand-the-project-structure"><span class="header-section-number">32.4</span> Understand the project structure</a></li>
+  <li><a href="#repo-from-a-template" id="toc-repo-from-a-template" class="nav-link" data-scroll-target="#repo-from-a-template"><span class="header-section-number">32.3</span> Repo from a template</a></li>
+  <li><a href="#review-the-example-site" id="toc-review-the-example-site" class="nav-link" data-scroll-target="#review-the-example-site"><span class="header-section-number">32.4</span> Review the example site</a></li>
+  <li><a href="#understand-the-project-structure" id="toc-understand-the-project-structure" class="nav-link" data-scroll-target="#understand-the-project-structure"><span class="header-section-number">32.5</span> Understand the project structure</a></li>
   </ul>
 </nav>
     </div>
@@ -533,6 +568,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This chapter is being rewritten to utilize <a href="https://github.com/features/codespaces">Github Codespaces</a> as the primary development platform, which is a recent change. Please bring to my attention anything that doesn’t make sense.</p>
+</div>
+</div>
 <section id="goals-for-this-lesson" class="level2" data-number="32.1">
 <h2 data-number="32.1" class="anchored" data-anchor-id="goals-for-this-lesson"><span class="header-section-number">32.1</span> Goals for this lesson</h2>
 <p>We will learn the features of this project rig in steps:</p>
@@ -568,21 +616,35 @@ Codespaces
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If we are using Codespaces, we’ll make adjustments here.</p>
+<p>We’ll be using Github codespaces for development. If you want to run this locally on your machine, see the README in the template repo.</p>
 </div>
 </div>
-<p>The best way to set up your project template is to use <a href="https://www.npmjs.com/package/degit">degit</a> to download the template from the <code>icj-project-rig</code> repo.</p>
-<ol type="1">
-<li>Create your project folder, called <code>yourname-staticapp</code>.</li>
-<li>Open VS Code into that folder and open the Terminal.</li>
-<li>Run <code>degit utdata/icj-project-rig</code>.</li>
-<li>Create your Github repo and connect them.</li>
-<li>run <code>npm install</code> to install all the Node software</li>
-<li>run <code>gulp dev</code> to process all the files and start the server.</li>
-</ol>
 </section>
-<section id="review-the-example-site" class="level2" data-number="32.3">
-<h2 data-number="32.3" class="anchored" data-anchor-id="review-the-example-site"><span class="header-section-number">32.3</span> Review the example site</h2>
+<section id="repo-from-a-template" class="level2" data-number="32.3">
+<h2 data-number="32.3" class="anchored" data-anchor-id="repo-from-a-template"><span class="header-section-number">32.3</span> Repo from a template</h2>
+<p>Like our previous two projects, you will start by copying a Github repo and then using a Codespace from your new repo.</p>
+<ol type="1">
+<li><p>Go to <a href="https://github.com/utdata/icj-project-rig">github.com/utdata/icj-project-rig</a>.</p></li>
+<li><p>Click on the green <strong>Use this template</strong> button and choose <em>Create a new repository</em>.</p>
+<ul>
+<li>This should allow you to create new repo based on icj-bootstrap-template. Call this new repo <strong>yourname-staticapp</strong>.</li>
+<li>Leave all the other settings the same and click <strong>Create repository</strong>.</li>
+<li>It takes several seconds to create your repo.</li>
+</ul></li>
+<li><p>Click on the green <strong>&lt;&gt; Code</strong> button and then choose the <strong>Codespaces</strong> tab.</p>
+<ul>
+<li>Click <strong>Create codespace on main</strong>.</li>
+<li>This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say “Detected Node.js” and let it finish that setup.</li>
+<li>Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!</li>
+</ul></li>
+<li><p>In the codespace’s VS Code Terminal, run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> gulp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>In the Terminal, run <code>gulp dev</code>.</p></li>
+</ol>
+<p>If you get errors, you might have to try <code>npm install</code> and then run <code>gulp dev</code> again.</p>
+</section>
+<section id="review-the-example-site" class="level2" data-number="32.4">
+<h2 data-number="32.4" class="anchored" data-anchor-id="review-the-example-site"><span class="header-section-number">32.4</span> Review the example site</h2>
 <p>Before we talk about how the project architecture is structured, let’s tour the example pages that are included. As we do so, we’ll just touch on how the example code applies to specific project features.</p>
 <div>
 
@@ -616,8 +678,8 @@ Codespaces
 </ul>
 <p>Storing our content in Google Docs and Sheets might seem overcomplicated at at first, but it allows us to use Google as a content management system of sorts where many people can collaborate on the content and stay our of our code. It’s super powerful, and used by newsrooms like NYT, NPR and The Texas Tribune.</p>
 </section>
-<section id="understand-the-project-structure" class="level2" data-number="32.4">
-<h2 data-number="32.4" class="anchored" data-anchor-id="understand-the-project-structure"><span class="header-section-number">32.4</span> Understand the project structure</h2>
+<section id="understand-the-project-structure" class="level2" data-number="32.5">
+<h2 data-number="32.5" class="anchored" data-anchor-id="understand-the-project-structure"><span class="header-section-number">32.5</span> Understand the project structure</h2>
 <p>The README.md in the project template has details about how different features work. <strong>READ THE README</strong>. While the README file is in your project, you might find it easier <a href="https://github.com/utdata/icj-project-rig">to read the README online</a>. We will also go over it in class (or through video).</p>
 
 
