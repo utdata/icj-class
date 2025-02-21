@@ -1,5 +1,7 @@
 # The static app framework
 
+{{< include ../sass/_codespace.qmd >}}
+
 ## Goals for this lesson
 
 We will learn the features of this project rig in steps:
@@ -23,19 +25,33 @@ We will learn the features of this project rig in steps:
 
 ### Codespaces
 
-If we are using Codespaces, we'll make adjustments here.
+We'll be using Github codespaces for development. If you want to run this locally on your machine, see the README in the template repo.
 
 :::
 
 
-The best way to set up your project template is to use [degit](https://www.npmjs.com/package/degit) to download the template from the `icj-project-rig` repo.
+## Repo from a template
 
-1. Create your project folder, called `yourname-staticapp`.
-2. Open VS Code into that folder and open the Terminal.
-3. Run `degit utdata/icj-project-rig`.
-4. Create your Github repo and connect them.
-5. run `npm install` to install all the Node software
-6. run `gulp dev` to process all the files and start the server.
+Like our previous two projects,  you will start by copying a Github repo and then using a Codespace from your new repo.
+
+1. Go to [github.com/utdata/icj-project-rig](https://github.com/utdata/icj-project-rig).
+1. Click on the green **Use this template** button and choose _Create a new repository_.
+    - This should allow you to create new repo based on icj-bootstrap-template. Call this new repo **yourname-staticapp**.
+    - Leave all the other settings the same and click **Create repository**.
+    - It takes several seconds to create your repo.
+1. Click on the green **<> Code** button and then choose the **Codespaces** tab.
+    - Click **Create codespace on main**.
+    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say "Detected Node.js" and let it finish that setup.
+    - Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!
+1. In the codespace's VS Code Terminal, run:
+    
+    ```bash
+    npm install -g gulp
+    ```
+
+1. In the Terminal, run `gulp dev`.
+
+If you get errors, you might have to try `npm install` and then run `gulp dev` again.
 
 ## Review the example site
 
