@@ -573,27 +573,23 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="project-template" class="level2" data-number="30.2">
 <h2 data-number="30.2" class="anchored" data-anchor-id="project-template"><span class="header-section-number">30.2</span> Project template</h2>
+<ol type="1">
+<li>Go to the <a href="https://github.com/utdata/icj-bootstrap-template">utdata/icj-bootstrap-template</a> repo and click on the <strong>Use this template</strong> links to create your own repo.
 <ul>
-<li>Create a new, empty folder in your <code>icj/</code> folder called <code>yourname-bootstrap-mastery</code>.</li>
-<li>In VS Code, open a new window and open your new folder.</li>
-<li>Open the Integrated Terminal.</li>
-<li>Run <code>$ degit utdata/icj-bootstrap-template</code> to download the files.</li>
-<li>Run <code>$ npm install</code> to install the node packages.</li>
-<li>Run <code>$ git init</code> to intilize git.</li>
-<li>Run <code>$ git add .</code> to add the files.</li>
-<li>Run <code>$ git commit -m "first commit"</code> to commit the files.</li>
-<li>Go to Github and create a repository of the same name.</li>
-<li>Use the “or push an existing repository from the command line” commands from Github to sync the repos.</li>
-</ul>
+<li>Name the new repo <strong>yourname-bs-mastery</strong>.</li>
+</ul></li>
+<li>Go under <strong>&lt;&gt; Code</strong> to <strong>Codespaces</strong> and create your own virtual machine to work your code.</li>
+<li>Make sure once it finishes installing node, you install gulp: <code>npm install -g gulp</code></li>
+</ol>
 <section id="adding-the-images" class="level3" data-number="30.2.1">
 <h3 data-number="30.2.1" class="anchored" data-anchor-id="adding-the-images"><span class="header-section-number">30.2.1</span> Adding the images</h3>
-<p>I have images for you to use for this assignment, but you have to set them a specific way for them to work in the development environment:</p>
+<p>I have images for you to use for this assignment, but you will need to upload them into your codespace into the <code>src/img</code> folder.:</p>
 <ul>
 <li>Download this compressed folder of images: <i class="bi bi-download"></i> <a href="../resources/pirate-photos.zip" download="pirate-photos.zip">pirate-photos.zip</a>.</li>
 <li>Find the zip on your hard drive and uncompress it.</li>
 <li>Move the contents (the photos only) into the <code>src/img</code> folder in your project. The photos should be loose inside that folder.</li>
-<li>Run <code>gulp dev</code> to process the photos and run your development server. (If you had <code>gulp dev</code> running already, quit it with <em>CTRL + C</em> and then restart <code>gulp dev</code> again so the photos will be processed and copied into <code>docs</code>.)</li>
 </ul>
+<p>You should then be able to run <code>gulp dev</code> to process the photos and run your development server.</p>
 </section>
 </section>
 <section id="strategy" class="level2" data-number="30.3">

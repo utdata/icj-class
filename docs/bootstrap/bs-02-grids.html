@@ -541,9 +541,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-responsive-grid" id="toc-the-responsive-grid" class="nav-link active" data-scroll-target="#the-responsive-grid"><span class="header-section-number">26.1</span> The responsive grid</a>
   <ul class="collapse">
   <li><a href="#the-sizes" id="toc-the-sizes" class="nav-link" data-scroll-target="#the-sizes"><span class="header-section-number">26.1.1</span> The sizes</a></li>
-  <li><a href="#xs" id="toc-xs" class="nav-link" data-scroll-target="#xs"><span class="header-section-number">26.1.2</span> xs</a></li>
-  <li><a href="#sm" id="toc-sm" class="nav-link" data-scroll-target="#sm"><span class="header-section-number">26.1.3</span> sm</a></li>
-  <li><a href="#md" id="toc-md" class="nav-link" data-scroll-target="#md"><span class="header-section-number">26.1.4</span> md</a></li>
   </ul></li>
   <li><a href="#using-our-grid-system" id="toc-using-our-grid-system" class="nav-link" data-scroll-target="#using-our-grid-system"><span class="header-section-number">26.2</span> Using our grid system</a>
   <ul class="collapse">
@@ -551,6 +548,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#fluid-images" id="toc-fluid-images" class="nav-link" data-scroll-target="#fluid-images"><span class="header-section-number">26.2.2</span> Fluid images</a></li>
   <li><a href="#add-a-breakpoint" id="toc-add-a-breakpoint" class="nav-link" data-scroll-target="#add-a-breakpoint"><span class="header-section-number">26.2.3</span> Add a breakpoint</a></li>
   </ul></li>
+  <li><a href="#commit-your-changes" id="toc-commit-your-changes" class="nav-link" data-scroll-target="#commit-your-changes"><span class="header-section-number">26.3</span> Commit your changes</a></li>
   </ul>
 </nav>
     </div>
@@ -613,7 +611,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Our goal here is to be able to adjust how wide those columns are at different browser widths. We do this so we can control how the content displays on different devices like phones, tablets and computers.</p>
 <section id="the-sizes" class="level3" data-number="26.1.1">
 <h3 data-number="26.1.1" class="anchored" data-anchor-id="the-sizes"><span class="header-section-number">26.1.1</span> The sizes</h3>
-<p>There are five “breakpoints” for Bootstrap, meaning changes can happen at 5 different widths: default (extra small), sm, md, lg, xl and xxl. They <em>kinda</em> work out like this:</p>
+<p>There are six “breakpoints” for Bootstrap, meaning changes can happen at six different widths: default (extra small), sm, md, lg, xl and xxl. They <em>kinda</em> work out like this:</p>
 <ul>
 <li>the default <code>col</code> is for a vertical phone</li>
 <li><code>sm</code> is for a horizontal phone to a vertical tablet</li>
@@ -654,9 +652,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This is how your page should behave at the default <code>xs</code>, the <code>sm</code> and <code>md</code> breakpoints:</p>
-</section>
-<section id="xs" class="level3" data-number="26.1.2">
-<h3 data-number="26.1.2" class="anchored" data-anchor-id="xs"><span class="header-section-number">26.1.2</span> xs</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">xs</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">sm</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">md</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>At the default size (xs), the columns are stacked.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -664,9 +663,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>xs look</figcaption>
 </figure>
 </div>
-</section>
-<section id="sm" class="level3" data-number="26.1.3">
-<h3 data-number="26.1.3" class="anchored" data-anchor-id="sm"><span class="header-section-number">26.1.3</span> sm</h3>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>At the <strong>sm</strong> size, the middle column is wider.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -674,15 +672,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>sm look</figcaption>
 </figure>
 </div>
-</section>
-<section id="md" class="level3" data-number="26.1.4">
-<h3 data-number="26.1.4" class="anchored" data-anchor-id="md"><span class="header-section-number">26.1.4</span> md</h3>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>At the <strong>md</strong> size, the columns are even.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/bs-look-md.png" class="img-fluid figure-img"></p>
 <figcaption>md look</figcaption>
 </figure>
+</div>
+</div>
+</div>
 </div>
 <p>Now that we’ve learned a little about columns, we’ll tear this apart and build something useful.</p>
 </section>
@@ -723,9 +723,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This makes our site much faster since the browser doesn’t have to download that huge image. It doesn’t hurt to size down your original source photos anyway, just make sure they are large enough for the widest measure (usually 1200px at 72 dpi is fine unless it’s for a huge display.)</p>
 <p>The sizing process doesn’t run continuously so we have to launch <code>gulp</code> or <code>gulp dev</code> to process new photos. This is all to say we need to download a photo for our project and restart gulp:</p>
 <ol type="1">
-<li>Download this <i class="bi bi-download"></i> <a href="../images/gutenberg.jpeg" download="gutenberg.jpeg">Gutenberg Bible at the Harry Ransom Center</a> photo and put it inside your <code>src/img</code> folder.</li>
-<li>Stop the gulp dev watch process (<em>Cntl+C</em> in your Terminal window) and then restart it using <code>gulp dev</code>. This will process the photo and make it available in the docs <code>img</code> folder. It’s an important step as photos are only processed when <code>gulp dev</code> starts up.</li>
+<li>Click on this <i class="bi bi-download"></i> <a href="../images/gutenberg.jpeg" download="gutenberg.jpeg">Gutenberg Bible at the Harry Ransom Center</a> link to download our photo. The file is called <code>gutenberg.jpeg</code> and it should go into your Downloads folder.</li>
+<li>There are a couple of ways we can get photos into your codespace:
+<ul>
+<li>You can right-click on the <code>img</code> folder in your document tray and use the <strong>Upload</strong> menu item. That will bring up a browser for you to go find and select the photo, which will then upload it.</li>
+<li>OR you can drag-n-drop the photo into the document tray to INSIDE that <code>img</code> folder. Note that photo has to land inside the <code>img</code> folder.</li>
+</ul></li>
 </ol>
+<p>When a new photo is added to that folder, the <code>images</code> task should kick off in your terminal to process that folder and move it into <code>docs/img/</code> where it can be used by your pages.</p>
 </section>
 <section id="fluid-images" class="level3" data-number="26.2.2">
 <h3 data-number="26.2.2" class="anchored" data-anchor-id="fluid-images"><span class="header-section-number">26.2.2</span> Fluid images</h3>
@@ -751,9 +756,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="../images/bs-image-reponsive.png" class="img-fluid figure-img"></p>
 <figcaption>Responsive image with img-fluid</figcaption>
 </figure>
-</div></li>
+</div>
+<p>This gives us great flexibility in building our responsive website because the photo will shrink and grow to fit the right space!</p></li>
+<li><p>Change the width of your browser use the Inspect Element menu to see how the photo changes sizes based on the width of the browser.</p></li>
 </ol>
-<p>This gives us great flexibility in building our responsive website because the photo will shrink and grow to fit the right space!</p>
 </section>
 <section id="add-a-breakpoint" class="level3" data-number="26.2.3">
 <h3 data-number="26.2.3" class="anchored" data-anchor-id="add-a-breakpoint"><span class="header-section-number">26.2.3</span> Add a breakpoint</h3>
@@ -763,9 +769,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Save and check the results. You should see your columns change at the medium and large widths.</li>
 </ol>
 <p>We’ve finished building this part of the pages for now. Next we’ll add the cards to our page.</p>
-
-
 </section>
+</section>
+<section id="commit-your-changes" class="level2" data-number="26.3">
+<h2 data-number="26.3" class="anchored" data-anchor-id="commit-your-changes"><span class="header-section-number">26.3</span> Commit your changes</h2>
+<p>Remember that we are working in a virtual machine, and while our code might be saving to that machine through Auto Save, the VM will eventually go away. To make sure our code is safely stored, we still need to <strong>commit the code</strong> to git and Github.</p>
+<ol type="1">
+<li>Use the git cycle to add, commit and push your changes to Github.
+<ul>
+<li>You might have to use Ctrl-C to quit the gulp processes first!</li>
+<li>OR you can launch a second terminal to do use git.</li>
+</ul></li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->

@@ -35,25 +35,20 @@ You'll want to use the Bootstrap documentation for your code and styles.
 
 ## Project template
 
-- Create a new, empty folder in your `icj/` folder called `yourname-bootstrap-mastery`.
-- In VS Code, open a new window and open your new folder.
-- Open the Integrated Terminal.
-- Run `$ degit utdata/icj-bootstrap-template` to download the files.
-- Run `$ npm install` to install the node packages.
-- Run `$ git init` to intilize git.
-- Run `$ git add .` to add the files.
-- Run `$ git commit -m "first commit"` to commit the files.
-- Go to Github and create a repository of the same name.
-- Use the "or push an existing repository from the command line" commands from Github to sync the repos.
+1. Go to the [utdata/icj-bootstrap-template](https://github.com/utdata/icj-bootstrap-template) repo and click on the **Use this template** links to create your own repo.
+    - Name the new repo **yourname-bs-mastery**.
+2. Go under **<> Code** to **Codespaces** and create your own virtual machine to work your code.
+3. Make sure once it finishes installing node, you install gulp: `npm install -g gulp`
 
 ### Adding the images
 
-I have images for you to use for this assignment, but  you have to set them a specific way for them to work in the development environment:
+I have images for you to use for this assignment, but you will need to upload them into your codespace into the `src/img` folder.:
 
 - Download this compressed folder of images: <i class="bi bi-download"></i> [pirate-photos.zip](../resources/pirate-photos.zip){download="pirate-photos.zip"}.
 - Find the zip on your hard drive and uncompress it.
 - Move the contents (the photos only) into the `src/img` folder in your project. The photos should be loose inside that folder.
-- Run `gulp dev` to process the photos and run your development server. (If you had `gulp dev` running already, quit it with *CTRL + C* and then restart `gulp dev` again so the photos will be processed and copied into `docs`.)
+
+You should then be able to run `gulp dev` to process the photos and run your development server.
 
 ## Strategy
 
