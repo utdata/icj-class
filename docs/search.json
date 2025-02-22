@@ -1701,7 +1701,7 @@
     "href": "static-apps/sapp-02-templates.html#page-previews",
     "title": "33  Templates and blocks",
     "section": "",
-    "text": "Index page\n\n\n\n\n\nPirate ship page\n\n\n\n\n\nEntry page example",
+    "text": "IndexShipsEntry\n\n\n\n\n\nIndex page\n\n\n\n\n\n\n\nPirate ship page\n\n\n\n\n\n\n\nEntry page example",
     "crumbs": [
       "Static App",
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Templates and blocks</span>"

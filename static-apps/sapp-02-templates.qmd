@@ -6,11 +6,21 @@ We're going to rebuild the framework of the Pirate Cove site you built in the Bo
 
 Here are some screen shots of the finished product you are working toward.
 
+::: {.panel-tabset}
+
+### Index
+
 ![Index page](../images/static-done-index.png)
+
+### Ships
 
 ![Pirate ship page](../images/static-done-pirate-ships.png)
 
+### Entry
+
 ![Entry page example](../images/static-done-entry-page.png)
+
+:::
 
 ## Install the assets
 
