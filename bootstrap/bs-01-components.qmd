@@ -156,7 +156,8 @@ Next we'll give our text some room to breathe using utility classes to control s
 Basically this shorthand to build space around items (margin) and inside items (padding). While I can't explain it better than they have, here is an abbreviated version of the shorthand:
 
 - You use `m` for margin or `p` for padding.
-- Following _m_ or _p_ you add either: `t` (top), `b` (bottom), `l` (left), `r` (right), `x` (left and right), `y` (top and bottom), or nothing for all 4 sides.
+- Following _m_ or _p_ you add either: `t` (top), `b` (bottom), `s` (start on the left), `e` (end on the right), `x` (both left and right), `y` (both top and bottom), or nothing for all 4 sides.
+    - The `s` and `e` are configured this way because some languages like Arabic read from right-to-left, so the orientation of that spacing needs to be flexible.
 - Then, you specify sizes with a hyphen and a value of `0` through `5` (5 being the largest amount of spacing).
 
 So, `pt-4` would be _padding_ on the _top_ at a value of _4_.
@@ -185,7 +186,7 @@ You set the color, width, style and radius of borders with various [border]() cl
 Here we'll dive back into the components section of the docs to get a **button** to add to our Jumbotron-like header. But let's use the **Search docs** to find it.
 
 1. Go to any page in the [Bootstrap docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
-1. In the search bar at top left, type in "button". As you do, you'll see options pop up under the search. Choose the "Buttons / Buttons" option to get to the main Buttons page.
+1. In the search bar at top left, type in "button". As you do, you'll see options pop up under the search. Choose the "Buttons / Base class" option to get to the main Buttons page.
 1. If your browser window is set wide enough, you should see an additional "On this page" navigation on the right side. Click on the **Sizes** link there. If you don't have that navigation, just scroll down the page until you find Sizes.
 1. In the **Large button** example, copy the first line that has `btn-primary` as part of the classes.
 1. Add this code on a new line after the closing `p` tag in the header.

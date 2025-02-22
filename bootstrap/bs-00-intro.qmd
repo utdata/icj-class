@@ -51,7 +51,7 @@ Like our last Sass chapter, we are going to start our project by copying a Githu
     - It takes several seconds to create your repo.
 1. Click on the green **<> Code** button and then choose the **Codespaces** tab.
     - Click **Create codespace on main**.
-    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say "Detected Node.js" and let it finish that setup.
+    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait** until after you see it say "Detected Node.js" and let it finish that setup.
     - Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!
 1. In the codespace's VS Code Terminal, run:
     

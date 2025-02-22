@@ -43,7 +43,7 @@ You should end up with white cards on the gray background of the page.
 
 Let's change the `.lead` line in our header to be a little lighter font weight.
 
-We can accomplish this we adding a style rule that builds on the existing [Lead typography class](https://getbootstrap.com/docs/5.3/content/typography/#lead) defined in Bootstrap. We do need to nest our rule so it only applies inside a header so we avoid affecting the other "lead" paragraph in our "highlight" section.
+We can accomplish this by adding a style rule that builds on the existing [Lead typography class](https://getbootstrap.com/docs/5.3/content/typography/#lead) defined in Bootstrap. We do need to nest our rule so it only applies inside a header so we avoid affecting the other "lead" paragraph in our "highlight" section.
 
 The rule we'll use is a css property `font-weight` which as a value of "lighter" that defines thinner/lighter characters in text. The change is subtle, so as we write our rule we'll change the text red to make sure our rule is working where we want it to, then we'll remove it.
 
@@ -91,7 +91,7 @@ Lastly, I want you to add a footer element with the following specs (which you c
 
 ## Push your code to Github
 
-1. Use the git cycle to push all your changes to Github so I can see your progress.
+1. Use the git cycle to push all your changes to Github so we can set up Pages for publishing, which we'll do next.
 
 ## And we're done, almost
 

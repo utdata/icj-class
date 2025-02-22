@@ -745,7 +745,10 @@ Note
 <p>Basically this shorthand to build space around items (margin) and inside items (padding). While I can’t explain it better than they have, here is an abbreviated version of the shorthand:</p>
 <ul>
 <li>You use <code>m</code> for margin or <code>p</code> for padding.</li>
-<li>Following <em>m</em> or <em>p</em> you add either: <code>t</code> (top), <code>b</code> (bottom), <code>l</code> (left), <code>r</code> (right), <code>x</code> (left and right), <code>y</code> (top and bottom), or nothing for all 4 sides.</li>
+<li>Following <em>m</em> or <em>p</em> you add either: <code>t</code> (top), <code>b</code> (bottom), <code>s</code> (start on the left), <code>e</code> (end on the right), <code>x</code> (both left and right), <code>y</code> (both top and bottom), or nothing for all 4 sides.
+<ul>
+<li>The <code>s</code> and <code>e</code> are configured this way because some languages like Arabic read from right-to-left, so the orientation of that spacing needs to be flexible.</li>
+</ul></li>
 <li>Then, you specify sizes with a hyphen and a value of <code>0</code> through <code>5</code> (5 being the largest amount of spacing).</li>
 </ul>
 <p>So, <code>pt-4</code> would be <em>padding</em> on the <em>top</em> at a value of <em>4</em>.</p>
@@ -772,7 +775,7 @@ Note
 <p>Here we’ll dive back into the components section of the docs to get a <strong>button</strong> to add to our Jumbotron-like header. But let’s use the <strong>Search docs</strong> to find it.</p>
 <ol type="1">
 <li>Go to any page in the <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap docs</a>.</li>
-<li>In the search bar at top left, type in “button”. As you do, you’ll see options pop up under the search. Choose the “Buttons / Buttons” option to get to the main Buttons page.</li>
+<li>In the search bar at top left, type in “button”. As you do, you’ll see options pop up under the search. Choose the “Buttons / Base class” option to get to the main Buttons page.</li>
 <li>If your browser window is set wide enough, you should see an additional “On this page” navigation on the right side. Click on the <strong>Sizes</strong> link there. If you don’t have that navigation, just scroll down the page until you find Sizes.</li>
 <li>In the <strong>Large button</strong> example, copy the first line that has <code>btn-primary</code> as part of the classes.</li>
 <li>Add this code on a new line after the closing <code>p</code> tag in the header.</li>

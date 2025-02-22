@@ -40,7 +40,7 @@ Our goal here is to be able to adjust how wide those columns are at different br
 
 ### The sizes
 
-There are five "breakpoints" for Bootstrap, meaning changes can happen at 5 different widths: default (extra small), sm, md, lg, xl and xxl. They _kinda_ work out like this:
+There are six "breakpoints" for Bootstrap, meaning changes can happen at six different widths: default (extra small), sm, md, lg, xl and xxl. They _kinda_ work out like this:
 
 - the default `col` is for a vertical phone
 - `sm` is for a horizontal phone to a vertical tablet
@@ -90,6 +90,9 @@ As a bit of a check, this part of our code should look like:
 
 This is how your page should behave at the default `xs`, the `sm` and `md` breakpoints:
 
+::: {.panel-tabset}
+
+
 ### xs
 
 At the default size (xs), the columns are stacked.
@@ -107,6 +110,8 @@ At the **sm** size, the middle column is wider.
 At the **md** size, the columns are even.
 
 ![md look](../images/bs-look-md.png)
+
+:::
 
 Now that we've learned a little about columns, we'll tear this apart and build something useful.
 
@@ -150,9 +155,12 @@ This makes our site much faster since the browser doesn't have to download that 
 
 The sizing process doesn't run continuously so we have to launch `gulp` or `gulp dev` to process new photos. This is all to say we need to download a photo for our project and restart gulp:
 
-1. Download this <i class="bi bi-download"></i> [Gutenberg Bible at the Harry Ransom Center](../images/gutenberg.jpeg){download="gutenberg.jpeg"} photo and put it  inside your `src/img` folder.
-1. Stop the gulp dev watch process (*Cntl+C* in your Terminal window) and then restart it using `gulp dev`. This will process the photo and make it available in the docs `img` folder. It's an important step as photos are only processed when `gulp dev` starts up.
+1. Click on this <i class="bi bi-download"></i> [Gutenberg Bible at the Harry Ransom Center](../images/gutenberg.jpeg){download="gutenberg.jpeg"} link to download our photo. The file is called `gutenberg.jpeg` and it should go into your Downloads folder.
+1. There are a couple of ways we can get photos into your codespace:
+    - You can right-click on the `img` folder in your document tray and use the **Upload** menu item. That will bring up a browser for you to go find and select the photo, which will then upload it.
+    - OR you can drag-n-drop the photo into the document tray to INSIDE that `img` folder. Note that photo has to land inside the `img` folder.
 
+When a new photo is added to that folder, the `images` task should kick off in your terminal to process that folder and move it into `docs/img/` where it can be used by your pages.
 
 ### Fluid images
 
@@ -179,7 +187,10 @@ We're going to put [Figure](https://getbootstrap.com/docs/5.3/content/figures/) 
     
     ![Responsive image with img-fluid](../images/bs-image-reponsive.png)
 
-This gives us great flexibility in building our responsive website because the photo will shrink and grow to fit the right space!
+    This gives us great flexibility in building our responsive website because the photo will shrink and grow to fit the right space!
+
+1. Change the width of your browser use the Inspect Element menu to see how the photo changes sizes based on the width of the browser.
+
 
 ### Add a breakpoint
 
@@ -189,3 +200,12 @@ As the page gets a little wider, we want give the text a little more space than 
 2. Save and check the results. You should see your columns change at the medium and large widths.
 
 We've finished building this part of the pages for now. Next we'll add the cards to our page.
+
+## Commit your changes
+
+Remember that we are working in a virtual machine, and while our code might be saving to that machine through Auto Save, the VM will eventually go away. To make sure our code is safely stored, we still need to **commit the code** to git and Github.
+
+1. Use the git cycle to add, commit and push your changes to Github.
+    - You might have to use Ctrl-C to quit the gulp processes first!
+    - OR you can launch a second terminal to do use git.
+
