@@ -19,7 +19,7 @@ We will learn the features of this project rig in steps:
     - We'll create blog pages based on a Google Doc source.
     - We'll update our index page to build links to the blog pages.
 
-## Set up development
+## Set up development environment
 
 ::: callout-warning
 
@@ -53,17 +53,46 @@ Like our previous two projects,  you will start by copying a Github repo and the
 
 If you get errors, you might have to try `npm install` and then run `gulp dev` again.
 
+### Some additional setup
+
+Now that we have a codespace running, there are a couple of settings that we need to update to help us later.
+
+1. In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.
+1. In the search box, type in **Nunjucks** and look for the extension by "ronnidc"
+1. Click on the **Install** button to add it to your instance.
+
+Next we need to adjust our settings to understand how to read Nunjucks files.
+
+1. At the bottom of the VS Code icon bar is a gear. Click on that and gear and go to **Settings**
+1. Search for "Emmet include" and this should filter the results to **Emmet: Include languages**.
+1. Click on the **Add Item** button.
+    - For Item, put: njk
+    - For Value, put: html
+1. Click on **Add Item** again
+    - For Item, put: nunjucks
+    - For Value, put: html
+
+In the end, it should look like this:
+
+![Emmet for Nunjucks](../images/emmet-njk.png)
+
+Lastly, we want to save your settings profile to Github so you don't have to do this everytime you create a new Codespace.
+
+1. In the VS Code icon menu, not quite at the bottom, is the icon for a user.
+1. Click on that "person" icon and then choose **Back up and Sync Settings**.
+1. Follow the prompts to **Sign in** using your Github account. (This might force your codespace to restart.)
+
 ## Review the example site
 
 Before we talk about how the project architecture is structured, let's tour the example pages that are included. As we do so, we'll just touch on how the example code applies to specific project features.
 
 ::: {layout-ncol=2}
+
 ![Sample index](../images/sapp-example-index.png)
 
 ![Sample detail](../images/sapp-example-detail.png)
+
 :::
-
-
 
 - All the pages on the site have a Bootstrap Navbar and a footer. Each page gets this from a single template, so we don't have to duplicate code for each new page.
 - The index also has a bookstores list down the page a bit, which is a loop over some data. As we explore the code later you'll see there is only code for one entry, but we repeat that code for every row in data file. In this case the data was downloaded from a Google Sheets spreadsheet, an optional feature of the project. Sometimes having a structured data source like a spreadsheet is helpful.
