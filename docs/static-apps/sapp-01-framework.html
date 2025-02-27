@@ -539,8 +539,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#goals-for-this-lesson" id="toc-goals-for-this-lesson" class="nav-link active" data-scroll-target="#goals-for-this-lesson"><span class="header-section-number">32.1</span> Goals for this lesson</a></li>
-  <li><a href="#set-up-development" id="toc-set-up-development" class="nav-link" data-scroll-target="#set-up-development"><span class="header-section-number">32.2</span> Set up development</a></li>
-  <li><a href="#repo-from-a-template" id="toc-repo-from-a-template" class="nav-link" data-scroll-target="#repo-from-a-template"><span class="header-section-number">32.3</span> Repo from a template</a></li>
+  <li><a href="#set-up-development-environment" id="toc-set-up-development-environment" class="nav-link" data-scroll-target="#set-up-development-environment"><span class="header-section-number">32.2</span> Set up development environment</a></li>
+  <li><a href="#repo-from-a-template" id="toc-repo-from-a-template" class="nav-link" data-scroll-target="#repo-from-a-template"><span class="header-section-number">32.3</span> Repo from a template</a>
+  <ul class="collapse">
+  <li><a href="#some-additional-setup" id="toc-some-additional-setup" class="nav-link" data-scroll-target="#some-additional-setup"><span class="header-section-number">32.3.1</span> Some additional setup</a></li>
+  </ul></li>
   <li><a href="#review-the-example-site" id="toc-review-the-example-site" class="nav-link" data-scroll-target="#review-the-example-site"><span class="header-section-number">32.4</span> Review the example site</a></li>
   <li><a href="#understand-the-project-structure" id="toc-understand-the-project-structure" class="nav-link" data-scroll-target="#understand-the-project-structure"><span class="header-section-number">32.5</span> Understand the project structure</a></li>
   </ul>
@@ -604,8 +607,8 @@ Important
 </ul></li>
 </ul>
 </section>
-<section id="set-up-development" class="level2" data-number="32.2">
-<h2 data-number="32.2" class="anchored" data-anchor-id="set-up-development"><span class="header-section-number">32.2</span> Set up development</h2>
+<section id="set-up-development-environment" class="level2" data-number="32.2">
+<h2 data-number="32.2" class="anchored" data-anchor-id="set-up-development-environment"><span class="header-section-number">32.2</span> Set up development environment</h2>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -642,6 +645,43 @@ Codespaces
 <li><p>In the Terminal, run <code>gulp dev</code>.</p></li>
 </ol>
 <p>If you get errors, you might have to try <code>npm install</code> and then run <code>gulp dev</code> again.</p>
+<section id="some-additional-setup" class="level3" data-number="32.3.1">
+<h3 data-number="32.3.1" class="anchored" data-anchor-id="some-additional-setup"><span class="header-section-number">32.3.1</span> Some additional setup</h3>
+<p>Now that we have a codespace running, there are a couple of settings that we need to update to help us later.</p>
+<ol type="1">
+<li>In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.</li>
+<li>In the search box, type in <strong>Nunjucks</strong> and look for the extension by “ronnidc”</li>
+<li>Click on the <strong>Install</strong> button to add it to your instance.</li>
+</ol>
+<p>Next we need to adjust our settings to understand how to read Nunjucks files.</p>
+<ol type="1">
+<li>At the bottom of the VS Code icon bar is a gear. Click on that and gear and go to <strong>Settings</strong></li>
+<li>Search for “Emmet include” and this should filter the results to <strong>Emmet: Include languages</strong>.</li>
+<li>Click on the <strong>Add Item</strong> button.
+<ul>
+<li>For Item, put: njk</li>
+<li>For Value, put: html</li>
+</ul></li>
+<li>Click on <strong>Add Item</strong> again
+<ul>
+<li>For Item, put: nunjucks</li>
+<li>For Value, put: html</li>
+</ul></li>
+</ol>
+<p>In the end, it should look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/emmet-njk.png" class="img-fluid figure-img"></p>
+<figcaption>Emmet for Nunjucks</figcaption>
+</figure>
+</div>
+<p>Lastly, we want to save your settings profile to Github so you don’t have to do this everytime you create a new Codespace.</p>
+<ol type="1">
+<li>In the VS Code icon menu, not quite at the bottom, is the icon for a user.</li>
+<li>Click on that “person” icon and then choose <strong>Back up and Sync Settings</strong>.</li>
+<li>Follow the prompts to <strong>Sign in</strong> using your Github account. (This might force your codespace to restart.)</li>
+</ol>
+</section>
 </section>
 <section id="review-the-example-site" class="level2" data-number="32.4">
 <h2 data-number="32.4" class="anchored" data-anchor-id="review-the-example-site"><span class="header-section-number">32.4</span> Review the example site</h2>
