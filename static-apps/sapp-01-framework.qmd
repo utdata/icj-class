@@ -41,7 +41,7 @@ Like our previous two projects,  you will start by copying a Github repo and the
     - It takes several seconds to create your repo.
 1. Click on the green **<> Code** button and then choose the **Codespaces** tab.
     - Click **Create codespace on main**.
-    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt, but wait until you see it say "Detected Node.js" and let it finish that setup.
+    - This will take a bit more time, but should just be a couple of minutes. **It will pause at one point and give you a prompt**, but wait until you see it say "Detected Node.js" and let it finish that setup.
     - Once the Node installation finishes, your browser will look like you have a version of Visual Studio Code open, and you do!
 1. In the codespace's VS Code Terminal, run:
     
@@ -53,13 +53,17 @@ Like our previous two projects,  you will start by copying a Github repo and the
 
 If you get errors, you might have to try `npm install` and then run `gulp dev` again.
 
-### Some additional setup
+## Codespaces setup
 
 Now that we have a codespace running, there are a couple of settings that we need to update to help us later.
+
+### Adding extensions
 
 1. In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.
 1. In the search box, type in **Nunjucks** and look for the extension by "ronnidc"
 1. Click on the **Install** button to add it to your instance.
+
+### Editing preferenes
 
 Next we need to adjust our settings to understand how to read Nunjucks files.
 
@@ -76,10 +80,27 @@ In the end, it should look like this:
 
 ![Emmet for Nunjucks](../images/emmet-njk.png)
 
+### Other possible settings
+
+> We really should've done these earlier. 🤷
+
+While optional, there might be some other preferences you might want to save while we are here. You can search for these in search bar:
+
+- **Editor > Word Wrap**: I set this to _on_.
+- **Editor > Minimap**: I _uncheck_ this to turn it off. Minimap is the image of your file on the right-edge that allows you to scroll quickly up and down. I find it just takes away from space to edit my file.
+- **Editor > Sticky Scroll: Scroll with Editor**:  I _uncheck_ this, but I could see how others might like it. (It's hard to describe in words what this is.)
+- **Workbench > Tree: Enable Sticky Scroll**: I _uncheck_ this, but I could see how others might like it.
+
+FWIW, and of these settings can be turned on/off temporarily for a file if you use Cmd+Shift+P and search for it.
+
+### Saving your preferences
+
 Lastly, we want to save your settings profile to Github so you don't have to do this everytime you create a new Codespace.
 
 1. In the VS Code icon menu, not quite at the bottom, is the icon for a user.
-1. Click on that "person" icon and then choose **Back up and Sync Settings**.
+1. Click on that "person" icon
+    - If it says "Settings Sync is On", then you are already saving your settings and all should be good. You can move on to the next section.
+    - If you have a choice of **Back up and Sync Settings**, then choose that.
 1. Follow the prompts to **Sign in** using your Github account. (This might force your codespace to restart.)
 
 ## Review the example site

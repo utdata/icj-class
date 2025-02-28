@@ -224,3 +224,7 @@ OK, now inside this we are going to add an H1 and some text that would be the in
 3. Add the code inside the col div. Make sure all your indents are clean.
 
 What we've done here is add a Bootstrap row and col that will always span the page. It's just placeholder text.
+
+## Commit your work
+
+This would be a great time to pause and use the git cycle to commit your work to Github.

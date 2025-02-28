@@ -100,7 +100,6 @@ OK, now it's magic time. We have to restart our dev environment to get everythin
 1. In your Terminal, quit browsersync.
 2. Run `gulp dev`.
 3. If you look in your `docs/` folder, you should see a new `blogs/`folder with two pages inside.
-4. In your browser, you should be able to modify the URL to be `http://localhost:3000/blog/2019-10-18.html` and see the first blog post. (*Your number after `localhost:` might be different, though.*)
 
 ## Add a blog loop to the index
 

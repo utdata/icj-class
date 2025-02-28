@@ -16,7 +16,7 @@ All of the individual book pages have the same structure: A book photo on the le
 
 All the book pages were built from the same template, but the content is different. It's much like amazon.com, where every item for purchase on the site has the same page structure, but the content is different depending on the item you are viewing.
 
-All of these book pages were built automagically from a data source. Amazon works similarly, but pulls the item contents from a database. (It's a _little_ more complicated than that, but you get the idea.)
+All of these book pages were built automagically from a data source. It's sort of like Amazon works ... every item for sale has the same page layout, but different text and images are placed on it based the specific item. (It's a _little_ more complicated than that, but you get the idea.)
 
 Here's how it works. We'll work through it one step at at time:
 
