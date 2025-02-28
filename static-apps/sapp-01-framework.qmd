@@ -57,6 +57,18 @@ If you get errors, you might have to try `npm install` and then run `gulp dev` a
 
 Now that we have a codespace running, there are a couple of settings that we need to update to help us later.
 
+### Saving your preferences
+
+We want to save your settings profile to Github so you don't have to do this everytime you create a new Codespace.
+
+1. In the VS Code icon menu, not quite at the bottom, is the icon for a user.
+1. Click on that "person" icon
+    - If it says "Settings Sync is On", then you are already saving your settings and all should be good. You can move on to the next section.
+    - If you have a choice of **Back up and Sync Settings**, then choose that.
+1. Follow the prompts to **Sign in** using your Github account. (This might force your codespace to restart.)
+
+With this active, changes made to your Settings will be saved and you'll be able to use them in any new codespace.
+
 ### Adding extensions
 
 1. In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.
@@ -92,16 +104,6 @@ While optional, there might be some other preferences you might want to save whi
 - **Workbench > Tree: Enable Sticky Scroll**: I _uncheck_ this, but I could see how others might like it.
 
 FWIW, and of these settings can be turned on/off temporarily for a file if you use Cmd+Shift+P and search for it.
-
-### Saving your preferences
-
-Lastly, we want to save your settings profile to Github so you don't have to do this everytime you create a new Codespace.
-
-1. In the VS Code icon menu, not quite at the bottom, is the icon for a user.
-1. Click on that "person" icon
-    - If it says "Settings Sync is On", then you are already saving your settings and all should be good. You can move on to the next section.
-    - If you have a choice of **Back up and Sync Settings**, then choose that.
-1. Follow the prompts to **Sign in** using your Github account. (This might force your codespace to restart.)
 
 ## Review the example site
 

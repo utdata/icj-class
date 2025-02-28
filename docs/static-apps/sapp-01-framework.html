@@ -543,10 +543,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#repo-from-a-template" id="toc-repo-from-a-template" class="nav-link" data-scroll-target="#repo-from-a-template"><span class="header-section-number">31.3</span> Repo from a template</a></li>
   <li><a href="#codespaces-setup" id="toc-codespaces-setup" class="nav-link" data-scroll-target="#codespaces-setup"><span class="header-section-number">31.4</span> Codespaces setup</a>
   <ul class="collapse">
-  <li><a href="#adding-extensions" id="toc-adding-extensions" class="nav-link" data-scroll-target="#adding-extensions"><span class="header-section-number">31.4.1</span> Adding extensions</a></li>
-  <li><a href="#editing-preferenes" id="toc-editing-preferenes" class="nav-link" data-scroll-target="#editing-preferenes"><span class="header-section-number">31.4.2</span> Editing preferenes</a></li>
-  <li><a href="#other-possible-settings" id="toc-other-possible-settings" class="nav-link" data-scroll-target="#other-possible-settings"><span class="header-section-number">31.4.3</span> Other possible settings</a></li>
-  <li><a href="#saving-your-preferences" id="toc-saving-your-preferences" class="nav-link" data-scroll-target="#saving-your-preferences"><span class="header-section-number">31.4.4</span> Saving your preferences</a></li>
+  <li><a href="#saving-your-preferences" id="toc-saving-your-preferences" class="nav-link" data-scroll-target="#saving-your-preferences"><span class="header-section-number">31.4.1</span> Saving your preferences</a></li>
+  <li><a href="#adding-extensions" id="toc-adding-extensions" class="nav-link" data-scroll-target="#adding-extensions"><span class="header-section-number">31.4.2</span> Adding extensions</a></li>
+  <li><a href="#editing-preferenes" id="toc-editing-preferenes" class="nav-link" data-scroll-target="#editing-preferenes"><span class="header-section-number">31.4.3</span> Editing preferenes</a></li>
+  <li><a href="#other-possible-settings" id="toc-other-possible-settings" class="nav-link" data-scroll-target="#other-possible-settings"><span class="header-section-number">31.4.4</span> Other possible settings</a></li>
   </ul></li>
   <li><a href="#review-the-example-site" id="toc-review-the-example-site" class="nav-link" data-scroll-target="#review-the-example-site"><span class="header-section-number">31.5</span> Review the example site</a></li>
   <li><a href="#understand-the-project-structure" id="toc-understand-the-project-structure" class="nav-link" data-scroll-target="#understand-the-project-structure"><span class="header-section-number">31.6</span> Understand the project structure</a></li>
@@ -653,16 +653,30 @@ Codespaces
 <section id="codespaces-setup" class="level2" data-number="31.4">
 <h2 data-number="31.4" class="anchored" data-anchor-id="codespaces-setup"><span class="header-section-number">31.4</span> Codespaces setup</h2>
 <p>Now that we have a codespace running, there are a couple of settings that we need to update to help us later.</p>
-<section id="adding-extensions" class="level3" data-number="31.4.1">
-<h3 data-number="31.4.1" class="anchored" data-anchor-id="adding-extensions"><span class="header-section-number">31.4.1</span> Adding extensions</h3>
+<section id="saving-your-preferences" class="level3" data-number="31.4.1">
+<h3 data-number="31.4.1" class="anchored" data-anchor-id="saving-your-preferences"><span class="header-section-number">31.4.1</span> Saving your preferences</h3>
+<p>We want to save your settings profile to Github so you don’t have to do this everytime you create a new Codespace.</p>
+<ol type="1">
+<li>In the VS Code icon menu, not quite at the bottom, is the icon for a user.</li>
+<li>Click on that “person” icon
+<ul>
+<li>If it says “Settings Sync is On”, then you are already saving your settings and all should be good. You can move on to the next section.</li>
+<li>If you have a choice of <strong>Back up and Sync Settings</strong>, then choose that.</li>
+</ul></li>
+<li>Follow the prompts to <strong>Sign in</strong> using your Github account. (This might force your codespace to restart.)</li>
+</ol>
+<p>With this active, changes made to your Settings will be saved and you’ll be able to use them in any new codespace.</p>
+</section>
+<section id="adding-extensions" class="level3" data-number="31.4.2">
+<h3 data-number="31.4.2" class="anchored" data-anchor-id="adding-extensions"><span class="header-section-number">31.4.2</span> Adding extensions</h3>
 <ol type="1">
 <li>In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.</li>
 <li>In the search box, type in <strong>Nunjucks</strong> and look for the extension by “ronnidc”</li>
 <li>Click on the <strong>Install</strong> button to add it to your instance.</li>
 </ol>
 </section>
-<section id="editing-preferenes" class="level3" data-number="31.4.2">
-<h3 data-number="31.4.2" class="anchored" data-anchor-id="editing-preferenes"><span class="header-section-number">31.4.2</span> Editing preferenes</h3>
+<section id="editing-preferenes" class="level3" data-number="31.4.3">
+<h3 data-number="31.4.3" class="anchored" data-anchor-id="editing-preferenes"><span class="header-section-number">31.4.3</span> Editing preferenes</h3>
 <p>Next we need to adjust our settings to understand how to read Nunjucks files.</p>
 <ol type="1">
 <li>At the bottom of the VS Code icon bar is a gear. Click on that and gear and go to <strong>Settings</strong></li>
@@ -686,8 +700,8 @@ Codespaces
 </figure>
 </div>
 </section>
-<section id="other-possible-settings" class="level3" data-number="31.4.3">
-<h3 data-number="31.4.3" class="anchored" data-anchor-id="other-possible-settings"><span class="header-section-number">31.4.3</span> Other possible settings</h3>
+<section id="other-possible-settings" class="level3" data-number="31.4.4">
+<h3 data-number="31.4.4" class="anchored" data-anchor-id="other-possible-settings"><span class="header-section-number">31.4.4</span> Other possible settings</h3>
 <blockquote class="blockquote">
 <p>We really should’ve done these earlier. 🤷</p>
 </blockquote>
@@ -699,19 +713,6 @@ Codespaces
 <li><strong>Workbench &gt; Tree: Enable Sticky Scroll</strong>: I <em>uncheck</em> this, but I could see how others might like it.</li>
 </ul>
 <p>FWIW, and of these settings can be turned on/off temporarily for a file if you use Cmd+Shift+P and search for it.</p>
-</section>
-<section id="saving-your-preferences" class="level3" data-number="31.4.4">
-<h3 data-number="31.4.4" class="anchored" data-anchor-id="saving-your-preferences"><span class="header-section-number">31.4.4</span> Saving your preferences</h3>
-<p>Lastly, we want to save your settings profile to Github so you don’t have to do this everytime you create a new Codespace.</p>
-<ol type="1">
-<li>In the VS Code icon menu, not quite at the bottom, is the icon for a user.</li>
-<li>Click on that “person” icon
-<ul>
-<li>If it says “Settings Sync is On”, then you are already saving your settings and all should be good. You can move on to the next section.</li>
-<li>If you have a choice of <strong>Back up and Sync Settings</strong>, then choose that.</li>
-</ul></li>
-<li>Follow the prompts to <strong>Sign in</strong> using your Github account. (This might force your codespace to restart.)</li>
-</ol>
 </section>
 </section>
 <section id="review-the-example-site" class="level2" data-number="31.5">
