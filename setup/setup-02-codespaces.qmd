@@ -1,7 +1,4 @@
----
-title: "Using Codespaces"
-format: html
----
+# Using Codespaces {.unnumbered}
 
 Up to this point, we've saved our projects in folders on our computer and used Visual Studio Code and our web browser to edit and view them.
 
@@ -58,3 +55,10 @@ Otherwise go to your Github repo, click on the big green **<> Code** button and 
 - If a codespace is not opened for a month or so, it will be deleted. **So always push your completed code to Github** so it is safe. You will get emails warning you about the deleting.
 - If your codespace is deleted for inactivity, you lose any unpushed changes. **Commit and push your code!** That said, you can always create a new codespace based on your most Github repo code.
 - It's possible to create more than one codespace for a repo, but that will just confuse you. Just use one.
+
+## The video version
+
+This is a five-minute video that walks through starting a new project using Github and Codespaces.
+
+<iframe src="https://utexas.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=47e37e13-eba9-42f3-af8e-b27101695c81&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Starting from Github" ></iframe>
+

@@ -28,6 +28,25 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 
 OK, are you ready to jump into some advanced features here? We are going to introduce a concept where we have a Google Sheet to manage the editing of data, but then we'll "fetch" that data into our project so we can use it in the next step.
 
+### Adding access to secret
+
+::: callout-important
+
+While this rig will work with JSON data as-is, there is a bit of extra setup and effort to use `gulp fetch` as described below. See [ICJ Setting Up Part 2: Google Auth](https://utdata.github.io/icj-setting-up/setup-part-2.html) for directions on how to set up access to Google's APIs.
+
+:::
+
+While in the Setting Up Part 2 chapter we set up a connection between Github and Google's APIs, we have to add our new repo to that access.
+
+1. In a new browser window, go to your Github.
+2. Under your profile icon at the top-right, choose **Settings** and then [**Codespaces**](https://github.com/settings/codespaces).
+3. Under **Secrets** click on the pencil edit icon next to your _SERVICE_ACCOUNT_CREDENTIALS_ key.
+4. Under **Repository Access**, use the drop-down to add the Github repo for this project. Be sure to click the green **Save changes** button.
+
+When you return to your codespace, you might get a notice that "Secrets have changed for this codespace, do you want to reload it" and you do.
+
+You'll need to do this for each new repo built using this rig (like for your final project).
+
 ### The data source: Google Sheets
 
 I have already created a Google Sheet of [pirate data](https://docs.google.com/spreadsheets/d/1G-aJA1H5C-B05Hlpx2RiojYcsNNXQ5ntvUEArRZ5O6w/edit?usp=sharing). Click on that link so you can take a look at it. Imagine you are in a newsroom and many reporters are gathering data for your project. You could share a Sheet like this with them and they could edit it and create new rows of data. It's a good way to keep track of stuff.
@@ -64,7 +83,7 @@ The result of the command should download three files. (Two were already in the 
 This downloaded all the files to the `src/_data/` folder.
 
 ::: callout-tip
-If you have a problem with `gulp fetch` and get an error, you can use [these steps](../appendices/a-fetch-problems.qmd) to download the data. Do that and then move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
+If you have a problem with `gulp fetch` and get an error, you can use [these steps](../appendices/a-fetch-problems.qmd) to download the data, which you can put in your `src/_data` folder. That allows you to move on with the rest of the lesson, but reach out to me to see if we can fix the problem.
 :::
 
 Go ahead and open the files at `src/data/pirates.json` and peek at it. Here is just a snippet:
@@ -100,9 +119,9 @@ Our aim here next is to use [Bootstrap cards](https://getbootstrap.com/docs/5.3/
 
 1. Make sure `gulp dev` is running.
 1. Go to the [Grid cards](https://getbootstrap.com/docs/5.3/components/card/#grid-cards) section in the Bootstrap docs and copy the first code selection provided there.
-2. After the closing `</p>` tag for the intro, add a new line.
-3. Paste your code. This already has the row and columns we need.
-4. Save your file and look at your page.
+After the closing </p> tag for the intro, add a new line.
+1. Paste your code. This already has the row and columns we need.
+1. Save your file and look at your page.
 
 It should look like this:
 
@@ -110,7 +129,7 @@ It should look like this:
 
 We now have four cards on our page with some issues, like our images are broken. We'll fix those in a minute as we make other adjustments.
 
-Our plan here is to have a card for each ship in our data. We could create eight cards and use our data inside each card, but what if we add more ships to our data source later? Instead, we'll create a **loop** that writes a new card for each ship in our data.
+Our plan here is to have a card for each ship in our data. We could create eight cards and copy/paste text from our spreadsheet into each card, but what if we add more ships to our data source later? Instead, we'll create a **loop** that writes a new card for each ship in our data.
 
 Our Nunjucks templating system allows for loops like this because it is written in JavaScript. It might help to reference the [Nunjucks documentation on "for" loops](https://mozilla.github.io/nunjucks/templating.html#for) to see how they work.
 
@@ -148,7 +167,7 @@ Let's take this line: `{% for ship in pirates.ships %}`
 - `{%  %}` indicates we are doing special stuff, just like we've done before with "blocks" and "extend".
 - `for` means we are starting the loop.
 - `ship` is what we are calling a single pass through the data. We are "naming" that single item as a "ship" so we can refer later to key values in that row of data. We can use any word we want, but I always use a term logical to the data. We are looping through a bunch of ships, so a single one of those is a single "ship".
-- `in pirates.ships` is defining which array we are looping through. The "pirates" part is the file we are looking in, and "ships" is the name of the array inside that file.
+- `in pirates.ships` is defining which array we are looping through. The "pirates" part is the file inside our `_data` folder, and "ships" is the name of the array inside that file.
 - Everything after that will get repeated until we reach `(% endfor %)` which says STOP REPEATING.
 
 ### Remove the broken image link

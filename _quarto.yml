@@ -53,6 +53,7 @@ book:
         - bootstrap/bs-04-customize.qmd
         - bootstrap/bs-05-publish.qmd
         - bootstrap/bs-06-mastery.qmd
+    - setup/setup-03-fetch.qmd
     - part: "Static App"
       chapters:
         - static-apps/sapp-00-intro.qmd
@@ -65,7 +66,6 @@ book:
     - project/fp-00-intro.qmd
   appendices:
     - appendices/a-project.qmd
-    - appendices/a-using-codespaces.qmd
     - appendices/a-google-fonts.qmd
     - appendices/a-fetch-problems.qmd
     - appendices/a-macos-shell.qmd
