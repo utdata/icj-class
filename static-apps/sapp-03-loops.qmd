@@ -28,15 +28,13 @@ We're going to create the Pirate Ships page we added to our nav earlier and intr
 
 OK, are you ready to jump into some advanced features here? We are going to introduce a concept where we have a Google Sheet to manage the editing of data, but then we'll "fetch" that data into our project so we can use it in the next step.
 
-### Adding access to secret
-
 ::: callout-important
 
-While this rig will work with JSON data as-is, there is a bit of extra setup and effort to use `gulp fetch` as described below. See [ICJ Setting Up Part 2: Google Auth](https://utdata.github.io/icj-setting-up/setup-part-2.html) for directions on how to set up access to Google's APIs.
+### Adding access to secret
 
-:::
+While this rig will work with JSON data as-is, there is a bit of extra setup and effort to use `gulp fetch` to pull data from Google as described below. See [ICJ Setting Up Part 2: Google Auth](https://utdata.github.io/icj-setting-up/setup-part-2.html) for directions on how to set up access to Google's APIs.
 
-While in the Setting Up Part 2 chapter we set up a connection between Github and Google's APIs, we have to add our new repo to that access.
+If you are following along with the book, you likely used this lesson's repo when did the Google Auth setup. However, if you didn't, you'll need to do the following:
 
 1. In a new browser window, go to your Github.
 2. Under your profile icon at the top-right, choose **Settings** and then [**Codespaces**](https://github.com/settings/codespaces).
@@ -46,6 +44,8 @@ While in the Setting Up Part 2 chapter we set up a connection between Github and
 When you return to your codespace, you might get a notice that "Secrets have changed for this codespace, do you want to reload it" and you do.
 
 You'll need to do this for each new repo built using this rig (like for your final project).
+
+:::
 
 ### The data source: Google Sheets
 

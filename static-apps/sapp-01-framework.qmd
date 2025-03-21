@@ -74,6 +74,7 @@ With this active, changes made to your Settings will be saved and you'll be able
 1. In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.
 1. In the search box, type in **Nunjucks** and look for the extension by "ronnidc"
 1. Click on the **Install** button to add it to your instance.
+1. Do the same for **Path Intellisense** by Christian Kohler and install it.
 
 ### Editing preferenes
 
