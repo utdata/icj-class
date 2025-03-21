@@ -364,12 +364,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../setup/setup-03-fetch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Setup: Part 2</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
@@ -395,6 +389,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../setup/setup-03-fetch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup: Part 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -507,6 +507,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#your-first-codespace" id="toc-your-first-codespace" class="nav-link active" data-scroll-target="#your-first-codespace">Your first codespace</a>
   <ul class="collapse">
   <li><a href="#edit-the-readme" id="toc-edit-the-readme" class="nav-link" data-scroll-target="#edit-the-readme">Edit the README</a></li>
+  </ul></li>
+  <li><a href="#codespace-settings" id="toc-codespace-settings" class="nav-link" data-scroll-target="#codespace-settings">Codespace settings</a>
+  <ul class="collapse">
+  <li><a href="#saving-your-preferences" id="toc-saving-your-preferences" class="nav-link" data-scroll-target="#saving-your-preferences">Saving your preferences</a></li>
+  <li><a href="#adding-extensions" id="toc-adding-extensions" class="nav-link" data-scroll-target="#adding-extensions">Adding extensions</a></li>
+  <li><a href="#editing-preferenes" id="toc-editing-preferenes" class="nav-link" data-scroll-target="#editing-preferenes">Editing preferenes</a></li>
+  <li><a href="#other-possible-settings" id="toc-other-possible-settings" class="nav-link" data-scroll-target="#other-possible-settings">Other possible settings</a></li>
   <li><a href="#shutting-down-your-codespace" id="toc-shutting-down-your-codespace" class="nav-link" data-scroll-target="#shutting-down-your-codespace">Shutting down your codespace</a></li>
   <li><a href="#restarting-codespaces" id="toc-restarting-codespaces" class="nav-link" data-scroll-target="#restarting-codespaces">Restarting codespaces</a></li>
   </ul></li>
@@ -569,6 +576,72 @@ ul.task-list li input[type="checkbox"] {
 <li>Leave this window open, but open a new browser tab and go to your repo on Github, where you should see the changed files.</li>
 </ol>
 <p>The virtual codespace works just like your local computer. While the browser is saving your files as your type, you still have to use the git cycle to push your code to your Github repo.</p>
+</section>
+</section>
+<section id="codespace-settings" class="level2">
+<h2 class="anchored" data-anchor-id="codespace-settings">Codespace settings</h2>
+<p>There are lots of different preferences that you can set for VS Code in your codespace, and it is possible to save those settings so they can be used within all your codespaces.</p>
+<section id="saving-your-preferences" class="level3">
+<h3 class="anchored" data-anchor-id="saving-your-preferences">Saving your preferences</h3>
+<p>These settings get saved to Github so we need to sign into there to connec them.</p>
+<ol type="1">
+<li>In the VS Code icon menu, not quite at the bottom, is the icon for a user.</li>
+<li>Click on that “person” icon
+<ul>
+<li>If it says “Settings Sync is On”, then you are already saving your settings and all should be good. You can move on to the next section.</li>
+<li>If you have a choice of <strong>Back up and Sync Settings</strong>, then choose that.</li>
+</ul></li>
+<li>Follow the prompts to <strong>Sign in</strong> using your Github account. (This might force your codespace to restart.)</li>
+</ol>
+<p>With this Settings Sync active, changes made to your Settings will be saved and you’ll be able to use them in any new codespace.</p>
+</section>
+<section id="adding-extensions" class="level3">
+<h3 class="anchored" data-anchor-id="adding-extensions">Adding extensions</h3>
+<ol type="1">
+<li>In the VS Code icon menus along the left edge, there is a puzzle piece icon to help us intstall extenstions. Click on that icon.</li>
+<li>In the search box, type in <strong>Nunjucks</strong> and look for the extension by “ronnidc”</li>
+<li>Click on the <strong>Install</strong> button to add it to your instance.</li>
+<li>Do the same for <strong>Path Intellisense</strong> by Christian Kohler and install it.</li>
+</ol>
+</section>
+<section id="editing-preferenes" class="level3">
+<h3 class="anchored" data-anchor-id="editing-preferenes">Editing preferenes</h3>
+<p>Next we need to adjust our settings to understand how to read Nunjucks files.</p>
+<ol type="1">
+<li>At the bottom of the VS Code icon bar is a gear. Click on that and gear and go to <strong>Settings</strong></li>
+<li>Search for “Emmet include” and this should filter the results to <strong>Emmet: Include languages</strong>.</li>
+<li>Click on the <strong>Add Item</strong> button.
+<ul>
+<li>For Item, put: njk</li>
+<li>For Value, put: html</li>
+</ul></li>
+<li>Click on <strong>Add Item</strong> again
+<ul>
+<li>For Item, put: nunjucks</li>
+<li>For Value, put: html</li>
+</ul></li>
+</ol>
+<p>In the end, it should look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/emmet-njk.png" class="img-fluid figure-img"></p>
+<figcaption>Emmet for Nunjucks</figcaption>
+</figure>
+</div>
+</section>
+<section id="other-possible-settings" class="level3">
+<h3 class="anchored" data-anchor-id="other-possible-settings">Other possible settings</h3>
+<blockquote class="blockquote">
+<p>We really should’ve done these earlier. 🤷</p>
+</blockquote>
+<p>While optional, there might be some other preferences you might want to save while we are here. You can search for these in search bar:</p>
+<ul>
+<li><strong>Editor &gt; Word Wrap</strong>: I set this to <em>on</em>.</li>
+<li><strong>Editor &gt; Minimap</strong>: I <em>uncheck</em> this to turn it off. Minimap is the image of your file on the right-edge that allows you to scroll quickly up and down. I find it just takes away from space to edit my file.</li>
+<li><strong>Editor &gt; Sticky Scroll: Scroll with Editor</strong>: I <em>uncheck</em> this, but I could see how others might like it. (It’s hard to describe in words what this is.)</li>
+<li><strong>Workbench &gt; Tree: Enable Sticky Scroll</strong>: I <em>uncheck</em> this, but I could see how others might like it.</li>
+</ul>
+<p>FWIW, and of these settings can be turned on/off temporarily for a file if you use Cmd+Shift+P and search for it.</p>
 </section>
 <section id="shutting-down-your-codespace" class="level3">
 <h3 class="anchored" data-anchor-id="shutting-down-your-codespace">Shutting down your codespace</h3>

@@ -53,12 +53,12 @@ book:
         - bootstrap/bs-04-customize.qmd
         - bootstrap/bs-05-publish.qmd
         - bootstrap/bs-06-mastery.qmd
-    - setup/setup-03-fetch.qmd
     - part: "Static App"
       chapters:
         - static-apps/sapp-00-intro.qmd
         - static-apps/sapp-01-framework.qmd
         - static-apps/sapp-02-templates.qmd
+        - setup/setup-03-fetch.qmd
         - static-apps/sapp-03-loops.qmd
         - static-apps/sapp-04-publish.qmd
         - static-apps/sapp-05-bake-explain.qmd

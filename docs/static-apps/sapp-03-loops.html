@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../static-apps/sapp-04-publish.html" rel="next">
-<link href="../static-apps/sapp-02-templates.html" rel="prev">
+<link href="../setup/setup-03-fetch.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -398,12 +398,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../setup/setup-03-fetch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Setup: Part 2</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
@@ -429,6 +423,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../static-apps/sapp-02-templates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../setup/setup-03-fetch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setup: Part 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -541,8 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#create-a-new-page" id="toc-create-a-new-page" class="nav-link active" data-scroll-target="#create-a-new-page"><span class="header-section-number">33.1</span> Create a new page</a></li>
   <li><a href="#lets-add-some-data" id="toc-lets-add-some-data" class="nav-link" data-scroll-target="#lets-add-some-data"><span class="header-section-number">33.2</span> Let’s add some data</a>
   <ul class="collapse">
-  <li><a href="#adding-access-to-secret" id="toc-adding-access-to-secret" class="nav-link" data-scroll-target="#adding-access-to-secret"><span class="header-section-number">33.2.1</span> Adding access to secret</a></li>
-  <li><a href="#the-data-source-google-sheets" id="toc-the-data-source-google-sheets" class="nav-link" data-scroll-target="#the-data-source-google-sheets"><span class="header-section-number">33.2.2</span> The data source: Google Sheets</a></li>
+  <li><a href="#the-data-source-google-sheets" id="toc-the-data-source-google-sheets" class="nav-link" data-scroll-target="#the-data-source-google-sheets"><span class="header-section-number">33.2.1</span> The data source: Google Sheets</a></li>
   </ul></li>
   <li><a href="#loops-with-data" id="toc-loops-with-data" class="nav-link" data-scroll-target="#loops-with-data"><span class="header-section-number">33.3</span> Loops with data</a>
   <ul class="collapse">
@@ -606,22 +605,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="lets-add-some-data" class="level2" data-number="33.2">
 <h2 data-number="33.2" class="anchored" data-anchor-id="lets-add-some-data"><span class="header-section-number">33.2</span> Let’s add some data</h2>
 <p>OK, are you ready to jump into some advanced features here? We are going to introduce a concept where we have a Google Sheet to manage the editing of data, but then we’ll “fetch” that data into our project so we can use it in the next step.</p>
-<section id="adding-access-to-secret" class="level3" data-number="33.2.1">
-<h3 data-number="33.2.1" class="anchored" data-anchor-id="adding-access-to-secret"><span class="header-section-number">33.2.1</span> Adding access to secret</h3>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Adding access to secret
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>While this rig will work with JSON data as-is, there is a bit of extra setup and effort to use <code>gulp fetch</code> as described below. See <a href="https://utdata.github.io/icj-setting-up/setup-part-2.html">ICJ Setting Up Part 2: Google Auth</a> for directions on how to set up access to Google’s APIs.</p>
-</div>
-</div>
-<p>While in the Setting Up Part 2 chapter we set up a connection between Github and Google’s APIs, we have to add our new repo to that access.</p>
+<p>While this rig will work with JSON data as-is, there is a bit of extra setup and effort to use <code>gulp fetch</code> to pull data from Google as described below. See <a href="https://utdata.github.io/icj-setting-up/setup-part-2.html">ICJ Setting Up Part 2: Google Auth</a> for directions on how to set up access to Google’s APIs.</p>
+<p>If you are following along with the book, you likely used this lesson’s repo when did the Google Auth setup. However, if you didn’t, you’ll need to do the following:</p>
 <ol type="1">
 <li>In a new browser window, go to your Github.</li>
 <li>Under your profile icon at the top-right, choose <strong>Settings</strong> and then <a href="https://github.com/settings/codespaces"><strong>Codespaces</strong></a>.</li>
@@ -630,9 +625,10 @@ Important
 </ol>
 <p>When you return to your codespace, you might get a notice that “Secrets have changed for this codespace, do you want to reload it” and you do.</p>
 <p>You’ll need to do this for each new repo built using this rig (like for your final project).</p>
-</section>
-<section id="the-data-source-google-sheets" class="level3" data-number="33.2.2">
-<h3 data-number="33.2.2" class="anchored" data-anchor-id="the-data-source-google-sheets"><span class="header-section-number">33.2.2</span> The data source: Google Sheets</h3>
+</div>
+</div>
+<section id="the-data-source-google-sheets" class="level3" data-number="33.2.1">
+<h3 data-number="33.2.1" class="anchored" data-anchor-id="the-data-source-google-sheets"><span class="header-section-number">33.2.1</span> The data source: Google Sheets</h3>
 <p>I have already created a Google Sheet of <a href="https://docs.google.com/spreadsheets/d/1G-aJA1H5C-B05Hlpx2RiojYcsNNXQ5ntvUEArRZ5O6w/edit?usp=sharing">pirate data</a>. Click on that link so you can take a look at it. Imagine you are in a newsroom and many reporters are gathering data for your project. You could share a Sheet like this with them and they could edit it and create new rows of data. It’s a good way to keep track of stuff.</p>
 <p>Our next trick is to tell our project here to download that data and format it in a way that we can use it. That file type we want in the end is called JSON, or JavaScript Object Notation. JSON is just “data” for JavaScript. There is a feature built into this project where we can download this data and translate it. One thing to know is the Google Sheet needs to be shared so that “anyone” can view it.</p>
 <p>Here we will “tell” this project about the Google Sheet.</p>
@@ -1247,8 +1243,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../static-apps/sapp-02-templates.html" class="pagination-link" aria-label="Templates and blocks">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Templates and blocks</span></span>
+      <a href="../setup/setup-03-fetch.html" class="pagination-link" aria-label="Setup: Part 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Setup: Part 2</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
