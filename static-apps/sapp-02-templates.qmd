@@ -35,7 +35,7 @@ We need to add our project image files to our `src/img` folder in the app.
 To keep us from getting bogged down in the advanced features of the projects rig, let's rename our current index (so we can keep it for reference later) and make a new one.
 
 1. rename the file `index.njk` to `index-example.njk`
-2. create a new file `index.njk` in the same `njk` folder and insert the following code:
+2. create a new file `index.njk` in the same folder and insert the following code:
 
 ```html
 {% extends '_templates/base.njk' %}
